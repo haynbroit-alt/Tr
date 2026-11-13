@@ -1,0 +1,13 @@
+{
+  "name": "cortex",
+  "version": "1.0.0",
+  "description": "CORTEX — une boucle cognitive autonome (observer → comprendre → confronter → hypothèses → anticiper → prioriser → décider → simuler → exécuter/revue humaine → mesurer → apprendre → réviser → dreaming) qui pilote une entreprise simulée aux règles cachées changeantes.",
+  "type": "module",
+  "scripts": {
+    "test": "node --test test/*.test.js",
+    "bench": "node bench/bench.js",
+    "build": "node scripts/build.js",
+    "cli": "node bench/cli.js"
+  },
+  "license": "MIT"
+}

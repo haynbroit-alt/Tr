@@ -1,0 +1,14 @@
+{
+  "name": "commun",
+  "version": "0.1.0",
+  "description": "Page de travail commune de GALILÉE, CORTEX et LAVOISIER : un registre partagé, traçable et vérifiable, sans modifier aucun moteur.",
+  "type": "module",
+  "license": "MIT",
+  "engines": { "node": ">=20" },
+  "scripts": {
+    "test": "node --test test/*.test.js",
+    "verifier": "node bin/commun.js verifier",
+    "page": "node bin/commun.js page",
+    "geler": "node scripts/geler.js"
+  }
+}
