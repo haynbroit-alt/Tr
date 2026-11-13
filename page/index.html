@@ -1,0 +1,1673 @@
+<title>Page de travail commune</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Serif:wght@500;600&display=swap">
+<style>
+/* Mise en page : un cahier de laboratoire. Une colonne de lecture, le journal en fil chronologique, chaque acte marqué de la couleur de son auteur. */
+:root{--fond:#f3f5f7;--carte:#fff;--encre:#17212b;--sourd:#586573;--trait:#d8dfe6;--creux:#eaeef2;
+--galilee:#2a5db0;--cortex:#9c3a80;--lavoisier:#1c7a60;--neutre:#66717d;--bon:#24764a;--alerte:#9a5f00;--mauvais:#b0362e;
+--titre:"IBM Plex Serif",Georgia,serif;--texte:"IBM Plex Sans",system-ui,sans-serif;--mono:"IBM Plex Mono",ui-monospace,Menlo,monospace}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--fond:#11161c;--carte:#19212a;--encre:#e6ebf0;--sourd:#9aa7b4;--trait:#2c3743;--creux:#212b36;--galilee:#7fa9ee;--cortex:#dc8cc6;--lavoisier:#63c5a6;--neutre:#a0abb6;--bon:#6fcf97;--alerte:#e2b25a;--mauvais:#f08a80;color-scheme:dark}}
+:root[data-theme="dark"]{--fond:#11161c;--carte:#19212a;--encre:#e6ebf0;--sourd:#9aa7b4;--trait:#2c3743;--creux:#212b36;--galilee:#7fa9ee;--cortex:#dc8cc6;--lavoisier:#63c5a6;--neutre:#a0abb6;--bon:#6fcf97;--alerte:#e2b25a;--mauvais:#f08a80;color-scheme:dark}
+*{box-sizing:border-box}
+body{background:var(--fond);color:var(--encre);font:15px/1.55 var(--texte);padding-block:28px 64px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+main{max-width:920px;margin:0 auto;display:flex;flex-direction:column;gap:40px}
+section{display:flex;flex-direction:column;gap:14px;min-width:0}
+h1{font:600 30px/1.2 var(--titre);margin:0;text-wrap:balance}
+h2{font:600 21px/1.3 var(--titre);margin:0;text-wrap:balance}
+h3{font:600 16px/1.35 var(--texte);margin:0}
+p{margin:0;max-width:68ch}
+a{color:inherit}
+.chapo{color:var(--sourd);font-size:16px}
+.petit{font-size:13px;color:var(--sourd)}
+.donnees,.num,.id,.commit,.mes,td.n{font-family:var(--mono);font-variant-numeric:tabular-nums}
+.etat{display:flex;flex-wrap:wrap;gap:8px 22px;font-size:13px;border-block:1px solid var(--trait);padding-block:10px}
+.etat b{font-weight:600}
+.qui{font:500 12px/1 var(--mono);letter-spacing:.04em;padding:4px 7px;border:1px solid currentColor;border-radius:3px;white-space:nowrap}
+.galilee{--c:var(--galilee)}.cortex{--c:var(--cortex)}.lavoisier{--c:var(--lavoisier)}.neutre{--c:var(--neutre)}
+.qui{color:var(--c)}
+.niv{font:500 12px/1 var(--texte);padding:4px 8px;border-radius:99px;border:1.5px solid var(--encre);white-space:nowrap;display:inline-block}
+.niv.n5,.niv.n4,.niv.n3{background:var(--encre);color:var(--carte)}
+.niv.n2{border-style:dashed}
+.niv.n1{border-style:dotted;color:var(--sourd);border-color:var(--sourd)}
+.niv.n0{text-decoration:line-through;color:var(--mauvais);border-color:var(--mauvais)}
+.verd{font-weight:600}.bon{color:var(--bon)}.alerte{color:var(--alerte)}.mauvais{color:var(--mauvais)}
+.mes{font-size:12.5px;background:var(--creux);padding:2px 6px;border-radius:3px;display:inline-block}
+.sur{color:var(--sourd)}
+.moteurs{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:12px}
+.moteur{background:var(--carte);border-top:3px solid var(--c);padding:14px 16px;display:flex;flex-direction:column;gap:8px;min-width:0}
+.moteur h3{color:var(--c)}
+.moteur ul,.limites{margin:0;padding-left:18px;display:flex;flex-direction:column;gap:4px;font-size:13.5px}
+.moteur .non{color:var(--sourd)}
+.schema{background:var(--carte);padding:12px;overflow-x:auto}
+.schema svg{display:block;min-width:620px;width:100%;height:auto}
+.schema text{font-family:var(--texte);fill:var(--encre)}
+.schema .l{font-size:11px;fill:var(--sourd)}
+.schema .b{fill:var(--carte);stroke-width:1.5}
+.schema .f{fill:none;stroke:var(--sourd);stroke-width:1.2}
+.tableau{overflow-x:auto;background:var(--carte)}
+table{border-collapse:collapse;width:100%;font-size:13.5px;min-width:640px}
+th{font:500 11.5px/1.3 var(--texte);letter-spacing:.06em;text-transform:uppercase;color:var(--sourd);text-align:left;padding:9px 10px;border-bottom:1px solid var(--trait)}
+td{padding:9px 10px;border-bottom:1px solid var(--trait);vertical-align:top}
+td.n{text-align:right;white-space:nowrap}
+tr:last-child td{border-bottom:0}
+.filtres{display:flex;flex-wrap:wrap;gap:8px}
+.filtres button{font:500 13px/1 var(--texte);padding:8px 12px;border:1px solid var(--trait);background:var(--carte);color:var(--encre);border-radius:4px;cursor:pointer}
+.filtres button[aria-pressed="true"]{background:var(--encre);color:var(--carte);border-color:var(--encre)}
+.filtres button:focus-visible,a:focus-visible,summary:focus-visible{outline:2px solid var(--galilee);outline-offset:2px}
+.fil{display:flex;flex-direction:column;gap:8px}
+.acte{background:var(--carte);border-left:3px solid var(--c);padding:12px 14px;display:flex;flex-direction:column;gap:6px;min-width:0}
+.acte header{display:flex;flex-wrap:wrap;align-items:center;gap:8px;font-size:12px}
+.acte .num{color:var(--sourd)}.acte .type{font-weight:600;font-size:13px}
+.acte .id,.acte .commit{color:var(--sourd);font-size:11px}.acte .id{margin-left:auto}
+.acte .fort{font-size:15.5px;font-weight:500}
+.acte .vers{font-size:13px;color:var(--sourd)}
+.acte.t-probleme{border-left-width:0;background:none;padding-inline:0}
+details summary{font-size:12px;color:var(--sourd);cursor:pointer}
+pre{font:11.5px/1.5 var(--mono);background:var(--creux);padding:10px;margin:6px 0 0;overflow-x:auto;white-space:pre-wrap;word-break:break-word}
+code{font:13px var(--mono);background:var(--creux);padding:1px 5px;border-radius:3px}
+</style>
+<main>
+<section>
+  <h1>Page de travail commune</h1>
+  <p class="chapo">GALILÉE cherche les lois, CORTEX les mécanismes, LAVOISIER les comptes. Ils ne s’appellent pas entre eux : chacun lit et écrit dans un même journal, où tout acte porte son auteur, sa preuve, son coût et son niveau de certitude.</p>
+  <div class="etat">
+    <span><b>44</b> actes au journal</span>
+    <span class="bon"><b>Chaîne intacte</b></span>
+    <span class="bon"><b>33 fichiers moteurs non modifiés</b></span>
+    <span><b>4</b> problèmes traités</span>
+    <span>dernier acte : 2026-11-13 23:17 UTC</span>
+  </div>
+</section>
+
+<section>
+  <h2>Ce qui est établi, et à quel degré</h2>
+  <p>Le niveau affiché est recalculé à partir du journal. Une loi tirée de données subies entre comme hypothèse, quel que soit l’avis de son auteur. Seul un pari gagné sur des jours neufs la rend utilisable pour décider. La colonne « banc » compare à la vérité du simulateur, lue après coup : elle n’existe pas dans une vraie entreprise et ne change aucun niveau.</p>
+  <div class="tableau"><table>
+    <thead><tr><th>Niveau</th><th>Auteur</th><th>Affirmation</th><th>Problème</th><th>Banc</th></tr></thead>
+    <tbody><tr><td><span class="niv n1">hors de portée</span></td><td><span class="qui cortex">CORTEX</span></td><td><a href="#r1">La mesure 2 contient une structure prévisible que mon modèle n’exprime pas, de la famille « forme » (fonction non linéaire des leviers).</a></td><td class="petit">forme-manquante#5</td><td><span class="verd bon">confirmée</span></td></tr><tr><td><span class="niv n3">empirique</span><div class="petit">entrée : hypothèse</div><div class="petit">contestée, puis tranchée</div></td><td><span class="qui galilee">GALILÉE</span></td><td><a href="#r2">écart(mesure 2) ≈ 0.3931 − cos(u0) / 2</a></td><td class="petit">forme-manquante#5</td><td><span class="verd bon">confirmée</span></td></tr><tr><td><span class="niv n2">hypothèse</span></td><td><span class="qui lavoisier">LAVOISIER</span></td><td><a href="#r17">13192 lignes regroupées en 17 types de flux et 32 stocks ; profit reconstruit par conservation : 1 214 863 € sur l’année.</a></td><td class="petit">entreprise-opaque#6</td><td><span class="verd bon">confirmée</span></td></tr><tr><td><span class="niv n2">hypothèse</span></td><td><span class="qui lavoisier">LAVOISIER</span></td><td><a href="#r18">Flux non enregistré sur le stock objet:zizimu2 depuis le jour 218 : 0.65 qte par jour.</a></td><td class="petit">entreprise-opaque#6</td><td><span class="verd bon">confirmée</span></td></tr><tr><td><span class="niv n2">hypothèse</span></td><td><span class="qui lavoisier">LAVOISIER</span></td><td><a href="#r20">Flux non enregistré sur le stock en-cours:0 depuis le jour 168 : 67.82 € par jour.</a></td><td class="petit">entreprise-opaque#6</td><td><span class="verd bon">confirmée</span></td></tr><tr><td><span class="niv n2">hypothèse</span></td><td><span class="qui galilee">GALILÉE</span></td><td><a href="#r23">quantité hebdomadaire de liquku2 ≈ 20 / p, où p est le prix rapporté au prix initial (132.07 €).</a></td><td class="petit">entreprise-opaque#6</td><td><span class="sur">—</span></td></tr><tr><td><span class="niv n2">hypothèse</span></td><td><span class="qui galilee">GALILÉE</span></td><td><a href="#r26">quantité hebdomadaire de vaxiha9 ≈ 27.39 / p, où p est le prix rapporté au prix initial (8.02 €).</a></td><td class="petit">entreprise-opaque#6</td><td><span class="sur">—</span></td></tr><tr><td><span class="niv n2">hypothèse</span></td><td><span class="qui lavoisier">LAVOISIER</span></td><td><a href="#r34">11137 lignes regroupées en 16 types de flux et 23 stocks ; profit reconstruit par conservation : 794 133 € sur l’année.</a></td><td class="petit">entreprise-opaque#3</td><td><span class="verd alerte">indécise</span></td></tr><tr><td><span class="niv n2">hypothèse</span></td><td><span class="qui galilee">GALILÉE</span></td><td><a href="#r36">quantité hebdomadaire de nunusa8 ≈ 55.39 / p, où p est le prix rapporté au prix initial (50.35 €).</a></td><td class="petit">entreprise-opaque#3</td><td><span class="sur">—</span></td></tr></tbody>
+  </table></div>
+  <p class="petit">1 empirique · 8 hypothèse · 1 hors de portée (témoins négatifs compris). Niveaux qui autorisent une décision : identité, établie, empirique.</p>
+</section>
+
+<section>
+  <h2>Coûts, risques et gains</h2>
+  <p>Un gain n’est compté en euros que s’il sort d’une comptabilité. Ici, les seuls euros viennent des fuites que LAVOISIER lit dans la conservation ; ce sont des gains possibles, aucun n’a été réalisé puisque rien n’a été colmaté.</p>
+  <div class="tableau"><table>
+    <thead><tr><th>Objet</th><th>Coût</th><th>Risque</th><th>Déjà perdu</th><th>Par an si colmatée</th><th>Banc</th></tr></thead>
+    <tbody><tr><td><a href="#r5">Expérience n° 5 : 13 blocs de 7 jours (jours 272 à 364)</a><div class="petit">gain non mesurable</div></td><td class="petit">91 jours d’essai, |u0| moyen 0,46<br>25,3 s de calcul</td><td class="petit">fausse confirmation ≤ 0.1</td><td class="n">—</td><td class="n">—</td><td><span class="sur">—</span></td></tr><tr><td><a href="#r18">Flux non enregistré sur le stock objet:zizimu2 depuis le jour 218 : 0.65 qte par jour.</a><div class="petit">au prix unitaire médian observé (3.81 € ; de 3.32 à 4.22 €)</div></td><td class="petit">0,8 s de calcul<br>aucune action</td><td class="petit">0,2 fausse détection par entreprise en développement ; cause de la fuite inconnue</td><td class="n">363 €</td><td class="n">901 €</td><td><span class="verd bon">confirmée</span></td></tr><tr><td><a href="#r20">Flux non enregistré sur le stock en-cours:0 depuis le jour 168 : 67.82 € par jour.</a><div class="petit">directe (stock en euros)</div></td><td class="petit">0,8 s de calcul<br>aucune action</td><td class="petit">0,2 fausse détection par entreprise en développement ; cause de la fuite inconnue</td><td class="n">13 360 €</td><td class="n">24 754 €</td><td><span class="verd bon">confirmée</span></td></tr></tbody>
+  </table></div>
+  <p class="petit">Total des fuites chiffrées : 13 723 € déjà perdus, 25 655 € par an si elles étaient colmatées. Dépense totale de la page : 20 s de calcul et 91 jours d’essai simulés. Gain réalisé : 0 €.</p>
+</section>
+
+<section>
+  <h2>Comment l’information circule</h2>
+  <div class="schema"><svg viewBox="0 0 760 300" role="img" aria-label="Les trois moteurs écrivent dans le registre commun et y lisent les actes des autres">
+    <defs><marker id="fl" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="var(--sourd)"/></marker></defs>
+    <rect class="b" x="20" y="20" width="200" height="64" stroke="var(--galilee)"/><text x="120" y="47" text-anchor="middle" font-weight="600" fill="var(--galilee)" style="fill:var(--galilee)">GALILÉE</text><text class="l" x="120" y="66" text-anchor="middle">lois : formes symboliques</text>
+    <rect class="b" x="280" y="20" width="200" height="64" stroke="var(--cortex)"/><text x="380" y="47" text-anchor="middle" font-weight="600" style="fill:var(--cortex)">CORTEX</text><text class="l" x="380" y="66" text-anchor="middle">mécanismes, paris, plans d’essai</text>
+    <rect class="b" x="540" y="20" width="200" height="64" stroke="var(--lavoisier)"/><text x="640" y="47" text-anchor="middle" font-weight="600" style="fill:var(--lavoisier)">LAVOISIER</text><text class="l" x="640" y="66" text-anchor="middle">corps, fuites, euros</text>
+    <rect class="b" x="110" y="150" width="540" height="72" stroke="var(--encre)"/><text x="380" y="180" text-anchor="middle" font-weight="600">Registre commun (journal chaîné, ajout seul)</text><text class="l" x="380" y="200" text-anchor="middle">problème · affirmation · contestation · vérification · expérience · résultat · économie · aveu</text>
+    <path class="f" d="M120 84V150" marker-end="url(#fl)" marker-start="url(#fl)"/><path class="f" d="M380 84V150" marker-end="url(#fl)" marker-start="url(#fl)"/><path class="f" d="M640 84V150" marker-end="url(#fl)" marker-start="url(#fl)"/>
+    <text class="l" x="128" y="112">loi de l’écart, loi des débits</text><text class="l" x="388" y="112">structure manquante, pari, plan</text><text class="l" x="528" y="112" text-anchor="start">débits reconstruits, fuites</text>
+    <text class="l" x="128" y="128">verdict propre conservé</text><text class="l" x="388" y="128">conteste et tranche</text><text class="l" x="528" y="128">coût et gain en euros</text>
+    <path class="f" d="M380 222V262" marker-end="url(#fl)"/><text x="380" y="282" text-anchor="middle" font-size="13">Niveau de certitude courant, recalculé à chaque lecture</text>
+  </svg></div>
+  <div class="moteurs">
+    <div class="moteur galilee"><h3>GALILÉE</h3><p class="petit donnees">haynbroit-alt/All @ be42b7e · 6 fichiers gelés</p><ul><li>Loi symbolique sur des données fournies</li><li>Verdict propre : établie, empirique, incertaine</li><li class="non">Pas ici — Choix de ses propres expériences : aucun problème commun n’offre de monde qu’il puisse interroger</li></ul></div><div class="moteur cortex"><h3>CORTEX</h3><p class="petit donnees">haynbroit-alt/1 @ 758212a · 12 fichiers gelés</p><ul><li>Modes lents acceptés par pari (deux leviers exactement)</li><li>Sonde « hors de portée », pari sur une formule, plan d’essai sous budget</li><li class="non">Pas ici — Sonde et pari sur des données extérieures : ils ne sont pas exportés hors de ses mondes</li><li class="non">Pas ici — Pilotage d’une activité (v3 à v5) : non branché</li></ul></div><div class="moteur lavoisier"><h3>LAVOISIER</h3><p class="petit donnees">haynbroit-alt/A @ 73618f9 · 15 fichiers gelés</p><ul><li>Bilan de matière : types de flux, stocks, profit, fuites</li><li>Vérité scellée jusqu’à la fin du jugement</li><li class="non">Pas ici — Atlas, jumeau, générateur d’opportunités, gouverneur, registre des paris : non écrits</li><li class="non">Pas ici — Agir sur l’entreprise : son générateur ne se pilote pas</li></ul></div>
+  </div>
+</section>
+
+<section>
+  <h2>Le journal</h2>
+  <div class="filtres" role="group" aria-label="Filtrer par auteur">
+    <button type="button" id="f-tous" data-f="tous" aria-pressed="true">Tous</button><button type="button" id="f-galilee" data-f="galilee" aria-pressed="false">GALILÉE</button><button type="button" id="f-cortex" data-f="cortex" aria-pressed="false">CORTEX</button><button type="button" id="f-lavoisier" data-f="lavoisier" aria-pressed="false">LAVOISIER</button><button type="button" id="f-neutre" data-f="neutre" aria-pressed="false">Registre et banc</button>
+  </div>
+  <div class="fil"><h3 id="forme-manquante#5">Forme manquante (monde 5)</h3><article class="acte neutre t-probleme" id="r0" data-qui="neutre">
+  <header><span class="num">n° 0</span><span class="type">Problème</span><span class="qui neutre">registre</span><span class="id">b714d673509d0654</span></header>
+  <p class="fort">Trois mesures quotidiennes, deux leviers, 365 jours. Le modèle de CORTEX suffit-il ? Sinon, quelle loi manque, et peut-on la démontrer ?</p><p class="petit">Source : CORTEX research/v6/p2.js, makeWorld2 · graine 5 (graine de développement)</p>
+  <details><summary>Ligne brute du journal</summary><pre>{
+ &quot;n&quot;: 0,
+ &quot;precedent&quot;: null,
+ &quot;date&quot;: &quot;2026-11-13T23:16:42.771Z&quot;,
+ &quot;probleme&quot;: &quot;forme-manquante#5&quot;,
+ &quot;type&quot;: &quot;probleme&quot;,
+ &quot;cle&quot;: &quot;forme-manquante#5&quot;,
+ &quot;auteur&quot;: &quot;registre&quot;,
+ &quot;titre&quot;: &quot;Forme manquante (monde 5)&quot;,
+ &quot;question&quot;: &quot;Trois mesures quotidiennes, deux leviers, 365 jours. Le modèle de CORTEX suffit-il ? Sinon, quelle loi manque, et peut-on la démontrer ?&quot;,
+ &quot;source&quot;: {
+  &quot;generateur&quot;: &quot;CORTEX research/v6/p2.js, makeWorld2&quot;,
+  &quot;graine&quot;: 5,
+  &quot;classe&quot;: &quot;forme&quot;,
+  &quot;statut&quot;: &quot;graine de développement&quot;
+ },
+ &quot;roles&quot;: {
+  &quot;CORTEX&quot;: &quot;sonde, pari, plan d’expériences&quot;,
+  &quot;GALILÉE&quot;: &quot;forme de l’écart&quot;,
+  &quot;LAVOISIER&quot;: &quot;aucun (pas de comptabilité)&quot;
+ },
+ &quot;id&quot;: &quot;b714d673509d0654&quot;
+}</pre></details>
+</article>
+<article class="acte cortex t-affirmation" id="r1" data-qui="cortex">
+  <header><span class="num">n° 1</span><span class="type">Affirmation</span><span class="qui cortex">CORTEX</span><span class="commit">758212a</span><span class="id">3767f1e27df464a9</span></header>
+  <p class="fort">La mesure 2 contient une structure prévisible que mon modèle n’exprime pas, de la famille « forme » (fonction non linéaire des leviers).</p><p><span class="niv n1">hors de portée à l’entrée</span>  <span class="mes">log E (pari invariant) = 18,34 <span class="sur">seuil 3,4</span></span></p><p class="petit">Garantie : existence garantie au risque α = 0.1 sur les trois mesures ; la famille est une attribution, non garantie</p><p class="petit">Obtenue par : modes cachés ajustés sur les jours 0–149, sonde par pari invariant sur les jours 28–271 · 8,6 s de calcul</p>
+  <details><summary>Ligne brute du journal</summary><pre>{
+ &quot;n&quot;: 1,
+ &quot;precedent&quot;: &quot;b714d673509d0654&quot;,
+ &quot;date&quot;: &quot;2026-11-13T23:16:51.362Z&quot;,
+ &quot;probleme&quot;: &quot;forme-manquante#5&quot;,
+ &quot;type&quot;: &quot;affirmation&quot;,
+ &quot;auteur&quot;: &quot;CORTEX&quot;,
+ &quot;moteur&quot;: {
+  &quot;nom&quot;: &quot;CORTEX&quot;,
+  &quot;depot&quot;: &quot;haynbroit-alt/1&quot;,
+  &quot;commit&quot;: &quot;758212a&quot;
+ },
+ &quot;sujet&quot;: &quot;mesure 2 : structure manquante&quot;,
+ &quot;enonce&quot;: &quot;La mesure 2 contient une structure prévisible que mon modèle n’exprime pas, de la famille « forme » (fonction non linéaire des leviers).&quot;,
+ &quot;certitude&quot;: {
+  &quot;niveau&quot;: &quot;hors de portée&quot;,
+  &quot;mesure&quot;: {
+   &quot;nom&quot;: &quot;log E (pari invariant)&quot;,
+   &quot;valeur&quot;: 18.34,
+   &quot;seuil&quot;: 3.4
+  },
+  &quot;garantie&quot;: &quot;existence garantie au risque α = 0.1 sur les trois mesures ; la famille est une attribution, non garantie&quot;
+ },
+ &quot;contenu&quot;: {
+  &quot;diagnostics&quot;: [
+   {
+    &quot;mesure&quot;: 0,
+    &quot;diagnostic&quot;: &quot;compris&quot;,
+    &quot;famille&quot;: &quot;forme&quot;,
+    &quot;logE&quot;: -3.94
+   },
+   {
+    &quot;mesure&quot;: 1,
+    &quot;diagnostic&quot;: &quot;compris&quot;,
+    &quot;famille&quot;: &quot;memoire&quot;,
+    &quot;logE&quot;: -3.72
+   },
+   {
+    &quot;mesure&quot;: 2,
+    &quot;diagnostic&quot;: &quot;hors de portée&quot;,
+    &quot;famille&quot;: &quot;forme&quot;,
+    &quot;logE&quot;: 18.34
+   }
+  ]
+ },
+ &quot;preuve&quot;: {
+  &quot;methode&quot;: &quot;modes cachés ajustés sur les jours 0–149, sonde par pari invariant sur les jours 28–271&quot;,
+  &quot;reproduire&quot;: &quot;node bin/commun.js executer forme-manquante --graine 5&quot;
+ },
+ &quot;cout&quot;: {
+  &quot;calcul_s&quot;: 8.6,
+  &quot;experiences&quot;: 0
+ },
+ &quot;id&quot;: &quot;3767f1e27df464a9&quot;
+}</pre></details>
+</article>
+<article class="acte galilee t-affirmation" id="r2" data-qui="galilee">
+  <header><span class="num">n° 2</span><span class="type">Affirmation</span><span class="qui galilee">GALILÉE</span><span class="commit">be42b7e</span><span class="id">1f3b29ab4b7848f5</span></header>
+  <p class="fort">écart(mesure 2) ≈ 0.3931 − cos(u0) / 2</p><p><span class="niv n2">hypothèse à l’entrée</span> <span class="mes">verdict propre du moteur : empirique</span> </p><p class="petit">Garantie : aucune : loi ajustée sur des jours déjà observés, leviers subis</p><p class="petit">Obtenue par : recherche symbolique sur les écarts du modèle de CORTEX (jours 28–271), avec second avis interne</p>
+  <details><summary>Ligne brute du journal</summary><pre>{
+ &quot;n&quot;: 2,
+ &quot;precedent&quot;: &quot;3767f1e27df464a9&quot;,
+ &quot;date&quot;: &quot;2026-11-13T23:16:51.363Z&quot;,
+ &quot;probleme&quot;: &quot;forme-manquante#5&quot;,
+ &quot;type&quot;: &quot;affirmation&quot;,
+ &quot;auteur&quot;: &quot;GALILÉE&quot;,
+ &quot;moteur&quot;: {
+  &quot;nom&quot;: &quot;GALILÉE&quot;,
+  &quot;depot&quot;: &quot;haynbroit-alt/All&quot;,
+  &quot;commit&quot;: &quot;be42b7e&quot;
+ },
+ &quot;depend_de&quot;: [
+  &quot;3767f1e27df464a9&quot;
+ ],
+ &quot;sujet&quot;: &quot;mesure 2 : loi de l’écart&quot;,
+ &quot;enonce&quot;: &quot;écart(mesure 2) ≈ 0.3931 − cos(u0) / 2&quot;,
+ &quot;certitude&quot;: {
+  &quot;niveau&quot;: &quot;hypothèse&quot;,
+  &quot;verdict_moteur&quot;: &quot;empirique&quot;,
+  &quot;garantie&quot;: &quot;aucune : loi ajustée sur des jours déjà observés, leviers subis&quot;
+ },
+ &quot;contenu&quot;: {
+  &quot;formule&quot;: &quot;0.3931 − cos(u0) / 2&quot;,
+  &quot;variables&quot;: [
+   &quot;u0&quot;,
+   &quot;u1&quot;
+  ]
+ },
+ &quot;preuve&quot;: {
+  &quot;methode&quot;: &quot;recherche symbolique sur les écarts du modèle de CORTEX (jours 28–271), avec second avis interne&quot;,
+  &quot;reproduire&quot;: &quot;node bin/commun.js executer forme-manquante --graine 5&quot;
+ },
+ &quot;cout&quot;: {
+  &quot;calcul_s&quot;: null,
+  &quot;note&quot;: &quot;inclus dans le temps de la sonde&quot;,
+  &quot;experiences&quot;: 0
+ },
+ &quot;id&quot;: &quot;1f3b29ab4b7848f5&quot;
+}</pre></details>
+</article>
+<article class="acte cortex t-verification" id="r3" data-qui="cortex">
+  <header><span class="num">n° 3</span><span class="type">Vérification</span><span class="qui cortex">CORTEX</span><span class="commit">758212a</span><span class="id">bf5254a4d965b2c4</span></header>
+  <p class="vers">à propos de <a href="#r2">n° 2</a> — écart(mesure 2) ≈ 0.3931 − cos(u0) / 2</p><p><span class="verd alerte">ne tranche pas</span> <span class="mes">pari</span> <span class="mes">log E = -0,05 <span class="sur">seuil 2,3</span></span></p><p class="petit">pari invariant sur les jours 272–364, leviers tels qu’ils se sont produits (plan passif)</p>
+  <details><summary>Ligne brute du journal</summary><pre>{
+ &quot;n&quot;: 3,
+ &quot;precedent&quot;: &quot;1f3b29ab4b7848f5&quot;,
+ &quot;date&quot;: &quot;2026-11-13T23:16:51.363Z&quot;,
+ &quot;probleme&quot;: &quot;forme-manquante#5&quot;,
+ &quot;type&quot;: &quot;verification&quot;,
+ &quot;auteur&quot;: &quot;CORTEX&quot;,
+ &quot;moteur&quot;: {
+  &quot;nom&quot;: &quot;CORTEX&quot;,
+  &quot;depot&quot;: &quot;haynbroit-alt/1&quot;,
+  &quot;commit&quot;: &quot;758212a&quot;
+ },
+ &quot;cible&quot;: &quot;1f3b29ab4b7848f5&quot;,
+ &quot;portee&quot;: &quot;pari&quot;,
+ &quot;eleve_a&quot;: &quot;empirique&quot;,
+ &quot;methode&quot;: &quot;pari invariant sur les jours 272–364, leviers tels qu’ils se sont produits (plan passif)&quot;,
+ &quot;verdict&quot;: &quot;indecis&quot;,
+ &quot;mesure&quot;: {
+  &quot;nom&quot;: &quot;log E&quot;,
+  &quot;valeur&quot;: -0.05,
+  &quot;seuil&quot;: 2.3
+ },
+ &quot;id&quot;: &quot;bf5254a4d965b2c4&quot;
+}</pre></details>
+</article>
+<article class="acte cortex t-contestation" id="r4" data-qui="cortex">
+  <header><span class="num">n° 4</span><span class="type">Contestation</span><span class="qui cortex">CORTEX</span><span class="commit">758212a</span><span class="id">e0e7da60c5339e3e</span></header>
+  <p class="vers">à propos de <a href="#r2">n° 2</a> — écart(mesure 2) ≈ 0.3931 − cos(u0) / 2</p><p>GALILÉE juge sa loi « empirique ». Sur 93 jours neufs, elle ne gagne pas son pari (log E = -0.05, seuil 2.3) et ne réduit pas mon erreur de prévision (0.1706 → 0.1557). Les leviers ont peut-être trop peu varié pour départager : je propose une expérience.</p>
+  <details><summary>Ligne brute du journal</summary><pre>{
+ &quot;n&quot;: 4,
+ &quot;precedent&quot;: &quot;bf5254a4d965b2c4&quot;,
+ &quot;date&quot;: &quot;2026-11-13T23:16:51.363Z&quot;,
+ &quot;probleme&quot;: &quot;forme-manquante#5&quot;,
+ &quot;type&quot;: &quot;contestation&quot;,
+ &quot;auteur&quot;: &quot;CORTEX&quot;,
+ &quot;moteur&quot;: {
+  &quot;nom&quot;: &quot;CORTEX&quot;,
+  &quot;depot&quot;: &quot;haynbroit-alt/1&quot;,
+  &quot;commit&quot;: &quot;758212a&quot;
+ },
+ &quot;cible&quot;: &quot;1f3b29ab4b7848f5&quot;,
+ &quot;motif&quot;: &quot;GALILÉE juge sa loi « empirique ». Sur 93 jours neufs, elle ne gagne pas son pari (log E = -0.05, seuil 2.3) et ne réduit pas mon erreur de prévision (0.1706 → 0.1557). Les leviers ont peut-être trop peu varié pour départager : je propose une expérience.&quot;,
+ &quot;preuve&quot;: {
+  &quot;logE&quot;: -0.05,
+  &quot;rmse_sans&quot;: 0.1706,
+  &quot;rmse_avec&quot;: 0.1557
+ },
+ &quot;id&quot;: &quot;e0e7da60c5339e3e&quot;
+}</pre></details>
+</article>
+<article class="acte cortex t-experience" id="r5" data-qui="cortex">
+  <header><span class="num">n° 5</span><span class="type">Expérience</span><span class="qui cortex">CORTEX</span><span class="commit">758212a</span><span class="id">802344485c964f12</span></header>
+  <p><span class="verd bon">exécutée sans revue</span></p><p>13 blocs de 7 jours (jours 272 à 364)</p><p class="petit donnees">réglages (u0, u1) par bloc : (-1 ; 0) (-1 ; 0) (1 ; 0) (0 ; 0) (-1 ; 0) (0 ; 0) (1 ; 0) (0 ; 0) (1 ; 0) (0 ; 0) (0 ; 0) (0 ; 0) (0 ; 0)</p><p class="petit">Coût prévu : 91 jours, |u0| moyen 0,46 (plafond 0,5), part de jours u1 0 (plafond 0,3)</p><p class="petit">Risque : fausse confirmation ≤ 0.1 (garantie du pari, plan fixé d’avance)</p>
+  <details><summary>Ligne brute du journal</summary><pre>{
+ &quot;n&quot;: 5,
+ &quot;precedent&quot;: &quot;e0e7da60c5339e3e&quot;,
+ &quot;date&quot;: &quot;2026-11-13T23:16:51.461Z&quot;,
+ &quot;probleme&quot;: &quot;forme-manquante#5&quot;,
+ &quot;type&quot;: &quot;experience&quot;,
+ &quot;auteur&quot;: &quot;CORTEX&quot;,
+ &quot;moteur&quot;: {
+  &quot;nom&quot;: &quot;CORTEX&quot;,
+  &quot;depot&quot;: &quot;haynbroit-alt/1&quot;,
+  &quot;commit&quot;: &quot;758212a&quot;
+ },
+ &quot;but&quot;: [
+  &quot;1f3b29ab4b7848f5&quot;
+ ],
+ &quot;plan&quot;: {
+  &quot;duree&quot;: &quot;13 blocs de 7 jours (jours 272 à 364)&quot;,
+  &quot;reglages&quot;: [
+   [
+    -1,
+    0
+   ],
+   [
+    -1,
+    0
+   ],
+   [
+    1,
+    0
+   ],
+   [
+    0,
+    0
+   ],
+   [
+    -1,
+    0
+   ],
+   [
+    0,
+    0
+   ],
+   [
+    1,
+    0
+   ],
+   [
+    0,
+    0
+   ],
+   [
+    1,
+    0
+   ],
+   [
+    0,
+    0
+   ],
+   [
+    0,
+    0
+   ],
+   [
+    0,
+    0
+   ],
+   [
+    0,
+    0
+   ]
+  ],
+  &quot;fixe_avant&quot;: &quot;le plan ne dépend que de la formule, figée avant les jours neufs&quot;
+ },
+ &quot;cout_prevu&quot;: {
+  &quot;moyenne_abs_u0&quot;: 0.462,
+  &quot;part_jours_u1&quot;: 0,
+  &quot;jours&quot;: 91,
+  &quot;plafond&quot;: {
+   &quot;u0&quot;: 0.5,
+   &quot;u1&quot;: 0.3
+  },
+  &quot;unite&quot;: &quot;effort de levier (ce monde n’a pas d’euros)&quot;
+ },
+ &quot;risque&quot;: {
+  &quot;fausse_confirmation&quot;: &quot;≤ 0.1 (garantie du pari, plan fixé d’avance)&quot;,
+  &quot;domaine&quot;: &quot;réglages déjà observés (u0 ∈ [−1 ; 1], u1 ∈ {0 ; 1})&quot;,
+  &quot;reversible&quot;: true
+ },
+ &quot;autorisation&quot;: &quot;automatique&quot;,
+ &quot;id&quot;: &quot;802344485c964f12&quot;
+}</pre></details>
+</article>
+<article class="acte cortex t-resultat" id="r6" data-qui="cortex">
+  <header><span class="num">n° 6</span><span class="type">Résultat</span><span class="qui cortex">CORTEX</span><span class="commit">758212a</span><span class="id">7f220501a069823f</span></header>
+  <p class="vers">résultat de l’expérience <a href="#r5">n° 5</a></p><p><span class="verd bon">pari gagné</span> <span class="mes">log E = 36,47 <span class="sur">seuil 2,3</span></span></p><p class="petit donnees">erreur de prévision 0,2361 → 0,1554 avec la loi · 8,3 s de calcul</p>
+  <details><summary>Ligne brute du journal</summary><pre>{
+ &quot;n&quot;: 6,
+ &quot;precedent&quot;: &quot;802344485c964f12&quot;,
+ &quot;date&quot;: &quot;2026-11-13T23:16:59.761Z&quot;,
+ &quot;probleme&quot;: &quot;forme-manquante#5&quot;,
+ &quot;type&quot;: &quot;resultat&quot;,
+ &quot;auteur&quot;: &quot;CORTEX&quot;,
+ &quot;moteur&quot;: {
+  &quot;nom&quot;: &quot;CORTEX&quot;,
+  &quot;depot&quot;: &quot;haynbroit-alt/1&quot;,
+  &quot;commit&quot;: &quot;758212a&quot;
+ },
+ &quot;experience&quot;: &quot;802344485c964f12&quot;,
+ &quot;mesures&quot;: {
+  &quot;logE&quot;: 36.47,
+  &quot;seuil&quot;: 2.3,
+  &quot;pari_gagne&quot;: true,
+  &quot;rmse_sans&quot;: 0.2361,
+  &quot;rmse_avec&quot;: 0.1554,
+  &quot;meme_formule&quot;: true
+ },
+ &quot;cout_reel&quot;: {
+  &quot;moyenne_abs_u0&quot;: 0.462,
+  &quot;part_jours_u1&quot;: 0,
+  &quot;jours&quot;: 91,
+  &quot;calcul_s&quot;: 8.3
+ },
+ &quot;id&quot;: &quot;7f220501a069823f&quot;
+}</pre></details>
+</article>
+<article class="acte cortex t-verification" id="r7" data-qui="cortex">
+  <header><span class="num">n° 7</span><span class="type">Vérification</span><span class="qui cortex">CORTEX</span><span class="commit">758212a</span><span class="id">caf54b433a74290f</span></header>
+  <p class="vers">à propos de <a href="#r2">n° 2</a> — écart(mesure 2) ≈ 0.3931 − cos(u0) / 2</p><p><span class="verd bon">confirme</span> <span class="mes">pari</span> <span class="mes">log E = 36,47 <span class="sur">seuil 2,3</span></span></p><p class="petit">pari invariant sur les jours 272–364, réglages du plan d’expériences commun</p>
+  <details><summary>Ligne brute du journal</summary><pre>{
+ &quot;n&quot;: 7,
+ &quot;precedent&quot;: &quot;7f220501a069823f&quot;,
+ &quot;date&quot;: &quot;2026-11-13T23:16:59.762Z&quot;,
+ &quot;probleme&quot;: &quot;forme-manquante#5&quot;,
+ &quot;type&quot;: &quot;verification&quot;,
+ &quot;auteur&quot;: &quot;CORTEX&quot;,
+ &quot;moteur&quot;: {
+  &quot;nom&quot;: &quot;CORTEX&quot;,
+  &quot;depot&quot;: &quot;haynbroit-alt/1&quot;,
+  &quot;commit&quot;: &quot;758212a&quot;
+ },
+ &quot;cible&quot;: &quot;1f3b29ab4b7848f5&quot;,
+ &quot;portee&quot;: &quot;pari&quot;,
+ &quot;eleve_a&quot;: &quot;empirique&quot;,
+ &quot;methode&quot;: &quot;pari invariant sur les jours 272–364, réglages du plan d’expériences commun&quot;,
+ &quot;verdict&quot;: &quot;confirme&quot;,
+ &quot;mesure&quot;: {
+  &quot;nom&quot;: &quot;log E&quot;,
+  &quot;valeur&quot;: 36.47,
+  &quot;seuil&quot;: 2.3
+ },
+ &quot;id&quot;: &quot;caf54b433a74290f&quot;
+}</pre></details>
+</article>
+<article class="acte neutre t-affirmation" id="r8" data-qui="neutre">
+  <header><span class="num">n° 8</span><span class="type">Affirmation</span><span class="qui neutre">registre</span><span class="id">b7c13d42a0f3e86c</span></header>
+  <p class="fort">écart(mesure 0) ≈ u0³ — formule injectée exprès, que rien ne soutient (mesure diagnostiquée « compris »).</p><p><span class="niv n2">hypothèse à l’entrée</span>  </p><p class="petit">Garantie : aucune : elle sert à éprouver la procédure de confirmation</p><p class="petit">Obtenue par : injection (crochet inject de p2.js) · 0 s de calcul</p>
+  <details><summary>Ligne brute du journal</summary><pre>{
+ &quot;n&quot;: 8,
+ &quot;precedent&quot;: &quot;caf54b433a74290f&quot;,
+ &quot;date&quot;: &quot;2026-11-13T23:16:59.804Z&quot;,
+ &quot;probleme&quot;: &quot;forme-manquante#5&quot;,
+ &quot;type&quot;: &quot;affirmation&quot;,
+ &quot;auteur&quot;: &quot;registre&quot;,
+ &quot;sujet&quot;: &quot;mesure 0 : témoin négatif&quot;,
+ &quot;enonce&quot;: &quot;écart(mesure 0) ≈ u0³ — formule injectée exprès, que rien ne soutient (mesure diagnostiquée « compris »).&quot;,
+ &quot;certitude&quot;: {
+  &quot;niveau&quot;: &quot;hypothèse&quot;,
+  &quot;garantie&quot;: &quot;aucune : elle sert à éprouver la procédure de confirmation&quot;
+ },
+ &quot;preuve&quot;: {
+  &quot;methode&quot;: &quot;injection (crochet inject de p2.js)&quot;,
+  &quot;reproduire&quot;: &quot;node bin/commun.js executer forme-manquante --graine 5&quot;
+ },
+ &quot;cout&quot;: {
+  &quot;calcul_s&quot;: 0,
+  &quot;experiences&quot;: 0
+ },
+ &quot;id&quot;: &quot;b7c13d42a0f3e86c&quot;
+}</pre></details>
+</article>
+<article class="acte cortex t-verification" id="r9" data-qui="cortex">
+  <header><span class="num">n° 9</span><span class="type">Vérification</span><span class="qui cortex">CORTEX</span><span class="commit">758212a</span><span class="id">f1518dfa4404a97d</span></header>
+  <p class="vers">à propos de <a href="#r8">n° 8</a> — écart(mesure 0) ≈ u0³ — formule injectée exprès, que rien ne soutient (mesure diagnostiquée « compris »).</p><p><span class="verd bon">non confirmé, comme attendu</span> <span class="mes">témoin négatif</span> <span class="mes">log E = -1,6 <span class="sur">seuil 2,3</span></span></p><p class="petit">même pari, sous un plan d’expériences construit pour confirmer la formule fausse</p>
+  <details><summary>Ligne brute du journal</summary><pre>{
+ &quot;n&quot;: 9,
+ &quot;precedent&quot;: &quot;b7c13d42a0f3e86c&quot;,
+ &quot;date&quot;: &quot;2026-11-13T23:17:08.236Z&quot;,
+ &quot;probleme&quot;: &quot;forme-manquante#5&quot;,
+ &quot;type&quot;: &quot;verification&quot;,
+ &quot;auteur&quot;: &quot;CORTEX&quot;,
+ &quot;moteur&quot;: {
+  &quot;nom&quot;: &quot;CORTEX&quot;,
+  &quot;depot&quot;: &quot;haynbroit-alt/1&quot;,
+  &quot;commit&quot;: &quot;758212a&quot;
+ },
+ &quot;cible&quot;: &quot;b7c13d42a0f3e86c&quot;,
+ &quot;portee&quot;: &quot;temoin-negatif&quot;,
+ &quot;methode&quot;: &quot;même pari, sous un plan d’expériences construit pour confirmer la formule fausse&quot;,
+ &quot;verdict&quot;: &quot;indecis&quot;,
+ &quot;mesure&quot;: {
+  &quot;nom&quot;: &quot;log E&quot;,
+  &quot;valeur&quot;: -1.6,
+  &quot;seuil&quot;: 2.3
+ },
+ &quot;attendu&quot;: &quot;indecis&quot;,
+ &quot;id&quot;: &quot;f1518dfa4404a97d&quot;
+}</pre></details>
+</article>
+<article class="acte neutre t-economie" id="r10" data-qui="neutre">
+  <header><span class="num">n° 10</span><span class="type">Économie</span><span class="qui neutre">registre</span><span class="id">e03a15c8298cd4d4</span></header>
+  <p class="vers">à propos de <a href="#r5">n° 5</a> — 13 blocs de 7 jours (jours 272 à 364)</p><p><span class="verd alerte">gain non mesurable</span></p><p class="petit">ce monde synthétique n’a ni prix ni comptabilité : confirmer la loi ne peut pas y être converti en euros</p>
+  <details><summary>Ligne brute du journal</summary><pre>{
+ &quot;n&quot;: 10,
+ &quot;precedent&quot;: &quot;f1518dfa4404a97d&quot;,
+ &quot;date&quot;: &quot;2026-11-13T23:17:08.236Z&quot;,
+ &quot;probleme&quot;: &quot;forme-manquante#5&quot;,
+ &quot;type&quot;: &quot;economie&quot;,
+ &quot;auteur&quot;: &quot;registre&quot;,
+ &quot;cible&quot;: &quot;802344485c964f12&quot;,
+ &quot;cout&quot;: {
+  &quot;leviers&quot;: {
+   &quot;moyenne_abs_u0&quot;: 0.462,
+   &quot;part_jours_u1&quot;: 0,
+   &quot;jours&quot;: 91
+  },
+  &quot;calcul_s&quot;: 25.3
+ },
+ &quot;risque&quot;: {
+  &quot;fausse_confirmation&quot;: &quot;≤ 0.1&quot;
+ },
+ &quot;gain&quot;: {
+  &quot;base&quot;: &quot;non mesurable&quot;,
+  &quot;valeur&quot;: null,
+  &quot;unite&quot;: &quot;€&quot;,
+  &quot;raison&quot;: &quot;ce monde synthétique n’a ni prix ni comptabilité : confirmer la loi ne peut pas y être converti en euros&quot;
+ },
+ &quot;id&quot;: &quot;e03a15c8298cd4d4&quot;
+}</pre></details>
+</article>
+<article class="acte neutre t-verification" id="r11" data-qui="neutre">
+  <header><span class="num">n° 11</span><span class="type">Vérification</span><span class="qui neutre">banc</span><span class="id">ec9ec84d4bf205c5</span></header>
+  <p class="vers">à propos de <a href="#r1">n° 1</a> — La mesure 2 contient une structure prévisible que mon modèle n’exprime pas, de la famille « forme » (fonction </p><p><span class="verd bon">confirme</span> <span class="mes">vérité du banc</span> </p><p class="petit">lecture de la vérité du générateur après tous les jugements</p><p class="petit donnees">mesure touchee : 2 · famille : forme</p>
+  <details><summary>Ligne brute du journal</summary><pre>{
+ &quot;n&quot;: 11,
+ &quot;precedent&quot;: &quot;e03a15c8298cd4d4&quot;,
+ &quot;date&quot;: &quot;2026-11-13T23:17:08.237Z&quot;,
+ &quot;probleme&quot;: &quot;forme-manquante#5&quot;,
+ &quot;type&quot;: &quot;verification&quot;,
+ &quot;auteur&quot;: &quot;banc&quot;,
+ &quot;cible&quot;: &quot;3767f1e27df464a9&quot;,
+ &quot;portee&quot;: &quot;verite-du-banc&quot;,
+ &quot;methode&quot;: &quot;lecture de la vérité du générateur après tous les jugements&quot;,
+ &quot;verdict&quot;: &quot;confirme&quot;,
+ &quot;mesure&quot;: {
+  &quot;mesure_touchee&quot;: 2,
+  &quot;famille&quot;: &quot;forme&quot;
+ },
+ &quot;id&quot;: &quot;ec9ec84d4bf205c5&quot;
+}</pre></details>
+</article>
+<article class="acte neutre t-verification" id="r12" data-qui="neutre">
+  <header><span class="num">n° 12</span><span class="type">Vérification</span><span class="qui neutre">banc</span><span class="id">8812f23312abdb5e</span></header>
+  <p class="vers">à propos de <a href="#r2">n° 2</a> — écart(mesure 2) ≈ 0.3931 − cos(u0) / 2</p><p><span class="verd bon">confirme</span> <span class="mes">vérité du banc</span> <span class="mes">R² : 0,999</span></p><p class="petit">part de la forme vraie (hors constante et effets linéaires) expliquée par la formule, sur la grille des réglages</p>
+  <details><summary>Ligne brute du journal</summary><pre>{
+ &quot;n&quot;: 12,
+ &quot;precedent&quot;: &quot;ec9ec84d4bf205c5&quot;,
+ &quot;date&quot;: &quot;2026-11-13T23:17:08.237Z&quot;,
+ &quot;probleme&quot;: &quot;forme-manquante#5&quot;,
+ &quot;type&quot;: &quot;verification&quot;,
+ &quot;auteur&quot;: &quot;banc&quot;,
+ &quot;cible&quot;: &quot;1f3b29ab4b7848f5&quot;,
+ &quot;portee&quot;: &quot;verite-du-banc&quot;,
+ &quot;methode&quot;: &quot;part de la forme vraie (hors constante et effets linéaires) expliquée par la formule, sur la grille des réglages&quot;,
+ &quot;verdict&quot;: &quot;confirme&quot;,
+ &quot;mesure&quot;: {
+  &quot;nom&quot;: &quot;R²&quot;,
+  &quot;valeur&quot;: 0.999,
+  &quot;forme_vraie&quot;: &quot;carre&quot;
+ },
+ &quot;id&quot;: &quot;8812f23312abdb5e&quot;
+}</pre></details>
+</article>
+<article class="acte lavoisier t-aveu" id="r13" data-qui="lavoisier">
+  <header><span class="num">n° 13</span><span class="type">Aveu</span><span class="qui lavoisier">LAVOISIER</span><span class="commit">73618f9</span><span class="id">a76bb7ea12605804</span></header>
+  <p>Ce monde ne contient aucun journal d’événements ni aucun euro : il n’y a pas de bilan de matière à dresser, donc aucun gain économique à mesurer.</p>
+  <details><summary>Ligne brute du journal</summary><pre>{
+ &quot;n&quot;: 13,
+ &quot;precedent&quot;: &quot;8812f23312abdb5e&quot;,
+ &quot;date&quot;: &quot;2026-11-13T23:17:08.237Z&quot;,
+ &quot;probleme&quot;: &quot;forme-manquante#5&quot;,
+ &quot;type&quot;: &quot;aveu&quot;,
+ &quot;auteur&quot;: &quot;LAVOISIER&quot;,
+ &quot;moteur&quot;: {
+  &quot;nom&quot;: &quot;LAVOISIER&quot;,
+  &quot;depot&quot;: &quot;haynbroit-alt/A&quot;,
+  &quot;commit&quot;: &quot;73618f9&quot;
+ },
+ &quot;motif&quot;: &quot;Ce monde ne contient aucun journal d’événements ni aucun euro : il n’y a pas de bilan de matière à dresser, donc aucun gain économique à mesurer.&quot;,
+ &quot;id&quot;: &quot;a76bb7ea12605804&quot;
+}</pre></details>
+</article></div>
+<div class="fil"><h3 id="forme-manquante#3">Forme manquante (monde 3)</h3><article class="acte neutre t-probleme" id="r14" data-qui="neutre">
+  <header><span class="num">n° 14</span><span class="type">Problème</span><span class="qui neutre">registre</span><span class="id">b155ed1619a14b2a</span></header>
+  <p class="fort">Trois mesures quotidiennes, deux leviers, 365 jours. Le modèle de CORTEX suffit-il ? Sinon, quelle loi manque, et peut-on la démontrer ?</p><p class="petit">Source : CORTEX research/v6/p2.js, makeWorld2 · graine 3 (graine de développement)</p>
+  <details><summary>Ligne brute du journal</summary><pre>{
+ &quot;n&quot;: 14,
+ &quot;precedent&quot;: &quot;a76bb7ea12605804&quot;,
+ &quot;date&quot;: &quot;2026-11-13T23:17:08.297Z&quot;,
+ &quot;probleme&quot;: &quot;forme-manquante#3&quot;,
+ &quot;type&quot;: &quot;probleme&quot;,
+ &quot;cle&quot;: &quot;forme-manquante#3&quot;,
+ &quot;auteur&quot;: &quot;registre&quot;,
+ &quot;titre&quot;: &quot;Forme manquante (monde 3)&quot;,
+ &quot;question&quot;: &quot;Trois mesures quotidiennes, deux leviers, 365 jours. Le modèle de CORTEX suffit-il ? Sinon, quelle loi manque, et peut-on la démontrer ?&quot;,
+ &quot;source&quot;: {
+  &quot;generateur&quot;: &quot;CORTEX research/v6/p2.js, makeWorld2&quot;,
+  &quot;graine&quot;: 3,
+  &quot;classe&quot;: &quot;forme&quot;,
+  &quot;statut&quot;: &quot;graine de développement&quot;
+ },
+ &quot;roles&quot;: {
+  &quot;CORTEX&quot;: &quot;sonde, pari, plan d’expériences&quot;,
+  &quot;GALILÉE&quot;: &quot;forme de l’écart&quot;,
+  &quot;LAVOISIER&quot;: &quot;aucun (pas de comptabilité)&quot;
+ },
+ &quot;id&quot;: &quot;b155ed1619a14b2a&quot;
+}</pre></details>
+</article>
+<article class="acte cortex t-aveu" id="r15" data-qui="cortex">
+  <header><span class="num">n° 15</span><span class="type">Aveu</span><span class="qui cortex">CORTEX</span><span class="commit">758212a</span><span class="id">0d909032c873e29f</span></header>
+  <p>La sonde ne signale aucune forme manquante dans ce monde : rien à transmettre à GALILÉE.</p>
+  <details><summary>Ligne brute du journal</summary><pre>{
+ &quot;n&quot;: 15,
+ &quot;precedent&quot;: &quot;b155ed1619a14b2a&quot;,
+ &quot;date&quot;: &quot;2026-11-13T23:17:15.598Z&quot;,
+ &quot;probleme&quot;: &quot;forme-manquante#3&quot;,
+ &quot;type&quot;: &quot;aveu&quot;,
+ &quot;auteur&quot;: &quot;CORTEX&quot;,
+ &quot;moteur&quot;: {
+  &quot;nom&quot;: &quot;CORTEX&quot;,
+  &quot;depot&quot;: &quot;haynbroit-alt/1&quot;,
+  &quot;commit&quot;: &quot;758212a&quot;
+ },
+ &quot;motif&quot;: &quot;La sonde ne signale aucune forme manquante dans ce monde : rien à transmettre à GALILÉE.&quot;,
+ &quot;contenu&quot;: {
+  &quot;diagnostics&quot;: [
+   {
+    &quot;mesure&quot;: 0,
+    &quot;diagnostic&quot;: &quot;mal estimé&quot;,
+    &quot;famille&quot;: &quot;mode&quot;,
+    &quot;logE&quot;: 27.13
+   },
+   {
+    &quot;mesure&quot;: 1,
+    &quot;diagnostic&quot;: &quot;compris&quot;,
+    &quot;famille&quot;: &quot;mode&quot;,
+    &quot;logE&quot;: -4.57
+   },
+   {
+    &quot;mesure&quot;: 2,
+    &quot;diagnostic&quot;: &quot;compris&quot;,
+    &quot;famille&quot;: &quot;memoire&quot;,
+    &quot;logE&quot;: -2.15
+   }
+  ],
+  &quot;seuil&quot;: 3.4
+ },
+ &quot;id&quot;: &quot;0d909032c873e29f&quot;
+}</pre></details>
+</article></div>
+<div class="fil"><h3 id="entreprise-opaque#6">Entreprise opaque (graine 6)</h3><article class="acte neutre t-probleme" id="r16" data-qui="neutre">
+  <header><span class="num">n° 16</span><span class="type">Problème</span><span class="qui neutre">registre</span><span class="id">a5b6f5b9c4530b2a</span></header>
+  <p class="fort">Un an de journaux bruts aux libellés opaques. Quel est le corps de l’entreprise, où l’argent fuit-il, et quelles lois gouvernent ses débits ?</p><p class="petit">Source : LAVOISIER src/bench/generator.js · graine 6 (graine de développement)</p>
+  <details><summary>Ligne brute du journal</summary><pre>{
+ &quot;n&quot;: 16,
+ &quot;precedent&quot;: &quot;0d909032c873e29f&quot;,
+ &quot;date&quot;: &quot;2026-11-13T23:17:15.811Z&quot;,
+ &quot;probleme&quot;: &quot;entreprise-opaque#6&quot;,
+ &quot;type&quot;: &quot;probleme&quot;,
+ &quot;cle&quot;: &quot;entreprise-opaque#6&quot;,
+ &quot;auteur&quot;: &quot;registre&quot;,
+ &quot;titre&quot;: &quot;Entreprise opaque (graine 6)&quot;,
+ &quot;question&quot;: &quot;Un an de journaux bruts aux libellés opaques. Quel est le corps de l’entreprise, où l’argent fuit-il, et quelles lois gouvernent ses débits ?&quot;,
+ &quot;source&quot;: {
+  &quot;generateur&quot;: &quot;LAVOISIER src/bench/generator.js&quot;,
+  &quot;graine&quot;: 6,
+  &quot;classe&quot;: {
+   &quot;archetype&quot;: &quot;negoce&quot;,
+   &quot;nHidden&quot;: 2,
+   &quot;level&quot;: &quot;propre&quot;
+  },
+  &quot;lignes&quot;: 13192,
+  &quot;statut&quot;: &quot;graine de développement&quot;
+ },
+ &quot;roles&quot;: {
+  &quot;LAVOISIER&quot;: &quot;bilan de matière, fuites&quot;,
+  &quot;GALILÉE&quot;: &quot;loi quantité–prix des débits&quot;,
+  &quot;CORTEX&quot;: &quot;modes lents entre débits&quot;
+ },
+ &quot;id&quot;: &quot;a5b6f5b9c4530b2a&quot;
+}</pre></details>
+</article>
+<article class="acte lavoisier t-affirmation" id="r17" data-qui="lavoisier">
+  <header><span class="num">n° 17</span><span class="type">Affirmation</span><span class="qui lavoisier">LAVOISIER</span><span class="commit">73618f9</span><span class="id">84fdc998db378260</span></header>
+  <p class="fort">13192 lignes regroupées en 17 types de flux et 32 stocks ; profit reconstruit par conservation : 1 214 863 € sur l’année.</p><p><span class="niv n2">hypothèse à l’entrée</span>  </p><p class="petit">Garantie : aucune hors développement : le bilan de matière n’est pas gelé et son évaluation unique (M0) n’a pas eu lieu</p><p class="petit">Obtenue par : bilan de matière : typage, appariement par conservation, intégration des stocks, datation · 0,8 s de calcul</p>
+  <details><summary>Ligne brute du journal</summary><pre>{
+ &quot;n&quot;: 17,
+ &quot;precedent&quot;: &quot;a5b6f5b9c4530b2a&quot;,
+ &quot;date&quot;: &quot;2026-11-13T23:17:16.719Z&quot;,
+ &quot;probleme&quot;: &quot;entreprise-opaque#6&quot;,
+ &quot;type&quot;: &quot;affirmation&quot;,
+ &quot;auteur&quot;: &quot;LAVOISIER&quot;,
+ &quot;moteur&quot;: {
+  &quot;nom&quot;: &quot;LAVOISIER&quot;,
+  &quot;depot&quot;: &quot;haynbroit-alt/A&quot;,
+  &quot;commit&quot;: &quot;73618f9&quot;
+ },
+ &quot;sujet&quot;: &quot;corps de l’entreprise&quot;,
+ &quot;enonce&quot;: &quot;13192 lignes regroupées en 17 types de flux et 32 stocks ; profit reconstruit par conservation : 1 214 863 € sur l’année.&quot;,
+ &quot;certitude&quot;: {
+  &quot;niveau&quot;: &quot;hypothèse&quot;,
+  &quot;garantie&quot;: &quot;aucune hors développement : le bilan de matière n’est pas gelé et son évaluation unique (M0) n’a pas eu lieu&quot;
+ },
+ &quot;contenu&quot;: {
+  &quot;types&quot;: 17,
+  &quot;stocks&quot;: [
+   &quot;tresorerie:kimulu3 (€)&quot;,
+   &quot;objet:sajo3 (qte)&quot;,
+   &quot;objet:sukuro8 (qte)&quot;,
+   &quot;objet:qazuzo9 (qte)&quot;,
+   &quot;objet:cebu3 (qte)&quot;,
+   &quot;objet:nawu3 (qte)&quot;,
+   &quot;objet:kupewo0 (qte)&quot;,
+   &quot;objet:naka7 (qte)&quot;,
+   &quot;objet:zaloti7 (qte)&quot;,
+   &quot;objet:hocado4 (qte)&quot;,
+   &quot;objet:qubi0 (qte)&quot;,
+   &quot;objet:nigidi0 (qte)&quot;,
+   &quot;objet:xopiji7 (qte)&quot;,
+   &quot;objet:jiwaqi4 (qte)&quot;,
+   &quot;objet:zizimu2 (qte)&quot;,
+   &quot;objet:modana6 (qte)&quot;,
+   &quot;objet:laqa6 (qte)&quot;,
+   &quot;objet:beha9 (qte)&quot;,
+   &quot;objet:suwaga3 (qte)&quot;,
+   &quot;objet:pidizu8 (qte)&quot;,
+   &quot;objet:vaxiha9 (qte)&quot;,
+   &quot;objet:bopaxa7 (qte)&quot;,
+   &quot;objet:mivuge4 (qte)&quot;,
+   &quot;objet:qike2 (qte)&quot;,
+   &quot;objet:qati4 (qte)&quot;,
+   &quot;objet:liquku2 (qte)&quot;,
+   &quot;objet:jibuhu0 (qte)&quot;,
+   &quot;en-cours:0 (€)&quot;,
+   &quot;en-cours:1 (€)&quot;,
+   &quot;en-cours:2 (€)&quot;,
+   &quot;en-cours:3 (€)&quot;,
+   &quot;financement:kubuzi9 (€)&quot;
+  ],
+  &quot;profit_mensuel&quot;: [
+   108045,
+   110029,
+   79304,
+   105442,
+   85819,
+   84398,
+   114611,
+   57790,
+   119429,
+   87169,
+   103003,
+   159825
+  ]
+ },
+ &quot;preuve&quot;: {
+  &quot;methode&quot;: &quot;bilan de matière : typage, appariement par conservation, intégration des stocks, datation&quot;,
+  &quot;donnees&quot;: &quot;e01a8f9088f52f69&quot;,
+  &quot;reproduire&quot;: &quot;node bin/commun.js executer entreprise-opaque --graine 6&quot;
+ },
+ &quot;cout&quot;: {
+  &quot;calcul_s&quot;: 0.8,
+  &quot;experiences&quot;: 0
+ },
+ &quot;id&quot;: &quot;84fdc998db378260&quot;
+}</pre></details>
+</article>
+<article class="acte lavoisier t-affirmation" id="r18" data-qui="lavoisier">
+  <header><span class="num">n° 18</span><span class="type">Affirmation</span><span class="qui lavoisier">LAVOISIER</span><span class="commit">73618f9</span><span class="id">006d9707a4965f99</span></header>
+  <p class="fort">Flux non enregistré sur le stock objet:zizimu2 depuis le jour 218 : 0.65 qte par jour.</p><p><span class="niv n2">hypothèse à l’entrée</span>  <span class="mes">preuve : rapport de vraisemblance 60.0</span></p><p class="petit">Garantie : écart de conservation : le montant est comptable, mais la détection elle-même n’est pas garantie (voir risque)</p><p class="petit">Obtenue par : résidu de conservation entre stock intégré et relevés</p>
+  <details><summary>Ligne brute du journal</summary><pre>{
+ &quot;n&quot;: 18,
+ &quot;precedent&quot;: &quot;84fdc998db378260&quot;,
+ &quot;date&quot;: &quot;2026-11-13T23:17:16.721Z&quot;,
+ &quot;probleme&quot;: &quot;entreprise-opaque#6&quot;,
+ &quot;type&quot;: &quot;affirmation&quot;,
+ &quot;auteur&quot;: &quot;LAVOISIER&quot;,
+ &quot;moteur&quot;: {
+  &quot;nom&quot;: &quot;LAVOISIER&quot;,
+  &quot;depot&quot;: &quot;haynbroit-alt/A&quot;,
+  &quot;commit&quot;: &quot;73618f9&quot;
+ },
+ &quot;depend_de&quot;: [
+  &quot;84fdc998db378260&quot;
+ ],
+ &quot;sujet&quot;: &quot;fuite sur objet:zizimu2&quot;,
+ &quot;enonce&quot;: &quot;Flux non enregistré sur le stock objet:zizimu2 depuis le jour 218 : 0.65 qte par jour.&quot;,
+ &quot;certitude&quot;: {
+  &quot;niveau&quot;: &quot;hypothèse&quot;,
+  &quot;mesure&quot;: {
+   &quot;nom&quot;: &quot;preuve&quot;,
+   &quot;valeur&quot;: &quot;rapport de vraisemblance 60.0&quot;
+  },
+  &quot;garantie&quot;: &quot;écart de conservation : le montant est comptable, mais la détection elle-même n’est pas garantie (voir risque)&quot;
+ },
+ &quot;contenu&quot;: {
+  &quot;stock&quot;: &quot;objet:zizimu2&quot;,
+  &quot;unite&quot;: &quot;qte&quot;,
+  &quot;debut&quot;: 218,
+  &quot;debit_par_jour&quot;: 0.6476
+ },
+ &quot;preuve&quot;: {
+  &quot;methode&quot;: &quot;résidu de conservation entre stock intégré et relevés&quot;,
+  &quot;reproduire&quot;: &quot;node bin/commun.js executer entreprise-opaque --graine 6&quot;
+ },
+ &quot;cout&quot;: {
+  &quot;calcul_s&quot;: null,
+  &quot;note&quot;: &quot;inclus dans le bilan&quot;,
+  &quot;experiences&quot;: 0
+ },
+ &quot;id&quot;: &quot;006d9707a4965f99&quot;
+}</pre></details>
+</article>
+<article class="acte lavoisier t-economie" id="r19" data-qui="lavoisier">
+  <header><span class="num">n° 19</span><span class="type">Économie</span><span class="qui lavoisier">LAVOISIER</span><span class="commit">73618f9</span><span class="id">f269e44032b8e388</span></header>
+  <p class="vers">à propos de <a href="#r18">n° 18</a> — Flux non enregistré sur le stock objet:zizimu2 depuis le jour 218 : 0.65 qte par jour.</p><p><span class="mes">déjà perdu : 363 €</span> <span class="mes">par an si colmatée : 901 €</span></p><p class="petit">au prix unitaire médian observé (3.81 € ; de 3.32 à 4.22 €) · gain potentiel si la fuite est colmatée ; rien n’a été colmaté</p>
+  <details><summary>Ligne brute du journal</summary><pre>{
+ &quot;n&quot;: 19,
+ &quot;precedent&quot;: &quot;006d9707a4965f99&quot;,
+ &quot;date&quot;: &quot;2026-11-13T23:17:16.721Z&quot;,
+ &quot;probleme&quot;: &quot;entreprise-opaque#6&quot;,
+ &quot;type&quot;: &quot;economie&quot;,
+ &quot;auteur&quot;: &quot;LAVOISIER&quot;,
+ &quot;moteur&quot;: {
+  &quot;nom&quot;: &quot;LAVOISIER&quot;,
+  &quot;depot&quot;: &quot;haynbroit-alt/A&quot;,
+  &quot;commit&quot;: &quot;73618f9&quot;
+ },
+ &quot;cible&quot;: &quot;006d9707a4965f99&quot;,
+ &quot;cout&quot;: {
+  &quot;calcul_s&quot;: 0.8,
+  &quot;note&quot;: &quot;coût du bilan entier ; aucune expérience, aucune action sur l’entreprise&quot;
+ },
+ &quot;risque&quot;: {
+  &quot;fausse_detection&quot;: {
+   &quot;fausses_detections_par_entreprise&quot;: 0.2,
+   &quot;placebos_touches&quot;: &quot;1 sur 34&quot;,
+   &quot;flux_retrouves&quot;: &quot;70 sur 95&quot;,
+   &quot;source&quot;: &quot;LAVOISIER bench/DEV_M0_BILAN.md (développement, bilan non gelé)&quot;
+  },
+  &quot;cause&quot;: &quot;inconnue : le bilan chiffre la fuite, il n’en donne pas la cause&quot;
+ },
+ &quot;gain&quot;: {
+  &quot;base&quot;: &quot;comptable&quot;,
+  &quot;unite&quot;: &quot;€&quot;,
+  &quot;deja_perdu&quot;: 363,
+  &quot;par_an_si_colmatee&quot;: 901,
+  &quot;en_unites&quot;: {
+   &quot;perdu&quot;: 95.2,
+   &quot;unite&quot;: &quot;qte&quot;
+  },
+  &quot;valorisation&quot;: &quot;au prix unitaire médian observé (3.81 € ; de 3.32 à 4.22 €)&quot;,
+  &quot;nature&quot;: &quot;gain potentiel si la fuite est colmatée ; rien n’a été colmaté&quot;
+ },
+ &quot;id&quot;: &quot;f269e44032b8e388&quot;
+}</pre></details>
+</article>
+<article class="acte lavoisier t-affirmation" id="r20" data-qui="lavoisier">
+  <header><span class="num">n° 20</span><span class="type">Affirmation</span><span class="qui lavoisier">LAVOISIER</span><span class="commit">73618f9</span><span class="id">4589febde5cd5932</span></header>
+  <p class="fort">Flux non enregistré sur le stock en-cours:0 depuis le jour 168 : 67.82 € par jour.</p><p><span class="niv n2">hypothèse à l’entrée</span>  <span class="mes">preuve : 50 opérations soldées à 70.0 %</span></p><p class="petit">Garantie : écart de conservation : le montant est comptable, mais la détection elle-même n’est pas garantie (voir risque)</p><p class="petit">Obtenue par : résidu de conservation entre stock intégré et relevés</p>
+  <details><summary>Ligne brute du journal</summary><pre>{
+ &quot;n&quot;: 20,
+ &quot;precedent&quot;: &quot;f269e44032b8e388&quot;,
+ &quot;date&quot;: &quot;2026-11-13T23:17:16.721Z&quot;,
+ &quot;probleme&quot;: &quot;entreprise-opaque#6&quot;,
+ &quot;type&quot;: &quot;affirmation&quot;,
+ &quot;auteur&quot;: &quot;LAVOISIER&quot;,
+ &quot;moteur&quot;: {
+  &quot;nom&quot;: &quot;LAVOISIER&quot;,
+  &quot;depot&quot;: &quot;haynbroit-alt/A&quot;,
+  &quot;commit&quot;: &quot;73618f9&quot;
+ },
+ &quot;depend_de&quot;: [
+  &quot;84fdc998db378260&quot;
+ ],
+ &quot;sujet&quot;: &quot;fuite sur en-cours:0&quot;,
+ &quot;enonce&quot;: &quot;Flux non enregistré sur le stock en-cours:0 depuis le jour 168 : 67.82 € par jour.&quot;,
+ &quot;certitude&quot;: {
+  &quot;niveau&quot;: &quot;hypothèse&quot;,
+  &quot;mesure&quot;: {
+   &quot;nom&quot;: &quot;preuve&quot;,
+   &quot;valeur&quot;: &quot;50 opérations soldées à 70.0 %&quot;
+  },
+  &quot;garantie&quot;: &quot;écart de conservation : le montant est comptable, mais la détection elle-même n’est pas garantie (voir risque)&quot;
+ },
+ &quot;contenu&quot;: {
+  &quot;stock&quot;: &quot;en-cours:0&quot;,
+  &quot;unite&quot;: &quot;€&quot;,
+  &quot;debut&quot;: 168,
+  &quot;debit_par_jour&quot;: 67.8184
+ },
+ &quot;preuve&quot;: {
+  &quot;methode&quot;: &quot;résidu de conservation entre stock intégré et relevés&quot;,
+  &quot;reproduire&quot;: &quot;node bin/commun.js executer entreprise-opaque --graine 6&quot;
+ },
+ &quot;cout&quot;: {
+  &quot;calcul_s&quot;: null,
+  &quot;note&quot;: &quot;inclus dans le bilan&quot;,
+  &quot;experiences&quot;: 0
+ },
+ &quot;id&quot;: &quot;4589febde5cd5932&quot;
+}</pre></details>
+</article>
+<article class="acte lavoisier t-economie" id="r21" data-qui="lavoisier">
+  <header><span class="num">n° 21</span><span class="type">Économie</span><span class="qui lavoisier">LAVOISIER</span><span class="commit">73618f9</span><span class="id">53bff723d0dcfeaf</span></header>
+  <p class="vers">à propos de <a href="#r20">n° 20</a> — Flux non enregistré sur le stock en-cours:0 depuis le jour 168 : 67.82 € par jour.</p><p><span class="mes">déjà perdu : 13 360 €</span> <span class="mes">par an si colmatée : 24 754 €</span></p><p class="petit">directe (stock en euros) · gain potentiel si la fuite est colmatée ; rien n’a été colmaté</p>
+  <details><summary>Ligne brute du journal</summary><pre>{
+ &quot;n&quot;: 21,
+ &quot;precedent&quot;: &quot;4589febde5cd5932&quot;,
+ &quot;date&quot;: &quot;2026-11-13T23:17:16.721Z&quot;,
+ &quot;probleme&quot;: &quot;entreprise-opaque#6&quot;,
+ &quot;type&quot;: &quot;economie&quot;,
+ &quot;auteur&quot;: &quot;LAVOISIER&quot;,
+ &quot;moteur&quot;: {
+  &quot;nom&quot;: &quot;LAVOISIER&quot;,
+  &quot;depot&quot;: &quot;haynbroit-alt/A&quot;,
+  &quot;commit&quot;: &quot;73618f9&quot;
+ },
+ &quot;cible&quot;: &quot;4589febde5cd5932&quot;,
+ &quot;cout&quot;: {
+  &quot;calcul_s&quot;: 0.8,
+  &quot;note&quot;: &quot;coût du bilan entier ; aucune expérience, aucune action sur l’entreprise&quot;
+ },
+ &quot;risque&quot;: {
+  &quot;fausse_detection&quot;: {
+   &quot;fausses_detections_par_entreprise&quot;: 0.2,
+   &quot;placebos_touches&quot;: &quot;1 sur 34&quot;,
+   &quot;flux_retrouves&quot;: &quot;70 sur 95&quot;,
+   &quot;source&quot;: &quot;LAVOISIER bench/DEV_M0_BILAN.md (développement, bilan non gelé)&quot;
+  },
+  &quot;cause&quot;: &quot;inconnue : le bilan chiffre la fuite, il n’en donne pas la cause&quot;
+ },
+ &quot;gain&quot;: {
+  &quot;base&quot;: &quot;comptable&quot;,
+  &quot;unite&quot;: &quot;€&quot;,
+  &quot;deja_perdu&quot;: 13360,
+  &quot;par_an_si_colmatee&quot;: 24754,
+  &quot;en_unites&quot;: null,
+  &quot;valorisation&quot;: &quot;directe (stock en euros)&quot;,
+  &quot;nature&quot;: &quot;gain potentiel si la fuite est colmatée ; rien n’a été colmaté&quot;
+ },
+ &quot;id&quot;: &quot;53bff723d0dcfeaf&quot;
+}</pre></details>
+</article>
+<article class="acte galilee t-aveu" id="r22" data-qui="galilee">
+  <header><span class="num">n° 22</span><span class="type">Aveu</span><span class="qui galilee">GALILÉE</span><span class="commit">be42b7e</span><span class="id">b19ee5cd83311159</span></header>
+  <p>Débit naka7 : je ne trouve qu’une constante (32.87) sur 39 semaines et 4 niveaux de prix. Aucun effet du prix n’est détectable dans ces données ; ce n’est pas la preuve qu’il n’y en a pas.</p>
+  <details><summary>Ligne brute du journal</summary><pre>{
+ &quot;n&quot;: 22,
+ &quot;precedent&quot;: &quot;53bff723d0dcfeaf&quot;,
+ &quot;date&quot;: &quot;2026-11-13T23:17:17.213Z&quot;,
+ &quot;probleme&quot;: &quot;entreprise-opaque#6&quot;,
+ &quot;type&quot;: &quot;aveu&quot;,
+ &quot;auteur&quot;: &quot;GALILÉE&quot;,
+ &quot;moteur&quot;: {
+  &quot;nom&quot;: &quot;GALILÉE&quot;,
+  &quot;depot&quot;: &quot;haynbroit-alt/All&quot;,
+  &quot;commit&quot;: &quot;be42b7e&quot;
+ },
+ &quot;depend_de&quot;: [
+  &quot;84fdc998db378260&quot;
+ ],
+ &quot;motif&quot;: &quot;Débit naka7 : je ne trouve qu’une constante (32.87) sur 39 semaines et 4 niveaux de prix. Aucun effet du prix n’est détectable dans ces données ; ce n’est pas la preuve qu’il n’y en a pas.&quot;,
+ &quot;cout&quot;: {
+  &quot;calcul_s&quot;: 0.5
+ },
+ &quot;id&quot;: &quot;b19ee5cd83311159&quot;
+}</pre></details>
+</article>
+<article class="acte galilee t-affirmation" id="r23" data-qui="galilee">
+  <header><span class="num">n° 23</span><span class="type">Affirmation</span><span class="qui galilee">GALILÉE</span><span class="commit">be42b7e</span><span class="id">2248412cf08faecb</span></header>
+  <p class="fort">quantité hebdomadaire de liquku2 ≈ 20 / p, où p est le prix rapporté au prix initial (132.07 €).</p><p><span class="niv n2">hypothèse à l’entrée</span> <span class="mes">verdict propre du moteur : empirique</span> </p><p class="petit">Garantie : aucune : données subies, prix non randomisé. Compatible avec les données et confirmée par un second avis, mais aucune expérience n'a pu la mettre à l'épreuve.</p><p class="petit">Obtenue par : recherche symbolique sur 39 semaines de débit reconstruit par LAVOISIER · 0,5 s de calcul</p>
+  <details><summary>Ligne brute du journal</summary><pre>{
+ &quot;n&quot;: 23,
+ &quot;precedent&quot;: &quot;b19ee5cd83311159&quot;,
+ &quot;date&quot;: &quot;2026-11-13T23:17:17.689Z&quot;,
+ &quot;probleme&quot;: &quot;entreprise-opaque#6&quot;,
+ &quot;type&quot;: &quot;affirmation&quot;,
+ &quot;auteur&quot;: &quot;GALILÉE&quot;,
+ &quot;moteur&quot;: {
+  &quot;nom&quot;: &quot;GALILÉE&quot;,
+  &quot;depot&quot;: &quot;haynbroit-alt/All&quot;,
+  &quot;commit&quot;: &quot;be42b7e&quot;
+ },
+ &quot;depend_de&quot;: [
+  &quot;84fdc998db378260&quot;
+ ],
+ &quot;sujet&quot;: &quot;débit liquku2 : loi quantité–prix&quot;,
+ &quot;enonce&quot;: &quot;quantité hebdomadaire de liquku2 ≈ 20 / p, où p est le prix rapporté au prix initial (132.07 €).&quot;,
+ &quot;certitude&quot;: {
+  &quot;niveau&quot;: &quot;hypothèse&quot;,
+  &quot;verdict_moteur&quot;: &quot;empirique&quot;,
+  &quot;garantie&quot;: &quot;aucune : données subies, prix non randomisé. Compatible avec les données et confirmée par un second avis, mais aucune expérience n'a pu la mettre à l'épreuve.&quot;
+ },
+ &quot;contenu&quot;: {
+  &quot;formule&quot;: &quot;20 / p&quot;,
+  &quot;variable&quot;: &quot;p = prix / prix initial&quot;,
+  &quot;semaines&quot;: 39,
+  &quot;niveaux_de_prix&quot;: 12
+ },
+ &quot;preuve&quot;: {
+  &quot;methode&quot;: &quot;recherche symbolique sur 39 semaines de débit reconstruit par LAVOISIER&quot;,
+  &quot;donnees&quot;: &quot;c600e09c2653ce7e&quot;,
+  &quot;reproduire&quot;: &quot;node bin/commun.js executer entreprise-opaque --graine 6&quot;
+ },
+ &quot;cout&quot;: {
+  &quot;calcul_s&quot;: 0.5,
+  &quot;experiences&quot;: 0
+ },
+ &quot;id&quot;: &quot;2248412cf08faecb&quot;
+}</pre></details>
+</article>
+<article class="acte neutre t-verification" id="r24" data-qui="neutre">
+  <header><span class="num">n° 24</span><span class="type">Vérification</span><span class="qui neutre">registre</span><span class="id">b35b4d0600b49c9f</span></header>
+  <p class="vers">à propos de <a href="#r23">n° 23</a> — quantité hebdomadaire de liquku2 ≈ 20 / p, où p est le prix rapporté au prix initial (132.07 €).</p><p><span class="verd alerte">ne tranche pas</span> <span class="mes">prévision</span> <span class="mes">t (12 ddl) = 1,02 <span class="sur">seuil 1,78</span></span></p><p class="petit">13 semaines neuves (40 à 52) : la loi prévoit-elle mieux que la moyenne des 39 premières ? Test unilatéral à 5 % sur les écarts quadratiques appariés, dans les deux sens</p><p class="petit donnees">erreur de la loi 5,41 · erreur de la moyenne 6,67</p>
+  <details><summary>Ligne brute du journal</summary><pre>{
+ &quot;n&quot;: 24,
+ &quot;precedent&quot;: &quot;2248412cf08faecb&quot;,
+ &quot;date&quot;: &quot;2026-11-13T23:17:17.690Z&quot;,
+ &quot;probleme&quot;: &quot;entreprise-opaque#6&quot;,
+ &quot;type&quot;: &quot;verification&quot;,
+ &quot;auteur&quot;: &quot;registre&quot;,
+ &quot;cible&quot;: &quot;2248412cf08faecb&quot;,
+ &quot;portee&quot;: &quot;prevision&quot;,
+ &quot;methode&quot;: &quot;13 semaines neuves (40 à 52) : la loi prévoit-elle mieux que la moyenne des 39 premières ? Test unilatéral à 5 % sur les écarts quadratiques appariés, dans les deux sens&quot;,
+ &quot;verdict&quot;: &quot;indecis&quot;,
+ &quot;mesure&quot;: {
+  &quot;nom&quot;: &quot;t (12 ddl)&quot;,
+  &quot;valeur&quot;: 1.02,
+  &quot;seuil&quot;: 1.782,
+  &quot;rmse_loi&quot;: 5.41,
+  &quot;rmse_moyenne&quot;: 6.67,
+  &quot;niveaux_de_prix_neufs&quot;: 6
+ },
+ &quot;id&quot;: &quot;b35b4d0600b49c9f&quot;
+}</pre></details>
+</article>
+<article class="acte neutre t-experience" id="r25" data-qui="neutre">
+  <header><span class="num">n° 25</span><span class="type">Expérience</span><span class="qui neutre">registre</span><span class="id">4b77747ef5446fdd</span></header>
+  <p><span class="verd mauvais">impossible aujourd’hui</span></p><p>faire varier le prix de cet objet au hasard, par blocs, pour que la loi puisse gagner ou perdre un pari (conception de LAVOISIER, § 10.2)</p><p class="petit">le générateur d’entreprises de LAVOISIER ne se pilote pas (on ne peut pas y fixer un prix), et son registre des paris n’est pas écrit</p><p class="petit">Coût prévu : non chiffrable : le jumeau épistémique de LAVOISIER, qui chiffrerait le coût d’un essai de prix, n’est pas écrit</p><p class="petit">Risque : un prix se défait ; l’effet sur la marge reste inconnu tant que la loi est une hypothèse</p>
+  <details><summary>Ligne brute du journal</summary><pre>{
+ &quot;n&quot;: 25,
+ &quot;precedent&quot;: &quot;b35b4d0600b49c9f&quot;,
+ &quot;date&quot;: &quot;2026-11-13T23:17:17.690Z&quot;,
+ &quot;probleme&quot;: &quot;entreprise-opaque#6&quot;,
+ &quot;type&quot;: &quot;experience&quot;,
+ &quot;auteur&quot;: &quot;registre&quot;,
+ &quot;but&quot;: [
+  &quot;2248412cf08faecb&quot;
+ ],
+ &quot;plan&quot;: {
+  &quot;principe&quot;: &quot;faire varier le prix de cet objet au hasard, par blocs, pour que la loi puisse gagner ou perdre un pari (conception de LAVOISIER, § 10.2)&quot;
+ },
+ &quot;cout_prevu&quot;: {
+  &quot;valeur&quot;: null,
+  &quot;raison&quot;: &quot;non chiffrable : le jumeau épistémique de LAVOISIER, qui chiffrerait le coût d’un essai de prix, n’est pas écrit&quot;
+ },
+ &quot;risque&quot;: {
+  &quot;reversible&quot;: true,
+  &quot;note&quot;: &quot;un prix se défait ; l’effet sur la marge reste inconnu tant que la loi est une hypothèse&quot;
+ },
+ &quot;autorisation&quot;: &quot;impossible&quot;,
+ &quot;raison&quot;: &quot;le générateur d’entreprises de LAVOISIER ne se pilote pas (on ne peut pas y fixer un prix), et son registre des paris n’est pas écrit&quot;,
+ &quot;id&quot;: &quot;4b77747ef5446fdd&quot;
+}</pre></details>
+</article>
+<article class="acte galilee t-affirmation" id="r26" data-qui="galilee">
+  <header><span class="num">n° 26</span><span class="type">Affirmation</span><span class="qui galilee">GALILÉE</span><span class="commit">be42b7e</span><span class="id">982a122a693c50ef</span></header>
+  <p class="fort">quantité hebdomadaire de vaxiha9 ≈ 27.39 / p, où p est le prix rapporté au prix initial (8.02 €).</p><p><span class="niv n2">hypothèse à l’entrée</span> <span class="mes">verdict propre du moteur : empirique</span> </p><p class="petit">Garantie : aucune : données subies, prix non randomisé. Compatible avec les données et confirmée par un second avis, mais aucune expérience n'a pu la mettre à l'épreuve.</p><p class="petit">Obtenue par : recherche symbolique sur 39 semaines de débit reconstruit par LAVOISIER · 0,6 s de calcul</p>
+  <details><summary>Ligne brute du journal</summary><pre>{
+ &quot;n&quot;: 26,
+ &quot;precedent&quot;: &quot;4b77747ef5446fdd&quot;,
+ &quot;date&quot;: &quot;2026-11-13T23:17:18.265Z&quot;,
+ &quot;probleme&quot;: &quot;entreprise-opaque#6&quot;,
+ &quot;type&quot;: &quot;affirmation&quot;,
+ &quot;auteur&quot;: &quot;GALILÉE&quot;,
+ &quot;moteur&quot;: {
+  &quot;nom&quot;: &quot;GALILÉE&quot;,
+  &quot;depot&quot;: &quot;haynbroit-alt/All&quot;,
+  &quot;commit&quot;: &quot;be42b7e&quot;
+ },
+ &quot;depend_de&quot;: [
+  &quot;84fdc998db378260&quot;
+ ],
+ &quot;sujet&quot;: &quot;débit vaxiha9 : loi quantité–prix&quot;,
+ &quot;enonce&quot;: &quot;quantité hebdomadaire de vaxiha9 ≈ 27.39 / p, où p est le prix rapporté au prix initial (8.02 €).&quot;,
+ &quot;certitude&quot;: {
+  &quot;niveau&quot;: &quot;hypothèse&quot;,
+  &quot;verdict_moteur&quot;: &quot;empirique&quot;,
+  &quot;garantie&quot;: &quot;aucune : données subies, prix non randomisé. Compatible avec les données et confirmée par un second avis, mais aucune expérience n'a pu la mettre à l'épreuve.&quot;
+ },
+ &quot;contenu&quot;: {
+  &quot;formule&quot;: &quot;27.39 / p&quot;,
+  &quot;variable&quot;: &quot;p = prix / prix initial&quot;,
+  &quot;semaines&quot;: 39,
+  &quot;niveaux_de_prix&quot;: 9
+ },
+ &quot;preuve&quot;: {
+  &quot;methode&quot;: &quot;recherche symbolique sur 39 semaines de débit reconstruit par LAVOISIER&quot;,
+  &quot;donnees&quot;: &quot;1a677202a38e92a0&quot;,
+  &quot;reproduire&quot;: &quot;node bin/commun.js executer entreprise-opaque --graine 6&quot;
+ },
+ &quot;cout&quot;: {
+  &quot;calcul_s&quot;: 0.6,
+  &quot;experiences&quot;: 0
+ },
+ &quot;id&quot;: &quot;982a122a693c50ef&quot;
+}</pre></details>
+</article>
+<article class="acte neutre t-verification" id="r27" data-qui="neutre">
+  <header><span class="num">n° 27</span><span class="type">Vérification</span><span class="qui neutre">registre</span><span class="id">e67c55eedbe29227</span></header>
+  <p class="vers">à propos de <a href="#r26">n° 26</a> — quantité hebdomadaire de vaxiha9 ≈ 27.39 / p, où p est le prix rapporté au prix initial (8.02 €).</p><p><span class="verd alerte">ne tranche pas</span> <span class="mes">prévision</span> <span class="mes">t (12 ddl) = 0,71 <span class="sur">seuil 1,78</span></span></p><p class="petit">13 semaines neuves (40 à 52) : la loi prévoit-elle mieux que la moyenne des 39 premières ? Test unilatéral à 5 % sur les écarts quadratiques appariés, dans les deux sens</p><p class="petit donnees">erreur de la loi 8,03 · erreur de la moyenne 8,2</p>
+  <details><summary>Ligne brute du journal</summary><pre>{
+ &quot;n&quot;: 27,
+ &quot;precedent&quot;: &quot;982a122a693c50ef&quot;,
+ &quot;date&quot;: &quot;2026-11-13T23:17:18.265Z&quot;,
+ &quot;probleme&quot;: &quot;entreprise-opaque#6&quot;,
+ &quot;type&quot;: &quot;verification&quot;,
+ &quot;auteur&quot;: &quot;registre&quot;,
+ &quot;cible&quot;: &quot;982a122a693c50ef&quot;,
+ &quot;portee&quot;: &quot;prevision&quot;,
+ &quot;methode&quot;: &quot;13 semaines neuves (40 à 52) : la loi prévoit-elle mieux que la moyenne des 39 premières ? Test unilatéral à 5 % sur les écarts quadratiques appariés, dans les deux sens&quot;,
+ &quot;verdict&quot;: &quot;indecis&quot;,
+ &quot;mesure&quot;: {
+  &quot;nom&quot;: &quot;t (12 ddl)&quot;,
+  &quot;valeur&quot;: 0.71,
+  &quot;seuil&quot;: 1.782,
+  &quot;rmse_loi&quot;: 8.03,
+  &quot;rmse_moyenne&quot;: 8.2,
+  &quot;niveaux_de_prix_neufs&quot;: 3
+ },
+ &quot;id&quot;: &quot;e67c55eedbe29227&quot;
+}</pre></details>
+</article>
+<article class="acte neutre t-experience" id="r28" data-qui="neutre">
+  <header><span class="num">n° 28</span><span class="type">Expérience</span><span class="qui neutre">registre</span><span class="id">d3c7907e7e4424f3</span></header>
+  <p><span class="verd mauvais">impossible aujourd’hui</span></p><p>faire varier le prix de cet objet au hasard, par blocs, pour que la loi puisse gagner ou perdre un pari (conception de LAVOISIER, § 10.2)</p><p class="petit">le générateur d’entreprises de LAVOISIER ne se pilote pas (on ne peut pas y fixer un prix), et son registre des paris n’est pas écrit</p><p class="petit">Coût prévu : non chiffrable : le jumeau épistémique de LAVOISIER, qui chiffrerait le coût d’un essai de prix, n’est pas écrit</p><p class="petit">Risque : un prix se défait ; l’effet sur la marge reste inconnu tant que la loi est une hypothèse</p>
+  <details><summary>Ligne brute du journal</summary><pre>{
+ &quot;n&quot;: 28,
+ &quot;precedent&quot;: &quot;e67c55eedbe29227&quot;,
+ &quot;date&quot;: &quot;2026-11-13T23:17:18.265Z&quot;,
+ &quot;probleme&quot;: &quot;entreprise-opaque#6&quot;,
+ &quot;type&quot;: &quot;experience&quot;,
+ &quot;auteur&quot;: &quot;registre&quot;,
+ &quot;but&quot;: [
+  &quot;982a122a693c50ef&quot;
+ ],
+ &quot;plan&quot;: {
+  &quot;principe&quot;: &quot;faire varier le prix de cet objet au hasard, par blocs, pour que la loi puisse gagner ou perdre un pari (conception de LAVOISIER, § 10.2)&quot;
+ },
+ &quot;cout_prevu&quot;: {
+  &quot;valeur&quot;: null,
+  &quot;raison&quot;: &quot;non chiffrable : le jumeau épistémique de LAVOISIER, qui chiffrerait le coût d’un essai de prix, n’est pas écrit&quot;
+ },
+ &quot;risque&quot;: {
+  &quot;reversible&quot;: true,
+  &quot;note&quot;: &quot;un prix se défait ; l’effet sur la marge reste inconnu tant que la loi est une hypothèse&quot;
+ },
+ &quot;autorisation&quot;: &quot;impossible&quot;,
+ &quot;raison&quot;: &quot;le générateur d’entreprises de LAVOISIER ne se pilote pas (on ne peut pas y fixer un prix), et son registre des paris n’est pas écrit&quot;,
+ &quot;id&quot;: &quot;d3c7907e7e4424f3&quot;
+}</pre></details>
+</article>
+<article class="acte cortex t-aveu" id="r29" data-qui="cortex">
+  <header><span class="num">n° 29</span><span class="type">Aveu</span><span class="qui cortex">CORTEX</span><span class="commit">758212a</span><span class="id">61a658b8596d7cc8</span></header>
+  <p>Aucun mode lent n’a gagné son pari sur les trois débits transmis (seuil log E = 4.09, 4.3 s de calcul). Je ne propose aucun mécanisme caché, et je ne peux pas juger la loi de GALILÉE : mon pari sur une formule n’existe que dans mes propres mondes.</p>
+  <details><summary>Ligne brute du journal</summary><pre>{
+ &quot;n&quot;: 29,
+ &quot;precedent&quot;: &quot;d3c7907e7e4424f3&quot;,
+ &quot;date&quot;: &quot;2026-11-13T23:17:22.598Z&quot;,
+ &quot;probleme&quot;: &quot;entreprise-opaque#6&quot;,
+ &quot;type&quot;: &quot;aveu&quot;,
+ &quot;auteur&quot;: &quot;CORTEX&quot;,
+ &quot;moteur&quot;: {
+  &quot;nom&quot;: &quot;CORTEX&quot;,
+  &quot;depot&quot;: &quot;haynbroit-alt/1&quot;,
+  &quot;commit&quot;: &quot;758212a&quot;
+ },
+ &quot;depend_de&quot;: [
+  &quot;84fdc998db378260&quot;
+ ],
+ &quot;motif&quot;: &quot;Aucun mode lent n’a gagné son pari sur les trois débits transmis (seuil log E = 4.09, 4.3 s de calcul). Je ne propose aucun mécanisme caché, et je ne peux pas juger la loi de GALILÉE : mon pari sur une formule n’existe que dans mes propres mondes.&quot;,
+ &quot;contenu&quot;: {
+  &quot;mesures&quot;: [
+   &quot;débit naka7&quot;,
+   &quot;débit liquku2&quot;,
+   &quot;débit vaxiha9&quot;
+  ],
+  &quot;leviers&quot;: [
+   &quot;prix naka7&quot;,
+   &quot;prix liquku2&quot;
+  ],
+  &quot;transformation&quot;: &quot;log(quantité + 1), log(prix relatif)&quot;,
+  &quot;donnees&quot;: &quot;6c024615f0fd8e27&quot;
+ },
+ &quot;id&quot;: &quot;61a658b8596d7cc8&quot;
+}</pre></details>
+</article>
+<article class="acte neutre t-verification" id="r30" data-qui="neutre">
+  <header><span class="num">n° 30</span><span class="type">Vérification</span><span class="qui neutre">banc</span><span class="id">70e404d6926514bb</span></header>
+  <p class="vers">à propos de <a href="#r17">n° 17</a> — 13192 lignes regroupées en 17 types de flux et 32 stocks ; profit reconstruit par conservation : 1 214 863 € s</p><p><span class="verd bon">confirme</span> <span class="mes">vérité du banc</span> </p><p class="petit">évaluateur du protocole M0 (src/bench/evaluate.js)</p><p class="petit donnees">F types : 1 · L appariement : 1 · G incidence : 0,995 · S stocks : 0,015 · P profit : 0,01 · profit vrai : 1 201 635 · profit reconstruit : 1 214 863 · flux caches : 2 retrouvé(s) sur 2 · fausses detections : 0</p>
+  <details><summary>Ligne brute du journal</summary><pre>{
+ &quot;n&quot;: 30,
+ &quot;precedent&quot;: &quot;61a658b8596d7cc8&quot;,
+ &quot;date&quot;: &quot;2026-11-13T23:17:22.707Z&quot;,
+ &quot;probleme&quot;: &quot;entreprise-opaque#6&quot;,
+ &quot;type&quot;: &quot;verification&quot;,
+ &quot;auteur&quot;: &quot;banc&quot;,
+ &quot;cible&quot;: &quot;84fdc998db378260&quot;,
+ &quot;portee&quot;: &quot;verite-du-banc&quot;,
+ &quot;methode&quot;: &quot;évaluateur du protocole M0 (src/bench/evaluate.js)&quot;,
+ &quot;verdict&quot;: &quot;confirme&quot;,
+ &quot;mesure&quot;: {
+  &quot;F_types&quot;: 1,
+  &quot;L_appariement&quot;: 1,
+  &quot;G_incidence&quot;: 0.995,
+  &quot;S_stocks&quot;: 0.015,
+  &quot;P_profit&quot;: 0.01,
+  &quot;profit_vrai&quot;: 1201635,
+  &quot;profit_reconstruit&quot;: 1214863,
+  &quot;flux_caches&quot;: &quot;2 retrouvé(s) sur 2&quot;,
+  &quot;fausses_detections&quot;: 0
+ },
+ &quot;id&quot;: &quot;70e404d6926514bb&quot;
+}</pre></details>
+</article>
+<article class="acte neutre t-verification" id="r31" data-qui="neutre">
+  <header><span class="num">n° 31</span><span class="type">Vérification</span><span class="qui neutre">banc</span><span class="id">a4b67e3e7e04e76e</span></header>
+  <p class="vers">à propos de <a href="#r18">n° 18</a> — Flux non enregistré sur le stock objet:zizimu2 depuis le jour 218 : 0.65 qte par jour.</p><p><span class="verd bon">confirme</span> <span class="mes">vérité du banc</span> </p><p class="petit">flux caché du générateur de même début (± 21 jours) et de même débit (± 50 %)</p><p class="petit donnees">nature : demarque · debut vrai : 225 · debit vrai : 0,65 · total vrai : 91 · unite : unités</p>
+  <details><summary>Ligne brute du journal</summary><pre>{
+ &quot;n&quot;: 31,
+ &quot;precedent&quot;: &quot;70e404d6926514bb&quot;,
+ &quot;date&quot;: &quot;2026-11-13T23:17:22.707Z&quot;,
+ &quot;probleme&quot;: &quot;entreprise-opaque#6&quot;,
+ &quot;type&quot;: &quot;verification&quot;,
+ &quot;auteur&quot;: &quot;banc&quot;,
+ &quot;cible&quot;: &quot;006d9707a4965f99&quot;,
+ &quot;portee&quot;: &quot;verite-du-banc&quot;,
+ &quot;methode&quot;: &quot;flux caché du générateur de même début (± 21 jours) et de même débit (± 50 %)&quot;,
+ &quot;verdict&quot;: &quot;confirme&quot;,
+ &quot;mesure&quot;: {
+  &quot;nature&quot;: &quot;demarque&quot;,
+  &quot;debut_vrai&quot;: 225,
+  &quot;debit_vrai&quot;: 0.65,
+  &quot;total_vrai&quot;: 91,
+  &quot;unite&quot;: &quot;unités&quot;
+ },
+ &quot;id&quot;: &quot;a4b67e3e7e04e76e&quot;
+}</pre></details>
+</article>
+<article class="acte neutre t-verification" id="r32" data-qui="neutre">
+  <header><span class="num">n° 32</span><span class="type">Vérification</span><span class="qui neutre">banc</span><span class="id">0d985260b3116e25</span></header>
+  <p class="vers">à propos de <a href="#r20">n° 20</a> — Flux non enregistré sur le stock en-cours:0 depuis le jour 168 : 67.82 € par jour.</p><p><span class="verd bon">confirme</span> <span class="mes">vérité du banc</span> </p><p class="petit">flux caché du générateur de même début (± 21 jours) et de même débit (± 50 %)</p><p class="petit donnees">nature : remise · debut vrai : 167 · debit vrai : 67,4759 · total vrai : 13 360,23 · unite : €</p>
+  <details><summary>Ligne brute du journal</summary><pre>{
+ &quot;n&quot;: 32,
+ &quot;precedent&quot;: &quot;a4b67e3e7e04e76e&quot;,
+ &quot;date&quot;: &quot;2026-11-13T23:17:22.707Z&quot;,
+ &quot;probleme&quot;: &quot;entreprise-opaque#6&quot;,
+ &quot;type&quot;: &quot;verification&quot;,
+ &quot;auteur&quot;: &quot;banc&quot;,
+ &quot;cible&quot;: &quot;4589febde5cd5932&quot;,
+ &quot;portee&quot;: &quot;verite-du-banc&quot;,
+ &quot;methode&quot;: &quot;flux caché du générateur de même début (± 21 jours) et de même débit (± 50 %)&quot;,
+ &quot;verdict&quot;: &quot;confirme&quot;,
+ &quot;mesure&quot;: {
+  &quot;nature&quot;: &quot;remise&quot;,
+  &quot;debut_vrai&quot;: 167,
+  &quot;debit_vrai&quot;: 67.4759,
+  &quot;total_vrai&quot;: 13360.23,
+  &quot;unite&quot;: &quot;€&quot;
+ },
+ &quot;id&quot;: &quot;0d985260b3116e25&quot;
+}</pre></details>
+</article></div>
+<div class="fil"><h3 id="entreprise-opaque#3">Entreprise opaque (graine 3)</h3><article class="acte neutre t-probleme" id="r33" data-qui="neutre">
+  <header><span class="num">n° 33</span><span class="type">Problème</span><span class="qui neutre">registre</span><span class="id">d5d8f8931bee5b30</span></header>
+  <p class="fort">Un an de journaux bruts aux libellés opaques. Quel est le corps de l’entreprise, où l’argent fuit-il, et quelles lois gouvernent ses débits ?</p><p class="petit">Source : LAVOISIER src/bench/generator.js · graine 3 (graine de développement)</p>
+  <details><summary>Ligne brute du journal</summary><pre>{
+ &quot;n&quot;: 33,
+ &quot;precedent&quot;: &quot;0d985260b3116e25&quot;,
+ &quot;date&quot;: &quot;2026-11-13T23:17:22.911Z&quot;,
+ &quot;probleme&quot;: &quot;entreprise-opaque#3&quot;,
+ &quot;type&quot;: &quot;probleme&quot;,
+ &quot;cle&quot;: &quot;entreprise-opaque#3&quot;,
+ &quot;auteur&quot;: &quot;registre&quot;,
+ &quot;titre&quot;: &quot;Entreprise opaque (graine 3)&quot;,
+ &quot;question&quot;: &quot;Un an de journaux bruts aux libellés opaques. Quel est le corps de l’entreprise, où l’argent fuit-il, et quelles lois gouvernent ses débits ?&quot;,
+ &quot;source&quot;: {
+  &quot;generateur&quot;: &quot;LAVOISIER src/bench/generator.js&quot;,
+  &quot;graine&quot;: 3,
+  &quot;classe&quot;: {
+   &quot;archetype&quot;: &quot;negoce&quot;,
+   &quot;nHidden&quot;: 1,
+   &quot;level&quot;: &quot;realiste&quot;
+  },
+  &quot;lignes&quot;: 11137,
+  &quot;statut&quot;: &quot;graine de développement&quot;
+ },
+ &quot;roles&quot;: {
+  &quot;LAVOISIER&quot;: &quot;bilan de matière, fuites&quot;,
+  &quot;GALILÉE&quot;: &quot;loi quantité–prix des débits&quot;,
+  &quot;CORTEX&quot;: &quot;modes lents entre débits&quot;
+ },
+ &quot;id&quot;: &quot;d5d8f8931bee5b30&quot;
+}</pre></details>
+</article>
+<article class="acte lavoisier t-affirmation" id="r34" data-qui="lavoisier">
+  <header><span class="num">n° 34</span><span class="type">Affirmation</span><span class="qui lavoisier">LAVOISIER</span><span class="commit">73618f9</span><span class="id">8bf94d631bc24114</span></header>
+  <p class="fort">11137 lignes regroupées en 16 types de flux et 23 stocks ; profit reconstruit par conservation : 794 133 € sur l’année.</p><p><span class="niv n2">hypothèse à l’entrée</span>  </p><p class="petit">Garantie : aucune hors développement : le bilan de matière n’est pas gelé et son évaluation unique (M0) n’a pas eu lieu</p><p class="petit">Obtenue par : bilan de matière : typage, appariement par conservation, intégration des stocks, datation · 0,7 s de calcul</p>
+  <details><summary>Ligne brute du journal</summary><pre>{
+ &quot;n&quot;: 34,
+ &quot;precedent&quot;: &quot;d5d8f8931bee5b30&quot;,
+ &quot;date&quot;: &quot;2026-11-13T23:17:23.651Z&quot;,
+ &quot;probleme&quot;: &quot;entreprise-opaque#3&quot;,
+ &quot;type&quot;: &quot;affirmation&quot;,
+ &quot;auteur&quot;: &quot;LAVOISIER&quot;,
+ &quot;moteur&quot;: {
+  &quot;nom&quot;: &quot;LAVOISIER&quot;,
+  &quot;depot&quot;: &quot;haynbroit-alt/A&quot;,
+  &quot;commit&quot;: &quot;73618f9&quot;
+ },
+ &quot;sujet&quot;: &quot;corps de l’entreprise&quot;,
+ &quot;enonce&quot;: &quot;11137 lignes regroupées en 16 types de flux et 23 stocks ; profit reconstruit par conservation : 794 133 € sur l’année.&quot;,
+ &quot;certitude&quot;: {
+  &quot;niveau&quot;: &quot;hypothèse&quot;,
+  &quot;garantie&quot;: &quot;aucune hors développement : le bilan de matière n’est pas gelé et son évaluation unique (M0) n’a pas eu lieu&quot;
+ },
+ &quot;contenu&quot;: {
+  &quot;types&quot;: 16,
+  &quot;stocks&quot;: [
+   &quot;tresorerie:vetoto4 (€)&quot;,
+   &quot;objet:caromu4 (qte)&quot;,
+   &quot;objet:nunusa8 (qte)&quot;,
+   &quot;objet:koqe6 (qte)&quot;,
+   &quot;objet:calaga9 (qte)&quot;,
+   &quot;objet:puliva6 (qte)&quot;,
+   &quot;objet:zaxuzo9 (qte)&quot;,
+   &quot;objet:xomi4 (qte)&quot;,
+   &quot;objet:bepa6 (qte)&quot;,
+   &quot;objet:qeta2 (qte)&quot;,
+   &quot;objet:rigavu2 (qte)&quot;,
+   &quot;objet:beba9 (qte)&quot;,
+   &quot;objet:siri2 (qte)&quot;,
+   &quot;objet:raxu2 (qte)&quot;,
+   &quot;objet:guvu1 (qte)&quot;,
+   &quot;objet:vujo8 (qte)&quot;,
+   &quot;objet:xekako9 (qte)&quot;,
+   &quot;objet:diqugo0 (qte)&quot;,
+   &quot;objet:kupe5 (qte)&quot;,
+   &quot;en-cours:0 (€)&quot;,
+   &quot;en-cours:1 (€)&quot;,
+   &quot;en-cours:2 (€)&quot;,
+   &quot;en-cours:3 (€)&quot;
+  ],
+  &quot;profit_mensuel&quot;: [
+   102671,
+   26391,
+   96547,
+   29982,
+   73093,
+   61063,
+   83789,
+   37558,
+   70087,
+   101442,
+   66412,
+   45099
+  ]
+ },
+ &quot;preuve&quot;: {
+  &quot;methode&quot;: &quot;bilan de matière : typage, appariement par conservation, intégration des stocks, datation&quot;,
+  &quot;donnees&quot;: &quot;59def6477a458173&quot;,
+  &quot;reproduire&quot;: &quot;node bin/commun.js executer entreprise-opaque --graine 3&quot;
+ },
+ &quot;cout&quot;: {
+  &quot;calcul_s&quot;: 0.7,
+  &quot;experiences&quot;: 0
+ },
+ &quot;id&quot;: &quot;8bf94d631bc24114&quot;
+}</pre></details>
+</article>
+<article class="acte lavoisier t-aveu" id="r35" data-qui="lavoisier">
+  <header><span class="num">n° 35</span><span class="type">Aveu</span><span class="qui lavoisier">LAVOISIER</span><span class="commit">73618f9</span><span class="id">7c089a9c8841b6ca</span></header>
+  <p>Aucun écart de conservation détecté : aucune fuite à signaler.</p>
+  <details><summary>Ligne brute du journal</summary><pre>{
+ &quot;n&quot;: 35,
+ &quot;precedent&quot;: &quot;8bf94d631bc24114&quot;,
+ &quot;date&quot;: &quot;2026-11-13T23:17:23.652Z&quot;,
+ &quot;probleme&quot;: &quot;entreprise-opaque#3&quot;,
+ &quot;type&quot;: &quot;aveu&quot;,
+ &quot;auteur&quot;: &quot;LAVOISIER&quot;,
+ &quot;moteur&quot;: {
+  &quot;nom&quot;: &quot;LAVOISIER&quot;,
+  &quot;depot&quot;: &quot;haynbroit-alt/A&quot;,
+  &quot;commit&quot;: &quot;73618f9&quot;
+ },
+ &quot;depend_de&quot;: [
+  &quot;8bf94d631bc24114&quot;
+ ],
+ &quot;motif&quot;: &quot;Aucun écart de conservation détecté : aucune fuite à signaler.&quot;,
+ &quot;id&quot;: &quot;7c089a9c8841b6ca&quot;
+}</pre></details>
+</article>
+<article class="acte galilee t-affirmation" id="r36" data-qui="galilee">
+  <header><span class="num">n° 36</span><span class="type">Affirmation</span><span class="qui galilee">GALILÉE</span><span class="commit">be42b7e</span><span class="id">4e1528eeab033ac9</span></header>
+  <p class="fort">quantité hebdomadaire de nunusa8 ≈ 55.39 / p, où p est le prix rapporté au prix initial (50.35 €).</p><p><span class="niv n2">hypothèse à l’entrée</span> <span class="mes">verdict propre du moteur : empirique</span> </p><p class="petit">Garantie : aucune : données subies, prix non randomisé. Compatible avec les données et confirmée par un second avis, mais aucune expérience n'a pu la mettre à l'épreuve.</p><p class="petit">Obtenue par : recherche symbolique sur 39 semaines de débit reconstruit par LAVOISIER · 0,6 s de calcul</p>
+  <details><summary>Ligne brute du journal</summary><pre>{
+ &quot;n&quot;: 36,
+ &quot;precedent&quot;: &quot;7c089a9c8841b6ca&quot;,
+ &quot;date&quot;: &quot;2026-11-13T23:17:24.220Z&quot;,
+ &quot;probleme&quot;: &quot;entreprise-opaque#3&quot;,
+ &quot;type&quot;: &quot;affirmation&quot;,
+ &quot;auteur&quot;: &quot;GALILÉE&quot;,
+ &quot;moteur&quot;: {
+  &quot;nom&quot;: &quot;GALILÉE&quot;,
+  &quot;depot&quot;: &quot;haynbroit-alt/All&quot;,
+  &quot;commit&quot;: &quot;be42b7e&quot;
+ },
+ &quot;depend_de&quot;: [
+  &quot;8bf94d631bc24114&quot;
+ ],
+ &quot;sujet&quot;: &quot;débit nunusa8 : loi quantité–prix&quot;,
+ &quot;enonce&quot;: &quot;quantité hebdomadaire de nunusa8 ≈ 55.39 / p, où p est le prix rapporté au prix initial (50.35 €).&quot;,
+ &quot;certitude&quot;: {
+  &quot;niveau&quot;: &quot;hypothèse&quot;,
+  &quot;verdict_moteur&quot;: &quot;empirique&quot;,
+  &quot;garantie&quot;: &quot;aucune : données subies, prix non randomisé. Compatible avec les données et confirmée par un second avis, mais aucune expérience n'a pu la mettre à l'épreuve.&quot;
+ },
+ &quot;contenu&quot;: {
+  &quot;formule&quot;: &quot;55.39 / p&quot;,
+  &quot;variable&quot;: &quot;p = prix / prix initial&quot;,
+  &quot;semaines&quot;: 39,
+  &quot;niveaux_de_prix&quot;: 12
+ },
+ &quot;preuve&quot;: {
+  &quot;methode&quot;: &quot;recherche symbolique sur 39 semaines de débit reconstruit par LAVOISIER&quot;,
+  &quot;donnees&quot;: &quot;c58b86d234352a9a&quot;,
+  &quot;reproduire&quot;: &quot;node bin/commun.js executer entreprise-opaque --graine 3&quot;
+ },
+ &quot;cout&quot;: {
+  &quot;calcul_s&quot;: 0.6,
+  &quot;experiences&quot;: 0
+ },
+ &quot;id&quot;: &quot;4e1528eeab033ac9&quot;
+}</pre></details>
+</article>
+<article class="acte neutre t-verification" id="r37" data-qui="neutre">
+  <header><span class="num">n° 37</span><span class="type">Vérification</span><span class="qui neutre">registre</span><span class="id">98b98b637b4f6979</span></header>
+  <p class="vers">à propos de <a href="#r36">n° 36</a> — quantité hebdomadaire de nunusa8 ≈ 55.39 / p, où p est le prix rapporté au prix initial (50.35 €).</p><p><span class="verd bon">confirme</span> <span class="mes">prévision</span> <span class="mes">t (12 ddl) = 2,91 <span class="sur">seuil 1,78</span></span></p><p class="petit">13 semaines neuves (40 à 52) : la loi prévoit-elle mieux que la moyenne des 39 premières ? Test unilatéral à 5 % sur les écarts quadratiques appariés, dans les deux sens</p><p class="petit donnees">erreur de la loi 14,47 · erreur de la moyenne 18,49</p>
+  <details><summary>Ligne brute du journal</summary><pre>{
+ &quot;n&quot;: 37,
+ &quot;precedent&quot;: &quot;4e1528eeab033ac9&quot;,
+ &quot;date&quot;: &quot;2026-11-13T23:17:24.221Z&quot;,
+ &quot;probleme&quot;: &quot;entreprise-opaque#3&quot;,
+ &quot;type&quot;: &quot;verification&quot;,
+ &quot;auteur&quot;: &quot;registre&quot;,
+ &quot;cible&quot;: &quot;4e1528eeab033ac9&quot;,
+ &quot;portee&quot;: &quot;prevision&quot;,
+ &quot;methode&quot;: &quot;13 semaines neuves (40 à 52) : la loi prévoit-elle mieux que la moyenne des 39 premières ? Test unilatéral à 5 % sur les écarts quadratiques appariés, dans les deux sens&quot;,
+ &quot;verdict&quot;: &quot;confirme&quot;,
+ &quot;mesure&quot;: {
+  &quot;nom&quot;: &quot;t (12 ddl)&quot;,
+  &quot;valeur&quot;: 2.91,
+  &quot;seuil&quot;: 1.782,
+  &quot;rmse_loi&quot;: 14.47,
+  &quot;rmse_moyenne&quot;: 18.49,
+  &quot;niveaux_de_prix_neufs&quot;: 8
+ },
+ &quot;id&quot;: &quot;98b98b637b4f6979&quot;
+}</pre></details>
+</article>
+<article class="acte neutre t-experience" id="r38" data-qui="neutre">
+  <header><span class="num">n° 38</span><span class="type">Expérience</span><span class="qui neutre">registre</span><span class="id">68d1951cea8baf92</span></header>
+  <p><span class="verd mauvais">impossible aujourd’hui</span></p><p>faire varier le prix de cet objet au hasard, par blocs, pour que la loi puisse gagner ou perdre un pari (conception de LAVOISIER, § 10.2)</p><p class="petit">le générateur d’entreprises de LAVOISIER ne se pilote pas (on ne peut pas y fixer un prix), et son registre des paris n’est pas écrit</p><p class="petit">Coût prévu : non chiffrable : le jumeau épistémique de LAVOISIER, qui chiffrerait le coût d’un essai de prix, n’est pas écrit</p><p class="petit">Risque : un prix se défait ; l’effet sur la marge reste inconnu tant que la loi est une hypothèse</p>
+  <details><summary>Ligne brute du journal</summary><pre>{
+ &quot;n&quot;: 38,
+ &quot;precedent&quot;: &quot;98b98b637b4f6979&quot;,
+ &quot;date&quot;: &quot;2026-11-13T23:17:24.221Z&quot;,
+ &quot;probleme&quot;: &quot;entreprise-opaque#3&quot;,
+ &quot;type&quot;: &quot;experience&quot;,
+ &quot;auteur&quot;: &quot;registre&quot;,
+ &quot;but&quot;: [
+  &quot;4e1528eeab033ac9&quot;
+ ],
+ &quot;plan&quot;: {
+  &quot;principe&quot;: &quot;faire varier le prix de cet objet au hasard, par blocs, pour que la loi puisse gagner ou perdre un pari (conception de LAVOISIER, § 10.2)&quot;
+ },
+ &quot;cout_prevu&quot;: {
+  &quot;valeur&quot;: null,
+  &quot;raison&quot;: &quot;non chiffrable : le jumeau épistémique de LAVOISIER, qui chiffrerait le coût d’un essai de prix, n’est pas écrit&quot;
+ },
+ &quot;risque&quot;: {
+  &quot;reversible&quot;: true,
+  &quot;note&quot;: &quot;un prix se défait ; l’effet sur la marge reste inconnu tant que la loi est une hypothèse&quot;
+ },
+ &quot;autorisation&quot;: &quot;impossible&quot;,
+ &quot;raison&quot;: &quot;le générateur d’entreprises de LAVOISIER ne se pilote pas (on ne peut pas y fixer un prix), et son registre des paris n’est pas écrit&quot;,
+ &quot;id&quot;: &quot;68d1951cea8baf92&quot;
+}</pre></details>
+</article>
+<article class="acte galilee t-aveu" id="r39" data-qui="galilee">
+  <header><span class="num">n° 39</span><span class="type">Aveu</span><span class="qui galilee">GALILÉE</span><span class="commit">be42b7e</span><span class="id">b7e9ed58c194ec44</span></header>
+  <p>Débit xomi4 : je ne trouve qu’une constante (48.46) sur 39 semaines et 4 niveaux de prix. Aucun effet du prix n’est détectable dans ces données ; ce n’est pas la preuve qu’il n’y en a pas.</p>
+  <details><summary>Ligne brute du journal</summary><pre>{
+ &quot;n&quot;: 39,
+ &quot;precedent&quot;: &quot;68d1951cea8baf92&quot;,
+ &quot;date&quot;: &quot;2026-11-13T23:17:24.688Z&quot;,
+ &quot;probleme&quot;: &quot;entreprise-opaque#3&quot;,
+ &quot;type&quot;: &quot;aveu&quot;,
+ &quot;auteur&quot;: &quot;GALILÉE&quot;,
+ &quot;moteur&quot;: {
+  &quot;nom&quot;: &quot;GALILÉE&quot;,
+  &quot;depot&quot;: &quot;haynbroit-alt/All&quot;,
+  &quot;commit&quot;: &quot;be42b7e&quot;
+ },
+ &quot;depend_de&quot;: [
+  &quot;8bf94d631bc24114&quot;
+ ],
+ &quot;motif&quot;: &quot;Débit xomi4 : je ne trouve qu’une constante (48.46) sur 39 semaines et 4 niveaux de prix. Aucun effet du prix n’est détectable dans ces données ; ce n’est pas la preuve qu’il n’y en a pas.&quot;,
+ &quot;cout&quot;: {
+  &quot;calcul_s&quot;: 0.5
+ },
+ &quot;id&quot;: &quot;b7e9ed58c194ec44&quot;
+}</pre></details>
+</article>
+<article class="acte galilee t-aveu" id="r40" data-qui="galilee">
+  <header><span class="num">n° 40</span><span class="type">Aveu</span><span class="qui galilee">GALILÉE</span><span class="commit">be42b7e</span><span class="id">e8ae24986b81767d</span></header>
+  <p>Débit caromu4 : je ne trouve qu’une constante (39.95) sur 39 semaines et 11 niveaux de prix. Aucun effet du prix n’est détectable dans ces données ; ce n’est pas la preuve qu’il n’y en a pas.</p>
+  <details><summary>Ligne brute du journal</summary><pre>{
+ &quot;n&quot;: 40,
+ &quot;precedent&quot;: &quot;b7e9ed58c194ec44&quot;,
+ &quot;date&quot;: &quot;2026-11-13T23:17:25.272Z&quot;,
+ &quot;probleme&quot;: &quot;entreprise-opaque#3&quot;,
+ &quot;type&quot;: &quot;aveu&quot;,
+ &quot;auteur&quot;: &quot;GALILÉE&quot;,
+ &quot;moteur&quot;: {
+  &quot;nom&quot;: &quot;GALILÉE&quot;,
+  &quot;depot&quot;: &quot;haynbroit-alt/All&quot;,
+  &quot;commit&quot;: &quot;be42b7e&quot;
+ },
+ &quot;depend_de&quot;: [
+  &quot;8bf94d631bc24114&quot;
+ ],
+ &quot;motif&quot;: &quot;Débit caromu4 : je ne trouve qu’une constante (39.95) sur 39 semaines et 11 niveaux de prix. Aucun effet du prix n’est détectable dans ces données ; ce n’est pas la preuve qu’il n’y en a pas.&quot;,
+ &quot;cout&quot;: {
+  &quot;calcul_s&quot;: 0.6
+ },
+ &quot;id&quot;: &quot;e8ae24986b81767d&quot;
+}</pre></details>
+</article>
+<article class="acte cortex t-aveu" id="r41" data-qui="cortex">
+  <header><span class="num">n° 41</span><span class="type">Aveu</span><span class="qui cortex">CORTEX</span><span class="commit">758212a</span><span class="id">8d66848d93de7eb3</span></header>
+  <p>Aucun mode lent n’a gagné son pari sur les trois débits transmis (seuil log E = 4.09, 5.3 s de calcul). Je ne propose aucun mécanisme caché, et je ne peux pas juger la loi de GALILÉE : mon pari sur une formule n’existe que dans mes propres mondes.</p>
+  <details><summary>Ligne brute du journal</summary><pre>{
+ &quot;n&quot;: 41,
+ &quot;precedent&quot;: &quot;e8ae24986b81767d&quot;,
+ &quot;date&quot;: &quot;2026-11-13T23:17:30.590Z&quot;,
+ &quot;probleme&quot;: &quot;entreprise-opaque#3&quot;,
+ &quot;type&quot;: &quot;aveu&quot;,
+ &quot;auteur&quot;: &quot;CORTEX&quot;,
+ &quot;moteur&quot;: {
+  &quot;nom&quot;: &quot;CORTEX&quot;,
+  &quot;depot&quot;: &quot;haynbroit-alt/1&quot;,
+  &quot;commit&quot;: &quot;758212a&quot;
+ },
+ &quot;depend_de&quot;: [
+  &quot;8bf94d631bc24114&quot;
+ ],
+ &quot;motif&quot;: &quot;Aucun mode lent n’a gagné son pari sur les trois débits transmis (seuil log E = 4.09, 5.3 s de calcul). Je ne propose aucun mécanisme caché, et je ne peux pas juger la loi de GALILÉE : mon pari sur une formule n’existe que dans mes propres mondes.&quot;,
+ &quot;contenu&quot;: {
+  &quot;mesures&quot;: [
+   &quot;débit nunusa8&quot;,
+   &quot;débit xomi4&quot;,
+   &quot;débit caromu4&quot;
+  ],
+  &quot;leviers&quot;: [
+   &quot;prix nunusa8&quot;,
+   &quot;prix xomi4&quot;
+  ],
+  &quot;transformation&quot;: &quot;log(quantité + 1), log(prix relatif)&quot;,
+  &quot;donnees&quot;: &quot;a1d7e43082558655&quot;
+ },
+ &quot;id&quot;: &quot;8d66848d93de7eb3&quot;
+}</pre></details>
+</article>
+<article class="acte neutre t-verification" id="r42" data-qui="neutre">
+  <header><span class="num">n° 42</span><span class="type">Vérification</span><span class="qui neutre">banc</span><span class="id">95643f1a55d62f8c</span></header>
+  <p class="vers">à propos de <a href="#r34">n° 34</a> — 11137 lignes regroupées en 16 types de flux et 23 stocks ; profit reconstruit par conservation : 794 133 € sur</p><p><span class="verd alerte">ne tranche pas</span> <span class="mes">vérité du banc</span> </p><p class="petit">évaluateur du protocole M0 (src/bench/evaluate.js)</p><p class="petit donnees">F types : 1 · L appariement : 0,989 · G incidence : 1 · S stocks : 0,161 · P profit : 0,106 · profit vrai : 815 458 · profit reconstruit : 794 133 · flux caches : 0 retrouvé(s) sur 1 · fausses detections : 0</p>
+  <details><summary>Ligne brute du journal</summary><pre>{
+ &quot;n&quot;: 42,
+ &quot;precedent&quot;: &quot;8d66848d93de7eb3&quot;,
+ &quot;date&quot;: &quot;2026-11-13T23:17:30.688Z&quot;,
+ &quot;probleme&quot;: &quot;entreprise-opaque#3&quot;,
+ &quot;type&quot;: &quot;verification&quot;,
+ &quot;auteur&quot;: &quot;banc&quot;,
+ &quot;cible&quot;: &quot;8bf94d631bc24114&quot;,
+ &quot;portee&quot;: &quot;verite-du-banc&quot;,
+ &quot;methode&quot;: &quot;évaluateur du protocole M0 (src/bench/evaluate.js)&quot;,
+ &quot;verdict&quot;: &quot;indecis&quot;,
+ &quot;mesure&quot;: {
+  &quot;F_types&quot;: 1,
+  &quot;L_appariement&quot;: 0.989,
+  &quot;G_incidence&quot;: 1,
+  &quot;S_stocks&quot;: 0.161,
+  &quot;P_profit&quot;: 0.106,
+  &quot;profit_vrai&quot;: 815458,
+  &quot;profit_reconstruit&quot;: 794133,
+  &quot;flux_caches&quot;: &quot;0 retrouvé(s) sur 1&quot;,
+  &quot;fausses_detections&quot;: 0
+ },
+ &quot;id&quot;: &quot;95643f1a55d62f8c&quot;
+}</pre></details>
+</article>
+<article class="acte neutre t-aveu" id="r43" data-qui="neutre">
+  <header><span class="num">n° 43</span><span class="type">Aveu</span><span class="qui neutre">banc</span><span class="id">350ae1c0cac7bc6e</span></header>
+  <p>Flux caché non retrouvé par le bilan : demarque depuis le jour 124 (0.083 par jour, au-dessus du seuil de détection du protocole).</p>
+  <details><summary>Ligne brute du journal</summary><pre>{
+ &quot;n&quot;: 43,
+ &quot;precedent&quot;: &quot;95643f1a55d62f8c&quot;,
+ &quot;date&quot;: &quot;2026-11-13T23:17:30.688Z&quot;,
+ &quot;probleme&quot;: &quot;entreprise-opaque#3&quot;,
+ &quot;type&quot;: &quot;aveu&quot;,
+ &quot;auteur&quot;: &quot;banc&quot;,
+ &quot;motif&quot;: &quot;Flux caché non retrouvé par le bilan : demarque depuis le jour 124 (0.083 par jour, au-dessus du seuil de détection du protocole).&quot;,
+ &quot;id&quot;: &quot;350ae1c0cac7bc6e&quot;
+}</pre></details>
+</article></div>
+</section>
+
+<section>
+  <h2>Ce que cette page ne fait pas</h2>
+  <ul class="limites">
+    <li>Aucune donnée réelle : les quatre problèmes viennent des simulateurs de développement de CORTEX et de LAVOISIER. Les graines de test des deux projets sont refusées, pour ne pas gâcher leurs exécutions uniques.</li>
+    <li>Aucune loi économique n’a gagné de pari. Les lois quantité–prix restent des hypothèses, parce qu’on ne peut fixer aucun prix dans le simulateur de LAVOISIER.</li>
+    <li>CORTEX ne peut juger une loi de GALILÉE que dans ses propres mondes. Pour qu’il la juge sur les débits de LAVOISIER, il faudrait qu’il exporte sa sonde et son pari.</li>
+    <li>Le bilan de matière n’est pas gelé : ses résultats ici sont des résultats de développement, et son taux de fausses détections aussi.</li>
+    <li>Aucune recherche d’opportunité au-delà des fuites : l’organe de LAVOISIER qui chiffrerait le gain d’un changement de prix n’existe pas encore.</li>
+  </ul>
+  <p class="petit">Refaire un problème : <code>node bin/commun.js executer forme-manquante --graine 7</code> · tout recontrôler : <code>node bin/commun.js verifier</code></p>
+</section>
+</main>
+<script>
+(function(){var bs=document.querySelectorAll('.filtres button');bs.forEach(function(b){b.addEventListener('click',function(){var f=b.dataset.f;bs.forEach(function(x){x.setAttribute('aria-pressed',x===b)});document.querySelectorAll('.acte').forEach(function(a){a.hidden=f!=='tous'&&a.dataset.qui!==f&&!a.classList.contains('t-probleme')})})})})();
+</script>

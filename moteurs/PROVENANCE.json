@@ -1,0 +1,62 @@
+{
+  "note": "Copies non modifiées. Licence MIT (déclarée dans le package.json de chaque dépôt).",
+  "moteurs": [
+    {
+      "nom": "galilee",
+      "titre": "GALILÉE",
+      "depot": "haynbroit-alt/All",
+      "commit": "be42b7e4699ba084a3455cee285a32e39b1ccd4f",
+      "fichiers": {
+        "package.json": "1cb084ecb2b1eab49ca5dff1ad2fe60526966c1ab83b3f63282de31fb32c9aa2",
+        "src/agent.js": "1b55c452034b9cd156751f042c1fb93d10dcfd60111b9d4083ed18a85d4cddb2",
+        "src/expr.js": "4be81a5b7eccfac7957b3fab5cb0765ca70234041fe9dafbdd4767b007eebe20",
+        "src/fit.js": "97b6f9a2a0cd68c758071612fb20a6fb68430032956cd0cffbe621fbce52b544",
+        "src/search.js": "fe4703682dbd12acd6d11842432f101eea91ff5a8d28e010b03f7b4dd13588ff",
+        "src/worlds.js": "c6c68bc977256356aadb83af22428f58c9eef055cf864c703d1ec76a1526e4eb"
+      }
+    },
+    {
+      "nom": "cortex",
+      "titre": "CORTEX",
+      "depot": "haynbroit-alt/1",
+      "commit": "758212a73b3e86e16a1f1f92c7aa2f38361fc3ae",
+      "fichiers": {
+        "package.json": "ef423e29ed170e203071d87b22c83435e243ad9a02b5b36edc08f836655b5a0d",
+        "src/rng.js": "4ca79f31e9d7bc63a2aec1cc7bc2c04d8619b4a649e867397852ccedbd8e9a0d",
+        "research/v6/engine.js": "252ec04293f153e7cb8f21bedd44821a94c254dd38653faba2c1eafc6a844c28",
+        "research/v6/worlds.js": "a73e87d35b805122b0b86f37c961ebfd6813bf2b36261cb2ddb7db2e9ea6bf08",
+        "research/v6/p2.js": "92024dc03f68619185c480eeb49f9d6e7c348b43ecc686b7f5adb0a18d93ac06",
+        "research/v6/p3.js": "c8224f95ae70eb67f28a6147deea80032222a40064a3f94243fc44c463519635",
+        "research/v6/vendor/galilee/PROVENANCE.md": "e97cb5f9c8f7cfc9b6fc8eb1e4d50091724ca139fa4339dac4d1ca3469ad4b6c",
+        "research/v6/vendor/galilee/agent.js": "1b55c452034b9cd156751f042c1fb93d10dcfd60111b9d4083ed18a85d4cddb2",
+        "research/v6/vendor/galilee/expr.js": "4be81a5b7eccfac7957b3fab5cb0765ca70234041fe9dafbdd4767b007eebe20",
+        "research/v6/vendor/galilee/fit.js": "97b6f9a2a0cd68c758071612fb20a6fb68430032956cd0cffbe621fbce52b544",
+        "research/v6/vendor/galilee/search.js": "fe4703682dbd12acd6d11842432f101eea91ff5a8d28e010b03f7b4dd13588ff",
+        "research/v6/vendor/galilee/worlds.js": "c6c68bc977256356aadb83af22428f58c9eef055cf864c703d1ec76a1526e4eb"
+      }
+    },
+    {
+      "nom": "lavoisier",
+      "titre": "LAVOISIER",
+      "depot": "haynbroit-alt/A",
+      "commit": "73618f9f95b38980c240f55b2d75828fa1d34d6f",
+      "fichiers": {
+        "package.json": "8c24dd7bc29633faf83f4c57d951d5b365735deac373924fa91eb2ad460e7259",
+        "src/bilan/dates.js": "6ca441d100b02c487605657b28f01fd78dcc73a1846d5f82553b86039cf1aa36",
+        "src/bilan/ecarts.js": "3bd6567e45663aa0c1b5ad7454347526c2b4d442d82abeba287bb8a75d7bbc3d",
+        "src/bilan/index.js": "f1b919a99ea22419296071a2a3ec35b0aa9fb51637b228ac542991d0557e2247",
+        "src/bilan/links.js": "46dd738d322c9a6ae2f1320b1e7f42f8ee9c6216ed0f5018fe44936a09443118",
+        "src/bilan/stocks.js": "b1a3eb99f9444f6820525833a5c83defc063b98255d3bec059e4bb20f8943cf2",
+        "src/bilan/types.js": "01a20d4df7e9679dded7a0d7ea689b7cceb57bf0731b2fa20c8c6b42263564fe",
+        "src/bilan/unites.js": "58d399159069d8bd6e65a5a4dd87f3b068b67e83df56108c5af6b44fffbaa65c",
+        "src/bench/archetypes.js": "494a81c4394854aae47eb968aabc46502ae79673e62ae23c89384aaf4045c903",
+        "src/bench/classes.js": "a2ab544fa379bc74fb4aa7aa33d5a615df849fc99a9454752b7f573f08275773",
+        "src/bench/engine.js": "ec9525a56f89c6122b502139c25cb09a0087391df5c6ff6295fa95723ab64f92",
+        "src/bench/evaluate.js": "bf1c71fb01bd9bfe93c156d6bd0e728afd84d5b0812aaa78b922509c0e10b84f",
+        "src/bench/generator.js": "a295437e3340825863ce0ef64568e4dc5c391f663bada17372c3f1761182e22d",
+        "src/bench/harness.js": "f04d315acc545aa2d984a9dd9d70f12420d896498a7f92cdbc1f55c445a155a6",
+        "src/bench/rng.js": "4ef970434a2e5e484721eda208c62448db2f983b317b1b568861335e3858c14b"
+      }
+    }
+  ]
+}

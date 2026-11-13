@@ -1,0 +1,207 @@
+// Génère page/index.html à partir du registre. La page n'ajoute aucun fait : tout ce qu'elle montre est une ligne
+// du journal ou une valeur déduite de ces lignes (niveau courant, totaux).
+import { mkdirSync, writeFileSync } from 'node:fs';
+import { dirname } from 'node:path';
+import { NIVEAUX } from './certitude.js';
+import { PROVENANCE, integrite } from './adaptateurs/moteurs.js';
+
+const h = (s) => String(s ?? '').replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
+const nb = (x, d = 2) => (x == null ? '—' : Number(x).toLocaleString('fr-FR', { maximumFractionDigits: d }));
+const eur = (x) => (x == null ? '—' : `${Math.round(x).toLocaleString('fr-FR')} €`);
+const cls = (a) => ({ 'GALILÉE': 'galilee', CORTEX: 'cortex', LAVOISIER: 'lavoisier' }[a] ?? 'neutre');
+const puce = (a) => `<span class="qui ${cls(a)}">${h(a)}</span>`;
+const niv = (n, extra = '') => `<span class="niv n${NIVEAUX[n].rang}">${h(n)}${extra}</span>`;
+const TYPE_FR = { probleme: 'Problème', affirmation: 'Affirmation', contestation: 'Contestation', verification: 'Vérification', experience: 'Expérience', resultat: 'Résultat', economie: 'Économie', aveu: 'Aveu' };
+const VERDICT = { confirme: ['confirme', 'bon'], refute: ['réfute', 'mauvais'], indecis: ['ne tranche pas', 'alerte'] };
+const PORTEE = { pari: 'pari', prevision: 'prévision', 'verite-du-banc': 'vérité du banc', 'temoin-negatif': 'témoin négatif' };
+
+function mesure(m) {
+  if (!m) return '';
+  if (m.valeur != null && m.seuil != null) return `<span class="mes">${h(m.nom ?? 'mesure')} = ${nb(m.valeur)} <span class="sur">seuil ${nb(m.seuil)}</span></span>`;
+  if (m.valeur != null) return `<span class="mes">${h(m.nom ?? 'mesure')} : ${h(typeof m.valeur === 'number' ? nb(m.valeur, 3) : m.valeur)}</span>`;
+  return '';
+}
+
+function corps(r, reg) {
+  const cible = r.cible ? reg.get(r.cible) : null;
+  const vers = cible ? `<p class="vers">à propos de <a href="#r${cible.n}">n° ${cible.n}</a> — ${h((cible.enonce ?? cible.plan?.duree ?? cible.plan?.principe ?? '').slice(0, 110))}</p>` : '';
+  switch (r.type) {
+    case 'probleme': return `<p class="fort">${h(r.question)}</p><p class="petit">Source : ${h(r.source.generateur)} · graine ${h(r.source.graine)} (${h(r.source.statut)})</p>`;
+    case 'affirmation': return `<p class="fort">${h(r.enonce)}</p><p>${niv(r.certitude.niveau, ' à l’entrée')} ${r.certitude.verdict_moteur ? `<span class="mes">verdict propre du moteur : ${h(r.certitude.verdict_moteur)}</span>` : ''} ${mesure(r.certitude.mesure)}</p><p class="petit">Garantie : ${h(r.certitude.garantie ?? '—')}</p><p class="petit">Obtenue par : ${h(r.preuve.methode)}${r.cout.calcul_s != null ? ` · ${nb(r.cout.calcul_s, 1)} s de calcul` : ''}</p>`;
+    case 'contestation': return `${vers}<p>${h(r.motif)}</p>`;
+    case 'verification': { const [t, c] = VERDICT[r.verdict]; const temoin = r.portee === 'temoin-negatif'; return `${vers}<p><span class="verd ${temoin ? (r.verdict === r.attendu ? 'bon' : 'mauvais') : c}">${temoin ? (r.verdict === r.attendu ? 'non confirmé, comme attendu' : 'CONFIRMÉ À TORT') : t}</span> <span class="mes">${h(PORTEE[r.portee])}</span> ${mesure(r.mesure)}</p><p class="petit">${h(r.methode)}</p>${r.mesure && r.mesure.valeur == null ? `<p class="petit donnees">${Object.entries(r.mesure).map(([k, v]) => `${h(k.replaceAll('_', ' '))} : ${h(typeof v === 'number' ? nb(v, 4) : v)}`).join(' · ')}</p>` : ''}${r.mesure?.rmse_loi != null ? `<p class="petit donnees">erreur de la loi ${nb(r.mesure.rmse_loi)} · erreur de la moyenne ${nb(r.mesure.rmse_moyenne)}</p>` : ''}`; }
+    case 'experience': { const a = r.autorisation; return `<p><span class="verd ${a === 'automatique' ? 'bon' : a === 'impossible' ? 'mauvais' : 'alerte'}">${a === 'automatique' ? 'exécutée sans revue' : a === 'impossible' ? 'impossible aujourd’hui' : 'revue humaine requise'}</span></p><p>${h(r.plan.duree ?? r.plan.principe)}</p>${r.plan.reglages ? `<p class="petit donnees">réglages (u0, u1) par bloc : ${r.plan.reglages.map((u) => `(${u[0]} ; ${u[1]})`).join(' ')}</p>` : ''}${r.raison ? `<p class="petit">${h(r.raison)}</p>` : ''}<p class="petit">Coût prévu : ${r.cout_prevu.jours ? `${r.cout_prevu.jours} jours, |u0| moyen ${nb(r.cout_prevu.moyenne_abs_u0)} (plafond ${nb(r.cout_prevu.plafond.u0)}), part de jours u1 ${nb(r.cout_prevu.part_jours_u1)} (plafond ${nb(r.cout_prevu.plafond.u1)})` : h(r.cout_prevu.raison)}</p><p class="petit">Risque : ${h(r.risque.fausse_confirmation ? `fausse confirmation ${r.risque.fausse_confirmation}` : r.risque.note)}</p>`; }
+    case 'resultat': { const e = reg.get(r.experience); return `<p class="vers">résultat de l’expérience <a href="#r${e.n}">n° ${e.n}</a></p><p><span class="verd ${r.mesures.pari_gagne ? 'bon' : 'alerte'}">${r.mesures.pari_gagne ? 'pari gagné' : 'pari non gagné'}</span> <span class="mes">log E = ${nb(r.mesures.logE)} <span class="sur">seuil ${nb(r.mesures.seuil)}</span></span></p><p class="petit donnees">erreur de prévision ${nb(r.mesures.rmse_sans, 4)} → ${nb(r.mesures.rmse_avec, 4)} avec la loi · ${nb(r.cout_reel.calcul_s, 1)} s de calcul</p>`; }
+    case 'economie': { const g = r.gain; return `${vers}<p>${g.base === 'non mesurable' ? `<span class="verd alerte">gain non mesurable</span></p><p class="petit">${h(g.raison)}` : `<span class="mes">déjà perdu : ${eur(g.deja_perdu)}</span> <span class="mes">par an si colmatée : ${eur(g.par_an_si_colmatee)}</span></p><p class="petit">${h(g.valorisation)} · ${h(g.nature)}`}</p>`; }
+    case 'aveu': return `<p>${h(r.motif)}</p>`;
+    default: return '';
+  }
+}
+
+const carte = (r, reg) => `<article class="acte ${cls(r.auteur)} t-${r.type}" id="r${r.n}" data-qui="${cls(r.auteur)}">
+  <header><span class="num">n° ${r.n}</span><span class="type">${TYPE_FR[r.type]}</span>${puce(r.auteur)}${r.moteur ? `<span class="commit">${h(r.moteur.commit)}</span>` : ''}<span class="id">${h(r.id)}</span></header>
+  ${corps(r, reg)}
+  <details><summary>Ligne brute du journal</summary><pre>${h(JSON.stringify(r, null, 1))}</pre></details>
+</article>`;
+
+export function ecrirePage(reg, chemin) {
+  const v = reg.verifier(), integ = integrite(), etat = reg.etat();
+  const problemes = reg.lignes.filter((r) => r.type === 'probleme');
+  const eco = reg.lignes.filter((r) => r.type === 'economie');
+  const comptable = eco.filter((e) => e.gain.base === 'comptable');
+  const calcul = reg.lignes.reduce((s, r) => s + (r.type === 'affirmation' ? r.cout.calcul_s ?? 0 : r.type === 'resultat' ? r.cout_reel.calcul_s ?? 0 : 0), 0);
+  const jours = reg.lignes.filter((r) => r.type === 'resultat').reduce((s, r) => s + (r.cout_reel.jours ?? 0), 0);
+  const parNiveau = Object.keys(NIVEAUX).map((n) => [n, etat.filter((e) => e.niveau === n).length]).filter(([, c]) => c);
+  const vraiesAff = etat.filter((e) => !e.sujet.includes('témoin négatif'));
+  const bancOk = (b) => (b === 'confirme' ? '<span class="verd bon">confirmée</span>' : b === 'refute' ? '<span class="verd mauvais">démentie</span>' : b === 'indecis' ? '<span class="verd alerte">indécise</span>' : '<span class="sur">—</span>');
+
+  const html = `<title>Page de travail commune</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Serif:wght@500;600&display=swap">
+<style>
+/* Mise en page : un cahier de laboratoire. Une colonne de lecture, le journal en fil chronologique, chaque acte marqué de la couleur de son auteur. */
+:root{--fond:#f3f5f7;--carte:#fff;--encre:#17212b;--sourd:#586573;--trait:#d8dfe6;--creux:#eaeef2;
+--galilee:#2a5db0;--cortex:#9c3a80;--lavoisier:#1c7a60;--neutre:#66717d;--bon:#24764a;--alerte:#9a5f00;--mauvais:#b0362e;
+--titre:"IBM Plex Serif",Georgia,serif;--texte:"IBM Plex Sans",system-ui,sans-serif;--mono:"IBM Plex Mono",ui-monospace,Menlo,monospace}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--fond:#11161c;--carte:#19212a;--encre:#e6ebf0;--sourd:#9aa7b4;--trait:#2c3743;--creux:#212b36;--galilee:#7fa9ee;--cortex:#dc8cc6;--lavoisier:#63c5a6;--neutre:#a0abb6;--bon:#6fcf97;--alerte:#e2b25a;--mauvais:#f08a80;color-scheme:dark}}
+:root[data-theme="dark"]{--fond:#11161c;--carte:#19212a;--encre:#e6ebf0;--sourd:#9aa7b4;--trait:#2c3743;--creux:#212b36;--galilee:#7fa9ee;--cortex:#dc8cc6;--lavoisier:#63c5a6;--neutre:#a0abb6;--bon:#6fcf97;--alerte:#e2b25a;--mauvais:#f08a80;color-scheme:dark}
+*{box-sizing:border-box}
+body{background:var(--fond);color:var(--encre);font:15px/1.55 var(--texte);padding-block:28px 64px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+main{max-width:920px;margin:0 auto;display:flex;flex-direction:column;gap:40px}
+section{display:flex;flex-direction:column;gap:14px;min-width:0}
+h1{font:600 30px/1.2 var(--titre);margin:0;text-wrap:balance}
+h2{font:600 21px/1.3 var(--titre);margin:0;text-wrap:balance}
+h3{font:600 16px/1.35 var(--texte);margin:0}
+p{margin:0;max-width:68ch}
+a{color:inherit}
+.chapo{color:var(--sourd);font-size:16px}
+.petit{font-size:13px;color:var(--sourd)}
+.donnees,.num,.id,.commit,.mes,td.n{font-family:var(--mono);font-variant-numeric:tabular-nums}
+.etat{display:flex;flex-wrap:wrap;gap:8px 22px;font-size:13px;border-block:1px solid var(--trait);padding-block:10px}
+.etat b{font-weight:600}
+.qui{font:500 12px/1 var(--mono);letter-spacing:.04em;padding:4px 7px;border:1px solid currentColor;border-radius:3px;white-space:nowrap}
+.galilee{--c:var(--galilee)}.cortex{--c:var(--cortex)}.lavoisier{--c:var(--lavoisier)}.neutre{--c:var(--neutre)}
+.qui{color:var(--c)}
+.niv{font:500 12px/1 var(--texte);padding:4px 8px;border-radius:99px;border:1.5px solid var(--encre);white-space:nowrap;display:inline-block}
+.niv.n5,.niv.n4,.niv.n3{background:var(--encre);color:var(--carte)}
+.niv.n2{border-style:dashed}
+.niv.n1{border-style:dotted;color:var(--sourd);border-color:var(--sourd)}
+.niv.n0{text-decoration:line-through;color:var(--mauvais);border-color:var(--mauvais)}
+.verd{font-weight:600}.bon{color:var(--bon)}.alerte{color:var(--alerte)}.mauvais{color:var(--mauvais)}
+.mes{font-size:12.5px;background:var(--creux);padding:2px 6px;border-radius:3px;display:inline-block}
+.sur{color:var(--sourd)}
+.moteurs{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:12px}
+.moteur{background:var(--carte);border-top:3px solid var(--c);padding:14px 16px;display:flex;flex-direction:column;gap:8px;min-width:0}
+.moteur h3{color:var(--c)}
+.moteur ul,.limites{margin:0;padding-left:18px;display:flex;flex-direction:column;gap:4px;font-size:13.5px}
+.moteur .non{color:var(--sourd)}
+.schema{background:var(--carte);padding:12px;overflow-x:auto}
+.schema svg{display:block;min-width:620px;width:100%;height:auto}
+.schema text{font-family:var(--texte);fill:var(--encre)}
+.schema .l{font-size:11px;fill:var(--sourd)}
+.schema .b{fill:var(--carte);stroke-width:1.5}
+.schema .f{fill:none;stroke:var(--sourd);stroke-width:1.2}
+.tableau{overflow-x:auto;background:var(--carte)}
+table{border-collapse:collapse;width:100%;font-size:13.5px;min-width:640px}
+th{font:500 11.5px/1.3 var(--texte);letter-spacing:.06em;text-transform:uppercase;color:var(--sourd);text-align:left;padding:9px 10px;border-bottom:1px solid var(--trait)}
+td{padding:9px 10px;border-bottom:1px solid var(--trait);vertical-align:top}
+td.n{text-align:right;white-space:nowrap}
+tr:last-child td{border-bottom:0}
+.filtres{display:flex;flex-wrap:wrap;gap:8px}
+.filtres button{font:500 13px/1 var(--texte);padding:8px 12px;border:1px solid var(--trait);background:var(--carte);color:var(--encre);border-radius:4px;cursor:pointer}
+.filtres button[aria-pressed="true"]{background:var(--encre);color:var(--carte);border-color:var(--encre)}
+.filtres button:focus-visible,a:focus-visible,summary:focus-visible{outline:2px solid var(--galilee);outline-offset:2px}
+.fil{display:flex;flex-direction:column;gap:8px}
+.acte{background:var(--carte);border-left:3px solid var(--c);padding:12px 14px;display:flex;flex-direction:column;gap:6px;min-width:0}
+.acte header{display:flex;flex-wrap:wrap;align-items:center;gap:8px;font-size:12px}
+.acte .num{color:var(--sourd)}.acte .type{font-weight:600;font-size:13px}
+.acte .id,.acte .commit{color:var(--sourd);font-size:11px}.acte .id{margin-left:auto}
+.acte .fort{font-size:15.5px;font-weight:500}
+.acte .vers{font-size:13px;color:var(--sourd)}
+.acte.t-probleme{border-left-width:0;background:none;padding-inline:0}
+details summary{font-size:12px;color:var(--sourd);cursor:pointer}
+pre{font:11.5px/1.5 var(--mono);background:var(--creux);padding:10px;margin:6px 0 0;overflow-x:auto;white-space:pre-wrap;word-break:break-word}
+code{font:13px var(--mono);background:var(--creux);padding:1px 5px;border-radius:3px}
+</style>
+<main>
+<section>
+  <h1>Page de travail commune</h1>
+  <p class="chapo">GALILÉE cherche les lois, CORTEX les mécanismes, LAVOISIER les comptes. Ils ne s’appellent pas entre eux : chacun lit et écrit dans un même journal, où tout acte porte son auteur, sa preuve, son coût et son niveau de certitude.</p>
+  <div class="etat">
+    <span><b>${v.lignes}</b> actes au journal</span>
+    <span class="${v.ok ? 'bon' : 'mauvais'}"><b>Chaîne ${v.ok ? 'intacte' : 'rompue'}</b></span>
+    <span class="${integ.ok ? 'bon' : 'mauvais'}"><b>${integ.fichiers} fichiers moteurs ${integ.ok ? 'non modifiés' : 'altérés'}</b></span>
+    <span><b>${problemes.length}</b> problèmes traités</span>
+    <span>dernier acte : ${h(reg.lignes.at(-1)?.date.slice(0, 16).replace('T', ' '))} UTC</span>
+  </div>
+</section>
+
+<section>
+  <h2>Ce qui est établi, et à quel degré</h2>
+  <p>Le niveau affiché est recalculé à partir du journal. Une loi tirée de données subies entre comme hypothèse, quel que soit l’avis de son auteur. Seul un pari gagné sur des jours neufs la rend utilisable pour décider. La colonne « banc » compare à la vérité du simulateur, lue après coup : elle n’existe pas dans une vraie entreprise et ne change aucun niveau.</p>
+  <div class="tableau"><table>
+    <thead><tr><th>Niveau</th><th>Auteur</th><th>Affirmation</th><th>Problème</th><th>Banc</th></tr></thead>
+    <tbody>${vraiesAff.map((e) => `<tr><td>${niv(e.niveau)}${e.historique.length > 1 ? `<div class="petit">entrée : ${h(e.historique[0])}</div>` : ''}${e.contestee ? '<div class="petit alerte">contestée</div>' : e.contestations ? '<div class="petit">contestée, puis tranchée</div>' : ''}</td><td>${puce(e.auteur)}</td><td><a href="#r${reg.get(e.id).n}">${h(e.enonce)}</a></td><td class="petit">${h(e.probleme)}</td><td>${bancOk(e.banc)}</td></tr>`).join('')}</tbody>
+  </table></div>
+  <p class="petit">${parNiveau.map(([n, c]) => `${c} ${n}`).join(' · ')} (témoins négatifs compris). Niveaux qui autorisent une décision : identité, établie, empirique.</p>
+</section>
+
+<section>
+  <h2>Coûts, risques et gains</h2>
+  <p>Un gain n’est compté en euros que s’il sort d’une comptabilité. Ici, les seuls euros viennent des fuites que LAVOISIER lit dans la conservation ; ce sont des gains possibles, aucun n’a été réalisé puisque rien n’a été colmaté.</p>
+  <div class="tableau"><table>
+    <thead><tr><th>Objet</th><th>Coût</th><th>Risque</th><th>Déjà perdu</th><th>Par an si colmatée</th><th>Banc</th></tr></thead>
+    <tbody>${eco.map((e) => { const c = reg.get(e.cible), et = etat.find((x) => x.id === e.cible); const g = e.gain; return `<tr><td><a href="#r${c.n}">${h(c.enonce ?? `Expérience n° ${c.n} : ${c.plan.duree}`)}</a><div class="petit">${h(g.base === 'comptable' ? g.valorisation : 'gain ' + g.base)}</div></td><td class="petit">${e.cout.leviers ? `${e.cout.leviers.jours} jours d’essai, |u0| moyen ${nb(e.cout.leviers.moyenne_abs_u0)}<br>` : ''}${nb(e.cout.calcul_s, 1)} s de calcul${e.cout.leviers ? '' : '<br>aucune action'}</td><td class="petit">${e.risque.fausse_confirmation ? `fausse confirmation ${h(e.risque.fausse_confirmation)}` : `${nb(e.risque.fausse_detection.fausses_detections_par_entreprise)} fausse détection par entreprise en développement ; cause de la fuite inconnue`}</td><td class="n">${g.base === 'comptable' ? eur(g.deja_perdu) : '—'}</td><td class="n">${g.base === 'comptable' ? eur(g.par_an_si_colmatee) : '—'}</td><td>${et ? bancOk(et.banc) : '<span class="sur">—</span>'}</td></tr>`; }).join('')}</tbody>
+  </table></div>
+  <p class="petit">Total des fuites chiffrées : ${eur(comptable.reduce((s, e) => s + (e.gain.deja_perdu ?? 0), 0))} déjà perdus, ${eur(comptable.reduce((s, e) => s + (e.gain.par_an_si_colmatee ?? 0), 0))} par an si elles étaient colmatées. Dépense totale de la page : ${nb(calcul, 0)} s de calcul et ${jours} jours d’essai simulés. Gain réalisé : 0 €.</p>
+</section>
+
+<section>
+  <h2>Comment l’information circule</h2>
+  <div class="schema"><svg viewBox="0 0 760 300" role="img" aria-label="Les trois moteurs écrivent dans le registre commun et y lisent les actes des autres">
+    <defs><marker id="fl" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="var(--sourd)"/></marker></defs>
+    <rect class="b" x="20" y="20" width="200" height="64" stroke="var(--galilee)"/><text x="120" y="47" text-anchor="middle" font-weight="600" fill="var(--galilee)" style="fill:var(--galilee)">GALILÉE</text><text class="l" x="120" y="66" text-anchor="middle">lois : formes symboliques</text>
+    <rect class="b" x="280" y="20" width="200" height="64" stroke="var(--cortex)"/><text x="380" y="47" text-anchor="middle" font-weight="600" style="fill:var(--cortex)">CORTEX</text><text class="l" x="380" y="66" text-anchor="middle">mécanismes, paris, plans d’essai</text>
+    <rect class="b" x="540" y="20" width="200" height="64" stroke="var(--lavoisier)"/><text x="640" y="47" text-anchor="middle" font-weight="600" style="fill:var(--lavoisier)">LAVOISIER</text><text class="l" x="640" y="66" text-anchor="middle">corps, fuites, euros</text>
+    <rect class="b" x="110" y="150" width="540" height="72" stroke="var(--encre)"/><text x="380" y="180" text-anchor="middle" font-weight="600">Registre commun (journal chaîné, ajout seul)</text><text class="l" x="380" y="200" text-anchor="middle">problème · affirmation · contestation · vérification · expérience · résultat · économie · aveu</text>
+    <path class="f" d="M120 84V150" marker-end="url(#fl)" marker-start="url(#fl)"/><path class="f" d="M380 84V150" marker-end="url(#fl)" marker-start="url(#fl)"/><path class="f" d="M640 84V150" marker-end="url(#fl)" marker-start="url(#fl)"/>
+    <text class="l" x="128" y="112">loi de l’écart, loi des débits</text><text class="l" x="388" y="112">structure manquante, pari, plan</text><text class="l" x="528" y="112" text-anchor="start">débits reconstruits, fuites</text>
+    <text class="l" x="128" y="128">verdict propre conservé</text><text class="l" x="388" y="128">conteste et tranche</text><text class="l" x="528" y="128">coût et gain en euros</text>
+    <path class="f" d="M380 222V262" marker-end="url(#fl)"/><text x="380" y="282" text-anchor="middle" font-size="13">Niveau de certitude courant, recalculé à chaque lecture</text>
+  </svg></div>
+  <div class="moteurs">
+    ${[['galilee', 'GALILÉE', ['Loi symbolique sur des données fournies', 'Verdict propre : établie, empirique, incertaine'], ['Choix de ses propres expériences : aucun problème commun n’offre de monde qu’il puisse interroger']],
+       ['cortex', 'CORTEX', ['Modes lents acceptés par pari (deux leviers exactement)', 'Sonde « hors de portée », pari sur une formule, plan d’essai sous budget'], ['Sonde et pari sur des données extérieures : ils ne sont pas exportés hors de ses mondes', 'Pilotage d’une activité (v3 à v5) : non branché']],
+       ['lavoisier', 'LAVOISIER', ['Bilan de matière : types de flux, stocks, profit, fuites', 'Vérité scellée jusqu’à la fin du jugement'], ['Atlas, jumeau, générateur d’opportunités, gouverneur, registre des paris : non écrits', 'Agir sur l’entreprise : son générateur ne se pilote pas']]]
+      .map(([c, t, oui, non]) => { const m = PROVENANCE.moteurs.find((x) => x.nom === c); return `<div class="moteur ${c}"><h3>${t}</h3><p class="petit donnees">${h(m.depot)} @ ${h(m.commit.slice(0, 7))} · ${Object.keys(m.fichiers).length} fichiers gelés</p><ul>${oui.map((x) => `<li>${h(x)}</li>`).join('')}${non.map((x) => `<li class="non">Pas ici — ${h(x)}</li>`).join('')}</ul></div>`; }).join('')}
+  </div>
+</section>
+
+<section>
+  <h2>Le journal</h2>
+  <div class="filtres" role="group" aria-label="Filtrer par auteur">
+    ${[['tous', 'Tous'], ['galilee', 'GALILÉE'], ['cortex', 'CORTEX'], ['lavoisier', 'LAVOISIER'], ['neutre', 'Registre et banc']].map(([k, t], i) => `<button type="button" id="f-${k}" data-f="${k}" aria-pressed="${i === 0}">${t}</button>`).join('')}
+  </div>
+  ${problemes.map((p) => `<div class="fil"><h3 id="${h(p.cle)}">${h(p.titre)}</h3>${reg.lignes.filter((r) => r.probleme === p.cle).map((r) => carte(r, reg)).join('\n')}</div>`).join('\n')}
+</section>
+
+<section>
+  <h2>Ce que cette page ne fait pas</h2>
+  <ul class="limites">
+    <li>Aucune donnée réelle : les quatre problèmes viennent des simulateurs de développement de CORTEX et de LAVOISIER. Les graines de test des deux projets sont refusées, pour ne pas gâcher leurs exécutions uniques.</li>
+    <li>Aucune loi économique n’a gagné de pari. Les lois quantité–prix restent des hypothèses, parce qu’on ne peut fixer aucun prix dans le simulateur de LAVOISIER.</li>
+    <li>CORTEX ne peut juger une loi de GALILÉE que dans ses propres mondes. Pour qu’il la juge sur les débits de LAVOISIER, il faudrait qu’il exporte sa sonde et son pari.</li>
+    <li>Le bilan de matière n’est pas gelé : ses résultats ici sont des résultats de développement, et son taux de fausses détections aussi.</li>
+    <li>Aucune recherche d’opportunité au-delà des fuites : l’organe de LAVOISIER qui chiffrerait le gain d’un changement de prix n’existe pas encore.</li>
+  </ul>
+  <p class="petit">Refaire un problème : <code>node bin/commun.js executer forme-manquante --graine 7</code> · tout recontrôler : <code>node bin/commun.js verifier</code></p>
+</section>
+</main>
+<script>
+(function(){var bs=document.querySelectorAll('.filtres button');bs.forEach(function(b){b.addEventListener('click',function(){var f=b.dataset.f;bs.forEach(function(x){x.setAttribute('aria-pressed',x===b)});document.querySelectorAll('.acte').forEach(function(a){a.hidden=f!=='tous'&&a.dataset.qui!==f&&!a.classList.contains('t-probleme')})})})})();
+</script>
+`;
+  mkdirSync(dirname(chemin), { recursive: true });
+  writeFileSync(chemin, html);
+  return `${chemin} (${Math.round(html.length / 1024)} ko, ${v.lignes} actes)`;
+}

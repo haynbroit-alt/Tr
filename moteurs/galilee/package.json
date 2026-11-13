@@ -1,0 +1,15 @@
+{
+  "name": "galilee",
+  "version": "1.0.0",
+  "description": "Galilée — un agent scientifique autonome qui redécouvre des lois à partir d'expériences qu'il choisit lui-même.",
+  "type": "module",
+  "license": "MIT",
+  "bin": { "galilee": "src/cli.js" },
+  "scripts": {
+    "test": "node --test",
+    "bench": "node bench/run.js",
+    "build": "node web/build.js",
+    "demo": "node src/cli.js discover pendule"
+  },
+  "engines": { "node": ">=20" }
+}
