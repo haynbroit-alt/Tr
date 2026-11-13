@@ -71,7 +71,7 @@ jugements, est affichée à part : elle n'existe pas dans une vraie entreprise.
 
 ## 3. Ce qui a été exécuté
 
-Quatre problèmes, 44 actes, tous produits par les moteurs gelés.
+Les quatre premiers problèmes, détaillés ici ; la campagne complète est au § 3 bis.
 
 **Forme manquante, monde 5** (monde de développement de CORTEX). CORTEX signale sur la mesure 2 une structure que
 son modèle n'exprime pas (log E = 18,3 ; seuil 3,4). GALILÉE propose `0.3931 − cos(u0) / 2` et la juge
@@ -93,6 +93,27 @@ Les expériences de prix qui trancheraient sont consignées comme impossibles.
 
 **Entreprise opaque, graine 3.** LAVOISIER ne voit aucune fuite ; le banc en cachait une (démarque de 0,08 unité
 par jour). L'échec est au journal.
+
+## 3 bis. Du savoir au revenu : état réel
+
+**Argent réellement encaissé : 0 €.** Tout autre montant de ce dépôt est un potentiel ou une simulation.
+
+- **Boutique réelle** (`registre/donnees/boutique-2026-11-13.json`, relevé en lecture seule, anonymisé) : ouverte
+  depuis 111 jours, 0 € de ventes, 148 visites, 0 ajout au panier. Aucune visite ne vient de France ; 126 viennent
+  des États-Unis, où la boutique ne livre pas. Elle n'a pas été refusée par ses clients : elle ne les a pas
+  rencontrés. CORTEX, lancé sur les visites, n'y trouve rien ; LAVOISIER et GALILÉE n'ont rien à traiter.
+- **Campagne en simulation** (24 entreprises, 12 mondes) : 15 fuites justes sur 18 signalées, 8 manquées ;
+  1 loi démontrée par essai commun sur 12 mondes ; 6 lois de prix proposées, 1 confirmée en prévision ;
+  43 mécanismes proposés par CORTEX, mis en doute par le registre.
+- **Pistes** (type d'acte `piste`) : chaque critère (potentiel, coût, risque, faisabilité) dit s'il est mesuré,
+  mesuré en simulation, estimé ou inconnu, et chaque piste porte son `argent_reel`. Classement : 1. amener de vrais
+  visiteurs français sur la boutique ; 2. audit de fuites comme service ; 3. essais de prix garantis ; 4. vendre
+  GALILÉE comme outil.
+
+```bash
+node bin/commun.js executer boutique-reelle --fichier boutique-2026-11-13.json
+node bin/commun.js executer pistes
+```
 
 ## 4. Limites
 

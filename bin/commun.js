@@ -15,13 +15,15 @@ const reg = new Registre(opt('--registre', join(RACINE, 'registre', 'journal.jso
 if (cmd === 'executer') {
   const integ = integrite();
   if (!integ.ok) { console.error('Moteurs altérés, exécution refusée :\n' + integ.erreurs.join('\n')); process.exit(1); }
-  const graine = Number(opt('--graine'));
-  const cle = `${nom}#${graine}`;
+  const graine = Number(opt('--graine')), fichier = opt('--fichier');
+  const cle = nom === 'pistes' ? 'pistes#1' : nom === 'boutique-reelle' ? `boutique-reelle#${fichier.replace(/\D/g, '')}` : `${nom}#${graine}`;
   if (reg.lignes.some((r) => r.type === 'probleme' && r.cle === cle)) { console.error(`${cle} est déjà au registre (journal en ajout seul).`); process.exit(1); }
   const avant = reg.lignes.length;
   if (nom === 'forme-manquante') (await import('../src/problemes/forme-manquante.js')).formeManquante(reg, graine);
   else if (nom === 'entreprise-opaque') (await import('../src/problemes/entreprise-opaque.js')).entrepriseOpaque(reg, graine);
-  else { console.error('problèmes : forme-manquante, entreprise-opaque'); process.exit(1); }
+  else if (nom === 'boutique-reelle') (await import('../src/problemes/boutique-reelle.js')).boutiqueReelle(reg, fichier);
+  else if (nom === 'pistes') (await import('../src/pistes.js')).pistes(reg);
+  else { console.error('problèmes : forme-manquante, entreprise-opaque, boutique-reelle, pistes'); process.exit(1); }
   for (const r of reg.lignes.slice(avant)) console.log(`${String(r.n).padStart(3)} ${r.id} ${r.type.padEnd(12)} ${r.auteur.padEnd(9)} ${r.enonce ?? r.motif ?? r.titre ?? r.methode ?? ''}`.slice(0, 200));
 } else if (cmd === 'verifier') {
   const a = reg.verifier(), b = integrite();

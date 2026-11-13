@@ -79,4 +79,5 @@ test('le registre publié est intact', () => {
   const v = r.verifier();
   assert.deepEqual(v.erreurs, []);
   assert.ok(v.lignes > 0);
+  for (const p of r.lignes.filter((x) => x.type === "piste")) assert.equal(p.argent_reel, 0);
 });

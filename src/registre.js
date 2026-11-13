@@ -21,6 +21,7 @@ const TYPES = {
   resultat: ['experience', 'mesures', 'cout_reel'],
   economie: ['cible', 'cout', 'risque', 'gain'],
   aveu: ['motif'],
+  piste: ['titre', 'origine', 'potentiel', 'cout', 'risque', 'faisabilite', 'test', 'argent_reel'],
 };
 
 export class Registre {
@@ -45,6 +46,10 @@ export class Registre {
       const cible = this.get(r.cible);
       if (cible.type !== 'affirmation') faux('on ne vérifie qu’une affirmation');
       if (cible.auteur === r.auteur) faux('personne ne vérifie sa propre affirmation');
+    }
+    if (r.type === 'piste') {
+      for (const c of ['potentiel', 'cout', 'risque', 'faisabilite']) if (!['mesuré', 'mesuré en simulation', 'estimé', 'inconnu'].includes(r[c].base)) faux(`${c}.base attendu : mesuré, mesuré en simulation, estimé ou inconnu`);
+      if (typeof r.argent_reel !== 'number') faux('argent_reel doit être un nombre d’euros réellement encaissés');
     }
     if (r.type === 'economie' && !['comptable', 'simulé', 'non mesurable'].includes(r.gain.base)) faux('gain.base attendu : comptable, simulé ou non mesurable');
     if (r.type === 'experience' && !['automatique', 'humaine requise', 'impossible'].includes(r.autorisation)) faux('autorisation attendue : automatique, humaine requise ou impossible');
