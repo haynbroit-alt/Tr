@@ -5,13 +5,14 @@ import { join } from 'node:path';
 import { RACINE } from './adaptateurs/moteurs.js';
 import { NIVEAUX } from './certitude.js';
 
+// Un repère part de programme/reperes.json ; le dernier jalon qui le nomme (champ « repere ») donne sa valeur courante.
 const atteint = (r) => (r.valeur == null || r.seuil == null ? null : r.sens === 'haut' ? r.valeur >= r.seuil : r.valeur <= r.seuil);
 
 export function comptes(reg) {
   const rep = JSON.parse(readFileSync(join(RACINE, 'programme', 'reperes.json'), 'utf8')), L = reg.lignes, etat = reg.etat();
   const moteurs = ['GALILÉE', 'CORTEX', 'LAVOISIER'];
   const jalons = L.filter((r) => r.type === 'jalon');
-  const individuel = Object.fromEntries(moteurs.map((m) => [m, { ...rep[m], reperes: rep[m].reperes.map((r) => ({ ...r, atteint: atteint(r) })), jalons: jalons.filter((j) => j.auteur === m && j.compte === 'individuel') }]));
+  const individuel = Object.fromEntries(moteurs.map((m) => [m, { ...rep[m], reperes: rep[m].reperes.map((r) => { const j = jalons.filter((x) => x.auteur === m && x.repere === r.mesure && typeof x.valeur === 'number').at(-1), v = j ? { ...r, valeur: j.valeur, depuis: j.id } : r; return { ...v, atteint: atteint(v) }; }), jalons: jalons.filter((j) => j.auteur === m && j.compte === 'individuel') }]));
   const verifs = L.filter((r) => r.type === 'verification'), auteurDe = (id) => reg.get(id)?.auteur;
   const croisees = verifs.filter((v) => moteurs.includes(v.auteur) && moteurs.includes(auteurDe(v.cible)) && v.portee !== 'temoin-negatif');
   const collectif = {

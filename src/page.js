@@ -68,7 +68,9 @@ export function ecrirePage(reg, chemin) {
   const ga = GARDIEN.etat(reg, GARDIEN.lireConfig(RACINE)), gb = ga.budget, nm = '<span class="sur">non mesurable</span>';
   const repere = (r) => `<tr><td>${r.atteint === true ? '<span class="verd bon">atteint</span>' : r.atteint === false ? '<span class="verd mauvais">manque</span>' : '<span class="sur">—</span>'}</td><td>${h(r.mesure)}${r.note ? `<div class="petit">${h(r.note)}</div>` : ''}</td><td class="n">${r.valeur == null ? 'non mesuré' : nb(r.valeur, 3) + (r.unite ? ' ' + r.unite : '')}</td><td class="n">${r.seuil != null ? nb(r.seuil, 3) : r.cible != null ? `<span class="sur">${nb(r.cible, 3)} proposé</span>` : '—'}</td><td>${r.travail ? `<span class="mes">${h(r.travail)}</span>` : ''}</td></tr>`;
   const TRAVAUX = { 'GALILÉE': [['G1', 'Ne plus se dire convaincu à tort'], ['G2', 'Lois sur des comptages : mesuré, hypothèse contredite, module non écrit'], ['G3', 'Terres inconnues']], CORTEX: [['C1', 'Test unique de P3 : fait, trois critères atteints (84 % contre 23 %)'], ['C2', 'Exporter son juge pour des données extérieures'], ['C3', 'P4 : agir, arbitrer avec le profit']], LAVOISIER: [['L1', 'Seuils de M0 : fausses détections 0,20 → 0,09 ; profit encore hors seuil'], ['L2', 'Entreprise pilotable'], ['L3', 'Lecteur d’écritures réelles']] };
-  const opps = reg.lignes.filter((r) => r.type === 'opportunite').sort((a, b) => a.rang - b.rang);
+  // une opportunité réinstruite remplace sa version précédente (même titre) ; les rangs de la dernière instruction passent devant
+  const dernieres = new Map(); for (const r of reg.lignes) if (r.type === 'opportunite') dernieres.set(r.titre, r);
+  const opps = [...dernieres.values()].sort((a, b) => b.n - a.n).sort((a, b) => (b.probleme > a.probleme) - (b.probleme < a.probleme) || a.rang - b.rang);
   const ST = { 'retenue en premier': 'bon', 'en attente': 'alerte', 'non instruisible': 'sur', 'écartée': 'mauvais' };
   const pistes = reg.lignes.filter((r) => r.type === 'piste').sort((a, b) => a.rang - b.rang);
   const boutique = reg.lignes.find((r) => r.type === 'affirmation' && r.sujet === 'revenu réel');
