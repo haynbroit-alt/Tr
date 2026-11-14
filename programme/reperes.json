@@ -1,0 +1,26 @@
+{
+  "note": "Repères individuels : chaque chiffre est recopié d'un fichier de résultats du moteur, au commit indiqué. Aucun n'est produit par TR. « seuil » est le critère fixé par le moteur lui-même quand il existe ; « cible » est une proposition du programme, à valider.",
+  "GALILÉE": { "depot": "haynbroit-alt/All", "commit": "be42b7e", "source": "bench/RESULTS.md", "etat": "v1 terminée, banc publié", "reperes": [
+    { "mesure": "lois retrouvées avec précision, bruit 1 %", "valeur": 96, "unite": "%", "sens": "haut" },
+    { "mesure": "lois retrouvées avec précision, bruit 5 %", "valeur": 71, "unite": "%", "sens": "haut", "cible": 80, "travail": "G1" },
+    { "mesure": "arrêts « convaincu » sur une forme fausse, bruit 5 % (75 essais)", "valeur": 9, "unite": "", "sens": "bas", "cible": 2, "travail": "G1" },
+    { "mesure": "capteur qui sature retrouvé, bruit 5 %", "valeur": 20, "unite": "%", "sens": "haut", "travail": "G1" }
+  ] },
+  "CORTEX": { "depot": "haynbroit-alt/1", "commit": "758212a", "source": "README.md, research/v6/RESULTATS_P2.md, research/v6/PROTOCOLE_P3.md", "etat": "v5 évaluée ; v6 : P1 et P2 évalués, P3 gelé, test non exécuté", "reperes": [
+    { "mesure": "profit v5, part de l'oracle", "valeur": 65.8, "unite": "%", "sens": "haut", "travail": "C3" },
+    { "mesure": "sonde « hors de portée », AUC (P2)", "valeur": 0.885, "unite": "", "sens": "haut", "seuil": 0.8 },
+    { "mesure": "formes statiques signalées (P2, C2)", "valeur": 42, "unite": "%", "sens": "haut", "seuil": 60 },
+    { "mesure": "formules de GALILÉE confirmées, plan passif (P2, G1)", "valeur": 4, "unite": "%", "sens": "haut", "seuil": 50, "travail": "C1" },
+    { "mesure": "formules confirmées, plan actif (P3) — test", "valeur": null, "unite": "%", "sens": "haut", "seuil": 50, "travail": "C1", "note": "non exécuté ; 100 % sur 9 formules en développement" }
+  ] },
+  "LAVOISIER": { "depot": "haynbroit-alt/A", "commit": "73618f9", "source": "bench/DEV_M0_BILAN.md (développement, 100 graines)", "etat": "organe 1 sur 8, en développement, non gelé", "reperes": [
+    { "mesure": "F équilibré (types de flux)", "valeur": 0.934, "unite": "", "sens": "haut", "seuil": 0.9 },
+    { "mesure": "L (appariement)", "valeur": 0.856, "unite": "", "sens": "haut", "seuil": 0.85 },
+    { "mesure": "G (graphe)", "valeur": 0.918, "unite": "", "sens": "haut", "seuil": 0.85 },
+    { "mesure": "S médian (stocks)", "valeur": 1.6, "unite": "%", "sens": "bas", "seuil": 2 },
+    { "mesure": "P médian (profit)", "valeur": 3.8, "unite": "%", "sens": "bas", "seuil": 2, "travail": "L1" },
+    { "mesure": "R (flux cachés retrouvés)", "valeur": 73.7, "unite": "%", "sens": "haut", "seuil": 70 },
+    { "mesure": "FD1 (placebos touchés)", "valeur": 2.9, "unite": "%", "sens": "bas", "seuil": 10 },
+    { "mesure": "FD2 (fausses détections par entreprise)", "valeur": 0.2, "unite": "", "sens": "bas", "seuil": 0.1, "travail": "L1" }
+  ] }
+}

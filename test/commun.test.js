@@ -81,3 +81,18 @@ test('le registre publié est intact', () => {
   assert.ok(v.lignes > 0);
   for (const p of r.lignes.filter((x) => x.type === "piste")) assert.equal(p.argent_reel, 0);
 });
+
+test('les quatre comptes restent séparés et le gain réel est celui du journal', async () => {
+  const { comptes } = await import('../src/comptes.js');
+  const c = comptes(new Registre(join(RACINE, 'registre', 'journal.jsonl')));
+  assert.deepEqual(Object.keys(c), ['individuel', 'collectif', 'couts', 'gains']);
+  assert.equal(c.gains.euros_encaisses, 0);
+  assert.ok(c.individuel.LAVOISIER.reperes.some((r) => r.atteint === false));
+});
+
+test('la transmission refuse les séries rares (confrontation T1)', async () => {
+  const { JOURS_ACTIFS_MIN } = await import('../src/problemes/entreprise-opaque.js');
+  assert.equal(JOURS_ACTIFS_MIN, 183);
+  const r = new Registre(join(RACINE, 'registre', 'journal.jsonl'));
+  assert.equal(r.lignes.filter((x) => x.type === 'verification' && x.portee === 'recevabilite').length, 39);
+});

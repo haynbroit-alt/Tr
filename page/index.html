@@ -90,11 +90,11 @@ code{font:13px var(--mono);background:var(--creux);padding:1px 5px;border-radius
   <h1>Page de travail commune</h1>
   <p class="chapo">GALILÉE cherche les lois, CORTEX les mécanismes, LAVOISIER les comptes. Ils ne s’appellent pas entre eux : chacun lit et écrit dans un même journal, où tout acte porte son auteur, sa preuve, son coût et son niveau de certitude.</p>
   <div class="etat">
-    <span><b>314</b> actes au journal</span>
+    <span><b>356</b> actes au journal</span>
     <span class="bon"><b>Chaîne intacte</b></span>
     <span class="bon"><b>33 fichiers moteurs non modifiés</b></span>
-    <span><b>38</b> dossiers</span>
-    <span>dernier acte : 2026-11-13 23:25 UTC</span>
+    <span><b>39</b> dossiers</span>
+    <span>dernier acte : 2026-11-14 06:12 UTC</span>
   </div>
 </section>
 
@@ -124,7 +124,7 @@ code{font:13px var(--mono);background:var(--creux);padding:1px 5px;border-radius
     <div><b>8</b>fuites manquées</div>
     <div><b>629 900 €</b>par an de fuites réelles retrouvées (simulé)</div>
     <div><b>1 / 6</b>lois de prix confirmées en prévision</div>
-    <div><b>43</b>mécanismes cachés proposés par CORTEX</div>
+    <div><b>4 / 43</b>mécanismes de CORTEX encore recevables</div>
     <div><b>3 / 12</b>formes manquantes signalées</div>
     <div><b>1 / 1</b>lois démontrées par essai commun</div>
     <div><b>1 / 1</b>formules fausses refusées</div>
@@ -132,13 +132,31 @@ code{font:13px var(--mono);background:var(--creux);padding:1px 5px;border-radius
 </section>
 
 <section>
+  <h2>Quatre comptes séparés</h2>
+  <p>Un progrès de moteur, un progrès commun, une dépense et un euro encaissé ne se mélangent pas. Les repères individuels sont recopiés des résultats de chaque moteur ; les trois autres comptes sont déduits du journal.</p>
+  <div class="chiffres">
+    <div><b>1</b>loi démontrée par essai commun</div>
+    <div><b>39</b>affirmations écartées après confrontation</div>
+    <div><b>2</b>vérifications d’un moteur par un autre</div>
+    <div><b>6</b>expériences consignées impossibles</div>
+    <div><b>175 s</b>de calcul consigné</div>
+    <div><b>91</b>jours d’essai simulés</div>
+    <div><b>0 €</b>dépensés (abonnement de la boutique non relevé)</div>
+    <div><b>0 €</b>encaissés</div>
+  </div>
+  <div class="moteurs"><div class="moteur galilee"><h3>GALILÉE</h3><p class="petit">v1 terminée, banc publié</p><ul><li><b>G1</b> Ne plus se dire convaincu à tort</li><li><b>G2</b> Lois sur des comptages (ventes)</li><li><b>G3</b> Terres inconnues</li></ul></div><div class="moteur cortex"><h3>CORTEX</h3><p class="petit">v5 évaluée ; v6 : P1 et P2 évalués, P3 gelé, test non exécuté</p><ul><li><b>C1</b> Exécuter le test unique de P3 — attend votre décision</li><li><b>C2</b> Exporter son juge pour des données extérieures</li><li><b>C3</b> P4 : agir, arbitrer avec le profit</li></ul></div><div class="moteur lavoisier"><h3>LAVOISIER</h3><p class="petit">organe 1 sur 8, en développement, non gelé</p><ul><li><b>L1</b> Atteindre les seuils de M0, geler, tester</li><li><b>L2</b> Entreprise pilotable</li><li><b>L3</b> Lecteur d’écritures réelles</li></ul></div></div>
+  <details class="pli"><summary>GALILÉE : repères individuels <span class="sur">· 0 seuil(s) manqué(s) · source bench/RESULTS.md @ be42b7e</span></summary><div class="tableau"><table><thead><tr><th>État</th><th>Mesure</th><th>Valeur</th><th>Seuil</th><th>Travail</th></tr></thead><tbody><tr><td><span class="sur">—</span></td><td>lois retrouvées avec précision, bruit 1 %</td><td class="n">96 %</td><td class="n">—</td><td></td></tr><tr><td><span class="sur">—</span></td><td>lois retrouvées avec précision, bruit 5 %</td><td class="n">71 %</td><td class="n"><span class="sur">80 proposé</span></td><td><span class="mes">G1</span></td></tr><tr><td><span class="sur">—</span></td><td>arrêts « convaincu » sur une forme fausse, bruit 5 % (75 essais)</td><td class="n">9</td><td class="n"><span class="sur">2 proposé</span></td><td><span class="mes">G1</span></td></tr><tr><td><span class="sur">—</span></td><td>capteur qui sature retrouvé, bruit 5 %</td><td class="n">20 %</td><td class="n">—</td><td><span class="mes">G1</span></td></tr></tbody></table></div></details><details class="pli"><summary>CORTEX : repères individuels <span class="sur">· 2 seuil(s) manqué(s) · source README.md, research/v6/RESULTATS_P2.md, research/v6/PROTOCOLE_P3.md @ 758212a</span></summary><div class="tableau"><table><thead><tr><th>État</th><th>Mesure</th><th>Valeur</th><th>Seuil</th><th>Travail</th></tr></thead><tbody><tr><td><span class="sur">—</span></td><td>profit v5, part de l'oracle</td><td class="n">65,8 %</td><td class="n">—</td><td><span class="mes">C3</span></td></tr><tr><td><span class="verd bon">atteint</span></td><td>sonde « hors de portée », AUC (P2)</td><td class="n">0,885</td><td class="n">0,8</td><td></td></tr><tr><td><span class="verd mauvais">manque</span></td><td>formes statiques signalées (P2, C2)</td><td class="n">42 %</td><td class="n">60</td><td></td></tr><tr><td><span class="verd mauvais">manque</span></td><td>formules de GALILÉE confirmées, plan passif (P2, G1)</td><td class="n">4 %</td><td class="n">50</td><td><span class="mes">C1</span></td></tr><tr><td><span class="sur">—</span></td><td>formules confirmées, plan actif (P3) — test<div class="petit">non exécuté ; 100 % sur 9 formules en développement</div></td><td class="n">non mesuré</td><td class="n">50</td><td><span class="mes">C1</span></td></tr></tbody></table></div></details><details class="pli"><summary>LAVOISIER : repères individuels <span class="sur">· 2 seuil(s) manqué(s) · source bench/DEV_M0_BILAN.md (développement, 100 graines) @ 73618f9</span></summary><div class="tableau"><table><thead><tr><th>État</th><th>Mesure</th><th>Valeur</th><th>Seuil</th><th>Travail</th></tr></thead><tbody><tr><td><span class="verd bon">atteint</span></td><td>F équilibré (types de flux)</td><td class="n">0,934</td><td class="n">0,9</td><td></td></tr><tr><td><span class="verd bon">atteint</span></td><td>L (appariement)</td><td class="n">0,856</td><td class="n">0,85</td><td></td></tr><tr><td><span class="verd bon">atteint</span></td><td>G (graphe)</td><td class="n">0,918</td><td class="n">0,85</td><td></td></tr><tr><td><span class="verd bon">atteint</span></td><td>S médian (stocks)</td><td class="n">1,6 %</td><td class="n">2</td><td></td></tr><tr><td><span class="verd mauvais">manque</span></td><td>P médian (profit)</td><td class="n">3,8 %</td><td class="n">2</td><td><span class="mes">L1</span></td></tr><tr><td><span class="verd bon">atteint</span></td><td>R (flux cachés retrouvés)</td><td class="n">73,7 %</td><td class="n">70</td><td></td></tr><tr><td><span class="verd bon">atteint</span></td><td>FD1 (placebos touchés)</td><td class="n">2,9 %</td><td class="n">10</td><td></td></tr><tr><td><span class="verd mauvais">manque</span></td><td>FD2 (fausses détections par entreprise)</td><td class="n">0,2</td><td class="n">0,1</td><td><span class="mes">L1</span></td></tr></tbody></table></div></details>
+  <p class="petit">Confrontation T1 : 39 des 43 mécanismes de CORTEX venaient de factures mensuelles que le registre avait transmises comme des mesures quotidiennes. L’erreur était celle du registre ; la règle de transmission est corrigée. Programme complet : <code>programme/PROGRAMME.md</code>.</p>
+</section>
+
+<section>
   <h2>Ce qui est établi, et à quel degré</h2>
   <p>Le niveau affiché est recalculé à partir du journal. Une loi tirée de données subies entre comme hypothèse, quel que soit l’avis de son auteur. Seul un pari gagné sur des jours neufs la rend utilisable pour décider. La colonne « banc » compare à la vérité du simulateur, lue après coup : elle n’existe pas dans une vraie entreprise et ne change aucun niveau.</p>
   <div class="tableau"><table>
     <thead><tr><th>Niveau</th><th>Auteur</th><th>Affirmation</th><th>Problème</th><th>Banc</th></tr></thead>
-    <tbody><tr><td><span class="niv n1">hors de portée</span></td><td><span class="qui cortex">CORTEX</span></td><td><a href="#r1">La mesure 2 contient une structure prévisible que mon modèle n’exprime pas, de la famille « forme » (fonction non linéaire des leviers).</a></td><td class="petit">forme-manquante#5</td><td><span class="verd bon">confirmée</span></td></tr><tr><td><span class="niv n3">empirique</span><div class="petit">entrée : hypothèse</div><div class="petit">contestée, puis tranchée</div></td><td><span class="qui galilee">GALILÉE</span></td><td><a href="#r2">écart(mesure 2) ≈ 0.3931 − cos(u0) / 2</a></td><td class="petit">forme-manquante#5</td><td><span class="verd bon">confirmée</span></td></tr><tr><td><span class="niv n1">hors de portée</span></td><td><span class="qui cortex">CORTEX</span></td><td><a href="#r296">La mesure 2 contient une structure prévisible que mon modèle n’exprime pas, de la famille « forme » (fonction non linéaire des leviers).</a></td><td class="petit">forme-manquante#21</td><td><span class="sur">—</span></td></tr><tr><td><span class="niv n1">hors de portée</span></td><td><span class="qui cortex">CORTEX</span></td><td><a href="#r299">La mesure 1 contient une structure prévisible que mon modèle n’exprime pas, de la famille « forme » (fonction non linéaire des leviers).</a></td><td class="petit">forme-manquante#23</td><td><span class="sur">—</span></td></tr><tr><td><span class="niv n5">identité</span></td><td><span class="qui neutre">registre</span></td><td><a href="#r302">Depuis l’ouverture (2026-07-27) : 0 € de ventes, 0 commande payante, 148 visites, 0 ajout au panier.</a></td><td class="petit">boutique-reelle#20261113</td><td><span class="sur">—</span></td></tr><tr><td><span class="niv n5">identité</span></td><td><span class="qui neutre">registre</span></td><td><a href="#r303">0 visite depuis la France. 126 visites sur 148 viennent des États-Unis, où la boutique ne livre pas ; 4 seulement viennent d’un pays livré.</a></td><td class="petit">boutique-reelle#20261113</td><td><span class="sur">—</span></td></tr></tbody>
+    <tbody><tr><td><span class="niv n1">hors de portée</span></td><td><span class="qui cortex">CORTEX</span></td><td><a href="#r1">La mesure 2 contient une structure prévisible que mon modèle n’exprime pas, de la famille « forme » (fonction non linéaire des leviers).</a></td><td class="petit">forme-manquante#5</td><td><span class="verd bon">confirmée</span></td></tr><tr><td><span class="niv n3">empirique</span><div class="petit">entrée : hypothèse</div><div class="petit">contestée, puis tranchée</div></td><td><span class="qui galilee">GALILÉE</span></td><td><a href="#r2">écart(mesure 2) ≈ 0.3931 − cos(u0) / 2</a></td><td class="petit">forme-manquante#5</td><td><span class="verd bon">confirmée</span></td></tr><tr><td><span class="niv n0">réfutée</span><div class="petit">entrée : hypothèse</div></td><td><span class="qui cortex">CORTEX</span></td><td><a href="#r55">Le débit teka8 dépend d’une mémoire lente (constante de temps ≈ 28 jours) de : débit teka8 (-0.61).</a></td><td class="petit">entreprise-opaque#2</td><td><span class="sur">—</span></td></tr><tr><td><span class="niv n0">réfutée</span><div class="petit">entrée : hypothèse</div></td><td><span class="qui cortex">CORTEX</span></td><td><a href="#r56">Le débit buvu1 dépend d’une mémoire lente (constante de temps ≈ 12 jours) de : débit teka8 (1.07), débit buvu1 (-2.14).</a></td><td class="petit">entreprise-opaque#2</td><td><span class="sur">—</span></td></tr><tr><td><span class="niv n0">réfutée</span><div class="petit">entrée : hypothèse</div></td><td><span class="qui cortex">CORTEX</span></td><td><a href="#r57">Le débit buvu1 dépend d’une mémoire lente (constante de temps ≈ 5 jours) de : débit sumuzo9 (0.38), prix buvu1 (0).</a></td><td class="petit">entreprise-opaque#2</td><td><span class="sur">—</span></td></tr><tr><td><span class="niv n0">réfutée</span><div class="petit">entrée : hypothèse</div></td><td><span class="qui cortex">CORTEX</span></td><td><a href="#r58">Le débit sumuzo9 dépend d’une mémoire lente (constante de temps ≈ 12 jours) de : débit teka8 (2.06), débit sumuzo9 (-2.49).</a></td><td class="petit">entreprise-opaque#2</td><td><span class="sur">—</span></td></tr><tr><td><span class="niv n0">réfutée</span><div class="petit">entrée : hypothèse</div></td><td><span class="qui cortex">CORTEX</span></td><td><a href="#r59">Le débit sumuzo9 dépend d’une mémoire lente (constante de temps ≈ 4 jours) de : débit buvu1 (-0.6), débit sumuzo9 (0.73).</a></td><td class="petit">entreprise-opaque#2</td><td><span class="sur">—</span></td></tr><tr><td><span class="niv n0">réfutée</span><div class="petit">entrée : hypothèse</div></td><td><span class="qui cortex">CORTEX</span></td><td><a href="#r80">Le débit sinisu6 dépend d’une mémoire lente (constante de temps ≈ 35 jours) de : débit sinisu6 (-0.74), débit zehaki1 (0.48).</a></td><td class="petit">entreprise-opaque#5</td><td><span class="sur">—</span></td></tr><tr><td><span class="niv n0">réfutée</span><div class="petit">entrée : hypothèse</div></td><td><span class="qui cortex">CORTEX</span></td><td><a href="#r81">Le débit zehaki1 dépend d’une mémoire lente (constante de temps ≈ 32 jours) de : débit zehaki1 (-0.54).</a></td><td class="petit">entreprise-opaque#5</td><td><span class="sur">—</span></td></tr><tr><td><span class="niv n0">réfutée</span><div class="petit">entrée : hypothèse</div></td><td><span class="qui cortex">CORTEX</span></td><td><a href="#r82">Le débit xiro7 dépend d’une mémoire lente (constante de temps ≈ 32 jours) de : débit sinisu6 (0.3), débit xiro7 (-0.7).</a></td><td class="petit">entreprise-opaque#5</td><td><span class="sur">—</span></td></tr><tr><td><span class="niv n0">réfutée</span><div class="petit">entrée : hypothèse</div></td><td><span class="qui cortex">CORTEX</span></td><td><a href="#r83">Le débit xiro7 dépend d’une mémoire lente (constante de temps ≈ 2 jours) de : débit zehaki1 (0.12), prix zehaki1 (0).</a></td><td class="petit">entreprise-opaque#5</td><td><span class="sur">—</span></td></tr><tr><td><span class="niv n0">réfutée</span><div class="petit">entrée : hypothèse</div></td><td><span class="qui cortex">CORTEX</span></td><td><a href="#r103">Le débit jubi8 dépend d’une mémoire lente (constante de temps ≈ 18 jours) de : débit jubi8 (-1.96), débit suhaqe5 (0.86).</a></td><td class="petit">entreprise-opaque#8</td><td><span class="sur">—</span></td></tr><tr><td><span class="niv n0">réfutée</span><div class="petit">entrée : hypothèse</div></td><td><span class="qui cortex">CORTEX</span></td><td><a href="#r104">Le débit jubi8 dépend d’une mémoire lente (constante de temps ≈ 6 jours) de : débit jubi8 (0.78).</a></td><td class="petit">entreprise-opaque#8</td><td><span class="sur">—</span></td></tr><tr><td><span class="niv n0">réfutée</span><div class="petit">entrée : hypothèse</div></td><td><span class="qui cortex">CORTEX</span></td><td><a href="#r105">Le débit suhaqe5 dépend d’une mémoire lente (constante de temps ≈ 16 jours) de : débit jubi8 (0.41), débit suhaqe5 (-1.22).</a></td><td class="petit">entreprise-opaque#8</td><td><span class="sur">—</span></td></tr><tr><td><span class="niv n0">réfutée</span><div class="petit">entrée : hypothèse</div></td><td><span class="qui cortex">CORTEX</span></td><td><a href="#r106">Le débit suhaqe5 dépend d’une mémoire lente (constante de temps ≈ 5 jours) de : débit jubi8 (0.6).</a></td><td class="petit">entreprise-opaque#8</td><td><span class="sur">—</span></td></tr><tr><td><span class="niv n0">réfutée</span><div class="petit">entrée : hypothèse</div></td><td><span class="qui cortex">CORTEX</span></td><td><a href="#r107">Le débit nijuqo0 dépend d’une mémoire lente (constante de temps ≈ 2 jours) de : débit jubi8 (0.5), prix jubi8 (0).</a></td><td class="petit">entreprise-opaque#8</td><td><span class="sur">—</span></td></tr><tr><td><span class="niv n0">réfutée</span><div class="petit">entrée : hypothèse</div></td><td><span class="qui cortex">CORTEX</span></td><td><a href="#r108">Le débit nijuqo0 dépend d’une mémoire lente (constante de temps ≈ 4 jours) de : débit suhaqe5 (0.28), débit nijuqo0 (-0.61).</a></td><td class="petit">entreprise-opaque#8</td><td><span class="sur">—</span></td></tr><tr><td><span class="niv n0">réfutée</span><div class="petit">entrée : hypothèse</div></td><td><span class="qui cortex">CORTEX</span></td><td><a href="#r134">Le débit qifuki0 dépend d’une mémoire lente (constante de temps ≈ 16 jours) de : débit qifuki0 (-0.58), débit muxu9 (0.71).</a></td><td class="petit">entreprise-opaque#11</td><td><span class="sur">—</span></td></tr><tr><td><span class="niv n0">réfutée</span><div class="petit">entrée : hypothèse</div></td><td><span class="qui cortex">CORTEX</span></td><td><a href="#r135">Le débit gakofe8 dépend d’une mémoire lente (constante de temps ≈ 32 jours) de : débit gakofe8 (-0.71), débit muxu9 (0.39).</a></td><td class="petit">entreprise-opaque#11</td><td><span class="sur">—</span></td></tr><tr><td><span class="niv n0">réfutée</span><div class="petit">entrée : hypothèse</div></td><td><span class="qui cortex">CORTEX</span></td><td><a href="#r136">Le débit muxu9 dépend d’une mémoire lente (constante de temps ≈ 39 jours) de : débit gakofe8 (0.22), débit muxu9 (-0.69).</a></td><td class="petit">entreprise-opaque#11</td><td><span class="sur">—</span></td></tr><tr><td><span class="niv n0">réfutée</span><div class="petit">entrée : hypothèse</div></td><td><span class="qui cortex">CORTEX</span></td><td><a href="#r164">Le débit baza7 dépend d’une mémoire lente (constante de temps ≈ 18 jours) de : débit baza7 (-3.11), débit befa7 (2.15).</a></td><td class="petit">entreprise-opaque#14</td><td><span class="sur">—</span></td></tr><tr><td><span class="niv n0">réfutée</span><div class="petit">entrée : hypothèse</div></td><td><span class="qui cortex">CORTEX</span></td><td><a href="#r165">Le débit baza7 dépend d’une mémoire lente (constante de temps ≈ 7 jours) de : débit nuqatu7 (1.17), débit befa7 (-0.33).</a></td><td class="petit">entreprise-opaque#14</td><td><span class="sur">—</span></td></tr><tr><td><span class="niv n0">réfutée</span><div class="petit">entrée : hypothèse</div></td><td><span class="qui cortex">CORTEX</span></td><td><a href="#r166">Le débit nuqatu7 dépend d’une mémoire lente (constante de temps ≈ 16 jours) de : débit nuqatu7 (-1.89), débit befa7 (1.55).</a></td><td class="petit">entreprise-opaque#14</td><td><span class="sur">—</span></td></tr><tr><td><span class="niv n0">réfutée</span><div class="petit">entrée : hypothèse</div></td><td><span class="qui cortex">CORTEX</span></td><td><a href="#r167">Le débit nuqatu7 dépend d’une mémoire lente (constante de temps ≈ 2 jours) de : débit nuqatu7 (0.34), prix baza7 (0).</a></td><td class="petit">entreprise-opaque#14</td><td><span class="sur">—</span></td></tr><tr><td><span class="niv n0">réfutée</span><div class="petit">entrée : hypothèse</div></td><td><span class="qui cortex">CORTEX</span></td><td><a href="#r168">Le débit befa7 dépend d’une mémoire lente (constante de temps ≈ 18 jours) de : débit nuqatu7 (1.29), débit befa7 (-1.96).</a></td><td class="petit">entreprise-opaque#14</td><td><span class="sur">—</span></td></tr><tr><td><span class="niv n0">réfutée</span><div class="petit">entrée : hypothèse</div></td><td><span class="qui cortex">CORTEX</span></td><td><a href="#r169">Le débit befa7 dépend d’une mémoire lente (constante de temps ≈ 2 jours) de : débit befa7 (0.34), prix baza7 (0).</a></td><td class="petit">entreprise-opaque#14</td><td><span class="sur">—</span></td></tr><tr><td><span class="niv n0">réfutée</span><div class="petit">entrée : hypothèse</div></td><td><span class="qui cortex">CORTEX</span></td><td><a href="#r201">Le débit xaxe7 dépend d’une mémoire lente (constante de temps ≈ 25 jours) de : débit xaxe7 (-0.61), débit xuza8 (0.71).</a></td><td class="petit">entreprise-opaque#17</td><td><span class="sur">—</span></td></tr><tr><td><span class="niv n0">réfutée</span><div class="petit">entrée : hypothèse</div></td><td><span class="qui cortex">CORTEX</span></td><td><a href="#r202">Le débit xuza8 dépend d’une mémoire lente (constante de temps ≈ 28 jours) de : débit xuza8 (-0.51), prix xuza8 (0).</a></td><td class="petit">entreprise-opaque#17</td><td><span class="sur">—</span></td></tr><tr><td><span class="niv n0">réfutée</span><div class="petit">entrée : hypothèse</div></td><td><span class="qui cortex">CORTEX</span></td><td><a href="#r203">Le débit jico4 dépend d’une mémoire lente (constante de temps ≈ 44 jours) de : débit xuza8 (0.79), débit jico4 (-1.03).</a></td><td class="petit">entreprise-opaque#17</td><td><span class="sur">—</span></td></tr><tr><td><span class="niv n0">réfutée</span><div class="petit">entrée : hypothèse</div></td><td><span class="qui cortex">CORTEX</span></td><td><a href="#r204">Le débit jico4 dépend d’une mémoire lente (constante de temps ≈ 2 jours) de : prix xuza8 (0).</a></td><td class="petit">entreprise-opaque#17</td><td><span class="sur">—</span></td></tr><tr><td><span class="niv n0">réfutée</span><div class="petit">entrée : hypothèse</div></td><td><span class="qui cortex">CORTEX</span></td><td><a href="#r229">Le débit tufaza9 dépend d’une mémoire lente (constante de temps ≈ 18 jours) de : débit tufaza9 (-2.44), débit xafa2 (0.92).</a></td><td class="petit">entreprise-opaque#20</td><td><span class="sur">—</span></td></tr><tr><td><span class="niv n0">réfutée</span><div class="petit">entrée : hypothèse</div></td><td><span class="qui cortex">CORTEX</span></td><td><a href="#r230">Le débit tufaza9 dépend d’une mémoire lente (constante de temps ≈ 8 jours) de : débit tufaza9 (1.05).</a></td><td class="petit">entreprise-opaque#20</td><td><span class="sur">—</span></td></tr><tr><td><span class="niv n0">réfutée</span><div class="petit">entrée : hypothèse</div></td><td><span class="qui cortex">CORTEX</span></td><td><a href="#r231">Le débit quzu9 dépend d’une mémoire lente (constante de temps ≈ 16 jours) de : débit tufaza9 (1.25), débit quzu9 (-1.95).</a></td><td class="petit">entreprise-opaque#20</td><td><span class="sur">—</span></td></tr><tr><td><span class="niv n0">réfutée</span><div class="petit">entrée : hypothèse</div></td><td><span class="qui cortex">CORTEX</span></td><td><a href="#r232">Le débit quzu9 dépend d’une mémoire lente (constante de temps ≈ 5 jours) de : débit xafa2 (0.42).</a></td><td class="petit">entreprise-opaque#20</td><td><span class="sur">—</span></td></tr><tr><td><span class="niv n0">réfutée</span><div class="petit">entrée : hypothèse</div></td><td><span class="qui cortex">CORTEX</span></td><td><a href="#r233">Le débit xafa2 dépend d’une mémoire lente (constante de temps ≈ 20 jours) de : débit tufaza9 (1.17), débit xafa2 (-1.98).</a></td><td class="petit">entreprise-opaque#20</td><td><span class="sur">—</span></td></tr><tr><td><span class="niv n0">réfutée</span><div class="petit">entrée : hypothèse</div></td><td><span class="qui cortex">CORTEX</span></td><td><a href="#r234">Le débit xafa2 dépend d’une mémoire lente (constante de temps ≈ 7 jours) de : débit quzu9 (0.35), débit xafa2 (0.44).</a></td><td class="petit">entreprise-opaque#20</td><td><span class="sur">—</span></td></tr><tr><td><span class="niv n0">réfutée</span><div class="petit">entrée : hypothèse</div></td><td><span class="qui cortex">CORTEX</span></td><td><a href="#r261">Le débit zuhari3 dépend d’une mémoire lente (constante de temps ≈ 32 jours) de : débit zuhari3 (-0.7), débit hobo5 (0.33).</a></td><td class="petit">entreprise-opaque#23</td><td><span class="sur">—</span></td></tr><tr><td><span class="niv n0">réfutée</span><div class="petit">entrée : hypothèse</div></td><td><span class="qui cortex">CORTEX</span></td><td><a href="#r262">Le débit hobo5 dépend d’une mémoire lente (constante de temps ≈ 32 jours) de : débit hobo5 (-0.94), débit zovagu2 (0.4).</a></td><td class="petit">entreprise-opaque#23</td><td><span class="sur">—</span></td></tr><tr><td><span class="niv n0">réfutée</span><div class="petit">entrée : hypothèse</div></td><td><span class="qui cortex">CORTEX</span></td><td><a href="#r263">Le débit hobo5 dépend d’une mémoire lente (constante de temps ≈ 5 jours) de : débit zuhari3 (0.29).</a></td><td class="petit">entreprise-opaque#23</td><td><span class="sur">—</span></td></tr><tr><td><span class="niv n0">réfutée</span><div class="petit">entrée : hypothèse</div></td><td><span class="qui cortex">CORTEX</span></td><td><a href="#r264">Le débit zovagu2 dépend d’une mémoire lente (constante de temps ≈ 25 jours) de : débit zovagu2 (-0.59), prix zuhari3 (0).</a></td><td class="petit">entreprise-opaque#23</td><td><span class="sur">—</span></td></tr><tr><td><span class="niv n0">réfutée</span><div class="petit">entrée : hypothèse</div></td><td><span class="qui cortex">CORTEX</span></td><td><a href="#r265">Le débit zovagu2 dépend d’une mémoire lente (constante de temps ≈ 5 jours) de : débit zuhari3 (0.29), débit zovagu2 (0.24).</a></td><td class="petit">entreprise-opaque#23</td><td><span class="sur">—</span></td></tr><tr><td><span class="niv n1">hors de portée</span></td><td><span class="qui cortex">CORTEX</span></td><td><a href="#r296">La mesure 2 contient une structure prévisible que mon modèle n’exprime pas, de la famille « forme » (fonction non linéaire des leviers).</a></td><td class="petit">forme-manquante#21</td><td><span class="sur">—</span></td></tr><tr><td><span class="niv n1">hors de portée</span></td><td><span class="qui cortex">CORTEX</span></td><td><a href="#r299">La mesure 1 contient une structure prévisible que mon modèle n’exprime pas, de la famille « forme » (fonction non linéaire des leviers).</a></td><td class="petit">forme-manquante#23</td><td><span class="sur">—</span></td></tr><tr><td><span class="niv n5">identité</span></td><td><span class="qui neutre">registre</span></td><td><a href="#r302">Depuis l’ouverture (2026-07-27) : 0 € de ventes, 0 commande payante, 148 visites, 0 ajout au panier.</a></td><td class="petit">boutique-reelle#20261113</td><td><span class="sur">—</span></td></tr><tr><td><span class="niv n5">identité</span></td><td><span class="qui neutre">registre</span></td><td><a href="#r303">0 visite depuis la France. 126 visites sur 148 viennent des États-Unis, où la boutique ne livre pas ; 4 seulement viennent d’un pays livré.</a></td><td class="petit">boutique-reelle#20261113</td><td><span class="sur">—</span></td></tr></tbody>
   </table></div>
-  <p class="petit">2 identité · 1 empirique · 93 hypothèse · 3 hors de portée (témoins négatifs compris). Le tableau montre tout ce qui n’est pas une simple hypothèse ; les hypothèses sont dans le journal. Niveaux qui autorisent une décision : identité, établie, empirique.</p>
+  <p class="petit">2 identité · 1 empirique · 54 hypothèse · 3 hors de portée · 39 réfutée (témoins négatifs compris). Le tableau montre tout ce qui n’est pas une simple hypothèse ; les hypothèses sont dans le journal. Niveaux qui autorisent une décision : identité, établie, empirique.</p>
 </section>
 
 <section>
@@ -1860,7 +1878,7 @@ code{font:13px var(--mono);background:var(--creux);padding:1px 5px;border-radius
  &quot;id&quot;: &quot;50187b590e4974ff&quot;
 }</pre></details>
 </article></div></details>
-<details class="pli" id="entreprise-opaque#2"><summary>Entreprise opaque (graine 2) <span class="sur">· 12 actes</span></summary><div class="fil"><article class="acte neutre t-probleme" id="r49" data-qui="neutre">
+<details class="pli" id="entreprise-opaque#2"><summary>Entreprise opaque (graine 2) <span class="sur">· 17 actes</span></summary><div class="fil"><article class="acte neutre t-probleme" id="r49" data-qui="neutre">
   <header><span class="num">n° 49</span><span class="type">Problème</span><span class="qui neutre">registre</span><span class="id">9f3aa18ed39807c5</span></header>
   <p class="fort">Un an de journaux bruts aux libellés opaques. Quel est le corps de l’entreprise, où l’argent fuit-il, et quelles lois gouvernent ses débits ?</p><p class="petit">Source : LAVOISIER src/bench/generator.js · graine 2 (graine de développement)</p>
   <details><summary>Ligne brute du journal</summary><pre>{
@@ -2295,6 +2313,121 @@ code{font:13px var(--mono);background:var(--creux);padding:1px 5px;border-radius
  },
  &quot;id&quot;: &quot;85372f31f971a0c4&quot;
 }</pre></details>
+</article>
+<article class="acte neutre t-verification" id="r315" data-qui="neutre">
+  <header><span class="num">n° 315</span><span class="type">Vérification</span><span class="qui neutre">registre</span><span class="id">db874c27d7c21d62</span></header>
+  <p class="vers">à propos de <a href="#r55">n° 55</a> — Le débit teka8 dépend d’une mémoire lente (constante de temps ≈ 28 jours) de : débit teka8 (-0.61).</p><p><span class="verd mauvais">réfute</span> <span class="mes">recevabilité</span> <span class="mes">jours actifs = 12 <span class="sur">seuil 183</span></span></p><p class="petit">recevabilité de la série transmise : il faut au moins 183 jours actifs sur 365 pour une mesure quotidienne</p>
+  <details><summary>Ligne brute du journal</summary><pre>{
+ &quot;n&quot;: 315,
+ &quot;precedent&quot;: &quot;696598f645c09561&quot;,
+ &quot;date&quot;: &quot;2026-11-14T06:12:56.323Z&quot;,
+ &quot;probleme&quot;: &quot;entreprise-opaque#2&quot;,
+ &quot;type&quot;: &quot;verification&quot;,
+ &quot;auteur&quot;: &quot;registre&quot;,
+ &quot;cible&quot;: &quot;b0488c87bee8a29a&quot;,
+ &quot;portee&quot;: &quot;recevabilite&quot;,
+ &quot;verdict&quot;: &quot;refute&quot;,
+ &quot;methode&quot;: &quot;recevabilité de la série transmise : il faut au moins 183 jours actifs sur 365 pour une mesure quotidienne&quot;,
+ &quot;mesure&quot;: {
+  &quot;nom&quot;: &quot;jours actifs&quot;,
+  &quot;valeur&quot;: 12,
+  &quot;seuil&quot;: 183
+ },
+ &quot;note&quot;: &quot;la faute est dans la transmission du registre (une facture mensuelle prise pour un débit), pas dans le moteur de CORTEX&quot;,
+ &quot;id&quot;: &quot;db874c27d7c21d62&quot;
+}</pre></details>
+</article>
+<article class="acte neutre t-verification" id="r316" data-qui="neutre">
+  <header><span class="num">n° 316</span><span class="type">Vérification</span><span class="qui neutre">registre</span><span class="id">d9234e42e460db49</span></header>
+  <p class="vers">à propos de <a href="#r56">n° 56</a> — Le débit buvu1 dépend d’une mémoire lente (constante de temps ≈ 12 jours) de : débit teka8 (1.07), débit buvu1</p><p><span class="verd mauvais">réfute</span> <span class="mes">recevabilité</span> <span class="mes">jours actifs = 12 <span class="sur">seuil 183</span></span></p><p class="petit">recevabilité de la série transmise : il faut au moins 183 jours actifs sur 365 pour une mesure quotidienne</p>
+  <details><summary>Ligne brute du journal</summary><pre>{
+ &quot;n&quot;: 316,
+ &quot;precedent&quot;: &quot;db874c27d7c21d62&quot;,
+ &quot;date&quot;: &quot;2026-11-14T06:12:56.323Z&quot;,
+ &quot;probleme&quot;: &quot;entreprise-opaque#2&quot;,
+ &quot;type&quot;: &quot;verification&quot;,
+ &quot;auteur&quot;: &quot;registre&quot;,
+ &quot;cible&quot;: &quot;d0b76f41e6ef99ca&quot;,
+ &quot;portee&quot;: &quot;recevabilite&quot;,
+ &quot;verdict&quot;: &quot;refute&quot;,
+ &quot;methode&quot;: &quot;recevabilité de la série transmise : il faut au moins 183 jours actifs sur 365 pour une mesure quotidienne&quot;,
+ &quot;mesure&quot;: {
+  &quot;nom&quot;: &quot;jours actifs&quot;,
+  &quot;valeur&quot;: 12,
+  &quot;seuil&quot;: 183
+ },
+ &quot;note&quot;: &quot;la faute est dans la transmission du registre (une facture mensuelle prise pour un débit), pas dans le moteur de CORTEX&quot;,
+ &quot;id&quot;: &quot;d9234e42e460db49&quot;
+}</pre></details>
+</article>
+<article class="acte neutre t-verification" id="r317" data-qui="neutre">
+  <header><span class="num">n° 317</span><span class="type">Vérification</span><span class="qui neutre">registre</span><span class="id">299920eb05de1866</span></header>
+  <p class="vers">à propos de <a href="#r57">n° 57</a> — Le débit buvu1 dépend d’une mémoire lente (constante de temps ≈ 5 jours) de : débit sumuzo9 (0.38), prix buvu1</p><p><span class="verd mauvais">réfute</span> <span class="mes">recevabilité</span> <span class="mes">jours actifs = 12 <span class="sur">seuil 183</span></span></p><p class="petit">recevabilité de la série transmise : il faut au moins 183 jours actifs sur 365 pour une mesure quotidienne</p>
+  <details><summary>Ligne brute du journal</summary><pre>{
+ &quot;n&quot;: 317,
+ &quot;precedent&quot;: &quot;d9234e42e460db49&quot;,
+ &quot;date&quot;: &quot;2026-11-14T06:12:56.323Z&quot;,
+ &quot;probleme&quot;: &quot;entreprise-opaque#2&quot;,
+ &quot;type&quot;: &quot;verification&quot;,
+ &quot;auteur&quot;: &quot;registre&quot;,
+ &quot;cible&quot;: &quot;b7ea4b33f931587e&quot;,
+ &quot;portee&quot;: &quot;recevabilite&quot;,
+ &quot;verdict&quot;: &quot;refute&quot;,
+ &quot;methode&quot;: &quot;recevabilité de la série transmise : il faut au moins 183 jours actifs sur 365 pour une mesure quotidienne&quot;,
+ &quot;mesure&quot;: {
+  &quot;nom&quot;: &quot;jours actifs&quot;,
+  &quot;valeur&quot;: 12,
+  &quot;seuil&quot;: 183
+ },
+ &quot;note&quot;: &quot;la faute est dans la transmission du registre (une facture mensuelle prise pour un débit), pas dans le moteur de CORTEX&quot;,
+ &quot;id&quot;: &quot;299920eb05de1866&quot;
+}</pre></details>
+</article>
+<article class="acte neutre t-verification" id="r318" data-qui="neutre">
+  <header><span class="num">n° 318</span><span class="type">Vérification</span><span class="qui neutre">registre</span><span class="id">7cbdb3cdd5f9ffe9</span></header>
+  <p class="vers">à propos de <a href="#r58">n° 58</a> — Le débit sumuzo9 dépend d’une mémoire lente (constante de temps ≈ 12 jours) de : débit teka8 (2.06), débit sum</p><p><span class="verd mauvais">réfute</span> <span class="mes">recevabilité</span> <span class="mes">jours actifs = 12 <span class="sur">seuil 183</span></span></p><p class="petit">recevabilité de la série transmise : il faut au moins 183 jours actifs sur 365 pour une mesure quotidienne</p>
+  <details><summary>Ligne brute du journal</summary><pre>{
+ &quot;n&quot;: 318,
+ &quot;precedent&quot;: &quot;299920eb05de1866&quot;,
+ &quot;date&quot;: &quot;2026-11-14T06:12:56.323Z&quot;,
+ &quot;probleme&quot;: &quot;entreprise-opaque#2&quot;,
+ &quot;type&quot;: &quot;verification&quot;,
+ &quot;auteur&quot;: &quot;registre&quot;,
+ &quot;cible&quot;: &quot;6931ffaf2dadd5c3&quot;,
+ &quot;portee&quot;: &quot;recevabilite&quot;,
+ &quot;verdict&quot;: &quot;refute&quot;,
+ &quot;methode&quot;: &quot;recevabilité de la série transmise : il faut au moins 183 jours actifs sur 365 pour une mesure quotidienne&quot;,
+ &quot;mesure&quot;: {
+  &quot;nom&quot;: &quot;jours actifs&quot;,
+  &quot;valeur&quot;: 12,
+  &quot;seuil&quot;: 183
+ },
+ &quot;note&quot;: &quot;la faute est dans la transmission du registre (une facture mensuelle prise pour un débit), pas dans le moteur de CORTEX&quot;,
+ &quot;id&quot;: &quot;7cbdb3cdd5f9ffe9&quot;
+}</pre></details>
+</article>
+<article class="acte neutre t-verification" id="r319" data-qui="neutre">
+  <header><span class="num">n° 319</span><span class="type">Vérification</span><span class="qui neutre">registre</span><span class="id">de4d622f42a6ff1c</span></header>
+  <p class="vers">à propos de <a href="#r59">n° 59</a> — Le débit sumuzo9 dépend d’une mémoire lente (constante de temps ≈ 4 jours) de : débit buvu1 (-0.6), débit sumu</p><p><span class="verd mauvais">réfute</span> <span class="mes">recevabilité</span> <span class="mes">jours actifs = 12 <span class="sur">seuil 183</span></span></p><p class="petit">recevabilité de la série transmise : il faut au moins 183 jours actifs sur 365 pour une mesure quotidienne</p>
+  <details><summary>Ligne brute du journal</summary><pre>{
+ &quot;n&quot;: 319,
+ &quot;precedent&quot;: &quot;7cbdb3cdd5f9ffe9&quot;,
+ &quot;date&quot;: &quot;2026-11-14T06:12:56.323Z&quot;,
+ &quot;probleme&quot;: &quot;entreprise-opaque#2&quot;,
+ &quot;type&quot;: &quot;verification&quot;,
+ &quot;auteur&quot;: &quot;registre&quot;,
+ &quot;cible&quot;: &quot;472928091134afbb&quot;,
+ &quot;portee&quot;: &quot;recevabilite&quot;,
+ &quot;verdict&quot;: &quot;refute&quot;,
+ &quot;methode&quot;: &quot;recevabilité de la série transmise : il faut au moins 183 jours actifs sur 365 pour une mesure quotidienne&quot;,
+ &quot;mesure&quot;: {
+  &quot;nom&quot;: &quot;jours actifs&quot;,
+  &quot;valeur&quot;: 12,
+  &quot;seuil&quot;: 183
+ },
+ &quot;note&quot;: &quot;la faute est dans la transmission du registre (une facture mensuelle prise pour un débit), pas dans le moteur de CORTEX&quot;,
+ &quot;id&quot;: &quot;de4d622f42a6ff1c&quot;
+}</pre></details>
 </article></div></details>
 <details class="pli" id="entreprise-opaque#4"><summary>Entreprise opaque (graine 4) <span class="sur">· 12 actes</span></summary><div class="fil"><article class="acte neutre t-probleme" id="r61" data-qui="neutre">
   <header><span class="num">n° 61</span><span class="type">Problème</span><span class="qui neutre">registre</span><span class="id">2df7b91697fb27be</span></header>
@@ -2710,7 +2843,7 @@ code{font:13px var(--mono);background:var(--creux);padding:1px 5px;border-radius
  &quot;id&quot;: &quot;2b2fc55af4a802b0&quot;
 }</pre></details>
 </article></div></details>
-<details class="pli" id="entreprise-opaque#5"><summary>Entreprise opaque (graine 5) <span class="sur">· 13 actes</span></summary><div class="fil"><article class="acte neutre t-probleme" id="r73" data-qui="neutre">
+<details class="pli" id="entreprise-opaque#5"><summary>Entreprise opaque (graine 5) <span class="sur">· 17 actes</span></summary><div class="fil"><article class="acte neutre t-probleme" id="r73" data-qui="neutre">
   <header><span class="num">n° 73</span><span class="type">Problème</span><span class="qui neutre">registre</span><span class="id">af5d3d8001d74040</span></header>
   <p class="fort">Un an de journaux bruts aux libellés opaques. Quel est le corps de l’entreprise, où l’argent fuit-il, et quelles lois gouvernent ses débits ?</p><p class="petit">Source : LAVOISIER src/bench/generator.js · graine 5 (graine de développement)</p>
   <details><summary>Ligne brute du journal</summary><pre>{
@@ -3188,6 +3321,98 @@ code{font:13px var(--mono);background:var(--creux);padding:1px 5px;border-radius
  },
  &quot;id&quot;: &quot;43d43cfff1fc0a5d&quot;
 }</pre></details>
+</article>
+<article class="acte neutre t-verification" id="r320" data-qui="neutre">
+  <header><span class="num">n° 320</span><span class="type">Vérification</span><span class="qui neutre">registre</span><span class="id">4d791ae0bfd205ef</span></header>
+  <p class="vers">à propos de <a href="#r80">n° 80</a> — Le débit sinisu6 dépend d’une mémoire lente (constante de temps ≈ 35 jours) de : débit sinisu6 (-0.74), débit </p><p><span class="verd mauvais">réfute</span> <span class="mes">recevabilité</span> <span class="mes">jours actifs = 11 <span class="sur">seuil 183</span></span></p><p class="petit">recevabilité de la série transmise : il faut au moins 183 jours actifs sur 365 pour une mesure quotidienne</p>
+  <details><summary>Ligne brute du journal</summary><pre>{
+ &quot;n&quot;: 320,
+ &quot;precedent&quot;: &quot;de4d622f42a6ff1c&quot;,
+ &quot;date&quot;: &quot;2026-11-14T06:12:56.484Z&quot;,
+ &quot;probleme&quot;: &quot;entreprise-opaque#5&quot;,
+ &quot;type&quot;: &quot;verification&quot;,
+ &quot;auteur&quot;: &quot;registre&quot;,
+ &quot;cible&quot;: &quot;667b054639b23d75&quot;,
+ &quot;portee&quot;: &quot;recevabilite&quot;,
+ &quot;verdict&quot;: &quot;refute&quot;,
+ &quot;methode&quot;: &quot;recevabilité de la série transmise : il faut au moins 183 jours actifs sur 365 pour une mesure quotidienne&quot;,
+ &quot;mesure&quot;: {
+  &quot;nom&quot;: &quot;jours actifs&quot;,
+  &quot;valeur&quot;: 11,
+  &quot;seuil&quot;: 183
+ },
+ &quot;note&quot;: &quot;la faute est dans la transmission du registre (une facture mensuelle prise pour un débit), pas dans le moteur de CORTEX&quot;,
+ &quot;id&quot;: &quot;4d791ae0bfd205ef&quot;
+}</pre></details>
+</article>
+<article class="acte neutre t-verification" id="r321" data-qui="neutre">
+  <header><span class="num">n° 321</span><span class="type">Vérification</span><span class="qui neutre">registre</span><span class="id">80996b8e95b026c5</span></header>
+  <p class="vers">à propos de <a href="#r81">n° 81</a> — Le débit zehaki1 dépend d’une mémoire lente (constante de temps ≈ 32 jours) de : débit zehaki1 (-0.54).</p><p><span class="verd mauvais">réfute</span> <span class="mes">recevabilité</span> <span class="mes">jours actifs = 11 <span class="sur">seuil 183</span></span></p><p class="petit">recevabilité de la série transmise : il faut au moins 183 jours actifs sur 365 pour une mesure quotidienne</p>
+  <details><summary>Ligne brute du journal</summary><pre>{
+ &quot;n&quot;: 321,
+ &quot;precedent&quot;: &quot;4d791ae0bfd205ef&quot;,
+ &quot;date&quot;: &quot;2026-11-14T06:12:56.484Z&quot;,
+ &quot;probleme&quot;: &quot;entreprise-opaque#5&quot;,
+ &quot;type&quot;: &quot;verification&quot;,
+ &quot;auteur&quot;: &quot;registre&quot;,
+ &quot;cible&quot;: &quot;d0f6166ee8d4906b&quot;,
+ &quot;portee&quot;: &quot;recevabilite&quot;,
+ &quot;verdict&quot;: &quot;refute&quot;,
+ &quot;methode&quot;: &quot;recevabilité de la série transmise : il faut au moins 183 jours actifs sur 365 pour une mesure quotidienne&quot;,
+ &quot;mesure&quot;: {
+  &quot;nom&quot;: &quot;jours actifs&quot;,
+  &quot;valeur&quot;: 11,
+  &quot;seuil&quot;: 183
+ },
+ &quot;note&quot;: &quot;la faute est dans la transmission du registre (une facture mensuelle prise pour un débit), pas dans le moteur de CORTEX&quot;,
+ &quot;id&quot;: &quot;80996b8e95b026c5&quot;
+}</pre></details>
+</article>
+<article class="acte neutre t-verification" id="r322" data-qui="neutre">
+  <header><span class="num">n° 322</span><span class="type">Vérification</span><span class="qui neutre">registre</span><span class="id">fc8b95a95ae7c582</span></header>
+  <p class="vers">à propos de <a href="#r82">n° 82</a> — Le débit xiro7 dépend d’une mémoire lente (constante de temps ≈ 32 jours) de : débit sinisu6 (0.3), débit xiro</p><p><span class="verd mauvais">réfute</span> <span class="mes">recevabilité</span> <span class="mes">jours actifs = 11 <span class="sur">seuil 183</span></span></p><p class="petit">recevabilité de la série transmise : il faut au moins 183 jours actifs sur 365 pour une mesure quotidienne</p>
+  <details><summary>Ligne brute du journal</summary><pre>{
+ &quot;n&quot;: 322,
+ &quot;precedent&quot;: &quot;80996b8e95b026c5&quot;,
+ &quot;date&quot;: &quot;2026-11-14T06:12:56.484Z&quot;,
+ &quot;probleme&quot;: &quot;entreprise-opaque#5&quot;,
+ &quot;type&quot;: &quot;verification&quot;,
+ &quot;auteur&quot;: &quot;registre&quot;,
+ &quot;cible&quot;: &quot;40bc2ca97bf2a490&quot;,
+ &quot;portee&quot;: &quot;recevabilite&quot;,
+ &quot;verdict&quot;: &quot;refute&quot;,
+ &quot;methode&quot;: &quot;recevabilité de la série transmise : il faut au moins 183 jours actifs sur 365 pour une mesure quotidienne&quot;,
+ &quot;mesure&quot;: {
+  &quot;nom&quot;: &quot;jours actifs&quot;,
+  &quot;valeur&quot;: 11,
+  &quot;seuil&quot;: 183
+ },
+ &quot;note&quot;: &quot;la faute est dans la transmission du registre (une facture mensuelle prise pour un débit), pas dans le moteur de CORTEX&quot;,
+ &quot;id&quot;: &quot;fc8b95a95ae7c582&quot;
+}</pre></details>
+</article>
+<article class="acte neutre t-verification" id="r323" data-qui="neutre">
+  <header><span class="num">n° 323</span><span class="type">Vérification</span><span class="qui neutre">registre</span><span class="id">470554d13ef1a4a8</span></header>
+  <p class="vers">à propos de <a href="#r83">n° 83</a> — Le débit xiro7 dépend d’une mémoire lente (constante de temps ≈ 2 jours) de : débit zehaki1 (0.12), prix zehak</p><p><span class="verd mauvais">réfute</span> <span class="mes">recevabilité</span> <span class="mes">jours actifs = 11 <span class="sur">seuil 183</span></span></p><p class="petit">recevabilité de la série transmise : il faut au moins 183 jours actifs sur 365 pour une mesure quotidienne</p>
+  <details><summary>Ligne brute du journal</summary><pre>{
+ &quot;n&quot;: 323,
+ &quot;precedent&quot;: &quot;fc8b95a95ae7c582&quot;,
+ &quot;date&quot;: &quot;2026-11-14T06:12:56.484Z&quot;,
+ &quot;probleme&quot;: &quot;entreprise-opaque#5&quot;,
+ &quot;type&quot;: &quot;verification&quot;,
+ &quot;auteur&quot;: &quot;registre&quot;,
+ &quot;cible&quot;: &quot;3bff4e21a64c9c10&quot;,
+ &quot;portee&quot;: &quot;recevabilite&quot;,
+ &quot;verdict&quot;: &quot;refute&quot;,
+ &quot;methode&quot;: &quot;recevabilité de la série transmise : il faut au moins 183 jours actifs sur 365 pour une mesure quotidienne&quot;,
+ &quot;mesure&quot;: {
+  &quot;nom&quot;: &quot;jours actifs&quot;,
+  &quot;valeur&quot;: 11,
+  &quot;seuil&quot;: 183
+ },
+ &quot;note&quot;: &quot;la faute est dans la transmission du registre (une facture mensuelle prise pour un débit), pas dans le moteur de CORTEX&quot;,
+ &quot;id&quot;: &quot;470554d13ef1a4a8&quot;
+}</pre></details>
 </article></div></details>
 <details class="pli" id="entreprise-opaque#7"><summary>Entreprise opaque (graine 7) <span class="sur">· 8 actes</span></summary><div class="fil"><article class="acte neutre t-probleme" id="r86" data-qui="neutre">
   <header><span class="num">n° 86</span><span class="type">Problème</span><span class="qui neutre">registre</span><span class="id">f452387be9a54f23</span></header>
@@ -3452,7 +3677,7 @@ code{font:13px var(--mono);background:var(--creux);padding:1px 5px;border-radius
  &quot;id&quot;: &quot;5eb9958d77e281e1&quot;
 }</pre></details>
 </article></div></details>
-<details class="pli" id="entreprise-opaque#8"><summary>Entreprise opaque (graine 8) <span class="sur">· 19 actes</span></summary><div class="fil"><article class="acte neutre t-probleme" id="r94" data-qui="neutre">
+<details class="pli" id="entreprise-opaque#8"><summary>Entreprise opaque (graine 8) <span class="sur">· 25 actes</span></summary><div class="fil"><article class="acte neutre t-probleme" id="r94" data-qui="neutre">
   <header><span class="num">n° 94</span><span class="type">Problème</span><span class="qui neutre">registre</span><span class="id">587518a6c62b718b</span></header>
   <p class="fort">Un an de journaux bruts aux libellés opaques. Quel est le corps de l’entreprise, où l’argent fuit-il, et quelles lois gouvernent ses débits ?</p><p class="petit">Source : LAVOISIER src/bench/generator.js · graine 8 (graine de développement)</p>
   <details><summary>Ligne brute du journal</summary><pre>{
@@ -4143,6 +4368,144 @@ code{font:13px var(--mono);background:var(--creux);padding:1px 5px;border-radius
  &quot;motif&quot;: &quot;Flux caché non retrouvé par le bilan : remise depuis le jour 243 (14.154 par jour, au-dessus du seuil de détection du protocole).&quot;,
  &quot;id&quot;: &quot;b326fb843fb42e90&quot;
 }</pre></details>
+</article>
+<article class="acte neutre t-verification" id="r324" data-qui="neutre">
+  <header><span class="num">n° 324</span><span class="type">Vérification</span><span class="qui neutre">registre</span><span class="id">96c41b482840bc03</span></header>
+  <p class="vers">à propos de <a href="#r103">n° 103</a> — Le débit jubi8 dépend d’une mémoire lente (constante de temps ≈ 18 jours) de : débit jubi8 (-1.96), débit suha</p><p><span class="verd mauvais">réfute</span> <span class="mes">recevabilité</span> <span class="mes">jours actifs = 12 <span class="sur">seuil 183</span></span></p><p class="petit">recevabilité de la série transmise : il faut au moins 183 jours actifs sur 365 pour une mesure quotidienne</p>
+  <details><summary>Ligne brute du journal</summary><pre>{
+ &quot;n&quot;: 324,
+ &quot;precedent&quot;: &quot;470554d13ef1a4a8&quot;,
+ &quot;date&quot;: &quot;2026-11-14T06:12:56.544Z&quot;,
+ &quot;probleme&quot;: &quot;entreprise-opaque#8&quot;,
+ &quot;type&quot;: &quot;verification&quot;,
+ &quot;auteur&quot;: &quot;registre&quot;,
+ &quot;cible&quot;: &quot;25d686fe29e0a81d&quot;,
+ &quot;portee&quot;: &quot;recevabilite&quot;,
+ &quot;verdict&quot;: &quot;refute&quot;,
+ &quot;methode&quot;: &quot;recevabilité de la série transmise : il faut au moins 183 jours actifs sur 365 pour une mesure quotidienne&quot;,
+ &quot;mesure&quot;: {
+  &quot;nom&quot;: &quot;jours actifs&quot;,
+  &quot;valeur&quot;: 12,
+  &quot;seuil&quot;: 183
+ },
+ &quot;note&quot;: &quot;la faute est dans la transmission du registre (une facture mensuelle prise pour un débit), pas dans le moteur de CORTEX&quot;,
+ &quot;id&quot;: &quot;96c41b482840bc03&quot;
+}</pre></details>
+</article>
+<article class="acte neutre t-verification" id="r325" data-qui="neutre">
+  <header><span class="num">n° 325</span><span class="type">Vérification</span><span class="qui neutre">registre</span><span class="id">fc15eb38cf4dd704</span></header>
+  <p class="vers">à propos de <a href="#r104">n° 104</a> — Le débit jubi8 dépend d’une mémoire lente (constante de temps ≈ 6 jours) de : débit jubi8 (0.78).</p><p><span class="verd mauvais">réfute</span> <span class="mes">recevabilité</span> <span class="mes">jours actifs = 12 <span class="sur">seuil 183</span></span></p><p class="petit">recevabilité de la série transmise : il faut au moins 183 jours actifs sur 365 pour une mesure quotidienne</p>
+  <details><summary>Ligne brute du journal</summary><pre>{
+ &quot;n&quot;: 325,
+ &quot;precedent&quot;: &quot;96c41b482840bc03&quot;,
+ &quot;date&quot;: &quot;2026-11-14T06:12:56.544Z&quot;,
+ &quot;probleme&quot;: &quot;entreprise-opaque#8&quot;,
+ &quot;type&quot;: &quot;verification&quot;,
+ &quot;auteur&quot;: &quot;registre&quot;,
+ &quot;cible&quot;: &quot;6359264f4152d869&quot;,
+ &quot;portee&quot;: &quot;recevabilite&quot;,
+ &quot;verdict&quot;: &quot;refute&quot;,
+ &quot;methode&quot;: &quot;recevabilité de la série transmise : il faut au moins 183 jours actifs sur 365 pour une mesure quotidienne&quot;,
+ &quot;mesure&quot;: {
+  &quot;nom&quot;: &quot;jours actifs&quot;,
+  &quot;valeur&quot;: 12,
+  &quot;seuil&quot;: 183
+ },
+ &quot;note&quot;: &quot;la faute est dans la transmission du registre (une facture mensuelle prise pour un débit), pas dans le moteur de CORTEX&quot;,
+ &quot;id&quot;: &quot;fc15eb38cf4dd704&quot;
+}</pre></details>
+</article>
+<article class="acte neutre t-verification" id="r326" data-qui="neutre">
+  <header><span class="num">n° 326</span><span class="type">Vérification</span><span class="qui neutre">registre</span><span class="id">6ff56cb5b7bb5365</span></header>
+  <p class="vers">à propos de <a href="#r105">n° 105</a> — Le débit suhaqe5 dépend d’une mémoire lente (constante de temps ≈ 16 jours) de : débit jubi8 (0.41), débit suh</p><p><span class="verd mauvais">réfute</span> <span class="mes">recevabilité</span> <span class="mes">jours actifs = 12 <span class="sur">seuil 183</span></span></p><p class="petit">recevabilité de la série transmise : il faut au moins 183 jours actifs sur 365 pour une mesure quotidienne</p>
+  <details><summary>Ligne brute du journal</summary><pre>{
+ &quot;n&quot;: 326,
+ &quot;precedent&quot;: &quot;fc15eb38cf4dd704&quot;,
+ &quot;date&quot;: &quot;2026-11-14T06:12:56.544Z&quot;,
+ &quot;probleme&quot;: &quot;entreprise-opaque#8&quot;,
+ &quot;type&quot;: &quot;verification&quot;,
+ &quot;auteur&quot;: &quot;registre&quot;,
+ &quot;cible&quot;: &quot;47145d06291de9d9&quot;,
+ &quot;portee&quot;: &quot;recevabilite&quot;,
+ &quot;verdict&quot;: &quot;refute&quot;,
+ &quot;methode&quot;: &quot;recevabilité de la série transmise : il faut au moins 183 jours actifs sur 365 pour une mesure quotidienne&quot;,
+ &quot;mesure&quot;: {
+  &quot;nom&quot;: &quot;jours actifs&quot;,
+  &quot;valeur&quot;: 12,
+  &quot;seuil&quot;: 183
+ },
+ &quot;note&quot;: &quot;la faute est dans la transmission du registre (une facture mensuelle prise pour un débit), pas dans le moteur de CORTEX&quot;,
+ &quot;id&quot;: &quot;6ff56cb5b7bb5365&quot;
+}</pre></details>
+</article>
+<article class="acte neutre t-verification" id="r327" data-qui="neutre">
+  <header><span class="num">n° 327</span><span class="type">Vérification</span><span class="qui neutre">registre</span><span class="id">827e0647b5455b21</span></header>
+  <p class="vers">à propos de <a href="#r106">n° 106</a> — Le débit suhaqe5 dépend d’une mémoire lente (constante de temps ≈ 5 jours) de : débit jubi8 (0.6).</p><p><span class="verd mauvais">réfute</span> <span class="mes">recevabilité</span> <span class="mes">jours actifs = 12 <span class="sur">seuil 183</span></span></p><p class="petit">recevabilité de la série transmise : il faut au moins 183 jours actifs sur 365 pour une mesure quotidienne</p>
+  <details><summary>Ligne brute du journal</summary><pre>{
+ &quot;n&quot;: 327,
+ &quot;precedent&quot;: &quot;6ff56cb5b7bb5365&quot;,
+ &quot;date&quot;: &quot;2026-11-14T06:12:56.544Z&quot;,
+ &quot;probleme&quot;: &quot;entreprise-opaque#8&quot;,
+ &quot;type&quot;: &quot;verification&quot;,
+ &quot;auteur&quot;: &quot;registre&quot;,
+ &quot;cible&quot;: &quot;865003c0e2ee4546&quot;,
+ &quot;portee&quot;: &quot;recevabilite&quot;,
+ &quot;verdict&quot;: &quot;refute&quot;,
+ &quot;methode&quot;: &quot;recevabilité de la série transmise : il faut au moins 183 jours actifs sur 365 pour une mesure quotidienne&quot;,
+ &quot;mesure&quot;: {
+  &quot;nom&quot;: &quot;jours actifs&quot;,
+  &quot;valeur&quot;: 12,
+  &quot;seuil&quot;: 183
+ },
+ &quot;note&quot;: &quot;la faute est dans la transmission du registre (une facture mensuelle prise pour un débit), pas dans le moteur de CORTEX&quot;,
+ &quot;id&quot;: &quot;827e0647b5455b21&quot;
+}</pre></details>
+</article>
+<article class="acte neutre t-verification" id="r328" data-qui="neutre">
+  <header><span class="num">n° 328</span><span class="type">Vérification</span><span class="qui neutre">registre</span><span class="id">53e18bdebfd8112d</span></header>
+  <p class="vers">à propos de <a href="#r107">n° 107</a> — Le débit nijuqo0 dépend d’une mémoire lente (constante de temps ≈ 2 jours) de : débit jubi8 (0.5), prix jubi8 </p><p><span class="verd mauvais">réfute</span> <span class="mes">recevabilité</span> <span class="mes">jours actifs = 12 <span class="sur">seuil 183</span></span></p><p class="petit">recevabilité de la série transmise : il faut au moins 183 jours actifs sur 365 pour une mesure quotidienne</p>
+  <details><summary>Ligne brute du journal</summary><pre>{
+ &quot;n&quot;: 328,
+ &quot;precedent&quot;: &quot;827e0647b5455b21&quot;,
+ &quot;date&quot;: &quot;2026-11-14T06:12:56.544Z&quot;,
+ &quot;probleme&quot;: &quot;entreprise-opaque#8&quot;,
+ &quot;type&quot;: &quot;verification&quot;,
+ &quot;auteur&quot;: &quot;registre&quot;,
+ &quot;cible&quot;: &quot;05bd02d1d4c0c02d&quot;,
+ &quot;portee&quot;: &quot;recevabilite&quot;,
+ &quot;verdict&quot;: &quot;refute&quot;,
+ &quot;methode&quot;: &quot;recevabilité de la série transmise : il faut au moins 183 jours actifs sur 365 pour une mesure quotidienne&quot;,
+ &quot;mesure&quot;: {
+  &quot;nom&quot;: &quot;jours actifs&quot;,
+  &quot;valeur&quot;: 12,
+  &quot;seuil&quot;: 183
+ },
+ &quot;note&quot;: &quot;la faute est dans la transmission du registre (une facture mensuelle prise pour un débit), pas dans le moteur de CORTEX&quot;,
+ &quot;id&quot;: &quot;53e18bdebfd8112d&quot;
+}</pre></details>
+</article>
+<article class="acte neutre t-verification" id="r329" data-qui="neutre">
+  <header><span class="num">n° 329</span><span class="type">Vérification</span><span class="qui neutre">registre</span><span class="id">5dd6d52d58891a44</span></header>
+  <p class="vers">à propos de <a href="#r108">n° 108</a> — Le débit nijuqo0 dépend d’une mémoire lente (constante de temps ≈ 4 jours) de : débit suhaqe5 (0.28), débit ni</p><p><span class="verd mauvais">réfute</span> <span class="mes">recevabilité</span> <span class="mes">jours actifs = 12 <span class="sur">seuil 183</span></span></p><p class="petit">recevabilité de la série transmise : il faut au moins 183 jours actifs sur 365 pour une mesure quotidienne</p>
+  <details><summary>Ligne brute du journal</summary><pre>{
+ &quot;n&quot;: 329,
+ &quot;precedent&quot;: &quot;53e18bdebfd8112d&quot;,
+ &quot;date&quot;: &quot;2026-11-14T06:12:56.544Z&quot;,
+ &quot;probleme&quot;: &quot;entreprise-opaque#8&quot;,
+ &quot;type&quot;: &quot;verification&quot;,
+ &quot;auteur&quot;: &quot;registre&quot;,
+ &quot;cible&quot;: &quot;5a15d4ab4cb1489c&quot;,
+ &quot;portee&quot;: &quot;recevabilite&quot;,
+ &quot;verdict&quot;: &quot;refute&quot;,
+ &quot;methode&quot;: &quot;recevabilité de la série transmise : il faut au moins 183 jours actifs sur 365 pour une mesure quotidienne&quot;,
+ &quot;mesure&quot;: {
+  &quot;nom&quot;: &quot;jours actifs&quot;,
+  &quot;valeur&quot;: 12,
+  &quot;seuil&quot;: 183
+ },
+ &quot;note&quot;: &quot;la faute est dans la transmission du registre (une facture mensuelle prise pour un débit), pas dans le moteur de CORTEX&quot;,
+ &quot;id&quot;: &quot;5dd6d52d58891a44&quot;
+}</pre></details>
 </article></div></details>
 <details class="pli" id="entreprise-opaque#9"><summary>Entreprise opaque (graine 9) <span class="sur">· 10 actes</span></summary><div class="fil"><article class="acte neutre t-probleme" id="r113" data-qui="neutre">
   <header><span class="num">n° 113</span><span class="type">Problème</span><span class="qui neutre">registre</span><span class="id">6ffa225739ecb58d</span></header>
@@ -4638,7 +5001,7 @@ code{font:13px var(--mono);background:var(--creux);padding:1px 5px;border-radius
  &quot;id&quot;: &quot;601db68e1656a815&quot;
 }</pre></details>
 </article></div></details>
-<details class="pli" id="entreprise-opaque#11"><summary>Entreprise opaque (graine 11) <span class="sur">· 10 actes</span></summary><div class="fil"><article class="acte neutre t-probleme" id="r128" data-qui="neutre">
+<details class="pli" id="entreprise-opaque#11"><summary>Entreprise opaque (graine 11) <span class="sur">· 13 actes</span></summary><div class="fil"><article class="acte neutre t-probleme" id="r128" data-qui="neutre">
   <header><span class="num">n° 128</span><span class="type">Problème</span><span class="qui neutre">registre</span><span class="id">be91d2f71c448465</span></header>
   <p class="fort">Un an de journaux bruts aux libellés opaques. Quel est le corps de l’entreprise, où l’argent fuit-il, et quelles lois gouvernent ses débits ?</p><p class="petit">Source : LAVOISIER src/bench/generator.js · graine 11 (graine de développement)</p>
   <details><summary>Ligne brute du journal</summary><pre>{
@@ -4980,6 +5343,75 @@ code{font:13px var(--mono);background:var(--creux);padding:1px 5px;border-radius
   &quot;fausses_detections&quot;: 0
  },
  &quot;id&quot;: &quot;41c151aa5bda14a9&quot;
+}</pre></details>
+</article>
+<article class="acte neutre t-verification" id="r330" data-qui="neutre">
+  <header><span class="num">n° 330</span><span class="type">Vérification</span><span class="qui neutre">registre</span><span class="id">cc1f9e1903e18f95</span></header>
+  <p class="vers">à propos de <a href="#r134">n° 134</a> — Le débit qifuki0 dépend d’une mémoire lente (constante de temps ≈ 16 jours) de : débit qifuki0 (-0.58), débit </p><p><span class="verd mauvais">réfute</span> <span class="mes">recevabilité</span> <span class="mes">jours actifs = 12 <span class="sur">seuil 183</span></span></p><p class="petit">recevabilité de la série transmise : il faut au moins 183 jours actifs sur 365 pour une mesure quotidienne</p>
+  <details><summary>Ligne brute du journal</summary><pre>{
+ &quot;n&quot;: 330,
+ &quot;precedent&quot;: &quot;5dd6d52d58891a44&quot;,
+ &quot;date&quot;: &quot;2026-11-14T06:12:56.589Z&quot;,
+ &quot;probleme&quot;: &quot;entreprise-opaque#11&quot;,
+ &quot;type&quot;: &quot;verification&quot;,
+ &quot;auteur&quot;: &quot;registre&quot;,
+ &quot;cible&quot;: &quot;4f9480478daa1308&quot;,
+ &quot;portee&quot;: &quot;recevabilite&quot;,
+ &quot;verdict&quot;: &quot;refute&quot;,
+ &quot;methode&quot;: &quot;recevabilité de la série transmise : il faut au moins 183 jours actifs sur 365 pour une mesure quotidienne&quot;,
+ &quot;mesure&quot;: {
+  &quot;nom&quot;: &quot;jours actifs&quot;,
+  &quot;valeur&quot;: 12,
+  &quot;seuil&quot;: 183
+ },
+ &quot;note&quot;: &quot;la faute est dans la transmission du registre (une facture mensuelle prise pour un débit), pas dans le moteur de CORTEX&quot;,
+ &quot;id&quot;: &quot;cc1f9e1903e18f95&quot;
+}</pre></details>
+</article>
+<article class="acte neutre t-verification" id="r331" data-qui="neutre">
+  <header><span class="num">n° 331</span><span class="type">Vérification</span><span class="qui neutre">registre</span><span class="id">32dfa59c9f625c5a</span></header>
+  <p class="vers">à propos de <a href="#r135">n° 135</a> — Le débit gakofe8 dépend d’une mémoire lente (constante de temps ≈ 32 jours) de : débit gakofe8 (-0.71), débit </p><p><span class="verd mauvais">réfute</span> <span class="mes">recevabilité</span> <span class="mes">jours actifs = 12 <span class="sur">seuil 183</span></span></p><p class="petit">recevabilité de la série transmise : il faut au moins 183 jours actifs sur 365 pour une mesure quotidienne</p>
+  <details><summary>Ligne brute du journal</summary><pre>{
+ &quot;n&quot;: 331,
+ &quot;precedent&quot;: &quot;cc1f9e1903e18f95&quot;,
+ &quot;date&quot;: &quot;2026-11-14T06:12:56.590Z&quot;,
+ &quot;probleme&quot;: &quot;entreprise-opaque#11&quot;,
+ &quot;type&quot;: &quot;verification&quot;,
+ &quot;auteur&quot;: &quot;registre&quot;,
+ &quot;cible&quot;: &quot;330bc11ff1222392&quot;,
+ &quot;portee&quot;: &quot;recevabilite&quot;,
+ &quot;verdict&quot;: &quot;refute&quot;,
+ &quot;methode&quot;: &quot;recevabilité de la série transmise : il faut au moins 183 jours actifs sur 365 pour une mesure quotidienne&quot;,
+ &quot;mesure&quot;: {
+  &quot;nom&quot;: &quot;jours actifs&quot;,
+  &quot;valeur&quot;: 12,
+  &quot;seuil&quot;: 183
+ },
+ &quot;note&quot;: &quot;la faute est dans la transmission du registre (une facture mensuelle prise pour un débit), pas dans le moteur de CORTEX&quot;,
+ &quot;id&quot;: &quot;32dfa59c9f625c5a&quot;
+}</pre></details>
+</article>
+<article class="acte neutre t-verification" id="r332" data-qui="neutre">
+  <header><span class="num">n° 332</span><span class="type">Vérification</span><span class="qui neutre">registre</span><span class="id">060e0356f55c81a4</span></header>
+  <p class="vers">à propos de <a href="#r136">n° 136</a> — Le débit muxu9 dépend d’une mémoire lente (constante de temps ≈ 39 jours) de : débit gakofe8 (0.22), débit mux</p><p><span class="verd mauvais">réfute</span> <span class="mes">recevabilité</span> <span class="mes">jours actifs = 11 <span class="sur">seuil 183</span></span></p><p class="petit">recevabilité de la série transmise : il faut au moins 183 jours actifs sur 365 pour une mesure quotidienne</p>
+  <details><summary>Ligne brute du journal</summary><pre>{
+ &quot;n&quot;: 332,
+ &quot;precedent&quot;: &quot;32dfa59c9f625c5a&quot;,
+ &quot;date&quot;: &quot;2026-11-14T06:12:56.590Z&quot;,
+ &quot;probleme&quot;: &quot;entreprise-opaque#11&quot;,
+ &quot;type&quot;: &quot;verification&quot;,
+ &quot;auteur&quot;: &quot;registre&quot;,
+ &quot;cible&quot;: &quot;506e128cfeece33f&quot;,
+ &quot;portee&quot;: &quot;recevabilite&quot;,
+ &quot;verdict&quot;: &quot;refute&quot;,
+ &quot;methode&quot;: &quot;recevabilité de la série transmise : il faut au moins 183 jours actifs sur 365 pour une mesure quotidienne&quot;,
+ &quot;mesure&quot;: {
+  &quot;nom&quot;: &quot;jours actifs&quot;,
+  &quot;valeur&quot;: 11,
+  &quot;seuil&quot;: 183
+ },
+ &quot;note&quot;: &quot;la faute est dans la transmission du registre (une facture mensuelle prise pour un débit), pas dans le moteur de CORTEX&quot;,
+ &quot;id&quot;: &quot;060e0356f55c81a4&quot;
 }</pre></details>
 </article></div></details>
 <details class="pli" id="entreprise-opaque#12"><summary>Entreprise opaque (graine 12) <span class="sur">· 12 actes</span></summary><div class="fil"><article class="acte neutre t-probleme" id="r138" data-qui="neutre">
@@ -5673,7 +6105,7 @@ code{font:13px var(--mono);background:var(--creux);padding:1px 5px;border-radius
  &quot;id&quot;: &quot;e020180c6e6172ec&quot;
 }</pre></details>
 </article></div></details>
-<details class="pli" id="entreprise-opaque#14"><summary>Entreprise opaque (graine 14) <span class="sur">· 15 actes</span></summary><div class="fil"><article class="acte neutre t-probleme" id="r157" data-qui="neutre">
+<details class="pli" id="entreprise-opaque#14"><summary>Entreprise opaque (graine 14) <span class="sur">· 21 actes</span></summary><div class="fil"><article class="acte neutre t-probleme" id="r157" data-qui="neutre">
   <header><span class="num">n° 157</span><span class="type">Problème</span><span class="qui neutre">registre</span><span class="id">ccb1b766ef020bf9</span></header>
   <p class="fort">Un an de journaux bruts aux libellés opaques. Quel est le corps de l’entreprise, où l’argent fuit-il, et quelles lois gouvernent ses débits ?</p><p class="petit">Source : LAVOISIER src/bench/generator.js · graine 14 (graine de développement)</p>
   <details><summary>Ligne brute du journal</summary><pre>{
@@ -6241,6 +6673,144 @@ code{font:13px var(--mono);background:var(--creux);padding:1px 5px;border-radius
   &quot;unite&quot;: &quot;€&quot;
  },
  &quot;id&quot;: &quot;03597bd56d8b12f3&quot;
+}</pre></details>
+</article>
+<article class="acte neutre t-verification" id="r333" data-qui="neutre">
+  <header><span class="num">n° 333</span><span class="type">Vérification</span><span class="qui neutre">registre</span><span class="id">1e40ca23ad2faedf</span></header>
+  <p class="vers">à propos de <a href="#r164">n° 164</a> — Le débit baza7 dépend d’une mémoire lente (constante de temps ≈ 18 jours) de : débit baza7 (-3.11), débit befa</p><p><span class="verd mauvais">réfute</span> <span class="mes">recevabilité</span> <span class="mes">jours actifs = 12 <span class="sur">seuil 183</span></span></p><p class="petit">recevabilité de la série transmise : il faut au moins 183 jours actifs sur 365 pour une mesure quotidienne</p>
+  <details><summary>Ligne brute du journal</summary><pre>{
+ &quot;n&quot;: 333,
+ &quot;precedent&quot;: &quot;060e0356f55c81a4&quot;,
+ &quot;date&quot;: &quot;2026-11-14T06:12:56.655Z&quot;,
+ &quot;probleme&quot;: &quot;entreprise-opaque#14&quot;,
+ &quot;type&quot;: &quot;verification&quot;,
+ &quot;auteur&quot;: &quot;registre&quot;,
+ &quot;cible&quot;: &quot;7bb89788fcab86fa&quot;,
+ &quot;portee&quot;: &quot;recevabilite&quot;,
+ &quot;verdict&quot;: &quot;refute&quot;,
+ &quot;methode&quot;: &quot;recevabilité de la série transmise : il faut au moins 183 jours actifs sur 365 pour une mesure quotidienne&quot;,
+ &quot;mesure&quot;: {
+  &quot;nom&quot;: &quot;jours actifs&quot;,
+  &quot;valeur&quot;: 12,
+  &quot;seuil&quot;: 183
+ },
+ &quot;note&quot;: &quot;la faute est dans la transmission du registre (une facture mensuelle prise pour un débit), pas dans le moteur de CORTEX&quot;,
+ &quot;id&quot;: &quot;1e40ca23ad2faedf&quot;
+}</pre></details>
+</article>
+<article class="acte neutre t-verification" id="r334" data-qui="neutre">
+  <header><span class="num">n° 334</span><span class="type">Vérification</span><span class="qui neutre">registre</span><span class="id">51664c3fe87e0ea2</span></header>
+  <p class="vers">à propos de <a href="#r165">n° 165</a> — Le débit baza7 dépend d’une mémoire lente (constante de temps ≈ 7 jours) de : débit nuqatu7 (1.17), débit befa</p><p><span class="verd mauvais">réfute</span> <span class="mes">recevabilité</span> <span class="mes">jours actifs = 12 <span class="sur">seuil 183</span></span></p><p class="petit">recevabilité de la série transmise : il faut au moins 183 jours actifs sur 365 pour une mesure quotidienne</p>
+  <details><summary>Ligne brute du journal</summary><pre>{
+ &quot;n&quot;: 334,
+ &quot;precedent&quot;: &quot;1e40ca23ad2faedf&quot;,
+ &quot;date&quot;: &quot;2026-11-14T06:12:56.655Z&quot;,
+ &quot;probleme&quot;: &quot;entreprise-opaque#14&quot;,
+ &quot;type&quot;: &quot;verification&quot;,
+ &quot;auteur&quot;: &quot;registre&quot;,
+ &quot;cible&quot;: &quot;f02e557e32a036f7&quot;,
+ &quot;portee&quot;: &quot;recevabilite&quot;,
+ &quot;verdict&quot;: &quot;refute&quot;,
+ &quot;methode&quot;: &quot;recevabilité de la série transmise : il faut au moins 183 jours actifs sur 365 pour une mesure quotidienne&quot;,
+ &quot;mesure&quot;: {
+  &quot;nom&quot;: &quot;jours actifs&quot;,
+  &quot;valeur&quot;: 12,
+  &quot;seuil&quot;: 183
+ },
+ &quot;note&quot;: &quot;la faute est dans la transmission du registre (une facture mensuelle prise pour un débit), pas dans le moteur de CORTEX&quot;,
+ &quot;id&quot;: &quot;51664c3fe87e0ea2&quot;
+}</pre></details>
+</article>
+<article class="acte neutre t-verification" id="r335" data-qui="neutre">
+  <header><span class="num">n° 335</span><span class="type">Vérification</span><span class="qui neutre">registre</span><span class="id">669e0911fb7fa9c3</span></header>
+  <p class="vers">à propos de <a href="#r166">n° 166</a> — Le débit nuqatu7 dépend d’une mémoire lente (constante de temps ≈ 16 jours) de : débit nuqatu7 (-1.89), débit </p><p><span class="verd mauvais">réfute</span> <span class="mes">recevabilité</span> <span class="mes">jours actifs = 11 <span class="sur">seuil 183</span></span></p><p class="petit">recevabilité de la série transmise : il faut au moins 183 jours actifs sur 365 pour une mesure quotidienne</p>
+  <details><summary>Ligne brute du journal</summary><pre>{
+ &quot;n&quot;: 335,
+ &quot;precedent&quot;: &quot;51664c3fe87e0ea2&quot;,
+ &quot;date&quot;: &quot;2026-11-14T06:12:56.655Z&quot;,
+ &quot;probleme&quot;: &quot;entreprise-opaque#14&quot;,
+ &quot;type&quot;: &quot;verification&quot;,
+ &quot;auteur&quot;: &quot;registre&quot;,
+ &quot;cible&quot;: &quot;9430659fd3db2c61&quot;,
+ &quot;portee&quot;: &quot;recevabilite&quot;,
+ &quot;verdict&quot;: &quot;refute&quot;,
+ &quot;methode&quot;: &quot;recevabilité de la série transmise : il faut au moins 183 jours actifs sur 365 pour une mesure quotidienne&quot;,
+ &quot;mesure&quot;: {
+  &quot;nom&quot;: &quot;jours actifs&quot;,
+  &quot;valeur&quot;: 11,
+  &quot;seuil&quot;: 183
+ },
+ &quot;note&quot;: &quot;la faute est dans la transmission du registre (une facture mensuelle prise pour un débit), pas dans le moteur de CORTEX&quot;,
+ &quot;id&quot;: &quot;669e0911fb7fa9c3&quot;
+}</pre></details>
+</article>
+<article class="acte neutre t-verification" id="r336" data-qui="neutre">
+  <header><span class="num">n° 336</span><span class="type">Vérification</span><span class="qui neutre">registre</span><span class="id">768f0f00aedc9eee</span></header>
+  <p class="vers">à propos de <a href="#r167">n° 167</a> — Le débit nuqatu7 dépend d’une mémoire lente (constante de temps ≈ 2 jours) de : débit nuqatu7 (0.34), prix baz</p><p><span class="verd mauvais">réfute</span> <span class="mes">recevabilité</span> <span class="mes">jours actifs = 11 <span class="sur">seuil 183</span></span></p><p class="petit">recevabilité de la série transmise : il faut au moins 183 jours actifs sur 365 pour une mesure quotidienne</p>
+  <details><summary>Ligne brute du journal</summary><pre>{
+ &quot;n&quot;: 336,
+ &quot;precedent&quot;: &quot;669e0911fb7fa9c3&quot;,
+ &quot;date&quot;: &quot;2026-11-14T06:12:56.655Z&quot;,
+ &quot;probleme&quot;: &quot;entreprise-opaque#14&quot;,
+ &quot;type&quot;: &quot;verification&quot;,
+ &quot;auteur&quot;: &quot;registre&quot;,
+ &quot;cible&quot;: &quot;87b11f1f4b8d8b55&quot;,
+ &quot;portee&quot;: &quot;recevabilite&quot;,
+ &quot;verdict&quot;: &quot;refute&quot;,
+ &quot;methode&quot;: &quot;recevabilité de la série transmise : il faut au moins 183 jours actifs sur 365 pour une mesure quotidienne&quot;,
+ &quot;mesure&quot;: {
+  &quot;nom&quot;: &quot;jours actifs&quot;,
+  &quot;valeur&quot;: 11,
+  &quot;seuil&quot;: 183
+ },
+ &quot;note&quot;: &quot;la faute est dans la transmission du registre (une facture mensuelle prise pour un débit), pas dans le moteur de CORTEX&quot;,
+ &quot;id&quot;: &quot;768f0f00aedc9eee&quot;
+}</pre></details>
+</article>
+<article class="acte neutre t-verification" id="r337" data-qui="neutre">
+  <header><span class="num">n° 337</span><span class="type">Vérification</span><span class="qui neutre">registre</span><span class="id">28f9d5eaedc10234</span></header>
+  <p class="vers">à propos de <a href="#r168">n° 168</a> — Le débit befa7 dépend d’une mémoire lente (constante de temps ≈ 18 jours) de : débit nuqatu7 (1.29), débit bef</p><p><span class="verd mauvais">réfute</span> <span class="mes">recevabilité</span> <span class="mes">jours actifs = 11 <span class="sur">seuil 183</span></span></p><p class="petit">recevabilité de la série transmise : il faut au moins 183 jours actifs sur 365 pour une mesure quotidienne</p>
+  <details><summary>Ligne brute du journal</summary><pre>{
+ &quot;n&quot;: 337,
+ &quot;precedent&quot;: &quot;768f0f00aedc9eee&quot;,
+ &quot;date&quot;: &quot;2026-11-14T06:12:56.655Z&quot;,
+ &quot;probleme&quot;: &quot;entreprise-opaque#14&quot;,
+ &quot;type&quot;: &quot;verification&quot;,
+ &quot;auteur&quot;: &quot;registre&quot;,
+ &quot;cible&quot;: &quot;c1ad95d818a2e377&quot;,
+ &quot;portee&quot;: &quot;recevabilite&quot;,
+ &quot;verdict&quot;: &quot;refute&quot;,
+ &quot;methode&quot;: &quot;recevabilité de la série transmise : il faut au moins 183 jours actifs sur 365 pour une mesure quotidienne&quot;,
+ &quot;mesure&quot;: {
+  &quot;nom&quot;: &quot;jours actifs&quot;,
+  &quot;valeur&quot;: 11,
+  &quot;seuil&quot;: 183
+ },
+ &quot;note&quot;: &quot;la faute est dans la transmission du registre (une facture mensuelle prise pour un débit), pas dans le moteur de CORTEX&quot;,
+ &quot;id&quot;: &quot;28f9d5eaedc10234&quot;
+}</pre></details>
+</article>
+<article class="acte neutre t-verification" id="r338" data-qui="neutre">
+  <header><span class="num">n° 338</span><span class="type">Vérification</span><span class="qui neutre">registre</span><span class="id">f587c1d0c5464d50</span></header>
+  <p class="vers">à propos de <a href="#r169">n° 169</a> — Le débit befa7 dépend d’une mémoire lente (constante de temps ≈ 2 jours) de : débit befa7 (0.34), prix baza7 (</p><p><span class="verd mauvais">réfute</span> <span class="mes">recevabilité</span> <span class="mes">jours actifs = 11 <span class="sur">seuil 183</span></span></p><p class="petit">recevabilité de la série transmise : il faut au moins 183 jours actifs sur 365 pour une mesure quotidienne</p>
+  <details><summary>Ligne brute du journal</summary><pre>{
+ &quot;n&quot;: 338,
+ &quot;precedent&quot;: &quot;28f9d5eaedc10234&quot;,
+ &quot;date&quot;: &quot;2026-11-14T06:12:56.655Z&quot;,
+ &quot;probleme&quot;: &quot;entreprise-opaque#14&quot;,
+ &quot;type&quot;: &quot;verification&quot;,
+ &quot;auteur&quot;: &quot;registre&quot;,
+ &quot;cible&quot;: &quot;093d48f6dc5232ed&quot;,
+ &quot;portee&quot;: &quot;recevabilite&quot;,
+ &quot;verdict&quot;: &quot;refute&quot;,
+ &quot;methode&quot;: &quot;recevabilité de la série transmise : il faut au moins 183 jours actifs sur 365 pour une mesure quotidienne&quot;,
+ &quot;mesure&quot;: {
+  &quot;nom&quot;: &quot;jours actifs&quot;,
+  &quot;valeur&quot;: 11,
+  &quot;seuil&quot;: 183
+ },
+ &quot;note&quot;: &quot;la faute est dans la transmission du registre (une facture mensuelle prise pour un débit), pas dans le moteur de CORTEX&quot;,
+ &quot;id&quot;: &quot;f587c1d0c5464d50&quot;
 }</pre></details>
 </article></div></details>
 <details class="pli" id="entreprise-opaque#15"><summary>Entreprise opaque (graine 15) <span class="sur">· 12 actes</span></summary><div class="fil"><article class="acte neutre t-probleme" id="r172" data-qui="neutre">
@@ -6939,7 +7509,7 @@ code{font:13px var(--mono);background:var(--creux);padding:1px 5px;border-radius
  &quot;id&quot;: &quot;34d10c1f70fb7b10&quot;
 }</pre></details>
 </article></div></details>
-<details class="pli" id="entreprise-opaque#17"><summary>Entreprise opaque (graine 17) <span class="sur">· 17 actes</span></summary><div class="fil"><article class="acte neutre t-probleme" id="r192" data-qui="neutre">
+<details class="pli" id="entreprise-opaque#17"><summary>Entreprise opaque (graine 17) <span class="sur">· 21 actes</span></summary><div class="fil"><article class="acte neutre t-probleme" id="r192" data-qui="neutre">
   <header><span class="num">n° 192</span><span class="type">Problème</span><span class="qui neutre">registre</span><span class="id">5c645552ad9036b3</span></header>
   <p class="fort">Un an de journaux bruts aux libellés opaques. Quel est le corps de l’entreprise, où l’argent fuit-il, et quelles lois gouvernent ses débits ?</p><p class="petit">Source : LAVOISIER src/bench/generator.js · graine 17 (graine de développement)</p>
   <details><summary>Ligne brute du journal</summary><pre>{
@@ -7536,6 +8106,98 @@ code{font:13px var(--mono);background:var(--creux);padding:1px 5px;border-radius
  &quot;motif&quot;: &quot;Flux caché non retrouvé par le bilan : remise depuis le jour 218 (104.696 par jour, au-dessus du seuil de détection du protocole).&quot;,
  &quot;id&quot;: &quot;adf3f079ea3bfdae&quot;
 }</pre></details>
+</article>
+<article class="acte neutre t-verification" id="r339" data-qui="neutre">
+  <header><span class="num">n° 339</span><span class="type">Vérification</span><span class="qui neutre">registre</span><span class="id">0a44e083432f6403</span></header>
+  <p class="vers">à propos de <a href="#r201">n° 201</a> — Le débit xaxe7 dépend d’une mémoire lente (constante de temps ≈ 25 jours) de : débit xaxe7 (-0.61), débit xuza</p><p><span class="verd mauvais">réfute</span> <span class="mes">recevabilité</span> <span class="mes">jours actifs = 13 <span class="sur">seuil 183</span></span></p><p class="petit">recevabilité de la série transmise : il faut au moins 183 jours actifs sur 365 pour une mesure quotidienne</p>
+  <details><summary>Ligne brute du journal</summary><pre>{
+ &quot;n&quot;: 339,
+ &quot;precedent&quot;: &quot;f587c1d0c5464d50&quot;,
+ &quot;date&quot;: &quot;2026-11-14T06:12:57.457Z&quot;,
+ &quot;probleme&quot;: &quot;entreprise-opaque#17&quot;,
+ &quot;type&quot;: &quot;verification&quot;,
+ &quot;auteur&quot;: &quot;registre&quot;,
+ &quot;cible&quot;: &quot;cc74ba610110c3d3&quot;,
+ &quot;portee&quot;: &quot;recevabilite&quot;,
+ &quot;verdict&quot;: &quot;refute&quot;,
+ &quot;methode&quot;: &quot;recevabilité de la série transmise : il faut au moins 183 jours actifs sur 365 pour une mesure quotidienne&quot;,
+ &quot;mesure&quot;: {
+  &quot;nom&quot;: &quot;jours actifs&quot;,
+  &quot;valeur&quot;: 13,
+  &quot;seuil&quot;: 183
+ },
+ &quot;note&quot;: &quot;la faute est dans la transmission du registre (une facture mensuelle prise pour un débit), pas dans le moteur de CORTEX&quot;,
+ &quot;id&quot;: &quot;0a44e083432f6403&quot;
+}</pre></details>
+</article>
+<article class="acte neutre t-verification" id="r340" data-qui="neutre">
+  <header><span class="num">n° 340</span><span class="type">Vérification</span><span class="qui neutre">registre</span><span class="id">fa376239543950b5</span></header>
+  <p class="vers">à propos de <a href="#r202">n° 202</a> — Le débit xuza8 dépend d’une mémoire lente (constante de temps ≈ 28 jours) de : débit xuza8 (-0.51), prix xuza8</p><p><span class="verd mauvais">réfute</span> <span class="mes">recevabilité</span> <span class="mes">jours actifs = 11 <span class="sur">seuil 183</span></span></p><p class="petit">recevabilité de la série transmise : il faut au moins 183 jours actifs sur 365 pour une mesure quotidienne</p>
+  <details><summary>Ligne brute du journal</summary><pre>{
+ &quot;n&quot;: 340,
+ &quot;precedent&quot;: &quot;0a44e083432f6403&quot;,
+ &quot;date&quot;: &quot;2026-11-14T06:12:57.457Z&quot;,
+ &quot;probleme&quot;: &quot;entreprise-opaque#17&quot;,
+ &quot;type&quot;: &quot;verification&quot;,
+ &quot;auteur&quot;: &quot;registre&quot;,
+ &quot;cible&quot;: &quot;55588f235e9e07cd&quot;,
+ &quot;portee&quot;: &quot;recevabilite&quot;,
+ &quot;verdict&quot;: &quot;refute&quot;,
+ &quot;methode&quot;: &quot;recevabilité de la série transmise : il faut au moins 183 jours actifs sur 365 pour une mesure quotidienne&quot;,
+ &quot;mesure&quot;: {
+  &quot;nom&quot;: &quot;jours actifs&quot;,
+  &quot;valeur&quot;: 11,
+  &quot;seuil&quot;: 183
+ },
+ &quot;note&quot;: &quot;la faute est dans la transmission du registre (une facture mensuelle prise pour un débit), pas dans le moteur de CORTEX&quot;,
+ &quot;id&quot;: &quot;fa376239543950b5&quot;
+}</pre></details>
+</article>
+<article class="acte neutre t-verification" id="r341" data-qui="neutre">
+  <header><span class="num">n° 341</span><span class="type">Vérification</span><span class="qui neutre">registre</span><span class="id">f9cb23bad7f4a9c3</span></header>
+  <p class="vers">à propos de <a href="#r203">n° 203</a> — Le débit jico4 dépend d’une mémoire lente (constante de temps ≈ 44 jours) de : débit xuza8 (0.79), débit jico4</p><p><span class="verd mauvais">réfute</span> <span class="mes">recevabilité</span> <span class="mes">jours actifs = 11 <span class="sur">seuil 183</span></span></p><p class="petit">recevabilité de la série transmise : il faut au moins 183 jours actifs sur 365 pour une mesure quotidienne</p>
+  <details><summary>Ligne brute du journal</summary><pre>{
+ &quot;n&quot;: 341,
+ &quot;precedent&quot;: &quot;fa376239543950b5&quot;,
+ &quot;date&quot;: &quot;2026-11-14T06:12:57.457Z&quot;,
+ &quot;probleme&quot;: &quot;entreprise-opaque#17&quot;,
+ &quot;type&quot;: &quot;verification&quot;,
+ &quot;auteur&quot;: &quot;registre&quot;,
+ &quot;cible&quot;: &quot;934f569cde760be7&quot;,
+ &quot;portee&quot;: &quot;recevabilite&quot;,
+ &quot;verdict&quot;: &quot;refute&quot;,
+ &quot;methode&quot;: &quot;recevabilité de la série transmise : il faut au moins 183 jours actifs sur 365 pour une mesure quotidienne&quot;,
+ &quot;mesure&quot;: {
+  &quot;nom&quot;: &quot;jours actifs&quot;,
+  &quot;valeur&quot;: 11,
+  &quot;seuil&quot;: 183
+ },
+ &quot;note&quot;: &quot;la faute est dans la transmission du registre (une facture mensuelle prise pour un débit), pas dans le moteur de CORTEX&quot;,
+ &quot;id&quot;: &quot;f9cb23bad7f4a9c3&quot;
+}</pre></details>
+</article>
+<article class="acte neutre t-verification" id="r342" data-qui="neutre">
+  <header><span class="num">n° 342</span><span class="type">Vérification</span><span class="qui neutre">registre</span><span class="id">c21d5c3b7fc57ac1</span></header>
+  <p class="vers">à propos de <a href="#r204">n° 204</a> — Le débit jico4 dépend d’une mémoire lente (constante de temps ≈ 2 jours) de : prix xuza8 (0).</p><p><span class="verd mauvais">réfute</span> <span class="mes">recevabilité</span> <span class="mes">jours actifs = 11 <span class="sur">seuil 183</span></span></p><p class="petit">recevabilité de la série transmise : il faut au moins 183 jours actifs sur 365 pour une mesure quotidienne</p>
+  <details><summary>Ligne brute du journal</summary><pre>{
+ &quot;n&quot;: 342,
+ &quot;precedent&quot;: &quot;f9cb23bad7f4a9c3&quot;,
+ &quot;date&quot;: &quot;2026-11-14T06:12:57.457Z&quot;,
+ &quot;probleme&quot;: &quot;entreprise-opaque#17&quot;,
+ &quot;type&quot;: &quot;verification&quot;,
+ &quot;auteur&quot;: &quot;registre&quot;,
+ &quot;cible&quot;: &quot;a07ba77536ba9cac&quot;,
+ &quot;portee&quot;: &quot;recevabilite&quot;,
+ &quot;verdict&quot;: &quot;refute&quot;,
+ &quot;methode&quot;: &quot;recevabilité de la série transmise : il faut au moins 183 jours actifs sur 365 pour une mesure quotidienne&quot;,
+ &quot;mesure&quot;: {
+  &quot;nom&quot;: &quot;jours actifs&quot;,
+  &quot;valeur&quot;: 11,
+  &quot;seuil&quot;: 183
+ },
+ &quot;note&quot;: &quot;la faute est dans la transmission du registre (une facture mensuelle prise pour un débit), pas dans le moteur de CORTEX&quot;,
+ &quot;id&quot;: &quot;c21d5c3b7fc57ac1&quot;
+}</pre></details>
 </article></div></details>
 <details class="pli" id="entreprise-opaque#18"><summary>Entreprise opaque (graine 18) <span class="sur">· 9 actes</span></summary><div class="fil"><article class="acte neutre t-probleme" id="r209" data-qui="neutre">
   <header><span class="num">n° 209</span><span class="type">Problème</span><span class="qui neutre">registre</span><span class="id">7d2bc68b5af5d6c8</span></header>
@@ -8013,7 +8675,7 @@ code{font:13px var(--mono);background:var(--creux);padding:1px 5px;border-radius
  &quot;id&quot;: &quot;9c45f84cedcc9445&quot;
 }</pre></details>
 </article></div></details>
-<details class="pli" id="entreprise-opaque#20"><summary>Entreprise opaque (graine 20) <span class="sur">· 13 actes</span></summary><div class="fil"><article class="acte neutre t-probleme" id="r223" data-qui="neutre">
+<details class="pli" id="entreprise-opaque#20"><summary>Entreprise opaque (graine 20) <span class="sur">· 19 actes</span></summary><div class="fil"><article class="acte neutre t-probleme" id="r223" data-qui="neutre">
   <header><span class="num">n° 223</span><span class="type">Problème</span><span class="qui neutre">registre</span><span class="id">646601c6ef053790</span></header>
   <p class="fort">Un an de journaux bruts aux libellés opaques. Quel est le corps de l’entreprise, où l’argent fuit-il, et quelles lois gouvernent ses débits ?</p><p class="petit">Source : LAVOISIER src/bench/generator.js · graine 20 (graine de développement)</p>
   <details><summary>Ligne brute du journal</summary><pre>{
@@ -8492,6 +9154,144 @@ code{font:13px var(--mono);background:var(--creux);padding:1px 5px;border-radius
   &quot;fausses_detections&quot;: 0
  },
  &quot;id&quot;: &quot;cc937d622e504035&quot;
+}</pre></details>
+</article>
+<article class="acte neutre t-verification" id="r343" data-qui="neutre">
+  <header><span class="num">n° 343</span><span class="type">Vérification</span><span class="qui neutre">registre</span><span class="id">f13fc7a1b35508a0</span></header>
+  <p class="vers">à propos de <a href="#r229">n° 229</a> — Le débit tufaza9 dépend d’une mémoire lente (constante de temps ≈ 18 jours) de : débit tufaza9 (-2.44), débit </p><p><span class="verd mauvais">réfute</span> <span class="mes">recevabilité</span> <span class="mes">jours actifs = 12 <span class="sur">seuil 183</span></span></p><p class="petit">recevabilité de la série transmise : il faut au moins 183 jours actifs sur 365 pour une mesure quotidienne</p>
+  <details><summary>Ligne brute du journal</summary><pre>{
+ &quot;n&quot;: 343,
+ &quot;precedent&quot;: &quot;c21d5c3b7fc57ac1&quot;,
+ &quot;date&quot;: &quot;2026-11-14T06:12:57.808Z&quot;,
+ &quot;probleme&quot;: &quot;entreprise-opaque#20&quot;,
+ &quot;type&quot;: &quot;verification&quot;,
+ &quot;auteur&quot;: &quot;registre&quot;,
+ &quot;cible&quot;: &quot;e7589d8ec128fc8f&quot;,
+ &quot;portee&quot;: &quot;recevabilite&quot;,
+ &quot;verdict&quot;: &quot;refute&quot;,
+ &quot;methode&quot;: &quot;recevabilité de la série transmise : il faut au moins 183 jours actifs sur 365 pour une mesure quotidienne&quot;,
+ &quot;mesure&quot;: {
+  &quot;nom&quot;: &quot;jours actifs&quot;,
+  &quot;valeur&quot;: 12,
+  &quot;seuil&quot;: 183
+ },
+ &quot;note&quot;: &quot;la faute est dans la transmission du registre (une facture mensuelle prise pour un débit), pas dans le moteur de CORTEX&quot;,
+ &quot;id&quot;: &quot;f13fc7a1b35508a0&quot;
+}</pre></details>
+</article>
+<article class="acte neutre t-verification" id="r344" data-qui="neutre">
+  <header><span class="num">n° 344</span><span class="type">Vérification</span><span class="qui neutre">registre</span><span class="id">0e07b6c4c3d33d6e</span></header>
+  <p class="vers">à propos de <a href="#r230">n° 230</a> — Le débit tufaza9 dépend d’une mémoire lente (constante de temps ≈ 8 jours) de : débit tufaza9 (1.05).</p><p><span class="verd mauvais">réfute</span> <span class="mes">recevabilité</span> <span class="mes">jours actifs = 12 <span class="sur">seuil 183</span></span></p><p class="petit">recevabilité de la série transmise : il faut au moins 183 jours actifs sur 365 pour une mesure quotidienne</p>
+  <details><summary>Ligne brute du journal</summary><pre>{
+ &quot;n&quot;: 344,
+ &quot;precedent&quot;: &quot;f13fc7a1b35508a0&quot;,
+ &quot;date&quot;: &quot;2026-11-14T06:12:57.808Z&quot;,
+ &quot;probleme&quot;: &quot;entreprise-opaque#20&quot;,
+ &quot;type&quot;: &quot;verification&quot;,
+ &quot;auteur&quot;: &quot;registre&quot;,
+ &quot;cible&quot;: &quot;35c3cd766990d26e&quot;,
+ &quot;portee&quot;: &quot;recevabilite&quot;,
+ &quot;verdict&quot;: &quot;refute&quot;,
+ &quot;methode&quot;: &quot;recevabilité de la série transmise : il faut au moins 183 jours actifs sur 365 pour une mesure quotidienne&quot;,
+ &quot;mesure&quot;: {
+  &quot;nom&quot;: &quot;jours actifs&quot;,
+  &quot;valeur&quot;: 12,
+  &quot;seuil&quot;: 183
+ },
+ &quot;note&quot;: &quot;la faute est dans la transmission du registre (une facture mensuelle prise pour un débit), pas dans le moteur de CORTEX&quot;,
+ &quot;id&quot;: &quot;0e07b6c4c3d33d6e&quot;
+}</pre></details>
+</article>
+<article class="acte neutre t-verification" id="r345" data-qui="neutre">
+  <header><span class="num">n° 345</span><span class="type">Vérification</span><span class="qui neutre">registre</span><span class="id">36dba7814344f0ef</span></header>
+  <p class="vers">à propos de <a href="#r231">n° 231</a> — Le débit quzu9 dépend d’une mémoire lente (constante de temps ≈ 16 jours) de : débit tufaza9 (1.25), débit quz</p><p><span class="verd mauvais">réfute</span> <span class="mes">recevabilité</span> <span class="mes">jours actifs = 12 <span class="sur">seuil 183</span></span></p><p class="petit">recevabilité de la série transmise : il faut au moins 183 jours actifs sur 365 pour une mesure quotidienne</p>
+  <details><summary>Ligne brute du journal</summary><pre>{
+ &quot;n&quot;: 345,
+ &quot;precedent&quot;: &quot;0e07b6c4c3d33d6e&quot;,
+ &quot;date&quot;: &quot;2026-11-14T06:12:57.808Z&quot;,
+ &quot;probleme&quot;: &quot;entreprise-opaque#20&quot;,
+ &quot;type&quot;: &quot;verification&quot;,
+ &quot;auteur&quot;: &quot;registre&quot;,
+ &quot;cible&quot;: &quot;e630d3f60444205e&quot;,
+ &quot;portee&quot;: &quot;recevabilite&quot;,
+ &quot;verdict&quot;: &quot;refute&quot;,
+ &quot;methode&quot;: &quot;recevabilité de la série transmise : il faut au moins 183 jours actifs sur 365 pour une mesure quotidienne&quot;,
+ &quot;mesure&quot;: {
+  &quot;nom&quot;: &quot;jours actifs&quot;,
+  &quot;valeur&quot;: 12,
+  &quot;seuil&quot;: 183
+ },
+ &quot;note&quot;: &quot;la faute est dans la transmission du registre (une facture mensuelle prise pour un débit), pas dans le moteur de CORTEX&quot;,
+ &quot;id&quot;: &quot;36dba7814344f0ef&quot;
+}</pre></details>
+</article>
+<article class="acte neutre t-verification" id="r346" data-qui="neutre">
+  <header><span class="num">n° 346</span><span class="type">Vérification</span><span class="qui neutre">registre</span><span class="id">19470f09e5b49f3d</span></header>
+  <p class="vers">à propos de <a href="#r232">n° 232</a> — Le débit quzu9 dépend d’une mémoire lente (constante de temps ≈ 5 jours) de : débit xafa2 (0.42).</p><p><span class="verd mauvais">réfute</span> <span class="mes">recevabilité</span> <span class="mes">jours actifs = 12 <span class="sur">seuil 183</span></span></p><p class="petit">recevabilité de la série transmise : il faut au moins 183 jours actifs sur 365 pour une mesure quotidienne</p>
+  <details><summary>Ligne brute du journal</summary><pre>{
+ &quot;n&quot;: 346,
+ &quot;precedent&quot;: &quot;36dba7814344f0ef&quot;,
+ &quot;date&quot;: &quot;2026-11-14T06:12:57.808Z&quot;,
+ &quot;probleme&quot;: &quot;entreprise-opaque#20&quot;,
+ &quot;type&quot;: &quot;verification&quot;,
+ &quot;auteur&quot;: &quot;registre&quot;,
+ &quot;cible&quot;: &quot;e3a2b3095d98b633&quot;,
+ &quot;portee&quot;: &quot;recevabilite&quot;,
+ &quot;verdict&quot;: &quot;refute&quot;,
+ &quot;methode&quot;: &quot;recevabilité de la série transmise : il faut au moins 183 jours actifs sur 365 pour une mesure quotidienne&quot;,
+ &quot;mesure&quot;: {
+  &quot;nom&quot;: &quot;jours actifs&quot;,
+  &quot;valeur&quot;: 12,
+  &quot;seuil&quot;: 183
+ },
+ &quot;note&quot;: &quot;la faute est dans la transmission du registre (une facture mensuelle prise pour un débit), pas dans le moteur de CORTEX&quot;,
+ &quot;id&quot;: &quot;19470f09e5b49f3d&quot;
+}</pre></details>
+</article>
+<article class="acte neutre t-verification" id="r347" data-qui="neutre">
+  <header><span class="num">n° 347</span><span class="type">Vérification</span><span class="qui neutre">registre</span><span class="id">2428884df750b17a</span></header>
+  <p class="vers">à propos de <a href="#r233">n° 233</a> — Le débit xafa2 dépend d’une mémoire lente (constante de temps ≈ 20 jours) de : débit tufaza9 (1.17), débit xaf</p><p><span class="verd mauvais">réfute</span> <span class="mes">recevabilité</span> <span class="mes">jours actifs = 11 <span class="sur">seuil 183</span></span></p><p class="petit">recevabilité de la série transmise : il faut au moins 183 jours actifs sur 365 pour une mesure quotidienne</p>
+  <details><summary>Ligne brute du journal</summary><pre>{
+ &quot;n&quot;: 347,
+ &quot;precedent&quot;: &quot;19470f09e5b49f3d&quot;,
+ &quot;date&quot;: &quot;2026-11-14T06:12:57.808Z&quot;,
+ &quot;probleme&quot;: &quot;entreprise-opaque#20&quot;,
+ &quot;type&quot;: &quot;verification&quot;,
+ &quot;auteur&quot;: &quot;registre&quot;,
+ &quot;cible&quot;: &quot;185f096406d805bb&quot;,
+ &quot;portee&quot;: &quot;recevabilite&quot;,
+ &quot;verdict&quot;: &quot;refute&quot;,
+ &quot;methode&quot;: &quot;recevabilité de la série transmise : il faut au moins 183 jours actifs sur 365 pour une mesure quotidienne&quot;,
+ &quot;mesure&quot;: {
+  &quot;nom&quot;: &quot;jours actifs&quot;,
+  &quot;valeur&quot;: 11,
+  &quot;seuil&quot;: 183
+ },
+ &quot;note&quot;: &quot;la faute est dans la transmission du registre (une facture mensuelle prise pour un débit), pas dans le moteur de CORTEX&quot;,
+ &quot;id&quot;: &quot;2428884df750b17a&quot;
+}</pre></details>
+</article>
+<article class="acte neutre t-verification" id="r348" data-qui="neutre">
+  <header><span class="num">n° 348</span><span class="type">Vérification</span><span class="qui neutre">registre</span><span class="id">1ddba5840b90c07e</span></header>
+  <p class="vers">à propos de <a href="#r234">n° 234</a> — Le débit xafa2 dépend d’une mémoire lente (constante de temps ≈ 7 jours) de : débit quzu9 (0.35), débit xafa2 </p><p><span class="verd mauvais">réfute</span> <span class="mes">recevabilité</span> <span class="mes">jours actifs = 11 <span class="sur">seuil 183</span></span></p><p class="petit">recevabilité de la série transmise : il faut au moins 183 jours actifs sur 365 pour une mesure quotidienne</p>
+  <details><summary>Ligne brute du journal</summary><pre>{
+ &quot;n&quot;: 348,
+ &quot;precedent&quot;: &quot;2428884df750b17a&quot;,
+ &quot;date&quot;: &quot;2026-11-14T06:12:57.808Z&quot;,
+ &quot;probleme&quot;: &quot;entreprise-opaque#20&quot;,
+ &quot;type&quot;: &quot;verification&quot;,
+ &quot;auteur&quot;: &quot;registre&quot;,
+ &quot;cible&quot;: &quot;7a4ccb79f6e61bb7&quot;,
+ &quot;portee&quot;: &quot;recevabilite&quot;,
+ &quot;verdict&quot;: &quot;refute&quot;,
+ &quot;methode&quot;: &quot;recevabilité de la série transmise : il faut au moins 183 jours actifs sur 365 pour une mesure quotidienne&quot;,
+ &quot;mesure&quot;: {
+  &quot;nom&quot;: &quot;jours actifs&quot;,
+  &quot;valeur&quot;: 11,
+  &quot;seuil&quot;: 183
+ },
+ &quot;note&quot;: &quot;la faute est dans la transmission du registre (une facture mensuelle prise pour un débit), pas dans le moteur de CORTEX&quot;,
+ &quot;id&quot;: &quot;1ddba5840b90c07e&quot;
 }</pre></details>
 </article></div></details>
 <details class="pli" id="entreprise-opaque#21"><summary>Entreprise opaque (graine 21) <span class="sur">· 11 actes</span></summary><div class="fil"><article class="acte neutre t-probleme" id="r236" data-qui="neutre">
@@ -9115,7 +9915,7 @@ code{font:13px var(--mono);background:var(--creux);padding:1px 5px;border-radius
  &quot;id&quot;: &quot;dd51c442fafd29cd&quot;
 }</pre></details>
 </article></div></details>
-<details class="pli" id="entreprise-opaque#23"><summary>Entreprise opaque (graine 23) <span class="sur">· 14 actes</span></summary><div class="fil"><article class="acte neutre t-probleme" id="r254" data-qui="neutre">
+<details class="pli" id="entreprise-opaque#23"><summary>Entreprise opaque (graine 23) <span class="sur">· 19 actes</span></summary><div class="fil"><article class="acte neutre t-probleme" id="r254" data-qui="neutre">
   <header><span class="num">n° 254</span><span class="type">Problème</span><span class="qui neutre">registre</span><span class="id">729e491b03cc3538</span></header>
   <p class="fort">Un an de journaux bruts aux libellés opaques. Quel est le corps de l’entreprise, où l’argent fuit-il, et quelles lois gouvernent ses débits ?</p><p class="petit">Source : LAVOISIER src/bench/generator.js · graine 23 (graine de développement)</p>
   <details><summary>Ligne brute du journal</summary><pre>{
@@ -9638,6 +10438,121 @@ code{font:13px var(--mono);background:var(--creux);padding:1px 5px;border-radius
   &quot;unite&quot;: &quot;€&quot;
  },
  &quot;id&quot;: &quot;3bf68dee43071372&quot;
+}</pre></details>
+</article>
+<article class="acte neutre t-verification" id="r349" data-qui="neutre">
+  <header><span class="num">n° 349</span><span class="type">Vérification</span><span class="qui neutre">registre</span><span class="id">825ecb6e4c675904</span></header>
+  <p class="vers">à propos de <a href="#r261">n° 261</a> — Le débit zuhari3 dépend d’une mémoire lente (constante de temps ≈ 32 jours) de : débit zuhari3 (-0.7), débit h</p><p><span class="verd mauvais">réfute</span> <span class="mes">recevabilité</span> <span class="mes">jours actifs = 11 <span class="sur">seuil 183</span></span></p><p class="petit">recevabilité de la série transmise : il faut au moins 183 jours actifs sur 365 pour une mesure quotidienne</p>
+  <details><summary>Ligne brute du journal</summary><pre>{
+ &quot;n&quot;: 349,
+ &quot;precedent&quot;: &quot;1ddba5840b90c07e&quot;,
+ &quot;date&quot;: &quot;2026-11-14T06:12:57.890Z&quot;,
+ &quot;probleme&quot;: &quot;entreprise-opaque#23&quot;,
+ &quot;type&quot;: &quot;verification&quot;,
+ &quot;auteur&quot;: &quot;registre&quot;,
+ &quot;cible&quot;: &quot;2c78db6d78068497&quot;,
+ &quot;portee&quot;: &quot;recevabilite&quot;,
+ &quot;verdict&quot;: &quot;refute&quot;,
+ &quot;methode&quot;: &quot;recevabilité de la série transmise : il faut au moins 183 jours actifs sur 365 pour une mesure quotidienne&quot;,
+ &quot;mesure&quot;: {
+  &quot;nom&quot;: &quot;jours actifs&quot;,
+  &quot;valeur&quot;: 11,
+  &quot;seuil&quot;: 183
+ },
+ &quot;note&quot;: &quot;la faute est dans la transmission du registre (une facture mensuelle prise pour un débit), pas dans le moteur de CORTEX&quot;,
+ &quot;id&quot;: &quot;825ecb6e4c675904&quot;
+}</pre></details>
+</article>
+<article class="acte neutre t-verification" id="r350" data-qui="neutre">
+  <header><span class="num">n° 350</span><span class="type">Vérification</span><span class="qui neutre">registre</span><span class="id">2e8ddbd4dcdf9e6c</span></header>
+  <p class="vers">à propos de <a href="#r262">n° 262</a> — Le débit hobo5 dépend d’une mémoire lente (constante de temps ≈ 32 jours) de : débit hobo5 (-0.94), débit zova</p><p><span class="verd mauvais">réfute</span> <span class="mes">recevabilité</span> <span class="mes">jours actifs = 11 <span class="sur">seuil 183</span></span></p><p class="petit">recevabilité de la série transmise : il faut au moins 183 jours actifs sur 365 pour une mesure quotidienne</p>
+  <details><summary>Ligne brute du journal</summary><pre>{
+ &quot;n&quot;: 350,
+ &quot;precedent&quot;: &quot;825ecb6e4c675904&quot;,
+ &quot;date&quot;: &quot;2026-11-14T06:12:57.891Z&quot;,
+ &quot;probleme&quot;: &quot;entreprise-opaque#23&quot;,
+ &quot;type&quot;: &quot;verification&quot;,
+ &quot;auteur&quot;: &quot;registre&quot;,
+ &quot;cible&quot;: &quot;1f2e131867a58a55&quot;,
+ &quot;portee&quot;: &quot;recevabilite&quot;,
+ &quot;verdict&quot;: &quot;refute&quot;,
+ &quot;methode&quot;: &quot;recevabilité de la série transmise : il faut au moins 183 jours actifs sur 365 pour une mesure quotidienne&quot;,
+ &quot;mesure&quot;: {
+  &quot;nom&quot;: &quot;jours actifs&quot;,
+  &quot;valeur&quot;: 11,
+  &quot;seuil&quot;: 183
+ },
+ &quot;note&quot;: &quot;la faute est dans la transmission du registre (une facture mensuelle prise pour un débit), pas dans le moteur de CORTEX&quot;,
+ &quot;id&quot;: &quot;2e8ddbd4dcdf9e6c&quot;
+}</pre></details>
+</article>
+<article class="acte neutre t-verification" id="r351" data-qui="neutre">
+  <header><span class="num">n° 351</span><span class="type">Vérification</span><span class="qui neutre">registre</span><span class="id">dde9171f7991ead6</span></header>
+  <p class="vers">à propos de <a href="#r263">n° 263</a> — Le débit hobo5 dépend d’une mémoire lente (constante de temps ≈ 5 jours) de : débit zuhari3 (0.29).</p><p><span class="verd mauvais">réfute</span> <span class="mes">recevabilité</span> <span class="mes">jours actifs = 11 <span class="sur">seuil 183</span></span></p><p class="petit">recevabilité de la série transmise : il faut au moins 183 jours actifs sur 365 pour une mesure quotidienne</p>
+  <details><summary>Ligne brute du journal</summary><pre>{
+ &quot;n&quot;: 351,
+ &quot;precedent&quot;: &quot;2e8ddbd4dcdf9e6c&quot;,
+ &quot;date&quot;: &quot;2026-11-14T06:12:57.891Z&quot;,
+ &quot;probleme&quot;: &quot;entreprise-opaque#23&quot;,
+ &quot;type&quot;: &quot;verification&quot;,
+ &quot;auteur&quot;: &quot;registre&quot;,
+ &quot;cible&quot;: &quot;92da4b3f45a2be2a&quot;,
+ &quot;portee&quot;: &quot;recevabilite&quot;,
+ &quot;verdict&quot;: &quot;refute&quot;,
+ &quot;methode&quot;: &quot;recevabilité de la série transmise : il faut au moins 183 jours actifs sur 365 pour une mesure quotidienne&quot;,
+ &quot;mesure&quot;: {
+  &quot;nom&quot;: &quot;jours actifs&quot;,
+  &quot;valeur&quot;: 11,
+  &quot;seuil&quot;: 183
+ },
+ &quot;note&quot;: &quot;la faute est dans la transmission du registre (une facture mensuelle prise pour un débit), pas dans le moteur de CORTEX&quot;,
+ &quot;id&quot;: &quot;dde9171f7991ead6&quot;
+}</pre></details>
+</article>
+<article class="acte neutre t-verification" id="r352" data-qui="neutre">
+  <header><span class="num">n° 352</span><span class="type">Vérification</span><span class="qui neutre">registre</span><span class="id">6917a00dd30e7076</span></header>
+  <p class="vers">à propos de <a href="#r264">n° 264</a> — Le débit zovagu2 dépend d’une mémoire lente (constante de temps ≈ 25 jours) de : débit zovagu2 (-0.59), prix z</p><p><span class="verd mauvais">réfute</span> <span class="mes">recevabilité</span> <span class="mes">jours actifs = 11 <span class="sur">seuil 183</span></span></p><p class="petit">recevabilité de la série transmise : il faut au moins 183 jours actifs sur 365 pour une mesure quotidienne</p>
+  <details><summary>Ligne brute du journal</summary><pre>{
+ &quot;n&quot;: 352,
+ &quot;precedent&quot;: &quot;dde9171f7991ead6&quot;,
+ &quot;date&quot;: &quot;2026-11-14T06:12:57.891Z&quot;,
+ &quot;probleme&quot;: &quot;entreprise-opaque#23&quot;,
+ &quot;type&quot;: &quot;verification&quot;,
+ &quot;auteur&quot;: &quot;registre&quot;,
+ &quot;cible&quot;: &quot;e70c38ffcb3e09c4&quot;,
+ &quot;portee&quot;: &quot;recevabilite&quot;,
+ &quot;verdict&quot;: &quot;refute&quot;,
+ &quot;methode&quot;: &quot;recevabilité de la série transmise : il faut au moins 183 jours actifs sur 365 pour une mesure quotidienne&quot;,
+ &quot;mesure&quot;: {
+  &quot;nom&quot;: &quot;jours actifs&quot;,
+  &quot;valeur&quot;: 11,
+  &quot;seuil&quot;: 183
+ },
+ &quot;note&quot;: &quot;la faute est dans la transmission du registre (une facture mensuelle prise pour un débit), pas dans le moteur de CORTEX&quot;,
+ &quot;id&quot;: &quot;6917a00dd30e7076&quot;
+}</pre></details>
+</article>
+<article class="acte neutre t-verification" id="r353" data-qui="neutre">
+  <header><span class="num">n° 353</span><span class="type">Vérification</span><span class="qui neutre">registre</span><span class="id">045c2a1f5c1a65c4</span></header>
+  <p class="vers">à propos de <a href="#r265">n° 265</a> — Le débit zovagu2 dépend d’une mémoire lente (constante de temps ≈ 5 jours) de : débit zuhari3 (0.29), débit zo</p><p><span class="verd mauvais">réfute</span> <span class="mes">recevabilité</span> <span class="mes">jours actifs = 11 <span class="sur">seuil 183</span></span></p><p class="petit">recevabilité de la série transmise : il faut au moins 183 jours actifs sur 365 pour une mesure quotidienne</p>
+  <details><summary>Ligne brute du journal</summary><pre>{
+ &quot;n&quot;: 353,
+ &quot;precedent&quot;: &quot;6917a00dd30e7076&quot;,
+ &quot;date&quot;: &quot;2026-11-14T06:12:57.891Z&quot;,
+ &quot;probleme&quot;: &quot;entreprise-opaque#23&quot;,
+ &quot;type&quot;: &quot;verification&quot;,
+ &quot;auteur&quot;: &quot;registre&quot;,
+ &quot;cible&quot;: &quot;23037f9ead735124&quot;,
+ &quot;portee&quot;: &quot;recevabilite&quot;,
+ &quot;verdict&quot;: &quot;refute&quot;,
+ &quot;methode&quot;: &quot;recevabilité de la série transmise : il faut au moins 183 jours actifs sur 365 pour une mesure quotidienne&quot;,
+ &quot;mesure&quot;: {
+  &quot;nom&quot;: &quot;jours actifs&quot;,
+  &quot;valeur&quot;: 11,
+  &quot;seuil&quot;: 183
+ },
+ &quot;note&quot;: &quot;la faute est dans la transmission du registre (une facture mensuelle prise pour un débit), pas dans le moteur de CORTEX&quot;,
+ &quot;id&quot;: &quot;045c2a1f5c1a65c4&quot;
 }</pre></details>
 </article></div></details>
 <details class="pli" id="entreprise-opaque#24"><summary>Entreprise opaque (graine 24) <span class="sur">· 11 actes</span></summary><div class="fil"><article class="acte neutre t-probleme" id="r268" data-qui="neutre">
@@ -11234,6 +12149,60 @@ code{font:13px var(--mono);background:var(--creux);padding:1px 5px;border-radius
  &quot;auteur&quot;: &quot;registre&quot;,
  &quot;motif&quot;: &quot;Mise en garde : CORTEX propose 43 mécanismes cachés sur les débits des entreprises simulées, presque tous une mémoire d’un débit sur lui-même. Ce nombre est trop élevé pour être pris tel quel. Deux lectures, non départagées : des ruptures de stock réelles (après de fortes ventes, moins de ventes), ou un artefact de la transmission (des comptages journaliers souvent nuls, que son modèle ne prévoit pas). Ils restent tous « hypothèse ». L’épreuve à faire : les comparer aux stocks que LAVOISIER reconstruit.&quot;,
  &quot;id&quot;: &quot;5cca76ae26c0117a&quot;
+}</pre></details>
+</article></div></details>
+<details class="pli" id="confrontation#T1"><summary>Confrontation T1 : mécanismes de CORTEX contre débits de LAVOISIER <span class="sur">· 3 actes</span></summary><div class="fil"><article class="acte neutre t-probleme" id="r314" data-qui="neutre">
+  <header><span class="num">n° 314</span><span class="type">Problème</span><span class="qui neutre">registre</span><span class="id">696598f645c09561</span></header>
+  <p class="fort">CORTEX a proposé 43 mécanismes cachés sur les débits reconstruits par LAVOISIER. Les séries transmises étaient-elles des mesures quotidiennes, comme son modèle le suppose ?</p><p class="petit">Source : relecture du journal et des journaux d’événements (graines de développement) · graine 1 à 24 (confrontation)</p>
+  <details><summary>Ligne brute du journal</summary><pre>{
+ &quot;n&quot;: 314,
+ &quot;precedent&quot;: &quot;5cca76ae26c0117a&quot;,
+ &quot;date&quot;: &quot;2026-11-14T06:12:56.215Z&quot;,
+ &quot;probleme&quot;: &quot;confrontation#T1&quot;,
+ &quot;type&quot;: &quot;probleme&quot;,
+ &quot;cle&quot;: &quot;confrontation#T1&quot;,
+ &quot;auteur&quot;: &quot;registre&quot;,
+ &quot;titre&quot;: &quot;Confrontation T1 : mécanismes de CORTEX contre débits de LAVOISIER&quot;,
+ &quot;question&quot;: &quot;CORTEX a proposé 43 mécanismes cachés sur les débits reconstruits par LAVOISIER. Les séries transmises étaient-elles des mesures quotidiennes, comme son modèle le suppose ?&quot;,
+ &quot;source&quot;: {
+  &quot;generateur&quot;: &quot;relecture du journal et des journaux d’événements (graines de développement)&quot;,
+  &quot;graine&quot;: &quot;1 à 24&quot;,
+  &quot;statut&quot;: &quot;confrontation&quot;
+ },
+ &quot;id&quot;: &quot;696598f645c09561&quot;
+}</pre></details>
+</article>
+<article class="acte neutre t-aveu" id="r354" data-qui="neutre">
+  <header><span class="num">n° 354</span><span class="type">Aveu</span><span class="qui neutre">registre</span><span class="id">477c32262b36e16a</span></header>
+  <p>Erreur du registre, pas de CORTEX : 39 des 43 mécanismes venaient de séries à une douzaine de jours actifs par an (factures mensuelles des entreprises de service). Ils sont écartés. 4 restent, sur des séries quotidiennes, à l’état d’hypothèse. La règle de transmission exige désormais 183 jours actifs.</p>
+  <details><summary>Ligne brute du journal</summary><pre>{
+ &quot;n&quot;: 354,
+ &quot;precedent&quot;: &quot;045c2a1f5c1a65c4&quot;,
+ &quot;date&quot;: &quot;2026-11-14T06:12:57.891Z&quot;,
+ &quot;probleme&quot;: &quot;confrontation#T1&quot;,
+ &quot;type&quot;: &quot;aveu&quot;,
+ &quot;auteur&quot;: &quot;registre&quot;,
+ &quot;motif&quot;: &quot;Erreur du registre, pas de CORTEX : 39 des 43 mécanismes venaient de séries à une douzaine de jours actifs par an (factures mensuelles des entreprises de service). Ils sont écartés. 4 restent, sur des séries quotidiennes, à l’état d’hypothèse. La règle de transmission exige désormais 183 jours actifs.&quot;,
+ &quot;id&quot;: &quot;477c32262b36e16a&quot;
+}</pre></details>
+</article>
+<article class="acte neutre t-jalon" id="r355" data-qui="neutre">
+  <header><span class="num">n° 355</span><span class="type">Jalon</span><span class="qui neutre">registre</span><span class="id">16e64a69e420da26</span></header>
+  <p class="fort">T1 — mécanismes cachés non recevables encore au registre</p><p><span class="mes">avant : 39</span> <span class="mes">après : 0</span></p>
+  <details><summary>Ligne brute du journal</summary><pre>{
+ &quot;n&quot;: 355,
+ &quot;precedent&quot;: &quot;477c32262b36e16a&quot;,
+ &quot;date&quot;: &quot;2026-11-14T06:12:57.891Z&quot;,
+ &quot;probleme&quot;: &quot;confrontation#T1&quot;,
+ &quot;type&quot;: &quot;jalon&quot;,
+ &quot;auteur&quot;: &quot;registre&quot;,
+ &quot;travail&quot;: &quot;T1&quot;,
+ &quot;mesure&quot;: &quot;mécanismes cachés non recevables encore au registre&quot;,
+ &quot;avant&quot;: 39,
+ &quot;apres&quot;: 0,
+ &quot;source&quot;: &quot;src/problemes/confrontation-t1.js&quot;,
+ &quot;compte&quot;: &quot;collectif&quot;,
+ &quot;id&quot;: &quot;16e64a69e420da26&quot;
 }</pre></details>
 </article></div></details>
 </section>

@@ -6,6 +6,7 @@ import * as C from '../adaptateurs/cortex.js';
 import * as L from '../adaptateurs/lavoisier.js';
 import { empreinte } from '../registre.js';
 
+export const JOURS_ACTIFS_MIN = 183;
 const JOURS = 365, SEM_APPRENTISSAGE = 39, SEM = 52;
 const arr = (x, n = 3) => (x == null || !Number.isFinite(x) ? null : Number(x.toFixed(n)));
 const mediane = (v) => { const s = [...v].sort((a, b) => a - b); return s.length ? s[Math.floor(s.length / 2)] : null; };
@@ -20,7 +21,10 @@ function debits(observe, corps, n) {
     if (!groupes.has(cle)) groupes.set(cle, []);
     groupes.get(cle).push(r);
   }
-  return [...groupes].sort((a, b) => b[1].length - a[1].length).slice(0, n).map(([cle, lignes]) => {
+  // Confrontation T1 : un « débit » de 12 factures par an n'est pas une mesure quotidienne. On ne transmet que les
+  // séries actives au moins un jour sur deux ; les autres avaient fait naître 39 faux mécanismes chez CORTEX.
+  const dense = ([, lignes]) => new Set(lignes.map((r) => r.jour)).size >= JOURS_ACTIFS_MIN;
+  return [...groupes].filter(dense).sort((a, b) => b[1].length - a[1].length).slice(0, n).map(([cle, lignes]) => {
     const q = new Float64Array(JOURS), prixJour = new Map();
     for (const r of lignes) { q[r.jour] += Math.abs(r.quantite); prixJour.set(r.jour, Math.abs(r.montant / r.quantite)); }
     const p0 = prixJour.get(Math.min(...prixJour.keys())), p = new Float64Array(JOURS);
@@ -75,7 +79,7 @@ export function entrepriseOpaque(reg, graine) {
 
   // 3. Transmission des débits reconstruits
   const D = debits(E.observe, corps, 3);
-  if (D.length < 3) { reg.ajouter({ ...base, type: 'aveu', auteur: 'registre', depend_de: [idCorps], motif: 'Moins de trois débits portant montant et quantité : rien à transmettre à GALILÉE ni à CORTEX.' }); }
+  if (D.length < 3) { reg.ajouter({ ...base, type: 'aveu', auteur: 'registre', depend_de: [idCorps], motif: `Moins de trois débits quotidiens (montant et quantité, actifs au moins ${JOURS_ACTIFS_MIN} jours) : rien à transmettre à GALILÉE ni à CORTEX.` }); }
   else {
     // 3a. GALILÉE : quantité hebdomadaire en fonction du prix relatif, sur les 39 premières semaines seulement
     for (const d of D) {

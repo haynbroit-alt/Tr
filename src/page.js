@@ -5,6 +5,7 @@ import { dirname } from 'node:path';
 import { NIVEAUX } from './certitude.js';
 import { PROVENANCE, integrite } from './adaptateurs/moteurs.js';
 import { bilanCampagne } from './pistes.js';
+import { comptes } from './comptes.js';
 
 const h = (s) => String(s ?? '').replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
 const nb = (x, d = 2) => (x == null ? '—' : Number(x).toLocaleString('fr-FR', { maximumFractionDigits: d }));
@@ -12,9 +13,9 @@ const eur = (x) => (x == null ? '—' : `${Math.round(x).toLocaleString('fr-FR')
 const cls = (a) => ({ 'GALILÉE': 'galilee', CORTEX: 'cortex', LAVOISIER: 'lavoisier' }[a] ?? 'neutre');
 const puce = (a) => `<span class="qui ${cls(a)}">${h(a)}</span>`;
 const niv = (n, extra = '') => `<span class="niv n${NIVEAUX[n].rang}">${h(n)}${extra}</span>`;
-const TYPE_FR = { probleme: 'Problème', affirmation: 'Affirmation', contestation: 'Contestation', verification: 'Vérification', experience: 'Expérience', resultat: 'Résultat', economie: 'Économie', aveu: 'Aveu', piste: 'Piste' };
+const TYPE_FR = { probleme: 'Problème', affirmation: 'Affirmation', contestation: 'Contestation', verification: 'Vérification', experience: 'Expérience', resultat: 'Résultat', economie: 'Économie', aveu: 'Aveu', piste: 'Piste', jalon: 'Jalon' };
 const VERDICT = { confirme: ['confirme', 'bon'], refute: ['réfute', 'mauvais'], indecis: ['ne tranche pas', 'alerte'] };
-const PORTEE = { pari: 'pari', prevision: 'prévision', 'verite-du-banc': 'vérité du banc', 'temoin-negatif': 'témoin négatif' };
+const PORTEE = { pari: 'pari', prevision: 'prévision', 'verite-du-banc': 'vérité du banc', 'temoin-negatif': 'témoin négatif', recevabilite: 'recevabilité' };
 
 function mesure(m) {
   if (!m) return '';
@@ -33,6 +34,7 @@ function corps(r, reg) {
     case 'verification': { const [t, c] = VERDICT[r.verdict]; const temoin = r.portee === 'temoin-negatif'; return `${vers}<p><span class="verd ${temoin ? (r.verdict === r.attendu ? 'bon' : 'mauvais') : c}">${temoin ? (r.verdict === r.attendu ? 'non confirmé, comme attendu' : 'CONFIRMÉ À TORT') : t}</span> <span class="mes">${h(PORTEE[r.portee])}</span> ${mesure(r.mesure)}</p><p class="petit">${h(r.methode)}</p>${r.mesure && r.mesure.valeur == null ? `<p class="petit donnees">${Object.entries(r.mesure).map(([k, v]) => `${h(k.replaceAll('_', ' '))} : ${h(typeof v === 'number' ? nb(v, 4) : v)}`).join(' · ')}</p>` : ''}${r.mesure?.rmse_loi != null ? `<p class="petit donnees">erreur de la loi ${nb(r.mesure.rmse_loi)} · erreur de la moyenne ${nb(r.mesure.rmse_moyenne)}</p>` : ''}`; }
     case 'experience': { const a = r.autorisation; return `<p><span class="verd ${a === 'automatique' ? 'bon' : a === 'impossible' ? 'mauvais' : 'alerte'}">${a === 'automatique' ? 'exécutée sans revue' : a === 'impossible' ? 'impossible aujourd’hui' : 'revue humaine requise'}</span></p><p>${h(r.plan.duree ?? r.plan.principe)}</p>${r.plan.reglages ? `<p class="petit donnees">réglages (u0, u1) par bloc : ${r.plan.reglages.map((u) => `(${u[0]} ; ${u[1]})`).join(' ')}</p>` : ''}${r.raison ? `<p class="petit">${h(r.raison)}</p>` : ''}<p class="petit">Coût prévu : ${r.cout_prevu.jours ? `${r.cout_prevu.jours} jours, |u0| moyen ${nb(r.cout_prevu.moyenne_abs_u0)} (plafond ${nb(r.cout_prevu.plafond.u0)}), part de jours u1 ${nb(r.cout_prevu.part_jours_u1)} (plafond ${nb(r.cout_prevu.plafond.u1)})` : h(r.cout_prevu.raison)}</p><p class="petit">Risque : ${h(r.risque.fausse_confirmation ? `fausse confirmation ${r.risque.fausse_confirmation}` : r.risque.note)}</p>`; }
     case 'resultat': { const e = reg.get(r.experience); return `<p class="vers">résultat de l’expérience <a href="#r${e.n}">n° ${e.n}</a></p><p><span class="verd ${r.mesures.pari_gagne ? 'bon' : 'alerte'}">${r.mesures.pari_gagne ? 'pari gagné' : 'pari non gagné'}</span> <span class="mes">log E = ${nb(r.mesures.logE)} <span class="sur">seuil ${nb(r.mesures.seuil)}</span></span></p><p class="petit donnees">erreur de prévision ${nb(r.mesures.rmse_sans, 4)} → ${nb(r.mesures.rmse_avec, 4)} avec la loi · ${nb(r.cout_reel.calcul_s, 1)} s de calcul</p>`; }
+    case 'jalon': return `<p class="fort">${h(r.travail)} — ${h(r.mesure)}</p><p><span class="mes">avant : ${h(r.avant)}</span> <span class="mes">après : ${h(r.apres)}</span></p>`;
     case 'piste': return `<p class="fort">${h(r.titre)}</p><p>${h(r.resume)}</p>`;
     case 'economie': { const g = r.gain; if (g.encaisse != null) return `${vers}<p><span class="mes">encaissé : ${eur(g.encaisse)}</span></p><p class="petit">${h(g.nature)}</p>`; return `${vers}<p>${g.base === 'non mesurable' ? `<span class="verd alerte">gain non mesurable</span></p><p class="petit">${h(g.raison)}` : `<span class="mes">déjà perdu : ${eur(g.deja_perdu)}</span> <span class="mes">par an si colmatée : ${eur(g.par_an_si_colmatee)}</span></p><p class="petit">${h(g.valorisation)} · ${h(g.nature)}`}</p>`; }
     case 'aveu': return `<p>${h(r.motif)}</p>`;
@@ -56,6 +58,9 @@ export function ecrirePage(reg, chemin) {
   const parNiveau = Object.keys(NIVEAUX).map((n) => [n, etat.filter((e) => e.niveau === n).length]).filter(([, c]) => c);
   const vraiesAff = etat.filter((e) => !e.sujet.includes('témoin négatif'));
   const bc = bilanCampagne(reg), E = bc.entreprises, F = bc.formes;
+  const cp = comptes(reg);
+  const repere = (r) => `<tr><td>${r.atteint === true ? '<span class="verd bon">atteint</span>' : r.atteint === false ? '<span class="verd mauvais">manque</span>' : '<span class="sur">—</span>'}</td><td>${h(r.mesure)}${r.note ? `<div class="petit">${h(r.note)}</div>` : ''}</td><td class="n">${r.valeur == null ? 'non mesuré' : nb(r.valeur, 3) + (r.unite ? ' ' + r.unite : '')}</td><td class="n">${r.seuil != null ? nb(r.seuil, 3) : r.cible != null ? `<span class="sur">${nb(r.cible, 3)} proposé</span>` : '—'}</td><td>${r.travail ? `<span class="mes">${h(r.travail)}</span>` : ''}</td></tr>`;
+  const TRAVAUX = { 'GALILÉE': [['G1', 'Ne plus se dire convaincu à tort'], ['G2', 'Lois sur des comptages (ventes)'], ['G3', 'Terres inconnues']], CORTEX: [['C1', 'Exécuter le test unique de P3 — attend votre décision'], ['C2', 'Exporter son juge pour des données extérieures'], ['C3', 'P4 : agir, arbitrer avec le profit']], LAVOISIER: [['L1', 'Atteindre les seuils de M0, geler, tester'], ['L2', 'Entreprise pilotable'], ['L3', 'Lecteur d’écritures réelles']] };
   const pistes = reg.lignes.filter((r) => r.type === 'piste').sort((a, b) => a.rang - b.rang);
   const boutique = reg.lignes.find((r) => r.type === 'affirmation' && r.sujet === 'revenu réel');
   const pays = reg.lignes.find((r) => r.type === 'affirmation' && r.sujet === 'origine des visites');
@@ -193,11 +198,29 @@ ${pistes.length ? `<section>
     <div><b>${E.manquees}</b>fuites manquées</div>
     <div><b>${eur(E.eur_par_an)}</b>par an de fuites réelles retrouvées (simulé)</div>
     <div><b>${E.lois_prevision_confirmee} / ${E.lois_prix}</b>lois de prix confirmées en prévision</div>
-    <div><b>${E.modes_cortex}</b>mécanismes cachés proposés par CORTEX</div>
+    <div><b>${E.modes_cortex - cp.collectif.affirmations_ecartees} / ${E.modes_cortex}</b>mécanismes de CORTEX encore recevables</div>
     <div><b>${F.signalees} / ${F.n}</b>formes manquantes signalées</div>
     <div><b>${F.lois_empiriques} / ${F.lois}</b>lois démontrées par essai commun</div>
     <div><b>${F.temoins_refuses} / ${F.temoins}</b>formules fausses refusées</div>
   </div>
+</section>
+
+<section>
+  <h2>Quatre comptes séparés</h2>
+  <p>Un progrès de moteur, un progrès commun, une dépense et un euro encaissé ne se mélangent pas. Les repères individuels sont recopiés des résultats de chaque moteur ; les trois autres comptes sont déduits du journal.</p>
+  <div class="chiffres">
+    <div><b>${cp.collectif.lois_passees_a_empirique}</b>loi démontrée par essai commun</div>
+    <div><b>${cp.collectif.affirmations_ecartees}</b>affirmations écartées après confrontation</div>
+    <div><b>${cp.collectif.verifications_d_un_moteur_par_un_autre}</b>vérifications d’un moteur par un autre</div>
+    <div><b>${cp.collectif.experiences_impossibles}</b>expériences consignées impossibles</div>
+    <div><b>${nb(cp.couts.calcul_s, 0)} s</b>de calcul consigné</div>
+    <div><b>${cp.couts.jours_d_essai_simules}</b>jours d’essai simulés</div>
+    <div><b>${eur(cp.couts.euros_depenses)}</b>dépensés (abonnement de la boutique non relevé)</div>
+    <div><b>${eur(cp.gains.euros_encaisses)}</b>encaissés</div>
+  </div>
+  <div class="moteurs">${Object.entries(cp.individuel).map(([m, x]) => `<div class="moteur ${cls(m)}"><h3>${h(m)}</h3><p class="petit">${h(x.etat)}</p><ul>${TRAVAUX[m].map(([c, t]) => `<li><b>${c}</b> ${h(t)}</li>`).join('')}</ul></div>`).join('')}</div>
+  ${Object.entries(cp.individuel).map(([m, x]) => `<details class="pli"><summary>${h(m)} : repères individuels <span class="sur">· ${x.reperes.filter((r) => r.atteint === false).length} seuil(s) manqué(s) · source ${h(x.source)} @ ${h(x.commit)}</span></summary><div class="tableau"><table><thead><tr><th>État</th><th>Mesure</th><th>Valeur</th><th>Seuil</th><th>Travail</th></tr></thead><tbody>${x.reperes.map(repere).join('')}</tbody></table></div></details>`).join('')}
+  <p class="petit">Confrontation T1 : ${cp.collectif.affirmations_ecartees} des 43 mécanismes de CORTEX venaient de factures mensuelles que le registre avait transmises comme des mesures quotidiennes. L’erreur était celle du registre ; la règle de transmission est corrigée. Programme complet : <code>programme/PROGRAMME.md</code>.</p>
 </section>
 
 <section>

@@ -115,6 +115,17 @@ node bin/commun.js executer boutique-reelle --fichier boutique-2026-11-13.json
 node bin/commun.js executer pistes
 ```
 
+## 3 ter. Programme de développement parallèle
+
+`programme/PROGRAMME.md` : travaux prioritaires de chaque moteur (fondés sur ses propres résultats, recopiés dans
+`programme/reperes.json`), ordre et dépendances, projets de protocoles, décisions attendues.
+`node bin/commun.js comptes` tient quatre comptes séparés : progrès individuels, progrès collectifs, coûts, gains
+réels. Un progrès se consigne par un acte `jalon`.
+
+Première confrontation (T1) : 39 des 43 mécanismes proposés par CORTEX sur les débits de LAVOISIER venaient de
+factures mensuelles transmises comme des mesures quotidiennes. L'erreur était celle du registre ; la transmission
+exige désormais 183 jours actifs sur 365.
+
 ## 4. Limites
 
 1. Tout est simulé, sur des graines de développement. Rien ici n'est un résultat de test.
