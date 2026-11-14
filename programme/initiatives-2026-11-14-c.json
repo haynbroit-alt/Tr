@@ -1,0 +1,15 @@
+[
+  {
+    "cle": "missions#dossier",
+    "action": "Préparer le dossier des missions d’analyse de données : démarche d’immatriculation sourcée, profil, trois exemples de travaux tirés des bancs des moteurs, première réponse type",
+    "nature": { "depense_eur": 0, "tiers": false, "engagement": false, "irreversible": false },
+    "attendu": "Que le propriétaire n’ait plus qu’à s’immatriculer, compléter son parcours et publier",
+    "resultat": "Dossier écrit (programme/missions/DOSSIER.md) ; rien n’est publié ; les trois exemples sont des résultats sur données simulées, présentés comme tels ; aucun tarif proposé faute de source"
+  },
+  {
+    "cle": "missions#publication-du-profil",
+    "action": "Publier le profil sur une plateforme d’indépendants, sous le nom du propriétaire, avec un tarif",
+    "nature": { "depense_eur": 0, "tiers": true, "engagement": true, "irreversible": false },
+    "attendu": "Au moins une demande de mission en 28 jours ; suppose l’immatriculation faite par le propriétaire"
+  }
+]

@@ -1,0 +1,70 @@
+[
+ {
+  "moteur": "GALILÉE",
+  "travail": "G1",
+  "mesure": "lois retrouvées avec précision, bruit 1 % — valeur courante",
+  "repere": "lois retrouvées avec précision, bruit 1 %",
+  "valeur": 99,
+  "avant": "72/75 (96 %)",
+  "apres": "74/75 (99 %)",
+  "seuil": null,
+  "commit": "e7dde3c",
+  "source": "haynbroit-alt/All bench/RESULTS.md",
+  "portee": "banc relancé sur le moteur actuel, graines 1 à 5",
+  "note": "le banc publié datait d’avant l’auto-évaluation du moteur"
+ },
+ {
+  "moteur": "GALILÉE",
+  "travail": "G1",
+  "mesure": "lois retrouvées avec précision, bruit 5 % — valeur courante",
+  "repere": "lois retrouvées avec précision, bruit 5 %",
+  "valeur": 83,
+  "avant": "53/75 (71 %)",
+  "apres": "62/75 (83 %)",
+  "seuil": null,
+  "commit": "e7dde3c",
+  "source": "haynbroit-alt/All bench/RESULTS.md",
+  "portee": "banc relancé sur le moteur actuel, graines 1 à 5",
+  "note": "cible proposée 80 atteinte"
+ },
+ {
+  "moteur": "GALILÉE",
+  "travail": "G1",
+  "mesure": "arrêts « convaincu » sur une forme fausse, bruit 5 % (75 essais) — valeur courante",
+  "repere": "arrêts « convaincu » sur une forme fausse, bruit 5 % (75 essais)",
+  "valeur": 4,
+  "avant": "9",
+  "apres": "4",
+  "seuil": null,
+  "commit": "e7dde3c",
+  "source": "haynbroit-alt/All bench/RESULTS.md",
+  "portee": "banc relancé sur le moteur actuel, graines 1 à 5",
+  "note": "aucun des 4 n’est dit « établie » : 2 « empirique », 2 « incertaine »"
+ },
+ {
+  "moteur": "GALILÉE",
+  "travail": "G1",
+  "mesure": "capteur qui sature retrouvé, bruit 5 % — valeur courante",
+  "repere": "capteur qui sature retrouvé, bruit 5 %",
+  "valeur": 60,
+  "avant": "1/5 (20 %)",
+  "apres": "3/5 (60 %)",
+  "seuil": null,
+  "commit": "e7dde3c",
+  "source": "haynbroit-alt/All bench/RESULTS.md",
+  "portee": "banc relancé sur le moteur actuel, graines 1 à 5",
+  "note": "cinq essais seulement"
+ },
+ {
+  "moteur": "GALILÉE",
+  "travail": "G1",
+  "mesure": "confirmation sur graines neuves : verdicts « établie » sur une forme fausse, bruit 5 %",
+  "avant": "non mesuré",
+  "apres": "0 sur 75 ; précises 62/75 à 5 %, 73/75 à 1 %",
+  "seuil": "au plus 2 sur 75 ; ≥ 80 % ; ≥ 95 %",
+  "commit": "e7dde3c",
+  "source": "haynbroit-alt/All RESULTATS_G1.md",
+  "portee": "exécution unique, graines 6 à 10, mêmes 15 lois",
+  "note": "moteur non modifié ; 6 formes fausses restent à 5 % ; en stratégie hasard, 2 formes fausses dites « établie »"
+ }
+]
