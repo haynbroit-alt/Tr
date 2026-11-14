@@ -55,4 +55,27 @@ Exécution **unique** du lot de test. Les échecs sont publiés. Un critère man
 
 ## Journal de réglage
 
-(complété avant le test)
+14 novembre 2026, avant le test. Script : `scripts/reel-nist.js`. Sorties : `reglage-brut.json`, `reglage-norme.json`.
+
+| Jeu généré | Rapport, données brutes | Rapport, données mises à l'échelle |
+|---|---:|---:|
+| Gauss1 | 4,50 | 3,58 |
+| Gauss2 | 4,77 | 4,76 |
+| Gauss3 | 2,93 | 2,83 |
+| Lanczos1 | 2,1 × 10¹⁰ | 3,8 × 10¹⁰ |
+| Lanczos2 | 6 913 | 3 082 |
+| Lanczos3 | 328 | 115 |
+| MGH09 | 10,5 | 17,8 |
+| MGH10 | 246 | 146 |
+| MGH17 | 18,9 | 8,9 |
+
+Aucun jeu généré n'est au niveau de la référence, dans un cas comme dans l'autre. Ces jeux sont presque sans bruit
+(écart-type certifié jusqu'à 10⁻¹¹) : le rapport y est sans pitié et dit surtout que le moteur ne retrouve pas ces
+formes à plusieurs termes.
+
+**Choix fixé** : mise à l'échelle (chaque variable et la réponse divisées par leur plus grande valeur absolue sur
+les mesures vues), meilleure sur 7 jeux sur 9, et indépendante des unités du client. La loi rendue s'écrit donc
+dans ces variables réduites. Le script n'est plus modifié avant le test.
+
+Commande du test, une seule fois :
+`node scripts/reel-nist.js --lot observe --echelle norme --out programme/missions/reel/test-observe.json`
