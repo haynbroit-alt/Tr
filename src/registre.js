@@ -22,12 +22,14 @@ const TYPES = {
   economie: ['cible', 'cout', 'risque', 'gain'],
   aveu: ['motif'],
   opportunite: ['secteur', 'titre', 'description', 'connu', 'inconnu', 'decouvrable', 'faisabilite', 'cout_verification', 'potentiel', 'essai', 'abandon', 'valeur', 'statut'],
+  garde: ['decision', 'mode'],
   jalon: ['travail', 'mesure', 'avant', 'apres', 'source'],
   piste: ['titre', 'origine', 'potentiel', 'cout', 'risque', 'faisabilite', 'test', 'argent_reel'],
 };
 
 export class Registre {
   constructor(chemin) { this.chemin = chemin; this.lignes = []; if (existsSync(chemin)) this.lignes = readFileSync(chemin, 'utf8').split('\n').filter(Boolean).map((l) => JSON.parse(l)); }
+  recharger() { if (existsSync(this.chemin)) this.lignes = readFileSync(this.chemin, 'utf8').split('\n').filter(Boolean).map((l) => JSON.parse(l)); }
   get(id) { return this.lignes.find((r) => r.id === id); }
 
   _valider(r) {
@@ -65,6 +67,11 @@ export class Registre {
       if (typeof r.valeur.argent_reel_eur !== 'number' || !['aucune', 'simulation', 'estimation', 'argent réel'].includes(r.valeur.nature_de_la_preuve)) faux('valeur : argent_reel_eur (nombre) et nature_de_la_preuve (aucune, simulation, estimation, argent réel)');
       if (r.valeur.argent_reel_eur > 0 && r.valeur.nature_de_la_preuve !== 'argent réel') faux('de l’argent réel ne peut pas reposer sur une simulation ou une estimation');
       if (!['retenue en premier', 'en attente', 'non instruisible', 'écartée'].includes(r.statut)) faux('statut attendu : retenue en premier, en attente, non instruisible ou écartée');
+    }
+    if (r.type === 'garde') {
+      if (!['lancée', 'évitée', 'refusée', 'arrêtée', 'autorisation', 'relevé', 'remise à zéro'].includes(r.decision)) faux('décision de garde inconnue');
+      if (['lancée', 'arrêtée'].includes(r.decision) && typeof r.reel?.calcul_s !== 'number') faux('une mission lancée doit porter sa durée réelle mesurée');
+      if (r.economie && r.economie.calcul_s != null && r.economie.base !== 'mesuré') faux('une économie chiffrée doit reposer sur des durées mesurées');
     }
     if (r.type === 'economie' && !['comptable', 'simulé', 'non mesurable'].includes(r.gain.base)) faux('gain.base attendu : comptable, simulé ou non mesurable');
     if (r.type === 'experience' && !['automatique', 'humaine requise', 'impossible'].includes(r.autorisation)) faux('autorisation attendue : automatique, humaine requise ou impossible');

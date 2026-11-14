@@ -97,11 +97,11 @@ code{font:13px var(--mono);background:var(--creux);padding:1px 5px;border-radius
   <h1>Page de travail commune</h1>
   <p class="chapo">GALILÉE cherche les lois, CORTEX les mécanismes, LAVOISIER les comptes. Ils ne s’appellent pas entre eux : chacun lit et écrit dans un même journal, où tout acte porte son auteur, sa preuve, son coût et son niveau de certitude.</p>
   <div class="etat">
-    <span><b>373</b> actes au journal</span>
+    <span><b>380</b> actes au journal</span>
     <span class="bon"><b>Chaîne intacte</b></span>
     <span class="bon"><b>33 fichiers moteurs non modifiés</b></span>
-    <span><b>41</b> dossiers</span>
-    <span>dernier acte : 2026-11-14 11:18 UTC</span>
+    <span><b>43</b> dossiers</span>
+    <span>dernier acte : 2026-11-14 11:21 UTC</span>
   </div>
 </section>
 
@@ -234,17 +234,33 @@ code{font:13px var(--mono);background:var(--creux);padding:1px 5px;border-radius
 </section>
 <section>
   <h2>Ce que les moteurs ont trouvé ensemble, en simulation</h2>
-  <p>Le connu : 24 entreprises simulées, où LAVOISIER cherche les fuites puis transmet ses débits. L’inconnu : 12 mondes où une loi cachée manque au modèle de CORTEX. Vérité des simulateurs lue après coup.</p>
+  <p>Le connu : 24 entreprises simulées, où LAVOISIER cherche les fuites puis transmet ses débits. L’inconnu : 13 mondes où une loi cachée manque au modèle de CORTEX. Vérité des simulateurs lue après coup.</p>
   <div class="chiffres">
     <div><b>15 / 18</b>fuites signalées qui existaient</div>
     <div><b>8</b>fuites manquées</div>
     <div><b>629 900 €</b>par an de fuites réelles retrouvées (simulé)</div>
     <div><b>1 / 6</b>lois de prix confirmées en prévision</div>
     <div><b>4 / 43</b>mécanismes de CORTEX encore recevables</div>
-    <div><b>3 / 12</b>formes manquantes signalées</div>
+    <div><b>4 / 13</b>formes manquantes signalées</div>
     <div><b>1 / 1</b>lois démontrées par essai commun</div>
     <div><b>1 / 1</b>formules fausses refusées</div>
   </div>
+</section>
+
+<section>
+  <h2>Gardien des ressources</h2>
+  <p>Mode <b>économique</b>. Chaque mission passe par le gardien, qui évite celles déjà faites, plafonne les autres et s’arrête sans progrès ou budget. Les tokens viennent du relevé local de Claude Code au moment où cette page a été générée ; ce qui ne se mesure pas est écrit tel quel.</p>
+  <div class="chiffres">
+    <div><b>567 512</b>tokens produits (session relevée)</div>
+    <div><b>293</b>appels IA</div>
+    <div><b>133 525 436</b>tokens lus, cache compris</div>
+    <div><b><span class="sur">non chiffré</span></b>coût estimé (aucun tarif renseigné)</div>
+    <div><b>14,4 s</b>de calcul sous garde</div>
+    <div><b>1</b>mission(s) évitée(s) · 0 refusée(s)</div>
+    <div><b><span class="sur">non mesurable</span></b>économie de calcul · tokens : non mesurable</div>
+    <div><b>286 s</b>de calcul restants · 184 828 tokens</div>
+  </div>
+  <p class="petit">Limites : le gardien ne peut pas couper une session d’IA, seulement la mesurer et refuser de lancer une mission ; les tokens ne se rattachent pas à une mission précise ; le relevé ne couvre que la machine et la session où il est lu ; une économie n’est chiffrée que si une mission du même type a déjà été chronométrée.</p>
 </section>
 
 <section>
@@ -255,7 +271,7 @@ code{font:13px var(--mono);background:var(--creux);padding:1px 5px;border-radius
     <div><b>39</b>affirmations écartées après confrontation</div>
     <div><b>2</b>vérifications d’un moteur par un autre</div>
     <div><b>6</b>expériences consignées impossibles</div>
-    <div><b>175 s</b>de calcul consigné</div>
+    <div><b>189 s</b>de calcul consigné</div>
     <div><b>91</b>jours d’essai simulés</div>
     <div><b>0 €</b>dépensés (abonnement de la boutique non relevé)</div>
     <div><b>0 €</b>encaissés</div>
@@ -270,9 +286,9 @@ code{font:13px var(--mono);background:var(--creux);padding:1px 5px;border-radius
   <p>Le niveau affiché est recalculé à partir du journal. Une loi tirée de données subies entre comme hypothèse, quel que soit l’avis de son auteur. Seul un pari gagné sur des jours neufs la rend utilisable pour décider. La colonne « banc » compare à la vérité du simulateur, lue après coup : elle n’existe pas dans une vraie entreprise et ne change aucun niveau.</p>
   <div class="tableau"><table>
     <thead><tr><th>Niveau</th><th>Auteur</th><th>Affirmation</th><th>Problème</th><th>Banc</th></tr></thead>
-    <tbody><tr><td><span class="niv n1">hors de portée</span></td><td><span class="qui cortex">CORTEX</span></td><td><a href="#r1">La mesure 2 contient une structure prévisible que mon modèle n’exprime pas, de la famille « forme » (fonction non linéaire des leviers).</a></td><td class="petit">forme-manquante#5</td><td><span class="verd bon">confirmée</span></td></tr><tr><td><span class="niv n3">empirique</span><div class="petit">entrée : hypothèse</div><div class="petit">contestée, puis tranchée</div></td><td><span class="qui galilee">GALILÉE</span></td><td><a href="#r2">écart(mesure 2) ≈ 0.3931 − cos(u0) / 2</a></td><td class="petit">forme-manquante#5</td><td><span class="verd bon">confirmée</span></td></tr><tr><td><span class="niv n0">réfutée</span><div class="petit">entrée : hypothèse</div></td><td><span class="qui cortex">CORTEX</span></td><td><a href="#r55">Le débit teka8 dépend d’une mémoire lente (constante de temps ≈ 28 jours) de : débit teka8 (-0.61).</a></td><td class="petit">entreprise-opaque#2</td><td><span class="sur">—</span></td></tr><tr><td><span class="niv n0">réfutée</span><div class="petit">entrée : hypothèse</div></td><td><span class="qui cortex">CORTEX</span></td><td><a href="#r56">Le débit buvu1 dépend d’une mémoire lente (constante de temps ≈ 12 jours) de : débit teka8 (1.07), débit buvu1 (-2.14).</a></td><td class="petit">entreprise-opaque#2</td><td><span class="sur">—</span></td></tr><tr><td><span class="niv n0">réfutée</span><div class="petit">entrée : hypothèse</div></td><td><span class="qui cortex">CORTEX</span></td><td><a href="#r57">Le débit buvu1 dépend d’une mémoire lente (constante de temps ≈ 5 jours) de : débit sumuzo9 (0.38), prix buvu1 (0).</a></td><td class="petit">entreprise-opaque#2</td><td><span class="sur">—</span></td></tr><tr><td><span class="niv n0">réfutée</span><div class="petit">entrée : hypothèse</div></td><td><span class="qui cortex">CORTEX</span></td><td><a href="#r58">Le débit sumuzo9 dépend d’une mémoire lente (constante de temps ≈ 12 jours) de : débit teka8 (2.06), débit sumuzo9 (-2.49).</a></td><td class="petit">entreprise-opaque#2</td><td><span class="sur">—</span></td></tr><tr><td><span class="niv n0">réfutée</span><div class="petit">entrée : hypothèse</div></td><td><span class="qui cortex">CORTEX</span></td><td><a href="#r59">Le débit sumuzo9 dépend d’une mémoire lente (constante de temps ≈ 4 jours) de : débit buvu1 (-0.6), débit sumuzo9 (0.73).</a></td><td class="petit">entreprise-opaque#2</td><td><span class="sur">—</span></td></tr><tr><td><span class="niv n0">réfutée</span><div class="petit">entrée : hypothèse</div></td><td><span class="qui cortex">CORTEX</span></td><td><a href="#r80">Le débit sinisu6 dépend d’une mémoire lente (constante de temps ≈ 35 jours) de : débit sinisu6 (-0.74), débit zehaki1 (0.48).</a></td><td class="petit">entreprise-opaque#5</td><td><span class="sur">—</span></td></tr><tr><td><span class="niv n0">réfutée</span><div class="petit">entrée : hypothèse</div></td><td><span class="qui cortex">CORTEX</span></td><td><a href="#r81">Le débit zehaki1 dépend d’une mémoire lente (constante de temps ≈ 32 jours) de : débit zehaki1 (-0.54).</a></td><td class="petit">entreprise-opaque#5</td><td><span class="sur">—</span></td></tr><tr><td><span class="niv n0">réfutée</span><div class="petit">entrée : hypothèse</div></td><td><span class="qui cortex">CORTEX</span></td><td><a href="#r82">Le débit xiro7 dépend d’une mémoire lente (constante de temps ≈ 32 jours) de : débit sinisu6 (0.3), débit xiro7 (-0.7).</a></td><td class="petit">entreprise-opaque#5</td><td><span class="sur">—</span></td></tr><tr><td><span class="niv n0">réfutée</span><div class="petit">entrée : hypothèse</div></td><td><span class="qui cortex">CORTEX</span></td><td><a href="#r83">Le débit xiro7 dépend d’une mémoire lente (constante de temps ≈ 2 jours) de : débit zehaki1 (0.12), prix zehaki1 (0).</a></td><td class="petit">entreprise-opaque#5</td><td><span class="sur">—</span></td></tr><tr><td><span class="niv n0">réfutée</span><div class="petit">entrée : hypothèse</div></td><td><span class="qui cortex">CORTEX</span></td><td><a href="#r103">Le débit jubi8 dépend d’une mémoire lente (constante de temps ≈ 18 jours) de : débit jubi8 (-1.96), débit suhaqe5 (0.86).</a></td><td class="petit">entreprise-opaque#8</td><td><span class="sur">—</span></td></tr><tr><td><span class="niv n0">réfutée</span><div class="petit">entrée : hypothèse</div></td><td><span class="qui cortex">CORTEX</span></td><td><a href="#r104">Le débit jubi8 dépend d’une mémoire lente (constante de temps ≈ 6 jours) de : débit jubi8 (0.78).</a></td><td class="petit">entreprise-opaque#8</td><td><span class="sur">—</span></td></tr><tr><td><span class="niv n0">réfutée</span><div class="petit">entrée : hypothèse</div></td><td><span class="qui cortex">CORTEX</span></td><td><a href="#r105">Le débit suhaqe5 dépend d’une mémoire lente (constante de temps ≈ 16 jours) de : débit jubi8 (0.41), débit suhaqe5 (-1.22).</a></td><td class="petit">entreprise-opaque#8</td><td><span class="sur">—</span></td></tr><tr><td><span class="niv n0">réfutée</span><div class="petit">entrée : hypothèse</div></td><td><span class="qui cortex">CORTEX</span></td><td><a href="#r106">Le débit suhaqe5 dépend d’une mémoire lente (constante de temps ≈ 5 jours) de : débit jubi8 (0.6).</a></td><td class="petit">entreprise-opaque#8</td><td><span class="sur">—</span></td></tr><tr><td><span class="niv n0">réfutée</span><div class="petit">entrée : hypothèse</div></td><td><span class="qui cortex">CORTEX</span></td><td><a href="#r107">Le débit nijuqo0 dépend d’une mémoire lente (constante de temps ≈ 2 jours) de : débit jubi8 (0.5), prix jubi8 (0).</a></td><td class="petit">entreprise-opaque#8</td><td><span class="sur">—</span></td></tr><tr><td><span class="niv n0">réfutée</span><div class="petit">entrée : hypothèse</div></td><td><span class="qui cortex">CORTEX</span></td><td><a href="#r108">Le débit nijuqo0 dépend d’une mémoire lente (constante de temps ≈ 4 jours) de : débit suhaqe5 (0.28), débit nijuqo0 (-0.61).</a></td><td class="petit">entreprise-opaque#8</td><td><span class="sur">—</span></td></tr><tr><td><span class="niv n0">réfutée</span><div class="petit">entrée : hypothèse</div></td><td><span class="qui cortex">CORTEX</span></td><td><a href="#r134">Le débit qifuki0 dépend d’une mémoire lente (constante de temps ≈ 16 jours) de : débit qifuki0 (-0.58), débit muxu9 (0.71).</a></td><td class="petit">entreprise-opaque#11</td><td><span class="sur">—</span></td></tr><tr><td><span class="niv n0">réfutée</span><div class="petit">entrée : hypothèse</div></td><td><span class="qui cortex">CORTEX</span></td><td><a href="#r135">Le débit gakofe8 dépend d’une mémoire lente (constante de temps ≈ 32 jours) de : débit gakofe8 (-0.71), débit muxu9 (0.39).</a></td><td class="petit">entreprise-opaque#11</td><td><span class="sur">—</span></td></tr><tr><td><span class="niv n0">réfutée</span><div class="petit">entrée : hypothèse</div></td><td><span class="qui cortex">CORTEX</span></td><td><a href="#r136">Le débit muxu9 dépend d’une mémoire lente (constante de temps ≈ 39 jours) de : débit gakofe8 (0.22), débit muxu9 (-0.69).</a></td><td class="petit">entreprise-opaque#11</td><td><span class="sur">—</span></td></tr><tr><td><span class="niv n0">réfutée</span><div class="petit">entrée : hypothèse</div></td><td><span class="qui cortex">CORTEX</span></td><td><a href="#r164">Le débit baza7 dépend d’une mémoire lente (constante de temps ≈ 18 jours) de : débit baza7 (-3.11), débit befa7 (2.15).</a></td><td class="petit">entreprise-opaque#14</td><td><span class="sur">—</span></td></tr><tr><td><span class="niv n0">réfutée</span><div class="petit">entrée : hypothèse</div></td><td><span class="qui cortex">CORTEX</span></td><td><a href="#r165">Le débit baza7 dépend d’une mémoire lente (constante de temps ≈ 7 jours) de : débit nuqatu7 (1.17), débit befa7 (-0.33).</a></td><td class="petit">entreprise-opaque#14</td><td><span class="sur">—</span></td></tr><tr><td><span class="niv n0">réfutée</span><div class="petit">entrée : hypothèse</div></td><td><span class="qui cortex">CORTEX</span></td><td><a href="#r166">Le débit nuqatu7 dépend d’une mémoire lente (constante de temps ≈ 16 jours) de : débit nuqatu7 (-1.89), débit befa7 (1.55).</a></td><td class="petit">entreprise-opaque#14</td><td><span class="sur">—</span></td></tr><tr><td><span class="niv n0">réfutée</span><div class="petit">entrée : hypothèse</div></td><td><span class="qui cortex">CORTEX</span></td><td><a href="#r167">Le débit nuqatu7 dépend d’une mémoire lente (constante de temps ≈ 2 jours) de : débit nuqatu7 (0.34), prix baza7 (0).</a></td><td class="petit">entreprise-opaque#14</td><td><span class="sur">—</span></td></tr><tr><td><span class="niv n0">réfutée</span><div class="petit">entrée : hypothèse</div></td><td><span class="qui cortex">CORTEX</span></td><td><a href="#r168">Le débit befa7 dépend d’une mémoire lente (constante de temps ≈ 18 jours) de : débit nuqatu7 (1.29), débit befa7 (-1.96).</a></td><td class="petit">entreprise-opaque#14</td><td><span class="sur">—</span></td></tr><tr><td><span class="niv n0">réfutée</span><div class="petit">entrée : hypothèse</div></td><td><span class="qui cortex">CORTEX</span></td><td><a href="#r169">Le débit befa7 dépend d’une mémoire lente (constante de temps ≈ 2 jours) de : débit befa7 (0.34), prix baza7 (0).</a></td><td class="petit">entreprise-opaque#14</td><td><span class="sur">—</span></td></tr><tr><td><span class="niv n0">réfutée</span><div class="petit">entrée : hypothèse</div></td><td><span class="qui cortex">CORTEX</span></td><td><a href="#r201">Le débit xaxe7 dépend d’une mémoire lente (constante de temps ≈ 25 jours) de : débit xaxe7 (-0.61), débit xuza8 (0.71).</a></td><td class="petit">entreprise-opaque#17</td><td><span class="sur">—</span></td></tr><tr><td><span class="niv n0">réfutée</span><div class="petit">entrée : hypothèse</div></td><td><span class="qui cortex">CORTEX</span></td><td><a href="#r202">Le débit xuza8 dépend d’une mémoire lente (constante de temps ≈ 28 jours) de : débit xuza8 (-0.51), prix xuza8 (0).</a></td><td class="petit">entreprise-opaque#17</td><td><span class="sur">—</span></td></tr><tr><td><span class="niv n0">réfutée</span><div class="petit">entrée : hypothèse</div></td><td><span class="qui cortex">CORTEX</span></td><td><a href="#r203">Le débit jico4 dépend d’une mémoire lente (constante de temps ≈ 44 jours) de : débit xuza8 (0.79), débit jico4 (-1.03).</a></td><td class="petit">entreprise-opaque#17</td><td><span class="sur">—</span></td></tr><tr><td><span class="niv n0">réfutée</span><div class="petit">entrée : hypothèse</div></td><td><span class="qui cortex">CORTEX</span></td><td><a href="#r204">Le débit jico4 dépend d’une mémoire lente (constante de temps ≈ 2 jours) de : prix xuza8 (0).</a></td><td class="petit">entreprise-opaque#17</td><td><span class="sur">—</span></td></tr><tr><td><span class="niv n0">réfutée</span><div class="petit">entrée : hypothèse</div></td><td><span class="qui cortex">CORTEX</span></td><td><a href="#r229">Le débit tufaza9 dépend d’une mémoire lente (constante de temps ≈ 18 jours) de : débit tufaza9 (-2.44), débit xafa2 (0.92).</a></td><td class="petit">entreprise-opaque#20</td><td><span class="sur">—</span></td></tr><tr><td><span class="niv n0">réfutée</span><div class="petit">entrée : hypothèse</div></td><td><span class="qui cortex">CORTEX</span></td><td><a href="#r230">Le débit tufaza9 dépend d’une mémoire lente (constante de temps ≈ 8 jours) de : débit tufaza9 (1.05).</a></td><td class="petit">entreprise-opaque#20</td><td><span class="sur">—</span></td></tr><tr><td><span class="niv n0">réfutée</span><div class="petit">entrée : hypothèse</div></td><td><span class="qui cortex">CORTEX</span></td><td><a href="#r231">Le débit quzu9 dépend d’une mémoire lente (constante de temps ≈ 16 jours) de : débit tufaza9 (1.25), débit quzu9 (-1.95).</a></td><td class="petit">entreprise-opaque#20</td><td><span class="sur">—</span></td></tr><tr><td><span class="niv n0">réfutée</span><div class="petit">entrée : hypothèse</div></td><td><span class="qui cortex">CORTEX</span></td><td><a href="#r232">Le débit quzu9 dépend d’une mémoire lente (constante de temps ≈ 5 jours) de : débit xafa2 (0.42).</a></td><td class="petit">entreprise-opaque#20</td><td><span class="sur">—</span></td></tr><tr><td><span class="niv n0">réfutée</span><div class="petit">entrée : hypothèse</div></td><td><span class="qui cortex">CORTEX</span></td><td><a href="#r233">Le débit xafa2 dépend d’une mémoire lente (constante de temps ≈ 20 jours) de : débit tufaza9 (1.17), débit xafa2 (-1.98).</a></td><td class="petit">entreprise-opaque#20</td><td><span class="sur">—</span></td></tr><tr><td><span class="niv n0">réfutée</span><div class="petit">entrée : hypothèse</div></td><td><span class="qui cortex">CORTEX</span></td><td><a href="#r234">Le débit xafa2 dépend d’une mémoire lente (constante de temps ≈ 7 jours) de : débit quzu9 (0.35), débit xafa2 (0.44).</a></td><td class="petit">entreprise-opaque#20</td><td><span class="sur">—</span></td></tr><tr><td><span class="niv n0">réfutée</span><div class="petit">entrée : hypothèse</div></td><td><span class="qui cortex">CORTEX</span></td><td><a href="#r261">Le débit zuhari3 dépend d’une mémoire lente (constante de temps ≈ 32 jours) de : débit zuhari3 (-0.7), débit hobo5 (0.33).</a></td><td class="petit">entreprise-opaque#23</td><td><span class="sur">—</span></td></tr><tr><td><span class="niv n0">réfutée</span><div class="petit">entrée : hypothèse</div></td><td><span class="qui cortex">CORTEX</span></td><td><a href="#r262">Le débit hobo5 dépend d’une mémoire lente (constante de temps ≈ 32 jours) de : débit hobo5 (-0.94), débit zovagu2 (0.4).</a></td><td class="petit">entreprise-opaque#23</td><td><span class="sur">—</span></td></tr><tr><td><span class="niv n0">réfutée</span><div class="petit">entrée : hypothèse</div></td><td><span class="qui cortex">CORTEX</span></td><td><a href="#r263">Le débit hobo5 dépend d’une mémoire lente (constante de temps ≈ 5 jours) de : débit zuhari3 (0.29).</a></td><td class="petit">entreprise-opaque#23</td><td><span class="sur">—</span></td></tr><tr><td><span class="niv n0">réfutée</span><div class="petit">entrée : hypothèse</div></td><td><span class="qui cortex">CORTEX</span></td><td><a href="#r264">Le débit zovagu2 dépend d’une mémoire lente (constante de temps ≈ 25 jours) de : débit zovagu2 (-0.59), prix zuhari3 (0).</a></td><td class="petit">entreprise-opaque#23</td><td><span class="sur">—</span></td></tr><tr><td><span class="niv n0">réfutée</span><div class="petit">entrée : hypothèse</div></td><td><span class="qui cortex">CORTEX</span></td><td><a href="#r265">Le débit zovagu2 dépend d’une mémoire lente (constante de temps ≈ 5 jours) de : débit zuhari3 (0.29), débit zovagu2 (0.24).</a></td><td class="petit">entreprise-opaque#23</td><td><span class="sur">—</span></td></tr><tr><td><span class="niv n1">hors de portée</span></td><td><span class="qui cortex">CORTEX</span></td><td><a href="#r296">La mesure 2 contient une structure prévisible que mon modèle n’exprime pas, de la famille « forme » (fonction non linéaire des leviers).</a></td><td class="petit">forme-manquante#21</td><td><span class="sur">—</span></td></tr><tr><td><span class="niv n1">hors de portée</span></td><td><span class="qui cortex">CORTEX</span></td><td><a href="#r299">La mesure 1 contient une structure prévisible que mon modèle n’exprime pas, de la famille « forme » (fonction non linéaire des leviers).</a></td><td class="petit">forme-manquante#23</td><td><span class="sur">—</span></td></tr><tr><td><span class="niv n5">identité</span></td><td><span class="qui neutre">registre</span></td><td><a href="#r302">Depuis l’ouverture (2026-07-27) : 0 € de ventes, 0 commande payante, 148 visites, 0 ajout au panier.</a></td><td class="petit">boutique-reelle#20261113</td><td><span class="sur">—</span></td></tr><tr><td><span class="niv n5">identité</span></td><td><span class="qui neutre">registre</span></td><td><a href="#r303">0 visite depuis la France. 126 visites sur 148 viennent des États-Unis, où la boutique ne livre pas ; 4 seulement viennent d’un pays livré.</a></td><td class="petit">boutique-reelle#20261113</td><td><span class="sur">—</span></td></tr></tbody>
+    <tbody><tr><td><span class="niv n1">hors de portée</span></td><td><span class="qui cortex">CORTEX</span></td><td><a href="#r1">La mesure 2 contient une structure prévisible que mon modèle n’exprime pas, de la famille « forme » (fonction non linéaire des leviers).</a></td><td class="petit">forme-manquante#5</td><td><span class="verd bon">confirmée</span></td></tr><tr><td><span class="niv n3">empirique</span><div class="petit">entrée : hypothèse</div><div class="petit">contestée, puis tranchée</div></td><td><span class="qui galilee">GALILÉE</span></td><td><a href="#r2">écart(mesure 2) ≈ 0.3931 − cos(u0) / 2</a></td><td class="petit">forme-manquante#5</td><td><span class="verd bon">confirmée</span></td></tr><tr><td><span class="niv n0">réfutée</span><div class="petit">entrée : hypothèse</div></td><td><span class="qui cortex">CORTEX</span></td><td><a href="#r55">Le débit teka8 dépend d’une mémoire lente (constante de temps ≈ 28 jours) de : débit teka8 (-0.61).</a></td><td class="petit">entreprise-opaque#2</td><td><span class="sur">—</span></td></tr><tr><td><span class="niv n0">réfutée</span><div class="petit">entrée : hypothèse</div></td><td><span class="qui cortex">CORTEX</span></td><td><a href="#r56">Le débit buvu1 dépend d’une mémoire lente (constante de temps ≈ 12 jours) de : débit teka8 (1.07), débit buvu1 (-2.14).</a></td><td class="petit">entreprise-opaque#2</td><td><span class="sur">—</span></td></tr><tr><td><span class="niv n0">réfutée</span><div class="petit">entrée : hypothèse</div></td><td><span class="qui cortex">CORTEX</span></td><td><a href="#r57">Le débit buvu1 dépend d’une mémoire lente (constante de temps ≈ 5 jours) de : débit sumuzo9 (0.38), prix buvu1 (0).</a></td><td class="petit">entreprise-opaque#2</td><td><span class="sur">—</span></td></tr><tr><td><span class="niv n0">réfutée</span><div class="petit">entrée : hypothèse</div></td><td><span class="qui cortex">CORTEX</span></td><td><a href="#r58">Le débit sumuzo9 dépend d’une mémoire lente (constante de temps ≈ 12 jours) de : débit teka8 (2.06), débit sumuzo9 (-2.49).</a></td><td class="petit">entreprise-opaque#2</td><td><span class="sur">—</span></td></tr><tr><td><span class="niv n0">réfutée</span><div class="petit">entrée : hypothèse</div></td><td><span class="qui cortex">CORTEX</span></td><td><a href="#r59">Le débit sumuzo9 dépend d’une mémoire lente (constante de temps ≈ 4 jours) de : débit buvu1 (-0.6), débit sumuzo9 (0.73).</a></td><td class="petit">entreprise-opaque#2</td><td><span class="sur">—</span></td></tr><tr><td><span class="niv n0">réfutée</span><div class="petit">entrée : hypothèse</div></td><td><span class="qui cortex">CORTEX</span></td><td><a href="#r80">Le débit sinisu6 dépend d’une mémoire lente (constante de temps ≈ 35 jours) de : débit sinisu6 (-0.74), débit zehaki1 (0.48).</a></td><td class="petit">entreprise-opaque#5</td><td><span class="sur">—</span></td></tr><tr><td><span class="niv n0">réfutée</span><div class="petit">entrée : hypothèse</div></td><td><span class="qui cortex">CORTEX</span></td><td><a href="#r81">Le débit zehaki1 dépend d’une mémoire lente (constante de temps ≈ 32 jours) de : débit zehaki1 (-0.54).</a></td><td class="petit">entreprise-opaque#5</td><td><span class="sur">—</span></td></tr><tr><td><span class="niv n0">réfutée</span><div class="petit">entrée : hypothèse</div></td><td><span class="qui cortex">CORTEX</span></td><td><a href="#r82">Le débit xiro7 dépend d’une mémoire lente (constante de temps ≈ 32 jours) de : débit sinisu6 (0.3), débit xiro7 (-0.7).</a></td><td class="petit">entreprise-opaque#5</td><td><span class="sur">—</span></td></tr><tr><td><span class="niv n0">réfutée</span><div class="petit">entrée : hypothèse</div></td><td><span class="qui cortex">CORTEX</span></td><td><a href="#r83">Le débit xiro7 dépend d’une mémoire lente (constante de temps ≈ 2 jours) de : débit zehaki1 (0.12), prix zehaki1 (0).</a></td><td class="petit">entreprise-opaque#5</td><td><span class="sur">—</span></td></tr><tr><td><span class="niv n0">réfutée</span><div class="petit">entrée : hypothèse</div></td><td><span class="qui cortex">CORTEX</span></td><td><a href="#r103">Le débit jubi8 dépend d’une mémoire lente (constante de temps ≈ 18 jours) de : débit jubi8 (-1.96), débit suhaqe5 (0.86).</a></td><td class="petit">entreprise-opaque#8</td><td><span class="sur">—</span></td></tr><tr><td><span class="niv n0">réfutée</span><div class="petit">entrée : hypothèse</div></td><td><span class="qui cortex">CORTEX</span></td><td><a href="#r104">Le débit jubi8 dépend d’une mémoire lente (constante de temps ≈ 6 jours) de : débit jubi8 (0.78).</a></td><td class="petit">entreprise-opaque#8</td><td><span class="sur">—</span></td></tr><tr><td><span class="niv n0">réfutée</span><div class="petit">entrée : hypothèse</div></td><td><span class="qui cortex">CORTEX</span></td><td><a href="#r105">Le débit suhaqe5 dépend d’une mémoire lente (constante de temps ≈ 16 jours) de : débit jubi8 (0.41), débit suhaqe5 (-1.22).</a></td><td class="petit">entreprise-opaque#8</td><td><span class="sur">—</span></td></tr><tr><td><span class="niv n0">réfutée</span><div class="petit">entrée : hypothèse</div></td><td><span class="qui cortex">CORTEX</span></td><td><a href="#r106">Le débit suhaqe5 dépend d’une mémoire lente (constante de temps ≈ 5 jours) de : débit jubi8 (0.6).</a></td><td class="petit">entreprise-opaque#8</td><td><span class="sur">—</span></td></tr><tr><td><span class="niv n0">réfutée</span><div class="petit">entrée : hypothèse</div></td><td><span class="qui cortex">CORTEX</span></td><td><a href="#r107">Le débit nijuqo0 dépend d’une mémoire lente (constante de temps ≈ 2 jours) de : débit jubi8 (0.5), prix jubi8 (0).</a></td><td class="petit">entreprise-opaque#8</td><td><span class="sur">—</span></td></tr><tr><td><span class="niv n0">réfutée</span><div class="petit">entrée : hypothèse</div></td><td><span class="qui cortex">CORTEX</span></td><td><a href="#r108">Le débit nijuqo0 dépend d’une mémoire lente (constante de temps ≈ 4 jours) de : débit suhaqe5 (0.28), débit nijuqo0 (-0.61).</a></td><td class="petit">entreprise-opaque#8</td><td><span class="sur">—</span></td></tr><tr><td><span class="niv n0">réfutée</span><div class="petit">entrée : hypothèse</div></td><td><span class="qui cortex">CORTEX</span></td><td><a href="#r134">Le débit qifuki0 dépend d’une mémoire lente (constante de temps ≈ 16 jours) de : débit qifuki0 (-0.58), débit muxu9 (0.71).</a></td><td class="petit">entreprise-opaque#11</td><td><span class="sur">—</span></td></tr><tr><td><span class="niv n0">réfutée</span><div class="petit">entrée : hypothèse</div></td><td><span class="qui cortex">CORTEX</span></td><td><a href="#r135">Le débit gakofe8 dépend d’une mémoire lente (constante de temps ≈ 32 jours) de : débit gakofe8 (-0.71), débit muxu9 (0.39).</a></td><td class="petit">entreprise-opaque#11</td><td><span class="sur">—</span></td></tr><tr><td><span class="niv n0">réfutée</span><div class="petit">entrée : hypothèse</div></td><td><span class="qui cortex">CORTEX</span></td><td><a href="#r136">Le débit muxu9 dépend d’une mémoire lente (constante de temps ≈ 39 jours) de : débit gakofe8 (0.22), débit muxu9 (-0.69).</a></td><td class="petit">entreprise-opaque#11</td><td><span class="sur">—</span></td></tr><tr><td><span class="niv n0">réfutée</span><div class="petit">entrée : hypothèse</div></td><td><span class="qui cortex">CORTEX</span></td><td><a href="#r164">Le débit baza7 dépend d’une mémoire lente (constante de temps ≈ 18 jours) de : débit baza7 (-3.11), débit befa7 (2.15).</a></td><td class="petit">entreprise-opaque#14</td><td><span class="sur">—</span></td></tr><tr><td><span class="niv n0">réfutée</span><div class="petit">entrée : hypothèse</div></td><td><span class="qui cortex">CORTEX</span></td><td><a href="#r165">Le débit baza7 dépend d’une mémoire lente (constante de temps ≈ 7 jours) de : débit nuqatu7 (1.17), débit befa7 (-0.33).</a></td><td class="petit">entreprise-opaque#14</td><td><span class="sur">—</span></td></tr><tr><td><span class="niv n0">réfutée</span><div class="petit">entrée : hypothèse</div></td><td><span class="qui cortex">CORTEX</span></td><td><a href="#r166">Le débit nuqatu7 dépend d’une mémoire lente (constante de temps ≈ 16 jours) de : débit nuqatu7 (-1.89), débit befa7 (1.55).</a></td><td class="petit">entreprise-opaque#14</td><td><span class="sur">—</span></td></tr><tr><td><span class="niv n0">réfutée</span><div class="petit">entrée : hypothèse</div></td><td><span class="qui cortex">CORTEX</span></td><td><a href="#r167">Le débit nuqatu7 dépend d’une mémoire lente (constante de temps ≈ 2 jours) de : débit nuqatu7 (0.34), prix baza7 (0).</a></td><td class="petit">entreprise-opaque#14</td><td><span class="sur">—</span></td></tr><tr><td><span class="niv n0">réfutée</span><div class="petit">entrée : hypothèse</div></td><td><span class="qui cortex">CORTEX</span></td><td><a href="#r168">Le débit befa7 dépend d’une mémoire lente (constante de temps ≈ 18 jours) de : débit nuqatu7 (1.29), débit befa7 (-1.96).</a></td><td class="petit">entreprise-opaque#14</td><td><span class="sur">—</span></td></tr><tr><td><span class="niv n0">réfutée</span><div class="petit">entrée : hypothèse</div></td><td><span class="qui cortex">CORTEX</span></td><td><a href="#r169">Le débit befa7 dépend d’une mémoire lente (constante de temps ≈ 2 jours) de : débit befa7 (0.34), prix baza7 (0).</a></td><td class="petit">entreprise-opaque#14</td><td><span class="sur">—</span></td></tr><tr><td><span class="niv n0">réfutée</span><div class="petit">entrée : hypothèse</div></td><td><span class="qui cortex">CORTEX</span></td><td><a href="#r201">Le débit xaxe7 dépend d’une mémoire lente (constante de temps ≈ 25 jours) de : débit xaxe7 (-0.61), débit xuza8 (0.71).</a></td><td class="petit">entreprise-opaque#17</td><td><span class="sur">—</span></td></tr><tr><td><span class="niv n0">réfutée</span><div class="petit">entrée : hypothèse</div></td><td><span class="qui cortex">CORTEX</span></td><td><a href="#r202">Le débit xuza8 dépend d’une mémoire lente (constante de temps ≈ 28 jours) de : débit xuza8 (-0.51), prix xuza8 (0).</a></td><td class="petit">entreprise-opaque#17</td><td><span class="sur">—</span></td></tr><tr><td><span class="niv n0">réfutée</span><div class="petit">entrée : hypothèse</div></td><td><span class="qui cortex">CORTEX</span></td><td><a href="#r203">Le débit jico4 dépend d’une mémoire lente (constante de temps ≈ 44 jours) de : débit xuza8 (0.79), débit jico4 (-1.03).</a></td><td class="petit">entreprise-opaque#17</td><td><span class="sur">—</span></td></tr><tr><td><span class="niv n0">réfutée</span><div class="petit">entrée : hypothèse</div></td><td><span class="qui cortex">CORTEX</span></td><td><a href="#r204">Le débit jico4 dépend d’une mémoire lente (constante de temps ≈ 2 jours) de : prix xuza8 (0).</a></td><td class="petit">entreprise-opaque#17</td><td><span class="sur">—</span></td></tr><tr><td><span class="niv n0">réfutée</span><div class="petit">entrée : hypothèse</div></td><td><span class="qui cortex">CORTEX</span></td><td><a href="#r229">Le débit tufaza9 dépend d’une mémoire lente (constante de temps ≈ 18 jours) de : débit tufaza9 (-2.44), débit xafa2 (0.92).</a></td><td class="petit">entreprise-opaque#20</td><td><span class="sur">—</span></td></tr><tr><td><span class="niv n0">réfutée</span><div class="petit">entrée : hypothèse</div></td><td><span class="qui cortex">CORTEX</span></td><td><a href="#r230">Le débit tufaza9 dépend d’une mémoire lente (constante de temps ≈ 8 jours) de : débit tufaza9 (1.05).</a></td><td class="petit">entreprise-opaque#20</td><td><span class="sur">—</span></td></tr><tr><td><span class="niv n0">réfutée</span><div class="petit">entrée : hypothèse</div></td><td><span class="qui cortex">CORTEX</span></td><td><a href="#r231">Le débit quzu9 dépend d’une mémoire lente (constante de temps ≈ 16 jours) de : débit tufaza9 (1.25), débit quzu9 (-1.95).</a></td><td class="petit">entreprise-opaque#20</td><td><span class="sur">—</span></td></tr><tr><td><span class="niv n0">réfutée</span><div class="petit">entrée : hypothèse</div></td><td><span class="qui cortex">CORTEX</span></td><td><a href="#r232">Le débit quzu9 dépend d’une mémoire lente (constante de temps ≈ 5 jours) de : débit xafa2 (0.42).</a></td><td class="petit">entreprise-opaque#20</td><td><span class="sur">—</span></td></tr><tr><td><span class="niv n0">réfutée</span><div class="petit">entrée : hypothèse</div></td><td><span class="qui cortex">CORTEX</span></td><td><a href="#r233">Le débit xafa2 dépend d’une mémoire lente (constante de temps ≈ 20 jours) de : débit tufaza9 (1.17), débit xafa2 (-1.98).</a></td><td class="petit">entreprise-opaque#20</td><td><span class="sur">—</span></td></tr><tr><td><span class="niv n0">réfutée</span><div class="petit">entrée : hypothèse</div></td><td><span class="qui cortex">CORTEX</span></td><td><a href="#r234">Le débit xafa2 dépend d’une mémoire lente (constante de temps ≈ 7 jours) de : débit quzu9 (0.35), débit xafa2 (0.44).</a></td><td class="petit">entreprise-opaque#20</td><td><span class="sur">—</span></td></tr><tr><td><span class="niv n0">réfutée</span><div class="petit">entrée : hypothèse</div></td><td><span class="qui cortex">CORTEX</span></td><td><a href="#r261">Le débit zuhari3 dépend d’une mémoire lente (constante de temps ≈ 32 jours) de : débit zuhari3 (-0.7), débit hobo5 (0.33).</a></td><td class="petit">entreprise-opaque#23</td><td><span class="sur">—</span></td></tr><tr><td><span class="niv n0">réfutée</span><div class="petit">entrée : hypothèse</div></td><td><span class="qui cortex">CORTEX</span></td><td><a href="#r262">Le débit hobo5 dépend d’une mémoire lente (constante de temps ≈ 32 jours) de : débit hobo5 (-0.94), débit zovagu2 (0.4).</a></td><td class="petit">entreprise-opaque#23</td><td><span class="sur">—</span></td></tr><tr><td><span class="niv n0">réfutée</span><div class="petit">entrée : hypothèse</div></td><td><span class="qui cortex">CORTEX</span></td><td><a href="#r263">Le débit hobo5 dépend d’une mémoire lente (constante de temps ≈ 5 jours) de : débit zuhari3 (0.29).</a></td><td class="petit">entreprise-opaque#23</td><td><span class="sur">—</span></td></tr><tr><td><span class="niv n0">réfutée</span><div class="petit">entrée : hypothèse</div></td><td><span class="qui cortex">CORTEX</span></td><td><a href="#r264">Le débit zovagu2 dépend d’une mémoire lente (constante de temps ≈ 25 jours) de : débit zovagu2 (-0.59), prix zuhari3 (0).</a></td><td class="petit">entreprise-opaque#23</td><td><span class="sur">—</span></td></tr><tr><td><span class="niv n0">réfutée</span><div class="petit">entrée : hypothèse</div></td><td><span class="qui cortex">CORTEX</span></td><td><a href="#r265">Le débit zovagu2 dépend d’une mémoire lente (constante de temps ≈ 5 jours) de : débit zuhari3 (0.29), débit zovagu2 (0.24).</a></td><td class="petit">entreprise-opaque#23</td><td><span class="sur">—</span></td></tr><tr><td><span class="niv n1">hors de portée</span></td><td><span class="qui cortex">CORTEX</span></td><td><a href="#r296">La mesure 2 contient une structure prévisible que mon modèle n’exprime pas, de la famille « forme » (fonction non linéaire des leviers).</a></td><td class="petit">forme-manquante#21</td><td><span class="sur">—</span></td></tr><tr><td><span class="niv n1">hors de portée</span></td><td><span class="qui cortex">CORTEX</span></td><td><a href="#r299">La mesure 1 contient une structure prévisible que mon modèle n’exprime pas, de la famille « forme » (fonction non linéaire des leviers).</a></td><td class="petit">forme-manquante#23</td><td><span class="sur">—</span></td></tr><tr><td><span class="niv n5">identité</span></td><td><span class="qui neutre">registre</span></td><td><a href="#r302">Depuis l’ouverture (2026-07-27) : 0 € de ventes, 0 commande payante, 148 visites, 0 ajout au panier.</a></td><td class="petit">boutique-reelle#20261113</td><td><span class="sur">—</span></td></tr><tr><td><span class="niv n5">identité</span></td><td><span class="qui neutre">registre</span></td><td><a href="#r303">0 visite depuis la France. 126 visites sur 148 viennent des États-Unis, où la boutique ne livre pas ; 4 seulement viennent d’un pays livré.</a></td><td class="petit">boutique-reelle#20261113</td><td><span class="sur">—</span></td></tr><tr><td><span class="niv n1">hors de portée</span></td><td><span class="qui cortex">CORTEX</span></td><td><a href="#r377">La mesure 1 contient une structure prévisible que mon modèle n’exprime pas, de la famille « forme » (fonction non linéaire des leviers).</a></td><td class="petit">forme-manquante#25</td><td><span class="sur">—</span></td></tr></tbody>
   </table></div>
-  <p class="petit">2 identité · 1 empirique · 54 hypothèse · 3 hors de portée · 39 réfutée (témoins négatifs compris). Le tableau montre tout ce qui n’est pas une simple hypothèse ; les hypothèses sont dans le journal. Niveaux qui autorisent une décision : identité, établie, empirique.</p>
+  <p class="petit">2 identité · 1 empirique · 54 hypothèse · 4 hors de portée · 39 réfutée (témoins négatifs compris). Le tableau montre tout ce qui n’est pas une simple hypothèse ; les hypothèses sont dans le journal. Niveaux qui autorisent une décision : identité, établie, empirique.</p>
 </section>
 
 <section>
@@ -282,7 +298,7 @@ code{font:13px var(--mono);background:var(--creux);padding:1px 5px;border-radius
     <thead><tr><th>Objet</th><th>Coût</th><th>Risque</th><th>Déjà perdu</th><th>Par an si colmatée</th><th>Banc</th></tr></thead>
     <tbody><tr><td><a href="#r5">Expérience n° 5 : 13 blocs de 7 jours (jours 272 à 364)</a><div class="petit">gain non mesurable</div></td><td class="petit">91 jours d’essai, |u0| moyen 0,46<br>25,3 s de calcul</td><td class="petit">fausse confirmation ≤ 0.1</td><td class="n">—</td><td class="n">—</td><td><span class="sur">—</span></td></tr><tr><td><a href="#r18">Flux non enregistré sur le stock objet:zizimu2 depuis le jour 218 : 0.65 qte par jour.</a><div class="petit">au prix unitaire médian observé (3.81 € ; de 3.32 à 4.22 €)</div></td><td class="petit">0,8 s de calcul<br>aucune action</td><td class="petit">0,2 fausse détection par entreprise en développement ; cause de la fuite inconnue</td><td class="n">363 €</td><td class="n">901 €</td><td><span class="verd bon">confirmée</span></td></tr><tr><td><a href="#r20">Flux non enregistré sur le stock en-cours:0 depuis le jour 168 : 67.82 € par jour.</a><div class="petit">directe (stock en euros)</div></td><td class="petit">0,8 s de calcul<br>aucune action</td><td class="petit">0,2 fausse détection par entreprise en développement ; cause de la fuite inconnue</td><td class="n">13 360 €</td><td class="n">24 754 €</td><td><span class="verd bon">confirmée</span></td></tr><tr><td><a href="#r63">Flux non enregistré sur le stock tresorerie:bulo9 depuis le jour 95 : 115.95 € par jour.</a><div class="petit">directe (stock en euros)</div></td><td class="petit">2,4 s de calcul<br>aucune action</td><td class="petit">0,2 fausse détection par entreprise en développement ; cause de la fuite inconnue</td><td class="n">31 306 €</td><td class="n">42 321 €</td><td><span class="verd bon">confirmée</span></td></tr><tr><td><a href="#r75">Flux non enregistré sur le stock tresorerie:baxu4 depuis le jour 182 : 74.25 € par jour.</a><div class="petit">directe (stock en euros)</div></td><td class="petit">0,1 s de calcul<br>aucune action</td><td class="petit">0,2 fausse détection par entreprise en développement ; cause de la fuite inconnue</td><td class="n">13 587 €</td><td class="n">27 100 €</td><td><span class="verd bon">confirmée</span></td></tr><tr><td><a href="#r88">Flux non enregistré sur le stock tresorerie:goju6 depuis le jour 78 : 13.53 € par jour.</a><div class="petit">directe (stock en euros)</div></td><td class="petit">2,2 s de calcul<br>aucune action</td><td class="petit">0,2 fausse détection par entreprise en développement ; cause de la fuite inconnue</td><td class="n">3 882 €</td><td class="n">4 937 €</td><td><span class="verd bon">confirmée</span></td></tr><tr><td><a href="#r96">Flux non enregistré sur le stock tresorerie:fucaba2 depuis le jour 165 : 46.26 € par jour.</a><div class="petit">directe (stock en euros)</div></td><td class="petit">0,1 s de calcul<br>aucune action</td><td class="petit">0,2 fausse détection par entreprise en développement ; cause de la fuite inconnue</td><td class="n">9 252 €</td><td class="n">16 885 €</td><td><span class="verd bon">confirmée</span></td></tr><tr><td><a href="#r98">Flux non enregistré sur le stock en-cours:2 depuis le jour 265 : 17.27 € par jour.</a><div class="petit">directe (stock en euros)</div></td><td class="petit">0,1 s de calcul<br>aucune action</td><td class="petit">0,2 fausse détection par entreprise en développement ; cause de la fuite inconnue</td><td class="n">1 727 €</td><td class="n">6 303 €</td><td><span class="verd mauvais">démentie</span></td></tr><tr><td><a href="#r140">Flux non enregistré sur le stock en-cours:1 depuis le jour 177 : 53.56 € par jour.</a><div class="petit">directe (stock en euros)</div></td><td class="petit">1,3 s de calcul<br>aucune action</td><td class="petit">0,2 fausse détection par entreprise en développement ; cause de la fuite inconnue</td><td class="n">10 069 €</td><td class="n">19 549 €</td><td><span class="verd bon">confirmée</span></td></tr><tr><td><a href="#r152">Flux non enregistré sur le stock tresorerie:tije1 depuis le jour 87 : 226.19 € par jour.</a><div class="petit">directe (stock en euros)</div></td><td class="petit">4,1 s de calcul<br>aucune action</td><td class="petit">0,2 fausse détection par entreprise en développement ; cause de la fuite inconnue</td><td class="n">62 882 €</td><td class="n">82 560 €</td><td><span class="verd bon">confirmée</span></td></tr><tr><td><a href="#r159">Flux non enregistré sur le stock en-cours:1 depuis le jour 204 : 220.26 € par jour.</a><div class="petit">directe (stock en euros)</div></td><td class="petit">0,1 s de calcul<br>aucune action</td><td class="petit">0,2 fausse détection par entreprise en développement ; cause de la fuite inconnue</td><td class="n">35 461 €</td><td class="n">80 393 €</td><td><span class="verd bon">confirmée</span></td></tr><tr><td><a href="#r174">Flux non enregistré sur le stock tresorerie:gulato9 depuis le jour 153 : 173.69 € par jour.</a><div class="petit">directe (stock en euros)</div></td><td class="petit">0,8 s de calcul<br>aucune action</td><td class="petit">0,2 fausse détection par entreprise en développement ; cause de la fuite inconnue</td><td class="n">36 821 €</td><td class="n">63 395 €</td><td><span class="verd bon">confirmée</span></td></tr><tr><td><a href="#r186">Flux non enregistré sur le stock tresorerie:menibu5 depuis le jour 139 : 51.14 € par jour.</a><div class="petit">directe (stock en euros)</div></td><td class="petit">2,9 s de calcul<br>aucune action</td><td class="petit">0,2 fausse détection par entreprise en développement ; cause de la fuite inconnue</td><td class="n">11 557 €</td><td class="n">18 665 €</td><td><span class="verd bon">confirmée</span></td></tr><tr><td><a href="#r194">Flux non enregistré sur le stock tresorerie:cidu4 depuis le jour 187 : 290.47 € par jour.</a><div class="petit">directe (stock en euros)</div></td><td class="petit">0,1 s de calcul<br>aucune action</td><td class="petit">0,2 fausse détection par entreprise en développement ; cause de la fuite inconnue</td><td class="n">51 704 €</td><td class="n">106 023 €</td><td><span class="verd bon">confirmée</span></td></tr><tr><td><a href="#r196">Flux non enregistré sur le stock en-cours:1 depuis le jour 245 : 128.25 € par jour.</a><div class="petit">directe (stock en euros)</div></td><td class="petit">0,1 s de calcul<br>aucune action</td><td class="petit">0,2 fausse détection par entreprise en développement ; cause de la fuite inconnue</td><td class="n">15 390 €</td><td class="n">46 812 €</td><td><span class="verd mauvais">démentie</span></td></tr><tr><td><a href="#r238">Flux non enregistré sur le stock en-cours:2 depuis le jour 328 : 45.44 € par jour.</a><div class="petit">directe (stock en euros)</div></td><td class="petit">0,4 s de calcul<br>aucune action</td><td class="petit">0,2 fausse détection par entreprise en développement ; cause de la fuite inconnue</td><td class="n">1 681 €</td><td class="n">16 585 €</td><td><span class="verd mauvais">démentie</span></td></tr><tr><td><a href="#r249">Flux non enregistré sur le stock objet:manawo8 depuis le jour 178 : 0.02 qte par jour.</a><div class="petit">au prix unitaire médian observé (5.46 € ; de 4.75 à 5.88 €)</div></td><td class="petit">2,1 s de calcul<br>aucune action</td><td class="petit">0,2 fausse détection par entreprise en développement ; cause de la fuite inconnue</td><td class="n">17 €</td><td class="n">33 €</td><td><span class="verd bon">confirmée</span></td></tr><tr><td><a href="#r256">Flux non enregistré sur le stock en-cours:1 depuis le jour 148 : 82.15 € par jour.</a><div class="petit">directe (stock en euros)</div></td><td class="petit">0,1 s de calcul<br>aucune action</td><td class="petit">0,2 fausse détection par entreprise en développement ; cause de la fuite inconnue</td><td class="n">17 826 €</td><td class="n">29 984 €</td><td><span class="verd bon">confirmée</span></td></tr><tr><td><a href="#r270">Flux non enregistré sur le stock tresorerie:qomewu8 depuis le jour 199 : 307.94 € par jour.</a><div class="petit">directe (stock en euros)</div></td><td class="petit">0,4 s de calcul<br>aucune action</td><td class="petit">0,2 fausse détection par entreprise en développement ; cause de la fuite inconnue</td><td class="n">51 119 €</td><td class="n">112 400 €</td><td><span class="verd bon">confirmée</span></td></tr></tbody>
   </table></div>
-  <p class="petit">Total des fuites chiffrées : 368 004 € déjà perdus, 699 600 € par an si elles étaient colmatées. Dépense totale de la page : 175 s de calcul et 91 jours d’essai simulés. Tout cela est simulé : gain réalisé, 0 €.</p>
+  <p class="petit">Total des fuites chiffrées : 368 004 € déjà perdus, 699 600 € par an si elles étaient colmatées. Dépense totale de la page : 189 s de calcul et 91 jours d’essai simulés. Tout cela est simulé : gain réalisé, 0 €.</p>
 </section>
 
 <section>
@@ -12997,6 +13013,229 @@ code{font:13px var(--mono);background:var(--creux);padding:1px 5px;border-radius
  &quot;auteur&quot;: &quot;registre&quot;,
  &quot;depend_de&quot;: [],
  &quot;id&quot;: &quot;f3ba7196e08189e4&quot;
+}</pre></details>
+</article></div></details>
+<details class="pli" id="gardien#1"><summary>Gardien : ressources consommées et évitées <span class="sur">· 4 actes</span></summary><div class="fil"><article class="acte neutre t-probleme" id="r373" data-qui="neutre">
+  <header><span class="num">n° 373</span><span class="type">Problème</span><span class="qui neutre">registre</span><span class="id">344573004a7b5ef9</span></header>
+  <p class="fort">Chaque mission vaut-elle ce qu’elle coûte, et lesquelles n’avaient pas besoin d’être lancées ?</p><p class="petit">Source : src/gardien.js · graine — (journal des ressources)</p>
+  <details><summary>Ligne brute du journal</summary><pre>{
+ &quot;n&quot;: 373,
+ &quot;precedent&quot;: &quot;f3ba7196e08189e4&quot;,
+ &quot;date&quot;: &quot;2026-11-14T11:21:19.362Z&quot;,
+ &quot;probleme&quot;: &quot;gardien#1&quot;,
+ &quot;type&quot;: &quot;probleme&quot;,
+ &quot;cle&quot;: &quot;gardien#1&quot;,
+ &quot;auteur&quot;: &quot;registre&quot;,
+ &quot;titre&quot;: &quot;Gardien : ressources consommées et évitées&quot;,
+ &quot;question&quot;: &quot;Chaque mission vaut-elle ce qu’elle coûte, et lesquelles n’avaient pas besoin d’être lancées ?&quot;,
+ &quot;source&quot;: {
+  &quot;generateur&quot;: &quot;src/gardien.js&quot;,
+  &quot;graine&quot;: &quot;—&quot;,
+  &quot;statut&quot;: &quot;journal des ressources&quot;
+ },
+ &quot;id&quot;: &quot;344573004a7b5ef9&quot;
+}</pre></details>
+</article>
+<article class="acte neutre t-garde" id="r374" data-qui="neutre">
+  <header><span class="num">n° 374</span><span class="type">Garde</span><span class="qui neutre">registre</span><span class="id">9ff3b1e4b122bba1</span></header>
+  <p><span class="mes">remise à zéro</span> <span class="mes">mode économique</span></p>
+  <details><summary>Ligne brute du journal</summary><pre>{
+ &quot;n&quot;: 374,
+ &quot;precedent&quot;: &quot;344573004a7b5ef9&quot;,
+ &quot;date&quot;: &quot;2026-11-14T11:21:19.363Z&quot;,
+ &quot;probleme&quot;: &quot;gardien#1&quot;,
+ &quot;type&quot;: &quot;garde&quot;,
+ &quot;auteur&quot;: &quot;registre&quot;,
+ &quot;decision&quot;: &quot;remise à zéro&quot;,
+ &quot;mode&quot;: &quot;économique&quot;,
+ &quot;ia&quot;: {
+  &quot;mesurable&quot;: true,
+  &quot;fichiers&quot;: 1,
+  &quot;appels&quot;: 287,
+  &quot;tokens_entree&quot;: 576,
+  &quot;tokens_sortie&quot;: 552340,
+  &quot;tokens_cache_ecrits&quot;: 5465934,
+  &quot;tokens_cache_lus&quot;: 123860610
+ },
+ &quot;reference&quot;: true,
+ &quot;id&quot;: &quot;9ff3b1e4b122bba1&quot;
+}</pre></details>
+</article>
+<article class="acte neutre t-garde" id="r375" data-qui="neutre">
+  <header><span class="num">n° 375</span><span class="type">Garde</span><span class="qui neutre">registre</span><span class="id">a51fe03d6c4a3ff9</span></header>
+  <p><span class="mes">évitée</span> <span class="mes">mode économique</span> forme-manquante#5</p><p class="petit">déjà au registre (forme-manquante#5) : le résultat existe, il se relit au lieu de se refaire</p>
+  <details><summary>Ligne brute du journal</summary><pre>{
+ &quot;n&quot;: 375,
+ &quot;precedent&quot;: &quot;9ff3b1e4b122bba1&quot;,
+ &quot;date&quot;: &quot;2026-11-14T11:21:19.455Z&quot;,
+ &quot;probleme&quot;: &quot;gardien#1&quot;,
+ &quot;type&quot;: &quot;garde&quot;,
+ &quot;auteur&quot;: &quot;registre&quot;,
+ &quot;decision&quot;: &quot;évitée&quot;,
+ &quot;mission&quot;: {
+  &quot;nom&quot;: &quot;forme-manquante&quot;,
+  &quot;cle&quot;: &quot;forme-manquante#5&quot;,
+  &quot;arguments&quot;: [
+   &quot;--graine&quot;,
+   &quot;5&quot;
+  ]
+ },
+ &quot;mode&quot;: &quot;économique&quot;,
+ &quot;raison&quot;: &quot;déjà au registre (forme-manquante#5) : le résultat existe, il se relit au lieu de se refaire&quot;,
+ &quot;estimation&quot;: {
+  &quot;calcul_s&quot;: null,
+  &quot;base&quot;: &quot;inconnu&quot;,
+  &quot;sur&quot;: 0
+ },
+ &quot;economie&quot;: {
+  &quot;calcul_s&quot;: null,
+  &quot;base&quot;: &quot;inconnu&quot;,
+  &quot;tokens&quot;: null,
+  &quot;note&quot;: &quot;tokens évités : non mesurable&quot;
+ },
+ &quot;id&quot;: &quot;a51fe03d6c4a3ff9&quot;
+}</pre></details>
+</article>
+<article class="acte neutre t-garde" id="r379" data-qui="neutre">
+  <header><span class="num">n° 379</span><span class="type">Garde</span><span class="qui neutre">registre</span><span class="id">08300a3573914a88</span></header>
+  <p><span class="mes">lancée</span> <span class="mes">mode économique</span> forme-manquante#25</p><p class="petit">coût inconnu : première mission de ce type, plafonnée par le mode</p><p class="petit donnees">14,4 s · 1 acte(s) de progrès</p>
+  <details><summary>Ligne brute du journal</summary><pre>{
+ &quot;n&quot;: 379,
+ &quot;precedent&quot;: &quot;c820938d7629da3f&quot;,
+ &quot;date&quot;: &quot;2026-11-14T11:21:33.944Z&quot;,
+ &quot;probleme&quot;: &quot;gardien#1&quot;,
+ &quot;type&quot;: &quot;garde&quot;,
+ &quot;auteur&quot;: &quot;registre&quot;,
+ &quot;decision&quot;: &quot;lancée&quot;,
+ &quot;mission&quot;: {
+  &quot;nom&quot;: &quot;forme-manquante&quot;,
+  &quot;cle&quot;: &quot;forme-manquante#25&quot;,
+  &quot;arguments&quot;: [
+   &quot;--graine&quot;,
+   &quot;25&quot;
+  ]
+ },
+ &quot;mode&quot;: &quot;économique&quot;,
+ &quot;raison&quot;: &quot;coût inconnu : première mission de ce type, plafonnée par le mode&quot;,
+ &quot;estimation&quot;: {
+  &quot;calcul_s&quot;: null,
+  &quot;base&quot;: &quot;inconnu&quot;,
+  &quot;sur&quot;: 0
+ },
+ &quot;reel&quot;: {
+  &quot;calcul_s&quot;: 14.4,
+  &quot;actes&quot;: 3,
+  &quot;progres&quot;: 1
+ },
+ &quot;id&quot;: &quot;08300a3573914a88&quot;
+}</pre></details>
+</article></div></details>
+<details class="pli" id="forme-manquante#25"><summary>Forme manquante (monde 25) <span class="sur">· 3 actes</span></summary><div class="fil"><article class="acte neutre t-probleme" id="r376" data-qui="neutre">
+  <header><span class="num">n° 376</span><span class="type">Problème</span><span class="qui neutre">registre</span><span class="id">37a8f4e1517ccc64</span></header>
+  <p class="fort">Trois mesures quotidiennes, deux leviers, 365 jours. Le modèle de CORTEX suffit-il ? Sinon, quelle loi manque, et peut-on la démontrer ?</p><p class="petit">Source : CORTEX research/v6/p2.js, makeWorld2 · graine 25 (graine de développement)</p>
+  <details><summary>Ligne brute du journal</summary><pre>{
+ &quot;n&quot;: 376,
+ &quot;precedent&quot;: &quot;a51fe03d6c4a3ff9&quot;,
+ &quot;date&quot;: &quot;2026-11-14T11:21:19.629Z&quot;,
+ &quot;probleme&quot;: &quot;forme-manquante#25&quot;,
+ &quot;type&quot;: &quot;probleme&quot;,
+ &quot;cle&quot;: &quot;forme-manquante#25&quot;,
+ &quot;auteur&quot;: &quot;registre&quot;,
+ &quot;titre&quot;: &quot;Forme manquante (monde 25)&quot;,
+ &quot;question&quot;: &quot;Trois mesures quotidiennes, deux leviers, 365 jours. Le modèle de CORTEX suffit-il ? Sinon, quelle loi manque, et peut-on la démontrer ?&quot;,
+ &quot;source&quot;: {
+  &quot;generateur&quot;: &quot;CORTEX research/v6/p2.js, makeWorld2&quot;,
+  &quot;graine&quot;: 25,
+  &quot;classe&quot;: &quot;forme&quot;,
+  &quot;statut&quot;: &quot;graine de développement&quot;
+ },
+ &quot;roles&quot;: {
+  &quot;CORTEX&quot;: &quot;sonde, pari, plan d’expériences&quot;,
+  &quot;GALILÉE&quot;: &quot;forme de l’écart&quot;,
+  &quot;LAVOISIER&quot;: &quot;aucun (pas de comptabilité)&quot;
+ },
+ &quot;id&quot;: &quot;37a8f4e1517ccc64&quot;
+}</pre></details>
+</article>
+<article class="acte cortex t-affirmation" id="r377" data-qui="cortex">
+  <header><span class="num">n° 377</span><span class="type">Affirmation</span><span class="qui cortex">CORTEX</span><span class="commit">758212a</span><span class="id">0aacf080ebbb65c6</span></header>
+  <p class="fort">La mesure 1 contient une structure prévisible que mon modèle n’exprime pas, de la famille « forme » (fonction non linéaire des leviers).</p><p><span class="niv n1">hors de portée à l’entrée</span>  <span class="mes">log E (pari invariant) = 7,83 <span class="sur">seuil 3,4</span></span></p><p class="petit">Garantie : existence garantie au risque α = 0.1 sur les trois mesures ; la famille est une attribution, non garantie</p><p class="petit">Obtenue par : modes cachés ajustés sur les jours 0–149, sonde par pari invariant sur les jours 28–271 · 14,3 s de calcul</p>
+  <details><summary>Ligne brute du journal</summary><pre>{
+ &quot;n&quot;: 377,
+ &quot;precedent&quot;: &quot;37a8f4e1517ccc64&quot;,
+ &quot;date&quot;: &quot;2026-11-14T11:21:33.917Z&quot;,
+ &quot;probleme&quot;: &quot;forme-manquante#25&quot;,
+ &quot;type&quot;: &quot;affirmation&quot;,
+ &quot;auteur&quot;: &quot;CORTEX&quot;,
+ &quot;moteur&quot;: {
+  &quot;nom&quot;: &quot;CORTEX&quot;,
+  &quot;depot&quot;: &quot;haynbroit-alt/1&quot;,
+  &quot;commit&quot;: &quot;758212a&quot;
+ },
+ &quot;sujet&quot;: &quot;mesure 1 : structure manquante&quot;,
+ &quot;enonce&quot;: &quot;La mesure 1 contient une structure prévisible que mon modèle n’exprime pas, de la famille « forme » (fonction non linéaire des leviers).&quot;,
+ &quot;certitude&quot;: {
+  &quot;niveau&quot;: &quot;hors de portée&quot;,
+  &quot;mesure&quot;: {
+   &quot;nom&quot;: &quot;log E (pari invariant)&quot;,
+   &quot;valeur&quot;: 7.83,
+   &quot;seuil&quot;: 3.4
+  },
+  &quot;garantie&quot;: &quot;existence garantie au risque α = 0.1 sur les trois mesures ; la famille est une attribution, non garantie&quot;
+ },
+ &quot;contenu&quot;: {
+  &quot;diagnostics&quot;: [
+   {
+    &quot;mesure&quot;: 0,
+    &quot;diagnostic&quot;: &quot;compris&quot;,
+    &quot;famille&quot;: &quot;mode&quot;,
+    &quot;logE&quot;: -4.21
+   },
+   {
+    &quot;mesure&quot;: 1,
+    &quot;diagnostic&quot;: &quot;hors de portée&quot;,
+    &quot;famille&quot;: &quot;forme&quot;,
+    &quot;logE&quot;: 7.83
+   },
+   {
+    &quot;mesure&quot;: 2,
+    &quot;diagnostic&quot;: &quot;compris&quot;,
+    &quot;famille&quot;: &quot;mode&quot;,
+    &quot;logE&quot;: -4.14
+   }
+  ]
+ },
+ &quot;preuve&quot;: {
+  &quot;methode&quot;: &quot;modes cachés ajustés sur les jours 0–149, sonde par pari invariant sur les jours 28–271&quot;,
+  &quot;reproduire&quot;: &quot;node bin/commun.js executer forme-manquante --graine 25&quot;
+ },
+ &quot;cout&quot;: {
+  &quot;calcul_s&quot;: 14.3,
+  &quot;experiences&quot;: 0
+ },
+ &quot;id&quot;: &quot;0aacf080ebbb65c6&quot;
+}</pre></details>
+</article>
+<article class="acte galilee t-aveu" id="r378" data-qui="galilee">
+  <header><span class="num">n° 378</span><span class="type">Aveu</span><span class="qui galilee">GALILÉE</span><span class="commit">be42b7e</span><span class="id">c820938d7629da3f</span></header>
+  <p>Aucune loi non constante trouvée pour l’écart de la mesure 1.</p>
+  <details><summary>Ligne brute du journal</summary><pre>{
+ &quot;n&quot;: 378,
+ &quot;precedent&quot;: &quot;0aacf080ebbb65c6&quot;,
+ &quot;date&quot;: &quot;2026-11-14T11:21:33.917Z&quot;,
+ &quot;probleme&quot;: &quot;forme-manquante#25&quot;,
+ &quot;type&quot;: &quot;aveu&quot;,
+ &quot;auteur&quot;: &quot;GALILÉE&quot;,
+ &quot;moteur&quot;: {
+  &quot;nom&quot;: &quot;GALILÉE&quot;,
+  &quot;depot&quot;: &quot;haynbroit-alt/All&quot;,
+  &quot;commit&quot;: &quot;be42b7e&quot;
+ },
+ &quot;depend_de&quot;: [
+  &quot;0aacf080ebbb65c6&quot;
+ ],
+ &quot;motif&quot;: &quot;Aucune loi non constante trouvée pour l’écart de la mesure 1.&quot;,
+ &quot;id&quot;: &quot;c820938d7629da3f&quot;
 }</pre></details>
 </article></div></details>
 </section>

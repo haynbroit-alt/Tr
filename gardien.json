@@ -1,0 +1,10 @@
+{
+  "mode": "économique",
+  "modes": {
+    "économique": { "calcul_s_par_mission": 60, "calcul_s_total": 300, "tokens_sortie": 200000, "sans_progres_max": 1 },
+    "normal": { "calcul_s_par_mission": 300, "calcul_s_total": 1800, "tokens_sortie": 600000, "sans_progres_max": 2 },
+    "intensif": { "calcul_s_par_mission": 3600, "calcul_s_total": 14400, "tokens_sortie": 2000000, "sans_progres_max": 3 }
+  },
+  "prix_par_million_de_tokens": null,
+  "note": "Les budgets sont des propositions à ajuster. Sans prix renseigné, aucun coût en argent n'est affiché."
+}

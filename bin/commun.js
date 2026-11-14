@@ -12,7 +12,25 @@ const [cmd, nom] = process.argv.slice(2);
 const opt = (k, d) => { const i = process.argv.indexOf(k); return i > 0 ? process.argv[i + 1] : d; };
 const reg = new Registre(opt('--registre', join(RACINE, 'registre', 'journal.jsonl')));
 
-if (cmd === 'executer') {
+if (cmd === 'executer' && !process.argv.includes('--sans-gardien')) {
+  // Toute mission passe par le GARDIEN : il estime, décide, plafonne la durée, puis consigne ce qui a été dépensé.
+  const { spawnSync } = await import('node:child_process');
+  const G = await import('../src/gardien.js');
+  const config = G.lireConfig(RACINE), graine = Number(opt('--graine')), fichier = opt('--fichier');
+  const mission = { nom, cle: G.cleDe(nom, { graine, fichier }), arguments: process.argv.slice(4).filter((a) => a !== '--autorise') };
+  const d = G.garder(reg, config, mission, (plafond_s) => {
+    const r = spawnSync(process.execPath, [process.argv[1], ...process.argv.slice(2), '--sans-gardien'], { stdio: 'inherit', timeout: plafond_s * 1000 });
+    return { arretee: r.error?.code === 'ETIMEDOUT' || r.signal === 'SIGTERM' };
+  }, { autorise: process.argv.includes('--autorise') });
+  console.error(`GARDIEN [${config.mode}] ${d.decision} — ${d.raison}${d.reel ? ` · ${d.reel.calcul_s} s, ${d.reel.progres} acte(s) de progrès` : ''}${d.anomalie ? ' · CONSOMMATION ANORMALE' : ''}`);
+  process.exit(d.decision === 'lancée' || d.decision === 'évitée' ? 0 : 3);
+} else if (cmd === 'gardien') {
+  const G = await import('../src/gardien.js');
+  if (nom === 'mode') console.log('mode :', G.changerMode(RACINE, process.argv[4]));
+  else if (nom === 'autoriser') console.log(G.consigner(reg, { decision: 'autorisation', mode: G.lireConfig(RACINE).mode, accorde: { calcul_s: Number(opt('--calcul', 0)), tokens_sortie: Number(opt('--tokens', 0)) }, raison: opt('--raison', 'autorisation donnée par l’utilisateur') }));
+  else if (nom === 'releve' || nom === 'remise-a-zero') console.log(G.consigner(reg, { decision: nom === 'releve' ? 'relevé' : 'remise à zéro', mode: G.lireConfig(RACINE).mode, ia: G.mesurerIA(), reference: true }));
+  else console.log(JSON.stringify(G.etat(reg, G.lireConfig(RACINE)), null, 1));
+} else if (cmd === 'executer') {
   const integ = integrite();
   if (!integ.ok) { console.error('Moteurs altérés, exécution refusée :\n' + integ.erreurs.join('\n')); process.exit(1); }
   const graine = Number(opt('--graine')), fichier = opt('--fichier');
