@@ -13,7 +13,7 @@ export function monthEnds(D) {
   return Array.from({ length: 12 }, (_, m) => { let d = D - 1; while (monthOf(d) > m) d--; return d; });
 }
 
-export function estimateDates(observed, typeOf, S) {
+export function estimateDates(observed, typeOf, S, links, rules) {
   const D = observed.jours, ends = monthEnds(D);
   const T = (r) => typeOf.get(r.id);
   const day = new Map(observed.journal.map((r) => [r.id, r.jour]));
@@ -31,11 +31,49 @@ export function estimateDates(observed, typeOf, S) {
       for (const r of near) day.set(r.id, prevEnd(r.jour));
     }
   }
+  // ---- 1 bis. intervalles stables entre pièces liées : un mouvement de trésorerie (daté exactement) suit sa pièce d'un délai propre
+  // à chaque contrepartie ; le délai est estimé par
+  // contrepartie, puis chaque date est ramenée à l'intersection de ce que disent les deux pièces ----
+  const byId = new Map(observed.journal.map((r) => [r.id, r]));
+  const fixed = new Set();
+  const q = (arr, u) => { const s = [...arr].sort((x, y) => x - y); return s[Math.min(s.length - 1, Math.floor(u * (s.length - 1)))]; };
+  for (const rule of rules) {
+    if (!rule.cp && !rule.obj) continue;
+    if (batch.has(rule.ta) || batch.has(rule.tb)) continue;
+    const pairs = [];
+    for (const b of observed.journal) {
+      if (T(b) !== rule.tb) continue;
+      const as = [...links.get(b.id)].map((x) => byId.get(x)).filter((x) => T(x) === rule.ta);
+      if (!as.length) continue;
+      const a = as.reduce((m, x) => (x.jour < m.jour ? x : m));
+      pairs.push([a, b, rule.cp ? b.contrepartie : b.objet]);
+    }
+    const byKey = new Map();
+    for (const p of pairs) { if (!byKey.has(p[2])) byKey.set(p[2], []); byKey.get(p[2]).push(p); }
+    for (const ps of byKey.values()) {
+      if (ps.length < 4) continue;
+      const L = ps.map(([a, b]) => a.jour - b.jour);
+      if (q(L, 0.9) - q(L, 0.1) < 3 || q(L, 0.9) - q(L, 0.1) > 2 * MAX_SHIFT + 2) continue; // pas de retard visible, ou délai instable
+      // seulement si l'une des deux pièces est datée exactement (trésorerie) : entre deux pièces saisies à la main,
+      // l'écart varie aussi pour des raisons propres à l'opération, qu'on prendrait à tort pour des retards
+      const aExact = S.isBank(ps[0][0]);
+      if (!aExact) continue;
+      const I = aExact ? q(L, 0.9) : (q(L, 0.1) + q(L, 0.9)) / 2;
+      for (const [a, b] of ps) {
+        if (fixed.has(b.id)) continue;
+        const lo = Math.max(b.jour - MAX_SHIFT, a.jour - I - (aExact ? 0 : MAX_SHIFT)), hi = Math.min(b.jour, a.jour - I);
+        const mb = lo <= hi ? Math.round((lo + hi) / 2) : Math.round(Math.min(b.jour, Math.max(b.jour - MAX_SHIFT, a.jour - I)));
+        day.set(b.id, Math.max(0, mb)); fixed.add(b.id);
+        if (!aExact && !fixed.has(a.id)) { day.set(a.id, Math.max(0, Math.min(a.jour, Math.max(a.jour - MAX_SHIFT, Math.round(mb + I))))); fixed.add(a.id); }
+      }
+    }
+  }
+
   // ---- 2. décalage moyen des types qui portent des quantités sur des stocks relevés chaque mois ----
   const items = S.stocks.filter((s) => s.releveM && s.kind === 'item');
   const shift = new Map();
   if (items.length) {
-    const qTypes = [...byType.keys()].filter((t) => !batch.has(t) && S.coef(t) && byType.get(t).some((r) => r.quantite != null));
+    const qTypes = [...byType.keys()].filter((t) => !batch.has(t) && S.coef(t) && byType.get(t).some((r) => r.quantite != null) && byType.get(t).filter((r) => fixed.has(r.id)).length < 0.5 * byType.get(t).length);
     const rel = new Map(items.map((s) => [s.objet, s.releveM]));
     const recs = new Map(qTypes.map((t) => [t, byType.get(t).filter((r) => rel.has(r.objet) && r.quantite != null)]));
     const segOf = (days, d) => { for (let i = 0; i < days.length; i++) if (d <= days[i]) return i; return days.length; };

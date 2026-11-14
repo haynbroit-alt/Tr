@@ -12,7 +12,7 @@ export function bilan(observed) {
   const { links, dup, rules } = inferLinks(journal, typeOf);
   // premier passage aux dates de saisie, puis estimation des dates réelles et second passage
   const S0 = inferStocks(observed, typeOf, links, new Set(dup), rules);
-  const { day, batch } = estimateDates(observed, typeOf, S0);
+  const { day, batch } = estimateDates(observed, typeOf, S0, links, rules);
   const est = imputeCensored(observed, typeOf, batch, day);
   for (const e of est) { typeOf.set(e.id, typeOf.get(e.modele)); links.set(e.id, new Set()); }
   const dated = { ...observed, journal: [...journal.map((r) => ({ ...r, jour: day.get(r.id) })), ...est] };

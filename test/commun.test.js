@@ -96,3 +96,16 @@ test('la transmission refuse les séries rares (confrontation T1)', async () => 
   const r = new Registre(join(RACINE, 'registre', 'journal.jsonl'));
   assert.equal(r.lignes.filter((x) => x.type === 'verification' && x.portee === 'recevabilite').length, 39);
 });
+
+test('une opportunité ne peut ni chiffrer un potentiel sans mesure, ni se passer d’expérience ou d’abandon', () => {
+  const r = neuf(); pb(r);
+  const o = { type: 'opportunite', probleme: 'p', auteur: 'registre', secteur: 's', titre: 't', description: 'd', connu: 'c', inconnu: 'i', decouvrable: 'x',
+    faisabilite: { base: 'estimé', texte: 'f' }, cout_verification: { base: 'estimé', texte: 'c', depense_eur: 0 }, potentiel: { base: 'inconnu', texte: 'Inconnu.' },
+    essai: { hypothese: 'h', mesure: 'm', succes: 's' }, abandon: ['a'], valeur: { argent_reel_eur: 0, nature_de_la_preuve: 'aucune' }, statut: 'en attente' };
+  r.ajouter(o);
+  assert.throws(() => r.ajouter({ ...o, potentiel: { base: 'estimé', texte: 'Environ 10 000 € par an.' } }), /mesure/);
+  assert.throws(() => r.ajouter({ ...o, potentiel: { base: 'mesuré', texte: '500 € encaissés.' } }), /prouvent/);
+  assert.throws(() => r.ajouter({ ...o, abandon: [] }), /abandon/);
+  assert.throws(() => r.ajouter({ ...o, essai: { hypothese: 'h', mesure: 'm' } }), /succes/);
+  assert.throws(() => r.ajouter({ ...o, valeur: { argent_reel_eur: 100, nature_de_la_preuve: 'simulation' } }), /argent réel/);
+});

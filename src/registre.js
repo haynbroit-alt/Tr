@@ -21,6 +21,7 @@ const TYPES = {
   resultat: ['experience', 'mesures', 'cout_reel'],
   economie: ['cible', 'cout', 'risque', 'gain'],
   aveu: ['motif'],
+  opportunite: ['secteur', 'titre', 'description', 'connu', 'inconnu', 'decouvrable', 'faisabilite', 'cout_verification', 'potentiel', 'essai', 'abandon', 'valeur', 'statut'],
   jalon: ['travail', 'mesure', 'avant', 'apres', 'source'],
   piste: ['titre', 'origine', 'potentiel', 'cout', 'risque', 'faisabilite', 'test', 'argent_reel'],
 };
@@ -51,6 +52,19 @@ export class Registre {
     if (r.type === 'piste') {
       for (const c of ['potentiel', 'cout', 'risque', 'faisabilite']) if (!['mesuré', 'mesuré en simulation', 'estimé', 'inconnu'].includes(r[c].base)) faux(`${c}.base attendu : mesuré, mesuré en simulation, estimé ou inconnu`);
       if (typeof r.argent_reel !== 'number') faux('argent_reel doit être un nombre d’euros réellement encaissés');
+    }
+    if (r.type === 'opportunite') {
+      const BASES = ['mesuré', 'mesuré en simulation', 'estimé', 'inconnu'];
+      for (const c of ['faisabilite', 'cout_verification', 'potentiel']) if (!BASES.includes(r[c].base) || !r[c].texte) faux(`${c} doit porter un texte et une base (${BASES.join(', ')})`);
+      // pas de chiffre inventé : un montant en euros dans le potentiel exige une mesure, et une mesure exige sa preuve
+      if (/\d\s*(€|euros?)/i.test(r.potentiel.texte) && !['mesuré', 'mesuré en simulation'].includes(r.potentiel.base)) faux('un potentiel chiffré en euros doit reposer sur une mesure, pas sur une estimation');
+      if (['mesuré', 'mesuré en simulation'].includes(r.potentiel.base) && !(r.depend_de ?? []).length) faux('un potentiel mesuré doit citer les actes du registre qui le prouvent');
+      if (typeof r.cout_verification.depense_eur !== 'number') faux('cout_verification.depense_eur : la dépense nouvelle à engager, en euros (0 si aucune)');
+      for (const c of ['hypothese', 'mesure', 'succes']) if (!r.essai[c]) faux(`expérience falsifiable incomplète : « ${c} » manque`);
+      if (!Array.isArray(r.abandon) || !r.abandon.length) faux('au moins une condition d’abandon');
+      if (typeof r.valeur.argent_reel_eur !== 'number' || !['aucune', 'simulation', 'estimation', 'argent réel'].includes(r.valeur.nature_de_la_preuve)) faux('valeur : argent_reel_eur (nombre) et nature_de_la_preuve (aucune, simulation, estimation, argent réel)');
+      if (r.valeur.argent_reel_eur > 0 && r.valeur.nature_de_la_preuve !== 'argent réel') faux('de l’argent réel ne peut pas reposer sur une simulation ou une estimation');
+      if (!['retenue en premier', 'en attente', 'non instruisible', 'écartée'].includes(r.statut)) faux('statut attendu : retenue en premier, en attente, non instruisible ou écartée');
     }
     if (r.type === 'economie' && !['comptable', 'simulé', 'non mesurable'].includes(r.gain.base)) faux('gain.base attendu : comptable, simulé ou non mesurable');
     if (r.type === 'experience' && !['automatique', 'humaine requise', 'impossible'].includes(r.autorisation)) faux('autorisation attendue : automatique, humaine requise ou impossible');
