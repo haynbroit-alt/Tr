@@ -17,6 +17,13 @@ on l'interroge, on ne le relit pas en entier.
 - Aucune relance en boucle : après un refus du GARDIEN, demander une autorisation (`gardien autoriser`).
 - Mode NORMAL ou INTENSIF seulement sur demande explicite : `node bin/commun.js gardien mode normal`.
 
+## Portée globale (GALILÉE, CORTEX, LAVOISIER)
+- Le gardien couvre les quatre dépôts : les tokens sont rattachés au dépôt où ils ont été produits.
+- Avant un travail coûteux dans `../All`, `../1` ou `../A` (banc, campagne, boucle) :
+  `node ../Tr/bin/commun.js gardien verifier-budget <Tr|1|A|All>` — code 3 = plafond atteint, s'arrêter et demander.
+- `node bin/commun.js gardien repetitions` : commandes et lectures répétées, missions relancées après refus.
+  Un signal = on s'arrête et on cherche la cause, on ne relance pas.
+
 ## Protections à ne pas casser
 - `npm test` et `node bin/commun.js verifier` avant tout commit.
 - Le journal est en ajout seul. Aucun chiffre sans mesure ; « non mesurable » plutôt qu'une estimation inventée.

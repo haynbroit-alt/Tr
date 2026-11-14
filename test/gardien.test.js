@@ -102,3 +102,39 @@ test('les actes du gardien ne rompent pas la chaîne, et le registre refuse une 
   assert.throws(() => G.consigner(r, { decision: 'lancée', mode: 'économique', mission: mission(0) }), /durée réelle/);
   assert.throws(() => G.consigner(r, { decision: 'évitée', mode: 'économique', economie: { calcul_s: 12, base: 'estimé' } }), /mesurées/);
 });
+
+test('les tokens sont rattachés au bon dépôt et le coût affiché est celui écrit par Claude Code', () => {
+  const d = dossier();
+  const mk = (cwd, out, model = 'm1') => JSON.stringify({ cwd, message: { model, usage: { input_tokens: 1, output_tokens: out } } });
+  writeFileSync(join(d, 'a.jsonl'), [mk('/x/Tr', 100), mk('/x/Tr', 50), mk('/x/A', 70), JSON.stringify({ totalCostUSD: 1.25 }), JSON.stringify({ totalCostUSD: 2.5 })].join('\n'));
+  writeFileSync(join(d, 'b.jsonl'), [mk('/x/A', 30, 'm2')].join('\n'));
+  const ia = G.mesurerIA(d);
+  assert.deepEqual(ia.par_depot, { Tr: { appels: 2, tokens_sortie: 150 }, A: { appels: 2, tokens_sortie: 100 } });
+  assert.deepEqual(ia.par_modele.m2, { appels: 1, tokens_sortie: 30 });
+  assert.equal(ia.cout_usd_rapporte, 2.5);    // dernier résumé de la session, pas la somme des résumés intermédiaires
+  assert.equal(ia.sessions_avec_cout, 1);     // b.jsonl n'a pas de résumé : rien n'est inventé pour lui
+});
+
+test('un plafond de dépôt atteint bloque les missions de ce dépôt, pas celles des autres', () => {
+  const r = neuf();
+  const CFG = { ...CONFIG, plafonds_tokens_sortie_par_depot: { A: 100, Tr: 10000 } };
+  const ia0 = { mesurable: true, tokens_sortie: 500, par_depot: { A: { tokens_sortie: 40 }, Tr: { tokens_sortie: 100 } } };
+  G.consigner(r, { decision: 'remise à zéro', mode: 'économique', ia: ia0, reference: true });
+  const ia1 = { mesurable: true, tokens_sortie: 700, par_depot: { A: { tokens_sortie: 180 }, Tr: { tokens_sortie: 150 } } };
+  const b = G.budget(r, CFG, ia1);
+  assert.deepEqual(b.depots.A, { mesurable: true, consomme: 140, total: 100, restant: -40 });
+  assert.match(G.decider(r, CFG, { nom: 'essai', cle: 'essai#a', depot: 'A' }, { ia: ia1 }).raison, /dépôt A/);
+  assert.equal(G.decider(r, CFG, { nom: 'essai', cle: 'essai#t', depot: 'Tr' }, { ia: ia1 }).lancer, true);
+});
+
+test('les répétitions sont détectées dans le relevé et dans le journal, sans faux positifs sous le seuil', () => {
+  const d = dossier();
+  const tu = (name, input) => JSON.stringify({ message: { content: [{ type: 'tool_use', name, input }] } });
+  writeFileSync(join(d, 's.jsonl'), [tu('Bash', { command: 'npm test' }), tu('Bash', { command: 'npm test' }), tu('Bash', { command: 'npm test' }), tu('Read', { file_path: '/x/f.js' }), tu('Read', { file_path: '/x/f.js' })].join('\n'));
+  const r = neuf();
+  G.consigner(r, { decision: 'refusée', mode: 'économique', mission: { nom: 'essai', cle: 'essai#7' }, raison: 'budget' });
+  G.consigner(r, { decision: 'refusée', mode: 'économique', mission: { nom: 'essai', cle: 'essai#7' }, raison: 'budget' });
+  const rep = G.repetitions(r, d);
+  assert.equal(rep.releve_lu, true);
+  assert.deepEqual(rep.signaux.map((s) => [s.type, s.fois]), [['commande répétée', 3], ['mission relancée après refus ou doublon', 2]]);
+});

@@ -153,6 +153,15 @@ interrompue si elle dépasse son plafond de durée.
   tokens n'est jamais chiffrée.
 - Une mission interrompue peut laisser des actes partiels au journal ; la chaîne reste valide.
 
+**Portée globale.** Les tokens du relevé sont rattachés au dépôt (`cwd`) où ils ont été produits :
+`plafonds_tokens_sortie_par_depot` dans `gardien.json` fixe un plafond par dépôt (null = désactivé), et
+`node bin/commun.js gardien verifier-budget [dépôt]` sert de barrière depuis n'importe quel dépôt (code 3 = dépassé).
+Le coût affiché en dollars est celui que Claude Code écrit lui-même dans son relevé (dernier résumé de chaque
+session) : il peut manquer des sessions, et il n'est jamais complété par une estimation.
+`gardien repetitions` signale les commandes et lectures répétées (≥ 3 dans une session) et les missions relancées
+après refus. Chaque dépôt moteur porte un court `CLAUDE.md` qui renvoie à cette barrière ; ces fichiers de consignes
+ne font pas partie des 33 fichiers moteurs gelés.
+
 ## 4. Limites
 
 1. Tout est simulé, sur des graines de développement. Rien ici n'est un résultat de test.

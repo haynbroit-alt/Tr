@@ -244,12 +244,13 @@ ${pistes.length ? `<section>
     <div><b>${ga.ia.mesurable ? nb(ga.ia.tokens_sortie, 0) : nm}</b>tokens produits (session relevée)</div>
     <div><b>${ga.ia.mesurable ? nb(ga.ia.appels, 0) : nm}</b>appels IA</div>
     <div><b>${ga.ia.mesurable ? nb(ga.ia.tokens_cache_lus + ga.ia.tokens_cache_ecrits + ga.ia.tokens_entree, 0) : nm}</b>tokens lus, cache compris</div>
-    <div><b>${ga.ia.cout_estime != null ? nb(ga.ia.cout_estime) + ' ' + h(ga.ia.devise ?? '') : '<span class="sur">non chiffré</span>'}</b>coût estimé (aucun tarif renseigné)</div>
+    <div><b>${ga.ia.cout_usd_rapporte != null ? nb(ga.ia.cout_usd_rapporte) + ' $ US' : nm}</b>coût écrit par Claude Code dans son relevé</div>
     <div><b>${nb(ga.calcul_s_mesure, 1)} s</b>de calcul sous garde</div>
     <div><b>${ga.missions.evitees}</b>mission(s) évitée(s) · ${ga.missions.refusees} refusée(s)</div>
     <div><b>${ga.economie.calcul_s != null ? nb(ga.economie.calcul_s, 1) + ' s' : nm}</b>économie de calcul · tokens : non mesurable</div>
     <div><b>${nb(gb.calcul_s.restant, 0)} s</b>de calcul restants${gb.tokens_sortie.mesurable ? ` · ${nb(gb.tokens_sortie.restant, 0)} tokens` : ''}</div>
   </div>
+  ${ga.ia.mesurable && ga.ia.par_depot ? `<div class="tableau"><table><thead><tr><th>Dépôt</th><th>Appels</th><th>Tokens produits</th><th>Plafond</th><th>Restant</th></tr></thead><tbody>${Object.entries(ga.ia.par_depot).sort((x, y) => y[1].tokens_sortie - x[1].tokens_sortie).map(([d, x]) => { const bd = gb.depots[d]; return `<tr><td>${h(d)}</td><td class="n">${nb(x.appels, 0)}</td><td class="n">${nb(x.tokens_sortie, 0)}</td><td class="n">${bd ? nb(bd.total, 0) : '—'}</td><td class="n">${bd?.mesurable ? (bd.restant <= 0 ? '<span class="verd mauvais">dépassé</span>' : nb(bd.restant, 0)) : '—'}</td></tr>`; }).join('')}</tbody></table></div>` : ''}
   <p class="petit">Limites : le gardien ne peut pas couper une session d’IA, seulement la mesurer et refuser de lancer une mission ; les tokens ne se rattachent pas à une mission précise ; le relevé ne couvre que la machine et la session où il est lu ; une économie n’est chiffrée que si une mission du même type a déjà été chronométrée.</p>
 </section>
 
