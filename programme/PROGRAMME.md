@@ -248,3 +248,16 @@ Le propriétaire a demandé d'utiliser tous les connecteurs. Relevé en lecture 
   n'a pas abouti (limite d'usage atteinte avant tout résultat) et reste à refaire, à petite échelle.
 - **Travaux à plusieurs agents** : les trois chantiers lancés en mode intensif ont échoué sans résultat sur la limite
   d'usage du compte ; ils ont néanmoins consommé des tokens. Plafond de l'espace commun presque atteint.
+
+### Diagnostic et pistes sans boutique (14 novembre 2026, nuit)
+
+- **Comptes corrigés** : `comptes` affichait les repères de départ. Un jalon qui nomme un repère (champ `repere`) en
+  donne désormais la valeur courante. Le plafond de tokens de l'espace commun passe de 600 000 à 900 000 sur
+  décision du propriétaire.
+- **Pistes instruites** (`programme/opportunites-2026-11-14-2.json`, avec sources) : la boutique est écartée ; les
+  primes sur logiciels libres sont écartées (marché décrit comme saturé de propositions automatiques) ; la vente
+  d'un outil et les concours restent en attente.
+- **Retenue en premier : missions d'analyse de données sur une plateforme d'indépendants**, parce que c'est la seule
+  piste où la plateforme apporte elle-même les clients. Elle dépend de trois gestes du propriétaire :
+  immatriculation, profil sous son identité, réponse aux clients. Aucun tarif ni délai n'a été trouvé dans les
+  sources : son potentiel est inconnu. Essai : au moins une demande en 28 jours de profil en ligne.

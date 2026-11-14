@@ -88,6 +88,10 @@ test('les quatre comptes restent séparés et le gain réel est celui du journal
   assert.deepEqual(Object.keys(c), ['individuel', 'collectif', 'couts', 'gains']);
   assert.equal(c.gains.euros_encaisses, 0);
   assert.ok(c.individuel.LAVOISIER.reperes.some((r) => r.atteint === false));
+  // un jalon qui nomme un repère en donne la valeur courante : le test de P3 n'est plus « non mesuré »
+  const p3 = c.individuel.CORTEX.reperes.find((r) => /plan actif \(P3\)/.test(r.mesure));
+  assert.equal(p3.valeur, 84);
+  assert.equal(p3.atteint, true);
 });
 
 test('la transmission refuse les séries rares (confrontation T1)', async () => {

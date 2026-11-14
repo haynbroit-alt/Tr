@@ -23,7 +23,7 @@
   "prix_par_million_de_tokens": null,
   "note": "Les budgets sont des propositions à ajuster. Sans prix renseigné, le seul coût affiché est celui que Claude Code écrit lui-même dans son relevé. plafonds_tokens_sortie_par_depot : null désactive un plafond.",
   "plafonds_tokens_sortie_par_depot": {
-    "Tr": 600000,
+    "Tr": 900000,
     "1": 300000,
     "A": 300000,
     "All": 300000

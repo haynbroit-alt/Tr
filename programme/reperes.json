@@ -6,7 +6,7 @@
     { "mesure": "arrêts « convaincu » sur une forme fausse, bruit 5 % (75 essais)", "valeur": 9, "unite": "", "sens": "bas", "cible": 2, "travail": "G1" },
     { "mesure": "capteur qui sature retrouvé, bruit 5 %", "valeur": 20, "unite": "%", "sens": "haut", "travail": "G1" }
   ] },
-  "CORTEX": { "depot": "haynbroit-alt/1", "commit": "758212a", "source": "README.md, research/v6/RESULTATS_P2.md, research/v6/PROTOCOLE_P3.md", "etat": "v5 évaluée ; v6 : P1 et P2 évalués, P3 gelé, test non exécuté", "reperes": [
+  "CORTEX": { "depot": "haynbroit-alt/1", "commit": "758212a", "source": "README.md, research/v6/RESULTATS_P2.md, research/v6/PROTOCOLE_P3.md", "etat": "v5 évaluée ; v6 : P1 et P2 évalués, P3 testé (C1), juge exporté validé (C2)", "reperes": [
     { "mesure": "profit v5, part de l'oracle", "valeur": 65.8, "unite": "%", "sens": "haut", "travail": "C3" },
     { "mesure": "sonde « hors de portée », AUC (P2)", "valeur": 0.885, "unite": "", "sens": "haut", "seuil": 0.8 },
     { "mesure": "formes statiques signalées (P2, C2)", "valeur": 42, "unite": "%", "sens": "haut", "seuil": 60 },

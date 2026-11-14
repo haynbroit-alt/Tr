@@ -1,0 +1,223 @@
+[
+ {
+  "rang": 1,
+  "secteur": "commerce",
+  "statut": "écartée",
+  "titre": "Boutique existante : la faire vendre ou arrêter sa perte",
+  "description": "Opportunité retenue en premier le 14 novembre 2026, arrêtée le même jour.",
+  "connu": "Le propriétaire a décidé de ne plus utiliser la boutique (« pas de Shopify »). Elle n’a jamais vendu et n’a reçu aucune visite française.",
+  "inconnu": "Le coût mensuel de l’abonnement, jamais relevé.",
+  "decouvrable": "Rien : l’essai n’a pas eu lieu.",
+  "faisabilite": {
+   "base": "mesuré",
+   "texte": "Impossible : la boutique n’est plus accessible ni voulue."
+  },
+  "cout_verification": {
+   "base": "estimé",
+   "depense_eur": 0,
+   "texte": "Aucune."
+  },
+  "potentiel": {
+   "base": "inconnu",
+   "texte": "Aucun ; reste une perte à arrêter si l’abonnement court encore."
+  },
+  "essai": {
+   "hypothese": "Sans objet : essai abandonné avant son début.",
+   "mesure": "Aucune.",
+   "succes": "Sans objet."
+  },
+  "abandon": [
+   "Décision du propriétaire, déjà prise."
+  ],
+  "valeur": {
+   "argent_reel_eur": 0,
+   "nature_de_la_preuve": "aucune"
+  },
+  "moteurs": {
+   "LAVOISIER": "aucun",
+   "CORTEX": "aucun",
+   "GALILÉE": "aucun"
+  },
+  "sources": []
+ },
+ {
+  "rang": 2,
+  "secteur": "services aux entreprises",
+  "statut": "retenue en premier",
+  "titre": "Missions d’analyse de données sur une plateforme d’indépendants",
+  "description": "Vendre des missions courtes d’analyse de données et de plans d’essais sur une plateforme qui apporte elle-même les clients, puisque le propriétaire n’a aucune audience.",
+  "connu": "La plateforme étudiée est gratuite à l’inscription, exige un numéro SIRET, une pièce d’identité, un avis de situation, des coordonnées bancaires, puis une attestation de vigilance pour le premier projet. La création d’une micro-entreprise se fait en ligne au guichet unique.",
+  "inconnu": "Le statut actuel du propriétaire ; le tarif journalier du marché et le délai avant une première demande, non trouvés dans les sources lues ; si un client accepte un travail largement produit par des moteurs logiciels.",
+  "decouvrable": "En 28 jours de profil en ligne : le nombre de demandes reçues, leur objet, le prix accepté.",
+  "faisabilite": {
+   "base": "estimé",
+   "texte": "Dépend de trois gestes que seul le propriétaire peut faire : immatriculation, profil avec identité, réponse aux clients. L’agent prépare le profil, les exemples de travaux et les réponses en brouillon."
+  },
+  "cout_verification": {
+   "base": "estimé",
+   "depense_eur": 0,
+   "texte": "Aucune dépense : immatriculation et inscription gratuites selon les sources lues ; cotisations dues seulement sur le chiffre d’affaires encaissé."
+  },
+  "potentiel": {
+   "base": "inconnu",
+   "texte": "Inconnu : aucun tarif ni délai sourcé."
+  },
+  "essai": {
+   "hypothese": "Un profil complet, appuyé sur trois exemples de travaux reproductibles, reçoit au moins une demande de mission en 28 jours.",
+   "mesure": "Demandes reçues sur la plateforme, comptées par le propriétaire.",
+   "succes": "Au moins une demande ; l’argent n’est compté qu’une fois une mission payée.",
+   "duree": "28 jours après mise en ligne"
+  },
+  "abandon": [
+   "Le propriétaire ne souhaite pas s’immatriculer ou paraître sous son nom.",
+   "Aucune demande en 28 jours.",
+   "Une demande exige une compétence que ni lui ni les moteurs n’ont."
+  ],
+  "valeur": {
+   "argent_reel_eur": 0,
+   "nature_de_la_preuve": "aucune"
+  },
+  "moteurs": {
+   "LAVOISIER": "aucun tant que le profit n’est pas à son seuil",
+   "CORTEX": "plan d’essais actif, seul résultat testé à ce jour (84 % contre 23 %)",
+   "GALILÉE": "lois sur données fournies par un client"
+  },
+  "sources": [
+   "https://help.malt.com/hc/fr/articles/29598923962770-Comment-obtenir-mon-attestation-de-vigilance-URSSAF",
+   "https://espace-autoentrepreneur.com/ruche/article/malt"
+  ]
+ },
+ {
+  "rang": 3,
+  "secteur": "logiciel",
+  "statut": "en attente",
+  "titre": "Vendre un outil par une plateforme qui encaisse et reverse la TVA",
+  "description": "Publier un outil issu des moteurs sur une plateforme marchande qui vend en son nom.",
+  "connu": "De telles plateformes encaissent et reversent la TVA à la place du vendeur ; leurs frais s’ajoutent à ceux du paiement.",
+  "inconnu": "Si un particulier non immatriculé peut y vendre ; quel outil quelqu’un achèterait ; comment être trouvé sans audience.",
+  "decouvrable": "Rien sans un outil vendable et un canal de visites.",
+  "faisabilite": {
+   "base": "estimé",
+   "texte": "Aucun outil n’est vendable aujourd’hui : l’audit comptable a été écarté et les moteurs ne sont pas des produits."
+  },
+  "cout_verification": {
+   "base": "estimé",
+   "depense_eur": 0,
+   "texte": "Aucune dépense d’inscription relevée."
+  },
+  "potentiel": {
+   "base": "inconnu",
+   "texte": "Inconnu."
+  },
+  "essai": {
+   "hypothese": "Un outil publié reçoit au moins dix visites qualifiées et une vente en 28 jours.",
+   "mesure": "Visites et ventes relevées sur la plateforme.",
+   "succes": "Une vente encaissée."
+  },
+  "abandon": [
+   "Pas d’outil distinctif.",
+   "Aucune visite en 28 jours."
+  ],
+  "valeur": {
+   "argent_reel_eur": 0,
+   "nature_de_la_preuve": "aucune"
+  },
+  "moteurs": {
+   "LAVOISIER": "à déterminer",
+   "CORTEX": "à déterminer",
+   "GALILÉE": "à déterminer"
+  },
+  "sources": [
+   "https://hackceleration.com/fr/labs/meilleur/vente-produits-numeriques"
+  ]
+ },
+ {
+  "rang": 4,
+  "secteur": "logiciel libre",
+  "statut": "écartée",
+  "titre": "Primes sur des tickets de logiciels libres",
+  "description": "Résoudre des tickets primés et être payé à la fusion.",
+  "connu": "La prime est payée à la fusion, par un prestataire de paiement, et le contributeur en reçoit la totalité selon la plateforme étudiée. Des témoignages décrivent dix à vingt-cinq propositions par ticket en quelques heures et des projets qui les ferment en bloc.",
+  "inconnu": "La règle de chaque projet sur le code produit par une IA ; le taux réel de fusion.",
+  "decouvrable": "Non instruit.",
+  "faisabilite": {
+   "base": "estimé",
+   "texte": "Marché décrit comme saturé de propositions automatiques ; chaque proposition est un message à un tiers au nom du propriétaire."
+  },
+  "cout_verification": {
+   "base": "estimé",
+   "depense_eur": 0,
+   "texte": "Aucune dépense, mais un risque de réputation."
+  },
+  "potentiel": {
+   "base": "inconnu",
+   "texte": "Inconnu."
+  },
+  "essai": {
+   "hypothese": "Une proposition sur cinq est fusionnée et payée.",
+   "mesure": "Fusions et paiements reçus.",
+   "succes": "Un paiement encaissé."
+  },
+  "abandon": [
+   "Saturation constatée dans les témoignages lus : écartée avant essai."
+  ],
+  "valeur": {
+   "argent_reel_eur": 0,
+   "nature_de_la_preuve": "aucune"
+  },
+  "moteurs": {
+   "LAVOISIER": "aucun",
+   "CORTEX": "aucun",
+   "GALILÉE": "aucun"
+  },
+  "sources": [
+   "https://docs.algora.io/bounties/workflow",
+   "https://app.algora.io/pricing",
+   "https://elifs-newsletter-c1a781.beehiiv.com/p/the-ai-bounty-graveyard-why-open-source-bounties-are-dying"
+  ]
+ },
+ {
+  "rang": 5,
+  "secteur": "concours",
+  "statut": "en attente",
+  "titre": "Concours de science des données dotés de prix",
+  "description": "Concourir pour un prix en argent, sans client ni audience.",
+  "connu": "Les conditions d’admission et de prix sont fixées concours par concours ; les gagnants doivent fournir des justificatifs ; le code gagnant doit parfois être rendu public.",
+  "inconnu": "Quel concours ouvert correspond à ce que les moteurs savent faire ; la probabilité de gain.",
+  "decouvrable": "La liste des concours ouverts et leur sujet, à relever sur les pages officielles.",
+  "faisabilite": {
+   "base": "estimé",
+   "texte": "Aucune condition préalable d’immatriculation, mais la concurrence est mondiale et les moteurs n’ont jamais été éprouvés sur des données réelles."
+  },
+  "cout_verification": {
+   "base": "estimé",
+   "depense_eur": 0,
+   "texte": "Aucune dépense ; du temps de calcul."
+  },
+  "potentiel": {
+   "base": "inconnu",
+   "texte": "Inconnu."
+  },
+  "essai": {
+   "hypothese": "Un moteur se classe dans la première moitié d’un concours ouvert.",
+   "mesure": "Classement public du concours.",
+   "succes": "Première moitié ; un prix n’est compté qu’encaissé."
+  },
+  "abandon": [
+   "Aucun concours ouvert ne correspond aux moteurs.",
+   "Classement dans la seconde moitié."
+  ],
+  "valeur": {
+   "argent_reel_eur": 0,
+   "nature_de_la_preuve": "aucune"
+  },
+  "moteurs": {
+   "LAVOISIER": "aucun",
+   "CORTEX": "à déterminer",
+   "GALILÉE": "à déterminer"
+  },
+  "sources": [
+   "https://www.datacamp.com/ko/blog/kaggle-competitions-the-complete-guide"
+  ]
+ }
+]
