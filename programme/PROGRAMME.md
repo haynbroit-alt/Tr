@@ -296,3 +296,25 @@ Suite, même nuit : la leçon est passée dans un outil de livraison, `node bin/
 mesure sur quatre de côté et ne retient la loi que si elle bat une droite et une constante sur ces points. Calculé
 après coup sur les 15 jeux (donc sans valeur de preuve) : 5 échecs sur 7 écartés, la constante écartée, 7 bonnes lois
 gardées. Une mission « trouver la loi » peut maintenant se livrer en une commande, avec son contrôle.
+
+### Exploration libre (14 novembre 2026, nuit) — mandat « explore le connu et l'inconnu »
+
+Trois travaux, chacun avec protocole ou prédictions poussés avant le calcul. Détail dans les fichiers cités.
+
+1. **G3, objets mathématiques exacts comme mondes** (`haynbroit-alt/All`, `RESULTATS_G3.md`). GALILÉE interroge un
+   objet arithmétique et sa loi est jugée 100 fois plus loin. Cinq lois démontrées sur six prédites (seuil 4) ; la
+   forme `n·ln n` est retrouvée seule. Six terres inconnues : aucune prédite, et le moteur le dit lui-même.
+2. **Une théorie de la suite `a → a + d(a)`** (`THEORIE_B1.md`). Deux lemmes démontrés ; un piège vérifié (99,85 %
+   des termes de la forme `2 × impair`) ; une loi empirique confirmée à 0,033 % près sur vingt millions de termes
+   neufs ; une confluence vérifiée sur 24 départs ; trois de mes prédictions réfutées et publiées. Non confronté à
+   la littérature : résultat vérifié par le calcul, pas découverte.
+3. **RÉEL-2, le garde-fou de livraison sur 15 tâches réelles neuves** (`programme/missions/reel2/`). Les 9 lois
+   retenues tiennent toutes (seuil 80 %) ; mais 3 témoins négatifs sur 12 sont retenus à tort (seuil 1) : manqué.
+   Règle corrigée après coup — une constante n'est jamais retenue — à confirmer.
+
+Ce que cela change : le verdict de GALILÉE vaut quelque chose quand il choisit ses mesures, rien quand on lui donne
+les données ; l'offre de mission doit donc proposer, quand c'est possible, de **choisir les prochaines mesures**.
+Aucune stratégie financière n'est sortie de ce travail, et aucune n'est revendiquée.
+
+**Bloqué** : le plafond de tokens du gardien pour GALILÉE est dépassé (308 000 sur 300 000). Plus aucun travail
+dans ce dépôt sans relèvement par le propriétaire.

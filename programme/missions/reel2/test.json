@@ -1,0 +1,606 @@
+{
+ "moteur": "galilee@be42b7e",
+ "graine": 1,
+ "taches": [
+  {
+   "id": "S1",
+   "domaine": "nature",
+   "titre": "CO₂ à Mauna Loa selon la date",
+   "partage": "temps",
+   "nature": "réelle",
+   "mesures": 400,
+   "vues": 200,
+   "loi": "5 / ((sin(1 / x1^22.31) + 0.4203)·4)",
+   "verdict_moteur": "empirique",
+   "secs": 4.762,
+   "decision": {
+    "loi": 3.2350839397576143,
+    "droite": 6.302119006112912,
+    "constante": 34.119212393459456
+   },
+   "final": {
+    "loi": 3.795950326438683,
+    "droite": 18.433739777362895,
+    "constante": 64.65482132718329
+   },
+   "retenue": true,
+   "tient": true
+  },
+  {
+   "id": "S2",
+   "domaine": "nature",
+   "titre": "température mondiale selon l’année",
+   "partage": "temps",
+   "nature": "réelle",
+   "mesures": 144,
+   "vues": 72,
+   "loi": "−cos(135·x1) / 3 − 1/3",
+   "verdict_moteur": "empirique",
+   "secs": 0.936,
+   "decision": {
+    "loi": 0.2655521864069057,
+    "droite": 0.12711385616139098,
+    "constante": 0.27797912841314776
+   },
+   "final": {
+    "loi": 0.9044937741199329,
+    "droite": 0.5450858413260299,
+    "constante": 0.8535563876771377
+   },
+   "retenue": false,
+   "tient": false
+  },
+  {
+   "id": "S3",
+   "domaine": "nature",
+   "titre": "masse des manchots selon la longueur de l’aile",
+   "partage": "entrelacé",
+   "nature": "réelle",
+   "mesures": 342,
+   "vues": 172,
+   "loi": "1 / (2 − x1)^π",
+   "verdict_moteur": "empirique",
+   "secs": 2.101,
+   "decision": {
+    "loi": 363.8202954366542,
+    "droite": 380.1020278090812,
+    "constante": 794.9201982588635
+   },
+   "final": {
+    "loi": 433.68162695031094,
+    "droite": 436.11959997451436,
+    "constante": 782.6841176550469
+   },
+   "retenue": true,
+   "tient": true
+  },
+  {
+   "id": "S3",
+   "domaine": "nature",
+   "titre": "masse des manchots selon la longueur de l’aile",
+   "partage": "entrelacé",
+   "nature": "mélangée",
+   "mesures": 342,
+   "vues": 172,
+   "loi": "0.697",
+   "verdict_moteur": "empirique",
+   "secs": 1.41,
+   "decision": {
+    "loi": 855.946247211814,
+    "droite": 856.0752558072618,
+    "constante": 855.9462472107482
+   },
+   "final": {
+    "loi": 802.1751896478345,
+    "droite": 801.7997431184718,
+    "constante": 802.175189647317
+   },
+   "retenue": false,
+   "tient": false
+  },
+  {
+   "id": "S4",
+   "domaine": "nature",
+   "titre": "hauteur du bec selon sa longueur",
+   "partage": "entrelacé",
+   "nature": "réelle",
+   "mesures": 342,
+   "vues": 172,
+   "loi": "0.7977",
+   "verdict_moteur": "empirique",
+   "secs": 1.585,
+   "decision": {
+    "loi": 2.048047851003658,
+    "droite": 1.995930829450234,
+    "constante": 2.048047851003487
+   },
+   "final": {
+    "loi": 2.030741678477402,
+    "droite": 1.982160117945861,
+    "constante": 2.0307416784775656
+   },
+   "retenue": false,
+   "tient": false
+  },
+  {
+   "id": "S4",
+   "domaine": "nature",
+   "titre": "hauteur du bec selon sa longueur",
+   "partage": "entrelacé",
+   "nature": "mélangée",
+   "mesures": 342,
+   "vues": 172,
+   "loi": "0.8001",
+   "verdict_moteur": "empirique",
+   "secs": 1.269,
+   "decision": {
+    "loi": 2.0275419529988135,
+    "droite": 2.0267795974055303,
+    "constante": 2.027541952998859
+   },
+   "final": {
+    "loi": 1.9394744437841034,
+    "droite": 1.9392838476644703,
+    "constante": 1.9394744437843077
+   },
+   "retenue": false,
+   "tient": false
+  },
+  {
+   "id": "T1",
+   "domaine": "technique",
+   "titre": "consommation des voitures selon le poids",
+   "partage": "entrelacé",
+   "nature": "réelle",
+   "mesures": 398,
+   "vues": 200,
+   "loi": "1 / (x1 + 3/4)^(5/2)",
+   "verdict_moteur": "empirique",
+   "secs": 3.075,
+   "decision": {
+    "loi": 4.326160037164194,
+    "droite": 4.588658282323022,
+    "constante": 8.086420279041459
+   },
+   "final": {
+    "loi": 4.601108828137502,
+    "droite": 4.819652206816041,
+    "constante": 8.218034553297517
+   },
+   "retenue": true,
+   "tient": true
+  },
+  {
+   "id": "T1",
+   "domaine": "technique",
+   "titre": "consommation des voitures selon le poids",
+   "partage": "entrelacé",
+   "nature": "mélangée",
+   "mesures": 398,
+   "vues": 200,
+   "loi": "1/2",
+   "verdict_moteur": "empirique",
+   "secs": 1.413,
+   "decision": {
+    "loi": 7.363951234071134,
+    "droite": 7.487837073854783,
+    "constante": 7.379838638534585
+   },
+   "final": {
+    "loi": 8.990118031606825,
+    "droite": 9.0456343416444,
+    "constante": 9.040355715463921
+   },
+   "retenue": true,
+   "tient": true
+  },
+  {
+   "id": "T2",
+   "domaine": "technique",
+   "titre": "consommation selon la puissance",
+   "partage": "entrelacé",
+   "nature": "réelle",
+   "mesures": 392,
+   "vues": 196,
+   "loi": "sin(0.2191 / x1)",
+   "verdict_moteur": "empirique",
+   "secs": 1.986,
+   "decision": {
+    "loi": 4.337634575940892,
+    "droite": 5.047462262191541,
+    "constante": 8.183171535958545
+   },
+   "final": {
+    "loi": 3.731648751547268,
+    "droite": 4.3711041953916645,
+    "constante": 7.348715860050206
+   },
+   "retenue": true,
+   "tient": true
+  },
+  {
+   "id": "T2",
+   "domaine": "technique",
+   "titre": "consommation selon la puissance",
+   "partage": "entrelacé",
+   "nature": "mélangée",
+   "mesures": 392,
+   "vues": 196,
+   "loi": "1/2",
+   "verdict_moteur": "empirique",
+   "secs": 1.489,
+   "decision": {
+    "loi": 8.178050513666543,
+    "droite": 8.138003540779508,
+    "constante": 8.184415521856302
+   },
+   "final": {
+    "loi": 7.4340844927198635,
+    "droite": 7.452469348381704,
+    "constante": 7.435739771369214
+   },
+   "retenue": false,
+   "tient": true
+  },
+  {
+   "id": "T3",
+   "domaine": "technique",
+   "titre": "accélération selon puissance et poids",
+   "partage": "entrelacé",
+   "nature": "réelle",
+   "mesures": 400,
+   "vues": 200,
+   "loi": "(x1 + sin(x2)) / (x1^1.154·4)",
+   "verdict_moteur": "empirique",
+   "secs": 4.596,
+   "decision": {
+    "loi": 1.6327096788255406,
+    "droite": 1.8049525572403633,
+    "constante": 2.818395110696865
+   },
+   "final": {
+    "loi": 1.474326256938573,
+    "droite": 1.583216701820164,
+    "constante": 2.7384588731620556
+   },
+   "retenue": true,
+   "tient": true
+  },
+  {
+   "id": "T3",
+   "domaine": "technique",
+   "titre": "accélération selon puissance et poids",
+   "partage": "entrelacé",
+   "nature": "mélangée",
+   "mesures": 400,
+   "vues": 200,
+   "loi": "0.6339",
+   "verdict_moteur": "empirique",
+   "secs": 1.114,
+   "decision": {
+    "loi": 2.972055854118916,
+    "droite": 2.964878672451169,
+    "constante": 2.972055854118492
+   },
+   "final": {
+    "loi": 2.73401755663715,
+    "droite": 2.74899977093324,
+    "constante": 2.7340175566371188
+   },
+   "retenue": false,
+   "tient": false
+  },
+  {
+   "id": "E1",
+   "domaine": "économie",
+   "titre": "espérance de vie selon le revenu",
+   "partage": "entrelacé",
+   "nature": "réelle",
+   "mesures": 187,
+   "vues": 94,
+   "loi": "x1^0.07071",
+   "verdict_moteur": "empirique",
+   "secs": 0.913,
+   "decision": {
+    "loi": 4.185932026640747,
+    "droite": 6.135693261277364,
+    "constante": 6.9066859185863585
+   },
+   "final": {
+    "loi": 5.668939610534012,
+    "droite": 6.22124667913074,
+    "constante": 8.369297206034199
+   },
+   "retenue": true,
+   "tient": true
+  },
+  {
+   "id": "E1",
+   "domaine": "économie",
+   "titre": "espérance de vie selon le revenu",
+   "partage": "entrelacé",
+   "nature": "mélangée",
+   "mesures": 187,
+   "vues": 94,
+   "loi": "0.8635",
+   "verdict_moteur": "empirique",
+   "secs": 0.476,
+   "decision": {
+    "loi": 7.667109745811494,
+    "droite": 7.66925859208488,
+    "constante": 7.6671097457764334
+   },
+   "final": {
+    "loi": 8.047441032118636,
+    "droite": 8.05279467599451,
+    "constante": 8.047441032144521
+   },
+   "retenue": false,
+   "tient": true
+  },
+  {
+   "id": "E2",
+   "domaine": "économie",
+   "titre": "espérance de vie selon la fécondité",
+   "partage": "entrelacé",
+   "nature": "réelle",
+   "mesures": 400,
+   "vues": 200,
+   "loi": "1 − 0.4009·x1",
+   "verdict_moteur": "empirique",
+   "secs": 1.768,
+   "decision": {
+    "loi": 4.813334889951224,
+    "droite": 4.783932113559705,
+    "constante": 9.658855411615807
+   },
+   "final": {
+    "loi": 4.47070978925857,
+    "droite": 4.480807529789923,
+    "constante": 8.943450025717143
+   },
+   "retenue": false,
+   "tient": true
+  },
+  {
+   "id": "E2",
+   "domaine": "économie",
+   "titre": "espérance de vie selon la fécondité",
+   "partage": "entrelacé",
+   "nature": "mélangée",
+   "mesures": 400,
+   "vues": 200,
+   "loi": "0.8139",
+   "verdict_moteur": "empirique",
+   "secs": 1.333,
+   "decision": {
+    "loi": 8.758575920917492,
+    "droite": 8.760482160579066,
+    "constante": 8.75857592091888
+   },
+   "final": {
+    "loi": 9.673890259997142,
+    "droite": 9.693550418268877,
+    "constante": 9.673890259998817
+   },
+   "retenue": true,
+   "tient": true
+  },
+  {
+   "id": "E3",
+   "domaine": "économie",
+   "titre": "prix du blé selon le salaire",
+   "partage": "entrelacé",
+   "nature": "réelle",
+   "mesures": 50,
+   "vues": 26,
+   "loi": "0.2771·exp(x1)",
+   "verdict_moteur": "incertaine",
+   "secs": 1.414,
+   "decision": {
+    "loi": 12.154830104037442,
+    "droite": 12.233410200027146,
+    "constante": 13.148301612973437
+   },
+   "final": {
+    "loi": 10.789888030494383,
+    "droite": 11.689228506018623,
+    "constante": 14.392938597088715
+   },
+   "retenue": true,
+   "tient": true
+  },
+  {
+   "id": "E3",
+   "domaine": "économie",
+   "titre": "prix du blé selon le salaire",
+   "partage": "entrelacé",
+   "nature": "mélangée",
+   "mesures": 50,
+   "vues": 26,
+   "loi": "0.5218",
+   "verdict_moteur": "empirique",
+   "secs": 0.268,
+   "decision": {
+    "loi": 24.568512564981507,
+    "droite": 24.24803174996832,
+    "constante": 24.568512565165488
+   },
+   "final": {
+    "loi": 9.266164776455279,
+    "droite": 9.011422119480773,
+    "constante": 9.266164776470053
+   },
+   "retenue": false,
+   "tient": false
+  },
+  {
+   "id": "E4",
+   "domaine": "économie",
+   "titre": "recettes des films selon le budget",
+   "partage": "entrelacé",
+   "nature": "réelle",
+   "mesures": 400,
+   "vues": 200,
+   "loi": "0.532·x1",
+   "verdict_moteur": "empirique",
+   "secs": 1.868,
+   "decision": {
+    "loi": 87928718.14573471,
+    "droite": 88975494.39859974,
+    "constante": 122276589.43002795
+   },
+   "final": {
+    "loi": 236030141.61820352,
+    "droite": 243609216.5071801,
+    "constante": 295214390.0288349
+   },
+   "retenue": true,
+   "tient": true
+  },
+  {
+   "id": "E4",
+   "domaine": "économie",
+   "titre": "recettes des films selon le budget",
+   "partage": "entrelacé",
+   "nature": "mélangée",
+   "mesures": 400,
+   "vues": 200,
+   "loi": "0.111",
+   "verdict_moteur": "empirique",
+   "secs": 1.181,
+   "decision": {
+    "loi": 139671005.69552532,
+    "droite": 140676353.54533318,
+    "constante": 139671005.69611418
+   },
+   "final": {
+    "loi": 290411757.0547196,
+    "droite": 292617328.9196217,
+    "constante": 290411757.0551468
+   },
+   "retenue": true,
+   "tient": true
+  },
+  {
+   "id": "E5",
+   "domaine": "économie",
+   "titre": "milles parcourus selon le prix de l’essence",
+   "partage": "entrelacé",
+   "nature": "réelle",
+   "mesures": 55,
+   "vues": 28,
+   "loi": "cos(x1)",
+   "verdict_moteur": "empirique",
+   "secs": 0.661,
+   "decision": {
+    "loi": 2474.354255322794,
+    "droite": 2313.7639248263586,
+    "constante": 2232.1075105772816
+   },
+   "final": {
+    "loi": 2451.1686764573906,
+    "droite": 2131.6253237301607,
+    "constante": 2160.1023109382036
+   },
+   "retenue": false,
+   "tient": false
+  },
+  {
+   "id": "E5",
+   "domaine": "économie",
+   "titre": "milles parcourus selon le prix de l’essence",
+   "partage": "entrelacé",
+   "nature": "mélangée",
+   "mesures": 55,
+   "vues": 28,
+   "loi": "cos(x1)",
+   "verdict_moteur": "empirique",
+   "secs": 0.517,
+   "decision": {
+    "loi": 2355.1400162259383,
+    "droite": 2060.6915410191104,
+    "constante": 1913.187191466595
+   },
+   "final": {
+    "loi": 2830.1010811900155,
+    "droite": 2362.018377156257,
+    "constante": 2256.0888689707854
+   },
+   "retenue": false,
+   "tient": false
+  },
+  {
+   "id": "F1",
+   "domaine": "finance",
+   "titre": "rendement S&P 500 du mois suivant selon celui du mois",
+   "partage": "temps",
+   "nature": "réelle",
+   "mesures": 121,
+   "vues": 60,
+   "loi": "−0.01814",
+   "verdict_moteur": "empirique",
+   "secs": 0.249,
+   "decision": {
+    "loi": 0.02240978325555205,
+    "droite": 0.022409403823207625,
+    "constante": 0.022409783255551246
+   },
+   "final": {
+    "loi": 0.06263945454490921,
+    "droite": 0.06263663319572968,
+    "constante": 0.0626394545449094
+   },
+   "retenue": false,
+   "tient": false
+  },
+  {
+   "id": "F2",
+   "domaine": "finance",
+   "titre": "rendement MSFT du mois suivant selon celui du mois",
+   "partage": "temps",
+   "nature": "réelle",
+   "mesures": 121,
+   "vues": 60,
+   "loi": "−x1 / 4",
+   "verdict_moteur": "empirique",
+   "secs": 0.249,
+   "decision": {
+    "loi": 0.05337483998228471,
+    "droite": 0.05537356081557509,
+    "constante": 0.05309483976778837
+   },
+   "final": {
+    "loi": 0.09382641383865399,
+    "droite": 0.09446993526736895,
+    "constante": 0.08837495376711477
+   },
+   "retenue": false,
+   "tient": false
+  },
+  {
+   "id": "F3",
+   "domaine": "finance",
+   "titre": "cours du S&P 500 selon la date",
+   "partage": "temps",
+   "nature": "réelle",
+   "mesures": 123,
+   "vues": 61,
+   "loi": "(2/3 − cos(1896 / x1) / 4)^0.561",
+   "verdict_moteur": "empirique",
+   "secs": 2.428,
+   "decision": {
+    "loi": 134.55732886159558,
+    "droite": 486.58067068828706,
+    "constante": 206.97556895119223
+   },
+   "final": {
+    "loi": 163.14147944476704,
+    "droite": 509.937962356876,
+    "constante": 227.87566223391426
+   },
+   "retenue": true,
+   "tient": true
+  }
+ ]
+}

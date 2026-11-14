@@ -50,10 +50,12 @@ export function analyser({ noms, cible, X, y, graine = 1 }) {
   const t = temoins(X, y, vu, test);
   const erreur = r.texte ? eqm(test, (x) => r.f(x.map((v, k) => v / sx[k])) * sy, X, y) : null;
   const ref = Math.min(t.constante, t.droite ?? Infinity);
-  const retenue = erreur != null && Number.isFinite(erreur) && erreur < ref;
+  // RESULTATS_REEL2 : une « loi » qui ne dépend d'aucune variable battait les témoins une fois sur trois, par hasard.
+  const pv = r.texte ? vu.map((i) => r.f(X[i].map((v, k) => v / sx[k]))) : [], sans_variable = !r.texte || Math.max(...pv) - Math.min(...pv) < 1e-9;
+  const retenue = !sans_variable && erreur != null && Number.isFinite(erreur) && erreur < ref;
   return { cible, noms, mesures: y.length, vues: vu.length, mises_de_cote: test.length, peu_de_mesures: y.length < MESURES_MIN,
     loi: r.texte, echelles: { variables: sx, reponse: sy }, verdict_moteur: r.verdict ?? null, secs: r.secs,
-    erreur_loi: Number.isFinite(erreur) ? erreur : null, erreur_constante: t.constante, erreur_droite: t.droite, retenue };
+    erreur_loi: Number.isFinite(erreur) ? erreur : null, erreur_constante: t.constante, erreur_droite: t.droite, sans_variable, retenue };
 }
 
 const n = (v) => (v == null ? 'non calculable' : Number(v.toPrecision(4)).toString());
@@ -64,6 +66,7 @@ export function rapport(a) {
   l.push(`Loi trouvée (variables divisées par ${a.echelles.variables.map(n).join(', ')} ; réponse par ${n(a.echelles.reponse)}) : ${a.loi ?? 'aucune'}`,
     `Erreur sur les mesures mises de côté — loi : ${n(a.erreur_loi)} ; droite : ${n(a.erreur_droite)} ; constante : ${n(a.erreur_constante)}`,
     a.retenue ? 'Conclusion : loi RETENUE — elle prédit les mesures non vues mieux qu\'une droite et qu\'une constante.'
+      : a.sans_variable ? 'Conclusion : loi NON RETENUE — ce qui est rendu ne dépend d\'aucune variable : ce n\'est pas une loi.'
       : 'Conclusion : loi NON RETENUE — elle ne prédit pas mieux qu\'un témoin simple sur les mesures non vues.',
     `Niveau de confiance affiché par le moteur (pour information, non garanti en données fournies) : ${a.verdict_moteur ?? 'aucun'}`,
     'Limites : interpolation seulement ; une loi retenue prédit, elle ne prouve pas un mécanisme.');

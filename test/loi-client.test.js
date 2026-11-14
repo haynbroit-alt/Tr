@@ -28,3 +28,11 @@ test('une courbe nette est retenue ; du bruit pur ne l’est pas', () => {
   assert.match(rapport(bruit), /ATTENTION/);
   assert.equal(bruit.retenue, false, JSON.stringify(bruit));
 });
+
+test('une constante n’est jamais retenue, même si elle bat les témoins par hasard', () => {
+  let s = 3; const alea = () => ((s = (s * 16807) % 2147483647) / 2147483647);
+  for (let k = 0; k < 6; k++) {
+    const X = Array.from({ length: 80 }, () => [alea()]), a = analyser({ noms: ['x'], cible: 'y', X, y: X.map(() => 5 + alea()), graine: 1 });
+    assert.ok(!(a.sans_variable && a.retenue), JSON.stringify(a));
+  }
+});
