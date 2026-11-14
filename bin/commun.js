@@ -33,6 +33,10 @@ if (cmd === 'executer') {
   process.exit(a.ok && b.ok ? 0 : 2);
 } else if (cmd === 'etat') {
   for (const e of reg.etat()) console.log(`${e.niveau.padEnd(15)} ${e.contestee ? 'contestée ' : '          '}${e.auteur.padEnd(9)} ${e.probleme.padEnd(22)} ${e.enonce}`.slice(0, 220));
+} else if (cmd === 'jalon') {
+  const { readFileSync } = await import('node:fs');
+  const { jalon } = await import('../src/jalons.js');
+  for (const j of JSON.parse(readFileSync(nom, 'utf8'))) console.log(jalon(reg, j), j.moteur, j.travail, j.mesure);
 } else if (cmd === 'comptes') {
   const c = (await import('../src/comptes.js')).comptes(reg);
   for (const [m, x] of Object.entries(c.individuel)) { console.log(`\n${m} — ${x.etat}`); for (const r of x.reperes) console.log(`  ${r.atteint === true ? 'atteint ' : r.atteint === false ? 'MANQUE  ' : '        '}${r.mesure} : ${r.valeur ?? 'non mesuré'}${r.unite ? ' ' + r.unite : ''}${r.seuil != null ? ` (seuil ${r.seuil})` : r.cible != null ? ` (cible proposée ${r.cible})` : ''}${r.travail ? ' → ' + r.travail : ''}`); }

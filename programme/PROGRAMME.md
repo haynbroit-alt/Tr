@@ -160,3 +160,21 @@ Règle : une piste n'entre au compte des gains que par un encaissement constaté
 1. **Lancer le test unique de CORTEX P3** (environ une heure de calcul, irréversible par nature).
 2. **Valider ou corriger les seuils** des projets G1, G2, C2, L2.
 3. **Boutique** : stock réel et coût d'achat ; budget maximal et canal ; conformité légale des fiches.
+
+---
+
+## 6. Avancement (14 novembre 2026)
+
+Les quatre décisions ont été données d'un bloc (« j'autorise tout »). Jalons consignés au registre
+(`programme/jalons-2026-11-14.json`, `node bin/commun.js comptes`).
+
+| Travail | État | Mesure |
+|---|---|---|
+| **C1** CORTEX | test unique lancé, graines 5001–5400 | résultat à consigner à la fin de l'exécution |
+| **L1** LAVOISIER | en cours, PR `haynbroit-alt/A#7` | FD2 0,20 → 0,08 (0,12 sur données réalistes) ; R 70/95 → 80/95 ; P inchangé à 3,8 % |
+| **G2** GALILÉE | mesuré puis suspendu, PR `haynbroit-alt/All#2` | le moteur actuel retrouve déjà 79 % des lois détectables sur comptages : l'hypothèse du programme était fausse, le module n'est pas écrit |
+| **T4** boutique | toujours bloqué | il manque des faits, pas une autorisation : stock, coût d'achat, budget ; connexion à la boutique à rétablir |
+
+Conséquence pour le programme : les constantes rendues par GALILÉE sur les ventes de LAVOISIER ne viennent pas du
+bruit de comptage. Piste suivante, non vérifiée : l'effet du prix n'y est pas détectable (prix qui bougent de
+−12 % à +15 %). Cela renforce L2 (entreprise pilotable) : seule une expérience qui fait varier le prix peut trancher.

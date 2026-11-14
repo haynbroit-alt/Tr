@@ -11,7 +11,7 @@ export function comptes(reg) {
   const rep = JSON.parse(readFileSync(join(RACINE, 'programme', 'reperes.json'), 'utf8')), L = reg.lignes, etat = reg.etat();
   const moteurs = ['GALILÉE', 'CORTEX', 'LAVOISIER'];
   const jalons = L.filter((r) => r.type === 'jalon');
-  const individuel = Object.fromEntries(moteurs.map((m) => [m, { ...rep[m], reperes: rep[m].reperes.map((r) => ({ ...r, atteint: atteint(r) })), jalons: jalons.filter((j) => j.auteur === m) }]));
+  const individuel = Object.fromEntries(moteurs.map((m) => [m, { ...rep[m], reperes: rep[m].reperes.map((r) => ({ ...r, atteint: atteint(r) })), jalons: jalons.filter((j) => j.auteur === m && j.compte === 'individuel') }]));
   const verifs = L.filter((r) => r.type === 'verification'), auteurDe = (id) => reg.get(id)?.auteur;
   const croisees = verifs.filter((v) => moteurs.includes(v.auteur) && moteurs.includes(auteurDe(v.cible)) && v.portee !== 'temoin-negatif');
   const collectif = {
