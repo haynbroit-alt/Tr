@@ -1,0 +1,14 @@
+[
+ {
+  "moteur": "GALILÉE",
+  "travail": "RÉEL-2",
+  "mesure": "chaîne de livraison corrigée : témoins négatifs neufs retenus à tort",
+  "avant": "3 sur 12 avant la règle",
+  "apres": "0 sur 30 ; 9 auraient été retenus sans la règle",
+  "seuil": "au plus 2 sur 30 — atteint",
+  "commit": "d8a653c",
+  "source": "haynbroit-alt/Tr programme/missions/reel2/CONFIRMATION_TEMOINS.md",
+  "portee": "exécution unique, trois permutations neuves sur dix tâches",
+  "note": "mêmes dix jeux de variables que RÉEL-2 ; seules les réponses mélangées sont neuves"
+ }
+]

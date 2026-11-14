@@ -318,3 +318,7 @@ Aucune stratégie financière n'est sortie de ce travail, et aucune n'est revend
 
 **Bloqué** : le plafond de tokens du gardien pour GALILÉE est dépassé (308 000 sur 300 000). Plus aucun travail
 dans ce dépôt sans relèvement par le propriétaire.
+
+Suite, même nuit : la règle « une constante n'est jamais retenue » est confirmée sur 30 témoins négatifs neufs
+(0 retenu, seuil 2 ; 9 l'auraient été sans elle). Deux pistes issues de ces mesures sont au registre, en attente
+et sans aucun revenu : vendre le choix de la prochaine mesure, et vendre le contrôle d'une courbe déjà utilisée.

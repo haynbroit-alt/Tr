@@ -1,0 +1,302 @@
+[
+ {
+  "tache": "S3",
+  "permutation": 101,
+  "loi": "2/3",
+  "sans_variable": true,
+  "retenue": false,
+  "erreur_loi": 777.0182449216856,
+  "erreur_droite": 778.7815762718925,
+  "erreur_constante": 778.157102079548
+ },
+ {
+  "tache": "S3",
+  "permutation": 202,
+  "loi": "2/3",
+  "sans_variable": true,
+  "retenue": false,
+  "erreur_loi": 776.156632160712,
+  "erreur_droite": 777.6982299203103,
+  "erreur_constante": 777.6575962593317
+ },
+ {
+  "tache": "S3",
+  "permutation": 303,
+  "loi": "2/3",
+  "sans_variable": true,
+  "retenue": false,
+  "erreur_loi": 766.4471126376485,
+  "erreur_droite": 769.3645352281087,
+  "erreur_constante": 769.5212454545114
+ },
+ {
+  "tache": "S4",
+  "permutation": 101,
+  "loi": "0.794",
+  "sans_variable": true,
+  "retenue": false,
+  "erreur_loi": 1.9391156319127194,
+  "erreur_droite": 1.964089579981577,
+  "erreur_constante": 1.939115631911347
+ },
+ {
+  "tache": "S4",
+  "permutation": 202,
+  "loi": "0.8109",
+  "sans_variable": true,
+  "retenue": false,
+  "erreur_loi": 2.0690124511915275,
+  "erreur_droite": 2.0644543162895226,
+  "erreur_constante": 2.069012451655116
+ },
+ {
+  "tache": "S4",
+  "permutation": 303,
+  "loi": "0.792",
+  "sans_variable": true,
+  "retenue": false,
+  "erreur_loi": 2.0453046356505,
+  "erreur_droite": 2.0287906694838056,
+  "erreur_constante": 2.045304636560765
+ },
+ {
+  "tache": "T1",
+  "permutation": 101,
+  "loi": "1/2",
+  "sans_variable": true,
+  "retenue": false,
+  "erreur_loi": 7.046655485785688,
+  "erreur_droite": 7.203053523377535,
+  "erreur_constante": 7.200796538659947
+ },
+ {
+  "tache": "T1",
+  "permutation": 202,
+  "loi": "1/2",
+  "sans_variable": true,
+  "retenue": false,
+  "erreur_loi": 7.83565407272901,
+  "erreur_droite": 7.86010154791842,
+  "erreur_constante": 7.873660211933625
+ },
+ {
+  "tache": "T1",
+  "permutation": 303,
+  "loi": "0.5339",
+  "sans_variable": true,
+  "retenue": false,
+  "erreur_loi": 8.306691598755972,
+  "erreur_droite": 8.307510420951118,
+  "erreur_constante": 8.306691598751497
+ },
+ {
+  "tache": "T2",
+  "permutation": 101,
+  "loi": "0.5245",
+  "sans_variable": true,
+  "retenue": false,
+  "erreur_loi": 8.81022488214423,
+  "erreur_droite": 8.862926059833681,
+  "erreur_constante": 8.81022488214513
+ },
+ {
+  "tache": "T2",
+  "permutation": 202,
+  "loi": "0.527",
+  "sans_variable": true,
+  "retenue": false,
+  "erreur_loi": 8.099470032294947,
+  "erreur_droite": 8.121571240885652,
+  "erreur_constante": 8.099470032293276
+ },
+ {
+  "tache": "T2",
+  "permutation": 303,
+  "loi": "1/2",
+  "sans_variable": true,
+  "retenue": false,
+  "erreur_loi": 8.555604440770901,
+  "erreur_droite": 8.571171413408285,
+  "erreur_constante": 8.552973193915001
+ },
+ {
+  "tache": "T3",
+  "permutation": 101,
+  "loi": "0.6279",
+  "sans_variable": true,
+  "retenue": false,
+  "erreur_loi": 2.842905106491327,
+  "erreur_droite": 2.8424488830420906,
+  "erreur_constante": 2.8429051064790123
+ },
+ {
+  "tache": "T3",
+  "permutation": 202,
+  "loi": "0.6241",
+  "sans_variable": true,
+  "retenue": false,
+  "erreur_loi": 3.0680280491196257,
+  "erreur_droite": 3.0550605031916045,
+  "erreur_constante": 3.068028049270592
+ },
+ {
+  "tache": "T3",
+  "permutation": 303,
+  "loi": "0.6291",
+  "sans_variable": true,
+  "retenue": false,
+  "erreur_loi": 2.8917235345952306,
+  "erreur_droite": 2.9058271567984972,
+  "erreur_constante": 2.891723534503253
+ },
+ {
+  "tache": "E1",
+  "permutation": 101,
+  "loi": "0.8578",
+  "sans_variable": true,
+  "retenue": false,
+  "erreur_loi": 8.544436311638163,
+  "erreur_droite": 8.651414154432423,
+  "erreur_constante": 8.544436311637535
+ },
+ {
+  "tache": "E1",
+  "permutation": 202,
+  "loi": "0.856",
+  "sans_variable": true,
+  "retenue": false,
+  "erreur_loi": 8.467357986739472,
+  "erreur_droite": 8.474928673338912,
+  "erreur_constante": 8.467357986746949
+ },
+ {
+  "tache": "E1",
+  "permutation": 303,
+  "loi": "0.8538",
+  "sans_variable": true,
+  "retenue": false,
+  "erreur_loi": 7.207911185839192,
+  "erreur_droite": 7.189956901319887,
+  "erreur_constante": 7.207911185838767
+ },
+ {
+  "tache": "E2",
+  "permutation": 101,
+  "loi": "0.8227",
+  "sans_variable": true,
+  "retenue": false,
+  "erreur_loi": 10.101972061410684,
+  "erreur_droite": 9.971291361545672,
+  "erreur_constante": 10.10197206143434
+ },
+ {
+  "tache": "E2",
+  "permutation": 202,
+  "loi": "0.8228",
+  "sans_variable": true,
+  "retenue": false,
+  "erreur_loi": 9.784002139090006,
+  "erreur_droite": 9.804190323973646,
+  "erreur_constante": 9.784002138695598
+ },
+ {
+  "tache": "E2",
+  "permutation": 303,
+  "loi": "0.8198",
+  "sans_variable": true,
+  "retenue": false,
+  "erreur_loi": 9.68678683453607,
+  "erreur_droite": 9.686441687690646,
+  "erreur_constante": 9.686786834537951
+ },
+ {
+  "tache": "E3",
+  "permutation": 101,
+  "loi": "0.4195",
+  "sans_variable": true,
+  "retenue": false,
+  "erreur_loi": 16.881638771499198,
+  "erreur_droite": 18.132614803075715,
+  "erreur_constante": 16.881638771413602
+ },
+ {
+  "tache": "E3",
+  "permutation": 202,
+  "loi": "0.422",
+  "sans_variable": true,
+  "retenue": false,
+  "erreur_loi": 12.592274834325119,
+  "erreur_droite": 12.065631061369434,
+  "erreur_constante": 12.592274834327265
+ },
+ {
+  "tache": "E3",
+  "permutation": 303,
+  "loi": "0.4316",
+  "sans_variable": true,
+  "retenue": false,
+  "erreur_loi": 12.57877073570782,
+  "erreur_droite": 12.500004536225656,
+  "erreur_constante": 12.578770735748785
+ },
+ {
+  "tache": "E4",
+  "permutation": 101,
+  "loi": "0.1179",
+  "sans_variable": true,
+  "retenue": false,
+  "erreur_loi": 308901723.4142582,
+  "erreur_droite": 310376250.6142898,
+  "erreur_constante": 308901723.4523562
+ },
+ {
+  "tache": "E4",
+  "permutation": 202,
+  "loi": "0.03448",
+  "sans_variable": true,
+  "retenue": false,
+  "erreur_loi": 127912830.40414193,
+  "erreur_droite": 128209986.30158684,
+  "erreur_constante": 127912830.40400617
+ },
+ {
+  "tache": "E4",
+  "permutation": 303,
+  "loi": "0.03353",
+  "sans_variable": true,
+  "retenue": false,
+  "erreur_loi": 149399914.2743024,
+  "erreur_droite": 149983876.4654856,
+  "erreur_constante": 149399914.27353922
+ },
+ {
+  "tache": "E5",
+  "permutation": 101,
+  "loi": "cos(essence)",
+  "sans_variable": false,
+  "retenue": false,
+  "erreur_loi": 2950.4629610073466,
+  "erreur_droite": 2678.87616158852,
+  "erreur_constante": 2310.5687896450568
+ },
+ {
+  "tache": "E5",
+  "permutation": 202,
+  "loi": "0.7017",
+  "sans_variable": true,
+  "retenue": false,
+  "erreur_loi": 2185.5200093754815,
+  "erreur_droite": 2129.8160385908714,
+  "erreur_constante": 2185.5200093693456
+ },
+ {
+  "tache": "E5",
+  "permutation": 303,
+  "loi": "3/4",
+  "sans_variable": true,
+  "retenue": false,
+  "erreur_loi": 2463.0891155359013,
+  "erreur_droite": 2474.2412963006273,
+  "erreur_constante": 2468.769716353084
+ }
+]
