@@ -20,7 +20,7 @@ export function lireFEC(texte) {
     const m = nombre(v('Montant'));
     return {
       ligne: i + 2, ecriture: `${v('JournalCode')}/${v('EcritureNum')}`, date: v('EcritureDate'), jour: jour(v('EcritureDate')), compte: v('CompteNum'),
-      tiers: v('CompAuxNum') || v('CompteNum'), piece: v('PieceRef'), lettre: v('EcritureLet'),
+      tiers: v('CompAuxNum') || v('CompteNum'), piece: v('PieceRef'), lettre: v('EcritureLet') || v('EcritureLettrage'),
       debit: cents(sens ? (/^d/i.test(v('Sens')) ? m : 0) : nombre(v('Debit'))), credit: cents(sens ? (/^c/i.test(v('Sens')) ? m : 0) : nombre(v('Credit'))),
     };
   });

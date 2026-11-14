@@ -34,7 +34,7 @@ test('audit FEC : un fichier déséquilibré ou sans colonnes n’est pas audit�
 });
 
 test('audit FEC : variante Montant/Sens, séparateur barre verticale, sans lettrage', () => {
-  const t = 'JournalCode|EcritureNum|EcritureDate|CompteNum|CompAuxNum|PieceRef|Montant|Sens|EcritureLet';
+  const t = 'JournalCode|EcritureNum|EcritureDate|CompteNum|CompAuxNum|PieceRef|Montant|Sens|EcritureLettrage';
   const f = [t, 'VT|1|20250101|411000|C9|V9|120.50|D|', 'VT|1|20250101|706000||V9|120.50|C|', 'VT|2|20250801|411000|C8|V8|10.00|D|', 'VT|2|20250801|706000||V8|10.00|C|'].join('\n');
   const r = auditer(lireFEC(f));
   assert.equal(r.lu.lettrage_clients, false);

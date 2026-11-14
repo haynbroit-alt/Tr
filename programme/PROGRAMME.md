@@ -218,3 +218,19 @@ et prendre de décision »). Ce qui suit est décidé, pas proposé ; il garde u
 - **GARDIEN** : plafond de tokens du mode économique dépassé (266 869 sur 200 000). Lever ce plafond n'est pas une
   décision déléguée : elle revient au propriétaire (`gardien mode normal` ou `intensif`, ou `gardien autoriser`).
   D'ici là, aucune nouvelle mission ni travail coûteux.
+
+### Relevé des connecteurs et révision (14 novembre 2026, plus tard)
+
+Le propriétaire a demandé d'utiliser tous les connecteurs. Relevé en lecture seule, consigné au journal
+(`programme/initiatives-2026-11-14-b.json`) :
+
+- **Aucune audience, nulle part** : 3 abonnés sur le seul réseau relié, aucun contact réel au carnet, aucune liste
+  d'e-mails. **Aucun moyen d'encaissement relié.** Boutique, messagerie et envoi d'e-mails inaccessibles sans
+  reconnexion par le propriétaire.
+- **Seule portée gratuite mesurée** : cinq vidéos courtes publiées en août, 1 282 personnes touchées sans abonnés.
+- **Hypothèse contredite** : l'outil d'audit n'est pas vendable tel quel. Des outils équivalents existent (l'un
+  affiché à 200 €, plusieurs gratuits à l'essai) et la vérification des comptes est réservée aux experts-comptables.
+  L'initiative « proposer l'audit à des tiers » est abandonnée ; l'outil reste un utilitaire et une entrée pour L3.
+- **Ordre de travail révisé** : 1. boutique — essai de vidéos courtes dès la reconnexion (en attente de validation,
+  car publication au nom du propriétaire) ; 2. relier un moyen d'encaissement, sans quoi aucun euro ne peut être
+  reçu ; 3. moteurs — C2 puis T2, L1 ; l'audit ne revient que si L3 démontre un avantage sur un fichier réel.
