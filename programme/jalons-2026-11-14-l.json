@@ -1,0 +1,12 @@
+[
+ {
+  "moteur": "GALILÉE", "travail": "G3",
+  "mesure": "suites a → a + k·d(a) : part des moitiés de termes multiples de 3, prédite par un modèle sans paramètre",
+  "avant": "0,3333 pour des entiers ordinaires ; 0,389 mesuré sans explication",
+  "apres": "prédit 0,3877 ; 0,3885 ; 0,3874 ; 0,3886 — mesuré 0,3879 ; 0,3885 ; 0,3885 ; 0,3887 (k = 5, 7, 11, 13)",
+  "seuil": "entre 0,384 et 0,392 pour chacune — atteint",
+  "commit": "86d419b", "source": "haynbroit-alt/All THEORIE_B1.md",
+  "portee": "prédictions écrites avant le calcul ; quatre suites jamais calculées, neuf millions de termes chacune",
+  "note": "le modèle (chaîne de Markov sur le résidu modulo 3^j) a été mis au point après coup sur k = 1 ; valeur exacte de la constante ouverte ; non confronté à la littérature"
+ }
+]
