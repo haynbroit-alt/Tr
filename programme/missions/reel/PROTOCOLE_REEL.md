@@ -79,3 +79,8 @@ dans ces variables réduites. Le script n'est plus modifié avant le test.
 
 Commande du test, une seule fois :
 `node scripts/reel-nist.js --lot observe --echelle norme --out programme/missions/reel/test-observe.json`
+
+## Erratum, après le test
+
+Le lot de test compte 15 jeux distincts et non 16 : les quatre fichiers Misra portent les mêmes mesures. Le texte
+ci-dessus n'est pas retouché ; le seuil de 8 jeux reste celui qui a été écrit. Voir `RESULTATS_REEL.md`.

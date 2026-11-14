@@ -53,7 +53,7 @@ autoentrepreneur.urssaf.fr/portail/accueil/creer-mon-auto-entreprise/guichet-uni
 **Tarif** : [à fixer par vous — aucun tarif de marché sourcé n'a été trouvé ; une première mission courte, à
 périmètre fermé, limite le risque des deux côtés.]
 
-## 3. Trois exemples de travaux (tous sur données simulées)
+## 3. Quatre exemples de travaux (trois sur données simulées, un sur mesures réelles)
 
 Aucun n'est un travail pour un client. Chacun se relit dans les dépôts.
 
@@ -69,6 +69,15 @@ bruit plus fort, sur graines neuves du banc général) ; et quand les données s
 pouvoir demander de nouvelles mesures, le moteur ne signale qu'une forme fausse sur deux environ (13 sur 28) — son
 niveau de confiance n'est alors pas une garantie. Source : dépôt GALILÉE, `bench/COMPTAGES_BASE.md`,
 `RESULTATS_G1.md`, `RESULTATS_G4.md`.
+
+**D. Prédire des mesures réelles jamais vues — le seul exemple sur données réelles.**
+Sur 15 jeux de mesures de laboratoire publiés par le NIST avec un modèle certifié, une mesure sur quatre étant mise
+de côté : la loi trouvée prédit les mesures non vues au niveau du modèle certifié pour 8 jeux (dont un où une simple
+constante suffit). Sur un jeu de 151 mesures, elle se trompe dix fois moins que le modèle certifié. Limites : les 7
+jeux de 54 mesures ou plus réussissent tous, un seul des 8 jeux plus petits — donc pas de mission « trouver la loi »
+sous une cinquantaine de mesures ; les lois trouvées prédisent mais ne s'interprètent pas toujours ; interpolation
+seulement ; le niveau de confiance affiché par le moteur n'a prévenu d'aucun échec. Source : dépôt commun,
+`programme/missions/reel/RESULTATS_REEL.md`.
 
 **C. Repérer des flux cachés dans les écritures d'une entreprise.**
 Sur 100 entreprises simulées de développement : 80 flux cachés retrouvés sur 95 ; 1 entreprise sans flux caché

@@ -1,0 +1,38 @@
+[
+ {
+  "moteur": "GALILÉE",
+  "travail": "RÉEL",
+  "mesure": "mesures réelles de référence (NIST) : jeux où la loi prédit les points non vus au niveau de la référence",
+  "avant": "jamais mesuré sur données réelles",
+  "apres": "8 sur 15 (dont une constante) ; 7 sur 7 pour les jeux de 54 mesures ou plus, 1 sur 8 en dessous",
+  "seuil": "au moins 8 — atteint sans marge",
+  "commit": "2eae4bf",
+  "source": "haynbroit-alt/Tr programme/missions/reel/RESULTATS_REEL.md",
+  "portee": "exécution unique, 15 jeux observés distincts, une mesure sur quatre mise de côté, moteur gelé be42b7e, graine 1",
+  "note": "le protocole annonçait 16 jeux, il y en a 15 ; interpolation seulement ; le découpage par nombre de mesures est un constat après coup"
+ },
+ {
+  "moteur": "GALILÉE",
+  "travail": "RÉEL",
+  "mesure": "mesures réelles de référence (NIST) : jeux très éloignés (rapport > 10) dits « établie »",
+  "avant": "jamais mesuré",
+  "apres": "0 sur 2 ; mais les 7 échecs sont dits « empirique » et les 2 « incertaine » sont de bonnes lois",
+  "seuil": "aucun — atteint",
+  "commit": "2eae4bf",
+  "source": "haynbroit-alt/Tr programme/missions/reel/RESULTATS_REEL.md",
+  "portee": "exécution unique, 15 jeux observés distincts",
+  "note": "le verdict du moteur ne prévient pas des échecs en données fournies"
+ },
+ {
+  "moteur": "GALILÉE",
+  "travail": "RÉEL",
+  "mesure": "jeu Kirby2 (151 mesures réelles) : erreur sur 38 mesures non vues",
+  "avant": "0,156 pour le modèle certifié du NIST",
+  "apres": "0,015 pour la loi de GALILÉE",
+  "seuil": null,
+  "commit": "2eae4bf",
+  "source": "haynbroit-alt/Tr programme/missions/reel/RESULTATS_REEL.md",
+  "portee": "un jeu, interpolation, recalculé à part",
+  "note": "loi dite « incertaine » par le moteur et sans forme interprétable"
+ }
+]
