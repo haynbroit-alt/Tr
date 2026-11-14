@@ -191,3 +191,30 @@ bruit de comptage. Piste suivante, non vérifiée : l'effet du prix n'y est pas 
   `node bin/commun.js executer opportunites --fichier …`). Huit opportunités instruites ; une retenue en premier, la
   boutique existante, parce que son expérience ne demande aucune dépense nouvelle et qu'elle se termine dans tous
   les cas par une valeur réelle : une première vente, ou une raison mesurée d'arrêter une perte mensuelle.
+
+## 8. Mandat entrepreneurial et décisions déléguées (14 novembre 2026, soir)
+
+Le propriétaire a demandé que l'initiative soit la règle, puis a délégué les décisions en attente (« à toi de choisir
+et prendre de décision »). Ce qui suit est décidé, pas proposé ; il garde un droit de veto sur chaque point.
+
+- **Mandat** (`mandat.json`, `src/mandat.js`, `node bin/commun.js mandat`) : ce qui ne coûte rien, n'engage personne
+  et se défait en un geste s'exécute sans attendre ; dépense au-delà du plafond, message à un tiers, engagement et
+  irréversible attendent sa validation ; fictif et illégal sont interdits. L'argent engagé se lit au journal.
+- **Dépense : 0 € aujourd'hui.** Rien d'achetable n'a de retour mesurable tant que la boutique est inaccessible ;
+  l'audit a besoin d'un fichier, pas d'argent. Au point d'étape de la boutique (28 jours après reconnexion), si moins
+  de 30 visites françaises : un seul essai payant plafonné à 30 €, montant choisi pour borner la perte, ou la fermeture.
+- **Contacts : brouillons.** Aucun message ne part au nom du propriétaire. Première cible retenue pour l'audit : les
+  cabinets d'expertise comptable (ils détiennent les fichiers ; l'outil tourne chez eux, aucun fichier ne sort).
+- **Ordre de travail** : 1. audit des comptes de tiers — obtenir un premier fichier réel ; 2. boutique — dès la
+  reconnexion du connecteur, sinon mise en pause proposée au 28 novembre pour arrêter l'abonnement ; 3. moteurs —
+  C2 puis T2, puis la cause de l'erreur médiane de profit de LAVOISIER.
+- **Première initiative exécutée** : outil d'audit des comptes de tiers (`src/audit-fec.js`,
+  `node bin/commun.js audit-fec <fichier> [--detail]`). Testé sur anomalies plantées seulement : aucun fichier réel
+  audité, 0 € réclamé, 0 € encaissé. Les fichiers réels se déposent dans `prive/`, ignoré par git.
+- **L1** : un cas extrême de profit corrigé (graine 1 : 178 % → 42 %), médiane inchangée à 3,8 % pour un seuil de
+  2 %. Une première version, mesurée, a été retirée parce qu'elle dégradait le regroupement. PR `haynbroit-alt/A#9`.
+- **C2** : première épreuve terminée, seconde en cours (200 mondes placebo, exécution unique). T2 attend son verdict
+  et une autorisation du GARDIEN.
+- **GARDIEN** : plafond de tokens du mode économique dépassé (266 869 sur 200 000). Lever ce plafond n'est pas une
+  décision déléguée : elle revient au propriétaire (`gardien mode normal` ou `intensif`, ou `gardien autoriser`).
+  D'ici là, aucune nouvelle mission ni travail coûteux.
