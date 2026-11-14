@@ -160,7 +160,7 @@ Le coût affiché en dollars est celui que Claude Code écrit lui-même dans son
 session) : il peut manquer des sessions, et il n'est jamais complété par une estimation.
 `gardien repetitions` signale les commandes et lectures répétées (≥ 3 dans une session) et les missions relancées
 après refus. Chaque dépôt moteur porte un court `CLAUDE.md` qui renvoie à cette barrière ; ces fichiers de consignes
-ne font pas partie des 33 fichiers moteurs gelés.
+ne font pas partie des 34 fichiers moteurs gelés.
 
 ## 4. Limites
 

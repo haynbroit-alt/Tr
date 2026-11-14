@@ -1,0 +1,15 @@
+[
+  {
+    "cle": "audit-comptes-de-tiers#outil",
+    "action": "Construire l’outil d’audit des comptes de tiers sur fichier d’écritures comptables (format légal FEC) : factures fournisseur saisies deux fois, fournisseurs débiteurs, créances clients anciennes — chaque cas cite ses écritures",
+    "nature": { "depense_eur": 0, "tiers": false, "engagement": false, "irreversible": false },
+    "attendu": "Transformer un fichier que toute entreprise française possède en une liste d’argent à réclamer, vérifiable pièce en main",
+    "resultat": "Outil écrit (src/audit-fec.js, commande audit-fec) ; 3 tests sur anomalies plantées réussis ; aucun fichier réel audité ; 0 € réclamé ; 0 € encaissé"
+  },
+  {
+    "cle": "audit-comptes-de-tiers#offre",
+    "action": "Proposer cet audit à des entreprises tierces, payé seulement sur l’argent effectivement récupéré",
+    "nature": { "depense_eur": 0, "tiers": true, "engagement": true, "irreversible": false },
+    "attendu": "Un premier client et un premier euro encaissé ; à ne lancer qu’après un audit réussi sur un premier fichier réel"
+  }
+]

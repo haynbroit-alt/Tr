@@ -1,6 +1,6 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { mkdtempSync, readFileSync, writeFileSync } from 'node:fs';
+import { copyFileSync, existsSync, mkdtempSync, readFileSync, writeFileSync } from 'node:fs';
 import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 import { Registre } from '../src/registre.js';
@@ -22,11 +22,23 @@ test('le mode économique est le mode par défaut', () => {
   assert.equal(JSON.parse(readFileSync(join(RACINE, 'gardien.json'), 'utf8')).mode, 'économique');
 });
 
+test('un changement de mode reste local : le réglage suivi par git garde le mode par défaut', () => {
+  const d = mkdtempSync(join(tmpdir(), 'gardien-mode-'));
+  copyFileSync(join(RACINE, 'gardien.json'), join(d, 'gardien.json'));
+  assert.equal(G.changerMode(d, 'intensif'), 'intensif');
+  assert.equal(G.lireConfig(d).mode, 'intensif');
+  assert.equal(JSON.parse(readFileSync(join(d, 'gardien.json'), 'utf8')).mode, 'économique');
+  assert.equal(G.changerMode(d, 'economique'), 'économique');
+  assert.equal(G.lireConfig(d).mode, 'économique');
+  assert.ok(!existsSync(join(d, 'gardien.local.json')));
+  assert.throws(() => G.changerMode(d, 'illimité'), /mode inconnu/);
+});
+
 test('le gardien n’importe aucun moteur et ne touche pas aux fichiers protégés', () => {
   const src = readFileSync(join(RACINE, 'src', 'gardien.js'), 'utf8');
   assert.ok(!/moteurs\/|adaptateurs\//.test(src.replace(/\/\/.*$/gm, '')));
   assert.deepEqual(integrite().erreurs, []);
-  assert.equal(integrite().fichiers, 33);
+  assert.equal(integrite().fichiers, 34);
 });
 
 test('une mission déjà au registre est évitée, sans économie inventée', () => {

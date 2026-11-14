@@ -1,18 +1,26 @@
 // GARDIEN — gestion des ressources. Module indépendant : il ne lance aucun moteur lui-même, ne lit aucun fichier
 // de moteurs/ et n'écrit que des actes « garde » en fin de journal. Il mesure ce qui est mesurable et affiche
 // « non mesurable » pour le reste : aucune consommation ni aucune économie n'est inventée.
-import { existsSync, readFileSync, readdirSync, writeFileSync } from 'node:fs';
+import { existsSync, readFileSync, readdirSync, rmSync, writeFileSync } from 'node:fs';
 import { homedir } from 'node:os';
 import { join } from 'node:path';
 
 export const P = 'gardien#1';
 const PROGRES = ['affirmation', 'verification', 'resultat', 'jalon', 'opportunite', 'piste'];
-export const lireConfig = (racine) => JSON.parse(readFileSync(join(racine, 'gardien.json'), 'utf8'));
+// gardien.json, suivi par git, porte le mode par défaut (économique). Un mode demandé par le propriétaire vaut pour
+// la machine où il l'a demandé : il s'écrit dans gardien.local.json, non suivi, et disparaît avec elle.
+const LOCAL = 'gardien.local.json';
+export const lireConfig = (racine) => {
+  const c = JSON.parse(readFileSync(join(racine, 'gardien.json'), 'utf8'));
+  if (existsSync(join(racine, LOCAL))) { const m = JSON.parse(readFileSync(join(racine, LOCAL), 'utf8')).mode; if (c.modes[m]) c.mode = m; }
+  return c;
+};
 export function changerMode(racine, mode) {
-  const c = lireConfig(racine);
+  const c = JSON.parse(readFileSync(join(racine, 'gardien.json'), 'utf8'));
   const m = Object.keys(c.modes).find((k) => k.normalize('NFD').replace(/\p{M}/gu, '').toLowerCase() === mode.normalize('NFD').replace(/\p{M}/gu, '').toLowerCase());
   if (!m) throw new Error(`mode inconnu « ${mode} » : ${Object.keys(c.modes).join(', ')}`);
-  writeFileSync(join(racine, 'gardien.json'), JSON.stringify({ ...c, mode: m }, null, 2) + '\n');
+  if (m === c.mode) rmSync(join(racine, LOCAL), { force: true });
+  else writeFileSync(join(racine, LOCAL), JSON.stringify({ mode: m }) + '\n');
   return m;
 }
 

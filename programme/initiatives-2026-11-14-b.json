@@ -1,0 +1,22 @@
+[
+  {
+    "cle": "connecteurs#releve-2026-11-14",
+    "action": "Relever en lecture seule ce que contiennent réellement les connecteurs du propriétaire : audiences, contacts, boutique, moyens d’encaissement",
+    "nature": { "depense_eur": 0, "tiers": false, "engagement": false, "irreversible": false },
+    "attendu": "Savoir sur quels actifs réels une première vente peut s’appuyer, au lieu de le supposer",
+    "resultat": "Mesuré le 14 novembre 2026. Audience : compte TikTok 3 abonnés, 5 vidéos publiées en août (27 à 673 vues, 1 422 vues et 1 282 personnes touchées au total), aucune publication programmée ; carnet de contacts : 2 fiches d’exemple, aucun contact réel ; une application à notifications dont le connecteur ne donne pas l’audience ; aucun fichier comptable dans le stockage en ligne. Prospection : 175 crédits disponibles, 0 utilisé. Encaissement : aucun connecteur de paiement relié. Inaccessibles sans reconnexion par le propriétaire : boutique, messagerie, messagerie instantanée, envoi d’e-mails. Recherche juridique : quota quotidien du connecteur atteint"
+  },
+  {
+    "cle": "audit-comptes-de-tiers#positionnement",
+    "action": "Confronter l’outil d’audit des comptes de tiers au marché et au droit avant toute offre",
+    "nature": { "depense_eur": 0, "tiers": false, "engagement": false, "irreversible": false },
+    "attendu": "Savoir si l’outil est vendable tel quel, et sous quelle forme",
+    "resultat": "Contredit l’hypothèse de départ. Marché : des outils d’analyse de fichier d’écritures existent déjà, l’un affiché à 200 € en formule standard, plusieurs avec test gratuit ; l’outil construit n’apporte rien de distinctif face à eux. Droit : tenue, vérification, appréciation et redressement des comptes sont réservés aux experts-comptables (ordonnance du 19 septembre 1945, articles 2 et 20) ; vendre une prestation de vérification serait risqué, publier un logiciel utilisé par l’entreprise ou son comptable ne l’est pas de la même façon — lecture complète de la jurisprudence récente à faire. Conséquence : pas d’offre de service ; l’outil reste un utilitaire et une entrée pour le lecteur d’écritures réelles de LAVOISIER, seule source possible d’un avantage distinctif (flux cachés, écarts), non démontré à ce jour"
+  },
+  {
+    "cle": "boutique#essai-videos-courtes",
+    "action": "Publier cinq vidéos courtes des produits de la boutique sur le compte du propriétaire, programmées pour sa relecture, et mesurer les visites françaises qui en viennent",
+    "nature": { "depense_eur": 0, "tiers": true, "engagement": false, "irreversible": false },
+    "attendu": "Seul canal gratuit où une portée a été mesurée (1 282 personnes touchées par 5 vidéos sans abonnés) ; succès si 30 visites françaises en 28 jours, abandon sinon. Suppose la boutique reconnectée (fiches et images des produits)"
+  }
+]

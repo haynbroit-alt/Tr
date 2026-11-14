@@ -23,6 +23,7 @@ const TYPES = {
   aveu: ['motif'],
   opportunite: ['secteur', 'titre', 'description', 'connu', 'inconnu', 'decouvrable', 'faisabilite', 'cout_verification', 'potentiel', 'essai', 'abandon', 'valeur', 'statut'],
   garde: ['decision', 'mode'],
+  initiative: ['cle', 'action', 'nature', 'decision', 'motifs'],
   jalon: ['travail', 'mesure', 'avant', 'apres', 'source'],
   piste: ['titre', 'origine', 'potentiel', 'cout', 'risque', 'faisabilite', 'test', 'argent_reel'],
 };
@@ -72,6 +73,12 @@ export class Registre {
       if (!['lancée', 'évitée', 'refusée', 'arrêtée', 'autorisation', 'relevé', 'remise à zéro'].includes(r.decision)) faux('décision de garde inconnue');
       if (['lancée', 'arrêtée'].includes(r.decision) && typeof r.reel?.calcul_s !== 'number') faux('une mission lancée doit porter sa durée réelle mesurée');
       if (r.economie && r.economie.calcul_s != null && r.economie.base !== 'mesuré') faux('une économie chiffrée doit reposer sur des durées mesurées');
+    }
+    if (r.type === 'initiative') {
+      if (!['exécutée', 'à valider', 'interdite', 'abandonnée'].includes(r.decision)) faux('décision d’initiative inconnue');
+      if (!(r.nature.depense_eur >= 0)) faux('nature.depense_eur : la dépense réelle en euros (0 si aucune)');
+      if (!Array.isArray(r.motifs)) faux('motifs : liste, vide si rien ne s’oppose');
+      if (r.decision === 'exécutée' && r.motifs.length && r.validation !== 'propriétaire') faux('une initiative à risque ne s’exécute qu’avec la validation du propriétaire');
     }
     if (r.type === 'economie' && !['comptable', 'simulé', 'non mesurable'].includes(r.gain.base)) faux('gain.base attendu : comptable, simulé ou non mesurable');
     if (r.type === 'experience' && !['automatique', 'humaine requise', 'impossible'].includes(r.autorisation)) faux('autorisation attendue : automatique, humaine requise ou impossible');

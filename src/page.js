@@ -7,6 +7,7 @@ import { PROVENANCE, integrite } from './adaptateurs/moteurs.js';
 import { bilanCampagne } from './pistes.js';
 import { comptes } from './comptes.js';
 import * as GARDIEN from './gardien.js';
+import * as MANDAT from './mandat.js';
 import { RACINE } from './adaptateurs/moteurs.js';
 
 const h = (s) => String(s ?? '').replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
@@ -63,6 +64,7 @@ export function ecrirePage(reg, chemin) {
   const vraiesAff = etat.filter((e) => !e.sujet.includes('témoin négatif'));
   const bc = bilanCampagne(reg), E = bc.entreprises, F = bc.formes;
   const cp = comptes(reg);
+  const ma = MANDAT.etat(reg, MANDAT.lireMandat(RACINE));
   const ga = GARDIEN.etat(reg, GARDIEN.lireConfig(RACINE)), gb = ga.budget, nm = '<span class="sur">non mesurable</span>';
   const repere = (r) => `<tr><td>${r.atteint === true ? '<span class="verd bon">atteint</span>' : r.atteint === false ? '<span class="verd mauvais">manque</span>' : '<span class="sur">—</span>'}</td><td>${h(r.mesure)}${r.note ? `<div class="petit">${h(r.note)}</div>` : ''}</td><td class="n">${r.valeur == null ? 'non mesuré' : nb(r.valeur, 3) + (r.unite ? ' ' + r.unite : '')}</td><td class="n">${r.seuil != null ? nb(r.seuil, 3) : r.cible != null ? `<span class="sur">${nb(r.cible, 3)} proposé</span>` : '—'}</td><td>${r.travail ? `<span class="mes">${h(r.travail)}</span>` : ''}</td></tr>`;
   const TRAVAUX = { 'GALILÉE': [['G1', 'Ne plus se dire convaincu à tort'], ['G2', 'Lois sur des comptages : mesuré, hypothèse contredite, module non écrit'], ['G3', 'Terres inconnues']], CORTEX: [['C1', 'Test unique de P3 : fait, trois critères atteints (84 % contre 23 %)'], ['C2', 'Exporter son juge pour des données extérieures'], ['C3', 'P4 : agir, arbitrer avec le profit']], LAVOISIER: [['L1', 'Seuils de M0 : fausses détections 0,20 → 0,09 ; profit encore hors seuil'], ['L2', 'Entreprise pilotable'], ['L3', 'Lecteur d’écritures réelles']] };
@@ -235,6 +237,19 @@ ${pistes.length ? `<section>
     <div><b>${F.lois_empiriques} / ${F.lois}</b>lois démontrées par essai commun</div>
     <div><b>${F.temoins_refuses} / ${F.temoins}</b>formules fausses refusées</div>
   </div>
+</section>
+
+<section>
+  <h2>Mandat entrepreneurial</h2>
+  <p>L’initiative est la règle : ce qui ne coûte rien, n’engage personne et se défait en un geste s’exécute sans attendre. Ce qui engage l’argent ou la parole du propriétaire est préparé, puis attend sa validation.</p>
+  <div class="chiffres">
+    <div><b>${ma.depense_max_eur} €</b>plafond de dépense fixé par le propriétaire</div>
+    <div><b>${ma.engage_eur} €</b>réellement engagés</div>
+    <div><b>${ma.executees.length}</b>initiatives exécutées</div>
+    <div><b>${ma.a_valider.length}</b>en attente du propriétaire</div>
+  </div>
+  ${ma.executees.map((r) => `<p><b>Fait.</b> ${h(r.action)}.${r.resultat ? ` <span class="petit">${h(r.resultat)}.</span>` : ''}</p>`).join('\n  ')}
+  ${ma.a_valider.map((r) => `<p><b>À valider.</b> ${h(r.action)}. <span class="petit">Pourquoi cela attend : ${h(r.motifs.join(' ; '))}.</span></p>`).join('\n  ')}
 </section>
 
 <section>

@@ -19,7 +19,7 @@
       "nom": "cortex",
       "titre": "CORTEX",
       "depot": "haynbroit-alt/1",
-      "commit": "758212a73b3e86e16a1f1f92c7aa2f38361fc3ae",
+      "commit": "93931fb7701e13c6498238af7f0d80385830845e",
       "fichiers": {
         "package.json": "ef423e29ed170e203071d87b22c83435e243ad9a02b5b36edc08f836655b5a0d",
         "src/rng.js": "4ca79f31e9d7bc63a2aec1cc7bc2c04d8619b4a649e867397852ccedbd8e9a0d",
@@ -27,6 +27,7 @@
         "research/v6/worlds.js": "a73e87d35b805122b0b86f37c961ebfd6813bf2b36261cb2ddb7db2e9ea6bf08",
         "research/v6/p2.js": "92024dc03f68619185c480eeb49f9d6e7c348b43ecc686b7f5adb0a18d93ac06",
         "research/v6/p3.js": "c8224f95ae70eb67f28a6147deea80032222a40064a3f94243fc44c463519635",
+        "research/v6/juge.js": "b7e81921b2fc2d6a5bd16dbaad7f481feec01a39d516e03da6df8e2d054bd232",
         "research/v6/vendor/galilee/PROVENANCE.md": "e97cb5f9c8f7cfc9b6fc8eb1e4d50091724ca139fa4339dac4d1ca3469ad4b6c",
         "research/v6/vendor/galilee/agent.js": "1b55c452034b9cd156751f042c1fb93d10dcfd60111b9d4083ed18a85d4cddb2",
         "research/v6/vendor/galilee/expr.js": "4be81a5b7eccfac7957b3fab5cb0765ca70234041fe9dafbdd4767b007eebe20",

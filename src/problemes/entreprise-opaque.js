@@ -13,7 +13,7 @@ const mediane = (v) => { const s = [...v].sort((a, b) => a - b); return s.length
 
 // Règle de transmission, sans aucun savoir de métier : pour chaque couple (type de flux reconstruit, objet) dont les
 // lignes portent un montant ET une quantité, débit journalier = somme des quantités, prix unitaire = montant / quantité.
-function debits(observe, corps, n) {
+export function debits(observe, corps, n) {
   const groupes = new Map();
   for (const r of observe.journal) {
     if (r.montant == null || !r.quantite || !r.objet) continue;
