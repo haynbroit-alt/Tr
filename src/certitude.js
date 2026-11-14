@@ -19,4 +19,4 @@ export const depuisSonde = (diag) => (diag === 'hors de portée' ? 'hors de port
 // Seule une vérification de portée « pari » (e-valeur au-dessus du seuil fixé d'avance, sur des données que
 // l'affirmation n'a pas vues) peut élever un niveau. Une prévision réussie ou la vérité d'un banc d'essai sont
 // consignées, mais n'élèvent rien : la première n'est pas garantie, la seconde n'existe pas hors simulation.
-export const PORTEES = ['pari', 'prevision', 'verite-du-banc', 'temoin-negatif'];
+export const PORTEES = ['pari', 'prevision', 'verite-du-banc', 'temoin-negatif', 'recevabilite'];

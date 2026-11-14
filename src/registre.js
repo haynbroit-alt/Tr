@@ -21,6 +21,7 @@ const TYPES = {
   resultat: ['experience', 'mesures', 'cout_reel'],
   economie: ['cible', 'cout', 'risque', 'gain'],
   aveu: ['motif'],
+  jalon: ['travail', 'mesure', 'avant', 'apres', 'source'],
   piste: ['titre', 'origine', 'potentiel', 'cout', 'risque', 'faisabilite', 'test', 'argent_reel'],
 };
 
