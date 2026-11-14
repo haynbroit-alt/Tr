@@ -1,0 +1,155 @@
+{
+ "note": "calcul après coup sur le lot de test déjà exécuté ; aucun nouvel appel au moteur",
+ "jeux": [
+  {
+   "jeu": "Bennett5",
+   "mesures": 154,
+   "rapport": 0.94,
+   "au_niveau": true,
+   "erreur_loi": 0.001742043069544329,
+   "erreur_droite": 0.011312216918028471,
+   "erreur_constante": 0.5397261766554814,
+   "retenue": true
+  },
+  {
+   "jeu": "BoxBOD",
+   "mesures": 6,
+   "rapport": 4.79,
+   "au_niveau": false,
+   "erreur_loi": 81.8,
+   "erreur_droite": 3.6444444444444457,
+   "erreur_constante": 28.19999999999999,
+   "retenue": false
+  },
+  {
+   "jeu": "Chwirut1",
+   "mesures": 214,
+   "rapport": 0.89,
+   "au_niveau": true,
+   "erreur_loi": 3.0058469246702577,
+   "erreur_droite": 12.42545242166257,
+   "erreur_constante": 22.910841708367514,
+   "retenue": true
+  },
+  {
+   "jeu": "Chwirut2",
+   "mesures": 54,
+   "rapport": 1.16,
+   "au_niveau": true,
+   "erreur_loi": 3.6686587617815225,
+   "erreur_droite": 13.07362943864606,
+   "erreur_constante": 25.358794161019677,
+   "retenue": true
+  },
+  {
+   "jeu": "DanWood",
+   "mesures": 6,
+   "rapport": 19.72,
+   "au_niveau": false,
+   "erreur_loi": 0.6480000000000001,
+   "erreur_droite": 0.1401264642334623,
+   "erreur_constante": 0.49119999999999964,
+   "retenue": false
+  },
+  {
+   "jeu": "ENSO",
+   "mesures": 168,
+   "rapport": 1.55,
+   "au_niveau": true,
+   "erreur_loi": 3.4471795336496607,
+   "erreur_droite": 3.4231888321327295,
+   "erreur_constante": 3.447179533649706,
+   "retenue": false
+  },
+  {
+   "jeu": "Eckerle4",
+   "mesures": 35,
+   "rapport": 17.16,
+   "au_niveau": false,
+   "erreur_loi": 0.11605378577822777,
+   "erreur_droite": 0.11680350574611033,
+   "erreur_constante": 0.11605378577786642,
+   "retenue": false
+  },
+  {
+   "jeu": "Hahn1",
+   "mesures": 236,
+   "rapport": 1.09,
+   "au_niveau": true,
+   "erreur_loi": 0.08895214146880563,
+   "erreur_droite": 3.201337372479965,
+   "erreur_constante": 5.723733838286829,
+   "retenue": true
+  },
+  {
+   "jeu": "Kirby2",
+   "mesures": 151,
+   "rapport": 0.09,
+   "au_niveau": true,
+   "erreur_loi": 0.014940327197362758,
+   "erreur_droite": 3.6062845393059066,
+   "erreur_constante": 30.221126088831827,
+   "retenue": true
+  },
+  {
+   "jeu": "Misra1a",
+   "mesures": 14,
+   "rapport": 1.76,
+   "au_niveau": true,
+   "erreur_loi": 0.10265366097483025,
+   "erreur_droite": 0.951428815124749,
+   "erreur_constante": 18.19949323455162,
+   "retenue": true
+  },
+  {
+   "jeu": "Nelson",
+   "mesures": 128,
+   "rapport": 0.69,
+   "au_niveau": true,
+   "erreur_loi": 0.12005094147786988,
+   "erreur_droite": 0.42172479495397397,
+   "erreur_constante": 0.6398916966797698,
+   "retenue": true
+  },
+  {
+   "jeu": "Rat42",
+   "mesures": 9,
+   "rapport": 5.05,
+   "au_niveau": false,
+   "erreur_loi": 5.8482588189089775,
+   "erreur_droite": 3.443862258299084,
+   "erreur_constante": 21.63688748410917,
+   "retenue": false
+  },
+  {
+   "jeu": "Rat43",
+   "mesures": 15,
+   "rapport": 3.55,
+   "au_niveau": false,
+   "erreur_loi": 100.25295248082449,
+   "erreur_droite": 93.22999939654918,
+   "erreur_constante": 280.7888717859054,
+   "retenue": false
+  },
+  {
+   "jeu": "Roszman1",
+   "mesures": 25,
+   "rapport": 5.41,
+   "au_niveau": false,
+   "erreur_loi": 0.02626597159199035,
+   "erreur_droite": 0.03926487944192782,
+   "erreur_constante": 0.10640164305140368,
+   "retenue": true
+  },
+  {
+   "jeu": "Thurber",
+   "mesures": 37,
+   "rapport": 6.72,
+   "au_niveau": false,
+   "erreur_loi": 92.1258400182816,
+   "erreur_droite": 145.22117474501968,
+   "erreur_constante": 551.982497182259,
+   "retenue": true
+  }
+ ]
+}

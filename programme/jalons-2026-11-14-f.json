@@ -1,0 +1,26 @@
+[
+ {
+  "moteur": "GALILÉE",
+  "travail": "G4",
+  "mesure": "données fournies : formes fausses signalées « incertaine », bruit 5 %, 40 points",
+  "avant": "5 sur 28 (ancienne règle)",
+  "apres": "13 sur 28 (46 %) avec la règle R3",
+  "seuil": "au moins la moitié — manqué",
+  "commit": "22b13e7",
+  "source": "haynbroit-alt/All RESULTATS_G4.md",
+  "portee": "exécution unique, graines 11 à 20, 150 essais, mêmes 15 lois, données tirées au hasard dans le domaine",
+  "note": "critère principal manqué : l’option reste absente par défaut ; 10 des 28 formes fausses viennent du capteur qui sature, hors d’atteinte sans mesure hors du domaine"
+ },
+ {
+  "moteur": "GALILÉE",
+  "travail": "G4",
+  "mesure": "données fournies : confiance gardée sur les bonnes formes avec la règle R3",
+  "avant": "121 sur 122 à 5 % ; 128 sur 131 à 1 % (ancienne règle)",
+  "apres": "117 sur 122 à 5 % (96 %) ; 127 sur 131 à 1 % (97 %)",
+  "seuil": "au moins 90 % — atteint",
+  "commit": "22b13e7",
+  "source": "haynbroit-alt/All RESULTATS_G4.md",
+  "portee": "exécution unique, graines 11 à 20, 40 points",
+  "note": "à 20 points et 5 % de bruit la confiance tombe à 99 sur 114 (87 %)"
+ }
+]

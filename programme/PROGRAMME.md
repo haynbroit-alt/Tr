@@ -269,3 +269,30 @@ précises sur 75 au lieu de 53, 4 formes fausses au lieu de 9, aucune dite « é
 neuves (6 à 10), protocole poussé avant l'exécution : trois critères atteints (0 « établie » à tort, 83 % et 97 %
 de lois précises). Restent ouverts, sans chantier : 6 formes fausses à 5 % de bruit sur deux lois, et un garde-fou
 moins sûr en stratégie « hasard » (2 formes fausses dites « établie »). PR `haynbroit-alt/All#4`.
+
+### G4 : critère principal manqué (14 novembre 2026, nuit)
+
+Question : quand le client fournit ses données, GALILÉE sait-il dire qu'une forme est douteuse ? Protocole et règle
+(R3) écrits avant le test, exécution unique sur les graines 11 à 20. À 5 % de bruit et 40 points, 13 formes fausses
+signalées sur 28 — le seuil était la moitié, il est manqué à un essai près. Les trois autres critères sont atteints
+(confiance gardée 96 % et 97 %, lois rendues inchangées). L'option reste donc absente par défaut. La règle fait
+passer le signalement de 5 à 13 formes fausses, mais un tiers d'entre elles (capteur qui sature) ne se distinguent
+pas avec les seules données fournies. Conséquence pour l'offre : en mode « données fournies », le verdict de
+confiance ne se vend pas comme une garantie ; il faut le dire dans le dossier de mission. PR `haynbroit-alt/All#5`.
+
+### Premier résultat sur mesures réelles (14 novembre 2026, nuit)
+
+Hors chantiers de moteur, pour le dossier de mission : la copie gelée de GALILÉE sur les jeux de référence du NIST
+(mesures de laboratoire, modèle certifié), protocole poussé avant l'exécution, réglage sur les seuls jeux générés,
+test unique. 8 jeux sur 15 prédisent les mesures non vues au niveau du modèle certifié — le seuil était 8, atteint
+sans marge, et l'un des 8 n'est qu'une constante. Un jeu (151 mesures) est prédit dix fois mieux que par le modèle
+certifié. Constat après coup : 7 sur 7 au-dessus de 54 mesures, 1 sur 8 en dessous, et le verdict du moteur ne
+prévient d'aucun échec. Ce que cela change : l'offre exige une cinquantaine de mesures au moins et promet une
+prédiction vérifiée sur points mis de côté, pas « la vraie loi ». Détail : `programme/missions/reel/RESULTATS_REEL.md`.
+Pistes ouvertes, sans chantier : confirmer le seuil de cinquante mesures sur d'autres données réelles ; comprendre
+pourquoi le moteur rend `x` ou une constante sur les petits jeux sans se dire incertain.
+
+Suite, même nuit : la leçon est passée dans un outil de livraison, `node bin/commun.js loi <fichier.csv>`. Il met une
+mesure sur quatre de côté et ne retient la loi que si elle bat une droite et une constante sur ces points. Calculé
+après coup sur les 15 jeux (donc sans valeur de preuve) : 5 échecs sur 7 écartés, la constante écartée, 7 bonnes lois
+gardées. Une mission « trouver la loi » peut maintenant se livrer en une commande, avec son contrôle.

@@ -1,0 +1,251 @@
+{
+ "lot": "observe",
+ "echelle": "norme",
+ "moteur": "galilee@be42b7e",
+ "graine": 1,
+ "jeux": [
+  {
+   "jeu": "Bennett5",
+   "fichiers": [
+    "Bennett5"
+   ],
+   "points": 154,
+   "vus": 116,
+   "mis_de_cote": 38,
+   "modele_etude": "y = b1 * (b2+x)**(-1/b3)",
+   "ecart_type_certifie": 0.0018629312528,
+   "secs": 1.84,
+   "loi": "−4.099 / (x + 3.492)",
+   "verdict": "empirique",
+   "erreur": 0.001742043069544329,
+   "rapport": 0.9351086181661427
+  },
+  {
+   "jeu": "BoxBOD",
+   "fichiers": [
+    "BoxBOD"
+   ],
+   "points": 6,
+   "vus": 5,
+   "mis_de_cote": 1,
+   "modele_etude": "y = b1*(1-exp[-b2*x])",
+   "ecart_type_certifie": 17.088072423,
+   "secs": 0.608,
+   "loi": "x",
+   "verdict": "empirique",
+   "erreur": 81.8,
+   "rapport": 4.786964730433832
+  },
+  {
+   "jeu": "Chwirut1",
+   "fichiers": [
+    "Chwirut1"
+   ],
+   "points": 214,
+   "vus": 161,
+   "mis_de_cote": 53,
+   "modele_etude": "y = exp[-b1*x]/(b2+b3*x)",
+   "ecart_type_certifie": 3.361672132,
+   "secs": 3.318,
+   "loi": "0.06087 / (x^(π/2) + 0.05131)",
+   "verdict": "empirique",
+   "erreur": 3.0058469246702577,
+   "rapport": 0.8941523166573515
+  },
+  {
+   "jeu": "Chwirut2",
+   "fichiers": [
+    "Chwirut2"
+   ],
+   "points": 54,
+   "vus": 41,
+   "mis_de_cote": 13,
+   "modele_etude": "y = exp(-b1*x)/(b2+b3*x)",
+   "ecart_type_certifie": 3.171713304,
+   "secs": 0.693,
+   "loi": "sin(0.08884 / x)",
+   "verdict": "empirique",
+   "erreur": 3.6686587617815225,
+   "rapport": 1.1566804468596834
+  },
+  {
+   "jeu": "DanWood",
+   "fichiers": [
+    "DanWood"
+   ],
+   "points": 6,
+   "vus": 5,
+   "mis_de_cote": 1,
+   "modele_etude": "y  = b1*x**b2",
+   "ecart_type_certifie": 0.032853114039,
+   "secs": 0.47,
+   "loi": "3/4",
+   "verdict": "empirique",
+   "erreur": 0.6480000000000001,
+   "rapport": 19.724157631777555
+  },
+  {
+   "jeu": "ENSO",
+   "fichiers": [
+    "ENSO"
+   ],
+   "points": 168,
+   "vus": 126,
+   "mis_de_cote": 42,
+   "modele_etude": "y = b1 + b2*cos( 2*pi*x/12 ) + b3*sin( 2*pi*x/12 )",
+   "ecart_type_certifie": 2.2269642403,
+   "secs": 0.877,
+   "loi": "0.6034",
+   "verdict": "empirique",
+   "erreur": 3.4471795336496607,
+   "rapport": 1.5479276547275327
+  },
+  {
+   "jeu": "Eckerle4",
+   "fichiers": [
+    "Eckerle4"
+   ],
+   "points": 35,
+   "vus": 26,
+   "mis_de_cote": 9,
+   "modele_etude": "y = (b1/b2) * exp[-0.5*((x-b3)/b2)**2]",
+   "ecart_type_certifie": 0.0067629245447,
+   "secs": 2.391,
+   "loi": "0.2109",
+   "verdict": "empirique",
+   "erreur": 0.11605378577822777,
+   "rapport": 17.160295817462185
+  },
+  {
+   "jeu": "Hahn1",
+   "fichiers": [
+    "Hahn1"
+   ],
+   "points": 236,
+   "vus": 177,
+   "mis_de_cote": 59,
+   "modele_etude": "y = (b1+b2*x+b3*x**2+b4*x**3) /",
+   "ecart_type_certifie": 0.081803852243,
+   "secs": 8.872,
+   "loi": "0.2718·(exp(−0.09401 / x) + x)^2 / x^0.8101",
+   "verdict": "empirique",
+   "erreur": 0.08895214146880563,
+   "rapport": 1.087383283669472
+  },
+  {
+   "jeu": "Kirby2",
+   "fichiers": [
+    "Kirby2"
+   ],
+   "points": 151,
+   "vus": 113,
+   "mis_de_cote": 38,
+   "modele_etude": "y = (b1 + b2*x + b3*x**2) /",
+   "ecart_type_certifie": 0.16354535131,
+   "secs": 14.441,
+   "loi": "14 / ((x^(4/3) + 0.3156)^1.609·(1 / x^4.093 + 8 / x^2))",
+   "verdict": "incertaine",
+   "erreur": 0.014940327197362758,
+   "rapport": 0.09135280873281067
+  },
+  {
+   "jeu": "Misra1a",
+   "fichiers": [
+    "Misra1a",
+    "Misra1b",
+    "Misra1c",
+    "Misra1d"
+   ],
+   "points": 14,
+   "vus": 11,
+   "mis_de_cote": 3,
+   "modele_etude": "y = b1 * (1-(1+2*b2*x)**(-.5))",
+   "ecart_type_certifie": 0.058428615257,
+   "secs": 0.504,
+   "loi": "11·x / ((x + 9/2)·2)",
+   "verdict": "empirique",
+   "erreur": 0.10265366097483025,
+   "rapport": 1.7569073051501405
+  },
+  {
+   "jeu": "Nelson",
+   "fichiers": [
+    "Nelson"
+   ],
+   "points": 128,
+   "vus": 96,
+   "mis_de_cote": 32,
+   "modele_etude": "log[y] = b1 - b2*x1 * exp[-b3*x2]",
+   "ecart_type_certifie": 0.1743028013,
+   "secs": 4.069,
+   "loi": "1 − sin(x1 / (1 / x2^16 − 1/4) + 0.133·x2)",
+   "verdict": "incertaine",
+   "erreur": 0.12005094147786988,
+   "rapport": 0.6887493521761883
+  },
+  {
+   "jeu": "Rat42",
+   "fichiers": [
+    "Rat42"
+   ],
+   "points": 9,
+   "vus": 7,
+   "mis_de_cote": 2,
+   "modele_etude": "y = b1 / (1+exp[b2-b3*x])",
+   "ecart_type_certifie": 1.1587725499,
+   "secs": 0.951,
+   "loi": "x",
+   "verdict": "empirique",
+   "erreur": 5.8482588189089775,
+   "rapport": 5.046942835687359
+  },
+  {
+   "jeu": "Rat43",
+   "fichiers": [
+    "Rat43"
+   ],
+   "points": 15,
+   "vus": 11,
+   "mis_de_cote": 4,
+   "modele_etude": "y = b1 / ((1+exp[b2-b3*x])**(1/b4))",
+   "ecart_type_certifie": 28.262414662,
+   "secs": 0.922,
+   "loi": "x",
+   "verdict": "empirique",
+   "erreur": 100.25295248082449,
+   "rapport": 3.5472182288662966
+  },
+  {
+   "jeu": "Roszman1",
+   "fichiers": [
+    "Roszman1"
+   ],
+   "points": 25,
+   "vus": 19,
+   "mis_de_cote": 6,
+   "modele_etude": "y =  b1 - b2*x - arctan[b3/(x-b4)]/pi",
+   "ecart_type_certifie": 0.004854298406,
+   "secs": 0.435,
+   "loi": "exp(x)",
+   "verdict": "empirique",
+   "erreur": 0.02626597159199035,
+   "rapport": 5.410868759020899
+  },
+  {
+   "jeu": "Thurber",
+   "fichiers": [
+    "Thurber"
+   ],
+   "points": 37,
+   "vus": 28,
+   "mis_de_cote": 9,
+   "modele_etude": "y = (b1 + b2*x + b3*x**2 + b4*x**3) /",
+   "ecart_type_certifie": 13.714600784,
+   "secs": 0.943,
+   "loi": "sin(2.2 − x)",
+   "verdict": "empirique",
+   "erreur": 92.1258400182816,
+   "rapport": 6.7173548446090585
+  }
+ ]
+}

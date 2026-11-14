@@ -1,0 +1,14 @@
+[
+ {
+  "moteur": "GALILÉE",
+  "travail": "RÉEL",
+  "mesure": "chaîne de livraison : échecs écartés par le témoin « droite et constante » sur les 15 jeux réels",
+  "avant": "0 échec sur 7 signalé par le verdict du moteur",
+  "apres": "5 échecs sur 7 écartés ; 7 bonnes lois sur 8 gardées (la huitième est une constante)",
+  "seuil": null,
+  "commit": "2eae4bf",
+  "source": "haynbroit-alt/Tr programme/missions/reel/RESULTATS_REEL.md",
+  "portee": "calcul après coup sur un lot déjà vu, sans nouvel appel au moteur",
+  "note": "sans valeur de preuve tant que ce n’est pas refait sur des données neuves ; deux échecs passent encore"
+ }
+]

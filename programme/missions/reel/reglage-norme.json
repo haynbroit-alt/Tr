@@ -1,0 +1,152 @@
+{
+ "lot": "genere",
+ "echelle": "norme",
+ "moteur": "galilee@be42b7e",
+ "graine": 1,
+ "jeux": [
+  {
+   "jeu": "Gauss1",
+   "fichiers": [
+    "Gauss1"
+   ],
+   "points": 250,
+   "vus": 188,
+   "mis_de_cote": 62,
+   "modele_etude": "y = b1*exp( -b2*x ) + b3*exp( -(x-b4)**2 / b5**2 )",
+   "ecart_type_certifie": 2.331798018,
+   "secs": 11.361,
+   "loi": "(8.568e-5·sin(9.051·x) − 1.32e-4·sin(15.86·x) + 0.9999)^2449 − 0.6746·x",
+   "verdict": "empirique",
+   "erreur": 8.348374980748554,
+   "rapport": 3.580230755967884
+  },
+  {
+   "jeu": "Gauss2",
+   "fichiers": [
+    "Gauss2"
+   ],
+   "points": 250,
+   "vus": 188,
+   "mis_de_cote": 62,
+   "modele_etude": "y = b1*exp( -b2*x ) + b3*exp( -(x-b4)**2 / b5**2 )",
+   "ecart_type_certifie": 2.2704790782,
+   "secs": 6.644,
+   "loi": "(cos(x)^18 − 2/3)·(cos(6·((x − 2)·x + 0.1116))) + 0.3745",
+   "verdict": "incertaine",
+   "erreur": 10.806483648991927,
+   "rapport": 4.759560989903124
+  },
+  {
+   "jeu": "Gauss3",
+   "fichiers": [
+    "Gauss3"
+   ],
+   "points": 250,
+   "vus": 188,
+   "mis_de_cote": 62,
+   "modele_etude": "y = b1*exp( -b2*x ) + b3*exp( -(x-b4)**2 / b5**2 )",
+   "ecart_type_certifie": 2.2677077625,
+   "secs": 8.367,
+   "loi": "0.2607·cos(12.67·x) + x − 2·sin(x^π) + 0.3991",
+   "verdict": "empirique",
+   "erreur": 6.419700306689238,
+   "rapport": 2.8309204619963624
+  },
+  {
+   "jeu": "Lanczos1",
+   "fichiers": [
+    "Lanczos1"
+   ],
+   "points": 24,
+   "vus": 18,
+   "mis_de_cote": 6,
+   "modele_etude": "y = b1*exp(-b2*x) + b3*exp(-b4*x) + b5*exp(-b6*x)",
+   "ecart_type_certifie": 8.9156129349e-14,
+   "secs": 1.461,
+   "loi": "exp((x − 4.79)·x)",
+   "verdict": "empirique",
+   "erreur": 0.003430590335744788,
+   "rapport": 38478457519.34572
+  },
+  {
+   "jeu": "Lanczos2",
+   "fichiers": [
+    "Lanczos2"
+   ],
+   "points": 24,
+   "vus": 18,
+   "mis_de_cote": 6,
+   "modele_etude": "y = b1*exp(-b2*x) + b3*exp(-b4*x) + b5*exp(-b6*x)",
+   "ecart_type_certifie": 0.0000011130395851,
+   "secs": 1.186,
+   "loi": "exp(x·(x − 4.79))",
+   "verdict": "empirique",
+   "erreur": 0.0034308617267033454,
+   "rapport": 3082.4256141753513
+  },
+  {
+   "jeu": "Lanczos3",
+   "fichiers": [
+    "Lanczos3"
+   ],
+   "points": 24,
+   "vus": 18,
+   "mis_de_cote": 6,
+   "modele_etude": "y = b1*exp(-b2*x) + b3*exp(-b4*x) + b5*exp(-b6*x)",
+   "ecart_type_certifie": 0.000029923229172,
+   "secs": 1.198,
+   "loi": "exp(x·(x − 4.79))",
+   "verdict": "empirique",
+   "erreur": 0.0034470181227276085,
+   "rapport": 115.19539227915547
+  },
+  {
+   "jeu": "MGH09",
+   "fichiers": [
+    "MGH09"
+   ],
+   "points": 11,
+   "vus": 8,
+   "mis_de_cote": 3,
+   "modele_etude": "y = b1*(x**2+x*b2) / (x**2+x*b3+b4)",
+   "ecart_type_certifie": 0.0066279236551,
+   "secs": 0.62,
+   "loi": "x",
+   "verdict": "empirique",
+   "erreur": 0.11791576944285982,
+   "rapport": 17.790755533541333
+  },
+  {
+   "jeu": "MGH10",
+   "fichiers": [
+    "MGH10"
+   ],
+   "points": 16,
+   "vus": 12,
+   "mis_de_cote": 4,
+   "modele_etude": "y = b1 * exp[b2/(x+b3)]",
+   "ecart_type_certifie": 2.6009740065,
+   "secs": 2.202,
+   "loi": "6·exp(−9·x / 2)",
+   "verdict": "incertaine",
+   "erreur": 380.0919072336136,
+   "rapport": 146.13445051113146
+  },
+  {
+   "jeu": "MGH17",
+   "fichiers": [
+    "MGH17"
+   ],
+   "points": 33,
+   "vus": 25,
+   "mis_de_cote": 8,
+   "modele_etude": "y = b1 + b2*exp[-x*b4] + b3*exp[-x*b5]",
+   "ecart_type_certifie": 0.0013970497866,
+   "secs": 1.977,
+   "loi": "1 − exp(−1 / (x·2))",
+   "verdict": "empirique",
+   "erreur": 0.01236505593427509,
+   "rapport": 8.850834131235885
+  }
+ ]
+}
