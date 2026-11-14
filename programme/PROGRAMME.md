@@ -234,3 +234,17 @@ Le propriétaire a demandé d'utiliser tous les connecteurs. Relevé en lecture 
 - **Ordre de travail révisé** : 1. boutique — essai de vidéos courtes dès la reconnexion (en attente de validation,
   car publication au nom du propriétaire) ; 2. relier un moyen d'encaissement, sans quoi aucun euro ne peut être
   reçu ; 3. moteurs — C2 puis T2, L1 ; l'audit ne revient que si L3 démontre un avantage sur un fichier réel.
+
+### C2, T2 et arrêt de la boutique (14 novembre 2026, soir)
+
+- **C2 terminé, trois critères atteints** : E1 60/60 mondes identiques au juge du moteur ; E2 6 fausses alarmes sur
+  401 mesures placebo (1,5 %, borne 3,2 %, seuil 10 %) ; E3 4/4 séries dégénérées refusées. PR `haynbroit-alt/1#13`.
+  La copie gelée de CORTEX passe au commit `93931fb` et compte `juge.js` : 34 fichiers moteurs.
+- **T2 exécutée** : six lois de prix de GALILÉE examinées ; trois mises en pari par CORTEX, **trois verdicts
+  « indécis »** ; deux débits sans levier de prix transmis et un dossier non rejouable, consignés comme aveux. Aucune
+  loi n'est élevée, aucune n'est réfutée : la chaîne GALILÉE → CORTEX fonctionne, elle n'a encore rien établi.
+- **Boutique arrêtée** sur décision du propriétaire (« pas de Shopify ») : l'opportunité n° 1 et l'essai de vidéos
+  courtes sont abandonnés. Il n'y a plus d'opportunité retenue en premier ; l'étude sourcée qui devait en choisir une
+  n'a pas abouti (limite d'usage atteinte avant tout résultat) et reste à refaire, à petite échelle.
+- **Travaux à plusieurs agents** : les trois chantiers lancés en mode intensif ont échoué sans résultat sur la limite
+  d'usage du compte ; ils ont néanmoins consommé des tokens. Plafond de l'espace commun presque atteint.

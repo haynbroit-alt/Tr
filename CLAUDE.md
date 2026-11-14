@@ -10,7 +10,7 @@ on l'interroge, on ne le relit pas en entier.
 
 ## Économie
 - Lire un fichier avant de le modifier, et seulement celui-là. Ne jamais parcourir tout le dépôt.
-- Ne pas ouvrir `moteurs/` (33 fichiers gelés, jamais modifiés ici), `page/index.html` (généré) ni le journal brut.
+- Ne pas ouvrir `moteurs/` (34 fichiers gelés, jamais modifiés ici), `page/index.html` (généré) ni le journal brut.
 - Modifier par retouches ciblées ; ne pas réécrire un fichier entier. `src/page.js` est long : y chercher, pas le relire.
 - Une mission se lance par `node bin/commun.js executer …` : le GARDIEN évite celles déjà faites et plafonne les autres.
 - Ne lancer un moteur que si la tâche l'exige. Pas deux missions pour la même question.

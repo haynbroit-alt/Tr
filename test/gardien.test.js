@@ -38,7 +38,7 @@ test('le gardien n’importe aucun moteur et ne touche pas aux fichiers protég�
   const src = readFileSync(join(RACINE, 'src', 'gardien.js'), 'utf8');
   assert.ok(!/moteurs\/|adaptateurs\//.test(src.replace(/\/\/.*$/gm, '')));
   assert.deepEqual(integrite().erreurs, []);
-  assert.equal(integrite().fichiers, 33);
+  assert.equal(integrite().fichiers, 34);
 });
 
 test('une mission déjà au registre est évitée, sans économie inventée', () => {

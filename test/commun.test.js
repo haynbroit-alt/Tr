@@ -15,7 +15,7 @@ const aff = (r, auteur = 'GALILÉE', niveau = 'hypothèse') => r.ajouter({ type:
 test('les moteurs gelés sont identiques aux commits consignés', () => {
   const i = integrite();
   assert.deepEqual(i.erreurs, []);
-  assert.equal(i.fichiers, 33);
+  assert.equal(i.fichiers, 34);
 });
 
 test('la copie de GALILÉE embarquée par CORTEX est celle du dépôt GALILÉE', () => {

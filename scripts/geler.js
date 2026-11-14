@@ -15,8 +15,8 @@ const racine = i > 0 ? resolve(process.argv[i + 1]) : resolve(ici, '..');
 const MOTEURS = [
   { nom: 'galilee', titre: 'GALILÉE', depot: 'haynbroit-alt/All', dossier: 'All', commit: 'be42b7e',
     fichiers: ['package.json', ...['agent', 'expr', 'fit', 'search', 'worlds'].map((f) => `src/${f}.js`)] },
-  { nom: 'cortex', titre: 'CORTEX', depot: 'haynbroit-alt/1', dossier: '1', commit: '758212a',
-    fichiers: ['package.json', 'src/rng.js', ...['engine', 'worlds', 'p2', 'p3'].map((f) => `research/v6/${f}.js`),
+  { nom: 'cortex', titre: 'CORTEX', depot: 'haynbroit-alt/1', dossier: '1', commit: '93931fb',
+    fichiers: ['package.json', 'src/rng.js', ...['engine', 'worlds', 'p2', 'p3', 'juge'].map((f) => `research/v6/${f}.js`),
       'research/v6/vendor/galilee/PROVENANCE.md', ...['agent', 'expr', 'fit', 'search', 'worlds'].map((f) => `research/v6/vendor/galilee/${f}.js`)] },
   { nom: 'lavoisier', titre: 'LAVOISIER', depot: 'haynbroit-alt/A', dossier: 'A', commit: 'a25b206',
     fichiers: ['package.json', ...['dates', 'ecarts', 'index', 'links', 'stocks', 'types', 'unites'].map((f) => `src/bilan/${f}.js`),
