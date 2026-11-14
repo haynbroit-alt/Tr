@@ -1,0 +1,11 @@
+[
+ {
+  "moteur": "GALILÉE", "travail": "G3",
+  "mesure": "suite a → a + d(a) : confrontation à ce qui est publié (six fiches de l’OEIS)",
+  "avant": "noté « non confronté à la littérature »",
+  "apres": "le piège (van der Sanden, 2009) et les questions de confluence et de parité (Spiro, 1977) étaient connus ; non trouvés : les mesures, la loi de vitesse, le biais 3-adique et son modèle",
+  "seuil": null, "commit": "3685b31", "source": "haynbroit-alt/All THEORIE_B1.md",
+  "portee": "fiches A064491, A165494 à A165496, A165930, A062249 ; aucun article lu",
+  "note": "les lemmes 1 et 2 sont une redécouverte ; « non trouvé » ne veut pas dire inédit"
+ }
+]
