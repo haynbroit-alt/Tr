@@ -1,0 +1,12 @@
+[
+ {
+  "moteur": "LAVOISIER", "travail": "L1",
+  "mesure": "datation une à une des entrées de stock (PROTOCOLE_M0 § 9, point 14) : essai non retenu",
+  "avant": "P médian 2,27 % ; R 80/95 ; FD1 1/34 ; FD2 0,09",
+  "apres": "avec l’essai : P médian 1,85 % ; R 84/95 ; FD1 2/34 ; FD2 0,15 — deux garde-fous franchis, code retiré",
+  "seuil": "FD1 au plus 1/34 et FD2 au plus 0,10 — manqués",
+  "commit": "bcb3f5c", "source": "haynbroit-alt/A PROTOCOLE_M0.md",
+  "portee": "graines de développement 1 à 100, banc relancé sur le dépôt ; correctif conservé non appliqué",
+  "note": "le profit passe sous 2 % mais au prix de fausses détections ; désordre réaliste 3,8 % au mieux ; cause probable non vérifiée : détection des manques trop sensible sur une série nettoyée ; les repères de LAVOISIER ne changent pas"
+ }
+]
