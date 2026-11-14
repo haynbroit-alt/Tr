@@ -269,3 +269,13 @@ précises sur 75 au lieu de 53, 4 formes fausses au lieu de 9, aucune dite « é
 neuves (6 à 10), protocole poussé avant l'exécution : trois critères atteints (0 « établie » à tort, 83 % et 97 %
 de lois précises). Restent ouverts, sans chantier : 6 formes fausses à 5 % de bruit sur deux lois, et un garde-fou
 moins sûr en stratégie « hasard » (2 formes fausses dites « établie »). PR `haynbroit-alt/All#4`.
+
+### G4 : critère principal manqué (14 novembre 2026, nuit)
+
+Question : quand le client fournit ses données, GALILÉE sait-il dire qu'une forme est douteuse ? Protocole et règle
+(R3) écrits avant le test, exécution unique sur les graines 11 à 20. À 5 % de bruit et 40 points, 13 formes fausses
+signalées sur 28 — le seuil était la moitié, il est manqué à un essai près. Les trois autres critères sont atteints
+(confiance gardée 96 % et 97 %, lois rendues inchangées). L'option reste donc absente par défaut. La règle fait
+passer le signalement de 5 à 13 formes fausses, mais un tiers d'entre elles (capteur qui sature) ne se distinguent
+pas avec les seules données fournies. Conséquence pour l'offre : en mode « données fournies », le verdict de
+confiance ne se vend pas comme une garantie ; il faut le dire dans le dossier de mission. PR `haynbroit-alt/All#5`.

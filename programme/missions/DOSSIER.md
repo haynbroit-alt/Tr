@@ -64,8 +64,11 @@ mondes sur 200 vont jusqu'au pari. Source : dépôt CORTEX, `research/v6/RESULTA
 
 **B. Retrouver une loi de demande dans des ventes comptées à l'unité.**
 Sur des comptages journaliers simulés, 105 bonnes lois retrouvées sur 133 effets détectables (79 %) ; 2 fausses lois
-sur 50 mondes sans effet. Limite : précision qui baisse quand le bruit monte (96 % des lois à bruit faible, 71 % à
-bruit plus fort sur le banc général). Source : dépôt GALILÉE, `bench/COMPTAGES_BASE.md`, `bench/RESULTS.md`.
+sur 50 mondes sans effet. Limites : la précision baisse quand le bruit monte (97 % des lois à bruit faible, 83 % à
+bruit plus fort, sur graines neuves du banc général) ; et quand les données sont fournies telles quelles, sans
+pouvoir demander de nouvelles mesures, le moteur ne signale qu'une forme fausse sur deux environ (13 sur 28) — son
+niveau de confiance n'est alors pas une garantie. Source : dépôt GALILÉE, `bench/COMPTAGES_BASE.md`,
+`RESULTATS_G1.md`, `RESULTATS_G4.md`.
 
 **C. Repérer des flux cachés dans les écritures d'une entreprise.**
 Sur 100 entreprises simulées de développement : 80 flux cachés retrouvés sur 95 ; 1 entreprise sans flux caché
