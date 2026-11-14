@@ -322,3 +322,15 @@ dans ce dépôt sans relèvement par le propriétaire.
 Suite, même nuit : la règle « une constante n'est jamais retenue » est confirmée sur 30 témoins négatifs neufs
 (0 retenu, seuil 2 ; 9 l'auraient été sans elle). Deux pistes issues de ces mesures sont au registre, en attente
 et sans aucun revenu : vendre le choix de la prochaine mesure, et vendre le contrôle d'une courbe déjà utilisée.
+
+### Suite de l'exploration (14 novembre 2026, fin de nuit)
+
+- **Plafonds du gardien doublés** sur décision du propriétaire (global 4 M ; GALILÉE et LAVOISIER 600 000 ; espace
+  commun 1,8 M).
+- **Suite `a → a + d(a)`** : un modèle sans paramètre (chaîne sur le résidu modulo 9 ou 27) prédit la part de
+  multiples de 3, confirmé sur quatre suites sœurs jamais calculées. Confrontation à l'OEIS : le piège (2009) et les
+  questions de confluence et de parité (Spiro, 1977) étaient connus ; les lemmes sont une redécouverte.
+- **LAVOISIER, point 12** : le manque des écarts déclarés sort de l'actif net. P médian 2,89 % → 2,27 % sur les
+  graines de développement, vérifié sur le dépôt ; seuil de 2 % non atteint. Trois essais sur les dates écartés :
+  ils faisaient passer le seuil sur le lot de développement sans rien gagner sur le désordre réaliste (5,1 %), qui
+  est la condition du test. Obstacle restant : redater les pièces du désordre réaliste. PR `haynbroit-alt/A#10`.
