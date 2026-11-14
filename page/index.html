@@ -97,11 +97,11 @@ code{font:13px var(--mono);background:var(--creux);padding:1px 5px;border-radius
   <h1>Page de travail commune</h1>
   <p class="chapo">GALILÉE cherche les lois, CORTEX les mécanismes, LAVOISIER les comptes. Ils ne s’appellent pas entre eux : chacun lit et écrit dans un même journal, où tout acte porte son auteur, sa preuve, son coût et son niveau de certitude.</p>
   <div class="etat">
-    <span><b>380</b> actes au journal</span>
+    <span><b>381</b> actes au journal</span>
     <span class="bon"><b>Chaîne intacte</b></span>
     <span class="bon"><b>33 fichiers moteurs non modifiés</b></span>
     <span><b>43</b> dossiers</span>
-    <span>dernier acte : 2026-11-14 11:21 UTC</span>
+    <span>dernier acte : 2026-11-14 11:35 UTC</span>
   </div>
 </section>
 
@@ -251,15 +251,16 @@ code{font:13px var(--mono);background:var(--creux);padding:1px 5px;border-radius
   <h2>Gardien des ressources</h2>
   <p>Mode <b>économique</b>. Chaque mission passe par le gardien, qui évite celles déjà faites, plafonne les autres et s’arrête sans progrès ou budget. Les tokens viennent du relevé local de Claude Code au moment où cette page a été générée ; ce qui ne se mesure pas est écrit tel quel.</p>
   <div class="chiffres">
-    <div><b>567 512</b>tokens produits (session relevée)</div>
-    <div><b>293</b>appels IA</div>
-    <div><b>133 525 436</b>tokens lus, cache compris</div>
-    <div><b><span class="sur">non chiffré</span></b>coût estimé (aucun tarif renseigné)</div>
+    <div><b>621 568</b>tokens produits (session relevée)</div>
+    <div><b>325</b>appels IA</div>
+    <div><b>155 693 476</b>tokens lus, cache compris</div>
+    <div><b>66,15 $ US</b>coût écrit par Claude Code dans son relevé</div>
     <div><b>14,4 s</b>de calcul sous garde</div>
     <div><b>1</b>mission(s) évitée(s) · 0 refusée(s)</div>
     <div><b><span class="sur">non mesurable</span></b>économie de calcul · tokens : non mesurable</div>
-    <div><b>286 s</b>de calcul restants · 184 828 tokens</div>
+    <div><b>286 s</b>de calcul restants · 183 959 tokens</div>
   </div>
+  <div class="tableau"><table><thead><tr><th>Dépôt</th><th>Appels</th><th>Tokens produits</th><th>Plafond</th><th>Restant</th></tr></thead><tbody><tr><td>Tr</td><td class="n">195</td><td class="n">449 651</td><td class="n">600 000</td><td class="n">583 959</td></tr><tr><td>A</td><td class="n">50</td><td class="n">84 210</td><td class="n">300 000</td><td class="n">300 000</td></tr><tr><td>user</td><td class="n">60</td><td class="n">51 072</td><td class="n">—</td><td class="n">—</td></tr><tr><td>All</td><td class="n">11</td><td class="n">25 086</td><td class="n">300 000</td><td class="n">300 000</td></tr><tr><td>1</td><td class="n">9</td><td class="n">11 549</td><td class="n">300 000</td><td class="n">300 000</td></tr></tbody></table></div>
   <p class="petit">Limites : le gardien ne peut pas couper une session d’IA, seulement la mesurer et refuser de lancer une mission ; les tokens ne se rattachent pas à une mission précise ; le relevé ne couvre que la machine et la session où il est lu ; une économie n’est chiffrée que si une mission du même type a déjà été chronométrée.</p>
 </section>
 
@@ -13015,7 +13016,7 @@ code{font:13px var(--mono);background:var(--creux);padding:1px 5px;border-radius
  &quot;id&quot;: &quot;f3ba7196e08189e4&quot;
 }</pre></details>
 </article></div></details>
-<details class="pli" id="gardien#1"><summary>Gardien : ressources consommées et évitées <span class="sur">· 4 actes</span></summary><div class="fil"><article class="acte neutre t-probleme" id="r373" data-qui="neutre">
+<details class="pli" id="gardien#1"><summary>Gardien : ressources consommées et évitées <span class="sur">· 5 actes</span></summary><div class="fil"><article class="acte neutre t-probleme" id="r373" data-qui="neutre">
   <header><span class="num">n° 373</span><span class="type">Problème</span><span class="qui neutre">registre</span><span class="id">344573004a7b5ef9</span></header>
   <p class="fort">Chaque mission vaut-elle ce qu’elle coûte, et lesquelles n’avaient pas besoin d’être lancées ?</p><p class="petit">Source : src/gardien.js · graine — (journal des ressources)</p>
   <details><summary>Ligne brute du journal</summary><pre>{
@@ -13128,6 +13129,74 @@ code{font:13px var(--mono);background:var(--creux);padding:1px 5px;border-radius
   &quot;progres&quot;: 1
  },
  &quot;id&quot;: &quot;08300a3573914a88&quot;
+}</pre></details>
+</article>
+<article class="acte neutre t-garde" id="r380" data-qui="neutre">
+  <header><span class="num">n° 380</span><span class="type">Garde</span><span class="qui neutre">registre</span><span class="id">519d5619d613501d</span></header>
+  <p><span class="mes">relevé</span> <span class="mes">mode économique</span></p>
+  <details><summary>Ligne brute du journal</summary><pre>{
+ &quot;n&quot;: 380,
+ &quot;precedent&quot;: &quot;08300a3573914a88&quot;,
+ &quot;date&quot;: &quot;2026-11-14T11:35:12.434Z&quot;,
+ &quot;probleme&quot;: &quot;gardien#1&quot;,
+ &quot;type&quot;: &quot;garde&quot;,
+ &quot;auteur&quot;: &quot;registre&quot;,
+ &quot;decision&quot;: &quot;relevé&quot;,
+ &quot;mode&quot;: &quot;économique&quot;,
+ &quot;ia&quot;: {
+  &quot;mesurable&quot;: true,
+  &quot;fichiers&quot;: 1,
+  &quot;appels&quot;: 319,
+  &quot;tokens_entree&quot;: 643,
+  &quot;tokens_sortie&quot;: 605527,
+  &quot;tokens_cache_ecrits&quot;: 7720296,
+  &quot;tokens_cache_lus&quot;: 143550678,
+  &quot;par_depot&quot;: {
+   &quot;1&quot;: {
+    &quot;appels&quot;: 9,
+    &quot;tokens_sortie&quot;: 11549
+   },
+   &quot;user&quot;: {
+    &quot;appels&quot;: 60,
+    &quot;tokens_sortie&quot;: 51072
+   },
+   &quot;A&quot;: {
+    &quot;appels&quot;: 50,
+    &quot;tokens_sortie&quot;: 84210
+   },
+   &quot;All&quot;: {
+    &quot;appels&quot;: 11,
+    &quot;tokens_sortie&quot;: 25086
+   },
+   &quot;Tr&quot;: {
+    &quot;appels&quot;: 189,
+    &quot;tokens_sortie&quot;: 433610
+   }
+  },
+  &quot;par_modele&quot;: {
+   &quot;claude-opus-5-5&quot;: {
+    &quot;appels&quot;: 6,
+    &quot;tokens_sortie&quot;: 6358
+   },
+   &quot;claude-fable-5-2&quot;: {
+    &quot;appels&quot;: 291,
+    &quot;tokens_sortie&quot;: 564375
+   },
+   &quot;&lt;synthetic&gt;&quot;: {
+    &quot;appels&quot;: 7,
+    &quot;tokens_sortie&quot;: 0
+   },
+   &quot;claude-fable-5&quot;: {
+    &quot;appels&quot;: 15,
+    &quot;tokens_sortie&quot;: 34794
+   }
+  },
+  &quot;cout_usd_rapporte&quot;: 66.15,
+  &quot;sessions_avec_cout&quot;: 1,
+  &quot;note_cout&quot;: &quot;coût écrit par Claude Code dans le relevé (dernier résumé de chaque session) ; des sessions sans résumé peuvent manquer&quot;
+ },
+ &quot;reference&quot;: true,
+ &quot;id&quot;: &quot;519d5619d613501d&quot;
 }</pre></details>
 </article></div></details>
 <details class="pli" id="forme-manquante#25"><summary>Forme manquante (monde 25) <span class="sur">· 3 actes</span></summary><div class="fil"><article class="acte neutre t-probleme" id="r376" data-qui="neutre">

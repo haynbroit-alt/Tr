@@ -29,6 +29,18 @@ if (cmd === 'executer' && !process.argv.includes('--sans-gardien')) {
   if (nom === 'mode') console.log('mode :', G.changerMode(RACINE, process.argv[4]));
   else if (nom === 'autoriser') console.log(G.consigner(reg, { decision: 'autorisation', mode: G.lireConfig(RACINE).mode, accorde: { calcul_s: Number(opt('--calcul', 0)), tokens_sortie: Number(opt('--tokens', 0)) }, raison: opt('--raison', 'autorisation donnée par l’utilisateur') }));
   else if (nom === 'releve' || nom === 'remise-a-zero') console.log(G.consigner(reg, { decision: nom === 'releve' ? 'relevé' : 'remise à zéro', mode: G.lireConfig(RACINE).mode, ia: G.mesurerIA(), reference: true }));
+  else if (nom === 'repetitions') { const r = G.repetitions(reg); console.log(`relevé lu : ${r.releve_lu} · seuil : ${r.seuil} occurrences`); for (const x of r.signaux) console.log(`${String(x.fois).padStart(3)}× ${x.type.padEnd(38)} ${x.texte}  [${x.session}]`); if (!r.signaux.length) console.log('aucune répétition au-dessus du seuil'); }
+  else if (nom === 'verifier-budget') {
+    // Barrière utilisable depuis les quatre dépôts : code 0 si les budgets tiennent, 3 sinon.
+    const b = G.budget(reg, G.lireConfig(RACINE));
+    const dep = process.argv[4];
+    const lignes = [['calcul (s)', b.calcul_s.consomme, b.calcul_s.total, b.calcul_s.restant]];
+    if (b.tokens_sortie.mesurable) lignes.push(['tokens produits (global)', b.tokens_sortie.consomme, b.tokens_sortie.total, b.tokens_sortie.restant]);
+    for (const [d, x] of Object.entries(b.depots)) if (x.mesurable && (!dep || d === dep)) lignes.push([`tokens produits (${d})`, x.consomme, x.total, x.restant]);
+    let depasse = false;
+    for (const [n, c, t, r] of lignes) { if (r <= 0) depasse = true; console.log(`${r <= 0 ? 'DÉPASSÉ ' : 'ok      '}${n} : ${c} sur ${t}`); }
+    process.exit(depasse ? 3 : 0);
+  }
   else console.log(JSON.stringify(G.etat(reg, G.lireConfig(RACINE)), null, 1));
 } else if (cmd === 'executer') {
   const integ = integrite();
