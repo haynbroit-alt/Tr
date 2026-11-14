@@ -334,3 +334,12 @@ et sans aucun revenu : vendre le choix de la prochaine mesure, et vendre le cont
   graines de développement, vérifié sur le dépôt ; seuil de 2 % non atteint. Trois essais sur les dates écartés :
   ils faisaient passer le seuil sur le lot de développement sans rien gagner sur le désordre réaliste (5,1 %), qui
   est la condition du test. Obstacle restant : redater les pièces du désordre réaliste. PR `haynbroit-alt/A#10`.
+
+### LAVOISIER, point 14 : un essai écarté (15 novembre 2026)
+
+Diagnostic par oracle : sur le désordre réaliste, les entrées de stock saisies en retard portent l'essentiel de
+l'erreur de stocks. Une règle sans seuil pour les redater une à une, écrite avant le code, fait passer P médian de
+2,27 % à 1,85 % et retrouve quatre flux cachés de plus — mais crée huit fausses détections (FD2 0,09 → 0,15 ; un
+placebo de plus). Deux garde-fous franchis : code retiré, conservé non appliqué. Les repères de LAVOISIER restent
+ceux du point 12 (P 2,27 %). Prochain pas identifié : la détection des manques doit cesser de dépendre de la
+propreté de la série, sinon tout progrès de datation se paie en fausses alertes. PR `haynbroit-alt/A#11`.
