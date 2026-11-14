@@ -1,0 +1,12 @@
+[
+ {
+  "moteur": "GALILÉE", "travail": "G3",
+  "mesure": "suites a → a + k·d(a) : limite de la part de multiples de 3 dans le modèle à mélange parfait",
+  "avant": "0,3885 mesuré, pris pour une constante",
+  "apres": "limite calculée 0,384077 ; la valeur mesurée dérive : 0,3911 (ln a 13,5), 0,3889 (18,7), 0,3877 (25,3, k = 1001)",
+  "seuil": "k = 1001 entre 0,3860 et 0,3885 — atteint",
+  "commit": "80b9f9f", "source": "haynbroit-alt/All THEORIE_B1.md",
+  "portee": "prédiction écrite avant le calcul, une suite de neuf millions de termes",
+  "note": "marge d’un millième, de l’ordre du bruit du modèle ; ni le mélange ni l’égalité suite-modèle ne sont démontrés"
+ }
+]
