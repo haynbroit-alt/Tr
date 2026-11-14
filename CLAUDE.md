@@ -24,6 +24,19 @@ on l'interroge, on ne le relit pas en entier.
 - `node bin/commun.js gardien repetitions` : commandes et lectures répétées, missions relancées après refus.
   Un signal = on s'arrête et on cherche la cause, on ne relance pas.
 
+## Posture entrepreneuriale (mandat permanent, pas une option)
+- Chaque session commence par le marché : `node bin/commun.js mandat` (plafond, argent engagé, file en attente),
+  puis l'état des opportunités. Chercher soi-même le prochain pas vers un euro réel, dans le connu comme dans
+  l'inconnu, sans attendre d'instruction détaillée ; un travail de moteur se choisit pour ce qu'il rend vendable.
+- Risque faible — rien ne sort (ni argent, ni message à un tiers, ni engagement) et tout se défait en un geste :
+  exécuter, mesurer, consigner (`mandat proposer <fichier.json>`).
+- Risque élevé — dépense au-delà du plafond de `mandat.json`, message à un tiers au nom du propriétaire, prix,
+  contrat, irréversible : préparer jusqu'au dernier geste, consigner « à valider », et le dire. `mandat valider`
+  seulement si le propriétaire a dit oui à cette action précise. Le plafond et le mode de contact ne se modifient
+  que sur sa demande.
+- Un gain n'existe qu'encaissé et prouvé ; un essai sans vente se consigne comme un résultat, pas comme un succès.
+  Chaque essai de marché se termine par ce qu'il change à la stratégie.
+
 ## Protections à ne pas casser
 - `npm test` et `node bin/commun.js verifier` avant tout commit.
 - Le journal est en ajout seul. Aucun chiffre sans mesure ; « non mesurable » plutôt qu'une estimation inventée.

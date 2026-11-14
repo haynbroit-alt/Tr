@@ -75,7 +75,36 @@ if (cmd === 'executer' && !process.argv.includes('--sans-gardien')) {
   console.log('\nCOLLECTIF', JSON.stringify({ ...c.collectif, jalons: c.collectif.jalons.length }, null, 1));
   console.log('COÛTS', JSON.stringify(c.couts));
   console.log('GAINS RÉELS', JSON.stringify(c.gains));
+} else if (cmd === 'audit-fec') {
+  // Audit des comptes de tiers d'un fichier d'écritures comptables réel. Rien n'est écrit au journal : le fichier est privé.
+  const { readFileSync } = await import('node:fs');
+  const { lireFEC, auditer } = await import('../src/audit-fec.js');
+  const brut = readFileSync(nom), utf8 = brut.toString('utf8'); // beaucoup de FEC sont en Latin-1 : repli si l'UTF-8 est invalide
+  const r = auditer(lireFEC(utf8.includes('\uFFFD') ? brut.toString('latin1') : utf8));
+  console.log(`lu : ${r.lu.lignes} lignes, ${r.lu.ecritures} écritures, du ${r.lu.du} au ${r.lu.au} · lettrage clients : ${r.lu.lettrage_clients ? 'tenu' : 'absent'}`);
+  for (const [k, t] of [['factures_en_double', 'factures fournisseur saisies deux fois'], ['fournisseurs_debiteurs', 'fournisseurs qui doivent de l’argent'], ['creances_anciennes', 'créances clients de plus de 90 jours']]) {
+    console.log(`${t} : ${r[k].cas.length} cas, ${r[k].montant_eur} € à vérifier`);
+    if (process.argv.includes('--detail')) for (const c of r[k].cas) console.log('   ', JSON.stringify(c));
+  }
+  console.log(r.nature);
+} else if (cmd === 'mandat') {
+  // Posture entrepreneuriale : ce qui s'exécute d'initiative, ce qui attend le propriétaire, l'argent engagé.
+  const M = await import('../src/mandat.js');
+  const mandat = M.lireMandat(RACINE);
+  const dire = (r) => console.log(`${r.decision.padEnd(10)} ${r.cle} — ${r.action}${r.motifs.length ? ` (${r.motifs.join(' ; ')})` : ''}`);
+  if (nom === 'proposer') { const { readFileSync } = await import('node:fs'); for (const i of JSON.parse(readFileSync(process.argv[4], 'utf8'))) dire(M.consigner(reg, mandat, i)); }
+  else if (nom === 'valider' || nom === 'abandonner') {
+    // « valider » ne s'emploie que si le propriétaire a dit oui à cette action précise.
+    const d = M.etat(reg, mandat).a_valider.find((r) => r.cle === process.argv[4]);
+    if (!d) { console.error('aucune initiative en attente sous cette clé'); process.exit(1); }
+    dire(M.consigner(reg, mandat, d, { valide: nom === 'valider', abandon: nom === 'abandonner' }));
+  } else {
+    const e = M.etat(reg, mandat);
+    console.log(`plafond de dépense : ${e.depense_max_eur} € · engagé : ${e.engage_eur} € · reste : ${e.reste_eur} € · contacts : ${e.contacts}`);
+    console.log(`initiatives exécutées : ${e.executees.length} · en attente du propriétaire : ${e.a_valider.length}`);
+    for (const r of e.a_valider) dire(r);
+  }
 } else if (cmd === 'page') {
   const { ecrirePage } = await import('../src/page.js');
   console.log(ecrirePage(reg, join(RACINE, 'page', 'index.html')));
-} else console.log('usage : commun.js executer <forme-manquante|entreprise-opaque> --graine N | verifier | etat | page');
+} else console.log('usage : commun.js executer <forme-manquante|entreprise-opaque> --graine N | verifier | etat | comptes | gardien | mandat | page');
