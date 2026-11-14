@@ -1,0 +1,42 @@
+[
+ {
+  "moteur": "GALILÉE", "travail": "G3",
+  "mesure": "objets arithmétiques exacts interrogés par le moteur : lois démontrées prédites à 100 fois la plage mesurée",
+  "avant": "jamais mesuré", "apres": "5 mondes sur 6 ; le nombre de premiers manqué à 2,02 %", "seuil": "au moins 4 sur 6 — atteint",
+  "commit": "8492f01", "source": "haynbroit-alt/All RESULTATS_G3.md",
+  "portee": "exécution unique, 12 objets, graines 1 à 3, bruit de mesure 0,2 %",
+  "note": "terres inconnues : 0 sur 6 ; aucune loi dite « établie » ne dérive de plus de 3 %"
+ },
+ {
+  "moteur": "GALILÉE", "travail": "G3",
+  "mesure": "suite a → a + d(a) : part des termes de la forme 2 × impair, rangs 10^6 à 10^7",
+  "avant": "0,25 si la suite voyait des entiers ordinaires", "apres": "0,9985", "seuil": "au moins 0,90 — atteint",
+  "commit": "a6c6e24", "source": "haynbroit-alt/All THEORIE_B1.md",
+  "portee": "prédiction écrite avant le calcul ; deux lemmes démontrés, vérifiés sur 10^7 termes",
+  "note": "la constante prédite (excès de ln 2) est réfutée ; non confronté à la littérature"
+ },
+ {
+  "moteur": "GALILÉE", "travail": "G3",
+  "mesure": "suite a → a + d(a) : terme de rang 3·10^7 prédit par la loi révisée (pas moyen 1,05·ln a + 2,08)",
+  "avant": "3,8 % d’erreur avec la première théorie", "apres": "0,033 % d’erreur", "seuil": "au plus 0,5 % — atteint",
+  "commit": "574c75f", "source": "haynbroit-alt/All THEORIE_B1.md",
+  "portee": "loi ajustée sur les rangs 10^4 à 10^7, jugée sur vingt millions de termes neufs",
+  "note": "loi empirique, constantes non expliquées ; confluence vérifiée sur 24 départs ; deux prédictions réfutées (retour aux impairs, seuil de 0,99)"
+ },
+ {
+  "moteur": "GALILÉE", "travail": "RÉEL-2",
+  "mesure": "chaîne de livraison sur 15 tâches réelles neuves : lois retenues qui tiennent sur la partie finale",
+  "avant": "calcul après coup seulement (RÉEL)", "apres": "9 sur 9", "seuil": "au moins 80 % — atteint",
+  "commit": "0b5687b", "source": "haynbroit-alt/Tr programme/missions/reel2/RESULTATS_REEL2.md",
+  "portee": "exécution unique, nature, technique, économie, finance ; partage en trois",
+  "note": "cinq des neuf battent la droite de moins de 7 % ; la tâche boursière retenue n’est pas une stratégie"
+ },
+ {
+  "moteur": "GALILÉE", "travail": "RÉEL-2",
+  "mesure": "chaîne de livraison : témoins négatifs retenus à tort",
+  "avant": "non mesuré", "apres": "3 sur 12, tous des constantes", "seuil": "au plus 1 — manqué",
+  "commit": "0b5687b", "source": "haynbroit-alt/Tr programme/missions/reel2/RESULTATS_REEL2.md",
+  "portee": "10 réponses mélangées et 2 séries de rendements boursiers",
+  "note": "règle corrigée après coup (une constante n’est jamais retenue), à confirmer sur des témoins neufs"
+ }
+]

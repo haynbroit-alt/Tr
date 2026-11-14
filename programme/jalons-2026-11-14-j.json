@@ -1,0 +1,9 @@
+[
+ {
+  "moteur": "GALILÉE", "travail": "RÉEL-2",
+  "mesure": "rectification du jalon précédent : marge des lois retenues sur la droite, partie finale",
+  "avant": "noté « cinq des neuf de moins de 7 % »", "apres": "six des neuf de moins de 10 % (0,5 %, 3 %, 5 %, 7 %, 8 %, 9 %)", "seuil": null,
+  "commit": "0b5687b", "source": "haynbroit-alt/Tr programme/missions/reel2/RESULTATS_REEL2.md",
+  "portee": "relecture des mêmes chiffres", "note": "le journal est en ajout seul : cette ligne corrige la note du jalon précédent"
+ }
+]
