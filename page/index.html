@@ -90,11 +90,11 @@ code{font:13px var(--mono);background:var(--creux);padding:1px 5px;border-radius
   <h1>Page de travail commune</h1>
   <p class="chapo">GALILÉE cherche les lois, CORTEX les mécanismes, LAVOISIER les comptes. Ils ne s’appellent pas entre eux : chacun lit et écrit dans un même journal, où tout acte porte son auteur, sa preuve, son coût et son niveau de certitude.</p>
   <div class="etat">
-    <span><b>356</b> actes au journal</span>
+    <span><b>361</b> actes au journal</span>
     <span class="bon"><b>Chaîne intacte</b></span>
     <span class="bon"><b>33 fichiers moteurs non modifiés</b></span>
-    <span><b>39</b> dossiers</span>
-    <span>dernier acte : 2026-11-14 06:12 UTC</span>
+    <span><b>40</b> dossiers</span>
+    <span>dernier acte : 2026-11-14 06:40 UTC</span>
   </div>
 </section>
 
@@ -144,8 +144,8 @@ code{font:13px var(--mono);background:var(--creux);padding:1px 5px;border-radius
     <div><b>0 €</b>dépensés (abonnement de la boutique non relevé)</div>
     <div><b>0 €</b>encaissés</div>
   </div>
-  <div class="moteurs"><div class="moteur galilee"><h3>GALILÉE</h3><p class="petit">v1 terminée, banc publié</p><ul><li><b>G1</b> Ne plus se dire convaincu à tort</li><li><b>G2</b> Lois sur des comptages (ventes)</li><li><b>G3</b> Terres inconnues</li></ul></div><div class="moteur cortex"><h3>CORTEX</h3><p class="petit">v5 évaluée ; v6 : P1 et P2 évalués, P3 gelé, test non exécuté</p><ul><li><b>C1</b> Exécuter le test unique de P3 — attend votre décision</li><li><b>C2</b> Exporter son juge pour des données extérieures</li><li><b>C3</b> P4 : agir, arbitrer avec le profit</li></ul></div><div class="moteur lavoisier"><h3>LAVOISIER</h3><p class="petit">organe 1 sur 8, en développement, non gelé</p><ul><li><b>L1</b> Atteindre les seuils de M0, geler, tester</li><li><b>L2</b> Entreprise pilotable</li><li><b>L3</b> Lecteur d’écritures réelles</li></ul></div></div>
-  <details class="pli"><summary>GALILÉE : repères individuels <span class="sur">· 0 seuil(s) manqué(s) · source bench/RESULTS.md @ be42b7e</span></summary><div class="tableau"><table><thead><tr><th>État</th><th>Mesure</th><th>Valeur</th><th>Seuil</th><th>Travail</th></tr></thead><tbody><tr><td><span class="sur">—</span></td><td>lois retrouvées avec précision, bruit 1 %</td><td class="n">96 %</td><td class="n">—</td><td></td></tr><tr><td><span class="sur">—</span></td><td>lois retrouvées avec précision, bruit 5 %</td><td class="n">71 %</td><td class="n"><span class="sur">80 proposé</span></td><td><span class="mes">G1</span></td></tr><tr><td><span class="sur">—</span></td><td>arrêts « convaincu » sur une forme fausse, bruit 5 % (75 essais)</td><td class="n">9</td><td class="n"><span class="sur">2 proposé</span></td><td><span class="mes">G1</span></td></tr><tr><td><span class="sur">—</span></td><td>capteur qui sature retrouvé, bruit 5 %</td><td class="n">20 %</td><td class="n">—</td><td><span class="mes">G1</span></td></tr></tbody></table></div></details><details class="pli"><summary>CORTEX : repères individuels <span class="sur">· 2 seuil(s) manqué(s) · source README.md, research/v6/RESULTATS_P2.md, research/v6/PROTOCOLE_P3.md @ 758212a</span></summary><div class="tableau"><table><thead><tr><th>État</th><th>Mesure</th><th>Valeur</th><th>Seuil</th><th>Travail</th></tr></thead><tbody><tr><td><span class="sur">—</span></td><td>profit v5, part de l'oracle</td><td class="n">65,8 %</td><td class="n">—</td><td><span class="mes">C3</span></td></tr><tr><td><span class="verd bon">atteint</span></td><td>sonde « hors de portée », AUC (P2)</td><td class="n">0,885</td><td class="n">0,8</td><td></td></tr><tr><td><span class="verd mauvais">manque</span></td><td>formes statiques signalées (P2, C2)</td><td class="n">42 %</td><td class="n">60</td><td></td></tr><tr><td><span class="verd mauvais">manque</span></td><td>formules de GALILÉE confirmées, plan passif (P2, G1)</td><td class="n">4 %</td><td class="n">50</td><td><span class="mes">C1</span></td></tr><tr><td><span class="sur">—</span></td><td>formules confirmées, plan actif (P3) — test<div class="petit">non exécuté ; 100 % sur 9 formules en développement</div></td><td class="n">non mesuré</td><td class="n">50</td><td><span class="mes">C1</span></td></tr></tbody></table></div></details><details class="pli"><summary>LAVOISIER : repères individuels <span class="sur">· 2 seuil(s) manqué(s) · source bench/DEV_M0_BILAN.md (développement, 100 graines) @ 73618f9</span></summary><div class="tableau"><table><thead><tr><th>État</th><th>Mesure</th><th>Valeur</th><th>Seuil</th><th>Travail</th></tr></thead><tbody><tr><td><span class="verd bon">atteint</span></td><td>F équilibré (types de flux)</td><td class="n">0,934</td><td class="n">0,9</td><td></td></tr><tr><td><span class="verd bon">atteint</span></td><td>L (appariement)</td><td class="n">0,856</td><td class="n">0,85</td><td></td></tr><tr><td><span class="verd bon">atteint</span></td><td>G (graphe)</td><td class="n">0,918</td><td class="n">0,85</td><td></td></tr><tr><td><span class="verd bon">atteint</span></td><td>S médian (stocks)</td><td class="n">1,6 %</td><td class="n">2</td><td></td></tr><tr><td><span class="verd mauvais">manque</span></td><td>P médian (profit)</td><td class="n">3,8 %</td><td class="n">2</td><td><span class="mes">L1</span></td></tr><tr><td><span class="verd bon">atteint</span></td><td>R (flux cachés retrouvés)</td><td class="n">73,7 %</td><td class="n">70</td><td></td></tr><tr><td><span class="verd bon">atteint</span></td><td>FD1 (placebos touchés)</td><td class="n">2,9 %</td><td class="n">10</td><td></td></tr><tr><td><span class="verd mauvais">manque</span></td><td>FD2 (fausses détections par entreprise)</td><td class="n">0,2</td><td class="n">0,1</td><td><span class="mes">L1</span></td></tr></tbody></table></div></details>
+  <div class="moteurs"><div class="moteur galilee"><h3>GALILÉE</h3><p class="petit">v1 terminée, banc publié</p><ul><li><b>G1</b> Ne plus se dire convaincu à tort</li><li><b>G2</b> Lois sur des comptages : mesuré, hypothèse contredite, module non écrit</li><li><b>G3</b> Terres inconnues</li></ul></div><div class="moteur cortex"><h3>CORTEX</h3><p class="petit">v5 évaluée ; v6 : P1 et P2 évalués, P3 gelé, test non exécuté</p><ul><li><b>C1</b> Test unique de P3 : autorisé, en cours d’exécution</li><li><b>C2</b> Exporter son juge pour des données extérieures</li><li><b>C3</b> P4 : agir, arbitrer avec le profit</li></ul></div><div class="moteur lavoisier"><h3>LAVOISIER</h3><p class="petit">organe 1 sur 8, en développement, non gelé</p><ul><li><b>L1</b> Seuils de M0 : fausses détections 0,20 → 0,08 ; profit encore hors seuil</li><li><b>L2</b> Entreprise pilotable</li><li><b>L3</b> Lecteur d’écritures réelles</li></ul></div></div>
+  <details class="pli"><summary>GALILÉE : repères individuels <span class="sur">· 0 seuil(s) manqué(s) · 1 jalon(s) · source bench/RESULTS.md @ be42b7e</span></summary><div class="tableau"><table><thead><tr><th>État</th><th>Mesure</th><th>Valeur</th><th>Seuil</th><th>Travail</th></tr></thead><tbody><tr><td><span class="sur">—</span></td><td>lois retrouvées avec précision, bruit 1 %</td><td class="n">96 %</td><td class="n">—</td><td></td></tr><tr><td><span class="sur">—</span></td><td>lois retrouvées avec précision, bruit 5 %</td><td class="n">71 %</td><td class="n"><span class="sur">80 proposé</span></td><td><span class="mes">G1</span></td></tr><tr><td><span class="sur">—</span></td><td>arrêts « convaincu » sur une forme fausse, bruit 5 % (75 essais)</td><td class="n">9</td><td class="n"><span class="sur">2 proposé</span></td><td><span class="mes">G1</span></td></tr><tr><td><span class="sur">—</span></td><td>capteur qui sature retrouvé, bruit 5 %</td><td class="n">20 %</td><td class="n">—</td><td><span class="mes">G1</span></td></tr></tbody></table></div><div class="tableau"><table><thead><tr><th>Travail</th><th>Progrès mesuré dans son dépôt</th><th>Avant</th><th>Après</th><th>Seuil</th></tr></thead><tbody><tr><td><span class="mes">G2</span></td><td>bonnes lois de demande parmi les effets détectables, sur comptages<div class="petit">développement (graines 1 à 200), moteur actuel non modifié · haynbroit-alt/All bench/COMPTAGES_BASE.md ; PROTOCOLE_G2.md @ ba941c0 · l’hypothèse du programme est contredite : le bruit de comptage n’explique pas les constantes ; le module n’est pas écrit</div></td><td class="n">non mesuré</td><td class="n">105/133 (79 %)</td><td class="n">≥ 50 % visé pour un nouveau module</td></tr></tbody></table></div></details><details class="pli"><summary>CORTEX : repères individuels <span class="sur">· 2 seuil(s) manqué(s) · 0 jalon(s) · source README.md, research/v6/RESULTATS_P2.md, research/v6/PROTOCOLE_P3.md @ 758212a</span></summary><div class="tableau"><table><thead><tr><th>État</th><th>Mesure</th><th>Valeur</th><th>Seuil</th><th>Travail</th></tr></thead><tbody><tr><td><span class="sur">—</span></td><td>profit v5, part de l'oracle</td><td class="n">65,8 %</td><td class="n">—</td><td><span class="mes">C3</span></td></tr><tr><td><span class="verd bon">atteint</span></td><td>sonde « hors de portée », AUC (P2)</td><td class="n">0,885</td><td class="n">0,8</td><td></td></tr><tr><td><span class="verd mauvais">manque</span></td><td>formes statiques signalées (P2, C2)</td><td class="n">42 %</td><td class="n">60</td><td></td></tr><tr><td><span class="verd mauvais">manque</span></td><td>formules de GALILÉE confirmées, plan passif (P2, G1)</td><td class="n">4 %</td><td class="n">50</td><td><span class="mes">C1</span></td></tr><tr><td><span class="sur">—</span></td><td>formules confirmées, plan actif (P3) — test<div class="petit">non exécuté ; 100 % sur 9 formules en développement</div></td><td class="n">non mesuré</td><td class="n">50</td><td><span class="mes">C1</span></td></tr></tbody></table></div></details><details class="pli"><summary>LAVOISIER : repères individuels <span class="sur">· 2 seuil(s) manqué(s) · 3 jalon(s) · source bench/DEV_M0_BILAN.md (développement, 100 graines) @ 73618f9</span></summary><div class="tableau"><table><thead><tr><th>État</th><th>Mesure</th><th>Valeur</th><th>Seuil</th><th>Travail</th></tr></thead><tbody><tr><td><span class="verd bon">atteint</span></td><td>F équilibré (types de flux)</td><td class="n">0,934</td><td class="n">0,9</td><td></td></tr><tr><td><span class="verd bon">atteint</span></td><td>L (appariement)</td><td class="n">0,856</td><td class="n">0,85</td><td></td></tr><tr><td><span class="verd bon">atteint</span></td><td>G (graphe)</td><td class="n">0,918</td><td class="n">0,85</td><td></td></tr><tr><td><span class="verd bon">atteint</span></td><td>S médian (stocks)</td><td class="n">1,6 %</td><td class="n">2</td><td></td></tr><tr><td><span class="verd mauvais">manque</span></td><td>P médian (profit)</td><td class="n">3,8 %</td><td class="n">2</td><td><span class="mes">L1</span></td></tr><tr><td><span class="verd bon">atteint</span></td><td>R (flux cachés retrouvés)</td><td class="n">73,7 %</td><td class="n">70</td><td></td></tr><tr><td><span class="verd bon">atteint</span></td><td>FD1 (placebos touchés)</td><td class="n">2,9 %</td><td class="n">10</td><td></td></tr><tr><td><span class="verd mauvais">manque</span></td><td>FD2 (fausses détections par entreprise)</td><td class="n">0,2</td><td class="n">0,1</td><td><span class="mes">L1</span></td></tr></tbody></table></div><div class="tableau"><table><thead><tr><th>Travail</th><th>Progrès mesuré dans son dépôt</th><th>Avant</th><th>Après</th><th>Seuil</th></tr></thead><tbody><tr><td><span class="mes">L1</span></td><td>FD2, fausses détections par entreprise à flux cachés<div class="petit">développement (graines 1 à 100), bilan non gelé · haynbroit-alt/A bench/DEV_M0_BILAN.md ; PROTOCOLE_M0.md § 9, point 9 @ daf9479 · sur données réalistes seules, comme au test : 0,12, encore au-dessus du seuil</div></td><td class="n">0.2</td><td class="n">0.08</td><td class="n">≤ 0,10</td></tr><tr><td><span class="mes">L1</span></td><td>R, flux cachés retrouvés<div class="petit">développement (graines 1 à 100), bilan non gelé · haynbroit-alt/A bench/DEV_M0_BILAN.md @ daf9479</div></td><td class="n">70/95</td><td class="n">80/95</td><td class="n">≥ 70 %</td></tr><tr><td><span class="mes">L1</span></td><td>P médian, erreur sur le profit<div class="petit">développement (graines 1 à 100) · haynbroit-alt/A bench/DEV_M0_BILAN.md @ daf9479 · inchangé : reste hors seuil</div></td><td class="n">3,8 %</td><td class="n">3,8 %</td><td class="n">≤ 2 %</td></tr></tbody></table></div></details>
   <p class="petit">Confrontation T1 : 39 des 43 mécanismes de CORTEX venaient de factures mensuelles que le registre avait transmises comme des mesures quotidiennes. L’erreur était celle du registre ; la règle de transmission est corrigée. Programme complet : <code>programme/PROGRAMME.md</code>.</p>
 </section>
 
@@ -12203,6 +12203,135 @@ code{font:13px var(--mono);background:var(--creux);padding:1px 5px;border-radius
  &quot;source&quot;: &quot;src/problemes/confrontation-t1.js&quot;,
  &quot;compte&quot;: &quot;collectif&quot;,
  &quot;id&quot;: &quot;16e64a69e420da26&quot;
+}</pre></details>
+</article></div></details>
+<details class="pli" id="progres#individuels"><summary>Progrès individuels des moteurs <span class="sur">· 5 actes</span></summary><div class="fil"><article class="acte neutre t-probleme" id="r356" data-qui="neutre">
+  <header><span class="num">n° 356</span><span class="type">Problème</span><span class="qui neutre">registre</span><span class="id">cc37b9e6e566fdde</span></header>
+  <p class="fort">Qu’est-ce que chaque moteur a gagné seul, dans son dépôt, mesuré sur son propre banc ?</p><p class="petit">Source : dépôts des moteurs · graine — (jalons)</p>
+  <details><summary>Ligne brute du journal</summary><pre>{
+ &quot;n&quot;: 356,
+ &quot;precedent&quot;: &quot;16e64a69e420da26&quot;,
+ &quot;date&quot;: &quot;2026-11-14T06:40:50.070Z&quot;,
+ &quot;probleme&quot;: &quot;progres#individuels&quot;,
+ &quot;type&quot;: &quot;probleme&quot;,
+ &quot;cle&quot;: &quot;progres#individuels&quot;,
+ &quot;auteur&quot;: &quot;registre&quot;,
+ &quot;titre&quot;: &quot;Progrès individuels des moteurs&quot;,
+ &quot;question&quot;: &quot;Qu’est-ce que chaque moteur a gagné seul, dans son dépôt, mesuré sur son propre banc ?&quot;,
+ &quot;source&quot;: {
+  &quot;generateur&quot;: &quot;dépôts des moteurs&quot;,
+  &quot;graine&quot;: &quot;—&quot;,
+  &quot;statut&quot;: &quot;jalons&quot;
+ },
+ &quot;id&quot;: &quot;cc37b9e6e566fdde&quot;
+}</pre></details>
+</article>
+<article class="acte lavoisier t-jalon" id="r357" data-qui="lavoisier">
+  <header><span class="num">n° 357</span><span class="type">Jalon</span><span class="qui lavoisier">LAVOISIER</span><span class="commit">daf9479</span><span class="id">946e4c8a8f97d08c</span></header>
+  <p class="fort">L1 — FD2, fausses détections par entreprise à flux cachés</p><p><span class="mes">avant : 0.2</span> <span class="mes">après : 0.08</span></p>
+  <details><summary>Ligne brute du journal</summary><pre>{
+ &quot;n&quot;: 357,
+ &quot;precedent&quot;: &quot;cc37b9e6e566fdde&quot;,
+ &quot;date&quot;: &quot;2026-11-14T06:40:50.074Z&quot;,
+ &quot;probleme&quot;: &quot;progres#individuels&quot;,
+ &quot;type&quot;: &quot;jalon&quot;,
+ &quot;auteur&quot;: &quot;LAVOISIER&quot;,
+ &quot;moteur&quot;: {
+  &quot;nom&quot;: &quot;LAVOISIER&quot;,
+  &quot;depot&quot;: &quot;haynbroit-alt/A&quot;,
+  &quot;commit&quot;: &quot;daf9479&quot;
+ },
+ &quot;compte&quot;: &quot;individuel&quot;,
+ &quot;travail&quot;: &quot;L1&quot;,
+ &quot;mesure&quot;: &quot;FD2, fausses détections par entreprise à flux cachés&quot;,
+ &quot;avant&quot;: 0.2,
+ &quot;apres&quot;: 0.08,
+ &quot;seuil&quot;: &quot;≤ 0,10&quot;,
+ &quot;source&quot;: &quot;haynbroit-alt/A bench/DEV_M0_BILAN.md ; PROTOCOLE_M0.md § 9, point 9&quot;,
+ &quot;portee&quot;: &quot;développement (graines 1 à 100), bilan non gelé&quot;,
+ &quot;note&quot;: &quot;sur données réalistes seules, comme au test : 0,12, encore au-dessus du seuil&quot;,
+ &quot;id&quot;: &quot;946e4c8a8f97d08c&quot;
+}</pre></details>
+</article>
+<article class="acte lavoisier t-jalon" id="r358" data-qui="lavoisier">
+  <header><span class="num">n° 358</span><span class="type">Jalon</span><span class="qui lavoisier">LAVOISIER</span><span class="commit">daf9479</span><span class="id">5f770035bbb2f4d9</span></header>
+  <p class="fort">L1 — R, flux cachés retrouvés</p><p><span class="mes">avant : 70/95</span> <span class="mes">après : 80/95</span></p>
+  <details><summary>Ligne brute du journal</summary><pre>{
+ &quot;n&quot;: 358,
+ &quot;precedent&quot;: &quot;946e4c8a8f97d08c&quot;,
+ &quot;date&quot;: &quot;2026-11-14T06:40:50.075Z&quot;,
+ &quot;probleme&quot;: &quot;progres#individuels&quot;,
+ &quot;type&quot;: &quot;jalon&quot;,
+ &quot;auteur&quot;: &quot;LAVOISIER&quot;,
+ &quot;moteur&quot;: {
+  &quot;nom&quot;: &quot;LAVOISIER&quot;,
+  &quot;depot&quot;: &quot;haynbroit-alt/A&quot;,
+  &quot;commit&quot;: &quot;daf9479&quot;
+ },
+ &quot;compte&quot;: &quot;individuel&quot;,
+ &quot;travail&quot;: &quot;L1&quot;,
+ &quot;mesure&quot;: &quot;R, flux cachés retrouvés&quot;,
+ &quot;avant&quot;: &quot;70/95&quot;,
+ &quot;apres&quot;: &quot;80/95&quot;,
+ &quot;seuil&quot;: &quot;≥ 70 %&quot;,
+ &quot;source&quot;: &quot;haynbroit-alt/A bench/DEV_M0_BILAN.md&quot;,
+ &quot;portee&quot;: &quot;développement (graines 1 à 100), bilan non gelé&quot;,
+ &quot;note&quot;: null,
+ &quot;id&quot;: &quot;5f770035bbb2f4d9&quot;
+}</pre></details>
+</article>
+<article class="acte lavoisier t-jalon" id="r359" data-qui="lavoisier">
+  <header><span class="num">n° 359</span><span class="type">Jalon</span><span class="qui lavoisier">LAVOISIER</span><span class="commit">daf9479</span><span class="id">7970798364297465</span></header>
+  <p class="fort">L1 — P médian, erreur sur le profit</p><p><span class="mes">avant : 3,8 %</span> <span class="mes">après : 3,8 %</span></p>
+  <details><summary>Ligne brute du journal</summary><pre>{
+ &quot;n&quot;: 359,
+ &quot;precedent&quot;: &quot;5f770035bbb2f4d9&quot;,
+ &quot;date&quot;: &quot;2026-11-14T06:40:50.076Z&quot;,
+ &quot;probleme&quot;: &quot;progres#individuels&quot;,
+ &quot;type&quot;: &quot;jalon&quot;,
+ &quot;auteur&quot;: &quot;LAVOISIER&quot;,
+ &quot;moteur&quot;: {
+  &quot;nom&quot;: &quot;LAVOISIER&quot;,
+  &quot;depot&quot;: &quot;haynbroit-alt/A&quot;,
+  &quot;commit&quot;: &quot;daf9479&quot;
+ },
+ &quot;compte&quot;: &quot;individuel&quot;,
+ &quot;travail&quot;: &quot;L1&quot;,
+ &quot;mesure&quot;: &quot;P médian, erreur sur le profit&quot;,
+ &quot;avant&quot;: &quot;3,8 %&quot;,
+ &quot;apres&quot;: &quot;3,8 %&quot;,
+ &quot;seuil&quot;: &quot;≤ 2 %&quot;,
+ &quot;source&quot;: &quot;haynbroit-alt/A bench/DEV_M0_BILAN.md&quot;,
+ &quot;portee&quot;: &quot;développement (graines 1 à 100)&quot;,
+ &quot;note&quot;: &quot;inchangé : reste hors seuil&quot;,
+ &quot;id&quot;: &quot;7970798364297465&quot;
+}</pre></details>
+</article>
+<article class="acte galilee t-jalon" id="r360" data-qui="galilee">
+  <header><span class="num">n° 360</span><span class="type">Jalon</span><span class="qui galilee">GALILÉE</span><span class="commit">ba941c0</span><span class="id">539984f80edf0d88</span></header>
+  <p class="fort">G2 — bonnes lois de demande parmi les effets détectables, sur comptages</p><p><span class="mes">avant : non mesuré</span> <span class="mes">après : 105/133 (79 %)</span></p>
+  <details><summary>Ligne brute du journal</summary><pre>{
+ &quot;n&quot;: 360,
+ &quot;precedent&quot;: &quot;7970798364297465&quot;,
+ &quot;date&quot;: &quot;2026-11-14T06:40:50.076Z&quot;,
+ &quot;probleme&quot;: &quot;progres#individuels&quot;,
+ &quot;type&quot;: &quot;jalon&quot;,
+ &quot;auteur&quot;: &quot;GALILÉE&quot;,
+ &quot;moteur&quot;: {
+  &quot;nom&quot;: &quot;GALILÉE&quot;,
+  &quot;depot&quot;: &quot;haynbroit-alt/All&quot;,
+  &quot;commit&quot;: &quot;ba941c0&quot;
+ },
+ &quot;compte&quot;: &quot;individuel&quot;,
+ &quot;travail&quot;: &quot;G2&quot;,
+ &quot;mesure&quot;: &quot;bonnes lois de demande parmi les effets détectables, sur comptages&quot;,
+ &quot;avant&quot;: &quot;non mesuré&quot;,
+ &quot;apres&quot;: &quot;105/133 (79 %)&quot;,
+ &quot;seuil&quot;: &quot;≥ 50 % visé pour un nouveau module&quot;,
+ &quot;source&quot;: &quot;haynbroit-alt/All bench/COMPTAGES_BASE.md ; PROTOCOLE_G2.md&quot;,
+ &quot;portee&quot;: &quot;développement (graines 1 à 200), moteur actuel non modifié&quot;,
+ &quot;note&quot;: &quot;l’hypothèse du programme est contredite : le bruit de comptage n’explique pas les constantes ; le module n’est pas écrit&quot;,
+ &quot;id&quot;: &quot;539984f80edf0d88&quot;
 }</pre></details>
 </article></div></details>
 </section>
