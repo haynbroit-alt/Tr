@@ -1,0 +1,94 @@
+[
+ {
+  "rang": 1,
+  "secteur": "services aux entreprises",
+  "statut": "en attente",
+  "titre": "Choisir la prochaine mesure : plans d’essais pour laboratoires et ateliers",
+  "description": "Au lieu de vendre « la loi cachée dans vos données », vendre le choix des prochaines mesures à faire, puis une loi dont la prédiction est vérifiée hors de la plage mesurée.",
+  "connu": "Sur 36 exécutions où GALILÉE choisit ses mesures, aucune loi dite « établie » ne dérive de plus de 3 % à cent fois la plage, et les échecs sont dits « incertaine ». Sur données fournies, son verdict ne prévient d’aucun échec (G4, RÉEL, RÉEL-2). CORTEX : plan actif 84 % contre 23 % en observation passive, sur mondes simulés.",
+  "inconnu": "Si un client peut réellement refaire des mesures à la demande, à quel coût et en combien de temps ; s’il paierait pour cela ; aucun essai sur un banc de mesure réel.",
+  "decouvrable": "Avec un premier client : le nombre de mesures économisées par rapport à son plan habituel, et l’erreur de la loi sur ses mesures de contrôle.",
+  "faisabilite": {
+   "base": "estimé",
+   "texte": "Les moteurs savent interroger un monde par une fonction ; il manque le lien avec un vrai banc de mesure et un client. Dépend de l’immatriculation du propriétaire, comme toute mission."
+  },
+  "cout_verification": {
+   "base": "estimé",
+   "depense_eur": 0,
+   "texte": "Aucune dépense pour préparer l’offre ; la première mission se ferait par la plateforme d’indépendants déjà retenue."
+  },
+  "potentiel": {
+   "base": "inconnu",
+   "texte": "Inconnu : aucun prix, aucun client, aucune demande mesurée."
+  },
+  "essai": {
+   "hypothese": "Parmi les demandes reçues sur le profil de mission, au moins une concerne des mesures que le client peut refaire.",
+   "mesure": "Demandes reçues et leur nature, comptées par le propriétaire.",
+   "succes": "Une demande de ce type ; l’argent n’est compté qu’une fois une mission payée.",
+   "duree": "28 jours après mise en ligne du profil"
+  },
+  "abandon": [
+   "Aucune demande ne permet de refaire des mesures.",
+   "Le profil n’est pas mis en ligne."
+  ],
+  "valeur": {
+   "argent_reel_eur": 0,
+   "nature_de_la_preuve": "aucune"
+  },
+  "moteurs": {
+   "GALILÉE": "mode actif, verdict informatif (RESULTATS_G3)",
+   "CORTEX": "plan d’essais actif (RESULTATS_P3)",
+   "LAVOISIER": "aucun"
+  },
+  "sources": [
+   "haynbroit-alt/All RESULTATS_G3.md",
+   "haynbroit-alt/1 research/v6/RESULTATS_P3.md"
+  ]
+ },
+ {
+  "rang": 2,
+  "secteur": "services aux entreprises",
+  "statut": "en attente",
+  "titre": "Contrôle d’une courbe ou d’un modèle déjà utilisé par un client",
+  "description": "Un contrôle court et automatique : la formule ou la courbe que le client utilise prédit-elle mieux qu’une droite et qu’une constante sur des mesures mises de côté, et résiste-t-elle à un témoin sans rien à trouver ?",
+  "connu": "La chaîne de livraison existe (commande loi). Sur 15 tâches réelles, les 9 lois retenues tiennent sur données jamais utilisées ; après correction, 0 témoin négatif retenu sur 30.",
+  "inconnu": "Si quelqu’un paie pour faire contrôler un modèle qu’il croit bon ; le prix ; la concurrence des outils statistiques courants, non étudiée.",
+  "decouvrable": "Le nombre de demandes de ce type sur le profil de mission, et le prix accepté.",
+  "faisabilite": {
+   "base": "mesuré",
+   "texte": "L’outil tourne en quelques secondes sur un fichier CSV. Il juge une loi trouvée par GALILÉE ; juger une formule fournie par le client demande un petit ajout, non écrit."
+  },
+  "cout_verification": {
+   "base": "estimé",
+   "depense_eur": 0,
+   "texte": "Aucune dépense ; s’ajoute au profil de mission existant."
+  },
+  "potentiel": {
+   "base": "inconnu",
+   "texte": "Inconnu. Barre basse assumée : battre une droite n’est pas prouver une loi."
+  },
+  "essai": {
+   "hypothese": "Proposée comme première mission courte, cette offre reçoit au moins une demande.",
+   "mesure": "Demandes reçues, comptées par le propriétaire.",
+   "succes": "Une demande ; l’argent n’est compté qu’une fois une mission payée.",
+   "duree": "28 jours après mise en ligne du profil"
+  },
+  "abandon": [
+   "Aucune demande en 28 jours.",
+   "Un outil gratuit courant fait la même chose aussi simplement."
+  ],
+  "valeur": {
+   "argent_reel_eur": 0,
+   "nature_de_la_preuve": "aucune"
+  },
+  "moteurs": {
+   "GALILÉE": "recherche de loi sur données fournies, encadrée par le contrôle",
+   "CORTEX": "aucun",
+   "LAVOISIER": "aucun"
+  },
+  "sources": [
+   "haynbroit-alt/Tr programme/missions/reel2/RESULTATS_REEL2.md",
+   "haynbroit-alt/Tr programme/missions/reel2/CONFIRMATION_TEMOINS.md"
+  ]
+ }
+]
