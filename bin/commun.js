@@ -75,6 +75,15 @@ if (cmd === 'executer' && !process.argv.includes('--sans-gardien')) {
   console.log('\nCOLLECTIF', JSON.stringify({ ...c.collectif, jalons: c.collectif.jalons.length }, null, 1));
   console.log('COÛTS', JSON.stringify(c.couts));
   console.log('GAINS RÉELS', JSON.stringify(c.gains));
+} else if (cmd === 'loi') {
+  // loi <fichier.csv> [--cible nom] : loi sur les données d'un client, vérifiée sur des mesures mises de côté
+  const { readFileSync } = await import('node:fs');
+  const { lireCSV, analyser, rapport } = await import('../src/loi-client.js');
+  const { noms, lignes, rejetees } = lireCSV(readFileSync(nom, 'utf8'));
+  const ic = process.argv.indexOf('--cible'), cible = ic > 0 ? process.argv[ic + 1] : noms.at(-1), k = noms.indexOf(cible);
+  if (k < 0 || lignes.length < 8) { console.error(k < 0 ? `colonne « ${cible} » absente` : 'moins de 8 lignes lisibles'); process.exit(2); }
+  if (rejetees) console.log(`${rejetees} ligne(s) illisible(s) écartée(s)`);
+  console.log(rapport(analyser({ noms: noms.filter((_, i) => i !== k), cible, X: lignes.map((r) => r.filter((_, i) => i !== k)), y: lignes.map((r) => r[k]) })));
 } else if (cmd === 'audit-fec') {
   // Audit des comptes de tiers d'un fichier d'écritures comptables réel. Rien n'est écrit au journal : le fichier est privé.
   const { readFileSync } = await import('node:fs');

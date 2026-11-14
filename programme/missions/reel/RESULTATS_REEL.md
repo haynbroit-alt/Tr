@@ -68,3 +68,22 @@ Rapport = erreur sur les mesures mises de côté ÷ écart-type certifié. La lo
 
 Interpolation seulement, l'extrapolation n'est pas mesurée. Quinze jeux. Mesures de laboratoire, pas des données
 d'entreprise. Une seule graine. Les 9 jeux générés du réglage : aucun au niveau de la référence.
+
+## Garde-fou de la chaîne de livraison — calcul après coup
+
+Ajouté après le test, donc **sans valeur de preuve** : le lot de test avait déjà été vu. La règle n'a aucun réglage :
+une loi n'est retenue que si, sur les mesures mises de côté, elle se trompe moins qu'une droite et qu'une constante
+ajustées sur les mesures vues (`src/loi-client.js`, commande `node bin/commun.js loi <fichier.csv>`). Appliquée aux
+erreurs déjà publiées, sans nouvel appel au moteur (`garde-apres-coup.json`) :
+
+| | Loi retenue | Loi non retenue |
+|---|---:|---:|
+| 8 jeux au niveau de la référence | 7 | 1 (ENSO, la constante) |
+| 7 jeux en échec | 2 (Roszman1, Thurber) | 5 |
+
+Le garde-fou écarte la constante et cinq échecs sur sept — là où le verdict du moteur n'en signalait aucun. Il laisse
+passer deux lois qui battent la droite mais restent à 5 et 7 fois l'écart-type certifié : « retenue » veut dire
+« mieux qu'un témoin simple », pas « au niveau d'un modèle de spécialiste ». À confirmer sur des données neuves.
+
+Essai de bout en bout : `node bin/commun.js loi programme/missions/reel/exemple-kirby2.csv` rend la même loi et la
+même erreur (0,015) que le test.

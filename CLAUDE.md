@@ -34,6 +34,8 @@ on l'interroge, on ne le relit pas en entier.
   contrat, irréversible : préparer jusqu'au dernier geste, consigner « à valider », et le dire. `mandat valider`
   seulement si le propriétaire a dit oui à cette action précise. Le plafond et le mode de contact ne se modifient
   que sur sa demande.
+- Données d'un client (CSV) : `node bin/commun.js loi <fichier.csv>` — loi vérifiée sur mesures mises de côté ; ne
+  jamais livrer une loi « non retenue », ni s'appuyer sur le seul verdict du moteur.
 - Un gain n'existe qu'encaissé et prouvé ; un essai sans vente se consigne comme un résultat, pas comme un succès.
   Chaque essai de marché se termine par ce qu'il change à la stratégie.
 

@@ -78,6 +78,9 @@ jeux de 54 mesures ou plus réussissent tous, un seul des 8 jeux plus petits —
 sous une cinquantaine de mesures ; les lois trouvées prédisent mais ne s'interprètent pas toujours ; interpolation
 seulement ; le niveau de confiance affiché par le moteur n'a prévenu d'aucun échec. Source : dépôt commun,
 `programme/missions/reel/RESULTATS_REEL.md`.
+Outil de livraison prêt : `node bin/commun.js loi <fichier.csv>` met une mesure sur quatre de côté et ne retient la
+loi que si elle y prédit mieux qu'une droite et qu'une constante (calculé après coup sur ces 15 jeux : 5 échecs sur
+7 écartés, 2 passent encore).
 
 **C. Repérer des flux cachés dans les écritures d'une entreprise.**
 Sur 100 entreprises simulées de développement : 80 flux cachés retrouvés sur 95 ; 1 entreprise sans flux caché

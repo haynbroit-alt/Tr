@@ -291,3 +291,8 @@ prévient d'aucun échec. Ce que cela change : l'offre exige une cinquantaine de
 prédiction vérifiée sur points mis de côté, pas « la vraie loi ». Détail : `programme/missions/reel/RESULTATS_REEL.md`.
 Pistes ouvertes, sans chantier : confirmer le seuil de cinquante mesures sur d'autres données réelles ; comprendre
 pourquoi le moteur rend `x` ou une constante sur les petits jeux sans se dire incertain.
+
+Suite, même nuit : la leçon est passée dans un outil de livraison, `node bin/commun.js loi <fichier.csv>`. Il met une
+mesure sur quatre de côté et ne retient la loi que si elle bat une droite et une constante sur ces points. Calculé
+après coup sur les 15 jeux (donc sans valeur de preuve) : 5 échecs sur 7 écartés, la constante écartée, 7 bonnes lois
+gardées. Une mission « trouver la loi » peut maintenant se livrer en une commande, avec son contrôle.
