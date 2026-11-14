@@ -126,6 +126,33 @@ Première confrontation (T1) : 39 des 43 mécanismes proposés par CORTEX sur le
 factures mensuelles transmises comme des mesures quotidiennes. L'erreur était celle du registre ; la transmission
 exige désormais 183 jours actifs sur 365.
 
+## 3 quater. GARDIEN : gestion des ressources
+
+`src/gardien.js`, réglages dans `gardien.json`, consignes de travail dans `CLAUDE.md`. Module indépendant : il
+n'importe aucun moteur et n'écrit que des actes `garde` en fin de journal.
+
+```bash
+node bin/commun.js gardien                         # mode, budget restant, tokens, missions évitées
+node bin/commun.js gardien mode normal             # économique (défaut), normal, intensif
+node bin/commun.js gardien autoriser --calcul 600 --raison "…"   # seule façon de dépasser un budget
+node bin/commun.js gardien remise-a-zero           # nouveau point de départ du budget
+node bin/commun.js executer <mission> … --autorise # passer outre un refus, une fois
+```
+
+Toute mission lancée par `executer` passe par lui : évitée si son dossier est déjà au registre, refusée si le budget
+du mode est atteint, si son coût estimé dépasse le plafond ou si les dernières missions n'ont produit aucun progrès ;
+interrompue si elle dépasse son plafond de durée.
+
+**Limites de mesure.**
+- Les tokens viennent du relevé que Claude Code écrit sur la machine (`~/.claude/projects`). Absent ou illisible :
+  « non mesurable ». Il ne couvre que cette machine et les sessions qui y ont tourné.
+- Les tokens ne se rattachent pas à une mission : seul un total depuis la dernière remise à zéro est suivi.
+- Le gardien ne peut pas couper une session d'IA. Il mesure, refuse de lancer, et `CLAUDE.md` demande de s'arrêter.
+- Aucun coût en argent sans tarif renseigné dans `gardien.json`.
+- Une économie de calcul n'est chiffrée que si une mission du même type a déjà été chronométrée. Une économie de
+  tokens n'est jamais chiffrée.
+- Une mission interrompue peut laisser des actes partiels au journal ; la chaîne reste valide.
+
 ## 4. Limites
 
 1. Tout est simulé, sur des graines de développement. Rien ici n'est un résultat de test.

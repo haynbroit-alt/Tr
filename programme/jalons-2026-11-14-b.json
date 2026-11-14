@@ -1,0 +1,5 @@
+[
+ {"moteur":"CORTEX","travail":"C1","mesure":"formules de GALILÉE confirmées sous plan actif (P3, test)","avant":"non mesuré (23 % sous plan passif)","apres":"37/44 (84 %)","seuil":"≥ 50 % et > passif","commit":"783e5b7","source":"haynbroit-alt/1 research/v6/RESULTATS_P3.md","portee":"exécution unique, graines 5001 à 5400, prototype gelé f3778b4","note":"différence appariée 61 ± 15 points ; seuls 44 mondes « forme » sur 200 arrivent jusqu’au pari"},
+ {"moteur":"CORTEX","travail":"C1","mesure":"fausses confirmations sous plan actif (P3, test)","avant":"non mesuré","apres":"4/404 (1 %, borne 3 %)","seuil":"≤ 10 %, borne ≤ 15 %","commit":"783e5b7","source":"haynbroit-alt/1 research/v6/RESULTATS_P3.md","portee":"exécution unique, graines 5001 à 5400"},
+ {"moteur":"LAVOISIER","travail":"L1","mesure":"FD2 sur la branche principale après fusion","avant":0.08,"apres":0.09,"seuil":"≤ 0,10","commit":"db9f75a","source":"haynbroit-alt/A bench/DEV_M0_BILAN.md","portee":"développement (graines 1 à 100), après fusion des PR 6 et 7","note":"correction d’un chiffre : 0,08 valait pour la branche seule ; sur données réalistes seules, 0,15"}
+]

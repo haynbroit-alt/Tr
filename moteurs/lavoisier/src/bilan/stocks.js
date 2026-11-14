@@ -230,6 +230,7 @@ export function inferStocks(observed, typeOf, links, dup, rules = []) {
     if (st.releve) off = st.init;
     else if (st.releveM) { const diffs = st.releveM.map((x) => x.valeur - s[x.jour]).sort((a, b) => a - b); off = diffs[diffs.length >> 1]; }
     st.offset = off;
+    st.raw = Array.from(s);
     st.series = Array.from(s, (x) => x + off);
     if (st.releve) st.series = [...st.releve];
   }

@@ -82,6 +82,13 @@ pre{font:11.5px/1.5 var(--mono);background:var(--creux);padding:10px;margin:6px 
 .chiffres{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:1px;background:var(--trait)}
 .chiffres div{background:var(--carte);padding:12px;font-size:12.5px;color:var(--sourd);min-width:0}
 .chiffres b{display:block;font:600 20px/1.2 var(--mono);color:var(--encre)}
+details.opp{background:var(--carte);padding:14px 18px;display:block}
+details.opp>summary{cursor:pointer;display:flex;flex-wrap:wrap;gap:8px;align-items:center;font-size:15px}
+details.opp>summary .rang{font:600 13px var(--mono);border:1.5px solid var(--encre);border-radius:99px;width:24px;height:24px;display:inline-flex;align-items:center;justify-content:center}
+details.opp[open]>summary{margin-bottom:10px}
+details.opp>p{margin-bottom:10px}
+details.opp dl{margin:0 0 10px;display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:10px 20px}
+details.opp .essai{margin-top:8px}
 details.pli>summary{font:600 15px var(--texte);color:var(--encre);padding:10px 0;border-top:1px solid var(--trait)}
 code{font:13px var(--mono);background:var(--creux);padding:1px 5px;border-radius:3px}
 </style>
@@ -90,11 +97,11 @@ code{font:13px var(--mono);background:var(--creux);padding:1px 5px;border-radius
   <h1>Page de travail commune</h1>
   <p class="chapo">GALILÉE cherche les lois, CORTEX les mécanismes, LAVOISIER les comptes. Ils ne s’appellent pas entre eux : chacun lit et écrit dans un même journal, où tout acte porte son auteur, sa preuve, son coût et son niveau de certitude.</p>
   <div class="etat">
-    <span><b>361</b> actes au journal</span>
+    <span><b>380</b> actes au journal</span>
     <span class="bon"><b>Chaîne intacte</b></span>
     <span class="bon"><b>33 fichiers moteurs non modifiés</b></span>
-    <span><b>40</b> dossiers</span>
-    <span>dernier acte : 2026-11-14 06:40 UTC</span>
+    <span><b>43</b> dossiers</span>
+    <span>dernier acte : 2026-11-14 11:21 UTC</span>
   </div>
 </section>
 
@@ -112,23 +119,148 @@ code{font:13px var(--mono);background:var(--creux);padding:1px 5px;border-radius
   <p><b>Lecture.</b> La boutique n’a pas été refusée par ses clients : elle ne les a pas rencontrés. Quatre visites seulement viennent d’un pays qu’elle livre, aucune de France. Chercher une loi de prix ou une fuite comptable n’a pas de sens ici tant qu’il n’y a ni visiteur réel ni vente. CORTEX a été lancé sur la série des visites et n’y trouve rien ; LAVOISIER et GALILÉE n’ont rien à traiter.</p>
 </section>
 <section>
-  <h2>Pistes de revenu, classées</h2>
-  <p>Chaque critère porte la nature de sa preuve. « Inconnu » veut dire que personne ne l’a mesuré, pas que c’est nul.</p>
+  <h2>Opportunités de valeur réelle</h2>
+  <p>Huit opportunités instruites dans tous les secteurs, selon les mêmes dix points. Le registre refuse un potentiel chiffré en euros sans mesure, une opportunité sans expérience falsifiable ou sans condition d’abandon. Aucune n’a encore produit d’argent réel.</p>
+  <details class="opp" id="r365" open><summary><span class="rang">1</span> <b>Boutique existante : la faire vendre ou arrêter sa perte</b> <span class="mes">commerce</span> <span class="verd bon">retenue en premier</span></summary>
+    <p>Une boutique en ligne réelle, ouverte depuis 111 jours, n’a encaissé aucun euro et continue de coûter son abonnement chaque mois.</p>
+    <dl>
+      <div class="crit"><dt>Déjà connu</dt><dd>Relevé réel : aucune vente, 148 visites dont aucune de France, 126 depuis un pays non livré. Boutique ouverte, paiement et livraison configurés. Il existe des canaux d’exposition sans achat de publicité (fiches gratuites des comparateurs, référencement naturel) ; leur état pour cette boutique n’a pas pu être relevé.</dd></div>
+      <div class="crit"><dt>Encore inconnu</dt><dd>Si de vrais visiteurs français achèteraient. Le coût d’achat et la réalité du stock. Le montant de l’abonnement. La conformité légale des fiches. Pourquoi aucun visiteur français n’arrive.</dd></div>
+      <div class="crit"><dt>Ce qui peut être découvert</dt><dd>En quatre semaines et sans dépense nouvelle : si la boutique peut recevoir des visiteurs français, et s’ils ajoutent au panier. Ensuite seulement, avec des ventes : la marge réelle (LAVOISIER), puis l’effet du prix (GALILÉE, CORTEX).</dd></div>
+      <div class="crit"><dt>Faisabilité <span class="base bon">mesuré</span></dt><dd>La boutique existe et fonctionne. Trois préalables manquent, que seul le propriétaire peut fournir : coût d’achat et stock réel, conformité des fiches, reconnexion de l’accès à la boutique.</dd></div>
+      <div class="crit"><dt>Coût de la vérification <span class="base alerte">estimé</span></dt><dd>Dépense nouvelle : 0 €. Aucune dépense nouvelle : quatre semaines d’abonnement déjà engagé (montant non relevé) et le temps de mise en place des canaux gratuits.</dd></div>
+      <div class="crit"><dt>Potentiel <span class="base mauvais">inconnu</span></dt><dd>Inconnu du côté des ventes. Certain du côté de la perte : quelle que soit l’issue, l’expérience finit soit par une première vente, soit par une raison mesurée de fermer et de ne plus payer l’abonnement.</dd></div>
+    </dl>
+    <div class="essai"><b>Expérience falsifiable.</b> Exposée gratuitement à des acheteurs français pendant 28 jours, la boutique reçoit des visites françaises et au moins un ajout au panier.<br><span class="sur">Mesure :</span> Visites depuis un pays livré, ajouts au panier, commandes payantes et marge, lus dans la boutique ; rien d’autre ne compte.<br><span class="sur">Succès :</span> Au moins une commande payante dont la marge, coût d’achat déduit, est positive.<br><span class="sur">Durée :</span> 28 jours à partir de la mise en ligne des canaux gratuits<br><span class="sur">Seuils :</span> 30 et 150 visites françaises (voir abandon) : ce sont des propositions, à valider avant le début.</div>
+    <div class="essai"><b>Conditions d’abandon.</b><ul class="limites"><li>Moins de 30 visites françaises en 28 jours : les canaux gratuits ne suffisent pas ; décider alors d’un budget ou de la fermeture.</li><li>150 visites françaises ou plus et aucun ajout au panier : l’offre ne vend pas ; fermer et arrêter l’abonnement.</li><li>Stock inexistant, marge négative ou fiche non conforme : arrêt immédiat, avant toute exposition.</li></ul></div>
+    <div class="essai"><b>Valeur à ce jour :</b> 0 € d’argent réel · preuve disponible : aucune · 2 acte(s) du registre à l’appui<br><span class="sur">LAVOISIER : tient le compte réel : abonnement, coût d’achat, marge par commande · CORTEX : rien avant des ventes ; ensuite, plan d’essai de prix (méthode validée par P3) · GALILÉE : rien avant des ventes ; ensuite, loi de demande</span></div>
+  </details><details class="opp" id="r366"><summary><span class="rang">2</span> <b>Audit de fuites comptables sur des écritures réelles</b> <span class="mes">finance d’entreprise</span> <span class="verd alerte">en attente</span></summary>
+    <p>Dans une entreprise, de l’argent disparaît sans être enregistré : remises non saisies, démarque, frais oubliés.</p>
+    <dl>
+      <div class="crit"><dt>Déjà connu</dt><dd>En simulation, sur 24 entreprises, LAVOISIER retrouve 15 fuites réelles sur 18 signalées et en manque 8. Sur son banc de développement après correction : 80 flux retrouvés sur 95, 0,09 fausse détection par entreprise.</dd></div>
+      <div class="crit"><dt>Encore inconnu</dt><dd>Si de vraies écritures se laissent lire. La fréquence et la taille des fuites dans de vraies entreprises. Ce qu’un client paierait.</dd></div>
+      <div class="crit"><dt>Ce qui peut être découvert</dt><dd>Sur un premier jeu réel : le bilan tourne-t-il, et la fuite qu’il annonce existe-t-elle selon le comptable de l’entreprise ?</dd></div>
+      <div class="crit"><dt>Faisabilité <span class="base alerte">estimé</span></dt><dd>Le moteur ne lit que le format de son banc. Il faut écrire un lecteur d’écritures réelles (travail L3) et obtenir un jeu de données avec accord écrit.</dd></div>
+      <div class="crit"><dt>Coût de la vérification <span class="base alerte">estimé</span></dt><dd>Dépense nouvelle : 0 €. Aucune dépense : développement du lecteur et un premier audit gratuit. Il faut trouver une entreprise volontaire.</dd></div>
+      <div class="crit"><dt>Potentiel <span class="base alerte">mesuré en simulation</span></dt><dd>En simulation : 629 900 € par an de fuites réelles retrouvées sur 24 entreprises fictives, médiane 27 100 €. Rien de cela n’est une recette : le prix d’un audit est inconnu.</dd></div>
+    </dl>
+    <div class="essai"><b>Expérience falsifiable.</b> Sur les écritures d’une vraie entreprise, le bilan annonce au moins une fuite que son comptable confirme.<br><span class="sur">Mesure :</span> Chaque fuite annoncée est vérifiée pièce par pièce par le comptable : confirmée, fausse ou déjà connue.<br><span class="sur">Succès :</span> Au moins une fuite confirmée et inconnue de l’entreprise, sans plus d’une fausse alerte.<br><span class="sur">Durée :</span> un jeu d’écritures d’un exercice complet</div>
+    <div class="essai"><b>Conditions d’abandon.</b><ul class="limites"><li>Le lecteur ne parvient pas à représenter les écritures réelles sans connaissance de métier.</li><li>Sur trois entreprises réelles, aucune fuite confirmée ou plus de fausses alertes que de fuites.</li><li>Aucune entreprise n’accepte de confier ses écritures.</li></ul></div>
+    <div class="essai"><b>Valeur à ce jour :</b> 0 € d’argent réel · preuve disponible : simulation · 3 acte(s) du registre à l’appui<br><span class="sur">LAVOISIER : bilan de matière et chiffrage · CORTEX : écarter les fuites apparentes dues à un calendrier ou à un décalage de saisie · GALILÉE : aucun rôle au départ</span></div>
+  </details><details class="opp" id="r367"><summary><span class="rang">3</span> <b>Recalcul de facture d’électricité sous d’autres tarifs</b> <span class="mes">énergie</span> <span class="verd alerte">en attente</span></summary>
+    <p>Un site (foyer, commerce, atelier) paie son électricité selon un tarif et une puissance souscrite choisis une fois, rarement revus.</p>
+    <dl>
+      <div class="crit"><dt>Déjà connu</dt><dd>Une facture se recalcule exactement à partir de la courbe de consommation et d’une grille tarifaire : c’est une identité comptable, pas une prévision. Le titulaire d’un compteur peut obtenir sa courbe.</dd></div>
+      <div class="crit"><dt>Encore inconnu</dt><dd>L’écart réel entre tarifs pour un site donné. Si le comportement du site changerait après un changement de tarif. Les grilles en vigueur n’ont pas pu être relevées d’ici.</dd></div>
+      <div class="crit"><dt>Ce qui peut être découvert</dt><dd>Pour un site : le tarif le moins cher sur les douze derniers mois (LAVOISIER, par recalcul exact), la loi de sa consommation selon l’heure et la température (GALILÉE), et ce qui la déplace (CORTEX).</dd></div>
+      <div class="crit"><dt>Faisabilité <span class="base alerte">estimé</span></dt><dd>Aucune donnée en main. Il faut la courbe de consommation d’un site volontaire et les grilles tarifaires publiques ; l’accès au réseau depuis cet environnement est fermé.</dd></div>
+      <div class="crit"><dt>Coût de la vérification <span class="base alerte">estimé</span></dt><dd>Dépense nouvelle : 0 €. Aucune dépense : un site volontaire fournit sa courbe et ses douze dernières factures.</dd></div>
+      <div class="crit"><dt>Potentiel <span class="base mauvais">inconnu</span></dt><dd>Inconnu. Il se mesure pour un site en recalculant ses factures passées ; aucun ordre de grandeur n’est avancé ici.</dd></div>
+    </dl>
+    <div class="essai"><b>Expérience falsifiable.</b> Pour ce site, un autre tarif disponible aurait coûté moins cher sur les douze derniers mois, et coûtera moins cher sur la facture suivante.<br><span class="sur">Mesure :</span> D’abord le recalcul des factures passées, qui doit retrouver les montants réellement payés ; puis la facture réelle suivant le changement, comparée au recalcul sous l’ancien tarif.<br><span class="sur">Succès :</span> Le recalcul retrouve les factures payées, et la facture suivante est inférieure à ce que l’ancien tarif aurait coûté.<br><span class="sur">Durée :</span> douze mois de passé, puis une période de facturation</div>
+    <div class="essai"><b>Conditions d’abandon.</b><ul class="limites"><li>Le recalcul ne retrouve pas les factures réellement payées : la méthode est fausse pour ce site.</li><li>Le meilleur autre tarif ne fait pas mieux que le tarif actuel.</li><li>Aucun site ne fournit sa courbe.</li></ul></div>
+    <div class="essai"><b>Valeur à ce jour :</b> 0 € d’argent réel · preuve disponible : aucune · 0 acte(s) du registre à l’appui<br><span class="sur">LAVOISIER : recalcul exact des factures · GALILÉE : loi de consommation · CORTEX : mécanismes et effet d’un changement d’habitude</span></div>
+  </details><details class="opp" id="r368"><summary><span class="rang">4</span> <b>Essais de prix à garantie statistique</b> <span class="mes">commerce</span> <span class="verd alerte">en attente</span></summary>
+    <p>Un commerçant change ses prix sans savoir ce que le changement rapporte vraiment.</p>
+    <dl>
+      <div class="crit"><dt>Déjà connu</dt><dd>Test unique de CORTEX P3 : sous un plan d’essai conçu, 37 lois de GALILÉE sur 44 gagnent leur pari, contre 23 % sans plan, avec 4 fausses confirmations sur 404. Sur comptages, GALILÉE retrouve 105 lois de demande détectables sur 133.</dd></div>
+      <div class="crit"><dt>Encore inconnu</dt><dd>Si la méthode tient sur de vraies ventes, où le prix n’est qu’un levier parmi d’autres et où un essai coûte du chiffre d’affaires. Aucun euro n’a été mesuré.</dd></div>
+      <div class="crit"><dt>Ce qui peut être découvert</dt><dd>Sur un commerce réel avec des ventes régulières : une loi de demande démontrée, et le prix qui maximise la marge.</dd></div>
+      <div class="crit"><dt>Faisabilité <span class="base alerte">mesuré en simulation</span></dt><dd>La chaîne fonctionne dans les mondes de CORTEX. Deux manques : son pari n’est pas exporté pour des données extérieures (travail C2), et il faut un commerce qui vend.</dd></div>
+      <div class="crit"><dt>Coût de la vérification <span class="base mauvais">inconnu</span></dt><dd>Dépense nouvelle : 0 €. Pas de dépense directe, mais un essai de prix déplace des ventes : son coût dépend du commerce et n’est pas chiffrable sans lui.</dd></div>
+      <div class="crit"><dt>Potentiel <span class="base mauvais">inconnu</span></dt><dd>Inconnu : la simulation ne contient pas d’euros.</dd></div>
+    </dl>
+    <div class="essai"><b>Expérience falsifiable.</b> Sur un article, la loi de demande proposée gagne son pari pendant un essai où le prix varie selon un plan fixé d’avance.<br><span class="sur">Mesure :</span> Pari sur les ventes de l’essai, puis marge comptable de l’article au prix retenu contre l’ancien prix, par périodes alternées.<br><span class="sur">Succès :</span> Pari gagné, et marge supérieure à l’ancien prix sur les périodes alternées.<br><span class="sur">Durée :</span> à fixer selon le volume de ventes</div>
+    <div class="essai"><b>Conditions d’abandon.</b><ul class="limites"><li>Le commerce vend trop peu pour qu’un pari puisse conclure dans la durée fixée.</li><li>Le pari n’est pas gagné, ou la marge ne dépasse pas celle de l’ancien prix.</li><li>La perte de ventes pendant l’essai dépasse le plafond fixé avant de commencer.</li></ul></div>
+    <div class="essai"><b>Valeur à ce jour :</b> 0 € d’argent réel · preuve disponible : simulation · 3 acte(s) du registre à l’appui<br><span class="sur">GALILÉE : loi de demande · CORTEX : plan d’essai, pari, élimination des faux effets · LAVOISIER : marge réelle</span></div>
+  </details><details class="opp" id="r369"><summary><span class="rang">5</span> <b>Audit de factures de services en ligne</b> <span class="mes">informatique</span> <span class="verd alerte">en attente</span></summary>
+    <p>Une entreprise paie des abonnements et des ressources informatiques qu’elle n’utilise plus.</p>
+    <dl>
+      <div class="crit"><dt>Déjà connu</dt><dd>Le principe est celui du bilan de matière : ce qui est facturé doit correspondre à ce qui est utilisé. Aucun essai n’a été fait.</dd></div>
+      <div class="crit"><dt>Encore inconnu</dt><dd>Si le bilan s’applique à des relevés d’usage. La part réellement inutilisée chez un client donné.</dd></div>
+      <div class="crit"><dt>Ce qui peut être découvert</dt><dd>Pour un client : la liste des lignes facturées sans usage correspondant.</dd></div>
+      <div class="crit"><dt>Faisabilité <span class="base alerte">estimé</span></dt><dd>Demande un lecteur pour les exports de facturation et d’usage, et un client volontaire. Rien n’existe.</dd></div>
+      <div class="crit"><dt>Coût de la vérification <span class="base alerte">estimé</span></dt><dd>Dépense nouvelle : 0 €. Aucune dépense : un export de facturation et d’usage d’un client volontaire.</dd></div>
+      <div class="crit"><dt>Potentiel <span class="base mauvais">inconnu</span></dt><dd>Inconnu.</dd></div>
+    </dl>
+    <div class="essai"><b>Expérience falsifiable.</b> Le bilan désigne au moins une ligne facturée sans usage, que le client confirme pouvoir résilier.<br><span class="sur">Mesure :</span> Chaque ligne désignée est confirmée ou non par le client ; l’économie est lue sur la facture suivante.<br><span class="sur">Succès :</span> Au moins une résiliation effective, visible sur la facture suivante.<br><span class="sur">Durée :</span> un trimestre de factures</div>
+    <div class="essai"><b>Conditions d’abandon.</b><ul class="limites"><li>Aucun client ne fournit ses exports.</li><li>Les lignes désignées sont toutes utiles ou déjà connues.</li></ul></div>
+    <div class="essai"><b>Valeur à ce jour :</b> 0 € d’argent réel · preuve disponible : aucune · 0 acte(s) du registre à l’appui<br><span class="sur">LAVOISIER : rapprochement facturé / utilisé · CORTEX : distinguer une ressource dormante d’un usage saisonnier · GALILÉE : aucun rôle au départ</span></div>
+  </details><details class="opp" id="r370"><summary><span class="rang">6</span> <b>Frais d’expédition de la boutique</b> <span class="mes">logistique</span> <span class="verd alerte">en attente</span></summary>
+    <p>Les frais de port facturés au client et payés au transporteur peuvent ne pas se couvrir.</p>
+    <dl>
+      <div class="crit"><dt>Déjà connu</dt><dd>La boutique a quatre modes de livraison configurés et livre 33 pays. Elle n’a expédié aucune commande payante.</dd></div>
+      <div class="crit"><dt>Encore inconnu</dt><dd>Tout : il n’y a aucune expédition à analyser.</dd></div>
+      <div class="crit"><dt>Ce qui peut être découvert</dt><dd>Rien avant les premières commandes ; ensuite, l’écart entre port facturé et port payé, commande par commande.</dd></div>
+      <div class="crit"><dt>Faisabilité <span class="base bon">mesuré</span></dt><dd>Impossible aujourd’hui : aucune commande. Dépend de l’opportunité 1.</dd></div>
+      <div class="crit"><dt>Coût de la vérification <span class="base alerte">estimé</span></dt><dd>Dépense nouvelle : 0 €. Aucune dépense ; se fait sur les premières commandes réelles.</dd></div>
+      <div class="crit"><dt>Potentiel <span class="base mauvais">inconnu</span></dt><dd>Inconnu.</dd></div>
+    </dl>
+    <div class="essai"><b>Expérience falsifiable.</b> Sur les vingt premières commandes, le port facturé couvre le port payé.<br><span class="sur">Mesure :</span> Port facturé et port payé, lus sur les commandes et les factures du transporteur.<br><span class="sur">Succès :</span> Écart cumulé positif ou nul.<br><span class="sur">Durée :</span> vingt commandes</div>
+    <div class="essai"><b>Conditions d’abandon.</b><ul class="limites"><li>La boutique ferme avant d’avoir expédié vingt commandes.</li></ul></div>
+    <div class="essai"><b>Valeur à ce jour :</b> 0 € d’argent réel · preuve disponible : aucune · 1 acte(s) du registre à l’appui<br><span class="sur">LAVOISIER : rapprochement commande / transporteur · CORTEX : aucun rôle au départ · GALILÉE : aucun rôle au départ</span></div>
+  </details><details class="opp" id="r371"><summary><span class="rang">7</span> <b>Maintenance, rendement, irrigation</b> <span class="mes">industrie et agriculture</span> <span class="verd sur">non instruisible</span></summary>
+    <p>Des réglages et des calendriers (entretien d’une machine, arrosage, récolte) sont fixés par habitude.</p>
+    <dl>
+      <div class="crit"><dt>Déjà connu</dt><dd>En simulation, CORTEX v4 a trouvé seul un calendrier d’entretien proche de l’optimum, et a échoué sur une serre arrosée cinq jours par an. Ce sont des mondes simulés.</dd></div>
+      <div class="crit"><dt>Encore inconnu</dt><dd>Tout ce qui concerne un site réel : nous n’avons accès à aucune machine, aucune parcelle, aucune mesure.</dd></div>
+      <div class="crit"><dt>Ce qui peut être découvert</dt><dd>Rien sans un site et ses mesures.</dd></div>
+      <div class="crit"><dt>Faisabilité <span class="base bon">mesuré</span></dt><dd>Non instruisible aujourd’hui : aucune donnée, aucun partenaire, aucun moyen d’agir sur un site.</dd></div>
+      <div class="crit"><dt>Coût de la vérification <span class="base mauvais">inconnu</span></dt><dd>Dépense nouvelle : 0 €. Non chiffrable sans site.</dd></div>
+      <div class="crit"><dt>Potentiel <span class="base mauvais">inconnu</span></dt><dd>Inconnu.</dd></div>
+    </dl>
+    <div class="essai"><b>Expérience falsifiable.</b> Sur un site réel, un calendrier proposé fait mieux que l’habitude sur une période témoin.<br><span class="sur">Mesure :</span> La mesure comptable du site (coût d’arrêt, rendement), par périodes alternées.<br><span class="sur">Succès :</span> Mieux que l’habitude, au seuil fixé avec le site.<br><span class="sur">Durée :</span> à fixer avec le site</div>
+    <div class="essai"><b>Conditions d’abandon.</b><ul class="limites"><li>Aucun site partenaire dans un délai à fixer : l’opportunité reste fermée.</li></ul></div>
+    <div class="essai"><b>Valeur à ce jour :</b> 0 € d’argent réel · preuve disponible : simulation · 0 acte(s) du registre à l’appui<br><span class="sur">CORTEX : mécanismes et calendrier · GALILÉE : lois de rendement · LAVOISIER : coût et gain réels</span></div>
+  </details><details class="opp" id="r372"><summary><span class="rang">8</span> <b>Chercher des lois dans les cours pour en tirer profit</b> <span class="mes">finance de marché</span> <span class="verd mauvais">écartée</span></summary>
+    <p>Tenter de prédire des prix de marché avec les lois de GALILÉE ou les mécanismes de CORTEX.</p>
+    <dl>
+      <div class="crit"><dt>Déjà connu</dt><dd>Les garanties de CORTEX supposent des leviers exogènes et un monde qui ne réagit pas à l’observateur ; un marché viole les deux. La moindre régularité publique y est déjà exploitée par des acteurs mieux équipés.</dd></div>
+      <div class="crit"><dt>Encore inconnu</dt><dd>S’il existe une régularité exploitable par ces moteurs : rien ne le suggère.</dd></div>
+      <div class="crit"><dt>Ce qui peut être découvert</dt><dd>Des régularités passées, sans garantie qu’elles durent.</dd></div>
+      <div class="crit"><dt>Faisabilité <span class="base alerte">estimé</span></dt><dd>Techniquement faisable sur des cours historiques, mais la vérification exige d’engager de l’argent réel sur un pari sans garantie.</dd></div>
+      <div class="crit"><dt>Coût de la vérification <span class="base alerte">estimé</span></dt><dd>Dépense nouvelle : 0 €. Une vérification sérieuse suppose un capital exposé à la perte : hors du cadre « aucune dépense sans autorisation ».</dd></div>
+      <div class="crit"><dt>Potentiel <span class="base mauvais">inconnu</span></dt><dd>Inconnu, avec un risque de perte certain dans son principe.</dd></div>
+    </dl>
+    <div class="essai"><b>Expérience falsifiable.</b> Une loi trouvée sur le passé prédit le sens du cours suivant mieux que le hasard, sur une période jamais vue.<br><span class="sur">Mesure :</span> Prévisions enregistrées avant les faits, sans argent engagé.<br><span class="sur">Succès :</span> Mieux que le hasard, au seuil d’un pari fixé d’avance.<br><span class="sur">Durée :</span> non lancée</div>
+    <div class="essai"><b>Conditions d’abandon.</b><ul class="limites"><li>Écartée d’emblée : les garanties des moteurs ne tiennent pas dans un monde qui réagit, et la vérification demande d’exposer un capital.</li></ul></div>
+    <div class="essai"><b>Valeur à ce jour :</b> 0 € d’argent réel · preuve disponible : aucune · 0 acte(s) du registre à l’appui<br><span class="sur">GALILÉE : non engagé · CORTEX : non engagé · LAVOISIER : non engagé</span></div>
+  </details>
+</section>
+<section>
+  <h2>Pistes de revenu : première évaluation</h2>
+  <p>Évaluation du 13 novembre, conservée telle quelle ; les opportunités ci-dessus la reprennent et la complètent. Chaque critère porte la nature de sa preuve. « Inconnu » veut dire que personne ne l’a mesuré, pas que c’est nul.</p>
   <div class="piste" id="r309"><div class="rang">Piste 1 · issue du connu · encaissé : 0 €</div><h3>Amener de vrais visiteurs français sur la boutique existante</h3><p>La boutique est ouverte, configurée, livre en France et n’a jamais reçu une visite française. C’est la seule piste dont l’actif existe déjà et dont le revenu se mesure directement en euros encaissés.</p><dl><div class="crit"><dt>Potentiel <span class="base mauvais">inconnu</span></dt><dd>Inconnu, et c’est le premier point à mesurer : aucun visiteur réel n’a encore vu les fiches. Prix de vente de 19,90 à 69,90 € ; marge inconnue tant que le coût d’achat n’est pas renseigné.</dd></div><div class="crit"><dt>Coût <span class="base mauvais">inconnu</span></dt><dd>Le budget d’un essai est une décision de l’utilisateur. À fixer avant, avec un plafond de perte.</dd></div><div class="crit"><dt>Risque <span class="base alerte">estimé</span></dt><dd>Perdre le budget de l’essai. Vendre sans stock réel ni marge connue serait pire que ne pas vendre. À vérifier avant toute publicité : mentions légales, droit de rétractation, marquage CE des appareils électriques.</dd></div><div class="crit"><dt>Faisabilité <span class="base bon">mesuré</span></dt><dd>Boutique ouverte sans mot de passe, paiement et livraison configurés (relevé du 13 novembre 2026). Il manque : coût d’achat, source du stock, un canal d’acquisition.</dd></div></dl><div class="essai"><b>Essai à petite échelle — attend une décision.</b> Écrit avant : un produit, un canal, un budget plafonné, une durée. Mesures : visites françaises, ajouts au panier, commandes, marge après coût d’achat et coût d’acquisition. Arrêt dès le plafond atteint. Succès = marge encaissée &gt; dépense ; sinon la piste est notée réfutée. <br><span class="sur">Rôle des moteurs : Aucun avant les premières ventes. Ensuite : LAVOISIER sur les commandes et versements réels, puis CORTEX pour planifier un essai de prix et GALILÉE pour la loi de demande.</span></div></div><div class="piste" id="r310"><div class="rang">Piste 2 · issue du connu · encaissé : 0 €</div><h3>Service d’audit de fuites par conservation (LAVOISIER)</h3><p>Retrouver dans les écritures d’une entreprise l’argent qui disparaît sans être enregistré : remises non saisies, démarque, frais oubliés.</p><dl><div class="crit"><dt>Potentiel <span class="base alerte">mesuré en simulation</span></dt><dd>Sur 24 entreprises simulées : 15 fuites réelles retrouvées, valant 629 900 € par an au total (médiane 27 100 € par an, pour un profit médian de 697 129 €). Ce qu’un client paierait pour cela est inconnu.</dd></div><div class="crit"><dt>Coût <span class="base alerte">mesuré en simulation</span></dt><dd>Calcul : 0.4 s par entreprise (médiane). Le vrai coût est ailleurs et n’est pas mesuré : lire des écritures réelles, trouver un premier client.</dd></div><div class="crit"><dt>Risque <span class="base alerte">mesuré en simulation</span></dt><dd>3 fausse(s) alerte(s) sur 18 (69 700 € par an annoncés à tort) et 8 fuite(s) manquée(s). Graines de développement : le bilan n’est pas gelé, son test M0 n’a pas eu lieu. Données comptables : confidentialité et RGPD.</dd></div><div class="crit"><dt>Faisabilité <span class="base alerte">estimé</span></dt><dd>Le moteur ne lit que le format de son banc d’essai. Il faudrait un lecteur d’écritures réelles (en France, le fichier des écritures comptables est un format légal standard) et des relevés bancaires. Non écrit.</dd></div></dl><div class="essai"><b>Essai à petite échelle — fait en simulation.</b> 15 fuites justes, 3 fausses, 8 manquées sur 24 entreprises <br><span class="sur">Reste à faire : Geler le bilan et exécuter M0. Puis un seul jeu d’écritures réelles, avec l’accord écrit de l’entreprise, sans rien facturer : la fuite annoncée existe-t-elle ?</span></div></div><div class="piste" id="r311"><div class="rang">Piste 3 · issue du inconnu · encaissé : 0 €</div><h3>Essais de prix à garantie statistique (GALILÉE + CORTEX)</h3><p>Trouver une loi de demande que personne n’a donnée, puis la démontrer par un essai planifié, avec un risque de fausse découverte fixé d’avance.</p><dl><div class="crit"><dt>Potentiel <span class="base mauvais">inconnu</span></dt><dd>En simulation, la chaîne fonctionne sur des leviers abstraits, sans euros : 1 loi(s) démontrée(s) sur 12 mondes, dont 1 conforme(s) à la vérité. Aucun gain en euros n’a été mesuré, nulle part.</dd></div><div class="crit"><dt>Coût <span class="base alerte">mesuré en simulation</span></dt><dd>91 jours d’essai simulés au total, 91 par loi. Sur une boutique réelle, un essai de prix demande assez de ventes pour conclure : la boutique actuelle en a zéro.</dd></div><div class="crit"><dt>Risque <span class="base alerte">mesuré en simulation</span></dt><dd>1 formule(s) fausse(s) refusée(s) sur 1 injectée(s). La sonde ne signale que 3 monde(s) sur 12 alors que tous contenaient une forme. Dans les entreprises simulées : 6 lois quantité–prix proposées, 1 confirmée(s) en prévision.</dd></div><div class="crit"><dt>Faisabilité <span class="base alerte">estimé</span></dt><dd>Bloquée deux fois : le pari de CORTEX n’est pas exporté hors de ses mondes, et il faut un commerce avec des ventes régulières où faire varier un prix.</dd></div></dl><div class="essai"><b>Essai à petite échelle — fait en simulation.</b> 1 loi(s) passée(s) d’hypothèse à empirique par essai commun <br><span class="sur">Reste à faire : Dépend de la piste 1 : sans ventes, rien à tester.</span></div></div><div class="piste" id="r312"><div class="rang">Piste 4 · issue du connu · encaissé : 0 €</div><h3>Vendre GALILÉE comme outil de découverte de lois</h3><p>Proposer le moteur à des laboratoires ou des bureaux d’études.</p><dl><div class="crit"><dt>Potentiel <span class="base mauvais">inconnu</span></dt><dd>Aucune donnée de marché n’a pu être relevée (le service de mots-clés connecté n’a plus d’unités). Des outils gratuits de régression symbolique existent déjà.</dd></div><div class="crit"><dt>Coût <span class="base alerte">estimé</span></dt><dd>Faible en calcul ; élevé en prospection.</dd></div><div class="crit"><dt>Risque <span class="base alerte">estimé</span></dt><dd>Marché étroit et déjà servi gratuitement.</dd></div><div class="crit"><dt>Faisabilité <span class="base bon">mesuré</span></dt><dd>Le moteur est terminé, testé, et tourne dans un navigateur.</dd></div></dl><div class="essai"><b>Essai à petite échelle — non fait.</b>  <br><span class="sur">Reste à faire : Aucun essai sérieux possible sans données de marché. Piste gardée en réserve.</span></div></div>
 </section>
 <section>
   <h2>Ce que les moteurs ont trouvé ensemble, en simulation</h2>
-  <p>Le connu : 24 entreprises simulées, où LAVOISIER cherche les fuites puis transmet ses débits. L’inconnu : 12 mondes où une loi cachée manque au modèle de CORTEX. Vérité des simulateurs lue après coup.</p>
+  <p>Le connu : 24 entreprises simulées, où LAVOISIER cherche les fuites puis transmet ses débits. L’inconnu : 13 mondes où une loi cachée manque au modèle de CORTEX. Vérité des simulateurs lue après coup.</p>
   <div class="chiffres">
     <div><b>15 / 18</b>fuites signalées qui existaient</div>
     <div><b>8</b>fuites manquées</div>
     <div><b>629 900 €</b>par an de fuites réelles retrouvées (simulé)</div>
     <div><b>1 / 6</b>lois de prix confirmées en prévision</div>
     <div><b>4 / 43</b>mécanismes de CORTEX encore recevables</div>
-    <div><b>3 / 12</b>formes manquantes signalées</div>
+    <div><b>4 / 13</b>formes manquantes signalées</div>
     <div><b>1 / 1</b>lois démontrées par essai commun</div>
     <div><b>1 / 1</b>formules fausses refusées</div>
   </div>
+</section>
+
+<section>
+  <h2>Gardien des ressources</h2>
+  <p>Mode <b>économique</b>. Chaque mission passe par le gardien, qui évite celles déjà faites, plafonne les autres et s’arrête sans progrès ou budget. Les tokens viennent du relevé local de Claude Code au moment où cette page a été générée ; ce qui ne se mesure pas est écrit tel quel.</p>
+  <div class="chiffres">
+    <div><b>567 512</b>tokens produits (session relevée)</div>
+    <div><b>293</b>appels IA</div>
+    <div><b>133 525 436</b>tokens lus, cache compris</div>
+    <div><b><span class="sur">non chiffré</span></b>coût estimé (aucun tarif renseigné)</div>
+    <div><b>14,4 s</b>de calcul sous garde</div>
+    <div><b>1</b>mission(s) évitée(s) · 0 refusée(s)</div>
+    <div><b><span class="sur">non mesurable</span></b>économie de calcul · tokens : non mesurable</div>
+    <div><b>286 s</b>de calcul restants · 184 828 tokens</div>
+  </div>
+  <p class="petit">Limites : le gardien ne peut pas couper une session d’IA, seulement la mesurer et refuser de lancer une mission ; les tokens ne se rattachent pas à une mission précise ; le relevé ne couvre que la machine et la session où il est lu ; une économie n’est chiffrée que si une mission du même type a déjà été chronométrée.</p>
 </section>
 
 <section>
@@ -139,13 +271,13 @@ code{font:13px var(--mono);background:var(--creux);padding:1px 5px;border-radius
     <div><b>39</b>affirmations écartées après confrontation</div>
     <div><b>2</b>vérifications d’un moteur par un autre</div>
     <div><b>6</b>expériences consignées impossibles</div>
-    <div><b>175 s</b>de calcul consigné</div>
+    <div><b>189 s</b>de calcul consigné</div>
     <div><b>91</b>jours d’essai simulés</div>
     <div><b>0 €</b>dépensés (abonnement de la boutique non relevé)</div>
     <div><b>0 €</b>encaissés</div>
   </div>
-  <div class="moteurs"><div class="moteur galilee"><h3>GALILÉE</h3><p class="petit">v1 terminée, banc publié</p><ul><li><b>G1</b> Ne plus se dire convaincu à tort</li><li><b>G2</b> Lois sur des comptages : mesuré, hypothèse contredite, module non écrit</li><li><b>G3</b> Terres inconnues</li></ul></div><div class="moteur cortex"><h3>CORTEX</h3><p class="petit">v5 évaluée ; v6 : P1 et P2 évalués, P3 gelé, test non exécuté</p><ul><li><b>C1</b> Test unique de P3 : autorisé, en cours d’exécution</li><li><b>C2</b> Exporter son juge pour des données extérieures</li><li><b>C3</b> P4 : agir, arbitrer avec le profit</li></ul></div><div class="moteur lavoisier"><h3>LAVOISIER</h3><p class="petit">organe 1 sur 8, en développement, non gelé</p><ul><li><b>L1</b> Seuils de M0 : fausses détections 0,20 → 0,08 ; profit encore hors seuil</li><li><b>L2</b> Entreprise pilotable</li><li><b>L3</b> Lecteur d’écritures réelles</li></ul></div></div>
-  <details class="pli"><summary>GALILÉE : repères individuels <span class="sur">· 0 seuil(s) manqué(s) · 1 jalon(s) · source bench/RESULTS.md @ be42b7e</span></summary><div class="tableau"><table><thead><tr><th>État</th><th>Mesure</th><th>Valeur</th><th>Seuil</th><th>Travail</th></tr></thead><tbody><tr><td><span class="sur">—</span></td><td>lois retrouvées avec précision, bruit 1 %</td><td class="n">96 %</td><td class="n">—</td><td></td></tr><tr><td><span class="sur">—</span></td><td>lois retrouvées avec précision, bruit 5 %</td><td class="n">71 %</td><td class="n"><span class="sur">80 proposé</span></td><td><span class="mes">G1</span></td></tr><tr><td><span class="sur">—</span></td><td>arrêts « convaincu » sur une forme fausse, bruit 5 % (75 essais)</td><td class="n">9</td><td class="n"><span class="sur">2 proposé</span></td><td><span class="mes">G1</span></td></tr><tr><td><span class="sur">—</span></td><td>capteur qui sature retrouvé, bruit 5 %</td><td class="n">20 %</td><td class="n">—</td><td><span class="mes">G1</span></td></tr></tbody></table></div><div class="tableau"><table><thead><tr><th>Travail</th><th>Progrès mesuré dans son dépôt</th><th>Avant</th><th>Après</th><th>Seuil</th></tr></thead><tbody><tr><td><span class="mes">G2</span></td><td>bonnes lois de demande parmi les effets détectables, sur comptages<div class="petit">développement (graines 1 à 200), moteur actuel non modifié · haynbroit-alt/All bench/COMPTAGES_BASE.md ; PROTOCOLE_G2.md @ ba941c0 · l’hypothèse du programme est contredite : le bruit de comptage n’explique pas les constantes ; le module n’est pas écrit</div></td><td class="n">non mesuré</td><td class="n">105/133 (79 %)</td><td class="n">≥ 50 % visé pour un nouveau module</td></tr></tbody></table></div></details><details class="pli"><summary>CORTEX : repères individuels <span class="sur">· 2 seuil(s) manqué(s) · 0 jalon(s) · source README.md, research/v6/RESULTATS_P2.md, research/v6/PROTOCOLE_P3.md @ 758212a</span></summary><div class="tableau"><table><thead><tr><th>État</th><th>Mesure</th><th>Valeur</th><th>Seuil</th><th>Travail</th></tr></thead><tbody><tr><td><span class="sur">—</span></td><td>profit v5, part de l'oracle</td><td class="n">65,8 %</td><td class="n">—</td><td><span class="mes">C3</span></td></tr><tr><td><span class="verd bon">atteint</span></td><td>sonde « hors de portée », AUC (P2)</td><td class="n">0,885</td><td class="n">0,8</td><td></td></tr><tr><td><span class="verd mauvais">manque</span></td><td>formes statiques signalées (P2, C2)</td><td class="n">42 %</td><td class="n">60</td><td></td></tr><tr><td><span class="verd mauvais">manque</span></td><td>formules de GALILÉE confirmées, plan passif (P2, G1)</td><td class="n">4 %</td><td class="n">50</td><td><span class="mes">C1</span></td></tr><tr><td><span class="sur">—</span></td><td>formules confirmées, plan actif (P3) — test<div class="petit">non exécuté ; 100 % sur 9 formules en développement</div></td><td class="n">non mesuré</td><td class="n">50</td><td><span class="mes">C1</span></td></tr></tbody></table></div></details><details class="pli"><summary>LAVOISIER : repères individuels <span class="sur">· 2 seuil(s) manqué(s) · 3 jalon(s) · source bench/DEV_M0_BILAN.md (développement, 100 graines) @ 73618f9</span></summary><div class="tableau"><table><thead><tr><th>État</th><th>Mesure</th><th>Valeur</th><th>Seuil</th><th>Travail</th></tr></thead><tbody><tr><td><span class="verd bon">atteint</span></td><td>F équilibré (types de flux)</td><td class="n">0,934</td><td class="n">0,9</td><td></td></tr><tr><td><span class="verd bon">atteint</span></td><td>L (appariement)</td><td class="n">0,856</td><td class="n">0,85</td><td></td></tr><tr><td><span class="verd bon">atteint</span></td><td>G (graphe)</td><td class="n">0,918</td><td class="n">0,85</td><td></td></tr><tr><td><span class="verd bon">atteint</span></td><td>S médian (stocks)</td><td class="n">1,6 %</td><td class="n">2</td><td></td></tr><tr><td><span class="verd mauvais">manque</span></td><td>P médian (profit)</td><td class="n">3,8 %</td><td class="n">2</td><td><span class="mes">L1</span></td></tr><tr><td><span class="verd bon">atteint</span></td><td>R (flux cachés retrouvés)</td><td class="n">73,7 %</td><td class="n">70</td><td></td></tr><tr><td><span class="verd bon">atteint</span></td><td>FD1 (placebos touchés)</td><td class="n">2,9 %</td><td class="n">10</td><td></td></tr><tr><td><span class="verd mauvais">manque</span></td><td>FD2 (fausses détections par entreprise)</td><td class="n">0,2</td><td class="n">0,1</td><td><span class="mes">L1</span></td></tr></tbody></table></div><div class="tableau"><table><thead><tr><th>Travail</th><th>Progrès mesuré dans son dépôt</th><th>Avant</th><th>Après</th><th>Seuil</th></tr></thead><tbody><tr><td><span class="mes">L1</span></td><td>FD2, fausses détections par entreprise à flux cachés<div class="petit">développement (graines 1 à 100), bilan non gelé · haynbroit-alt/A bench/DEV_M0_BILAN.md ; PROTOCOLE_M0.md § 9, point 9 @ daf9479 · sur données réalistes seules, comme au test : 0,12, encore au-dessus du seuil</div></td><td class="n">0.2</td><td class="n">0.08</td><td class="n">≤ 0,10</td></tr><tr><td><span class="mes">L1</span></td><td>R, flux cachés retrouvés<div class="petit">développement (graines 1 à 100), bilan non gelé · haynbroit-alt/A bench/DEV_M0_BILAN.md @ daf9479</div></td><td class="n">70/95</td><td class="n">80/95</td><td class="n">≥ 70 %</td></tr><tr><td><span class="mes">L1</span></td><td>P médian, erreur sur le profit<div class="petit">développement (graines 1 à 100) · haynbroit-alt/A bench/DEV_M0_BILAN.md @ daf9479 · inchangé : reste hors seuil</div></td><td class="n">3,8 %</td><td class="n">3,8 %</td><td class="n">≤ 2 %</td></tr></tbody></table></div></details>
+  <div class="moteurs"><div class="moteur galilee"><h3>GALILÉE</h3><p class="petit">v1 terminée, banc publié</p><ul><li><b>G1</b> Ne plus se dire convaincu à tort</li><li><b>G2</b> Lois sur des comptages : mesuré, hypothèse contredite, module non écrit</li><li><b>G3</b> Terres inconnues</li></ul></div><div class="moteur cortex"><h3>CORTEX</h3><p class="petit">v5 évaluée ; v6 : P1 et P2 évalués, P3 gelé, test non exécuté</p><ul><li><b>C1</b> Test unique de P3 : fait, trois critères atteints (84 % contre 23 %)</li><li><b>C2</b> Exporter son juge pour des données extérieures</li><li><b>C3</b> P4 : agir, arbitrer avec le profit</li></ul></div><div class="moteur lavoisier"><h3>LAVOISIER</h3><p class="petit">organe 1 sur 8, en développement, non gelé</p><ul><li><b>L1</b> Seuils de M0 : fausses détections 0,20 → 0,09 ; profit encore hors seuil</li><li><b>L2</b> Entreprise pilotable</li><li><b>L3</b> Lecteur d’écritures réelles</li></ul></div></div>
+  <details class="pli"><summary>GALILÉE : repères individuels <span class="sur">· 0 seuil(s) manqué(s) · 1 jalon(s) · source bench/RESULTS.md @ be42b7e</span></summary><div class="tableau"><table><thead><tr><th>État</th><th>Mesure</th><th>Valeur</th><th>Seuil</th><th>Travail</th></tr></thead><tbody><tr><td><span class="sur">—</span></td><td>lois retrouvées avec précision, bruit 1 %</td><td class="n">96 %</td><td class="n">—</td><td></td></tr><tr><td><span class="sur">—</span></td><td>lois retrouvées avec précision, bruit 5 %</td><td class="n">71 %</td><td class="n"><span class="sur">80 proposé</span></td><td><span class="mes">G1</span></td></tr><tr><td><span class="sur">—</span></td><td>arrêts « convaincu » sur une forme fausse, bruit 5 % (75 essais)</td><td class="n">9</td><td class="n"><span class="sur">2 proposé</span></td><td><span class="mes">G1</span></td></tr><tr><td><span class="sur">—</span></td><td>capteur qui sature retrouvé, bruit 5 %</td><td class="n">20 %</td><td class="n">—</td><td><span class="mes">G1</span></td></tr></tbody></table></div><div class="tableau"><table><thead><tr><th>Travail</th><th>Progrès mesuré dans son dépôt</th><th>Avant</th><th>Après</th><th>Seuil</th></tr></thead><tbody><tr><td><span class="mes">G2</span></td><td>bonnes lois de demande parmi les effets détectables, sur comptages<div class="petit">développement (graines 1 à 200), moteur actuel non modifié · haynbroit-alt/All bench/COMPTAGES_BASE.md ; PROTOCOLE_G2.md @ ba941c0 · l’hypothèse du programme est contredite : le bruit de comptage n’explique pas les constantes ; le module n’est pas écrit</div></td><td class="n">non mesuré</td><td class="n">105/133 (79 %)</td><td class="n">≥ 50 % visé pour un nouveau module</td></tr></tbody></table></div></details><details class="pli"><summary>CORTEX : repères individuels <span class="sur">· 2 seuil(s) manqué(s) · 2 jalon(s) · source README.md, research/v6/RESULTATS_P2.md, research/v6/PROTOCOLE_P3.md @ 758212a</span></summary><div class="tableau"><table><thead><tr><th>État</th><th>Mesure</th><th>Valeur</th><th>Seuil</th><th>Travail</th></tr></thead><tbody><tr><td><span class="sur">—</span></td><td>profit v5, part de l'oracle</td><td class="n">65,8 %</td><td class="n">—</td><td><span class="mes">C3</span></td></tr><tr><td><span class="verd bon">atteint</span></td><td>sonde « hors de portée », AUC (P2)</td><td class="n">0,885</td><td class="n">0,8</td><td></td></tr><tr><td><span class="verd mauvais">manque</span></td><td>formes statiques signalées (P2, C2)</td><td class="n">42 %</td><td class="n">60</td><td></td></tr><tr><td><span class="verd mauvais">manque</span></td><td>formules de GALILÉE confirmées, plan passif (P2, G1)</td><td class="n">4 %</td><td class="n">50</td><td><span class="mes">C1</span></td></tr><tr><td><span class="sur">—</span></td><td>formules confirmées, plan actif (P3) — test<div class="petit">non exécuté ; 100 % sur 9 formules en développement</div></td><td class="n">non mesuré</td><td class="n">50</td><td><span class="mes">C1</span></td></tr></tbody></table></div><div class="tableau"><table><thead><tr><th>Travail</th><th>Progrès mesuré dans son dépôt</th><th>Avant</th><th>Après</th><th>Seuil</th></tr></thead><tbody><tr><td><span class="mes">C1</span></td><td>formules de GALILÉE confirmées sous plan actif (P3, test)<div class="petit">exécution unique, graines 5001 à 5400, prototype gelé f3778b4 · haynbroit-alt/1 research/v6/RESULTATS_P3.md @ 783e5b7 · différence appariée 61 ± 15 points ; seuls 44 mondes « forme » sur 200 arrivent jusqu’au pari</div></td><td class="n">non mesuré (23 % sous plan passif)</td><td class="n">37/44 (84 %)</td><td class="n">≥ 50 % et &gt; passif</td></tr><tr><td><span class="mes">C1</span></td><td>fausses confirmations sous plan actif (P3, test)<div class="petit">exécution unique, graines 5001 à 5400 · haynbroit-alt/1 research/v6/RESULTATS_P3.md @ 783e5b7</div></td><td class="n">non mesuré</td><td class="n">4/404 (1 %, borne 3 %)</td><td class="n">≤ 10 %, borne ≤ 15 %</td></tr></tbody></table></div></details><details class="pli"><summary>LAVOISIER : repères individuels <span class="sur">· 2 seuil(s) manqué(s) · 4 jalon(s) · source bench/DEV_M0_BILAN.md (développement, 100 graines) @ 73618f9</span></summary><div class="tableau"><table><thead><tr><th>État</th><th>Mesure</th><th>Valeur</th><th>Seuil</th><th>Travail</th></tr></thead><tbody><tr><td><span class="verd bon">atteint</span></td><td>F équilibré (types de flux)</td><td class="n">0,934</td><td class="n">0,9</td><td></td></tr><tr><td><span class="verd bon">atteint</span></td><td>L (appariement)</td><td class="n">0,856</td><td class="n">0,85</td><td></td></tr><tr><td><span class="verd bon">atteint</span></td><td>G (graphe)</td><td class="n">0,918</td><td class="n">0,85</td><td></td></tr><tr><td><span class="verd bon">atteint</span></td><td>S médian (stocks)</td><td class="n">1,6 %</td><td class="n">2</td><td></td></tr><tr><td><span class="verd mauvais">manque</span></td><td>P médian (profit)</td><td class="n">3,8 %</td><td class="n">2</td><td><span class="mes">L1</span></td></tr><tr><td><span class="verd bon">atteint</span></td><td>R (flux cachés retrouvés)</td><td class="n">73,7 %</td><td class="n">70</td><td></td></tr><tr><td><span class="verd bon">atteint</span></td><td>FD1 (placebos touchés)</td><td class="n">2,9 %</td><td class="n">10</td><td></td></tr><tr><td><span class="verd mauvais">manque</span></td><td>FD2 (fausses détections par entreprise)</td><td class="n">0,2</td><td class="n">0,1</td><td><span class="mes">L1</span></td></tr></tbody></table></div><div class="tableau"><table><thead><tr><th>Travail</th><th>Progrès mesuré dans son dépôt</th><th>Avant</th><th>Après</th><th>Seuil</th></tr></thead><tbody><tr><td><span class="mes">L1</span></td><td>FD2, fausses détections par entreprise à flux cachés<div class="petit">développement (graines 1 à 100), bilan non gelé · haynbroit-alt/A bench/DEV_M0_BILAN.md ; PROTOCOLE_M0.md § 9, point 9 @ daf9479 · sur données réalistes seules, comme au test : 0,12, encore au-dessus du seuil</div></td><td class="n">0.2</td><td class="n">0.08</td><td class="n">≤ 0,10</td></tr><tr><td><span class="mes">L1</span></td><td>R, flux cachés retrouvés<div class="petit">développement (graines 1 à 100), bilan non gelé · haynbroit-alt/A bench/DEV_M0_BILAN.md @ daf9479</div></td><td class="n">70/95</td><td class="n">80/95</td><td class="n">≥ 70 %</td></tr><tr><td><span class="mes">L1</span></td><td>P médian, erreur sur le profit<div class="petit">développement (graines 1 à 100) · haynbroit-alt/A bench/DEV_M0_BILAN.md @ daf9479 · inchangé : reste hors seuil</div></td><td class="n">3,8 %</td><td class="n">3,8 %</td><td class="n">≤ 2 %</td></tr><tr><td><span class="mes">L1</span></td><td>FD2 sur la branche principale après fusion<div class="petit">développement (graines 1 à 100), après fusion des PR 6 et 7 · haynbroit-alt/A bench/DEV_M0_BILAN.md @ db9f75a · correction d’un chiffre : 0,08 valait pour la branche seule ; sur données réalistes seules, 0,15</div></td><td class="n">0.08</td><td class="n">0.09</td><td class="n">≤ 0,10</td></tr></tbody></table></div></details>
   <p class="petit">Confrontation T1 : 39 des 43 mécanismes de CORTEX venaient de factures mensuelles que le registre avait transmises comme des mesures quotidiennes. L’erreur était celle du registre ; la règle de transmission est corrigée. Programme complet : <code>programme/PROGRAMME.md</code>.</p>
 </section>
 
@@ -154,9 +286,9 @@ code{font:13px var(--mono);background:var(--creux);padding:1px 5px;border-radius
   <p>Le niveau affiché est recalculé à partir du journal. Une loi tirée de données subies entre comme hypothèse, quel que soit l’avis de son auteur. Seul un pari gagné sur des jours neufs la rend utilisable pour décider. La colonne « banc » compare à la vérité du simulateur, lue après coup : elle n’existe pas dans une vraie entreprise et ne change aucun niveau.</p>
   <div class="tableau"><table>
     <thead><tr><th>Niveau</th><th>Auteur</th><th>Affirmation</th><th>Problème</th><th>Banc</th></tr></thead>
-    <tbody><tr><td><span class="niv n1">hors de portée</span></td><td><span class="qui cortex">CORTEX</span></td><td><a href="#r1">La mesure 2 contient une structure prévisible que mon modèle n’exprime pas, de la famille « forme » (fonction non linéaire des leviers).</a></td><td class="petit">forme-manquante#5</td><td><span class="verd bon">confirmée</span></td></tr><tr><td><span class="niv n3">empirique</span><div class="petit">entrée : hypothèse</div><div class="petit">contestée, puis tranchée</div></td><td><span class="qui galilee">GALILÉE</span></td><td><a href="#r2">écart(mesure 2) ≈ 0.3931 − cos(u0) / 2</a></td><td class="petit">forme-manquante#5</td><td><span class="verd bon">confirmée</span></td></tr><tr><td><span class="niv n0">réfutée</span><div class="petit">entrée : hypothèse</div></td><td><span class="qui cortex">CORTEX</span></td><td><a href="#r55">Le débit teka8 dépend d’une mémoire lente (constante de temps ≈ 28 jours) de : débit teka8 (-0.61).</a></td><td class="petit">entreprise-opaque#2</td><td><span class="sur">—</span></td></tr><tr><td><span class="niv n0">réfutée</span><div class="petit">entrée : hypothèse</div></td><td><span class="qui cortex">CORTEX</span></td><td><a href="#r56">Le débit buvu1 dépend d’une mémoire lente (constante de temps ≈ 12 jours) de : débit teka8 (1.07), débit buvu1 (-2.14).</a></td><td class="petit">entreprise-opaque#2</td><td><span class="sur">—</span></td></tr><tr><td><span class="niv n0">réfutée</span><div class="petit">entrée : hypothèse</div></td><td><span class="qui cortex">CORTEX</span></td><td><a href="#r57">Le débit buvu1 dépend d’une mémoire lente (constante de temps ≈ 5 jours) de : débit sumuzo9 (0.38), prix buvu1 (0).</a></td><td class="petit">entreprise-opaque#2</td><td><span class="sur">—</span></td></tr><tr><td><span class="niv n0">réfutée</span><div class="petit">entrée : hypothèse</div></td><td><span class="qui cortex">CORTEX</span></td><td><a href="#r58">Le débit sumuzo9 dépend d’une mémoire lente (constante de temps ≈ 12 jours) de : débit teka8 (2.06), débit sumuzo9 (-2.49).</a></td><td class="petit">entreprise-opaque#2</td><td><span class="sur">—</span></td></tr><tr><td><span class="niv n0">réfutée</span><div class="petit">entrée : hypothèse</div></td><td><span class="qui cortex">CORTEX</span></td><td><a href="#r59">Le débit sumuzo9 dépend d’une mémoire lente (constante de temps ≈ 4 jours) de : débit buvu1 (-0.6), débit sumuzo9 (0.73).</a></td><td class="petit">entreprise-opaque#2</td><td><span class="sur">—</span></td></tr><tr><td><span class="niv n0">réfutée</span><div class="petit">entrée : hypothèse</div></td><td><span class="qui cortex">CORTEX</span></td><td><a href="#r80">Le débit sinisu6 dépend d’une mémoire lente (constante de temps ≈ 35 jours) de : débit sinisu6 (-0.74), débit zehaki1 (0.48).</a></td><td class="petit">entreprise-opaque#5</td><td><span class="sur">—</span></td></tr><tr><td><span class="niv n0">réfutée</span><div class="petit">entrée : hypothèse</div></td><td><span class="qui cortex">CORTEX</span></td><td><a href="#r81">Le débit zehaki1 dépend d’une mémoire lente (constante de temps ≈ 32 jours) de : débit zehaki1 (-0.54).</a></td><td class="petit">entreprise-opaque#5</td><td><span class="sur">—</span></td></tr><tr><td><span class="niv n0">réfutée</span><div class="petit">entrée : hypothèse</div></td><td><span class="qui cortex">CORTEX</span></td><td><a href="#r82">Le débit xiro7 dépend d’une mémoire lente (constante de temps ≈ 32 jours) de : débit sinisu6 (0.3), débit xiro7 (-0.7).</a></td><td class="petit">entreprise-opaque#5</td><td><span class="sur">—</span></td></tr><tr><td><span class="niv n0">réfutée</span><div class="petit">entrée : hypothèse</div></td><td><span class="qui cortex">CORTEX</span></td><td><a href="#r83">Le débit xiro7 dépend d’une mémoire lente (constante de temps ≈ 2 jours) de : débit zehaki1 (0.12), prix zehaki1 (0).</a></td><td class="petit">entreprise-opaque#5</td><td><span class="sur">—</span></td></tr><tr><td><span class="niv n0">réfutée</span><div class="petit">entrée : hypothèse</div></td><td><span class="qui cortex">CORTEX</span></td><td><a href="#r103">Le débit jubi8 dépend d’une mémoire lente (constante de temps ≈ 18 jours) de : débit jubi8 (-1.96), débit suhaqe5 (0.86).</a></td><td class="petit">entreprise-opaque#8</td><td><span class="sur">—</span></td></tr><tr><td><span class="niv n0">réfutée</span><div class="petit">entrée : hypothèse</div></td><td><span class="qui cortex">CORTEX</span></td><td><a href="#r104">Le débit jubi8 dépend d’une mémoire lente (constante de temps ≈ 6 jours) de : débit jubi8 (0.78).</a></td><td class="petit">entreprise-opaque#8</td><td><span class="sur">—</span></td></tr><tr><td><span class="niv n0">réfutée</span><div class="petit">entrée : hypothèse</div></td><td><span class="qui cortex">CORTEX</span></td><td><a href="#r105">Le débit suhaqe5 dépend d’une mémoire lente (constante de temps ≈ 16 jours) de : débit jubi8 (0.41), débit suhaqe5 (-1.22).</a></td><td class="petit">entreprise-opaque#8</td><td><span class="sur">—</span></td></tr><tr><td><span class="niv n0">réfutée</span><div class="petit">entrée : hypothèse</div></td><td><span class="qui cortex">CORTEX</span></td><td><a href="#r106">Le débit suhaqe5 dépend d’une mémoire lente (constante de temps ≈ 5 jours) de : débit jubi8 (0.6).</a></td><td class="petit">entreprise-opaque#8</td><td><span class="sur">—</span></td></tr><tr><td><span class="niv n0">réfutée</span><div class="petit">entrée : hypothèse</div></td><td><span class="qui cortex">CORTEX</span></td><td><a href="#r107">Le débit nijuqo0 dépend d’une mémoire lente (constante de temps ≈ 2 jours) de : débit jubi8 (0.5), prix jubi8 (0).</a></td><td class="petit">entreprise-opaque#8</td><td><span class="sur">—</span></td></tr><tr><td><span class="niv n0">réfutée</span><div class="petit">entrée : hypothèse</div></td><td><span class="qui cortex">CORTEX</span></td><td><a href="#r108">Le débit nijuqo0 dépend d’une mémoire lente (constante de temps ≈ 4 jours) de : débit suhaqe5 (0.28), débit nijuqo0 (-0.61).</a></td><td class="petit">entreprise-opaque#8</td><td><span class="sur">—</span></td></tr><tr><td><span class="niv n0">réfutée</span><div class="petit">entrée : hypothèse</div></td><td><span class="qui cortex">CORTEX</span></td><td><a href="#r134">Le débit qifuki0 dépend d’une mémoire lente (constante de temps ≈ 16 jours) de : débit qifuki0 (-0.58), débit muxu9 (0.71).</a></td><td class="petit">entreprise-opaque#11</td><td><span class="sur">—</span></td></tr><tr><td><span class="niv n0">réfutée</span><div class="petit">entrée : hypothèse</div></td><td><span class="qui cortex">CORTEX</span></td><td><a href="#r135">Le débit gakofe8 dépend d’une mémoire lente (constante de temps ≈ 32 jours) de : débit gakofe8 (-0.71), débit muxu9 (0.39).</a></td><td class="petit">entreprise-opaque#11</td><td><span class="sur">—</span></td></tr><tr><td><span class="niv n0">réfutée</span><div class="petit">entrée : hypothèse</div></td><td><span class="qui cortex">CORTEX</span></td><td><a href="#r136">Le débit muxu9 dépend d’une mémoire lente (constante de temps ≈ 39 jours) de : débit gakofe8 (0.22), débit muxu9 (-0.69).</a></td><td class="petit">entreprise-opaque#11</td><td><span class="sur">—</span></td></tr><tr><td><span class="niv n0">réfutée</span><div class="petit">entrée : hypothèse</div></td><td><span class="qui cortex">CORTEX</span></td><td><a href="#r164">Le débit baza7 dépend d’une mémoire lente (constante de temps ≈ 18 jours) de : débit baza7 (-3.11), débit befa7 (2.15).</a></td><td class="petit">entreprise-opaque#14</td><td><span class="sur">—</span></td></tr><tr><td><span class="niv n0">réfutée</span><div class="petit">entrée : hypothèse</div></td><td><span class="qui cortex">CORTEX</span></td><td><a href="#r165">Le débit baza7 dépend d’une mémoire lente (constante de temps ≈ 7 jours) de : débit nuqatu7 (1.17), débit befa7 (-0.33).</a></td><td class="petit">entreprise-opaque#14</td><td><span class="sur">—</span></td></tr><tr><td><span class="niv n0">réfutée</span><div class="petit">entrée : hypothèse</div></td><td><span class="qui cortex">CORTEX</span></td><td><a href="#r166">Le débit nuqatu7 dépend d’une mémoire lente (constante de temps ≈ 16 jours) de : débit nuqatu7 (-1.89), débit befa7 (1.55).</a></td><td class="petit">entreprise-opaque#14</td><td><span class="sur">—</span></td></tr><tr><td><span class="niv n0">réfutée</span><div class="petit">entrée : hypothèse</div></td><td><span class="qui cortex">CORTEX</span></td><td><a href="#r167">Le débit nuqatu7 dépend d’une mémoire lente (constante de temps ≈ 2 jours) de : débit nuqatu7 (0.34), prix baza7 (0).</a></td><td class="petit">entreprise-opaque#14</td><td><span class="sur">—</span></td></tr><tr><td><span class="niv n0">réfutée</span><div class="petit">entrée : hypothèse</div></td><td><span class="qui cortex">CORTEX</span></td><td><a href="#r168">Le débit befa7 dépend d’une mémoire lente (constante de temps ≈ 18 jours) de : débit nuqatu7 (1.29), débit befa7 (-1.96).</a></td><td class="petit">entreprise-opaque#14</td><td><span class="sur">—</span></td></tr><tr><td><span class="niv n0">réfutée</span><div class="petit">entrée : hypothèse</div></td><td><span class="qui cortex">CORTEX</span></td><td><a href="#r169">Le débit befa7 dépend d’une mémoire lente (constante de temps ≈ 2 jours) de : débit befa7 (0.34), prix baza7 (0).</a></td><td class="petit">entreprise-opaque#14</td><td><span class="sur">—</span></td></tr><tr><td><span class="niv n0">réfutée</span><div class="petit">entrée : hypothèse</div></td><td><span class="qui cortex">CORTEX</span></td><td><a href="#r201">Le débit xaxe7 dépend d’une mémoire lente (constante de temps ≈ 25 jours) de : débit xaxe7 (-0.61), débit xuza8 (0.71).</a></td><td class="petit">entreprise-opaque#17</td><td><span class="sur">—</span></td></tr><tr><td><span class="niv n0">réfutée</span><div class="petit">entrée : hypothèse</div></td><td><span class="qui cortex">CORTEX</span></td><td><a href="#r202">Le débit xuza8 dépend d’une mémoire lente (constante de temps ≈ 28 jours) de : débit xuza8 (-0.51), prix xuza8 (0).</a></td><td class="petit">entreprise-opaque#17</td><td><span class="sur">—</span></td></tr><tr><td><span class="niv n0">réfutée</span><div class="petit">entrée : hypothèse</div></td><td><span class="qui cortex">CORTEX</span></td><td><a href="#r203">Le débit jico4 dépend d’une mémoire lente (constante de temps ≈ 44 jours) de : débit xuza8 (0.79), débit jico4 (-1.03).</a></td><td class="petit">entreprise-opaque#17</td><td><span class="sur">—</span></td></tr><tr><td><span class="niv n0">réfutée</span><div class="petit">entrée : hypothèse</div></td><td><span class="qui cortex">CORTEX</span></td><td><a href="#r204">Le débit jico4 dépend d’une mémoire lente (constante de temps ≈ 2 jours) de : prix xuza8 (0).</a></td><td class="petit">entreprise-opaque#17</td><td><span class="sur">—</span></td></tr><tr><td><span class="niv n0">réfutée</span><div class="petit">entrée : hypothèse</div></td><td><span class="qui cortex">CORTEX</span></td><td><a href="#r229">Le débit tufaza9 dépend d’une mémoire lente (constante de temps ≈ 18 jours) de : débit tufaza9 (-2.44), débit xafa2 (0.92).</a></td><td class="petit">entreprise-opaque#20</td><td><span class="sur">—</span></td></tr><tr><td><span class="niv n0">réfutée</span><div class="petit">entrée : hypothèse</div></td><td><span class="qui cortex">CORTEX</span></td><td><a href="#r230">Le débit tufaza9 dépend d’une mémoire lente (constante de temps ≈ 8 jours) de : débit tufaza9 (1.05).</a></td><td class="petit">entreprise-opaque#20</td><td><span class="sur">—</span></td></tr><tr><td><span class="niv n0">réfutée</span><div class="petit">entrée : hypothèse</div></td><td><span class="qui cortex">CORTEX</span></td><td><a href="#r231">Le débit quzu9 dépend d’une mémoire lente (constante de temps ≈ 16 jours) de : débit tufaza9 (1.25), débit quzu9 (-1.95).</a></td><td class="petit">entreprise-opaque#20</td><td><span class="sur">—</span></td></tr><tr><td><span class="niv n0">réfutée</span><div class="petit">entrée : hypothèse</div></td><td><span class="qui cortex">CORTEX</span></td><td><a href="#r232">Le débit quzu9 dépend d’une mémoire lente (constante de temps ≈ 5 jours) de : débit xafa2 (0.42).</a></td><td class="petit">entreprise-opaque#20</td><td><span class="sur">—</span></td></tr><tr><td><span class="niv n0">réfutée</span><div class="petit">entrée : hypothèse</div></td><td><span class="qui cortex">CORTEX</span></td><td><a href="#r233">Le débit xafa2 dépend d’une mémoire lente (constante de temps ≈ 20 jours) de : débit tufaza9 (1.17), débit xafa2 (-1.98).</a></td><td class="petit">entreprise-opaque#20</td><td><span class="sur">—</span></td></tr><tr><td><span class="niv n0">réfutée</span><div class="petit">entrée : hypothèse</div></td><td><span class="qui cortex">CORTEX</span></td><td><a href="#r234">Le débit xafa2 dépend d’une mémoire lente (constante de temps ≈ 7 jours) de : débit quzu9 (0.35), débit xafa2 (0.44).</a></td><td class="petit">entreprise-opaque#20</td><td><span class="sur">—</span></td></tr><tr><td><span class="niv n0">réfutée</span><div class="petit">entrée : hypothèse</div></td><td><span class="qui cortex">CORTEX</span></td><td><a href="#r261">Le débit zuhari3 dépend d’une mémoire lente (constante de temps ≈ 32 jours) de : débit zuhari3 (-0.7), débit hobo5 (0.33).</a></td><td class="petit">entreprise-opaque#23</td><td><span class="sur">—</span></td></tr><tr><td><span class="niv n0">réfutée</span><div class="petit">entrée : hypothèse</div></td><td><span class="qui cortex">CORTEX</span></td><td><a href="#r262">Le débit hobo5 dépend d’une mémoire lente (constante de temps ≈ 32 jours) de : débit hobo5 (-0.94), débit zovagu2 (0.4).</a></td><td class="petit">entreprise-opaque#23</td><td><span class="sur">—</span></td></tr><tr><td><span class="niv n0">réfutée</span><div class="petit">entrée : hypothèse</div></td><td><span class="qui cortex">CORTEX</span></td><td><a href="#r263">Le débit hobo5 dépend d’une mémoire lente (constante de temps ≈ 5 jours) de : débit zuhari3 (0.29).</a></td><td class="petit">entreprise-opaque#23</td><td><span class="sur">—</span></td></tr><tr><td><span class="niv n0">réfutée</span><div class="petit">entrée : hypothèse</div></td><td><span class="qui cortex">CORTEX</span></td><td><a href="#r264">Le débit zovagu2 dépend d’une mémoire lente (constante de temps ≈ 25 jours) de : débit zovagu2 (-0.59), prix zuhari3 (0).</a></td><td class="petit">entreprise-opaque#23</td><td><span class="sur">—</span></td></tr><tr><td><span class="niv n0">réfutée</span><div class="petit">entrée : hypothèse</div></td><td><span class="qui cortex">CORTEX</span></td><td><a href="#r265">Le débit zovagu2 dépend d’une mémoire lente (constante de temps ≈ 5 jours) de : débit zuhari3 (0.29), débit zovagu2 (0.24).</a></td><td class="petit">entreprise-opaque#23</td><td><span class="sur">—</span></td></tr><tr><td><span class="niv n1">hors de portée</span></td><td><span class="qui cortex">CORTEX</span></td><td><a href="#r296">La mesure 2 contient une structure prévisible que mon modèle n’exprime pas, de la famille « forme » (fonction non linéaire des leviers).</a></td><td class="petit">forme-manquante#21</td><td><span class="sur">—</span></td></tr><tr><td><span class="niv n1">hors de portée</span></td><td><span class="qui cortex">CORTEX</span></td><td><a href="#r299">La mesure 1 contient une structure prévisible que mon modèle n’exprime pas, de la famille « forme » (fonction non linéaire des leviers).</a></td><td class="petit">forme-manquante#23</td><td><span class="sur">—</span></td></tr><tr><td><span class="niv n5">identité</span></td><td><span class="qui neutre">registre</span></td><td><a href="#r302">Depuis l’ouverture (2026-07-27) : 0 € de ventes, 0 commande payante, 148 visites, 0 ajout au panier.</a></td><td class="petit">boutique-reelle#20261113</td><td><span class="sur">—</span></td></tr><tr><td><span class="niv n5">identité</span></td><td><span class="qui neutre">registre</span></td><td><a href="#r303">0 visite depuis la France. 126 visites sur 148 viennent des États-Unis, où la boutique ne livre pas ; 4 seulement viennent d’un pays livré.</a></td><td class="petit">boutique-reelle#20261113</td><td><span class="sur">—</span></td></tr></tbody>
+    <tbody><tr><td><span class="niv n1">hors de portée</span></td><td><span class="qui cortex">CORTEX</span></td><td><a href="#r1">La mesure 2 contient une structure prévisible que mon modèle n’exprime pas, de la famille « forme » (fonction non linéaire des leviers).</a></td><td class="petit">forme-manquante#5</td><td><span class="verd bon">confirmée</span></td></tr><tr><td><span class="niv n3">empirique</span><div class="petit">entrée : hypothèse</div><div class="petit">contestée, puis tranchée</div></td><td><span class="qui galilee">GALILÉE</span></td><td><a href="#r2">écart(mesure 2) ≈ 0.3931 − cos(u0) / 2</a></td><td class="petit">forme-manquante#5</td><td><span class="verd bon">confirmée</span></td></tr><tr><td><span class="niv n0">réfutée</span><div class="petit">entrée : hypothèse</div></td><td><span class="qui cortex">CORTEX</span></td><td><a href="#r55">Le débit teka8 dépend d’une mémoire lente (constante de temps ≈ 28 jours) de : débit teka8 (-0.61).</a></td><td class="petit">entreprise-opaque#2</td><td><span class="sur">—</span></td></tr><tr><td><span class="niv n0">réfutée</span><div class="petit">entrée : hypothèse</div></td><td><span class="qui cortex">CORTEX</span></td><td><a href="#r56">Le débit buvu1 dépend d’une mémoire lente (constante de temps ≈ 12 jours) de : débit teka8 (1.07), débit buvu1 (-2.14).</a></td><td class="petit">entreprise-opaque#2</td><td><span class="sur">—</span></td></tr><tr><td><span class="niv n0">réfutée</span><div class="petit">entrée : hypothèse</div></td><td><span class="qui cortex">CORTEX</span></td><td><a href="#r57">Le débit buvu1 dépend d’une mémoire lente (constante de temps ≈ 5 jours) de : débit sumuzo9 (0.38), prix buvu1 (0).</a></td><td class="petit">entreprise-opaque#2</td><td><span class="sur">—</span></td></tr><tr><td><span class="niv n0">réfutée</span><div class="petit">entrée : hypothèse</div></td><td><span class="qui cortex">CORTEX</span></td><td><a href="#r58">Le débit sumuzo9 dépend d’une mémoire lente (constante de temps ≈ 12 jours) de : débit teka8 (2.06), débit sumuzo9 (-2.49).</a></td><td class="petit">entreprise-opaque#2</td><td><span class="sur">—</span></td></tr><tr><td><span class="niv n0">réfutée</span><div class="petit">entrée : hypothèse</div></td><td><span class="qui cortex">CORTEX</span></td><td><a href="#r59">Le débit sumuzo9 dépend d’une mémoire lente (constante de temps ≈ 4 jours) de : débit buvu1 (-0.6), débit sumuzo9 (0.73).</a></td><td class="petit">entreprise-opaque#2</td><td><span class="sur">—</span></td></tr><tr><td><span class="niv n0">réfutée</span><div class="petit">entrée : hypothèse</div></td><td><span class="qui cortex">CORTEX</span></td><td><a href="#r80">Le débit sinisu6 dépend d’une mémoire lente (constante de temps ≈ 35 jours) de : débit sinisu6 (-0.74), débit zehaki1 (0.48).</a></td><td class="petit">entreprise-opaque#5</td><td><span class="sur">—</span></td></tr><tr><td><span class="niv n0">réfutée</span><div class="petit">entrée : hypothèse</div></td><td><span class="qui cortex">CORTEX</span></td><td><a href="#r81">Le débit zehaki1 dépend d’une mémoire lente (constante de temps ≈ 32 jours) de : débit zehaki1 (-0.54).</a></td><td class="petit">entreprise-opaque#5</td><td><span class="sur">—</span></td></tr><tr><td><span class="niv n0">réfutée</span><div class="petit">entrée : hypothèse</div></td><td><span class="qui cortex">CORTEX</span></td><td><a href="#r82">Le débit xiro7 dépend d’une mémoire lente (constante de temps ≈ 32 jours) de : débit sinisu6 (0.3), débit xiro7 (-0.7).</a></td><td class="petit">entreprise-opaque#5</td><td><span class="sur">—</span></td></tr><tr><td><span class="niv n0">réfutée</span><div class="petit">entrée : hypothèse</div></td><td><span class="qui cortex">CORTEX</span></td><td><a href="#r83">Le débit xiro7 dépend d’une mémoire lente (constante de temps ≈ 2 jours) de : débit zehaki1 (0.12), prix zehaki1 (0).</a></td><td class="petit">entreprise-opaque#5</td><td><span class="sur">—</span></td></tr><tr><td><span class="niv n0">réfutée</span><div class="petit">entrée : hypothèse</div></td><td><span class="qui cortex">CORTEX</span></td><td><a href="#r103">Le débit jubi8 dépend d’une mémoire lente (constante de temps ≈ 18 jours) de : débit jubi8 (-1.96), débit suhaqe5 (0.86).</a></td><td class="petit">entreprise-opaque#8</td><td><span class="sur">—</span></td></tr><tr><td><span class="niv n0">réfutée</span><div class="petit">entrée : hypothèse</div></td><td><span class="qui cortex">CORTEX</span></td><td><a href="#r104">Le débit jubi8 dépend d’une mémoire lente (constante de temps ≈ 6 jours) de : débit jubi8 (0.78).</a></td><td class="petit">entreprise-opaque#8</td><td><span class="sur">—</span></td></tr><tr><td><span class="niv n0">réfutée</span><div class="petit">entrée : hypothèse</div></td><td><span class="qui cortex">CORTEX</span></td><td><a href="#r105">Le débit suhaqe5 dépend d’une mémoire lente (constante de temps ≈ 16 jours) de : débit jubi8 (0.41), débit suhaqe5 (-1.22).</a></td><td class="petit">entreprise-opaque#8</td><td><span class="sur">—</span></td></tr><tr><td><span class="niv n0">réfutée</span><div class="petit">entrée : hypothèse</div></td><td><span class="qui cortex">CORTEX</span></td><td><a href="#r106">Le débit suhaqe5 dépend d’une mémoire lente (constante de temps ≈ 5 jours) de : débit jubi8 (0.6).</a></td><td class="petit">entreprise-opaque#8</td><td><span class="sur">—</span></td></tr><tr><td><span class="niv n0">réfutée</span><div class="petit">entrée : hypothèse</div></td><td><span class="qui cortex">CORTEX</span></td><td><a href="#r107">Le débit nijuqo0 dépend d’une mémoire lente (constante de temps ≈ 2 jours) de : débit jubi8 (0.5), prix jubi8 (0).</a></td><td class="petit">entreprise-opaque#8</td><td><span class="sur">—</span></td></tr><tr><td><span class="niv n0">réfutée</span><div class="petit">entrée : hypothèse</div></td><td><span class="qui cortex">CORTEX</span></td><td><a href="#r108">Le débit nijuqo0 dépend d’une mémoire lente (constante de temps ≈ 4 jours) de : débit suhaqe5 (0.28), débit nijuqo0 (-0.61).</a></td><td class="petit">entreprise-opaque#8</td><td><span class="sur">—</span></td></tr><tr><td><span class="niv n0">réfutée</span><div class="petit">entrée : hypothèse</div></td><td><span class="qui cortex">CORTEX</span></td><td><a href="#r134">Le débit qifuki0 dépend d’une mémoire lente (constante de temps ≈ 16 jours) de : débit qifuki0 (-0.58), débit muxu9 (0.71).</a></td><td class="petit">entreprise-opaque#11</td><td><span class="sur">—</span></td></tr><tr><td><span class="niv n0">réfutée</span><div class="petit">entrée : hypothèse</div></td><td><span class="qui cortex">CORTEX</span></td><td><a href="#r135">Le débit gakofe8 dépend d’une mémoire lente (constante de temps ≈ 32 jours) de : débit gakofe8 (-0.71), débit muxu9 (0.39).</a></td><td class="petit">entreprise-opaque#11</td><td><span class="sur">—</span></td></tr><tr><td><span class="niv n0">réfutée</span><div class="petit">entrée : hypothèse</div></td><td><span class="qui cortex">CORTEX</span></td><td><a href="#r136">Le débit muxu9 dépend d’une mémoire lente (constante de temps ≈ 39 jours) de : débit gakofe8 (0.22), débit muxu9 (-0.69).</a></td><td class="petit">entreprise-opaque#11</td><td><span class="sur">—</span></td></tr><tr><td><span class="niv n0">réfutée</span><div class="petit">entrée : hypothèse</div></td><td><span class="qui cortex">CORTEX</span></td><td><a href="#r164">Le débit baza7 dépend d’une mémoire lente (constante de temps ≈ 18 jours) de : débit baza7 (-3.11), débit befa7 (2.15).</a></td><td class="petit">entreprise-opaque#14</td><td><span class="sur">—</span></td></tr><tr><td><span class="niv n0">réfutée</span><div class="petit">entrée : hypothèse</div></td><td><span class="qui cortex">CORTEX</span></td><td><a href="#r165">Le débit baza7 dépend d’une mémoire lente (constante de temps ≈ 7 jours) de : débit nuqatu7 (1.17), débit befa7 (-0.33).</a></td><td class="petit">entreprise-opaque#14</td><td><span class="sur">—</span></td></tr><tr><td><span class="niv n0">réfutée</span><div class="petit">entrée : hypothèse</div></td><td><span class="qui cortex">CORTEX</span></td><td><a href="#r166">Le débit nuqatu7 dépend d’une mémoire lente (constante de temps ≈ 16 jours) de : débit nuqatu7 (-1.89), débit befa7 (1.55).</a></td><td class="petit">entreprise-opaque#14</td><td><span class="sur">—</span></td></tr><tr><td><span class="niv n0">réfutée</span><div class="petit">entrée : hypothèse</div></td><td><span class="qui cortex">CORTEX</span></td><td><a href="#r167">Le débit nuqatu7 dépend d’une mémoire lente (constante de temps ≈ 2 jours) de : débit nuqatu7 (0.34), prix baza7 (0).</a></td><td class="petit">entreprise-opaque#14</td><td><span class="sur">—</span></td></tr><tr><td><span class="niv n0">réfutée</span><div class="petit">entrée : hypothèse</div></td><td><span class="qui cortex">CORTEX</span></td><td><a href="#r168">Le débit befa7 dépend d’une mémoire lente (constante de temps ≈ 18 jours) de : débit nuqatu7 (1.29), débit befa7 (-1.96).</a></td><td class="petit">entreprise-opaque#14</td><td><span class="sur">—</span></td></tr><tr><td><span class="niv n0">réfutée</span><div class="petit">entrée : hypothèse</div></td><td><span class="qui cortex">CORTEX</span></td><td><a href="#r169">Le débit befa7 dépend d’une mémoire lente (constante de temps ≈ 2 jours) de : débit befa7 (0.34), prix baza7 (0).</a></td><td class="petit">entreprise-opaque#14</td><td><span class="sur">—</span></td></tr><tr><td><span class="niv n0">réfutée</span><div class="petit">entrée : hypothèse</div></td><td><span class="qui cortex">CORTEX</span></td><td><a href="#r201">Le débit xaxe7 dépend d’une mémoire lente (constante de temps ≈ 25 jours) de : débit xaxe7 (-0.61), débit xuza8 (0.71).</a></td><td class="petit">entreprise-opaque#17</td><td><span class="sur">—</span></td></tr><tr><td><span class="niv n0">réfutée</span><div class="petit">entrée : hypothèse</div></td><td><span class="qui cortex">CORTEX</span></td><td><a href="#r202">Le débit xuza8 dépend d’une mémoire lente (constante de temps ≈ 28 jours) de : débit xuza8 (-0.51), prix xuza8 (0).</a></td><td class="petit">entreprise-opaque#17</td><td><span class="sur">—</span></td></tr><tr><td><span class="niv n0">réfutée</span><div class="petit">entrée : hypothèse</div></td><td><span class="qui cortex">CORTEX</span></td><td><a href="#r203">Le débit jico4 dépend d’une mémoire lente (constante de temps ≈ 44 jours) de : débit xuza8 (0.79), débit jico4 (-1.03).</a></td><td class="petit">entreprise-opaque#17</td><td><span class="sur">—</span></td></tr><tr><td><span class="niv n0">réfutée</span><div class="petit">entrée : hypothèse</div></td><td><span class="qui cortex">CORTEX</span></td><td><a href="#r204">Le débit jico4 dépend d’une mémoire lente (constante de temps ≈ 2 jours) de : prix xuza8 (0).</a></td><td class="petit">entreprise-opaque#17</td><td><span class="sur">—</span></td></tr><tr><td><span class="niv n0">réfutée</span><div class="petit">entrée : hypothèse</div></td><td><span class="qui cortex">CORTEX</span></td><td><a href="#r229">Le débit tufaza9 dépend d’une mémoire lente (constante de temps ≈ 18 jours) de : débit tufaza9 (-2.44), débit xafa2 (0.92).</a></td><td class="petit">entreprise-opaque#20</td><td><span class="sur">—</span></td></tr><tr><td><span class="niv n0">réfutée</span><div class="petit">entrée : hypothèse</div></td><td><span class="qui cortex">CORTEX</span></td><td><a href="#r230">Le débit tufaza9 dépend d’une mémoire lente (constante de temps ≈ 8 jours) de : débit tufaza9 (1.05).</a></td><td class="petit">entreprise-opaque#20</td><td><span class="sur">—</span></td></tr><tr><td><span class="niv n0">réfutée</span><div class="petit">entrée : hypothèse</div></td><td><span class="qui cortex">CORTEX</span></td><td><a href="#r231">Le débit quzu9 dépend d’une mémoire lente (constante de temps ≈ 16 jours) de : débit tufaza9 (1.25), débit quzu9 (-1.95).</a></td><td class="petit">entreprise-opaque#20</td><td><span class="sur">—</span></td></tr><tr><td><span class="niv n0">réfutée</span><div class="petit">entrée : hypothèse</div></td><td><span class="qui cortex">CORTEX</span></td><td><a href="#r232">Le débit quzu9 dépend d’une mémoire lente (constante de temps ≈ 5 jours) de : débit xafa2 (0.42).</a></td><td class="petit">entreprise-opaque#20</td><td><span class="sur">—</span></td></tr><tr><td><span class="niv n0">réfutée</span><div class="petit">entrée : hypothèse</div></td><td><span class="qui cortex">CORTEX</span></td><td><a href="#r233">Le débit xafa2 dépend d’une mémoire lente (constante de temps ≈ 20 jours) de : débit tufaza9 (1.17), débit xafa2 (-1.98).</a></td><td class="petit">entreprise-opaque#20</td><td><span class="sur">—</span></td></tr><tr><td><span class="niv n0">réfutée</span><div class="petit">entrée : hypothèse</div></td><td><span class="qui cortex">CORTEX</span></td><td><a href="#r234">Le débit xafa2 dépend d’une mémoire lente (constante de temps ≈ 7 jours) de : débit quzu9 (0.35), débit xafa2 (0.44).</a></td><td class="petit">entreprise-opaque#20</td><td><span class="sur">—</span></td></tr><tr><td><span class="niv n0">réfutée</span><div class="petit">entrée : hypothèse</div></td><td><span class="qui cortex">CORTEX</span></td><td><a href="#r261">Le débit zuhari3 dépend d’une mémoire lente (constante de temps ≈ 32 jours) de : débit zuhari3 (-0.7), débit hobo5 (0.33).</a></td><td class="petit">entreprise-opaque#23</td><td><span class="sur">—</span></td></tr><tr><td><span class="niv n0">réfutée</span><div class="petit">entrée : hypothèse</div></td><td><span class="qui cortex">CORTEX</span></td><td><a href="#r262">Le débit hobo5 dépend d’une mémoire lente (constante de temps ≈ 32 jours) de : débit hobo5 (-0.94), débit zovagu2 (0.4).</a></td><td class="petit">entreprise-opaque#23</td><td><span class="sur">—</span></td></tr><tr><td><span class="niv n0">réfutée</span><div class="petit">entrée : hypothèse</div></td><td><span class="qui cortex">CORTEX</span></td><td><a href="#r263">Le débit hobo5 dépend d’une mémoire lente (constante de temps ≈ 5 jours) de : débit zuhari3 (0.29).</a></td><td class="petit">entreprise-opaque#23</td><td><span class="sur">—</span></td></tr><tr><td><span class="niv n0">réfutée</span><div class="petit">entrée : hypothèse</div></td><td><span class="qui cortex">CORTEX</span></td><td><a href="#r264">Le débit zovagu2 dépend d’une mémoire lente (constante de temps ≈ 25 jours) de : débit zovagu2 (-0.59), prix zuhari3 (0).</a></td><td class="petit">entreprise-opaque#23</td><td><span class="sur">—</span></td></tr><tr><td><span class="niv n0">réfutée</span><div class="petit">entrée : hypothèse</div></td><td><span class="qui cortex">CORTEX</span></td><td><a href="#r265">Le débit zovagu2 dépend d’une mémoire lente (constante de temps ≈ 5 jours) de : débit zuhari3 (0.29), débit zovagu2 (0.24).</a></td><td class="petit">entreprise-opaque#23</td><td><span class="sur">—</span></td></tr><tr><td><span class="niv n1">hors de portée</span></td><td><span class="qui cortex">CORTEX</span></td><td><a href="#r296">La mesure 2 contient une structure prévisible que mon modèle n’exprime pas, de la famille « forme » (fonction non linéaire des leviers).</a></td><td class="petit">forme-manquante#21</td><td><span class="sur">—</span></td></tr><tr><td><span class="niv n1">hors de portée</span></td><td><span class="qui cortex">CORTEX</span></td><td><a href="#r299">La mesure 1 contient une structure prévisible que mon modèle n’exprime pas, de la famille « forme » (fonction non linéaire des leviers).</a></td><td class="petit">forme-manquante#23</td><td><span class="sur">—</span></td></tr><tr><td><span class="niv n5">identité</span></td><td><span class="qui neutre">registre</span></td><td><a href="#r302">Depuis l’ouverture (2026-07-27) : 0 € de ventes, 0 commande payante, 148 visites, 0 ajout au panier.</a></td><td class="petit">boutique-reelle#20261113</td><td><span class="sur">—</span></td></tr><tr><td><span class="niv n5">identité</span></td><td><span class="qui neutre">registre</span></td><td><a href="#r303">0 visite depuis la France. 126 visites sur 148 viennent des États-Unis, où la boutique ne livre pas ; 4 seulement viennent d’un pays livré.</a></td><td class="petit">boutique-reelle#20261113</td><td><span class="sur">—</span></td></tr><tr><td><span class="niv n1">hors de portée</span></td><td><span class="qui cortex">CORTEX</span></td><td><a href="#r377">La mesure 1 contient une structure prévisible que mon modèle n’exprime pas, de la famille « forme » (fonction non linéaire des leviers).</a></td><td class="petit">forme-manquante#25</td><td><span class="sur">—</span></td></tr></tbody>
   </table></div>
-  <p class="petit">2 identité · 1 empirique · 54 hypothèse · 3 hors de portée · 39 réfutée (témoins négatifs compris). Le tableau montre tout ce qui n’est pas une simple hypothèse ; les hypothèses sont dans le journal. Niveaux qui autorisent une décision : identité, établie, empirique.</p>
+  <p class="petit">2 identité · 1 empirique · 54 hypothèse · 4 hors de portée · 39 réfutée (témoins négatifs compris). Le tableau montre tout ce qui n’est pas une simple hypothèse ; les hypothèses sont dans le journal. Niveaux qui autorisent une décision : identité, établie, empirique.</p>
 </section>
 
 <section>
@@ -166,7 +298,7 @@ code{font:13px var(--mono);background:var(--creux);padding:1px 5px;border-radius
     <thead><tr><th>Objet</th><th>Coût</th><th>Risque</th><th>Déjà perdu</th><th>Par an si colmatée</th><th>Banc</th></tr></thead>
     <tbody><tr><td><a href="#r5">Expérience n° 5 : 13 blocs de 7 jours (jours 272 à 364)</a><div class="petit">gain non mesurable</div></td><td class="petit">91 jours d’essai, |u0| moyen 0,46<br>25,3 s de calcul</td><td class="petit">fausse confirmation ≤ 0.1</td><td class="n">—</td><td class="n">—</td><td><span class="sur">—</span></td></tr><tr><td><a href="#r18">Flux non enregistré sur le stock objet:zizimu2 depuis le jour 218 : 0.65 qte par jour.</a><div class="petit">au prix unitaire médian observé (3.81 € ; de 3.32 à 4.22 €)</div></td><td class="petit">0,8 s de calcul<br>aucune action</td><td class="petit">0,2 fausse détection par entreprise en développement ; cause de la fuite inconnue</td><td class="n">363 €</td><td class="n">901 €</td><td><span class="verd bon">confirmée</span></td></tr><tr><td><a href="#r20">Flux non enregistré sur le stock en-cours:0 depuis le jour 168 : 67.82 € par jour.</a><div class="petit">directe (stock en euros)</div></td><td class="petit">0,8 s de calcul<br>aucune action</td><td class="petit">0,2 fausse détection par entreprise en développement ; cause de la fuite inconnue</td><td class="n">13 360 €</td><td class="n">24 754 €</td><td><span class="verd bon">confirmée</span></td></tr><tr><td><a href="#r63">Flux non enregistré sur le stock tresorerie:bulo9 depuis le jour 95 : 115.95 € par jour.</a><div class="petit">directe (stock en euros)</div></td><td class="petit">2,4 s de calcul<br>aucune action</td><td class="petit">0,2 fausse détection par entreprise en développement ; cause de la fuite inconnue</td><td class="n">31 306 €</td><td class="n">42 321 €</td><td><span class="verd bon">confirmée</span></td></tr><tr><td><a href="#r75">Flux non enregistré sur le stock tresorerie:baxu4 depuis le jour 182 : 74.25 € par jour.</a><div class="petit">directe (stock en euros)</div></td><td class="petit">0,1 s de calcul<br>aucune action</td><td class="petit">0,2 fausse détection par entreprise en développement ; cause de la fuite inconnue</td><td class="n">13 587 €</td><td class="n">27 100 €</td><td><span class="verd bon">confirmée</span></td></tr><tr><td><a href="#r88">Flux non enregistré sur le stock tresorerie:goju6 depuis le jour 78 : 13.53 € par jour.</a><div class="petit">directe (stock en euros)</div></td><td class="petit">2,2 s de calcul<br>aucune action</td><td class="petit">0,2 fausse détection par entreprise en développement ; cause de la fuite inconnue</td><td class="n">3 882 €</td><td class="n">4 937 €</td><td><span class="verd bon">confirmée</span></td></tr><tr><td><a href="#r96">Flux non enregistré sur le stock tresorerie:fucaba2 depuis le jour 165 : 46.26 € par jour.</a><div class="petit">directe (stock en euros)</div></td><td class="petit">0,1 s de calcul<br>aucune action</td><td class="petit">0,2 fausse détection par entreprise en développement ; cause de la fuite inconnue</td><td class="n">9 252 €</td><td class="n">16 885 €</td><td><span class="verd bon">confirmée</span></td></tr><tr><td><a href="#r98">Flux non enregistré sur le stock en-cours:2 depuis le jour 265 : 17.27 € par jour.</a><div class="petit">directe (stock en euros)</div></td><td class="petit">0,1 s de calcul<br>aucune action</td><td class="petit">0,2 fausse détection par entreprise en développement ; cause de la fuite inconnue</td><td class="n">1 727 €</td><td class="n">6 303 €</td><td><span class="verd mauvais">démentie</span></td></tr><tr><td><a href="#r140">Flux non enregistré sur le stock en-cours:1 depuis le jour 177 : 53.56 € par jour.</a><div class="petit">directe (stock en euros)</div></td><td class="petit">1,3 s de calcul<br>aucune action</td><td class="petit">0,2 fausse détection par entreprise en développement ; cause de la fuite inconnue</td><td class="n">10 069 €</td><td class="n">19 549 €</td><td><span class="verd bon">confirmée</span></td></tr><tr><td><a href="#r152">Flux non enregistré sur le stock tresorerie:tije1 depuis le jour 87 : 226.19 € par jour.</a><div class="petit">directe (stock en euros)</div></td><td class="petit">4,1 s de calcul<br>aucune action</td><td class="petit">0,2 fausse détection par entreprise en développement ; cause de la fuite inconnue</td><td class="n">62 882 €</td><td class="n">82 560 €</td><td><span class="verd bon">confirmée</span></td></tr><tr><td><a href="#r159">Flux non enregistré sur le stock en-cours:1 depuis le jour 204 : 220.26 € par jour.</a><div class="petit">directe (stock en euros)</div></td><td class="petit">0,1 s de calcul<br>aucune action</td><td class="petit">0,2 fausse détection par entreprise en développement ; cause de la fuite inconnue</td><td class="n">35 461 €</td><td class="n">80 393 €</td><td><span class="verd bon">confirmée</span></td></tr><tr><td><a href="#r174">Flux non enregistré sur le stock tresorerie:gulato9 depuis le jour 153 : 173.69 € par jour.</a><div class="petit">directe (stock en euros)</div></td><td class="petit">0,8 s de calcul<br>aucune action</td><td class="petit">0,2 fausse détection par entreprise en développement ; cause de la fuite inconnue</td><td class="n">36 821 €</td><td class="n">63 395 €</td><td><span class="verd bon">confirmée</span></td></tr><tr><td><a href="#r186">Flux non enregistré sur le stock tresorerie:menibu5 depuis le jour 139 : 51.14 € par jour.</a><div class="petit">directe (stock en euros)</div></td><td class="petit">2,9 s de calcul<br>aucune action</td><td class="petit">0,2 fausse détection par entreprise en développement ; cause de la fuite inconnue</td><td class="n">11 557 €</td><td class="n">18 665 €</td><td><span class="verd bon">confirmée</span></td></tr><tr><td><a href="#r194">Flux non enregistré sur le stock tresorerie:cidu4 depuis le jour 187 : 290.47 € par jour.</a><div class="petit">directe (stock en euros)</div></td><td class="petit">0,1 s de calcul<br>aucune action</td><td class="petit">0,2 fausse détection par entreprise en développement ; cause de la fuite inconnue</td><td class="n">51 704 €</td><td class="n">106 023 €</td><td><span class="verd bon">confirmée</span></td></tr><tr><td><a href="#r196">Flux non enregistré sur le stock en-cours:1 depuis le jour 245 : 128.25 € par jour.</a><div class="petit">directe (stock en euros)</div></td><td class="petit">0,1 s de calcul<br>aucune action</td><td class="petit">0,2 fausse détection par entreprise en développement ; cause de la fuite inconnue</td><td class="n">15 390 €</td><td class="n">46 812 €</td><td><span class="verd mauvais">démentie</span></td></tr><tr><td><a href="#r238">Flux non enregistré sur le stock en-cours:2 depuis le jour 328 : 45.44 € par jour.</a><div class="petit">directe (stock en euros)</div></td><td class="petit">0,4 s de calcul<br>aucune action</td><td class="petit">0,2 fausse détection par entreprise en développement ; cause de la fuite inconnue</td><td class="n">1 681 €</td><td class="n">16 585 €</td><td><span class="verd mauvais">démentie</span></td></tr><tr><td><a href="#r249">Flux non enregistré sur le stock objet:manawo8 depuis le jour 178 : 0.02 qte par jour.</a><div class="petit">au prix unitaire médian observé (5.46 € ; de 4.75 à 5.88 €)</div></td><td class="petit">2,1 s de calcul<br>aucune action</td><td class="petit">0,2 fausse détection par entreprise en développement ; cause de la fuite inconnue</td><td class="n">17 €</td><td class="n">33 €</td><td><span class="verd bon">confirmée</span></td></tr><tr><td><a href="#r256">Flux non enregistré sur le stock en-cours:1 depuis le jour 148 : 82.15 € par jour.</a><div class="petit">directe (stock en euros)</div></td><td class="petit">0,1 s de calcul<br>aucune action</td><td class="petit">0,2 fausse détection par entreprise en développement ; cause de la fuite inconnue</td><td class="n">17 826 €</td><td class="n">29 984 €</td><td><span class="verd bon">confirmée</span></td></tr><tr><td><a href="#r270">Flux non enregistré sur le stock tresorerie:qomewu8 depuis le jour 199 : 307.94 € par jour.</a><div class="petit">directe (stock en euros)</div></td><td class="petit">0,4 s de calcul<br>aucune action</td><td class="petit">0,2 fausse détection par entreprise en développement ; cause de la fuite inconnue</td><td class="n">51 119 €</td><td class="n">112 400 €</td><td><span class="verd bon">confirmée</span></td></tr></tbody>
   </table></div>
-  <p class="petit">Total des fuites chiffrées : 368 004 € déjà perdus, 699 600 € par an si elles étaient colmatées. Dépense totale de la page : 175 s de calcul et 91 jours d’essai simulés. Tout cela est simulé : gain réalisé, 0 €.</p>
+  <p class="petit">Total des fuites chiffrées : 368 004 € déjà perdus, 699 600 € par an si elles étaient colmatées. Dépense totale de la page : 189 s de calcul et 91 jours d’essai simulés. Tout cela est simulé : gain réalisé, 0 €.</p>
 </section>
 
 <section>
@@ -183,7 +315,7 @@ code{font:13px var(--mono);background:var(--creux);padding:1px 5px;border-radius
     <path class="f" d="M380 222V262" marker-end="url(#fl)"/><text x="380" y="282" text-anchor="middle" font-size="13">Niveau de certitude courant, recalculé à chaque lecture</text>
   </svg></div>
   <div class="moteurs">
-    <div class="moteur galilee"><h3>GALILÉE</h3><p class="petit donnees">haynbroit-alt/All @ be42b7e · 6 fichiers gelés</p><ul><li>Loi symbolique sur des données fournies</li><li>Verdict propre : établie, empirique, incertaine</li><li class="non">Pas ici — Choix de ses propres expériences : aucun problème commun n’offre de monde qu’il puisse interroger</li></ul></div><div class="moteur cortex"><h3>CORTEX</h3><p class="petit donnees">haynbroit-alt/1 @ 758212a · 12 fichiers gelés</p><ul><li>Modes lents acceptés par pari (deux leviers exactement)</li><li>Sonde « hors de portée », pari sur une formule, plan d’essai sous budget</li><li class="non">Pas ici — Sonde et pari sur des données extérieures : ils ne sont pas exportés hors de ses mondes</li><li class="non">Pas ici — Pilotage d’une activité (v3 à v5) : non branché</li></ul></div><div class="moteur lavoisier"><h3>LAVOISIER</h3><p class="petit donnees">haynbroit-alt/A @ 73618f9 · 15 fichiers gelés</p><ul><li>Bilan de matière : types de flux, stocks, profit, fuites</li><li>Vérité scellée jusqu’à la fin du jugement</li><li class="non">Pas ici — Atlas, jumeau, générateur d’opportunités, gouverneur, registre des paris : non écrits</li><li class="non">Pas ici — Agir sur l’entreprise : son générateur ne se pilote pas</li></ul></div>
+    <div class="moteur galilee"><h3>GALILÉE</h3><p class="petit donnees">haynbroit-alt/All @ be42b7e · 6 fichiers gelés</p><ul><li>Loi symbolique sur des données fournies</li><li>Verdict propre : établie, empirique, incertaine</li><li class="non">Pas ici — Choix de ses propres expériences : aucun problème commun n’offre de monde qu’il puisse interroger</li></ul></div><div class="moteur cortex"><h3>CORTEX</h3><p class="petit donnees">haynbroit-alt/1 @ 758212a · 12 fichiers gelés</p><ul><li>Modes lents acceptés par pari (deux leviers exactement)</li><li>Sonde « hors de portée », pari sur une formule, plan d’essai sous budget</li><li class="non">Pas ici — Sonde et pari sur des données extérieures : ils ne sont pas exportés hors de ses mondes</li><li class="non">Pas ici — Pilotage d’une activité (v3 à v5) : non branché</li></ul></div><div class="moteur lavoisier"><h3>LAVOISIER</h3><p class="petit donnees">haynbroit-alt/A @ a25b206 · 15 fichiers gelés</p><ul><li>Bilan de matière : types de flux, stocks, profit, fuites</li><li>Vérité scellée jusqu’à la fin du jugement</li><li class="non">Pas ici — Atlas, jumeau, générateur d’opportunités, gouverneur, registre des paris : non écrits</li><li class="non">Pas ici — Agir sur l’entreprise : son générateur ne se pilote pas</li></ul></div>
   </div>
 </section>
 
@@ -12205,7 +12337,7 @@ code{font:13px var(--mono);background:var(--creux);padding:1px 5px;border-radius
  &quot;id&quot;: &quot;16e64a69e420da26&quot;
 }</pre></details>
 </article></div></details>
-<details class="pli" id="progres#individuels"><summary>Progrès individuels des moteurs <span class="sur">· 5 actes</span></summary><div class="fil"><article class="acte neutre t-probleme" id="r356" data-qui="neutre">
+<details class="pli" id="progres#individuels"><summary>Progrès individuels des moteurs <span class="sur">· 8 actes</span></summary><div class="fil"><article class="acte neutre t-probleme" id="r356" data-qui="neutre">
   <header><span class="num">n° 356</span><span class="type">Problème</span><span class="qui neutre">registre</span><span class="id">cc37b9e6e566fdde</span></header>
   <p class="fort">Qu’est-ce que chaque moteur a gagné seul, dans son dépôt, mesuré sur son propre banc ?</p><p class="petit">Source : dépôts des moteurs · graine — (jalons)</p>
   <details><summary>Ligne brute du journal</summary><pre>{
@@ -12332,6 +12464,778 @@ code{font:13px var(--mono);background:var(--creux);padding:1px 5px;border-radius
  &quot;portee&quot;: &quot;développement (graines 1 à 200), moteur actuel non modifié&quot;,
  &quot;note&quot;: &quot;l’hypothèse du programme est contredite : le bruit de comptage n’explique pas les constantes ; le module n’est pas écrit&quot;,
  &quot;id&quot;: &quot;539984f80edf0d88&quot;
+}</pre></details>
+</article>
+<article class="acte cortex t-jalon" id="r361" data-qui="cortex">
+  <header><span class="num">n° 361</span><span class="type">Jalon</span><span class="qui cortex">CORTEX</span><span class="commit">783e5b7</span><span class="id">afadda6bb034a5ac</span></header>
+  <p class="fort">C1 — formules de GALILÉE confirmées sous plan actif (P3, test)</p><p><span class="mes">avant : non mesuré (23 % sous plan passif)</span> <span class="mes">après : 37/44 (84 %)</span></p>
+  <details><summary>Ligne brute du journal</summary><pre>{
+ &quot;n&quot;: 361,
+ &quot;precedent&quot;: &quot;539984f80edf0d88&quot;,
+ &quot;date&quot;: &quot;2026-11-14T11:18:09.011Z&quot;,
+ &quot;probleme&quot;: &quot;progres#individuels&quot;,
+ &quot;type&quot;: &quot;jalon&quot;,
+ &quot;auteur&quot;: &quot;CORTEX&quot;,
+ &quot;moteur&quot;: {
+  &quot;nom&quot;: &quot;CORTEX&quot;,
+  &quot;depot&quot;: &quot;haynbroit-alt/1&quot;,
+  &quot;commit&quot;: &quot;783e5b7&quot;
+ },
+ &quot;compte&quot;: &quot;individuel&quot;,
+ &quot;travail&quot;: &quot;C1&quot;,
+ &quot;mesure&quot;: &quot;formules de GALILÉE confirmées sous plan actif (P3, test)&quot;,
+ &quot;avant&quot;: &quot;non mesuré (23 % sous plan passif)&quot;,
+ &quot;apres&quot;: &quot;37/44 (84 %)&quot;,
+ &quot;seuil&quot;: &quot;≥ 50 % et &gt; passif&quot;,
+ &quot;source&quot;: &quot;haynbroit-alt/1 research/v6/RESULTATS_P3.md&quot;,
+ &quot;portee&quot;: &quot;exécution unique, graines 5001 à 5400, prototype gelé f3778b4&quot;,
+ &quot;note&quot;: &quot;différence appariée 61 ± 15 points ; seuls 44 mondes « forme » sur 200 arrivent jusqu’au pari&quot;,
+ &quot;id&quot;: &quot;afadda6bb034a5ac&quot;
+}</pre></details>
+</article>
+<article class="acte cortex t-jalon" id="r362" data-qui="cortex">
+  <header><span class="num">n° 362</span><span class="type">Jalon</span><span class="qui cortex">CORTEX</span><span class="commit">783e5b7</span><span class="id">ce004f081b224c84</span></header>
+  <p class="fort">C1 — fausses confirmations sous plan actif (P3, test)</p><p><span class="mes">avant : non mesuré</span> <span class="mes">après : 4/404 (1 %, borne 3 %)</span></p>
+  <details><summary>Ligne brute du journal</summary><pre>{
+ &quot;n&quot;: 362,
+ &quot;precedent&quot;: &quot;afadda6bb034a5ac&quot;,
+ &quot;date&quot;: &quot;2026-11-14T11:18:09.016Z&quot;,
+ &quot;probleme&quot;: &quot;progres#individuels&quot;,
+ &quot;type&quot;: &quot;jalon&quot;,
+ &quot;auteur&quot;: &quot;CORTEX&quot;,
+ &quot;moteur&quot;: {
+  &quot;nom&quot;: &quot;CORTEX&quot;,
+  &quot;depot&quot;: &quot;haynbroit-alt/1&quot;,
+  &quot;commit&quot;: &quot;783e5b7&quot;
+ },
+ &quot;compte&quot;: &quot;individuel&quot;,
+ &quot;travail&quot;: &quot;C1&quot;,
+ &quot;mesure&quot;: &quot;fausses confirmations sous plan actif (P3, test)&quot;,
+ &quot;avant&quot;: &quot;non mesuré&quot;,
+ &quot;apres&quot;: &quot;4/404 (1 %, borne 3 %)&quot;,
+ &quot;seuil&quot;: &quot;≤ 10 %, borne ≤ 15 %&quot;,
+ &quot;source&quot;: &quot;haynbroit-alt/1 research/v6/RESULTATS_P3.md&quot;,
+ &quot;portee&quot;: &quot;exécution unique, graines 5001 à 5400&quot;,
+ &quot;note&quot;: null,
+ &quot;id&quot;: &quot;ce004f081b224c84&quot;
+}</pre></details>
+</article>
+<article class="acte lavoisier t-jalon" id="r363" data-qui="lavoisier">
+  <header><span class="num">n° 363</span><span class="type">Jalon</span><span class="qui lavoisier">LAVOISIER</span><span class="commit">db9f75a</span><span class="id">c3931522947120b6</span></header>
+  <p class="fort">L1 — FD2 sur la branche principale après fusion</p><p><span class="mes">avant : 0.08</span> <span class="mes">après : 0.09</span></p>
+  <details><summary>Ligne brute du journal</summary><pre>{
+ &quot;n&quot;: 363,
+ &quot;precedent&quot;: &quot;ce004f081b224c84&quot;,
+ &quot;date&quot;: &quot;2026-11-14T11:18:09.017Z&quot;,
+ &quot;probleme&quot;: &quot;progres#individuels&quot;,
+ &quot;type&quot;: &quot;jalon&quot;,
+ &quot;auteur&quot;: &quot;LAVOISIER&quot;,
+ &quot;moteur&quot;: {
+  &quot;nom&quot;: &quot;LAVOISIER&quot;,
+  &quot;depot&quot;: &quot;haynbroit-alt/A&quot;,
+  &quot;commit&quot;: &quot;db9f75a&quot;
+ },
+ &quot;compte&quot;: &quot;individuel&quot;,
+ &quot;travail&quot;: &quot;L1&quot;,
+ &quot;mesure&quot;: &quot;FD2 sur la branche principale après fusion&quot;,
+ &quot;avant&quot;: 0.08,
+ &quot;apres&quot;: 0.09,
+ &quot;seuil&quot;: &quot;≤ 0,10&quot;,
+ &quot;source&quot;: &quot;haynbroit-alt/A bench/DEV_M0_BILAN.md&quot;,
+ &quot;portee&quot;: &quot;développement (graines 1 à 100), après fusion des PR 6 et 7&quot;,
+ &quot;note&quot;: &quot;correction d’un chiffre : 0,08 valait pour la branche seule ; sur données réalistes seules, 0,15&quot;,
+ &quot;id&quot;: &quot;c3931522947120b6&quot;
+}</pre></details>
+</article></div></details>
+<details class="pli" id="opportunites#20261114"><summary>Opportunités de valeur réelle <span class="sur">· 9 actes</span></summary><div class="fil"><article class="acte neutre t-probleme" id="r364" data-qui="neutre">
+  <header><span class="num">n° 364</span><span class="type">Problème</span><span class="qui neutre">registre</span><span class="id">62ae14e538d262af</span></header>
+  <p class="fort">Dans tous les secteurs : quelle opportunité peut être démontrée puis encaissée dans le monde réel, à quel coût de vérification, avec quelle expérience falsifiable et quelles conditions d’abandon ?</p><p class="petit">Source : programme/opportunites-2026-11-14.json · graine — (instruction en dix points)</p>
+  <details><summary>Ligne brute du journal</summary><pre>{
+ &quot;n&quot;: 364,
+ &quot;precedent&quot;: &quot;c3931522947120b6&quot;,
+ &quot;date&quot;: &quot;2026-11-14T11:18:22.464Z&quot;,
+ &quot;probleme&quot;: &quot;opportunites#20261114&quot;,
+ &quot;type&quot;: &quot;probleme&quot;,
+ &quot;cle&quot;: &quot;opportunites#20261114&quot;,
+ &quot;auteur&quot;: &quot;registre&quot;,
+ &quot;titre&quot;: &quot;Opportunités de valeur réelle&quot;,
+ &quot;question&quot;: &quot;Dans tous les secteurs : quelle opportunité peut être démontrée puis encaissée dans le monde réel, à quel coût de vérification, avec quelle expérience falsifiable et quelles conditions d’abandon ?&quot;,
+ &quot;source&quot;: {
+  &quot;generateur&quot;: &quot;programme/opportunites-2026-11-14.json&quot;,
+  &quot;graine&quot;: &quot;—&quot;,
+  &quot;statut&quot;: &quot;instruction en dix points&quot;
+ },
+ &quot;id&quot;: &quot;62ae14e538d262af&quot;
+}</pre></details>
+</article>
+<article class="acte neutre t-opportunite" id="r365" data-qui="neutre">
+  <header><span class="num">n° 365</span><span class="type">Opportunité</span><span class="qui neutre">registre</span><span class="id">57cc112c95c6cb05</span></header>
+  <p class="fort">Boutique existante : la faire vendre ou arrêter sa perte</p><p>Une boutique en ligne réelle, ouverte depuis 111 jours, n’a encaissé aucun euro et continue de coûter son abonnement chaque mois.</p><p><span class="mes">commerce</span> <span class="mes">retenue en premier</span></p>
+  <details><summary>Ligne brute du journal</summary><pre>{
+ &quot;n&quot;: 365,
+ &quot;precedent&quot;: &quot;62ae14e538d262af&quot;,
+ &quot;date&quot;: &quot;2026-11-14T11:18:22.465Z&quot;,
+ &quot;rang&quot;: 1,
+ &quot;secteur&quot;: &quot;commerce&quot;,
+ &quot;statut&quot;: &quot;retenue en premier&quot;,
+ &quot;titre&quot;: &quot;Boutique existante : la faire vendre ou arrêter sa perte&quot;,
+ &quot;description&quot;: &quot;Une boutique en ligne réelle, ouverte depuis 111 jours, n’a encaissé aucun euro et continue de coûter son abonnement chaque mois.&quot;,
+ &quot;connu&quot;: &quot;Relevé réel : aucune vente, 148 visites dont aucune de France, 126 depuis un pays non livré. Boutique ouverte, paiement et livraison configurés. Il existe des canaux d’exposition sans achat de publicité (fiches gratuites des comparateurs, référencement naturel) ; leur état pour cette boutique n’a pas pu être relevé.&quot;,
+ &quot;inconnu&quot;: &quot;Si de vrais visiteurs français achèteraient. Le coût d’achat et la réalité du stock. Le montant de l’abonnement. La conformité légale des fiches. Pourquoi aucun visiteur français n’arrive.&quot;,
+ &quot;decouvrable&quot;: &quot;En quatre semaines et sans dépense nouvelle : si la boutique peut recevoir des visiteurs français, et s’ils ajoutent au panier. Ensuite seulement, avec des ventes : la marge réelle (LAVOISIER), puis l’effet du prix (GALILÉE, CORTEX).&quot;,
+ &quot;faisabilite&quot;: {
+  &quot;base&quot;: &quot;mesuré&quot;,
+  &quot;texte&quot;: &quot;La boutique existe et fonctionne. Trois préalables manquent, que seul le propriétaire peut fournir : coût d’achat et stock réel, conformité des fiches, reconnexion de l’accès à la boutique.&quot;
+ },
+ &quot;cout_verification&quot;: {
+  &quot;base&quot;: &quot;estimé&quot;,
+  &quot;depense_eur&quot;: 0,
+  &quot;texte&quot;: &quot;Aucune dépense nouvelle : quatre semaines d’abonnement déjà engagé (montant non relevé) et le temps de mise en place des canaux gratuits.&quot;
+ },
+ &quot;potentiel&quot;: {
+  &quot;base&quot;: &quot;inconnu&quot;,
+  &quot;texte&quot;: &quot;Inconnu du côté des ventes. Certain du côté de la perte : quelle que soit l’issue, l’expérience finit soit par une première vente, soit par une raison mesurée de fermer et de ne plus payer l’abonnement.&quot;
+ },
+ &quot;essai&quot;: {
+  &quot;hypothese&quot;: &quot;Exposée gratuitement à des acheteurs français pendant 28 jours, la boutique reçoit des visites françaises et au moins un ajout au panier.&quot;,
+  &quot;mesure&quot;: &quot;Visites depuis un pays livré, ajouts au panier, commandes payantes et marge, lus dans la boutique ; rien d’autre ne compte.&quot;,
+  &quot;succes&quot;: &quot;Au moins une commande payante dont la marge, coût d’achat déduit, est positive.&quot;,
+  &quot;duree&quot;: &quot;28 jours à partir de la mise en ligne des canaux gratuits&quot;,
+  &quot;seuils_proposes&quot;: &quot;30 et 150 visites françaises (voir abandon) : ce sont des propositions, à valider avant le début.&quot;
+ },
+ &quot;abandon&quot;: [
+  &quot;Moins de 30 visites françaises en 28 jours : les canaux gratuits ne suffisent pas ; décider alors d’un budget ou de la fermeture.&quot;,
+  &quot;150 visites françaises ou plus et aucun ajout au panier : l’offre ne vend pas ; fermer et arrêter l’abonnement.&quot;,
+  &quot;Stock inexistant, marge négative ou fiche non conforme : arrêt immédiat, avant toute exposition.&quot;
+ ],
+ &quot;valeur&quot;: {
+  &quot;argent_reel_eur&quot;: 0,
+  &quot;nature_de_la_preuve&quot;: &quot;aucune&quot;
+ },
+ &quot;moteurs&quot;: {
+  &quot;LAVOISIER&quot;: &quot;tient le compte réel : abonnement, coût d’achat, marge par commande&quot;,
+  &quot;CORTEX&quot;: &quot;rien avant des ventes ; ensuite, plan d’essai de prix (méthode validée par P3)&quot;,
+  &quot;GALILÉE&quot;: &quot;rien avant des ventes ; ensuite, loi de demande&quot;
+ },
+ &quot;probleme&quot;: &quot;opportunites#20261114&quot;,
+ &quot;type&quot;: &quot;opportunite&quot;,
+ &quot;auteur&quot;: &quot;registre&quot;,
+ &quot;depend_de&quot;: [
+  &quot;8ecf76b33aa10dd6&quot;,
+  &quot;25eda129d1afdff0&quot;
+ ],
+ &quot;id&quot;: &quot;57cc112c95c6cb05&quot;
+}</pre></details>
+</article>
+<article class="acte neutre t-opportunite" id="r366" data-qui="neutre">
+  <header><span class="num">n° 366</span><span class="type">Opportunité</span><span class="qui neutre">registre</span><span class="id">b1b10e2471ebfa29</span></header>
+  <p class="fort">Audit de fuites comptables sur des écritures réelles</p><p>Dans une entreprise, de l’argent disparaît sans être enregistré : remises non saisies, démarque, frais oubliés.</p><p><span class="mes">finance d’entreprise</span> <span class="mes">en attente</span></p>
+  <details><summary>Ligne brute du journal</summary><pre>{
+ &quot;n&quot;: 366,
+ &quot;precedent&quot;: &quot;57cc112c95c6cb05&quot;,
+ &quot;date&quot;: &quot;2026-11-14T11:18:22.465Z&quot;,
+ &quot;rang&quot;: 2,
+ &quot;secteur&quot;: &quot;finance d’entreprise&quot;,
+ &quot;statut&quot;: &quot;en attente&quot;,
+ &quot;titre&quot;: &quot;Audit de fuites comptables sur des écritures réelles&quot;,
+ &quot;description&quot;: &quot;Dans une entreprise, de l’argent disparaît sans être enregistré : remises non saisies, démarque, frais oubliés.&quot;,
+ &quot;connu&quot;: &quot;En simulation, sur 24 entreprises, LAVOISIER retrouve 15 fuites réelles sur 18 signalées et en manque 8. Sur son banc de développement après correction : 80 flux retrouvés sur 95, 0,09 fausse détection par entreprise.&quot;,
+ &quot;inconnu&quot;: &quot;Si de vraies écritures se laissent lire. La fréquence et la taille des fuites dans de vraies entreprises. Ce qu’un client paierait.&quot;,
+ &quot;decouvrable&quot;: &quot;Sur un premier jeu réel : le bilan tourne-t-il, et la fuite qu’il annonce existe-t-elle selon le comptable de l’entreprise ?&quot;,
+ &quot;faisabilite&quot;: {
+  &quot;base&quot;: &quot;estimé&quot;,
+  &quot;texte&quot;: &quot;Le moteur ne lit que le format de son banc. Il faut écrire un lecteur d’écritures réelles (travail L3) et obtenir un jeu de données avec accord écrit.&quot;
+ },
+ &quot;cout_verification&quot;: {
+  &quot;base&quot;: &quot;estimé&quot;,
+  &quot;depense_eur&quot;: 0,
+  &quot;texte&quot;: &quot;Aucune dépense : développement du lecteur et un premier audit gratuit. Il faut trouver une entreprise volontaire.&quot;
+ },
+ &quot;potentiel&quot;: {
+  &quot;base&quot;: &quot;mesuré en simulation&quot;,
+  &quot;texte&quot;: &quot;En simulation : 629 900 € par an de fuites réelles retrouvées sur 24 entreprises fictives, médiane 27 100 €. Rien de cela n’est une recette : le prix d’un audit est inconnu.&quot;
+ },
+ &quot;essai&quot;: {
+  &quot;hypothese&quot;: &quot;Sur les écritures d’une vraie entreprise, le bilan annonce au moins une fuite que son comptable confirme.&quot;,
+  &quot;mesure&quot;: &quot;Chaque fuite annoncée est vérifiée pièce par pièce par le comptable : confirmée, fausse ou déjà connue.&quot;,
+  &quot;succes&quot;: &quot;Au moins une fuite confirmée et inconnue de l’entreprise, sans plus d’une fausse alerte.&quot;,
+  &quot;duree&quot;: &quot;un jeu d’écritures d’un exercice complet&quot;
+ },
+ &quot;abandon&quot;: [
+  &quot;Le lecteur ne parvient pas à représenter les écritures réelles sans connaissance de métier.&quot;,
+  &quot;Sur trois entreprises réelles, aucune fuite confirmée ou plus de fausses alertes que de fuites.&quot;,
+  &quot;Aucune entreprise n’accepte de confier ses écritures.&quot;
+ ],
+ &quot;valeur&quot;: {
+  &quot;argent_reel_eur&quot;: 0,
+  &quot;nature_de_la_preuve&quot;: &quot;simulation&quot;
+ },
+ &quot;moteurs&quot;: {
+  &quot;LAVOISIER&quot;: &quot;bilan de matière et chiffrage&quot;,
+  &quot;CORTEX&quot;: &quot;écarter les fuites apparentes dues à un calendrier ou à un décalage de saisie&quot;,
+  &quot;GALILÉE&quot;: &quot;aucun rôle au départ&quot;
+ },
+ &quot;probleme&quot;: &quot;opportunites#20261114&quot;,
+ &quot;type&quot;: &quot;opportunite&quot;,
+ &quot;auteur&quot;: &quot;registre&quot;,
+ &quot;depend_de&quot;: [
+  &quot;b0e036cf8191e095&quot;,
+  &quot;c3931522947120b6&quot;,
+  &quot;5f770035bbb2f4d9&quot;
+ ],
+ &quot;id&quot;: &quot;b1b10e2471ebfa29&quot;
+}</pre></details>
+</article>
+<article class="acte neutre t-opportunite" id="r367" data-qui="neutre">
+  <header><span class="num">n° 367</span><span class="type">Opportunité</span><span class="qui neutre">registre</span><span class="id">8b76a24849bac636</span></header>
+  <p class="fort">Recalcul de facture d’électricité sous d’autres tarifs</p><p>Un site (foyer, commerce, atelier) paie son électricité selon un tarif et une puissance souscrite choisis une fois, rarement revus.</p><p><span class="mes">énergie</span> <span class="mes">en attente</span></p>
+  <details><summary>Ligne brute du journal</summary><pre>{
+ &quot;n&quot;: 367,
+ &quot;precedent&quot;: &quot;b1b10e2471ebfa29&quot;,
+ &quot;date&quot;: &quot;2026-11-14T11:18:22.465Z&quot;,
+ &quot;rang&quot;: 3,
+ &quot;secteur&quot;: &quot;énergie&quot;,
+ &quot;statut&quot;: &quot;en attente&quot;,
+ &quot;titre&quot;: &quot;Recalcul de facture d’électricité sous d’autres tarifs&quot;,
+ &quot;description&quot;: &quot;Un site (foyer, commerce, atelier) paie son électricité selon un tarif et une puissance souscrite choisis une fois, rarement revus.&quot;,
+ &quot;connu&quot;: &quot;Une facture se recalcule exactement à partir de la courbe de consommation et d’une grille tarifaire : c’est une identité comptable, pas une prévision. Le titulaire d’un compteur peut obtenir sa courbe.&quot;,
+ &quot;inconnu&quot;: &quot;L’écart réel entre tarifs pour un site donné. Si le comportement du site changerait après un changement de tarif. Les grilles en vigueur n’ont pas pu être relevées d’ici.&quot;,
+ &quot;decouvrable&quot;: &quot;Pour un site : le tarif le moins cher sur les douze derniers mois (LAVOISIER, par recalcul exact), la loi de sa consommation selon l’heure et la température (GALILÉE), et ce qui la déplace (CORTEX).&quot;,
+ &quot;faisabilite&quot;: {
+  &quot;base&quot;: &quot;estimé&quot;,
+  &quot;texte&quot;: &quot;Aucune donnée en main. Il faut la courbe de consommation d’un site volontaire et les grilles tarifaires publiques ; l’accès au réseau depuis cet environnement est fermé.&quot;
+ },
+ &quot;cout_verification&quot;: {
+  &quot;base&quot;: &quot;estimé&quot;,
+  &quot;depense_eur&quot;: 0,
+  &quot;texte&quot;: &quot;Aucune dépense : un site volontaire fournit sa courbe et ses douze dernières factures.&quot;
+ },
+ &quot;potentiel&quot;: {
+  &quot;base&quot;: &quot;inconnu&quot;,
+  &quot;texte&quot;: &quot;Inconnu. Il se mesure pour un site en recalculant ses factures passées ; aucun ordre de grandeur n’est avancé ici.&quot;
+ },
+ &quot;essai&quot;: {
+  &quot;hypothese&quot;: &quot;Pour ce site, un autre tarif disponible aurait coûté moins cher sur les douze derniers mois, et coûtera moins cher sur la facture suivante.&quot;,
+  &quot;mesure&quot;: &quot;D’abord le recalcul des factures passées, qui doit retrouver les montants réellement payés ; puis la facture réelle suivant le changement, comparée au recalcul sous l’ancien tarif.&quot;,
+  &quot;succes&quot;: &quot;Le recalcul retrouve les factures payées, et la facture suivante est inférieure à ce que l’ancien tarif aurait coûté.&quot;,
+  &quot;duree&quot;: &quot;douze mois de passé, puis une période de facturation&quot;
+ },
+ &quot;abandon&quot;: [
+  &quot;Le recalcul ne retrouve pas les factures réellement payées : la méthode est fausse pour ce site.&quot;,
+  &quot;Le meilleur autre tarif ne fait pas mieux que le tarif actuel.&quot;,
+  &quot;Aucun site ne fournit sa courbe.&quot;
+ ],
+ &quot;valeur&quot;: {
+  &quot;argent_reel_eur&quot;: 0,
+  &quot;nature_de_la_preuve&quot;: &quot;aucune&quot;
+ },
+ &quot;moteurs&quot;: {
+  &quot;LAVOISIER&quot;: &quot;recalcul exact des factures&quot;,
+  &quot;GALILÉE&quot;: &quot;loi de consommation&quot;,
+  &quot;CORTEX&quot;: &quot;mécanismes et effet d’un changement d’habitude&quot;
+ },
+ &quot;probleme&quot;: &quot;opportunites#20261114&quot;,
+ &quot;type&quot;: &quot;opportunite&quot;,
+ &quot;auteur&quot;: &quot;registre&quot;,
+ &quot;depend_de&quot;: [],
+ &quot;id&quot;: &quot;8b76a24849bac636&quot;
+}</pre></details>
+</article>
+<article class="acte neutre t-opportunite" id="r368" data-qui="neutre">
+  <header><span class="num">n° 368</span><span class="type">Opportunité</span><span class="qui neutre">registre</span><span class="id">b48a3c705ca2de08</span></header>
+  <p class="fort">Essais de prix à garantie statistique</p><p>Un commerçant change ses prix sans savoir ce que le changement rapporte vraiment.</p><p><span class="mes">commerce</span> <span class="mes">en attente</span></p>
+  <details><summary>Ligne brute du journal</summary><pre>{
+ &quot;n&quot;: 368,
+ &quot;precedent&quot;: &quot;8b76a24849bac636&quot;,
+ &quot;date&quot;: &quot;2026-11-14T11:18:22.466Z&quot;,
+ &quot;rang&quot;: 4,
+ &quot;secteur&quot;: &quot;commerce&quot;,
+ &quot;statut&quot;: &quot;en attente&quot;,
+ &quot;titre&quot;: &quot;Essais de prix à garantie statistique&quot;,
+ &quot;description&quot;: &quot;Un commerçant change ses prix sans savoir ce que le changement rapporte vraiment.&quot;,
+ &quot;connu&quot;: &quot;Test unique de CORTEX P3 : sous un plan d’essai conçu, 37 lois de GALILÉE sur 44 gagnent leur pari, contre 23 % sans plan, avec 4 fausses confirmations sur 404. Sur comptages, GALILÉE retrouve 105 lois de demande détectables sur 133.&quot;,
+ &quot;inconnu&quot;: &quot;Si la méthode tient sur de vraies ventes, où le prix n’est qu’un levier parmi d’autres et où un essai coûte du chiffre d’affaires. Aucun euro n’a été mesuré.&quot;,
+ &quot;decouvrable&quot;: &quot;Sur un commerce réel avec des ventes régulières : une loi de demande démontrée, et le prix qui maximise la marge.&quot;,
+ &quot;faisabilite&quot;: {
+  &quot;base&quot;: &quot;mesuré en simulation&quot;,
+  &quot;texte&quot;: &quot;La chaîne fonctionne dans les mondes de CORTEX. Deux manques : son pari n’est pas exporté pour des données extérieures (travail C2), et il faut un commerce qui vend.&quot;
+ },
+ &quot;cout_verification&quot;: {
+  &quot;base&quot;: &quot;inconnu&quot;,
+  &quot;depense_eur&quot;: 0,
+  &quot;texte&quot;: &quot;Pas de dépense directe, mais un essai de prix déplace des ventes : son coût dépend du commerce et n’est pas chiffrable sans lui.&quot;
+ },
+ &quot;potentiel&quot;: {
+  &quot;base&quot;: &quot;inconnu&quot;,
+  &quot;texte&quot;: &quot;Inconnu : la simulation ne contient pas d’euros.&quot;
+ },
+ &quot;essai&quot;: {
+  &quot;hypothese&quot;: &quot;Sur un article, la loi de demande proposée gagne son pari pendant un essai où le prix varie selon un plan fixé d’avance.&quot;,
+  &quot;mesure&quot;: &quot;Pari sur les ventes de l’essai, puis marge comptable de l’article au prix retenu contre l’ancien prix, par périodes alternées.&quot;,
+  &quot;succes&quot;: &quot;Pari gagné, et marge supérieure à l’ancien prix sur les périodes alternées.&quot;,
+  &quot;duree&quot;: &quot;à fixer selon le volume de ventes&quot;
+ },
+ &quot;abandon&quot;: [
+  &quot;Le commerce vend trop peu pour qu’un pari puisse conclure dans la durée fixée.&quot;,
+  &quot;Le pari n’est pas gagné, ou la marge ne dépasse pas celle de l’ancien prix.&quot;,
+  &quot;La perte de ventes pendant l’essai dépasse le plafond fixé avant de commencer.&quot;
+ ],
+ &quot;valeur&quot;: {
+  &quot;argent_reel_eur&quot;: 0,
+  &quot;nature_de_la_preuve&quot;: &quot;simulation&quot;
+ },
+ &quot;moteurs&quot;: {
+  &quot;GALILÉE&quot;: &quot;loi de demande&quot;,
+  &quot;CORTEX&quot;: &quot;plan d’essai, pari, élimination des faux effets&quot;,
+  &quot;LAVOISIER&quot;: &quot;marge réelle&quot;
+ },
+ &quot;probleme&quot;: &quot;opportunites#20261114&quot;,
+ &quot;type&quot;: &quot;opportunite&quot;,
+ &quot;auteur&quot;: &quot;registre&quot;,
+ &quot;depend_de&quot;: [
+  &quot;afadda6bb034a5ac&quot;,
+  &quot;ce004f081b224c84&quot;,
+  &quot;539984f80edf0d88&quot;
+ ],
+ &quot;id&quot;: &quot;b48a3c705ca2de08&quot;
+}</pre></details>
+</article>
+<article class="acte neutre t-opportunite" id="r369" data-qui="neutre">
+  <header><span class="num">n° 369</span><span class="type">Opportunité</span><span class="qui neutre">registre</span><span class="id">35b272fa905eff06</span></header>
+  <p class="fort">Audit de factures de services en ligne</p><p>Une entreprise paie des abonnements et des ressources informatiques qu’elle n’utilise plus.</p><p><span class="mes">informatique</span> <span class="mes">en attente</span></p>
+  <details><summary>Ligne brute du journal</summary><pre>{
+ &quot;n&quot;: 369,
+ &quot;precedent&quot;: &quot;b48a3c705ca2de08&quot;,
+ &quot;date&quot;: &quot;2026-11-14T11:18:22.466Z&quot;,
+ &quot;rang&quot;: 5,
+ &quot;secteur&quot;: &quot;informatique&quot;,
+ &quot;statut&quot;: &quot;en attente&quot;,
+ &quot;titre&quot;: &quot;Audit de factures de services en ligne&quot;,
+ &quot;description&quot;: &quot;Une entreprise paie des abonnements et des ressources informatiques qu’elle n’utilise plus.&quot;,
+ &quot;connu&quot;: &quot;Le principe est celui du bilan de matière : ce qui est facturé doit correspondre à ce qui est utilisé. Aucun essai n’a été fait.&quot;,
+ &quot;inconnu&quot;: &quot;Si le bilan s’applique à des relevés d’usage. La part réellement inutilisée chez un client donné.&quot;,
+ &quot;decouvrable&quot;: &quot;Pour un client : la liste des lignes facturées sans usage correspondant.&quot;,
+ &quot;faisabilite&quot;: {
+  &quot;base&quot;: &quot;estimé&quot;,
+  &quot;texte&quot;: &quot;Demande un lecteur pour les exports de facturation et d’usage, et un client volontaire. Rien n’existe.&quot;
+ },
+ &quot;cout_verification&quot;: {
+  &quot;base&quot;: &quot;estimé&quot;,
+  &quot;depense_eur&quot;: 0,
+  &quot;texte&quot;: &quot;Aucune dépense : un export de facturation et d’usage d’un client volontaire.&quot;
+ },
+ &quot;potentiel&quot;: {
+  &quot;base&quot;: &quot;inconnu&quot;,
+  &quot;texte&quot;: &quot;Inconnu.&quot;
+ },
+ &quot;essai&quot;: {
+  &quot;hypothese&quot;: &quot;Le bilan désigne au moins une ligne facturée sans usage, que le client confirme pouvoir résilier.&quot;,
+  &quot;mesure&quot;: &quot;Chaque ligne désignée est confirmée ou non par le client ; l’économie est lue sur la facture suivante.&quot;,
+  &quot;succes&quot;: &quot;Au moins une résiliation effective, visible sur la facture suivante.&quot;,
+  &quot;duree&quot;: &quot;un trimestre de factures&quot;
+ },
+ &quot;abandon&quot;: [
+  &quot;Aucun client ne fournit ses exports.&quot;,
+  &quot;Les lignes désignées sont toutes utiles ou déjà connues.&quot;
+ ],
+ &quot;valeur&quot;: {
+  &quot;argent_reel_eur&quot;: 0,
+  &quot;nature_de_la_preuve&quot;: &quot;aucune&quot;
+ },
+ &quot;moteurs&quot;: {
+  &quot;LAVOISIER&quot;: &quot;rapprochement facturé / utilisé&quot;,
+  &quot;CORTEX&quot;: &quot;distinguer une ressource dormante d’un usage saisonnier&quot;,
+  &quot;GALILÉE&quot;: &quot;aucun rôle au départ&quot;
+ },
+ &quot;probleme&quot;: &quot;opportunites#20261114&quot;,
+ &quot;type&quot;: &quot;opportunite&quot;,
+ &quot;auteur&quot;: &quot;registre&quot;,
+ &quot;depend_de&quot;: [],
+ &quot;id&quot;: &quot;35b272fa905eff06&quot;
+}</pre></details>
+</article>
+<article class="acte neutre t-opportunite" id="r370" data-qui="neutre">
+  <header><span class="num">n° 370</span><span class="type">Opportunité</span><span class="qui neutre">registre</span><span class="id">92f64f549b0ea51c</span></header>
+  <p class="fort">Frais d’expédition de la boutique</p><p>Les frais de port facturés au client et payés au transporteur peuvent ne pas se couvrir.</p><p><span class="mes">logistique</span> <span class="mes">en attente</span></p>
+  <details><summary>Ligne brute du journal</summary><pre>{
+ &quot;n&quot;: 370,
+ &quot;precedent&quot;: &quot;35b272fa905eff06&quot;,
+ &quot;date&quot;: &quot;2026-11-14T11:18:22.466Z&quot;,
+ &quot;rang&quot;: 6,
+ &quot;secteur&quot;: &quot;logistique&quot;,
+ &quot;statut&quot;: &quot;en attente&quot;,
+ &quot;titre&quot;: &quot;Frais d’expédition de la boutique&quot;,
+ &quot;description&quot;: &quot;Les frais de port facturés au client et payés au transporteur peuvent ne pas se couvrir.&quot;,
+ &quot;connu&quot;: &quot;La boutique a quatre modes de livraison configurés et livre 33 pays. Elle n’a expédié aucune commande payante.&quot;,
+ &quot;inconnu&quot;: &quot;Tout : il n’y a aucune expédition à analyser.&quot;,
+ &quot;decouvrable&quot;: &quot;Rien avant les premières commandes ; ensuite, l’écart entre port facturé et port payé, commande par commande.&quot;,
+ &quot;faisabilite&quot;: {
+  &quot;base&quot;: &quot;mesuré&quot;,
+  &quot;texte&quot;: &quot;Impossible aujourd’hui : aucune commande. Dépend de l’opportunité 1.&quot;
+ },
+ &quot;cout_verification&quot;: {
+  &quot;base&quot;: &quot;estimé&quot;,
+  &quot;depense_eur&quot;: 0,
+  &quot;texte&quot;: &quot;Aucune dépense ; se fait sur les premières commandes réelles.&quot;
+ },
+ &quot;potentiel&quot;: {
+  &quot;base&quot;: &quot;inconnu&quot;,
+  &quot;texte&quot;: &quot;Inconnu.&quot;
+ },
+ &quot;essai&quot;: {
+  &quot;hypothese&quot;: &quot;Sur les vingt premières commandes, le port facturé couvre le port payé.&quot;,
+  &quot;mesure&quot;: &quot;Port facturé et port payé, lus sur les commandes et les factures du transporteur.&quot;,
+  &quot;succes&quot;: &quot;Écart cumulé positif ou nul.&quot;,
+  &quot;duree&quot;: &quot;vingt commandes&quot;
+ },
+ &quot;abandon&quot;: [
+  &quot;La boutique ferme avant d’avoir expédié vingt commandes.&quot;
+ ],
+ &quot;valeur&quot;: {
+  &quot;argent_reel_eur&quot;: 0,
+  &quot;nature_de_la_preuve&quot;: &quot;aucune&quot;
+ },
+ &quot;moteurs&quot;: {
+  &quot;LAVOISIER&quot;: &quot;rapprochement commande / transporteur&quot;,
+  &quot;CORTEX&quot;: &quot;aucun rôle au départ&quot;,
+  &quot;GALILÉE&quot;: &quot;aucun rôle au départ&quot;
+ },
+ &quot;probleme&quot;: &quot;opportunites#20261114&quot;,
+ &quot;type&quot;: &quot;opportunite&quot;,
+ &quot;auteur&quot;: &quot;registre&quot;,
+ &quot;depend_de&quot;: [
+  &quot;8ecf76b33aa10dd6&quot;
+ ],
+ &quot;id&quot;: &quot;92f64f549b0ea51c&quot;
+}</pre></details>
+</article>
+<article class="acte neutre t-opportunite" id="r371" data-qui="neutre">
+  <header><span class="num">n° 371</span><span class="type">Opportunité</span><span class="qui neutre">registre</span><span class="id">acd5b0186943a84a</span></header>
+  <p class="fort">Maintenance, rendement, irrigation</p><p>Des réglages et des calendriers (entretien d’une machine, arrosage, récolte) sont fixés par habitude.</p><p><span class="mes">industrie et agriculture</span> <span class="mes">non instruisible</span></p>
+  <details><summary>Ligne brute du journal</summary><pre>{
+ &quot;n&quot;: 371,
+ &quot;precedent&quot;: &quot;92f64f549b0ea51c&quot;,
+ &quot;date&quot;: &quot;2026-11-14T11:18:22.466Z&quot;,
+ &quot;rang&quot;: 7,
+ &quot;secteur&quot;: &quot;industrie et agriculture&quot;,
+ &quot;statut&quot;: &quot;non instruisible&quot;,
+ &quot;titre&quot;: &quot;Maintenance, rendement, irrigation&quot;,
+ &quot;description&quot;: &quot;Des réglages et des calendriers (entretien d’une machine, arrosage, récolte) sont fixés par habitude.&quot;,
+ &quot;connu&quot;: &quot;En simulation, CORTEX v4 a trouvé seul un calendrier d’entretien proche de l’optimum, et a échoué sur une serre arrosée cinq jours par an. Ce sont des mondes simulés.&quot;,
+ &quot;inconnu&quot;: &quot;Tout ce qui concerne un site réel : nous n’avons accès à aucune machine, aucune parcelle, aucune mesure.&quot;,
+ &quot;decouvrable&quot;: &quot;Rien sans un site et ses mesures.&quot;,
+ &quot;faisabilite&quot;: {
+  &quot;base&quot;: &quot;mesuré&quot;,
+  &quot;texte&quot;: &quot;Non instruisible aujourd’hui : aucune donnée, aucun partenaire, aucun moyen d’agir sur un site.&quot;
+ },
+ &quot;cout_verification&quot;: {
+  &quot;base&quot;: &quot;inconnu&quot;,
+  &quot;depense_eur&quot;: 0,
+  &quot;texte&quot;: &quot;Non chiffrable sans site.&quot;
+ },
+ &quot;potentiel&quot;: {
+  &quot;base&quot;: &quot;inconnu&quot;,
+  &quot;texte&quot;: &quot;Inconnu.&quot;
+ },
+ &quot;essai&quot;: {
+  &quot;hypothese&quot;: &quot;Sur un site réel, un calendrier proposé fait mieux que l’habitude sur une période témoin.&quot;,
+  &quot;mesure&quot;: &quot;La mesure comptable du site (coût d’arrêt, rendement), par périodes alternées.&quot;,
+  &quot;succes&quot;: &quot;Mieux que l’habitude, au seuil fixé avec le site.&quot;,
+  &quot;duree&quot;: &quot;à fixer avec le site&quot;
+ },
+ &quot;abandon&quot;: [
+  &quot;Aucun site partenaire dans un délai à fixer : l’opportunité reste fermée.&quot;
+ ],
+ &quot;valeur&quot;: {
+  &quot;argent_reel_eur&quot;: 0,
+  &quot;nature_de_la_preuve&quot;: &quot;simulation&quot;
+ },
+ &quot;moteurs&quot;: {
+  &quot;CORTEX&quot;: &quot;mécanismes et calendrier&quot;,
+  &quot;GALILÉE&quot;: &quot;lois de rendement&quot;,
+  &quot;LAVOISIER&quot;: &quot;coût et gain réels&quot;
+ },
+ &quot;probleme&quot;: &quot;opportunites#20261114&quot;,
+ &quot;type&quot;: &quot;opportunite&quot;,
+ &quot;auteur&quot;: &quot;registre&quot;,
+ &quot;depend_de&quot;: [],
+ &quot;id&quot;: &quot;acd5b0186943a84a&quot;
+}</pre></details>
+</article>
+<article class="acte neutre t-opportunite" id="r372" data-qui="neutre">
+  <header><span class="num">n° 372</span><span class="type">Opportunité</span><span class="qui neutre">registre</span><span class="id">f3ba7196e08189e4</span></header>
+  <p class="fort">Chercher des lois dans les cours pour en tirer profit</p><p>Tenter de prédire des prix de marché avec les lois de GALILÉE ou les mécanismes de CORTEX.</p><p><span class="mes">finance de marché</span> <span class="mes">écartée</span></p>
+  <details><summary>Ligne brute du journal</summary><pre>{
+ &quot;n&quot;: 372,
+ &quot;precedent&quot;: &quot;acd5b0186943a84a&quot;,
+ &quot;date&quot;: &quot;2026-11-14T11:18:22.466Z&quot;,
+ &quot;rang&quot;: 8,
+ &quot;secteur&quot;: &quot;finance de marché&quot;,
+ &quot;statut&quot;: &quot;écartée&quot;,
+ &quot;titre&quot;: &quot;Chercher des lois dans les cours pour en tirer profit&quot;,
+ &quot;description&quot;: &quot;Tenter de prédire des prix de marché avec les lois de GALILÉE ou les mécanismes de CORTEX.&quot;,
+ &quot;connu&quot;: &quot;Les garanties de CORTEX supposent des leviers exogènes et un monde qui ne réagit pas à l’observateur ; un marché viole les deux. La moindre régularité publique y est déjà exploitée par des acteurs mieux équipés.&quot;,
+ &quot;inconnu&quot;: &quot;S’il existe une régularité exploitable par ces moteurs : rien ne le suggère.&quot;,
+ &quot;decouvrable&quot;: &quot;Des régularités passées, sans garantie qu’elles durent.&quot;,
+ &quot;faisabilite&quot;: {
+  &quot;base&quot;: &quot;estimé&quot;,
+  &quot;texte&quot;: &quot;Techniquement faisable sur des cours historiques, mais la vérification exige d’engager de l’argent réel sur un pari sans garantie.&quot;
+ },
+ &quot;cout_verification&quot;: {
+  &quot;base&quot;: &quot;estimé&quot;,
+  &quot;depense_eur&quot;: 0,
+  &quot;texte&quot;: &quot;Une vérification sérieuse suppose un capital exposé à la perte : hors du cadre « aucune dépense sans autorisation ».&quot;
+ },
+ &quot;potentiel&quot;: {
+  &quot;base&quot;: &quot;inconnu&quot;,
+  &quot;texte&quot;: &quot;Inconnu, avec un risque de perte certain dans son principe.&quot;
+ },
+ &quot;essai&quot;: {
+  &quot;hypothese&quot;: &quot;Une loi trouvée sur le passé prédit le sens du cours suivant mieux que le hasard, sur une période jamais vue.&quot;,
+  &quot;mesure&quot;: &quot;Prévisions enregistrées avant les faits, sans argent engagé.&quot;,
+  &quot;succes&quot;: &quot;Mieux que le hasard, au seuil d’un pari fixé d’avance.&quot;,
+  &quot;duree&quot;: &quot;non lancée&quot;
+ },
+ &quot;abandon&quot;: [
+  &quot;Écartée d’emblée : les garanties des moteurs ne tiennent pas dans un monde qui réagit, et la vérification demande d’exposer un capital.&quot;
+ ],
+ &quot;valeur&quot;: {
+  &quot;argent_reel_eur&quot;: 0,
+  &quot;nature_de_la_preuve&quot;: &quot;aucune&quot;
+ },
+ &quot;moteurs&quot;: {
+  &quot;GALILÉE&quot;: &quot;non engagé&quot;,
+  &quot;CORTEX&quot;: &quot;non engagé&quot;,
+  &quot;LAVOISIER&quot;: &quot;non engagé&quot;
+ },
+ &quot;probleme&quot;: &quot;opportunites#20261114&quot;,
+ &quot;type&quot;: &quot;opportunite&quot;,
+ &quot;auteur&quot;: &quot;registre&quot;,
+ &quot;depend_de&quot;: [],
+ &quot;id&quot;: &quot;f3ba7196e08189e4&quot;
+}</pre></details>
+</article></div></details>
+<details class="pli" id="gardien#1"><summary>Gardien : ressources consommées et évitées <span class="sur">· 4 actes</span></summary><div class="fil"><article class="acte neutre t-probleme" id="r373" data-qui="neutre">
+  <header><span class="num">n° 373</span><span class="type">Problème</span><span class="qui neutre">registre</span><span class="id">344573004a7b5ef9</span></header>
+  <p class="fort">Chaque mission vaut-elle ce qu’elle coûte, et lesquelles n’avaient pas besoin d’être lancées ?</p><p class="petit">Source : src/gardien.js · graine — (journal des ressources)</p>
+  <details><summary>Ligne brute du journal</summary><pre>{
+ &quot;n&quot;: 373,
+ &quot;precedent&quot;: &quot;f3ba7196e08189e4&quot;,
+ &quot;date&quot;: &quot;2026-11-14T11:21:19.362Z&quot;,
+ &quot;probleme&quot;: &quot;gardien#1&quot;,
+ &quot;type&quot;: &quot;probleme&quot;,
+ &quot;cle&quot;: &quot;gardien#1&quot;,
+ &quot;auteur&quot;: &quot;registre&quot;,
+ &quot;titre&quot;: &quot;Gardien : ressources consommées et évitées&quot;,
+ &quot;question&quot;: &quot;Chaque mission vaut-elle ce qu’elle coûte, et lesquelles n’avaient pas besoin d’être lancées ?&quot;,
+ &quot;source&quot;: {
+  &quot;generateur&quot;: &quot;src/gardien.js&quot;,
+  &quot;graine&quot;: &quot;—&quot;,
+  &quot;statut&quot;: &quot;journal des ressources&quot;
+ },
+ &quot;id&quot;: &quot;344573004a7b5ef9&quot;
+}</pre></details>
+</article>
+<article class="acte neutre t-garde" id="r374" data-qui="neutre">
+  <header><span class="num">n° 374</span><span class="type">Garde</span><span class="qui neutre">registre</span><span class="id">9ff3b1e4b122bba1</span></header>
+  <p><span class="mes">remise à zéro</span> <span class="mes">mode économique</span></p>
+  <details><summary>Ligne brute du journal</summary><pre>{
+ &quot;n&quot;: 374,
+ &quot;precedent&quot;: &quot;344573004a7b5ef9&quot;,
+ &quot;date&quot;: &quot;2026-11-14T11:21:19.363Z&quot;,
+ &quot;probleme&quot;: &quot;gardien#1&quot;,
+ &quot;type&quot;: &quot;garde&quot;,
+ &quot;auteur&quot;: &quot;registre&quot;,
+ &quot;decision&quot;: &quot;remise à zéro&quot;,
+ &quot;mode&quot;: &quot;économique&quot;,
+ &quot;ia&quot;: {
+  &quot;mesurable&quot;: true,
+  &quot;fichiers&quot;: 1,
+  &quot;appels&quot;: 287,
+  &quot;tokens_entree&quot;: 576,
+  &quot;tokens_sortie&quot;: 552340,
+  &quot;tokens_cache_ecrits&quot;: 5465934,
+  &quot;tokens_cache_lus&quot;: 123860610
+ },
+ &quot;reference&quot;: true,
+ &quot;id&quot;: &quot;9ff3b1e4b122bba1&quot;
+}</pre></details>
+</article>
+<article class="acte neutre t-garde" id="r375" data-qui="neutre">
+  <header><span class="num">n° 375</span><span class="type">Garde</span><span class="qui neutre">registre</span><span class="id">a51fe03d6c4a3ff9</span></header>
+  <p><span class="mes">évitée</span> <span class="mes">mode économique</span> forme-manquante#5</p><p class="petit">déjà au registre (forme-manquante#5) : le résultat existe, il se relit au lieu de se refaire</p>
+  <details><summary>Ligne brute du journal</summary><pre>{
+ &quot;n&quot;: 375,
+ &quot;precedent&quot;: &quot;9ff3b1e4b122bba1&quot;,
+ &quot;date&quot;: &quot;2026-11-14T11:21:19.455Z&quot;,
+ &quot;probleme&quot;: &quot;gardien#1&quot;,
+ &quot;type&quot;: &quot;garde&quot;,
+ &quot;auteur&quot;: &quot;registre&quot;,
+ &quot;decision&quot;: &quot;évitée&quot;,
+ &quot;mission&quot;: {
+  &quot;nom&quot;: &quot;forme-manquante&quot;,
+  &quot;cle&quot;: &quot;forme-manquante#5&quot;,
+  &quot;arguments&quot;: [
+   &quot;--graine&quot;,
+   &quot;5&quot;
+  ]
+ },
+ &quot;mode&quot;: &quot;économique&quot;,
+ &quot;raison&quot;: &quot;déjà au registre (forme-manquante#5) : le résultat existe, il se relit au lieu de se refaire&quot;,
+ &quot;estimation&quot;: {
+  &quot;calcul_s&quot;: null,
+  &quot;base&quot;: &quot;inconnu&quot;,
+  &quot;sur&quot;: 0
+ },
+ &quot;economie&quot;: {
+  &quot;calcul_s&quot;: null,
+  &quot;base&quot;: &quot;inconnu&quot;,
+  &quot;tokens&quot;: null,
+  &quot;note&quot;: &quot;tokens évités : non mesurable&quot;
+ },
+ &quot;id&quot;: &quot;a51fe03d6c4a3ff9&quot;
+}</pre></details>
+</article>
+<article class="acte neutre t-garde" id="r379" data-qui="neutre">
+  <header><span class="num">n° 379</span><span class="type">Garde</span><span class="qui neutre">registre</span><span class="id">08300a3573914a88</span></header>
+  <p><span class="mes">lancée</span> <span class="mes">mode économique</span> forme-manquante#25</p><p class="petit">coût inconnu : première mission de ce type, plafonnée par le mode</p><p class="petit donnees">14,4 s · 1 acte(s) de progrès</p>
+  <details><summary>Ligne brute du journal</summary><pre>{
+ &quot;n&quot;: 379,
+ &quot;precedent&quot;: &quot;c820938d7629da3f&quot;,
+ &quot;date&quot;: &quot;2026-11-14T11:21:33.944Z&quot;,
+ &quot;probleme&quot;: &quot;gardien#1&quot;,
+ &quot;type&quot;: &quot;garde&quot;,
+ &quot;auteur&quot;: &quot;registre&quot;,
+ &quot;decision&quot;: &quot;lancée&quot;,
+ &quot;mission&quot;: {
+  &quot;nom&quot;: &quot;forme-manquante&quot;,
+  &quot;cle&quot;: &quot;forme-manquante#25&quot;,
+  &quot;arguments&quot;: [
+   &quot;--graine&quot;,
+   &quot;25&quot;
+  ]
+ },
+ &quot;mode&quot;: &quot;économique&quot;,
+ &quot;raison&quot;: &quot;coût inconnu : première mission de ce type, plafonnée par le mode&quot;,
+ &quot;estimation&quot;: {
+  &quot;calcul_s&quot;: null,
+  &quot;base&quot;: &quot;inconnu&quot;,
+  &quot;sur&quot;: 0
+ },
+ &quot;reel&quot;: {
+  &quot;calcul_s&quot;: 14.4,
+  &quot;actes&quot;: 3,
+  &quot;progres&quot;: 1
+ },
+ &quot;id&quot;: &quot;08300a3573914a88&quot;
+}</pre></details>
+</article></div></details>
+<details class="pli" id="forme-manquante#25"><summary>Forme manquante (monde 25) <span class="sur">· 3 actes</span></summary><div class="fil"><article class="acte neutre t-probleme" id="r376" data-qui="neutre">
+  <header><span class="num">n° 376</span><span class="type">Problème</span><span class="qui neutre">registre</span><span class="id">37a8f4e1517ccc64</span></header>
+  <p class="fort">Trois mesures quotidiennes, deux leviers, 365 jours. Le modèle de CORTEX suffit-il ? Sinon, quelle loi manque, et peut-on la démontrer ?</p><p class="petit">Source : CORTEX research/v6/p2.js, makeWorld2 · graine 25 (graine de développement)</p>
+  <details><summary>Ligne brute du journal</summary><pre>{
+ &quot;n&quot;: 376,
+ &quot;precedent&quot;: &quot;a51fe03d6c4a3ff9&quot;,
+ &quot;date&quot;: &quot;2026-11-14T11:21:19.629Z&quot;,
+ &quot;probleme&quot;: &quot;forme-manquante#25&quot;,
+ &quot;type&quot;: &quot;probleme&quot;,
+ &quot;cle&quot;: &quot;forme-manquante#25&quot;,
+ &quot;auteur&quot;: &quot;registre&quot;,
+ &quot;titre&quot;: &quot;Forme manquante (monde 25)&quot;,
+ &quot;question&quot;: &quot;Trois mesures quotidiennes, deux leviers, 365 jours. Le modèle de CORTEX suffit-il ? Sinon, quelle loi manque, et peut-on la démontrer ?&quot;,
+ &quot;source&quot;: {
+  &quot;generateur&quot;: &quot;CORTEX research/v6/p2.js, makeWorld2&quot;,
+  &quot;graine&quot;: 25,
+  &quot;classe&quot;: &quot;forme&quot;,
+  &quot;statut&quot;: &quot;graine de développement&quot;
+ },
+ &quot;roles&quot;: {
+  &quot;CORTEX&quot;: &quot;sonde, pari, plan d’expériences&quot;,
+  &quot;GALILÉE&quot;: &quot;forme de l’écart&quot;,
+  &quot;LAVOISIER&quot;: &quot;aucun (pas de comptabilité)&quot;
+ },
+ &quot;id&quot;: &quot;37a8f4e1517ccc64&quot;
+}</pre></details>
+</article>
+<article class="acte cortex t-affirmation" id="r377" data-qui="cortex">
+  <header><span class="num">n° 377</span><span class="type">Affirmation</span><span class="qui cortex">CORTEX</span><span class="commit">758212a</span><span class="id">0aacf080ebbb65c6</span></header>
+  <p class="fort">La mesure 1 contient une structure prévisible que mon modèle n’exprime pas, de la famille « forme » (fonction non linéaire des leviers).</p><p><span class="niv n1">hors de portée à l’entrée</span>  <span class="mes">log E (pari invariant) = 7,83 <span class="sur">seuil 3,4</span></span></p><p class="petit">Garantie : existence garantie au risque α = 0.1 sur les trois mesures ; la famille est une attribution, non garantie</p><p class="petit">Obtenue par : modes cachés ajustés sur les jours 0–149, sonde par pari invariant sur les jours 28–271 · 14,3 s de calcul</p>
+  <details><summary>Ligne brute du journal</summary><pre>{
+ &quot;n&quot;: 377,
+ &quot;precedent&quot;: &quot;37a8f4e1517ccc64&quot;,
+ &quot;date&quot;: &quot;2026-11-14T11:21:33.917Z&quot;,
+ &quot;probleme&quot;: &quot;forme-manquante#25&quot;,
+ &quot;type&quot;: &quot;affirmation&quot;,
+ &quot;auteur&quot;: &quot;CORTEX&quot;,
+ &quot;moteur&quot;: {
+  &quot;nom&quot;: &quot;CORTEX&quot;,
+  &quot;depot&quot;: &quot;haynbroit-alt/1&quot;,
+  &quot;commit&quot;: &quot;758212a&quot;
+ },
+ &quot;sujet&quot;: &quot;mesure 1 : structure manquante&quot;,
+ &quot;enonce&quot;: &quot;La mesure 1 contient une structure prévisible que mon modèle n’exprime pas, de la famille « forme » (fonction non linéaire des leviers).&quot;,
+ &quot;certitude&quot;: {
+  &quot;niveau&quot;: &quot;hors de portée&quot;,
+  &quot;mesure&quot;: {
+   &quot;nom&quot;: &quot;log E (pari invariant)&quot;,
+   &quot;valeur&quot;: 7.83,
+   &quot;seuil&quot;: 3.4
+  },
+  &quot;garantie&quot;: &quot;existence garantie au risque α = 0.1 sur les trois mesures ; la famille est une attribution, non garantie&quot;
+ },
+ &quot;contenu&quot;: {
+  &quot;diagnostics&quot;: [
+   {
+    &quot;mesure&quot;: 0,
+    &quot;diagnostic&quot;: &quot;compris&quot;,
+    &quot;famille&quot;: &quot;mode&quot;,
+    &quot;logE&quot;: -4.21
+   },
+   {
+    &quot;mesure&quot;: 1,
+    &quot;diagnostic&quot;: &quot;hors de portée&quot;,
+    &quot;famille&quot;: &quot;forme&quot;,
+    &quot;logE&quot;: 7.83
+   },
+   {
+    &quot;mesure&quot;: 2,
+    &quot;diagnostic&quot;: &quot;compris&quot;,
+    &quot;famille&quot;: &quot;mode&quot;,
+    &quot;logE&quot;: -4.14
+   }
+  ]
+ },
+ &quot;preuve&quot;: {
+  &quot;methode&quot;: &quot;modes cachés ajustés sur les jours 0–149, sonde par pari invariant sur les jours 28–271&quot;,
+  &quot;reproduire&quot;: &quot;node bin/commun.js executer forme-manquante --graine 25&quot;
+ },
+ &quot;cout&quot;: {
+  &quot;calcul_s&quot;: 14.3,
+  &quot;experiences&quot;: 0
+ },
+ &quot;id&quot;: &quot;0aacf080ebbb65c6&quot;
+}</pre></details>
+</article>
+<article class="acte galilee t-aveu" id="r378" data-qui="galilee">
+  <header><span class="num">n° 378</span><span class="type">Aveu</span><span class="qui galilee">GALILÉE</span><span class="commit">be42b7e</span><span class="id">c820938d7629da3f</span></header>
+  <p>Aucune loi non constante trouvée pour l’écart de la mesure 1.</p>
+  <details><summary>Ligne brute du journal</summary><pre>{
+ &quot;n&quot;: 378,
+ &quot;precedent&quot;: &quot;0aacf080ebbb65c6&quot;,
+ &quot;date&quot;: &quot;2026-11-14T11:21:33.917Z&quot;,
+ &quot;probleme&quot;: &quot;forme-manquante#25&quot;,
+ &quot;type&quot;: &quot;aveu&quot;,
+ &quot;auteur&quot;: &quot;GALILÉE&quot;,
+ &quot;moteur&quot;: {
+  &quot;nom&quot;: &quot;GALILÉE&quot;,
+  &quot;depot&quot;: &quot;haynbroit-alt/All&quot;,
+  &quot;commit&quot;: &quot;be42b7e&quot;
+ },
+ &quot;depend_de&quot;: [
+  &quot;0aacf080ebbb65c6&quot;
+ ],
+ &quot;motif&quot;: &quot;Aucune loi non constante trouvée pour l’écart de la mesure 1.&quot;,
+ &quot;id&quot;: &quot;c820938d7629da3f&quot;
 }</pre></details>
 </article></div></details>
 </section>

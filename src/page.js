@@ -6,6 +6,8 @@ import { NIVEAUX } from './certitude.js';
 import { PROVENANCE, integrite } from './adaptateurs/moteurs.js';
 import { bilanCampagne } from './pistes.js';
 import { comptes } from './comptes.js';
+import * as GARDIEN from './gardien.js';
+import { RACINE } from './adaptateurs/moteurs.js';
 
 const h = (s) => String(s ?? '').replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
 const nb = (x, d = 2) => (x == null ? '—' : Number(x).toLocaleString('fr-FR', { maximumFractionDigits: d }));
@@ -13,7 +15,7 @@ const eur = (x) => (x == null ? '—' : `${Math.round(x).toLocaleString('fr-FR')
 const cls = (a) => ({ 'GALILÉE': 'galilee', CORTEX: 'cortex', LAVOISIER: 'lavoisier' }[a] ?? 'neutre');
 const puce = (a) => `<span class="qui ${cls(a)}">${h(a)}</span>`;
 const niv = (n, extra = '') => `<span class="niv n${NIVEAUX[n].rang}">${h(n)}${extra}</span>`;
-const TYPE_FR = { probleme: 'Problème', affirmation: 'Affirmation', contestation: 'Contestation', verification: 'Vérification', experience: 'Expérience', resultat: 'Résultat', economie: 'Économie', aveu: 'Aveu', piste: 'Piste', jalon: 'Jalon' };
+const TYPE_FR = { probleme: 'Problème', affirmation: 'Affirmation', contestation: 'Contestation', verification: 'Vérification', experience: 'Expérience', resultat: 'Résultat', economie: 'Économie', garde: 'Garde', aveu: 'Aveu', piste: 'Piste', jalon: 'Jalon', opportunite: 'Opportunité' };
 const VERDICT = { confirme: ['confirme', 'bon'], refute: ['réfute', 'mauvais'], indecis: ['ne tranche pas', 'alerte'] };
 const PORTEE = { pari: 'pari', prevision: 'prévision', 'verite-du-banc': 'vérité du banc', 'temoin-negatif': 'témoin négatif', recevabilite: 'recevabilité' };
 
@@ -34,6 +36,8 @@ function corps(r, reg) {
     case 'verification': { const [t, c] = VERDICT[r.verdict]; const temoin = r.portee === 'temoin-negatif'; return `${vers}<p><span class="verd ${temoin ? (r.verdict === r.attendu ? 'bon' : 'mauvais') : c}">${temoin ? (r.verdict === r.attendu ? 'non confirmé, comme attendu' : 'CONFIRMÉ À TORT') : t}</span> <span class="mes">${h(PORTEE[r.portee])}</span> ${mesure(r.mesure)}</p><p class="petit">${h(r.methode)}</p>${r.mesure && r.mesure.valeur == null ? `<p class="petit donnees">${Object.entries(r.mesure).map(([k, v]) => `${h(k.replaceAll('_', ' '))} : ${h(typeof v === 'number' ? nb(v, 4) : v)}`).join(' · ')}</p>` : ''}${r.mesure?.rmse_loi != null ? `<p class="petit donnees">erreur de la loi ${nb(r.mesure.rmse_loi)} · erreur de la moyenne ${nb(r.mesure.rmse_moyenne)}</p>` : ''}`; }
     case 'experience': { const a = r.autorisation; return `<p><span class="verd ${a === 'automatique' ? 'bon' : a === 'impossible' ? 'mauvais' : 'alerte'}">${a === 'automatique' ? 'exécutée sans revue' : a === 'impossible' ? 'impossible aujourd’hui' : 'revue humaine requise'}</span></p><p>${h(r.plan.duree ?? r.plan.principe)}</p>${r.plan.reglages ? `<p class="petit donnees">réglages (u0, u1) par bloc : ${r.plan.reglages.map((u) => `(${u[0]} ; ${u[1]})`).join(' ')}</p>` : ''}${r.raison ? `<p class="petit">${h(r.raison)}</p>` : ''}<p class="petit">Coût prévu : ${r.cout_prevu.jours ? `${r.cout_prevu.jours} jours, |u0| moyen ${nb(r.cout_prevu.moyenne_abs_u0)} (plafond ${nb(r.cout_prevu.plafond.u0)}), part de jours u1 ${nb(r.cout_prevu.part_jours_u1)} (plafond ${nb(r.cout_prevu.plafond.u1)})` : h(r.cout_prevu.raison)}</p><p class="petit">Risque : ${h(r.risque.fausse_confirmation ? `fausse confirmation ${r.risque.fausse_confirmation}` : r.risque.note)}</p>`; }
     case 'resultat': { const e = reg.get(r.experience); return `<p class="vers">résultat de l’expérience <a href="#r${e.n}">n° ${e.n}</a></p><p><span class="verd ${r.mesures.pari_gagne ? 'bon' : 'alerte'}">${r.mesures.pari_gagne ? 'pari gagné' : 'pari non gagné'}</span> <span class="mes">log E = ${nb(r.mesures.logE)} <span class="sur">seuil ${nb(r.mesures.seuil)}</span></span></p><p class="petit donnees">erreur de prévision ${nb(r.mesures.rmse_sans, 4)} → ${nb(r.mesures.rmse_avec, 4)} avec la loi · ${nb(r.cout_reel.calcul_s, 1)} s de calcul</p>`; }
+    case 'garde': return `<p><span class="mes">${h(r.decision)}</span> <span class="mes">mode ${h(r.mode)}</span>${r.mission ? ` ${h(r.mission.cle)}` : ''}</p>${r.raison ? `<p class="petit">${h(r.raison)}</p>` : ''}${r.reel ? `<p class="petit donnees">${nb(r.reel.calcul_s, 1)} s · ${r.reel.progres} acte(s) de progrès</p>` : ''}`;
+    case 'opportunite': return `<p class="fort">${h(r.titre)}</p><p>${h(r.description)}</p><p><span class="mes">${h(r.secteur)}</span> <span class="mes">${h(r.statut)}</span></p>`;
     case 'jalon': return `<p class="fort">${h(r.travail)} — ${h(r.mesure)}</p><p><span class="mes">avant : ${h(r.avant)}</span> <span class="mes">après : ${h(r.apres)}</span></p>`;
     case 'piste': return `<p class="fort">${h(r.titre)}</p><p>${h(r.resume)}</p>`;
     case 'economie': { const g = r.gain; if (g.encaisse != null) return `${vers}<p><span class="mes">encaissé : ${eur(g.encaisse)}</span></p><p class="petit">${h(g.nature)}</p>`; return `${vers}<p>${g.base === 'non mesurable' ? `<span class="verd alerte">gain non mesurable</span></p><p class="petit">${h(g.raison)}` : `<span class="mes">déjà perdu : ${eur(g.deja_perdu)}</span> <span class="mes">par an si colmatée : ${eur(g.par_an_si_colmatee)}</span></p><p class="petit">${h(g.valorisation)} · ${h(g.nature)}`}</p>`; }
@@ -59,8 +63,11 @@ export function ecrirePage(reg, chemin) {
   const vraiesAff = etat.filter((e) => !e.sujet.includes('témoin négatif'));
   const bc = bilanCampagne(reg), E = bc.entreprises, F = bc.formes;
   const cp = comptes(reg);
+  const ga = GARDIEN.etat(reg, GARDIEN.lireConfig(RACINE)), gb = ga.budget, nm = '<span class="sur">non mesurable</span>';
   const repere = (r) => `<tr><td>${r.atteint === true ? '<span class="verd bon">atteint</span>' : r.atteint === false ? '<span class="verd mauvais">manque</span>' : '<span class="sur">—</span>'}</td><td>${h(r.mesure)}${r.note ? `<div class="petit">${h(r.note)}</div>` : ''}</td><td class="n">${r.valeur == null ? 'non mesuré' : nb(r.valeur, 3) + (r.unite ? ' ' + r.unite : '')}</td><td class="n">${r.seuil != null ? nb(r.seuil, 3) : r.cible != null ? `<span class="sur">${nb(r.cible, 3)} proposé</span>` : '—'}</td><td>${r.travail ? `<span class="mes">${h(r.travail)}</span>` : ''}</td></tr>`;
-  const TRAVAUX = { 'GALILÉE': [['G1', 'Ne plus se dire convaincu à tort'], ['G2', 'Lois sur des comptages : mesuré, hypothèse contredite, module non écrit'], ['G3', 'Terres inconnues']], CORTEX: [['C1', 'Test unique de P3 : autorisé, en cours d’exécution'], ['C2', 'Exporter son juge pour des données extérieures'], ['C3', 'P4 : agir, arbitrer avec le profit']], LAVOISIER: [['L1', 'Seuils de M0 : fausses détections 0,20 → 0,08 ; profit encore hors seuil'], ['L2', 'Entreprise pilotable'], ['L3', 'Lecteur d’écritures réelles']] };
+  const TRAVAUX = { 'GALILÉE': [['G1', 'Ne plus se dire convaincu à tort'], ['G2', 'Lois sur des comptages : mesuré, hypothèse contredite, module non écrit'], ['G3', 'Terres inconnues']], CORTEX: [['C1', 'Test unique de P3 : fait, trois critères atteints (84 % contre 23 %)'], ['C2', 'Exporter son juge pour des données extérieures'], ['C3', 'P4 : agir, arbitrer avec le profit']], LAVOISIER: [['L1', 'Seuils de M0 : fausses détections 0,20 → 0,09 ; profit encore hors seuil'], ['L2', 'Entreprise pilotable'], ['L3', 'Lecteur d’écritures réelles']] };
+  const opps = reg.lignes.filter((r) => r.type === 'opportunite').sort((a, b) => a.rang - b.rang);
+  const ST = { 'retenue en premier': 'bon', 'en attente': 'alerte', 'non instruisible': 'sur', 'écartée': 'mauvais' };
   const pistes = reg.lignes.filter((r) => r.type === 'piste').sort((a, b) => a.rang - b.rang);
   const boutique = reg.lignes.find((r) => r.type === 'affirmation' && r.sujet === 'revenu réel');
   const pays = reg.lignes.find((r) => r.type === 'affirmation' && r.sujet === 'origine des visites');
@@ -156,6 +163,13 @@ pre{font:11.5px/1.5 var(--mono);background:var(--creux);padding:10px;margin:6px 
 .chiffres{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:1px;background:var(--trait)}
 .chiffres div{background:var(--carte);padding:12px;font-size:12.5px;color:var(--sourd);min-width:0}
 .chiffres b{display:block;font:600 20px/1.2 var(--mono);color:var(--encre)}
+details.opp{background:var(--carte);padding:14px 18px;display:block}
+details.opp>summary{cursor:pointer;display:flex;flex-wrap:wrap;gap:8px;align-items:center;font-size:15px}
+details.opp>summary .rang{font:600 13px var(--mono);border:1.5px solid var(--encre);border-radius:99px;width:24px;height:24px;display:inline-flex;align-items:center;justify-content:center}
+details.opp[open]>summary{margin-bottom:10px}
+details.opp>p{margin-bottom:10px}
+details.opp dl{margin:0 0 10px;display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:10px 20px}
+details.opp .essai{margin-top:8px}
 details.pli>summary{font:600 15px var(--texte);color:var(--encre);padding:10px 0;border-top:1px solid var(--trait)}
 code{font:13px var(--mono);background:var(--creux);padding:1px 5px;border-radius:3px}
 </style>
@@ -185,9 +199,27 @@ ${boutique ? `<section>
   </div>
   <p><b>Lecture.</b> La boutique n’a pas été refusée par ses clients : elle ne les a pas rencontrés. Quatre visites seulement viennent d’un pays qu’elle livre, aucune de France. Chercher une loi de prix ou une fuite comptable n’a pas de sens ici tant qu’il n’y a ni visiteur réel ni vente. CORTEX a été lancé sur la série des visites et n’y trouve rien ; LAVOISIER et GALILÉE n’ont rien à traiter.</p>
 </section>` : ''}
+${opps.length ? `<section>
+  <h2>Opportunités de valeur réelle</h2>
+  <p>Huit opportunités instruites dans tous les secteurs, selon les mêmes dix points. Le registre refuse un potentiel chiffré en euros sans mesure, une opportunité sans expérience falsifiable ou sans condition d’abandon. Aucune n’a encore produit d’argent réel.</p>
+  ${opps.map((o) => `<details class="opp" id="r${o.n}"${o.rang === 1 ? ' open' : ''}><summary><span class="rang">${o.rang}</span> <b>${h(o.titre)}</b> <span class="mes">${h(o.secteur)}</span> <span class="verd ${ST[o.statut]}">${h(o.statut)}</span></summary>
+    <p>${h(o.description)}</p>
+    <dl>
+      <div class="crit"><dt>Déjà connu</dt><dd>${h(o.connu)}</dd></div>
+      <div class="crit"><dt>Encore inconnu</dt><dd>${h(o.inconnu)}</dd></div>
+      <div class="crit"><dt>Ce qui peut être découvert</dt><dd>${h(o.decouvrable)}</dd></div>
+      ${critere('Faisabilité', o.faisabilite)}
+      <div class="crit"><dt>Coût de la vérification <span class="base ${BASE[o.cout_verification.base]}">${h(o.cout_verification.base)}</span></dt><dd>Dépense nouvelle : ${eur(o.cout_verification.depense_eur)}. ${h(o.cout_verification.texte)}</dd></div>
+      ${critere('Potentiel', o.potentiel)}
+    </dl>
+    <div class="essai"><b>Expérience falsifiable.</b> ${h(o.essai.hypothese)}<br><span class="sur">Mesure :</span> ${h(o.essai.mesure)}<br><span class="sur">Succès :</span> ${h(o.essai.succes)}${o.essai.duree ? `<br><span class="sur">Durée :</span> ${h(o.essai.duree)}` : ''}${o.essai.seuils_proposes ? `<br><span class="sur">Seuils :</span> ${h(o.essai.seuils_proposes)}` : ''}</div>
+    <div class="essai"><b>Conditions d’abandon.</b><ul class="limites">${o.abandon.map((x) => `<li>${h(x)}</li>`).join('')}</ul></div>
+    <div class="essai"><b>Valeur à ce jour :</b> ${eur(o.valeur.argent_reel_eur)} d’argent réel · preuve disponible : ${h(o.valeur.nature_de_la_preuve)} · ${o.depend_de.length} acte(s) du registre à l’appui<br><span class="sur">${Object.entries(o.moteurs).map(([m, t]) => `${h(m)} : ${h(t)}`).join(' · ')}</span></div>
+  </details>`).join('')}
+</section>` : ''}
 ${pistes.length ? `<section>
-  <h2>Pistes de revenu, classées</h2>
-  <p>Chaque critère porte la nature de sa preuve. « Inconnu » veut dire que personne ne l’a mesuré, pas que c’est nul.</p>
+  <h2>Pistes de revenu : première évaluation</h2>
+  <p>Évaluation du 13 novembre, conservée telle quelle ; les opportunités ci-dessus la reprennent et la complètent. Chaque critère porte la nature de sa preuve. « Inconnu » veut dire que personne ne l’a mesuré, pas que c’est nul.</p>
   ${pistes.map((x) => `<div class="piste" id="r${x.n}"><div class="rang">Piste ${x.rang} · issue du ${h(x.origine)} · encaissé : ${eur(x.argent_reel)}</div><h3>${h(x.titre)}</h3><p>${h(x.resume)}</p><dl>${critere('Potentiel', x.potentiel)}${critere('Coût', x.cout)}${critere('Risque', x.risque)}${critere('Faisabilité', x.faisabilite)}</dl><div class="essai"><b>Essai à petite échelle — ${h(x.test.etat)}.</b> ${h(x.test.resultat ?? x.test.protocole ?? '')} ${x.test.reste ? `<br><span class="sur">Reste à faire : ${h(x.test.reste)}</span>` : ''}${x.test.role_des_moteurs ? `<br><span class="sur">Rôle des moteurs : ${h(x.test.role_des_moteurs)}</span>` : ''}</div></div>`).join('')}
 </section>` : ''}
 <section>
@@ -203,6 +235,22 @@ ${pistes.length ? `<section>
     <div><b>${F.lois_empiriques} / ${F.lois}</b>lois démontrées par essai commun</div>
     <div><b>${F.temoins_refuses} / ${F.temoins}</b>formules fausses refusées</div>
   </div>
+</section>
+
+<section>
+  <h2>Gardien des ressources</h2>
+  <p>Mode <b>${h(ga.mode)}</b>. Chaque mission passe par le gardien, qui évite celles déjà faites, plafonne les autres et s’arrête sans progrès ou budget. Les tokens viennent du relevé local de Claude Code au moment où cette page a été générée ; ce qui ne se mesure pas est écrit tel quel.</p>
+  <div class="chiffres">
+    <div><b>${ga.ia.mesurable ? nb(ga.ia.tokens_sortie, 0) : nm}</b>tokens produits (session relevée)</div>
+    <div><b>${ga.ia.mesurable ? nb(ga.ia.appels, 0) : nm}</b>appels IA</div>
+    <div><b>${ga.ia.mesurable ? nb(ga.ia.tokens_cache_lus + ga.ia.tokens_cache_ecrits + ga.ia.tokens_entree, 0) : nm}</b>tokens lus, cache compris</div>
+    <div><b>${ga.ia.cout_estime != null ? nb(ga.ia.cout_estime) + ' ' + h(ga.ia.devise ?? '') : '<span class="sur">non chiffré</span>'}</b>coût estimé (aucun tarif renseigné)</div>
+    <div><b>${nb(ga.calcul_s_mesure, 1)} s</b>de calcul sous garde</div>
+    <div><b>${ga.missions.evitees}</b>mission(s) évitée(s) · ${ga.missions.refusees} refusée(s)</div>
+    <div><b>${ga.economie.calcul_s != null ? nb(ga.economie.calcul_s, 1) + ' s' : nm}</b>économie de calcul · tokens : non mesurable</div>
+    <div><b>${nb(gb.calcul_s.restant, 0)} s</b>de calcul restants${gb.tokens_sortie.mesurable ? ` · ${nb(gb.tokens_sortie.restant, 0)} tokens` : ''}</div>
+  </div>
+  <p class="petit">Limites : le gardien ne peut pas couper une session d’IA, seulement la mesurer et refuser de lancer une mission ; les tokens ne se rattachent pas à une mission précise ; le relevé ne couvre que la machine et la session où il est lu ; une économie n’est chiffrée que si une mission du même type a déjà été chronométrée.</p>
 </section>
 
 <section>

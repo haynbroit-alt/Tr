@@ -178,3 +178,16 @@ Les quatre décisions ont été données d'un bloc (« j'autorise tout »). Jalo
 Conséquence pour le programme : les constantes rendues par GALILÉE sur les ventes de LAVOISIER ne viennent pas du
 bruit de comptage. Piste suivante, non vérifiée : l'effet du prix n'y est pas détectable (prix qui bougent de
 −12 % à +15 %). Cela renforce L2 (entreprise pilotable) : seule une expérience qui fait varier le prix peut trancher.
+
+---
+
+## 7. Passage à la valeur réelle (14 novembre 2026, suite)
+
+- **C1 terminé** : test unique de CORTEX P3 exécuté, trois critères atteints (84 % des formules confirmées sous plan
+  actif contre 23 % en passif ; 4 fausses confirmations sur 404). PR `haynbroit-alt/1#11`.
+- **L1 remesuré** après fusion avec un autre travail parallèle : FD2 0,09 sur toutes les graines, 0,15 sur données
+  réalistes. PR `haynbroit-alt/A#8`. La copie gelée de LAVOISIER dans `moteurs/` passe au commit `a25b206`.
+- **Opportunités** : acte `opportunite` en dix points (`programme/opportunites-2026-11-14.json`,
+  `node bin/commun.js executer opportunites --fichier …`). Huit opportunités instruites ; une retenue en premier, la
+  boutique existante, parce que son expérience ne demande aucune dépense nouvelle et qu'elle se termine dans tous
+  les cas par une valeur réelle : une première vente, ou une raison mesurée d'arrêter une perte mensuelle.

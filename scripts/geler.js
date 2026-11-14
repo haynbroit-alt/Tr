@@ -18,7 +18,7 @@ const MOTEURS = [
   { nom: 'cortex', titre: 'CORTEX', depot: 'haynbroit-alt/1', dossier: '1', commit: '758212a',
     fichiers: ['package.json', 'src/rng.js', ...['engine', 'worlds', 'p2', 'p3'].map((f) => `research/v6/${f}.js`),
       'research/v6/vendor/galilee/PROVENANCE.md', ...['agent', 'expr', 'fit', 'search', 'worlds'].map((f) => `research/v6/vendor/galilee/${f}.js`)] },
-  { nom: 'lavoisier', titre: 'LAVOISIER', depot: 'haynbroit-alt/A', dossier: 'A', commit: '73618f9',
+  { nom: 'lavoisier', titre: 'LAVOISIER', depot: 'haynbroit-alt/A', dossier: 'A', commit: 'a25b206',
     fichiers: ['package.json', ...['dates', 'ecarts', 'index', 'links', 'stocks', 'types', 'unites'].map((f) => `src/bilan/${f}.js`),
       ...['archetypes', 'classes', 'engine', 'evaluate', 'generator', 'harness', 'rng'].map((f) => `src/bench/${f}.js`)] },
 ];
