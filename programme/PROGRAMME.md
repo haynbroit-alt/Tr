@@ -261,3 +261,11 @@ Le propriétaire a demandé d'utiliser tous les connecteurs. Relevé en lecture 
   piste où la plateforme apporte elle-même les clients. Elle dépend de trois gestes du propriétaire :
   immatriculation, profil sous son identité, réponse aux clients. Aucun tarif ni délai n'a été trouvé dans les
   sources : son potentiel est inconnu. Essai : au moins une demande en 28 jours de profil en ligne.
+
+### G1 clos sans modifier le moteur (14 novembre 2026, nuit)
+
+Le banc publié de GALILÉE datait d'avant l'auto-évaluation du moteur. Relancé tel quel : à 5 % de bruit, 62 lois
+précises sur 75 au lieu de 53, 4 formes fausses au lieu de 9, aucune dite « établie ». Confirmation sur graines
+neuves (6 à 10), protocole poussé avant l'exécution : trois critères atteints (0 « établie » à tort, 83 % et 97 %
+de lois précises). Restent ouverts, sans chantier : 6 formes fausses à 5 % de bruit sur deux lois, et un garde-fou
+moins sûr en stratégie « hasard » (2 formes fausses dites « établie »). PR `haynbroit-alt/All#4`.

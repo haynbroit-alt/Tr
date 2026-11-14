@@ -1,6 +1,6 @@
 {
   "note": "Repères individuels : chaque chiffre est recopié d'un fichier de résultats du moteur, au commit indiqué. Aucun n'est produit par TR. « seuil » est le critère fixé par le moteur lui-même quand il existe ; « cible » est une proposition du programme, à valider.",
-  "GALILÉE": { "depot": "haynbroit-alt/All", "commit": "be42b7e", "source": "bench/RESULTS.md", "etat": "v1 terminée, banc publié", "reperes": [
+  "GALILÉE": { "depot": "haynbroit-alt/All", "commit": "be42b7e", "source": "bench/RESULTS.md", "etat": "v1 terminée, banc remesuré sur le moteur actuel, G1 clos sans modification", "reperes": [
     { "mesure": "lois retrouvées avec précision, bruit 1 %", "valeur": 96, "unite": "%", "sens": "haut" },
     { "mesure": "lois retrouvées avec précision, bruit 5 %", "valeur": 71, "unite": "%", "sens": "haut", "cible": 80, "travail": "G1" },
     { "mesure": "arrêts « convaincu » sur une forme fausse, bruit 5 % (75 essais)", "valeur": 9, "unite": "", "sens": "bas", "cible": 2, "travail": "G1" },
