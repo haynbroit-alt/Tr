@@ -57,3 +57,13 @@ Un critère manqué est publié comme tel.
 - « Sans CORTEX » et « sans GALILÉE » sont remplacés par une méthode naïve précise ; un autre remplaçant donnerait
   d'autres apports.
 - GALILÉE n'entre que par sa loi de demande sur huit semaines d'essai, là où il est le plus faible (petits jeux).
+
+---
+
+## 8. Vérification du code (graines 241 à 243) — écrit et poussé avant le test
+
+Aucun réglage. `src/problemes/synergie.js` tourne sur trois entreprises déjà vues ; la somme des trois apports de
+Shapley y égale bien v(les trois) − v(aucun). Trois entreprises ne permettent aucune lecture ; rien n'a été changé
+aux bras ni aux critères.
+
+Test : `SYNERGIE_TEST=exécution-unique node bin/commun.js executer synergie`, une seule fois.
