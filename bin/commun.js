@@ -46,7 +46,7 @@ if (cmd === 'executer' && !process.argv.includes('--sans-gardien')) {
   const integ = integrite();
   if (!integ.ok) { console.error('Moteurs altérés, exécution refusée :\n' + integ.erreurs.join('\n')); process.exit(1); }
   const graine = Number(opt('--graine')), fichier = opt('--fichier');
-  const cle = nom === 'essai-prix' ? 'essai-prix#T3' : nom === 'essai-prix-b' ? 'essai-prix#T3B' : nom === 'essai-prix-c' ? 'essai-prix#T3C' : nom === 'essai-prix-d' ? 'essai-prix#T3D' : nom === 'essai-prix-e' ? 'essai-prix#T3E' : nom === 'essai-prix-f' ? 'essai-prix#T3F' : nom === 'confrontation-t2' ? 'confrontation#T2' : nom === 'opportunites' ? `opportunites#${fichier.replace(/\D/g, '')}` : nom === 'confrontation-t1' ? 'confrontation#T1' : nom === 'pistes' ? 'pistes#1' : nom === 'boutique-reelle' ? `boutique-reelle#${fichier.replace(/\D/g, '')}` : `${nom}#${graine}`;
+  const cle = nom === 'essai-prix' ? 'essai-prix#T3' : nom === 'essai-prix-b' ? 'essai-prix#T3B' : nom === 'essai-prix-c' ? 'essai-prix#T3C' : nom === 'essai-prix-d' ? 'essai-prix#T3D' : nom === 'essai-prix-e' ? 'essai-prix#T3E' : nom === 'essai-prix-f' ? 'essai-prix#T3F' : nom === 'essai-prix-g' ? 'essai-prix#T3G' : nom === 'confrontation-t2' ? 'confrontation#T2' : nom === 'opportunites' ? `opportunites#${fichier.replace(/\D/g, '')}` : nom === 'confrontation-t1' ? 'confrontation#T1' : nom === 'pistes' ? 'pistes#1' : nom === 'boutique-reelle' ? `boutique-reelle#${fichier.replace(/\D/g, '')}` : `${nom}#${graine}`;
   if (reg.lignes.some((r) => r.type === 'probleme' && r.cle === cle)) { console.error(`${cle} est déjà au registre (journal en ajout seul).`); process.exit(1); }
   const avant = reg.lignes.length;
   if (nom === 'forme-manquante') (await import('../src/problemes/forme-manquante.js')).formeManquante(reg, graine);
@@ -55,6 +55,7 @@ if (cmd === 'executer' && !process.argv.includes('--sans-gardien')) {
   else if (nom === 'confrontation-t1') console.error(JSON.stringify((await import('../src/problemes/confrontation-t1.js')).confrontationT1(reg)));
   else if (nom === 'confrontation-t2') console.error(JSON.stringify((await import('../src/problemes/confrontation-t2.js')).confrontationT2(reg)));
   else if (nom === 'essai-prix') await (await import('../src/problemes/essai-prix.js')).essaiPrixTest(reg, { sortie: join(RACINE, 'programme', 't3', 'test.json') });
+  else if (nom === 'essai-prix-g') await (await import('../src/problemes/essai-prix-prudent.js')).essaiPrudentTest(reg, { sortie: join(RACINE, 'programme', 't3g', 'test.json') });
   else if (nom === 'essai-prix-f') await (await import('../src/problemes/essai-prix-marge.js')).essaiMargeTest(reg, { sortie: join(RACINE, 'programme', 't3f', 'test.json') });
   else if (nom === 'essai-prix-e') await (await import('../src/problemes/essai-prix-bandit.js')).essaiBanditTest(reg, { monde: 't3e', sortie: join(RACINE, 'programme', 't3e', 'test.json') });
   else if (nom === 'essai-prix-d') await (await import('../src/problemes/essai-prix-bandit.js')).essaiBanditTest(reg, { sortie: join(RACINE, 'programme', 't3d', 'test.json') });

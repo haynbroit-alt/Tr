@@ -74,3 +74,14 @@ Un critère manqué est publié comme tel.
   avec cette règle ; le monde réel peut l'être moins.
 - Un monde, un objet par entreprise, 26 semaines. La population testée est choisie par la règle elle-même (marge
   faible) : le résultat ne dit rien des autres entreprises, où rien ne change.
+
+---
+
+## 8. Vérification du code (graines 241 à 260) — écrit et poussé avant le test
+
+Aucun réglage. Le code (`src/problemes/essai-prix-prudent.js`) tourne sur vingt entreprises déjà vues : trois sont
+concernées (marges 1,44 ; 1,34 ; 1,36), dix-sept ont un plan inchangé et ne sont pas simulées davantage. La décision
+de la chaîne y est la même que celle calculée par T3e et T3f pour la graine 241. Trois entreprises ne permettent
+aucune lecture, et rien n'a été changé à la règle, au seuil ni aux critères après les avoir vues.
+
+Test : `T3G_TEST=exécution-unique node bin/commun.js executer essai-prix-g`, une seule fois.
