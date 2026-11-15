@@ -45,3 +45,13 @@ bornée contredit la principale, c'est dit et personne ne change de place.
 ## 6. Domaine de validité
 
 Simulation, un monde, un objet par entreprise. Les deux prétendants ont besoin du coût unitaire, comme le tenant.
+
+---
+
+## 7. Vérification du code (graines 241 à 246) — écrit et poussé avant le tour
+
+`src/problemes/arene-2.js` tourne sur six entreprises déjà vues. L'arrêt anticipé ne s'y déclenche qu'une fois sur
+six, moins que ce que j'attendais ; je ne touche pas au seuil de 20 %. Six entreprises ne permettent aucune
+lecture ; rien n'a été changé aux prétendants ni à la règle de succession.
+
+Tour : `ARENE2_TEST=exécution-unique node bin/commun.js executer arene-2`, une seule fois.

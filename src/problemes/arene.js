@@ -19,26 +19,26 @@ export function entrer(graine, monde = 'arene1') {
   const e = tempere(r.traits.e, r.traits.t), u = niveauPrevu(r.prix_reference, r.cout_au_jour_183, (x) => PAS ** (-e * x)).u;
   return { ...r, e_tempere: Number(e.toFixed(3)), niveau_tempere: u, gains: { ...r.gains, direct_tempere: gainNiveau(r, u) } };
 }
-export function arbitrer(R) {
+export function arbitrer(R, P = PRETENDANTS, decisions = [['direct', 'niveau_direct'], ['direct_tempere', 'niveau_tempere'], ['chaine', 'decision_chaine']]) {
   const E = R.filter((r) => !r.ecartee), moy = (v) => v.reduce((a, b) => a + b, 0) / v.length;
   const t = (d) => { const n = d.length, m = moy(d), et = Math.sqrt(d.reduce((s, x) => s + (x - m) ** 2, 0) / (n - 1) / n); return { n, moyenne: m, erreur_type: et, t: et > 0 ? m / et : 0 }; };
   const perd = (a) => E.filter((r) => r.gains[a] < r.gains.tenu).length, perdTenant = perd(TENANT);
-  const duels = Object.fromEntries(PRETENDANTS.map((p) => {
+  const duels = Object.fromEntries(P.map((p) => {
     const brut = t(E.map((r) => r.gains[p] - r.gains[TENANT])), bor = t(E.map((r) => borne(r.gains[p]) - borne(r.gains[TENANT]))), perdantes = perd(p);
     const verdict = brut.t > SEUIL && perdantes <= perdTenant ? 'prend la place' : brut.t < -SEUIL ? 'relégué' : 'en lice';
     return [p, { ...brut, seuil: SEUIL, borne: bor, mieux: E.filter((r) => r.gains[p] > r.gains[TENANT]).length, moins_bien: E.filter((r) => r.gains[p] < r.gains[TENANT]).length, perdantes_face_a_prix_tenu: perdantes, verdict,
       lecture_bornee_contraire: (brut.t > SEUIL && bor.t <= 0) || (brut.t < -SEUIL && bor.t >= 0) }];
   }));
-  return { entreprises: R.length, mesurees: E.length, moyennes: Object.fromEntries([TENANT, ...PRETENDANTS, 'tenu'].map((a) => [a, moy(E.map((r) => r.gains[a]))])), moyennes_bornees: Object.fromEntries([TENANT, ...PRETENDANTS, 'tenu'].map((a) => [a, moy(E.map((r) => borne(r.gains[a])))])),
-    perdantes_du_tenant: perdTenant, duels, tempere_contre_direct: t(E.map((r) => r.gains.direct_tempere - r.gains.direct)), tenant_contre_prix_tenu: t(E.map((r) => r.gains[TENANT] - r.gains.tenu)),
-    niveaux: Object.fromEntries([['direct', 'niveau_direct'], ['direct_tempere', 'niveau_tempere'], ['chaine', 'decision_chaine']].map(([a, k]) => [a, Object.fromEntries([-1, -0.5, 0, 0.5, 1].map((u) => [u, E.filter((r) => r[k] === u).length]))])),
-    tenant_apres_le_tour: PRETENDANTS.filter((p) => duels[p].verdict === 'prend la place').sort((a, b) => duels[b].moyenne - duels[a].moyenne)[0] ?? TENANT };
+  return { entreprises: R.length, mesurees: E.length, moyennes: Object.fromEntries([TENANT, ...P, 'tenu'].map((a) => [a, moy(E.map((r) => r.gains[a]))])), moyennes_bornees: Object.fromEntries([TENANT, ...P, 'tenu'].map((a) => [a, moy(E.map((r) => borne(r.gains[a])))])),
+    perdantes_du_tenant: perdTenant, duels, ...(P.includes('direct_tempere') ? { tempere_contre_direct: t(E.map((r) => r.gains.direct_tempere - r.gains.direct)) } : {}), tenant_contre_prix_tenu: t(E.map((r) => r.gains[TENANT] - r.gains.tenu)),
+    niveaux: Object.fromEntries(decisions.map(([a, k]) => [a, Object.fromEntries([-1, -0.5, 0, 0.5, 1].map((u) => [u, E.filter((r) => r[k] === u).length]))])),
+    tenant_apres_le_tour: P.filter((p) => duels[p].verdict === 'prend la place').sort((a, b) => duels[b].moyenne - duels[a].moyenne)[0] ?? TENANT };
 }
 export function direArene(a) {
   const pct = (x) => `${(100 * x).toFixed(1)} %`;
   return [`${a.mesurees} entreprises mesurées sur ${a.entreprises}`, ...Object.keys(a.moyennes).map((b) => `  ${b.padEnd(16)} ${pct(a.moyennes[b]).padStart(8)}   borné ${pct(a.moyennes_bornees[b]).padStart(7)}`),
-    ...PRETENDANTS.map((p) => { const d = a.duels[p]; return `${p} − tenant : ${pct(d.moyenne)}, t = ${d.t.toFixed(2)} (seuil ±${d.seuil}) · borné ${pct(d.borne.moyenne)}, t = ${d.borne.t.toFixed(2)} · mieux dans ${d.mieux}, moins bien dans ${d.moins_bien} · perdantes face à prix tenu ${d.perdantes_face_a_prix_tenu} (tenant ${a.perdantes_du_tenant}) → ${d.verdict.toUpperCase()}`; }),
-    `tempéré − direct : ${pct(a.tempere_contre_direct.moyenne)}, t = ${a.tempere_contre_direct.t.toFixed(2)} · tenant − prix tenu : ${pct(a.tenant_contre_prix_tenu.moyenne)}, t = ${a.tenant_contre_prix_tenu.t.toFixed(2)}`,
+    ...Object.keys(a.duels).map((p) => { const d = a.duels[p]; return `${p} − tenant : ${pct(d.moyenne)}, t = ${d.t.toFixed(2)} (seuil ±${d.seuil}) · borné ${pct(d.borne.moyenne)}, t = ${d.borne.t.toFixed(2)} · mieux dans ${d.mieux}, moins bien dans ${d.moins_bien} · perdantes face à prix tenu ${d.perdantes_face_a_prix_tenu} (tenant ${a.perdantes_du_tenant}) → ${d.verdict.toUpperCase()}`; }),
+    `${a.tempere_contre_direct ? `tempéré − direct : ${pct(a.tempere_contre_direct.moyenne)}, t = ${a.tempere_contre_direct.t.toFixed(2)} · ` : ''}tenant − prix tenu : ${pct(a.tenant_contre_prix_tenu.moyenne)}, t = ${a.tenant_contre_prix_tenu.t.toFixed(2)}`,
     `niveaux choisis ${JSON.stringify(a.niveaux)}`, `tenant après le tour : ${a.tenant_apres_le_tour}`].join('\n');
 }
 
