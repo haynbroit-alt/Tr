@@ -364,3 +364,21 @@ premier passage est aveugle** (7 graines réalistes) — P médian réaliste 4,3
 rien d'autre ne bouge. En désordre réaliste, quatre critères restent hors seuil : P 3,8 % (2 %), FD2 0,12 (0,10),
 S 2,15 % (2 %), L 0,824 (0,85). Leviers restants, par oracle : la datation des pièces dont le solde est regroupé ou
 fractionné ; l'appariement de l'abonnement réaliste. PR `haynbroit-alt/A#14`.
+
+### L2 et T3 : l'entreprise pilotable et l'essai de prix commun (15 novembre 2026)
+
+- **L2 fait** (`haynbroit-alt/A#15`) : le simulateur accepte un prix par objet et par jour. Sans intervention, sa
+  sortie est identique à l'octet sur les 100 graines de développement ; le bilan de matière n'est pas touché. La
+  copie gelée de LAVOISIER passe au commit `718b7d3`.
+- **T3 exécuté** (`programme/t3/`, protocole avant le code, test unique sur 40 entreprises, dossier
+  `essai-prix#T3` au registre). Marge simulée de l'objet piloté, contre la même entreprise laissée seule :
+  collectif **+19,1 %**, règle aveugle « +25 % » **+41,8 %**. K1 tenu (le collectif produit un gain), K2 manqué (il
+  ne décide pas mieux qu'une règle aveugle), K3 établi pour LAVOISIER (coût exact 40 fois sur 40) et pour le plan
+  d'essai de CORTEX, non établi pour GALILÉE.
+- **Constat qui commande la suite** : dans ce simulateur les ventes sur facture ne dépendent pas du prix, donc
+  monter le prix est presque toujours juste (19 entreprises sur 20 jusqu'à quatre fois le prix). La question
+  « le collectif bat-il une règle aveugle ? » ne peut pas y recevoir de oui.
+- **Suite proposée, non commencée** : rendre la demande du simulateur sensible au prix sur tous ses canaux
+  (protocole dans le dépôt de LAVOISIER avant tout code), puis refaire l'essai là où la bonne direction varie ;
+  raccourcir l'essai dès que la décision est claire.
+- **Gains réels : 0 €.** Rien de ce travail n'est un revenu.
