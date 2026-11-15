@@ -354,3 +354,13 @@ P médian 2,27 % → 1,77 %, R 80 → 85 sur 95, FD2 0,09 → 0,08, le reste inc
 **Réserve** : sur le désordre réaliste seul, condition du test, P vaut 4,4 % et FD2 0,15 — hors seuil. Reste à
 faire : un critère de matérialité, les faux doublons restants, le premier passage aveugle sur certaines graines
 réalistes. PR `haynbroit-alt/A#13`.
+
+### LAVOISIER, points 17 et 18 (15 novembre 2026)
+
+Deux changements, protocole poussé avant le code et attendus chiffrés pour chacun. **Matérialité** : un manque
+n'est déclaré que si son taux dépasse le taux de doublons du journal — FD2 0,08 → 0,06 sur les 100 graines, 0,15 →
+0,12 en désordre réaliste ; attente tenue à moitié (un faux manque retiré sur trois visés). **Second tour quand le
+premier passage est aveugle** (7 graines réalistes) — P médian réaliste 4,37 % → 3,78 %, trois graines changent,
+rien d'autre ne bouge. En désordre réaliste, quatre critères restent hors seuil : P 3,8 % (2 %), FD2 0,12 (0,10),
+S 2,15 % (2 %), L 0,824 (0,85). Leviers restants, par oracle : la datation des pièces dont le solde est regroupé ou
+fractionné ; l'appariement de l'abonnement réaliste. PR `haynbroit-alt/A#14`.
