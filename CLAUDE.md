@@ -36,6 +36,9 @@ on l'interroge, on ne le relit pas en entier.
   que sur sa demande.
 - Données d'un client (CSV) : `node bin/commun.js loi <fichier.csv>` — loi vérifiée sur mesures mises de côté ; ne
   jamais livrer une loi « non retenue », ni s'appuyer sur le seul verdict du moteur.
+- Ventes d'un client (CSV : date, produit, quantité, montant) : `node bin/commun.js essai-prix-client plan|decider …` —
+  essai de prix de huit semaines puis décision par la table des ventes, coût unitaire obligatoire ; ne jamais promettre
+  de gain : en simulation, l'avantage sur « ne rien changer » n'est pas établi (`programme/t3c/RESULTATS_T3C.md`).
 - Un gain n'existe qu'encaissé et prouvé ; un essai sans vente se consigne comme un résultat, pas comme un succès.
   Chaque essai de marché se termine par ce qu'il change à la stratégie.
 

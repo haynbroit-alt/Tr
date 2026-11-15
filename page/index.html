@@ -97,11 +97,11 @@ code{font:13px var(--mono);background:var(--creux);padding:1px 5px;border-radius
   <h1>Page de travail commune</h1>
   <p class="chapo">GALILÉE cherche les lois, CORTEX les mécanismes, LAVOISIER les comptes. Ils ne s’appellent pas entre eux : chacun lit et écrit dans un même journal, où tout acte porte son auteur, sa preuve, son coût et son niveau de certitude.</p>
   <div class="etat">
-    <span><b>1108</b> actes au journal</span>
+    <span><b>1109</b> actes au journal</span>
     <span class="bon"><b>Chaîne intacte</b></span>
     <span class="bon"><b>34 fichiers moteurs non modifiés</b></span>
     <span><b>50</b> dossiers</span>
-    <span>dernier acte : 2026-11-15 09:25 UTC</span>
+    <span>dernier acte : 2026-11-15 09:50 UTC</span>
   </div>
 </section>
 
@@ -331,13 +331,14 @@ code{font:13px var(--mono);background:var(--creux);padding:1px 5px;border-radius
   <div class="chiffres">
     <div><b>0 €</b>plafond de dépense fixé par le propriétaire</div>
     <div><b>0 €</b>réellement engagés</div>
-    <div><b>4</b>initiatives exécutées</div>
+    <div><b>5</b>initiatives exécutées</div>
     <div><b>1</b>en attente du propriétaire</div>
   </div>
   <p><b>Fait.</b> Construire l’outil d’audit des comptes de tiers sur fichier d’écritures comptables (format légal FEC) : factures fournisseur saisies deux fois, fournisseurs débiteurs, créances clients anciennes — chaque cas cite ses écritures. <span class="petit">Outil écrit (src/audit-fec.js, commande audit-fec) ; 3 tests sur anomalies plantées réussis ; aucun fichier réel audité ; 0 € réclamé ; 0 € encaissé.</span></p>
   <p><b>Fait.</b> Relever en lecture seule ce que contiennent réellement les connecteurs du propriétaire : audiences, contacts, boutique, moyens d’encaissement. <span class="petit">Mesuré le 14 novembre 2026. Audience : compte TikTok 3 abonnés, 5 vidéos publiées en août (27 à 673 vues, 1 422 vues et 1 282 personnes touchées au total), aucune publication programmée ; carnet de contacts : 2 fiches d’exemple, aucun contact réel ; une application à notifications dont le connecteur ne donne pas l’audience ; aucun fichier comptable dans le stockage en ligne. Prospection : 175 crédits disponibles, 0 utilisé. Encaissement : aucun connecteur de paiement relié. Inaccessibles sans reconnexion par le propriétaire : boutique, messagerie, messagerie instantanée, envoi d’e-mails. Recherche juridique : quota quotidien du connecteur atteint.</span></p>
   <p><b>Fait.</b> Confronter l’outil d’audit des comptes de tiers au marché et au droit avant toute offre. <span class="petit">Contredit l’hypothèse de départ. Marché : des outils d’analyse de fichier d’écritures existent déjà, l’un affiché à 200 € en formule standard, plusieurs avec test gratuit ; l’outil construit n’apporte rien de distinctif face à eux. Droit : tenue, vérification, appréciation et redressement des comptes sont réservés aux experts-comptables (ordonnance du 19 septembre 1945, articles 2 et 20) ; vendre une prestation de vérification serait risqué, publier un logiciel utilisé par l’entreprise ou son comptable ne l’est pas de la même façon — lecture complète de la jurisprudence récente à faire. Conséquence : pas d’offre de service ; l’outil reste un utilitaire et une entrée pour le lecteur d’écritures réelles de LAVOISIER, seule source possible d’un avantage distinctif (flux cachés, écarts), non démontré à ce jour.</span></p>
   <p><b>Fait.</b> Préparer le dossier des missions d’analyse de données : démarche d’immatriculation sourcée, profil, trois exemples de travaux tirés des bancs des moteurs, première réponse type. <span class="petit">Dossier écrit (programme/missions/DOSSIER.md) ; rien n’est publié ; les trois exemples sont des résultats sur données simulées, présentés comme tels ; aucun tarif proposé faute de source.</span></p>
+  <p><b>Fait.</b> Écrire l’outil de livraison « essai de prix » : à partir de l’export de ventes d’un client, proposer un essai de huit semaines puis rendre le prix à retenir, avec les limites écrites dans chaque rapport. <span class="petit">Outil écrit (src/essai-prix-client.js, commande essai-prix-client) ; même plan et même décision que la chaîne testée sur 20 entreprises simulées ; refuse sans coût unitaire ; jamais utilisé sur des ventes réelles ; aucun message envoyé, 0 € encaissé.</span></p>
   <p><b>À valider.</b> Publier le profil sur une plateforme d’indépendants, sous le nom du propriétaire, avec un tarif. <span class="petit">Pourquoi cela attend : message à un tiers au nom du propriétaire : brouillon seulement ; engagement de prix ou de contrat.</span></p>
 </section>
 
@@ -345,16 +346,16 @@ code{font:13px var(--mono);background:var(--creux);padding:1px 5px;border-radius
   <h2>Gardien des ressources</h2>
   <p>Mode <b>intensif</b>. Chaque mission passe par le gardien, qui évite celles déjà faites, plafonne les autres et s’arrête sans progrès ou budget. Les tokens viennent du relevé local de Claude Code au moment où cette page a été générée ; ce qui ne se mesure pas est écrit tel quel.</p>
   <div class="chiffres">
-    <div><b>3 344 951</b>tokens produits (session relevée)</div>
-    <div><b>2 224</b>appels IA</div>
-    <div><b>970 485 462</b>tokens lus, cache compris</div>
-    <div><b>328,83 $ US</b>coût écrit par Claude Code dans son relevé</div>
+    <div><b>3 428 093</b>tokens produits (session relevée)</div>
+    <div><b>2 272</b>appels IA</div>
+    <div><b>998 311 842</b>tokens lus, cache compris</div>
+    <div><b>356,03 $ US</b>coût écrit par Claude Code dans son relevé</div>
     <div><b>1 130,2 s</b>de calcul sous garde</div>
     <div><b>1</b>mission(s) évitée(s) · 0 refusée(s)</div>
     <div><b><span class="sur">non mesurable</span></b>économie de calcul · tokens : non mesurable</div>
-    <div><b>13 270 s</b>de calcul restants · 1 260 576 tokens</div>
+    <div><b>13 270 s</b>de calcul restants · 1 177 434 tokens</div>
   </div>
-  <div class="tableau"><table><thead><tr><th>Dépôt</th><th>Appels</th><th>Tokens produits</th><th>Plafond</th><th>Restant</th></tr></thead><tbody><tr><td>Tr</td><td class="n">1 008</td><td class="n">1 720 426</td><td class="n">1 800 000</td><td class="n">513 184</td></tr><tr><td>A</td><td class="n">724</td><td class="n">938 283</td><td class="n">1 200 000</td><td class="n">345 927</td></tr><tr><td>All</td><td class="n">252</td><td class="n">381 695</td><td class="n">600 000</td><td class="n">243 391</td></tr><tr><td>1</td><td class="n">87</td><td class="n">169 273</td><td class="n">300 000</td><td class="n">142 276</td></tr><tr><td>user</td><td class="n">150</td><td class="n">126 502</td><td class="n">—</td><td class="n">—</td></tr><tr><td>nist</td><td class="n">3</td><td class="n">8 772</td><td class="n">—</td><td class="n">—</td></tr></tbody></table></div>
+  <div class="tableau"><table><thead><tr><th>Dépôt</th><th>Appels</th><th>Tokens produits</th><th>Plafond</th><th>Restant</th></tr></thead><tbody><tr><td>Tr</td><td class="n">1 038</td><td class="n">1 782 161</td><td class="n">1 800 000</td><td class="n">451 449</td></tr><tr><td>A</td><td class="n">733</td><td class="n">945 441</td><td class="n">1 200 000</td><td class="n">338 769</td></tr><tr><td>All</td><td class="n">252</td><td class="n">381 695</td><td class="n">600 000</td><td class="n">243 391</td></tr><tr><td>1</td><td class="n">87</td><td class="n">169 273</td><td class="n">300 000</td><td class="n">142 276</td></tr><tr><td>user</td><td class="n">159</td><td class="n">140 751</td><td class="n">—</td><td class="n">—</td></tr><tr><td>nist</td><td class="n">3</td><td class="n">8 772</td><td class="n">—</td><td class="n">—</td></tr></tbody></table></div>
   <p class="petit">Limites : le gardien ne peut pas couper une session d’IA, seulement la mesurer et refuser de lancer une mission ; les tokens ne se rattachent pas à une mission précise ; le relevé ne couvre que la machine et la session où il est lu ; une économie n’est chiffrée que si une mission du même type a déjà été chronométrée.</p>
 </section>
 
@@ -15086,7 +15087,7 @@ code{font:13px var(--mono);background:var(--creux);padding:1px 5px;border-radius
  &quot;id&quot;: &quot;c820938d7629da3f&quot;
 }</pre></details>
 </article></div></details>
-<details class="pli" id="mandat#1"><summary>Mandat entrepreneurial <span class="sur">· 10 actes</span></summary><div class="fil"><article class="acte neutre t-probleme" id="r381" data-qui="neutre">
+<details class="pli" id="mandat#1"><summary>Mandat entrepreneurial <span class="sur">· 11 actes</span></summary><div class="fil"><article class="acte neutre t-probleme" id="r381" data-qui="neutre">
   <header><span class="num">n° 381</span><span class="type">Problème</span><span class="qui neutre">registre</span><span class="id">8e34fa18f89ef9bd</span></header>
   <p class="fort">Quelles initiatives ont été prises, lesquelles attendent le propriétaire, combien d’argent est engagé ?</p><p class="petit">Source :  · graine  ()</p>
   <details><summary>Ligne brute du journal</summary><pre>{
@@ -15334,6 +15335,31 @@ code{font:13px var(--mono);background:var(--creux);padding:1px 5px;border-radius
  ],
  &quot;attendu&quot;: &quot;Au moins une demande de mission en 28 jours ; suppose l’immatriculation faite par le propriétaire&quot;,
  &quot;id&quot;: &quot;ff4ae131cd391129&quot;
+}</pre></details>
+</article>
+<article class="acte neutre t-initiative" id="r1108" data-qui="neutre">
+  <header><span class="num">n° 1108</span><span class="type">undefined</span><span class="qui neutre">registre</span><span class="id">a0388493bd96f2e0</span></header>
+  
+  <details><summary>Ligne brute du journal</summary><pre>{
+ &quot;n&quot;: 1108,
+ &quot;precedent&quot;: &quot;f4e0e405b2a95587&quot;,
+ &quot;date&quot;: &quot;2026-11-15T09:50:42.835Z&quot;,
+ &quot;probleme&quot;: &quot;mandat#1&quot;,
+ &quot;type&quot;: &quot;initiative&quot;,
+ &quot;auteur&quot;: &quot;registre&quot;,
+ &quot;cle&quot;: &quot;missions#outil-essai-prix&quot;,
+ &quot;action&quot;: &quot;Écrire l’outil de livraison « essai de prix » : à partir de l’export de ventes d’un client, proposer un essai de huit semaines puis rendre le prix à retenir, avec les limites écrites dans chaque rapport&quot;,
+ &quot;nature&quot;: {
+  &quot;depense_eur&quot;: 0,
+  &quot;tiers&quot;: false,
+  &quot;engagement&quot;: false,
+  &quot;irreversible&quot;: false
+ },
+ &quot;decision&quot;: &quot;exécutée&quot;,
+ &quot;motifs&quot;: [],
+ &quot;attendu&quot;: &quot;Que l’offre « plan d’essais de prix » du dossier de missions puisse être livrée dès la première demande, sans rien promettre que les essais en simulation n’ont pas établi&quot;,
+ &quot;resultat&quot;: &quot;Outil écrit (src/essai-prix-client.js, commande essai-prix-client) ; même plan et même décision que la chaîne testée sur 20 entreprises simulées ; refuse sans coût unitaire ; jamais utilisé sur des ventes réelles ; aucun message envoyé, 0 € encaissé&quot;,
+ &quot;id&quot;: &quot;a0388493bd96f2e0&quot;
 }</pre></details>
 </article></div></details>
 <details class="pli" id="confrontation#T2"><summary>Confrontation T2 : CORTEX juge les lois de prix de GALILÉE <span class="sur">· 2 actes</span></summary><div class="fil"><article class="acte neutre t-probleme" id="r388" data-qui="neutre">

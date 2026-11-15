@@ -1,0 +1,9 @@
+[
+  {
+    "cle": "missions#outil-essai-prix",
+    "action": "Écrire l’outil de livraison « essai de prix » : à partir de l’export de ventes d’un client, proposer un essai de huit semaines puis rendre le prix à retenir, avec les limites écrites dans chaque rapport",
+    "nature": { "depense_eur": 0, "tiers": false, "engagement": false, "irreversible": false },
+    "attendu": "Que l’offre « plan d’essais de prix » du dossier de missions puisse être livrée dès la première demande, sans rien promettre que les essais en simulation n’ont pas établi",
+    "resultat": "Outil écrit (src/essai-prix-client.js, commande essai-prix-client) ; même plan et même décision que la chaîne testée sur 20 entreprises simulées ; refuse sans coût unitaire ; jamais utilisé sur des ventes réelles ; aucun message envoyé, 0 € encaissé"
+  }
+]

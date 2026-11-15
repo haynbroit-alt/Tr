@@ -87,6 +87,18 @@ if (cmd === 'executer' && !process.argv.includes('--sans-gardien')) {
   if (k < 0 || lignes.length < 8) { console.error(k < 0 ? `colonne « ${cible} » absente` : 'moins de 8 lignes lisibles'); process.exit(2); }
   if (rejetees) console.log(`${rejetees} ligne(s) illisible(s) écartée(s)`);
   console.log(rapport(analyser({ noms: noms.filter((_, i) => i !== k), cible, X: lignes.map((r) => r.filter((_, i) => i !== k)), y: lignes.map((r) => r[k]) })));
+} else if (cmd === 'essai-prix-client') {
+  // essai-prix-client plan <ventes.csv> --debut AAAA-MM-JJ [--produit X] [--cout C]
+  // essai-prix-client decider <ventes.csv> --debut AAAA-MM-JJ --produit X --ref P --cout C
+  const { readFileSync } = await import('node:fs');
+  const E = await import('../src/essai-prix-client.js');
+  const { lignes, rejetees } = E.lireVentes(readFileSync(process.argv[4], 'utf8'));
+  const produit = opt('--produit'), debut = opt('--debut'), cout = opt('--cout') == null ? null : Number(String(opt('--cout')).replace(',', '.'));
+  if (rejetees) console.log(`${rejetees} ligne(s) illisible(s) ignorée(s)\n`);
+  if (nom === 'plan' && !produit) { const jd = E.jourDe(debut); if (jd == null) { console.error('--debut AAAA-MM-JJ attendu'); process.exit(1); } console.log(`Produits vendus dans les ${E.HISTORIQUE} jours avant le ${debut} (un essai demande au moins un jour de vente sur deux) :`); for (const x of E.produitsEligibles(lignes, jd).slice(0, 20)) console.log(`  ${x.eligible ? 'possible  ' : 'trop rare '} ${x.produit} — ${x.jours_actifs} jours de vente, ${x.lignes} lignes`); }
+  else if (nom === 'plan') console.log(E.rapportPlan(E.plan({ lignes, produit, debut, cout })));
+  else if (nom === 'decider') console.log(E.rapportDecision(E.decider({ lignes, produit, debut, prix_reference: Number(String(opt('--ref')).replace(',', '.')), cout })));
+  else { console.error('usage : commun.js essai-prix-client plan|decider <ventes.csv> --debut AAAA-MM-JJ --produit X [--ref P] [--cout C]'); process.exit(1); }
 } else if (cmd === 'audit-fec') {
   // Audit des comptes de tiers d'un fichier d'écritures comptables réel. Rien n'est écrit au journal : le fichier est privé.
   const { readFileSync } = await import('node:fs');

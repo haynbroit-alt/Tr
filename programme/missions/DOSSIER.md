@@ -98,6 +98,14 @@ près d'une entreprise sur deux y perd ; et là où monter le prix est toujours 
 Source : dépôt commun, `programme/t3/RESULTATS_T3.md`, `programme/t3b/RESULTATS_T3B.md`,
 `programme/t3c/RESULTATS_T3C.md`.
 
+Outil de livraison prêt : `node bin/commun.js essai-prix-client plan <ventes.csv> --debut AAAA-MM-JJ --produit X`
+propose l'essai (huit semaines, un prix par semaine) à partir d'un simple export de ventes (date, produit, quantité,
+montant) ; `… decider <ventes.csv> --debut … --produit X --ref P --cout C` rend le prix à retenir après l'essai. Il
+refuse un produit vendu moins d'un jour sur deux, refuse de décider sans coût unitaire, signale une décision fragile
+et les ventes faites hors plan, et écrit ses limites dans chaque rapport. Vérifié sur les 20 entreprises simulées de
+mise au point : même plan et même décision que la chaîne testée, 20 fois sur 20. Jamais utilisé sur des ventes
+réelles. Exemple à essayer : `programme/missions/essai-prix/exemple-ventes-simulees.csv` (ventes simulées).
+
 ## 4. Première réponse à une demande (brouillon)
 
 > Bonjour [prénom],
@@ -105,6 +113,9 @@ Source : dépôt commun, `programme/t3/RESULTATS_T3.md`, `programme/t3b/RESULTAT
 > Merci pour votre message. Pour vous dire si je peux vous être utile, j'ai besoin de trois choses : la décision que
 > vous devez prendre, les données dont vous disposez (période, nombre de lignes, ce qu'elles mesurent), et la date à
 > laquelle il vous faut une réponse.
+>
+> Pour un essai de prix, il me faut en plus l'export de vos ventes des six derniers mois (une ligne par vente :
+> date, produit, quantité, montant) et le coût d'achat du produit concerné.
 >
 > Je vous proposerai ensuite un périmètre fermé : la question exacte, le critère qui dira si la réponse est fiable,
 > et un prix. Si vos données ne permettent pas de conclure, je vous le dirai avant de commencer.
