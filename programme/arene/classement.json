@@ -140,6 +140,46 @@
      "resultat": "le prétendant prend la place : K1 et K2 tenus (42 flux sur 55 avec 5 % de doublons, contre 11), K3 et K4 manqués"
     }
    ]
+  },
+  "loi_commune_petits_jeux": {
+   "tenant": {
+    "methode": "GALILÉE G5 sans bibliothèque (une forme, constantes partagées ou propres, verdict honnête)",
+    "depuis": "G5, 15 novembre 2026",
+    "tours_tenus": 0,
+    "validite": "mondes simulés à une variable ; forme vraie retrouvée une fois sur deux ; non mesuré sur données réelles"
+   },
+   "tours": [
+    {
+     "tour": "G5",
+     "source": "haynbroit-alt/All RESULTATS_G5.md",
+     "mondes": 200,
+     "resultat": "devant GALILÉE jeu par jeu (195/200), GALILÉE réuni (188/200), Operon jeu par jeu (200/200), Operon réuni (189/200), meilleur témoin (180/200)"
+    }
+   ],
+   "pretendants": [
+    {
+     "methode": "Operon avec une variable indiquant le jeu",
+     "origine": "extérieure ; comparaison plus juste, non faite",
+     "etat": "en lice"
+    },
+    {
+     "methode": "GALILÉE G5 avec bibliothèque",
+     "origine": "même module",
+     "etat": "en lice ; même prédiction, C3 non comparable"
+    }
+   ],
+   "relegues": [
+    {
+     "methode": "Operon jeu par jeu (2 s)",
+     "tour": "G5",
+     "ecart": "erreur médiane 14,6 contre 0,30"
+    },
+    {
+     "methode": "GALILÉE actuel jeu par jeu",
+     "tour": "G5",
+     "ecart": "erreur médiane 1,45 contre 0,30"
+    }
+   ]
   }
  }
 }
