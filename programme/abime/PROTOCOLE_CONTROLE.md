@@ -53,3 +53,13 @@ prix unitaire, pas les montants seuls, qui font l'essentiel de certains archéty
 - Mes doublons sont des copies exactes ; un vrai double enregistrement diffère souvent d'un détail (date, libellé).
 - Dates fausses et lignes perdues restent sans réponse : ce sont deux des trois dégâts les plus destructeurs.
 - Mêmes dégâts aléatoires que JOURNAL-ABÎMÉ ; un vrai export a des dégâts groupés.
+
+---
+
+## 6. Vérification du code — écrit et poussé avant l'exécution
+
+`scripts/controle-journal.js` a tourné sur deux entreprises de développement de LAVOISIER (graines 3 et 4, option
+`--dev`) pour vérifier qu'il va au bout ; un test unitaire couvre le contrôle lui-même. Deux entreprises ne
+prouvent rien ; rien n'a été changé à la règle, aux seuils ni aux critères après les avoir vues.
+
+Exécution : `node scripts/controle-journal.js --sortie programme/abime/controle.json`, une seule fois.

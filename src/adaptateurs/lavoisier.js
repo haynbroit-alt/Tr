@@ -23,7 +23,7 @@ export function entreprise(graine) {
 
 // Épreuve JOURNAL-ABÎMÉ (programme/abime) : 40 entreprises neuves, archétypes de développement, 1 ou 2 flux cachés.
 export function entrepriseAbimee(graine) {
-  if (!Number.isInteger(graine) || graine < 8001 || graine > 8040) throw new Error('JOURNAL-ABÎMÉ : graines 8001 à 8040 seulement');
+  if (!Number.isInteger(graine) || graine < 8001 || graine > 8080) throw new Error('JOURNAL-ABÎMÉ : graines 8001 à 8040 ; CONTRÔLE : 8041 à 8080');
   const classe = { archetype: DEV_ARCHETYPES[graine % 3], nHidden: 1 + (graine % 2), level: 'realiste' };
   const { observed, truth } = generate(graine, classe), { proxy, unlock } = seal(truth);
   return { classe, observe: observed, verite: proxy, ouvrir: unlock };
