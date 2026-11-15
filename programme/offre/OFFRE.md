@@ -123,6 +123,12 @@ Ce qui reste, dans l'ordre :
 
 ## 6. Où nous en sommes face aux meilleures méthodes — mesuré, pas supposé
 
-Voir `programme/sota/` pour la découverte de lois et `programme/t3d/` pour les essais de prix. Les résultats y
-sont consignés tels qu'ils sortent, favorables ou non ; ce paragraphe sera complété quand les deux mesures en
-cours seront terminées.
+Détail et sources : `programme/sota/ETAT_DE_L_ART.md`.
+
+- **Découverte de lois** : GALILÉE est moins précis que la meilleure méthode publique, Operon bien réglé (devant
+  sur 1 jeu de mesures réelles sur 15). Sur les jeux d'au moins 54 mesures il est au niveau du modèle certifié
+  partout, comme elle. Ses formules sont plus courtes ; ce n'est pas encore mesuré.
+- **Essais de prix** : notre chaîne fait jeu égal avec le bandit de Thompson, méthode de référence, sur six mois
+  simulés.
+- **Conséquence pour l'offre** : nous ne vendons pas un meilleur algorithme. Pour une loi, le client doit recevoir
+  celle du meilleur moteur disponible, passée par notre règle de livraison.

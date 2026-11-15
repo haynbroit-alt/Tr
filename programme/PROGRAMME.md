@@ -458,3 +458,13 @@ fractionné ; l'appariement de l'abonnement réaliste. PR `haynbroit-alt/A#14`.
 - **Quatre lots réunis (240 entreprises)** : l'essai fait 6,4 points de mieux que « ne rien changer » (t = 5,04),
   et environ quatre entreprises sur dix y perdent. Question ouverte : les reconnaître d'avance.
 
+### SOTA-LOIS : GALILÉE face à la référence mondiale (15 novembre 2026)
+
+- **Mesuré** (`programme/sota/`, 15 jeux réels du NIST, protocole avant tout calcul) : Operon bien réglé prédit
+  mieux que GALILÉE sur 14 jeux sur 15 ; au niveau du modèle certifié sur 12 jeux contre 8. Sur les 7 jeux d'au
+  moins 54 mesures, GALILÉE est au niveau partout et proche d'Operon. Sur les petits jeux, il échoue là où les
+  concurrents réussissent.
+- **À apprendre** : l'optimisation locale des constantes (protocole à écrire dans le dépôt de GALILÉE).
+- **État de l'art des quatre domaines** : `programme/sota/ETAT_DE_L_ART.md`. CORTEX et LAVOISIER ne sont mesurés
+  contre aucune référence publique.
+
