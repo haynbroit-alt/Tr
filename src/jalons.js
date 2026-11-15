@@ -3,6 +3,12 @@
 import { moteur } from './adaptateurs/moteurs.js';
 
 export function jalon(reg, j) {
+  if (j.moteur === 'collectif') {   // progrès mesuré dans l'espace commun, hors exécution unique consignée par sa mission
+    const C = 'progres#collectifs';
+    if (!reg.lignes.some((r) => r.type === 'probleme' && r.cle === C)) reg.ajouter({ probleme: C, type: 'probleme', cle: C, auteur: 'registre', titre: 'Progrès collectifs mesurés dans l’espace commun',
+      question: 'Qu’est-ce que les moteurs ont établi ensemble, hors des essais consignés par leur propre dossier ?', source: { generateur: 'espace commun', graine: '—', statut: 'jalons' } });
+    return reg.ajouter({ probleme: C, type: 'jalon', auteur: 'registre', compte: 'collectif', travail: j.travail, mesure: j.mesure, avant: j.avant, apres: j.apres, source: j.source });
+  }
   const P = 'progres#individuels';
   if (!reg.lignes.some((r) => r.type === 'probleme' && r.cle === P)) reg.ajouter({ probleme: P, type: 'probleme', cle: P, auteur: 'registre', titre: 'Progrès individuels des moteurs',
     question: 'Qu’est-ce que chaque moteur a gagné seul, dans son dépôt, mesuré sur son propre banc ?', source: { generateur: 'dépôts des moteurs', graine: '—', statut: 'jalons' } });

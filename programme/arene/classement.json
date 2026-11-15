@@ -1,0 +1,123 @@
+{
+ "regles": "programme/arene/REGLES.md",
+ "taches": {
+  "decider_un_prix": {
+   "tenant": {
+    "methode": "chaîne prudente (plan de CORTEX allégé par le coût de LAVOISIER, 8 semaines, décision par la table)",
+    "depuis": "T3g, 15 novembre 2026",
+    "tours_tenus": 1,
+    "validite": "simulation, un monde ; jamais sur une entreprise réelle ; suppose un coût unitaire juste"
+   },
+   "tours": [
+    {
+     "tour": "ARENE-1",
+     "source": "programme/arene/RESULTATS_ARENE_1.md",
+     "entreprises": 200,
+     "resultat": "tenant maintenu ; direct −4,7 points (relégué) ; direct tempéré −3,6 points (relégué)"
+    }
+   ],
+   "pretendants": [
+    {
+     "methode": "LAVOISIER + plan naïf (6 semaines à +11,8 %, 2 à −10,6 %)",
+     "origine": "SYNERGIE : à 0,9 point du tenant en lecture principale, 4,7 points derrière en lecture bornée",
+     "etat": "en lice"
+    },
+    {
+     "methode": "bandit de Thompson",
+     "origine": "extérieure ; jeu égal deux fois avec l'ancienne chaîne (T3d, T3e)",
+     "etat": "en lice"
+    },
+    {
+     "methode": "essai à arrêt anticipé",
+     "origine": "extérieure ; non écrite",
+     "etat": "en lice"
+    },
+    {
+     "methode": "règle de l'atelier",
+     "origine": "src/atelier.js ; a refusé de proposer une règle sur T3h",
+     "etat": "en lice"
+    }
+   ],
+   "relegues": [
+    {
+     "methode": "direct (droite sur l'historique, sans essai)",
+     "tour": "ARENE-1",
+     "ecart": "−4,7 points, t = −2,94"
+    },
+    {
+     "methode": "direct tempéré (bayésien empirique, sans essai)",
+     "tour": "ARENE-1",
+     "ecart": "−3,6 points, t = −2,19"
+    },
+    {
+     "methode": "décision par la loi de GALILÉE dans la chaîne",
+     "tour": "T3b, T3c, T3h, SYNERGIE (avant l'arène)",
+     "ecart": "apport nul ou négatif, quatre mesures"
+    },
+    {
+     "methode": "règle du taux de marge sans essai",
+     "tour": "T3f (avant l'arène)",
+     "ecart": "jeu égal, deux critères manqués ; repose sur une propriété du simulateur"
+    }
+   ]
+  },
+  "trouver_une_loi": {
+   "tenant": {
+    "methode": "aucun tenant établi",
+    "validite": "GALILÉE sert dans la chaîne de livraison « loi », mais Operon n'est pas derrière lui (SOTA-LOIS, SOTA-LOIS-2)"
+   },
+   "pretendants": [
+    {
+     "methode": "GALILÉE (formules courtes, verdict sur mesures mises de côté)",
+     "etat": "en lice"
+    },
+    {
+     "methode": "Operon",
+     "origine": "extérieure, référence mondiale",
+     "etat": "en lice ; devant sur les 15 jeux du NIST, aucune différence établie sur 31 jeux réels"
+    },
+    {
+     "methode": "GALILÉE G5 : loi commune à plusieurs petits jeux",
+     "origine": "haynbroit-alt/All PROTOCOLE_G5.md",
+     "etat": "non écrite"
+    }
+   ],
+   "relegues": [
+    {
+     "methode": "gplearn",
+     "tour": "SOTA-LOIS-2",
+     "ecart": "derrière GALILÉE sur 21 jeux sur 31 (p = 0,035)"
+    }
+   ]
+  },
+  "lire_un_journal": {
+   "tenant": {
+    "methode": "contrôle du journal (copies exactes retirées, alerte), puis LAVOISIER",
+    "depuis": "CONTRÔLE, 15 novembre 2026",
+    "tours_tenus": 0,
+    "validite": "règle les doublons exacts ; rien contre les fautes de frappe, les dates fausses, les lignes perdues ; simulation, trois archétypes"
+   },
+   "pretendants": [
+    {
+     "methode": "LAVOISIER seul",
+     "origine": "tenant détrôné",
+     "etat": "en lice"
+    },
+    {
+     "methode": "contrôle lisant aussi les relevés de stock et de trésorerie (fautes de frappe, trous de dates)",
+     "origine": "à écrire",
+     "etat": "non écrite"
+    }
+   ],
+   "relegues": [],
+   "tours": [
+    {
+     "tour": "CONTRÔLE",
+     "source": "programme/abime/RESULTATS_CONTROLE.md",
+     "entreprises": 40,
+     "resultat": "le prétendant prend la place : K1 et K2 tenus (42 flux sur 55 avec 5 % de doublons, contre 11), K3 et K4 manqués"
+    }
+   ]
+  }
+ }
+}

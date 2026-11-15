@@ -1,0 +1,11 @@
+[
+ { "moteur": "GALILÉE", "travail": "SOTA-LOIS-2", "mesure": "erreur sur mesures mises de côté, 31 jeux réels neufs, face à Operon (court, long) et gplearn",
+  "avant": "non mesuré", "apres": "devant Operon court sur 11 jeux sur 31 (non établi, p inverse 0,075), devant Operon long sur 13 ; devant gplearn sur 21 ; longueur médiane 5 nœuds contre 19 et 53",
+  "seuil": "test des signes unilatéral à 5 %", "source": "programme/sota/RESULTATS_SOTA_LOIS_2.md", "portee": "une variable explicative, interpolation ; autres calculs sur la même machine pendant le passage des concurrents" },
+ { "moteur": "LAVOISIER", "travail": "JOURNAL-ABÎMÉ", "mesure": "flux cachés retrouvés sur 56, 40 entreprises neuves, journal abîmé à 5 %",
+  "avant": "43 sur journal intact", "apres": "16 (lignes perdues), 15 (doublons), 18 (dates), 42 (quantités effacées), 40 (références effacées), 8 (montants × 10) ; aucune exception sur 560 lectures",
+  "seuil": "B1 tenu, B2 tenu à la lettre, B3 à B5 manqués", "source": "programme/abime/RESULTATS_JOURNAL_ABIME.md", "portee": "dégâts aléatoires indépendants ; trois archétypes connus du moteur ; une entreprise sur quarante vue avant l'exécution complète" },
+ { "moteur": "collectif", "travail": "T3H", "mesure": "désigner avant l'essai les entreprises où l'essai fait perdre (199 entreprises, atelier)",
+  "avant": "non mesuré", "apres": "l'atelier refuse : aucun groupe d'au moins 20 entreprises où ne pas essayer vaut mieux ; test non exécuté ; étalonnage : 1 fausse invention sur 200, effet planté de 5 points retrouvé 176 fois sur 200",
+  "seuil": "P1, P2, H1, H2 manqués par construction", "source": "programme/t3h/RESULTATS_T3H.md", "portee": "lot d'atelier seulement ; puissance sur un effet bruité non mesurée" }
+]

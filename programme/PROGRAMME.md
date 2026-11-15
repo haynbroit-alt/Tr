@@ -506,3 +506,20 @@ fractionné ; l'appariement de l'abonnement réaliste. PR `haynbroit-alt/A#14`.
 4. **Synergie des trois moteurs** — à mesurer par un plan factoriel (protocole `programme/synergie/`).
 5. **Méthode qui invente ses méthodes** — l'atelier (`src/atelier.js`) : construit, a refusé de proposer une règle
    sur T3h. Reste à l'étalonner sur des cas à réponse connue.
+
+### L'arène : aucune méthode n'a de place définitive (15 novembre 2026)
+
+- Consigne du propriétaire traduite en règles (`programme/arene/REGLES.md`) et en un classement tenu à jour
+  (`programme/arene/classement.json`) : un tenant par tâche, des prétendants internes ou extérieurs, succession et
+  relégation sur des tours à entreprises neuves.
+- **Premier tour** (200 entreprises) : la chaîne prudente garde sa place ; les deux décisions sans essai sont
+  reléguées (−4,7 et −3,6 points). Décider sans essai fait mieux dans six entreprises sur dix et moins bien en
+  moyenne : l'essai achète l'absence de grosse erreur.
+- **SYNERGIE mesurée** (99 entreprises) : synergie nette entre LAVOISIER et CORTEX (+32 points) parce que le plan de
+  CORTEX est dangereux sans le coût ; LAVOISIER porte l'essentiel ; GALILÉE n'apporte rien à cette chaîne.
+- **Ordre des suites** : (1) un contrôle de qualité du journal avant LAVOISIER, maillon dont tout dépend ;
+  (2) prochain tour de l'arène : plan naïf avec coût, bandit, arrêt anticipé ; (3) code de G5, après décision sur
+  le plafond global du GARDIEN.
+- **CONTRÔLE exécuté** (`programme/abime/RESULTATS_CONTROLE.md`, 40 entreprises neuves) : un contrôle du journal
+  avant lecture prend la place devant LAVOISIER seul — 42 flux cachés retrouvés sur 55 malgré 5 % de doublons,
+  contre 11. Rien contre les fautes de frappe (K3 et K4 manqués), les dates fausses, les lignes perdues.
