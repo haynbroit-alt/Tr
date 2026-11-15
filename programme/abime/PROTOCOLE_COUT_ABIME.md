@@ -43,3 +43,12 @@ Le coût est une médiane : il devrait bien mieux résister que la recherche de 
 
 Un seul archétype (négoce), un seul objet par entreprise, dégâts aléatoires indépendants. « Juste à 5 % » est un
 seuil choisi : un coût faux de 5 % déplace d'autant le taux de marge sur lequel le plan d'essai écarte des prix.
+
+---
+
+## 6. Vérification du code — écrit et poussé avant l'exécution
+
+`scripts/cout-abime.js` a tourné sur deux entreprises déjà vues (graines 241 et 242) : le coût y est exact dans les
+seize lectures. Deux entreprises ne prouvent rien ; rien n'a été changé aux dégâts, aux seuils ni aux critères.
+
+Exécution : `COUT_TEST=exécution-unique node scripts/cout-abime.js --graines 8101-8160 --sortie programme/abime/cout.json`, une seule fois.
