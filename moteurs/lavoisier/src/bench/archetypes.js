@@ -122,7 +122,7 @@ function products(eng, ctx, { n, phi, nClients, scale = 1 }) {
   const suppliers = Array.from({ length: r.int(1, 4) }, () => ({ cp: eng.party('fournisseur'), terms: r.int(15, 60), acc: ctx.account() }));
   const objs = Array.from({ length: n }, (_, k) => {
     const c = r.logUniform(2, 200), lam = r.logUniform(0.3, 15) * scale, lead = r.int(2, 10);
-    const o = { k, id: `O${k}`, tok: eng.tok(), cost: c, p0: c * r.uniform(1.3, 2.5), lam, e: r.uniform(0.8, 2.5), lead, sup: r.pick(suppliers), onOrder: 0 };
+    const o = { k, id: `O${k}`, tok: eng.tok(), cost: c, p0: c * r.uniform(1.3, 2.5), lam, e: r.uniform(0.8, ctx.demande === 'sensible' ? 5 : 2.5), lead, sup: r.pick(suppliers), onOrder: 0 };
     o.p = o.p0;
     o.s = Math.ceil(lam * lead * 1.5) + 1;
     o.S = o.s + Math.ceil(lam * r.int(15, 40));
@@ -167,7 +167,7 @@ function products(eng, ctx, { n, phi, nClients, scale = 1 }) {
     }
     for (const c of clients) {
       if (!r.chance(c.rho)) continue;
-      const o = pickObj(), q = sell(o, r.int(2, 20));
+      const o = pickObj(), k = r.int(2, 20), q = sell(o, ctx.demande === 'sensible' ? Math.round(k * (o.p / o.p0) ** -o.e) : k); // L2b : la facture suit le prix
       if (q <= 0) continue;
       const m = round2(q * o.p);
       const rec = eng.record('vente.facture', 'ventes', { m, q, objet: o.tok, cp: c.cp, tx: [eng.newTx()], d: [[o.id, -1, 'q'], ['CR', 1, 'm']] }, { statut: 'mesure' });

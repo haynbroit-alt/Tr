@@ -40,7 +40,7 @@
       "nom": "lavoisier",
       "titre": "LAVOISIER",
       "depot": "haynbroit-alt/A",
-      "commit": "718b7d35388be1c3613e39dd1a08050da3939b67",
+      "commit": "ce21c06fd67df934fe35737b45ff24122ea61141",
       "fichiers": {
         "package.json": "8c24dd7bc29633faf83f4c57d951d5b365735deac373924fa91eb2ad460e7259",
         "src/bilan/dates.js": "bd995c8c0aab370073dafce749fb54e66745b7f2de689afdd777767947ed35dd",
@@ -50,11 +50,11 @@
         "src/bilan/stocks.js": "26d079b024f69049a90c6528463b20f32241f6ee3cf7212853910ea6fe56ed15",
         "src/bilan/types.js": "712c187abc5b9c32799053d06bfe65985bce2bbba052743c5e37a5a3cc554d8c",
         "src/bilan/unites.js": "58d399159069d8bd6e65a5a4dd87f3b068b67e83df56108c5af6b44fffbaa65c",
-        "src/bench/archetypes.js": "73f617d6f3c8b6d1c2be380e30fab248404a014ea3a33a2c7dec5402bf77073e",
+        "src/bench/archetypes.js": "e96be5fa62e7c9c231d8cded78ff605c4a5e00c6b07cf59dc97cd0b250420721",
         "src/bench/classes.js": "a2ab544fa379bc74fb4aa7aa33d5a615df849fc99a9454752b7f573f08275773",
         "src/bench/engine.js": "ec9525a56f89c6122b502139c25cb09a0087391df5c6ff6295fa95723ab64f92",
         "src/bench/evaluate.js": "bf1c71fb01bd9bfe93c156d6bd0e728afd84d5b0812aaa78b922509c0e10b84f",
-        "src/bench/generator.js": "f17fc7aa5a7e46c6ee370fb90f002a3885dea1dc71225e9fbb7b1f4fe486a277",
+        "src/bench/generator.js": "cac76687b5be0535e51a44157162489572380b052902a5a5207fe6b10de088ad",
         "src/bench/harness.js": "f04d315acc545aa2d984a9dd9d70f12420d896498a7f92cdbc1f55c445a155a6",
         "src/bench/rng.js": "4ef970434a2e5e484721eda208c62448db2f983b317b1b568861335e3858c14b"
       }

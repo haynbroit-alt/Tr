@@ -1,5 +1,5 @@
 // Essai de prix commun (T3) — mise au point et agrégation. Protocole : programme/t3/PROTOCOLE_T3.md.
-// Usage : node scripts/t3.js --graines 201-220 [--sortie programme/t3/dev.json]   (mise au point seulement)
+// Usage : node scripts/t3.js [--monde t3b] --graines 201-220 [--sortie programme/t3/dev.json]   (mise au point seulement)
 //         node scripts/t3.js --lire programme/t3/dev.json                           (agrégat d'un fichier déjà produit)
 // Le test (6001 à 6040) ne passe pas par ici : exécution unique, par le registre (`commun.js executer essai-prix`).
 import { readFileSync, writeFileSync } from 'node:fs';
@@ -19,7 +19,9 @@ export function tUnilateral(d) {
 export function agreger(R) {
   const E = R.filter((r) => !r.ecartee), A = NIVEAUX.map((u) => `aveugle:${u}`);
   const gain = (r, b, f) => (r.bras[b][f] - r.bras.nul[f]) / Math.abs(r.bras.nul.total);   // en part de la marge du témoin nul (fenêtre entière)
-  const tous = ['collectif', 'sans_galilee', 'sans_lavoisier', 'sans_plan_cortex', ...A];
+  const court = E.length > 0 && E.every((r) => r.bras.collectif_court);
+  const autres = E.length ? Object.keys(E[0].bras).filter((b) => /^court\d+$/.test(b) && E.every((r) => r.bras[b])) : [];
+  const tous = ['collectif', ...(court ? ['collectif_court', 'collectif_bref'] : []), ...autres, 'sans_galilee', 'sans_lavoisier', 'sans_plan_cortex', ...A];
   const moyennes = Object.fromEntries(tous.map((b) => [b, Object.fromEntries(['essai', 'exploitation', 'total'].map((f) => [f, moy(E.map((r) => gain(r, b, f)))]))]));
   const euros = Object.fromEntries(tous.map((b) => [b, Math.round(E.reduce((s, r) => s + r.bras[b].total - r.bras.nul.total, 0))]));
   const meilleurAveugle = (f) => A.reduce((a, b) => (moyennes[b][f] > moyennes[a][f] ? b : a));
@@ -31,7 +33,7 @@ export function agreger(R) {
   const K3 = Object.fromEntries(['sans_galilee', 'sans_lavoisier', 'sans_plan_cortex'].map((b) => [b, tUnilateral(E.map((r) => gain(r, 'collectif', 'exploitation') - gain(r, b, 'exploitation')))]));
   const coutOk = E.filter((r) => r.collectif.cout.cout != null && Math.abs(r.collectif.cout.cout / r.cout_vrai - 1) < 0.05).length;
   return { entreprises: R.length, pilotables: E.length, ecartees: R.length - E.length, moyennes, euros_simules: euros, marge_temoin_nul: Math.round(E.reduce((s, r) => s + r.bras.nul.total, 0)),
-    K1, K2, K3, fenetre_entiere: { meilleur_aveugle: meilleurAveugle('total'), aveugle: moyennes[meilleurAveugle('total')].total, collectif: moyennes.collectif.total },
+    K1, K2, K3, ...(court ? { K2b: (() => { const adv = meilleurAveugle('total'); return { adversaire: adv, collectif: moyennes.collectif.total, aveugle: moyennes[adv].total, tenu: moyennes.collectif.total > moyennes[adv].total, apparie: tUnilateral(E.map((r) => gain(r, 'collectif', 'total') - gain(r, adv, 'total'))), court: moyennes.collectif_court.total, court_tenu: moyennes.collectif_court.total > moyennes[adv].total, court_apparie: tUnilateral(E.map((r) => gain(r, 'collectif_court', 'total') - gain(r, adv, 'total'))) }; })(), K4: tUnilateral(E.map((r) => gain(r, 'collectif_court', 'total') - gain(r, 'collectif', 'total'))), K5: (() => { const adv = meilleurAveugle('total'); return { adversaire: adv, bref: moyennes.collectif_bref.total, aveugle: moyennes[adv].total, tenu: moyennes.collectif_bref.total > moyennes[adv].total, apparie: tUnilateral(E.map((r) => gain(r, 'collectif_bref', 'total') - gain(r, adv, 'total'))), contre_collectif: tUnilateral(E.map((r) => gain(r, 'collectif_bref', 'total') - gain(r, 'collectif', 'total'))), gain_bref: tUnilateral(E.map((r) => gain(r, 'collectif_bref', 'total'))) }; })() } : {}), fenetre_entiere: { meilleur_aveugle: meilleurAveugle('total'), aveugle: moyennes[meilleurAveugle('total')].total, collectif: moyennes.collectif.total },
     attendus: {
       apres_coup_plus_un: E.filter((r, i) => niveauApresCoup(r, i) === 1).length, repartition_apres_coup: Object.fromEntries(NIVEAUX.map((u) => [u, E.filter((r, i) => niveauApresCoup(r, i) === u).length])),
       cout_a_5_pct: coutOk, cout_indisponible: E.filter((r) => r.collectif.cout.cout == null).length,
@@ -39,7 +41,8 @@ export function agreger(R) {
       decision_egale_apres_coup: E.filter((r, i) => r.collectif.decisions.complet.niveau === niveauApresCoup(r, i)).length,
       decision_a_un_pas: E.filter((r, i) => Math.abs(r.collectif.decisions.complet.niveau - niveauApresCoup(r, i)) <= 0.5).length,
       decisions: Object.fromEntries(NIVEAUX.map((u) => [u, E.filter((r) => r.collectif.decisions.complet.niveau === u).length])),
-      decide_par: E.reduce((c, r) => { c[r.collectif.decisions.complet.par] = (c[r.collectif.decisions.complet.par] ?? 0) + 1; return c; }, {}) } };
+      decide_par: E.reduce((c, r) => { c[r.collectif.decisions.complet.par] = (c[r.collectif.decisions.complet.par] ?? 0) + 1; return c; }, {}),
+      ...(court ? { bref_egale_apres_coup: E.filter((r, i) => r.bref.decisions.complet.niveau === niveauApresCoup(r, i)).length, bref_a_un_pas: E.filter((r, i) => Math.abs(r.bref.decisions.complet.niveau - niveauApresCoup(r, i)) <= 0.5).length } : {}) } };
 }
 
 export function dire(a) {
@@ -48,6 +51,8 @@ export function dire(a) {
   L.push('', `K1 gain du collectif > 0 (fenêtre entière) : moyenne ${pct(a.K1.moyenne)}, t = ${a.K1.t.toFixed(2)} (seuil ${a.K1.seuil}) → ${a.K1.etabli ? 'tenu' : 'MANQUÉ'}`);
   L.push(`K2 collectif > meilleur aveugle en exploitation (${a.K2.adversaire}) : ${pct(a.K2.collectif)} contre ${pct(a.K2.aveugle)} → ${a.K2.tenu ? 'tenu' : 'MANQUÉ'} (écart apparié t = ${a.K2.apparie.t.toFixed(2)})`);
   for (const [b, k] of Object.entries(a.K3)) L.push(`K3 ${b} : le collectif fait ${pct(k.moyenne)} de mieux, t = ${k.t.toFixed(2)} → ${k.etabli ? 'établi' : 'non établi'}`);
+  if (a.K2b) L.push(`K2b collectif > meilleur aveugle sur la fenêtre entière (${a.K2b.adversaire}) : ${pct(a.K2b.collectif)} contre ${pct(a.K2b.aveugle)} → ${a.K2b.tenu ? 'tenu' : 'MANQUÉ'} (écart apparié t = ${a.K2b.apparie.t.toFixed(2)}) · collectif court ${pct(a.K2b.court)} → ${a.K2b.court_tenu ? 'au-dessus' : 'au-dessous'} (t = ${a.K2b.court_apparie.t.toFixed(2)})`, `K4 collectif court > collectif (fenêtre entière) : ${pct(a.K4.moyenne)} de mieux, t = ${a.K4.t.toFixed(2)} → ${a.K4.etabli ? 'établi' : 'non établi'}`);
+  if (a.K5) L.push(`K5 collectif bref > meilleur aveugle sur la fenêtre entière (${a.K5.adversaire}) : ${pct(a.K5.bref)} contre ${pct(a.K5.aveugle)} → ${a.K5.tenu ? 'tenu' : 'MANQUÉ'} (écart apparié t = ${a.K5.apparie.t.toFixed(2)}, seuil ${a.K5.apparie.seuil}) · gain du bref > 0 : t = ${a.K5.gain_bref.t.toFixed(2)} · bref − collectif : ${pct(a.K5.contre_collectif.moyenne)}, t = ${a.K5.contre_collectif.t.toFixed(2)}`);
   L.push(`fenêtre entière : meilleur aveugle ${a.fenetre_entiere.meilleur_aveugle} ${pct(a.fenetre_entiere.aveugle)} · collectif ${pct(a.fenetre_entiere.collectif)}`, `attendus : ${JSON.stringify(a.attendus)}`);
   return L.join('\n');
 }
@@ -56,11 +61,12 @@ if (import.meta.url === `file://${process.argv[1]}`) {
   let R;
   if (opt('--lire')) R = JSON.parse(readFileSync(opt('--lire'), 'utf8')).entreprises;
   else {
-    const [a, b] = opt('--graines', '201-204').split('-').map(Number);
-    if (a < 201 || (b ?? a) > 220) { console.error('mise au point : graines 201 à 220 seulement'); process.exit(1); }
+    const monde = opt('--monde', 't3'), [lo, hi] = monde === 't3b' ? [221, 240] : [201, 220];
+    const [a, b] = opt('--graines', `${lo}-${lo + 3}`).split('-').map(Number);
+    if (a < lo || (b ?? a) > hi) { console.error(`mise au point : graines ${lo} à ${hi} seulement`); process.exit(1); }
     R = [];
-    for (let g = a; g <= (b ?? a); g++) { const r = essaiPrix(g); R.push(r); console.error(r.ecartee ? `graine ${g} : écartée (${r.motif})` : `graine ${g} : ${r.objet} · coût ${r.collectif.cout.cout?.toFixed(2)} (vrai ${r.cout_vrai}) · loi ${r.collectif.loi.retenue ? 'retenue' : 'non retenue'} « ${r.collectif.loi.texte} » · décision ${r.collectif.decisions.complet.niveau} par ${r.collectif.decisions.complet.par} · juge ${r.collectif.juge.verdict} · ${r.secs} s`); }
-    if (opt('--sortie')) writeFileSync(opt('--sortie'), JSON.stringify({ protocole: 'programme/t3/PROTOCOLE_T3.md', entreprises: R }, null, 1) + '\n');
+    for (let g = a; g <= (b ?? a); g++) { const r = essaiPrix(g, monde); R.push(r); console.error(r.ecartee ? `graine ${g} : écartée (${r.motif})` : `graine ${g} : ${r.objet} · coût ${r.collectif.cout.cout?.toFixed(2)} (vrai ${r.cout_vrai}) · loi ${r.collectif.loi.retenue ? 'retenue' : 'non retenue'} « ${r.collectif.loi.texte} » · décision ${r.collectif.decisions.complet.niveau} par ${r.collectif.decisions.complet.par} · juge ${r.collectif.juge.verdict} · ${r.secs} s`); }
+    if (opt('--sortie')) writeFileSync(opt('--sortie'), JSON.stringify({ protocole: monde === 't3b' ? 'programme/t3b/PROTOCOLE_T3B.md' : 'programme/t3/PROTOCOLE_T3.md', entreprises: R }, null, 1) + '\n');
   }
   console.log(dire(agreger(R)));
 }
