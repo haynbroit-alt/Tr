@@ -411,3 +411,13 @@ fractionné ; l'appariement de l'abonnement réaliste. PR `haynbroit-alt/A#14`.
   décision meilleure qu'une règle fixe pendant l'exploitation ; un essai de 8 blocs meilleur qu'un essai de 13.
 - **Ce qui reste ouvert** : que l'essai se rembourse face à « ne rien changer ». Pistes : coût de l'essai,
   comparateur moins bruité, ventes réelles. **Gains réels : 0 €.**
+
+### Outil de livraison « essai de prix » (15 novembre 2026, fin)
+
+- `src/essai-prix-client.js`, commande `node bin/commun.js essai-prix-client plan|decider` : ce que les trois essais
+  ont laissé debout, mis en état de servir sur l'export de ventes d'un client. Plan de CORTEX arrêté à 8 semaines,
+  décision par la table des ventes, coût unitaire obligatoire, limites écrites dans chaque rapport.
+- Vérification : même plan et même décision que la chaîne testée sur les 20 entreprises simulées de mise au point ;
+  5 tests sur un jeu synthétique. **Jamais utilisé sur des ventes réelles.**
+- L'offre « plan d'essais de prix » du dossier de missions a désormais un outil. Elle attend toujours les trois
+  gestes du propriétaire : immatriculation, profil, accord de publication. **Gains réels : 0 €.**
