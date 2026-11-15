@@ -103,6 +103,15 @@ Ce qui reste, dans l'ordre :
    le site de l'Urssaf) : prospecter avant l'immatriculation n'est pas interdit ; un devis est toléré une fois la
    demande déposée, avec une mention provisoire ; **facturer sans SIRET est interdit**. Donc : préparer et montrer
    l'offre est possible dès maintenant ; signer et encaisser attend le numéro.
+   **Deux autres voies légales pour facturer sans créer d'entreprise**, à étudier si l'on veut un premier client
+   avant l'immatriculation (sources : sites d'information, conditions à vérifier auprès de la structure choisie) :
+   - le **portage salarial** : une société de portage signe avec le client, facture, et reverse un salaire ; frais
+     de 5 à 10 % du chiffre d'affaires, environ la moitié du montant facturé en net ; il existe un tarif
+     journalier plancher, de l'ordre de 250 à 300 € — compatible avec les forfaits du § 4 ;
+   - la **coopérative d'activité et d'emploi**, avec un contrat d'appui au projet d'entreprise : il est fait pour
+     tester une activité sans créer de structure, en gardant ses droits ; contribution d'environ 10 % du chiffre
+     d'affaires.
+   Dans les deux cas c'est une signature du propriétaire, pas la mienne.
 2. **Prix** : valider ou corriger le § 4.
 3. **Moyen d'encaissement** : aucun n'est relié aujourd'hui.
 4. **Conditions de mission** : un modèle court à écrire (périmètre, délai, confidentialité, propriété des données).
