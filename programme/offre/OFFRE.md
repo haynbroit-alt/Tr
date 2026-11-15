@@ -57,6 +57,7 @@ prix de celui de la promotion qui l'accompagne.
 | Nous reconstituons le coût d'un produit depuis les écritures | exact sur les 160 entreprises simulées des trois tests |
 | Après un essai, le prix choisi fait mieux qu'une règle fixe pendant qu'on l'applique | mesuré deux fois, 120 entreprises simulées |
 | Un essai de 8 semaines vaut mieux qu'un essai de 13 | mesuré deux fois |
+| L'essai peut s'arrêter à 4 semaines quand un prix se détache nettement | en simulation, un peu mieux que d'aller au bout, deux fois de suite (400 entreprises, `programme/arene/`) |
 | Avant l'essai, nous écartons les baisses de prix qui ne peuvent pas être rentables compte tenu de votre coût | calcul arithmétique ; en simulation, l'essai ainsi allégé fait mieux dans 52 entreprises à marge faible sur 54 (`programme/t3g/`) |
 | Notre essai fait jeu égal avec la méthode de référence publiée (bandit de Thompson) sur six mois | 60 entreprises simulées, écart de 0,6 point |
 | Lire l'historique ne dit pas quel prix fixer : la promotion vend plus que le prix | ventes réelles, 83 magasins |

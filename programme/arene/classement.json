@@ -6,7 +6,7 @@
     "methode": "chaîne prudente à arrêt anticipé (essai lu à 4 semaines : décision immédiate si le meilleur prix dépasse le deuxième de 20 % en marge par jour, sinon 8 semaines)",
     "depuis": "ARÈNE-2, 15 novembre 2026",
     "tours_tenus": 1,
-    "validite": "simulation, un monde ; avantage petit mais répété sur la chaîne sans arrêt (+0,8 puis +0,9 point, 400 entreprises) ; suppose un coût unitaire juste, obtenu par paires reliées"
+    "validite": "simulation, un monde ; avantage petit mais répété sur la chaîne sans arrêt (+0,8 puis +0,9 point, 400 entreprises) ; branché dans l'outil de livraison (`essai-prix-client decider --semaines 4`) ; suppose un coût unitaire juste, obtenu par paires reliées"
    },
    "tours": [
     {

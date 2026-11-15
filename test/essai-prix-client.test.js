@@ -83,3 +83,12 @@ test('plan prudent (T3g) : avec un coût, les baisses non rentables sont écart�
   assert.deepEqual(decider({ lignes, produit: 'lampe', debut: iso(DEBUT), prix_reference: 10, cout: 7.2, plan_standard: true }).table.map((x) => x.niveau), [-1, 0, 1]);
   assert.deepEqual(decider({ lignes, produit: 'lampe', debut: iso(DEBUT), prix_reference: 10, cout: 7.2, cout_plan: 6 }).table.map((x) => x.niveau), [-1, 0, 1]);
 });
+
+test('lecture anticipée à quatre semaines : dit si la décision est nette', () => {
+  const { lignes } = lireVentes(ventes());
+  const d = decider({ lignes, produit: 'lampe', debut: iso(DEBUT), prix_reference: 10, cout: 6, semaines: 4 });
+  assert.equal(d.possible, true); assert.equal(d.lecture_anticipee.semaines, 4); assert.equal(typeof d.lecture_anticipee.net, 'boolean');
+  assert.equal(d.table.reduce((s, x) => s + x.jours, 0), 28);
+  assert.equal(decider({ lignes, produit: 'lampe', debut: iso(DEBUT), prix_reference: 10, cout: 6 }).lecture_anticipee, undefined);
+  assert.equal(decider({ lignes, produit: 'lampe', debut: iso(DEBUT), prix_reference: 10, cout: 6, semaines: 5 }).possible, false);
+});
