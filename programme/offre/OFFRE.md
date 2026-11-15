@@ -57,12 +57,13 @@ prix de celui de la promotion qui l'accompagne.
 | Nous reconstituons le coût d'un produit depuis les écritures | exact sur les 160 entreprises simulées des trois tests |
 | Après un essai, le prix choisi fait mieux qu'une règle fixe pendant qu'on l'applique | mesuré deux fois, 120 entreprises simulées |
 | Un essai de 8 semaines vaut mieux qu'un essai de 13 | mesuré deux fois |
+| Notre essai fait jeu égal avec la méthode de référence publiée (bandit de Thompson) sur six mois | 60 entreprises simulées, écart de 0,6 point |
 | Lire l'historique ne dit pas quel prix fixer : la promotion vend plus que le prix | ventes réelles, 83 magasins |
 | Une loi n'est rendue que si elle tient sur des mesures non vues | 9 lois retenues sur 9 ont tenu, données réelles |
 
 | Nous ne devons jamais dire | Pourquoi |
 |---|---|
-| « Un essai de prix rapporte plus que de ne rien changer » | non établi : 1,6 point d'écart sur 80 entreprises simulées, non significatif |
+| « Un essai de prix rapporte plus que de ne rien changer », **sans dire que c'est une simulation et une moyenne** | en simulation : +6,6 points en moyenne sur 180 entreprises, mais de 2 à 12 points selon le lot, et un tiers des entreprises y perdent |
 | « Vous gagnerez X % » | en simulation, près d'une entreprise sur deux y perd |
 | « Notre méthode bat les meilleures du marché » | voir § 6 |
 | « Déjà éprouvé chez des clients » | aucun client à ce jour |
