@@ -79,3 +79,14 @@ Un critère manqué est publié comme tel.
   que la structure de coût désigne déjà le sens, et réserver l'essai aux cas incertains (bras mixte).
 - Un monde, un objet par entreprise, 26 semaines, seuils lus sur trois lots de ce même simulateur.
 - Le lot T3c (même simulateur sans hasard commun) ne montrait presque rien : l'effet peut ne pas se reproduire.
+
+---
+
+## 8. Vérification du code (graines 241 à 243) — écrit et poussé avant le test
+
+Aucun réglage. Le code (`src/problemes/essai-prix-marge.js`) tourne sur trois entreprises déjà vues : les trois ont
+une marge « du milieu » (1,44 ; 1,74 ; 1,55), la règle y vaut donc « prix tenu » et la mixte la chaîne, comme
+prévu par construction ; coût exact 3 sur 3 ; environ 12 secondes par entreprise, soit 25 minutes pour le test.
+Rien n'a été lu de ces trois entreprises qui change la règle, les seuils ou les critères.
+
+Test : `T3F_TEST=exécution-unique node bin/commun.js executer essai-prix-f`, une seule fois.

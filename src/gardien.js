@@ -25,7 +25,7 @@ export function changerMode(racine, mode) {
 }
 
 // Clé du dossier qu'une mission écrirait : sert à reconnaître un travail déjà fait.
-export const cleDe = (nom, { graine, fichier } = {}) => (nom === 'essai-prix' ? 'essai-prix#T3' : nom === 'essai-prix-b' ? 'essai-prix#T3B' : nom === 'essai-prix-c' ? 'essai-prix#T3C' : nom === 'essai-prix-d' ? 'essai-prix#T3D' : nom === 'essai-prix-e' ? 'essai-prix#T3E' : nom === 'opportunites' ? `opportunites#${String(fichier).replace(/\D/g, '')}` : nom === 'confrontation-t1' ? 'confrontation#T1'
+export const cleDe = (nom, { graine, fichier } = {}) => (nom === 'essai-prix' ? 'essai-prix#T3' : nom === 'essai-prix-b' ? 'essai-prix#T3B' : nom === 'essai-prix-c' ? 'essai-prix#T3C' : nom === 'essai-prix-d' ? 'essai-prix#T3D' : nom === 'essai-prix-e' ? 'essai-prix#T3E' : nom === 'essai-prix-f' ? 'essai-prix#T3F' : nom === 'opportunites' ? `opportunites#${String(fichier).replace(/\D/g, '')}` : nom === 'confrontation-t1' ? 'confrontation#T1'
   : nom === 'pistes' ? 'pistes#1' : nom === 'boutique-reelle' ? `boutique-reelle#${String(fichier).replace(/\D/g, '')}` : `${nom}#${graine}`);
 
 const gardes = (reg) => reg.lignes.filter((r) => r.type === 'garde');
