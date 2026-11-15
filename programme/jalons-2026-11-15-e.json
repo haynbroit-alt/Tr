@@ -1,0 +1,11 @@
+[
+ {
+  "moteur": "LAVOISIER", "travail": "L2b",
+  "mesure": "simulateur : option de demande sensible au prix sur tous les canaux",
+  "avant": "les ventes sur facture ne dépendaient pas du prix : monter le prix était presque toujours juste", "apres": "critères B1 à B4 tenus ; la bonne direction varie d'une entreprise à l'autre",
+  "seuil": "sans l'option, sortie identique à l'octet sur les 100 graines de développement",
+  "commit": "ce21c06", "source": "haynbroit-alt/A PROTOCOLE_L2B.md § 6",
+  "portee": "simulateur seulement ; le bilan de matière n'est pas touché, et rien n'y est mesuré dans le monde sensible",
+  "note": "meilleur niveau après coup sur les graines 221 à 240 : en baisse 7, en hausse 12, inchangé 1"
+ }
+]

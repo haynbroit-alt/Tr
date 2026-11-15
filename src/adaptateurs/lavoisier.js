@@ -28,14 +28,21 @@ export function bilanMatiere(observe) {
 
 export const evaluer = (verite, corps) => evaluate(verite, corps);
 
-// Essai de prix commun (programme/t3/PROTOCOLE_T3.md) : entreprise de négoce pilotable (L2), même vérité scellée.
-// Graines de mise au point 201 à 220 ; graines de test 6001 à 6040, refusées hors de l'exécution unique.
+// Essais de prix communs : entreprise de négoce pilotable (L2), même vérité scellée.
+//   monde 't3'  (programme/t3)  : simulateur d'origine ; mise au point 201 à 220, test 6001 à 6040 ;
+//   monde 't3b' (programme/t3b) : demande sensible au prix (L2b) ; mise au point 221 à 240, test 6041 à 6080 ;
+//   monde 't3c' (programme/t3c) : même monde, confirmation de la chaîne retenue ; test 6081 à 6160.
+// Les graines de test sont refusées hors de leur exécution unique.
 export const T3_CLASSE = { archetype: 'negoce', nHidden: 1, level: 'realiste' };
-export function entreprisePilotee(graine, pilotage = []) {
-  const dev = graine >= 201 && graine <= 220, test = graine >= 6001 && graine <= 6040;
-  if (!Number.isInteger(graine) || !(dev || test)) throw new Error(`graine ${graine} refusée : l’essai de prix travaille sur 201 à 220 (mise au point) et 6001 à 6040 (test)`);
-  if (test && process.env.T3_TEST !== 'exécution-unique') throw new Error('graines de test de T3 refusées : exécution unique, après les réglages écrits au protocole');
-  const { observed, truth } = generate(graine, T3_CLASSE, pilotage);
+const MONDES = { t3: { classe: T3_CLASSE, dev: [201, 220], test: [6001, 6040], cle: 'T3_TEST' }, t3b: { classe: { ...T3_CLASSE, demande: 'sensible' }, dev: [221, 240], test: [6041, 6080], cle: 'T3B_TEST' },
+  t3c: { classe: { ...T3_CLASSE, demande: 'sensible' }, dev: [0, -1], test: [6081, 6160], cle: 'T3C_TEST' } };   // T3c : confirmation, sans mise au point
+export function entreprisePilotee(graine, pilotage = [], monde = 't3') {
+  const M = MONDES[monde];
+  if (!M) throw new Error(`monde inconnu : ${monde}`);
+  const dans = ([a, b]) => Number.isInteger(graine) && graine >= a && graine <= b;
+  if (!dans(M.dev) && !dans(M.test)) throw new Error(`graine ${graine} refusée : ce monde travaille sur ${M.dev.join(' à ')} (mise au point) et ${M.test.join(' à ')} (test)`);
+  if (dans(M.test) && process.env[M.cle] !== 'exécution-unique') throw new Error('graines de test refusées : exécution unique, après les réglages écrits au protocole');
+  const { observed, truth } = generate(graine, M.classe, pilotage);
   const { proxy, unlock } = seal(truth);
   return { observe: observed, verite: proxy, ouvrir: unlock };
 }
