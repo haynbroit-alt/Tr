@@ -81,3 +81,14 @@ prouvent rien ; rien n'a été changé aux dégâts, aux mesures ni aux critère
 écrits avant, même si cet aperçu fait douter de B2.
 
 Exécution : `node scripts/journal-abime.js --sortie programme/abime/resultats.json`, une seule fois.
+
+## 9. Incident et écart au protocole — écrit avant la relance
+
+La première exécution s'est arrêtée faute de mémoire, avant d'avoir ouvert une seule vérité : le script gardait
+les 560 bilans ouverts. Pour le comprendre, j'ai lancé la graine 8001 seule, jusqu'au bout : **j'ai donc vu les
+chiffres d'une entreprise sur quarante** avant l'exécution complète. Rien n'a été changé aux dégâts, aux mesures ni
+aux critères.
+
+Écart au § 4 : la vérité s'ouvre désormais **entreprise par entreprise**, après les quatorze lectures de cette
+entreprise, et non après les 560. Aucune lecture ne dépend d'une vérité ouverte (le script est fixe et poussé) ;
+les résultats sont identiques à ceux qu'aurait donnés le déroulé prévu.

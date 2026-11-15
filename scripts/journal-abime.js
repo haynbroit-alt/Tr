@@ -1,6 +1,6 @@
 // Épreuve JOURNAL-ABÎMÉ — protocole : programme/abime/PROTOCOLE_JOURNAL_ABIME.md.
 // Usage : node scripts/journal-abime.js [--graines 8001-8040] [--sortie programme/abime/resultats.json]
-// LAVOISIER (copie gelée) lit le journal intact puis treize journaux abîmés ; la vérité ne s'ouvre qu'après toutes les lectures.
+// LAVOISIER (copie gelée) lit le journal intact puis treize journaux abîmés ; la vérité d'une entreprise ne s'ouvre qu'après ses quatorze lectures.
 import { writeFileSync } from 'node:fs';
 import * as L from '../src/adaptateurs/lavoisier.js';
 
@@ -35,11 +35,13 @@ if (import.meta.url === `file://${process.argv[1]}`) {
   const lectures = [];
   for (let g = a; g <= b; g++) {
     const E = process.argv.includes('--dev') ? L.entreprise(g) : L.entrepriseAbimee(g), t0 = Date.now();   // --dev : vérification du code sur les graines de développement de LAVOISIER
-    for (const v of variantes(E.observe, g)) { let corps = null, exception = null; try { corps = L.bilanMatiere(v.obs).corps; } catch (e) { exception = String(e.message).slice(0, 200); } lectures.push({ graine: g, classe: E.classe, variante: v.nom, lignes: v.obs.journal.length, corps, exception, E }); }
+    const lues = [];
+    for (const v of variantes(E.observe, g)) { let corps = null, exception = null; try { corps = L.bilanMatiere(v.obs).corps; } catch (e) { exception = String(e.message).slice(0, 200); } lues.push({ graine: g, classe: E.classe, variante: v.nom, lignes: v.obs.journal.length, corps, exception }); }
+    // les quatorze lectures de cette entreprise sont faites : sa vérité s'ouvre (entreprise par entreprise, faute de mémoire pour 560 bilans)
+    E.ouvrir();
+    for (const l of lues) { l.mesures = l.corps ? L.evaluer(E.verite, l.corps) : null; delete l.corps; lectures.push(l); }
     console.error(`graine ${g} (${E.classe.archetype}, ${E.classe.nHidden} flux cachés) : ${((Date.now() - t0) / 1000).toFixed(1)} s`);
   }
-  // toutes les lectures sont faites : la vérité s'ouvre
-  for (const l of lectures) { l.E.ouvrir(); l.mesures = l.corps ? L.evaluer(l.E.verite, l.corps) : null; delete l.corps; }
   const noms = [...new Set(lectures.map((l) => l.variante))], parVariante = Object.fromEntries(noms.map((nom) => {
     const S = lectures.filter((l) => l.variante === nom), M = S.filter((l) => l.mesures).map((l) => l.mesures), somme = (k) => M.reduce((s, m) => s + (m[k] ?? 0), 0);
     return [nom, { lectures: S.length, exceptions: S.filter((l) => l.exception).length, P: med(M.map((m) => m.P)), S: med(M.map((m) => m.S)), L: med(M.map((m) => m.L)), F: med(M.map((m) => m.F)),
@@ -55,5 +57,5 @@ if (import.meta.url === `file://${process.argv[1]}`) {
   console.log('variante          lect. exc.   P        S        L        F     flux retrouvés   FD/entreprise');
   for (const [nom, s] of Object.entries(parVariante)) console.log(`${nom.padEnd(16)} ${String(s.lectures).padStart(5)} ${String(s.exceptions).padStart(4)}  ${f(s.P, 4).padStart(7)}  ${f(s.S, 4).padStart(7)}  ${f(s.L).padStart(6)}  ${f(s.F).padStart(6)}   ${String(s.flux_retrouves).padStart(3)} sur ${String(s.flux_caches).padEnd(3)}      ${f(s.fausses_detections_par_entreprise, 2)}`);
   for (const [k, c] of Object.entries(criteres)) console.log(`${k} : ${c.tenu ? 'tenu' : 'manqué'} ${JSON.stringify(c)}`);
-  if (opt('--sortie')) writeFileSync(opt('--sortie'), JSON.stringify({ protocole: 'programme/abime/PROTOCOLE_JOURNAL_ABIME.md', moteur: L.IDENTITE, criteres, par_variante: parVariante, lectures: lectures.map(({ E, ...l }) => l) }, null, 1) + '\n');
+  if (opt('--sortie')) writeFileSync(opt('--sortie'), JSON.stringify({ protocole: 'programme/abime/PROTOCOLE_JOURNAL_ABIME.md', moteur: L.IDENTITE, criteres, par_variante: parVariante, lectures }, null, 1) + '\n');
 }
