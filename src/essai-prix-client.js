@@ -8,6 +8,7 @@ import { PAS, NIVEAUX, BLOC, BLOCS_COURT, prixDe } from './problemes/essai-prix.
 export const HISTORIQUE = 182, JOURS_REF = 14, TOLERANCE = 0.0051;
 const med = (v) => { const s = [...v].sort((a, b) => a - b); return s.length ? s[s.length >> 1] : null; };
 const sansAccent = (s) => s.normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase().trim().replace(/^"|"$/g, '');
+const FACULTATIF = { promotion: ['promotion', 'promo', 'remise', 'en_promotion'] };
 const ALIAS = { date: ['date', 'jour'], produit: ['produit', 'article', 'reference', 'designation'], quantite: ['quantite', 'qte', 'quantity'], montant: ['montant', 'total', 'ca', 'montant_ht', 'montant ht'] };
 const JOUR = 86400000, iso = (n) => new Date(n * JOUR).toISOString().slice(0, 10);
 export function jourDe(texte) {
@@ -24,13 +25,15 @@ export function lireVentes(texte) {
   const sep = [';', '\t', ','].find((s) => L[0].includes(s)) ?? ',';
   const entete = L[0].split(sep).map(sansAccent), col = {};
   for (const [k, noms] of Object.entries(ALIAS)) { col[k] = entete.findIndex((e) => noms.includes(e)); if (col[k] < 0) throw new Error(`colonne « ${k} » introuvable (en-têtes lus : ${entete.join(', ')})`); }
+  for (const [k, noms] of Object.entries(FACULTATIF)) col[k] = entete.findIndex((e) => noms.includes(e));
+  const oui = (v) => { const x = sansAccent(String(v ?? '')); return x !== '' && x !== '0' && x !== 'non' && x !== 'false' && x !== 'n'; };
   const num = (v) => { const x = String(v ?? '').trim().replace(/\s/g, ''); return Number(sep === ',' ? x : x.replace(',', '.')); };
   const lignes = [];
   let rejetees = 0;
   for (const l of L.slice(1)) {
     const c = l.split(sep), jour = jourDe(c[col.date]), quantite = num(c[col.quantite]), montant = num(c[col.montant]), produit = (c[col.produit] ?? '').trim().replace(/^"|"$/g, '');
     if (jour == null || !produit || !(quantite > 0) || !(montant > 0)) { rejetees++; continue; }
-    lignes.push({ jour, produit, quantite, montant });
+    lignes.push({ jour, produit, quantite, montant, promotion: col.promotion >= 0 && oui(c[col.promotion]) });
   }
   return { lignes, rejetees };
 }
@@ -40,7 +43,7 @@ const LIMITES = [
   'Établi en simulation : le prix choisi après l’essai fait mieux qu’une règle fixe pendant qu’on l’applique.',
   'NON établi : que l’essai se rembourse face à « ne rien changer ». En simulation, près d’une entreprise sur deux y perd.',
   'Une semaine à prix bas peut vendre plus que le réapprovisionnement ne soutient : la hausse des ventes est alors surestimée.',
-  'Pendant l’essai, rien d’autre ne doit changer sur ce produit (promotion, publicité, rupture), sinon la lecture est faussée.',
+  'Pendant l’essai, rien d’autre ne doit changer sur ce produit (promotion, publicité, rupture), sinon la lecture est faussée : sur des ventes réelles de grande distribution, l’effet lu sur le prix venait surtout des promotions.',
 ];
 
 export function produitsEligibles(lignes, jd) {
@@ -75,14 +78,16 @@ export function decider({ lignes, produit, debut, prix_reference, cout }) {
   const niveaux = C.planActif({ text: '1 / p', f: (u) => PAS ** -u[0] }).plan.slice(0, BLOCS_COURT).map((u) => u[0]), fin = jd + BLOC * BLOCS_COURT;
   const premier = (u) => (niveaux.indexOf(u) < 0 ? Infinity : jd + BLOC * niveaux.indexOf(u));
   const q = new Map(NIVEAUX.map((u) => [u, 0]));
-  let hors = 0, total = 0;
+  let hors = 0, total = 0, promo = 0;
   for (const r of lignes) {
     if (r.produit !== produit || r.jour < jd || r.jour >= fin) continue;
+    // ventes signalées en promotion : écartées (PRIX-RÉEL : sur ventes réelles, la promotion vend plus que le prix)
+    if (r.promotion) { promo += r.quantite; continue; }
     total += r.quantite;
     const u = NIVEAUX.find((x) => r.jour >= premier(x) && Math.abs(r.montant / r.quantite - prixDe(pref, x)) <= TOLERANCE);
     if (u == null) hors += r.quantite; else q.set(u, q.get(u) + r.quantite);
   }
-  if (!(total > 0)) return { possible: false, motif: `aucune vente de « ${produit} » entre le ${iso(jd)} et le ${iso(fin - 1)}` };
+  if (!(total > 0)) return { possible: false, motif: `aucune vente de « ${produit} » hors promotion entre le ${iso(jd)} et le ${iso(fin - 1)}` };
   const table = NIVEAUX.map((u) => ({ niveau: u, prix: prixDe(pref, u), jours: BLOC * niveaux.filter((x) => x === u).length, quantite: q.get(u) })).filter((x) => x.jours > 0)
     .map((x) => ({ ...x, par_jour: Number((x.quantite / x.jours).toFixed(3)), marge_par_jour: Number(((x.prix - cout) * x.quantite / x.jours).toFixed(2)) }));
   const max = Math.max(...table.map((x) => x.marge_par_jour)), tri = [...table].sort((a, b) => b.marge_par_jour - a.marge_par_jour || Math.abs(a.niveau) - Math.abs(b.niveau));
@@ -90,8 +95,9 @@ export function decider({ lignes, produit, debut, prix_reference, cout }) {
   const alertes = [];
   if (hors / total > 0.1) alertes.push(`${Math.round((100 * hors) / total)} % des quantités ont été vendues à un prix qui n’est pas celui du plan (remises, autre tarif) : elles ne sont pas comptées, et la lecture en est affaiblie.`);
   if (second && max > 0 && second.marge_par_jour >= 0.9 * max) alertes.push(`Décision fragile : le deuxième prix (${second.prix} €) est à moins de 10 % du premier en marge par jour.`);
+  if (promo > 0) alertes.push(`${Math.round((100 * promo) / (promo + total))} % des quantités étaient signalées en promotion : elles sont écartées, parce qu’une promotion vend plus que son prix. Si elles sont nombreuses, l’essai n’a pas été conduit « toutes choses égales ».`);
   if (max <= 0) alertes.push('Aucun prix essayé ne dégage de marge avec ce coût : vérifier le coût fourni.');
-  return { possible: true, produit, periode: `${iso(jd)} au ${iso(fin - 1)}`, prix_reference: pref, cout, table, prix_retenu: choisi.prix, niveau_retenu: choisi.niveau, change: choisi.niveau !== 0, hors_plan_pct: Number(((100 * hors) / total).toFixed(1)), alertes, limites: LIMITES };
+  return { possible: true, produit, periode: `${iso(jd)} au ${iso(fin - 1)}`, prix_reference: pref, cout, table, prix_retenu: choisi.prix, niveau_retenu: choisi.niveau, change: choisi.niveau !== 0, hors_plan_pct: Number(((100 * hors) / total).toFixed(1)), promotion_pct: Number(((100 * promo) / (promo + total)).toFixed(1)), alertes, limites: LIMITES };
 }
 
 const eur = (x) => `${Number(x).toLocaleString('fr-FR', { minimumFractionDigits: 2, maximumFractionDigits: 2 })} €`;

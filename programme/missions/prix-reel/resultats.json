@@ -1,0 +1,160 @@
+{
+ "protocole": "programme/missions/prix-reel/PROTOCOLE_PRIX_REEL.md",
+ "donnees": {
+  "jus_lignes": 106139,
+  "magasins": 83,
+  "marques": 11,
+  "semaines_promo_pct": 44.73096599741848,
+  "thon_lignes": 2366
+ },
+ "jus": {
+  "series": 913,
+  "etats": {
+   "ne change rien": 212,
+   "non évaluable": 191,
+   "évaluée": 509,
+   "un seul niveau lisible": 1
+  },
+  "changent": 700,
+  "decision_plus_basse": 486,
+  "decision_plus_haute": 214,
+  "decisions": {
+   "0": 212,
+   "1": 86,
+   "-1": 283,
+   "-0.5": 203,
+   "0.5": 128
+  },
+  "hors_grille_moyen": 0.12125034408766443,
+  "R1": {
+   "groupes": 83,
+   "series": 509,
+   "gain_moyen": 0.4059681789564425,
+   "gain_median": 0.35293175806574456,
+   "series_en_gain": 319,
+   "t": 9.844162260220585,
+   "seuil": 1.684,
+   "etabli": true
+  },
+  "R2": {
+   "series": 543,
+   "series_bien_classees": 320,
+   "n": 83,
+   "positifs": 65,
+   "p": 1.0527271216796833e-7,
+   "etabli": true
+  }
+ },
+ "jus_sans_promotion": {
+  "series": 913,
+  "etats": {
+   "trop courte": 335,
+   "ne change rien": 219,
+   "évaluée": 161,
+   "non évaluable": 176,
+   "un seul niveau lisible": 22
+  },
+  "changent": 337,
+  "decision_plus_basse": 205,
+  "decision_plus_haute": 132,
+  "decisions": {
+   "0": 219,
+   "1": 29,
+   "-1": 59,
+   "-0.5": 146,
+   "0.5": 103
+  },
+  "hors_grille_moyen": 0.0735181842016329,
+  "R1": {
+   "groupes": 79,
+   "series": 161,
+   "gain_moyen": 0.060373628115857045,
+   "gain_median": 0.01216116095063188,
+   "series_en_gain": 80,
+   "t": 1.603474910796256,
+   "seuil": 1.684,
+   "etabli": false
+  },
+  "R2": {
+   "series": 220,
+   "series_bien_classees": 116,
+   "n": 80,
+   "positifs": 48,
+   "p": 0.04645594111027313,
+   "etabli": true
+  }
+ },
+ "thon": {
+  "series": 7,
+  "etats": {
+   "ne change rien": 1,
+   "évaluée": 6
+  },
+  "changent": 6,
+  "decision_plus_basse": 6,
+  "decision_plus_haute": 0,
+  "decisions": {
+   "0": 1,
+   "1": 0,
+   "-1": 2,
+   "-0.5": 4,
+   "0.5": 0
+  },
+  "hors_grille_moyen": 0.019442096365173293,
+  "R1": {
+   "groupes": 6,
+   "series": 6,
+   "gain_moyen": 0.3795069628083598,
+   "gain_median": 0.29018436281204,
+   "series_en_gain": 5,
+   "t": 1.5904507248273374,
+   "seuil": 2.015,
+   "etabli": false
+  },
+  "R2": {
+   "series": 7,
+   "series_bien_classees": 5,
+   "n": 7,
+   "positifs": 5,
+   "p": 0.2265625,
+   "etabli": false
+  }
+ },
+ "thon_sans_promotion": {
+  "series": 7,
+  "etats": {
+   "non évaluable": 3,
+   "évaluée": 3,
+   "un seul niveau lisible": 1
+  },
+  "changent": 6,
+  "decision_plus_basse": 6,
+  "decision_plus_haute": 0,
+  "decisions": {
+   "0": 0,
+   "1": 0,
+   "-1": 2,
+   "-0.5": 4,
+   "0.5": 0
+  },
+  "hors_grille_moyen": 0.007127782272487652,
+  "R1": {
+   "groupes": 3,
+   "series": 3,
+   "gain_moyen": 0.17841411716582845,
+   "gain_median": 0.10078262581211203,
+   "series_en_gain": 2,
+   "t": 0.5266632285291825,
+   "seuil": 2.92,
+   "etabli": false
+  },
+  "R2": {
+   "series": 2,
+   "series_bien_classees": 2,
+   "n": 2,
+   "positifs": 2,
+   "p": 0.25,
+   "etabli": false
+  }
+ }
+}
