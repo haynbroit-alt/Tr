@@ -1,0 +1,8553 @@
+{
+ "protocole": "programme/t3f/PROTOCOLE_T3F.md",
+ "agregat": {
+  "entreprises": 120,
+  "mesurees": 120,
+  "moyennes": {
+   "regle": 0.17090786306255396,
+   "mixte": 0.1809679541008968,
+   "chaine": 0.1623706852332742,
+   "aveugle:-1": -0.1378786519710783,
+   "aveugle:-0.5": 0.019956587709928975,
+   "aveugle:0": 0.08913410847319336,
+   "aveugle:0.5": 0.0877789208701158,
+   "aveugle:1": 0.04364651418746051
+  },
+  "F1": {
+   "n": 120,
+   "moyenne": 0.08177375458936063,
+   "t": 2.158145620523986,
+   "seuil": 1.684,
+   "etabli": true
+  },
+  "F2": {
+   "n": 120,
+   "moyenne": 0.008537177829279829,
+   "t": 0.4298447956224846,
+   "seuil": 1.684,
+   "etabli": false
+  },
+  "F2_inverse": {
+   "n": 120,
+   "moyenne": -0.008537177829279829,
+   "t": -0.4298447956224846,
+   "seuil": 1.684,
+   "etabli": false
+  },
+  "F3": {
+   "n": 120,
+   "moyenne": 0.018597268867622665,
+   "t": 1.1819991854082241,
+   "seuil": 1.684,
+   "etabli": false
+  },
+  "F4": {
+   "regle": 27,
+   "mixte": 56,
+   "chaine": 50,
+   "tenu": false
+  },
+  "chaine_contre_prix_tenu": {
+   "n": 120,
+   "moyenne": 0.07323657676008083,
+   "t": 2.5918845048037515,
+   "seuil": 1.684,
+   "etabli": true
+  },
+  "mixte_contre_prix_tenu": {
+   "n": 120,
+   "moyenne": 0.0918338456277035,
+   "t": 2.320894696256763,
+   "seuil": 1.684,
+   "etabli": true
+  },
+  "mixte_contre_regle": {
+   "n": 120,
+   "moyenne": 0.01006009103834284,
+   "t": 0.8390195459460891,
+   "seuil": 1.684,
+   "etabli": false
+  },
+  "cout_exact": 119,
+  "cout_indisponible": 0,
+  "par_zone": {
+   "bas": {
+    "n": 19,
+    "regle": 0.749189341184541,
+    "mixte": 0.749189341184541,
+    "chaine": 0.5521680977972929,
+    "aveugle:-1": -0.7415871608812724,
+    "aveugle:-0.5": -0.10395966051693947,
+    "aveugle:0": 0.34289755822436485,
+    "aveugle:0.5": 0.6146847316611888,
+    "aveugle:1": 0.749189341184541,
+    "chaine_contre_prix_tenu": {
+     "n": 19,
+     "moyenne": 0.209270539572928,
+     "t": 1.4946895261610686,
+     "seuil": 1.734,
+     "etabli": false
+    },
+    "regle_contre_chaine": {
+     "n": 19,
+     "moyenne": 0.19702124338724789,
+     "t": 3.27860645886904,
+     "seuil": 1.734,
+     "etabli": true
+    }
+   },
+   "milieu": {
+    "n": 63,
+    "regle": 0.024297102245493113,
+    "mixte": 0.043459180413765196,
+    "chaine": 0.043459180413765196,
+    "aveugle:-1": -0.11426842576697378,
+    "aveugle:-0.5": -0.001039015592355404,
+    "aveugle:0": 0.024297102245493113,
+    "aveugle:0.5": -0.018011893186978982,
+    "aveugle:1": -0.09844146906296396,
+    "chaine_contre_prix_tenu": {
+     "n": 63,
+     "moyenne": 0.019162078168272072,
+     "t": 0.8380696730475907,
+     "seuil": 1.684,
+     "etabli": false
+    },
+    "regle_contre_chaine": {
+     "n": 63,
+     "moyenne": -0.019162078168272072,
+     "t": -0.8380696730475907,
+     "seuil": 1.684,
+     "etabli": false
+    }
+   },
+   "haut": {
+    "n": 38,
+    "regle": 0.12483233272458258,
+    "mixte": 0.12483233272458258,
+    "chaine": 0.16461473694150333,
+    "aveugle:-1": 0.12483233272458258,
+    "aveugle:-0.5": 0.11672321203504522,
+    "aveugle:0": 0.06974531497511056,
+    "aveugle:0.5": -0.00028395069392131764,
+    "aveugle:1": -0.07355797971169169,
+    "chaine_contre_prix_tenu": {
+     "n": 38,
+     "moyenne": 0.09486942196639277,
+     "t": 2.4538492138787795,
+     "seuil": 1.687,
+     "etabli": true
+    },
+    "regle_contre_chaine": {
+     "n": 38,
+     "moyenne": -0.03978240421692076,
+     "t": -1.2005577855256422,
+     "seuil": 1.687,
+     "etabli": false
+    }
+   }
+  }
+ },
+ "entreprises": [
+  {
+   "graine": 6281,
+   "monde": "t3f",
+   "ecartee": false,
+   "objet": "quwoze9",
+   "prix_reference": 21.67,
+   "cout_vrai": 11.042,
+   "cout_au_jour_183": 11.042,
+   "taux_de_marge": 1.962,
+   "zone": "milieu",
+   "decision_regle": 0,
+   "decision_chaine": 0,
+   "bras": {
+    "nul": {
+     "essai": 9816.62,
+     "exploitation": 8410.16,
+     "total": 18226.78,
+     "profit_2e_semestre": -45081.25
+    },
+    "chaine": {
+     "essai": 8391.22,
+     "exploitation": 8757.09,
+     "total": 17148.32,
+     "profit_2e_semestre": -46100.04
+    },
+    "aveugle:-1": {
+     "essai": 8041.96,
+     "exploitation": 7846.73,
+     "total": 15888.69,
+     "profit_2e_semestre": -47433.65
+    },
+    "aveugle:-0.5": {
+     "essai": 8687.72,
+     "exploitation": 8529.3,
+     "total": 17217.02,
+     "profit_2e_semestre": -46063.75
+    },
+    "aveugle:0": {
+     "essai": 9044.04,
+     "exploitation": 8512.66,
+     "total": 17556.69,
+     "profit_2e_semestre": -45638.53
+    },
+    "aveugle:0.5": {
+     "essai": 8920.89,
+     "exploitation": 9059.84,
+     "total": 17980.73,
+     "profit_2e_semestre": -45379.38
+    },
+    "aveugle:1": {
+     "essai": 8408.91,
+     "exploitation": 7574.44,
+     "total": 15983.35,
+     "profit_2e_semestre": -47487.13
+    },
+    "regle": {
+     "essai": 9044.04,
+     "exploitation": 8512.66,
+     "total": 17556.69,
+     "profit_2e_semestre": -45638.53
+    },
+    "mixte": {
+     "essai": 8391.22,
+     "exploitation": 8757.09,
+     "total": 17148.32,
+     "profit_2e_semestre": -46100.04
+    }
+   },
+   "secs": 4.5
+  },
+  {
+   "graine": 6282,
+   "monde": "t3f",
+   "ecartee": false,
+   "objet": "xiqume9",
+   "prix_reference": 86.15,
+   "cout_vrai": 67.982,
+   "cout_au_jour_183": 67.982,
+   "taux_de_marge": 1.267,
+   "zone": "bas",
+   "decision_regle": 1,
+   "decision_chaine": 1,
+   "bras": {
+    "nul": {
+     "essai": 25703.03,
+     "exploitation": 19384.62,
+     "total": 45087.65,
+     "profit_2e_semestre": 985539.94
+    },
+    "chaine": {
+     "essai": 28067.1,
+     "exploitation": 33315.16,
+     "total": 61382.26,
+     "profit_2e_semestre": 985518
+    },
+    "aveugle:-1": {
+     "essai": 1836.95,
+     "exploitation": 1552.68,
+     "total": 3389.63,
+     "profit_2e_semestre": 926563.17
+    },
+    "aveugle:-0.5": {
+     "essai": 15470.31,
+     "exploitation": 12758.92,
+     "total": 28229.23,
+     "profit_2e_semestre": 951938.73
+    },
+    "aveugle:0": {
+     "essai": 25707.97,
+     "exploitation": 22056.17,
+     "total": 47764.13,
+     "profit_2e_semestre": 971759.91
+    },
+    "aveugle:0.5": {
+     "essai": 32758.93,
+     "exploitation": 27969.78,
+     "total": 60728.71,
+     "profit_2e_semestre": 985147.09
+    },
+    "aveugle:1": {
+     "essai": 37325.69,
+     "exploitation": 33116.62,
+     "total": 70442.3,
+     "profit_2e_semestre": 994858.31
+    },
+    "regle": {
+     "essai": 37325.69,
+     "exploitation": 33116.62,
+     "total": 70442.3,
+     "profit_2e_semestre": 994858.31
+    },
+    "mixte": {
+     "essai": 37325.69,
+     "exploitation": 33116.62,
+     "total": 70442.3,
+     "profit_2e_semestre": 994858.31
+    }
+   },
+   "secs": 10.5
+  },
+  {
+   "graine": 6283,
+   "monde": "t3f",
+   "ecartee": false,
+   "objet": "huzoje6",
+   "prix_reference": 10.06,
+   "cout_vrai": 5.81,
+   "cout_au_jour_183": 5.81,
+   "taux_de_marge": 1.731,
+   "zone": "milieu",
+   "decision_regle": 0,
+   "decision_chaine": -1,
+   "bras": {
+    "nul": {
+     "essai": 6440.41,
+     "exploitation": 5701.06,
+     "total": 12141.47,
+     "profit_2e_semestre": 239937.01
+    },
+    "chaine": {
+     "essai": 6121.37,
+     "exploitation": 6588.12,
+     "total": 12709.49,
+     "profit_2e_semestre": 240410.46
+    },
+    "aveugle:-1": {
+     "essai": 6743.56,
+     "exploitation": 6300.11,
+     "total": 13043.67,
+     "profit_2e_semestre": 240813.17
+    },
+    "aveugle:-0.5": {
+     "essai": 6698.25,
+     "exploitation": 6513.25,
+     "total": 13211.49,
+     "profit_2e_semestre": 240918.3
+    },
+    "aveugle:0": {
+     "essai": 6480.7,
+     "exploitation": 6119.48,
+     "total": 12600.19,
+     "profit_2e_semestre": 240357.98
+    },
+    "aveugle:0.5": {
+     "essai": 5711.62,
+     "exploitation": 5379.81,
+     "total": 11091.43,
+     "profit_2e_semestre": 238847.18
+    },
+    "aveugle:1": {
+     "essai": 4887.68,
+     "exploitation": 4481.5,
+     "total": 9369.18,
+     "profit_2e_semestre": 237116.6
+    },
+    "regle": {
+     "essai": 6480.7,
+     "exploitation": 6119.48,
+     "total": 12600.19,
+     "profit_2e_semestre": 240357.98
+    },
+    "mixte": {
+     "essai": 6121.37,
+     "exploitation": 6588.12,
+     "total": 12709.49,
+     "profit_2e_semestre": 240410.46
+    }
+   },
+   "secs": 8.1
+  },
+  {
+   "graine": 6284,
+   "monde": "t3f",
+   "ecartee": false,
+   "objet": "fomi1",
+   "prix_reference": 20.03,
+   "cout_vrai": 9.166,
+   "cout_au_jour_183": 9.166,
+   "taux_de_marge": 2.185,
+   "zone": "haut",
+   "decision_regle": -1,
+   "decision_chaine": 1,
+   "bras": {
+    "nul": {
+     "essai": 18508.2,
+     "exploitation": 16274.71,
+     "total": 34782.91,
+     "profit_2e_semestre": 63732.8
+    },
+    "chaine": {
+     "essai": 19943.92,
+     "exploitation": 18509.6,
+     "total": 38453.53,
+     "profit_2e_semestre": 69387.79
+    },
+    "aveugle:-1": {
+     "essai": 14490.29,
+     "exploitation": 12118.66,
+     "total": 26608.95,
+     "profit_2e_semestre": 56989.97
+    },
+    "aveugle:-0.5": {
+     "essai": 16554.65,
+     "exploitation": 13595.65,
+     "total": 30150.3,
+     "profit_2e_semestre": 59043.45
+    },
+    "aveugle:0": {
+     "essai": 18360.91,
+     "exploitation": 16655.19,
+     "total": 35016.1,
+     "profit_2e_semestre": 64029.22
+    },
+    "aveugle:0.5": {
+     "essai": 20537.56,
+     "exploitation": 16914.06,
+     "total": 37451.62,
+     "profit_2e_semestre": 68552.32
+    },
+    "aveugle:1": {
+     "essai": 22573.46,
+     "exploitation": 18017.49,
+     "total": 40590.95,
+     "profit_2e_semestre": 69909.7
+    },
+    "regle": {
+     "essai": 14490.29,
+     "exploitation": 12118.66,
+     "total": 26608.95,
+     "profit_2e_semestre": 56989.97
+    },
+    "mixte": {
+     "essai": 14490.29,
+     "exploitation": 12118.66,
+     "total": 26608.95,
+     "profit_2e_semestre": 56989.97
+    }
+   },
+   "secs": 3.5
+  },
+  {
+   "graine": 6285,
+   "monde": "t3f",
+   "ecartee": false,
+   "objet": "gego1",
+   "prix_reference": 19.37,
+   "cout_vrai": 11.411,
+   "cout_au_jour_183": 11.411,
+   "taux_de_marge": 1.698,
+   "zone": "milieu",
+   "decision_regle": 0,
+   "decision_chaine": 0,
+   "bras": {
+    "nul": {
+     "essai": 10443.76,
+     "exploitation": 10757.76,
+     "total": 21201.51,
+     "profit_2e_semestre": 89689.38
+    },
+    "chaine": {
+     "essai": 11303.83,
+     "exploitation": 11644.71,
+     "total": 22948.54,
+     "profit_2e_semestre": 91430.52
+    },
+    "aveugle:-1": {
+     "essai": 8187.12,
+     "exploitation": 8264.82,
+     "total": 16451.94,
+     "profit_2e_semestre": 84938
+    },
+    "aveugle:-0.5": {
+     "essai": 10092.7,
+     "exploitation": 10134.13,
+     "total": 20226.83,
+     "profit_2e_semestre": 88714.73
+    },
+    "aveugle:0": {
+     "essai": 11581.03,
+     "exploitation": 11628.79,
+     "total": 23209.82,
+     "profit_2e_semestre": 91723.63
+    },
+    "aveugle:0.5": {
+     "essai": 12535.1,
+     "exploitation": 12637.6,
+     "total": 25172.7,
+     "profit_2e_semestre": 97544.52
+    },
+    "aveugle:1": {
+     "essai": 13593.04,
+     "exploitation": 13465.04,
+     "total": 27058.08,
+     "profit_2e_semestre": 95540.06
+    },
+    "regle": {
+     "essai": 11581.03,
+     "exploitation": 11628.79,
+     "total": 23209.82,
+     "profit_2e_semestre": 91723.63
+    },
+    "mixte": {
+     "essai": 11303.83,
+     "exploitation": 11644.71,
+     "total": 22948.54,
+     "profit_2e_semestre": 91430.52
+    }
+   },
+   "secs": 6.8
+  },
+  {
+   "graine": 6286,
+   "monde": "t3f",
+   "ecartee": false,
+   "objet": "kize2",
+   "prix_reference": 41.69,
+   "cout_vrai": 18.313,
+   "cout_au_jour_183": 18.313,
+   "taux_de_marge": 2.277,
+   "zone": "haut",
+   "decision_regle": -1,
+   "decision_chaine": -1,
+   "bras": {
+    "nul": {
+     "essai": 12147.56,
+     "exploitation": 9971.53,
+     "total": 22119.09,
+     "profit_2e_semestre": 263345.85
+    },
+    "chaine": {
+     "essai": 15703.39,
+     "exploitation": 16330.51,
+     "total": 32033.9,
+     "profit_2e_semestre": 273260.65
+    },
+    "aveugle:-1": {
+     "essai": 18691.37,
+     "exploitation": 16119.99,
+     "total": 34811.36,
+     "profit_2e_semestre": 276128.34
+    },
+    "aveugle:-0.5": {
+     "essai": 15865.03,
+     "exploitation": 13758.55,
+     "total": 29623.58,
+     "profit_2e_semestre": 271021.12
+    },
+    "aveugle:0": {
+     "essai": 13301.69,
+     "exploitation": 11623.59,
+     "total": 24925.27,
+     "profit_2e_semestre": 266193.72
+    },
+    "aveugle:0.5": {
+     "essai": 11214.06,
+     "exploitation": 9564.49,
+     "total": 20778.55,
+     "profit_2e_semestre": 261968.68
+    },
+    "aveugle:1": {
+     "essai": 9023.88,
+     "exploitation": 7469.2,
+     "total": 16493.09,
+     "profit_2e_semestre": 257787.44
+    },
+    "regle": {
+     "essai": 18691.37,
+     "exploitation": 16119.99,
+     "total": 34811.36,
+     "profit_2e_semestre": 276128.34
+    },
+    "mixte": {
+     "essai": 18691.37,
+     "exploitation": 16119.99,
+     "total": 34811.36,
+     "profit_2e_semestre": 276128.34
+    }
+   },
+   "secs": 6.8
+  },
+  {
+   "graine": 6287,
+   "monde": "t3f",
+   "ecartee": false,
+   "objet": "jima6",
+   "prix_reference": 6.09,
+   "cout_vrai": 4.409,
+   "cout_au_jour_183": 4.409,
+   "taux_de_marge": 1.381,
+   "zone": "bas",
+   "decision_regle": 1,
+   "decision_chaine": 1,
+   "bras": {
+    "nul": {
+     "essai": 1399.41,
+     "exploitation": 1325.91,
+     "total": 2725.32,
+     "profit_2e_semestre": -94648.79
+    },
+    "chaine": {
+     "essai": 975.48,
+     "exploitation": 848.23,
+     "total": 1823.72,
+     "profit_2e_semestre": -95574.64
+    },
+    "aveugle:-1": {
+     "essai": 781.66,
+     "exploitation": 817.61,
+     "total": 1599.27,
+     "profit_2e_semestre": -94562.17
+    },
+    "aveugle:-0.5": {
+     "essai": 1355.23,
+     "exploitation": 1358.36,
+     "total": 2713.59,
+     "profit_2e_semestre": -94659.81
+    },
+    "aveugle:0": {
+     "essai": 1396.82,
+     "exploitation": 1322.86,
+     "total": 2719.67,
+     "profit_2e_semestre": -94648.44
+    },
+    "aveugle:0.5": {
+     "essai": 1171.63,
+     "exploitation": 1041.98,
+     "total": 2213.62,
+     "profit_2e_semestre": -95143.94
+    },
+    "aveugle:1": {
+     "essai": 793.21,
+     "exploitation": 829.03,
+     "total": 1622.24,
+     "profit_2e_semestre": -95637.89
+    },
+    "regle": {
+     "essai": 793.21,
+     "exploitation": 829.03,
+     "total": 1622.24,
+     "profit_2e_semestre": -95637.89
+    },
+    "mixte": {
+     "essai": 793.21,
+     "exploitation": 829.03,
+     "total": 1622.24,
+     "profit_2e_semestre": -95637.89
+    }
+   },
+   "secs": 6.1
+  },
+  {
+   "graine": 6288,
+   "monde": "t3f",
+   "ecartee": false,
+   "objet": "wodu1",
+   "prix_reference": 9.68,
+   "cout_vrai": 5.311,
+   "cout_au_jour_183": 5.311,
+   "taux_de_marge": 1.823,
+   "zone": "milieu",
+   "decision_regle": 0,
+   "decision_chaine": 1,
+   "bras": {
+    "nul": {
+     "essai": 5902.14,
+     "exploitation": 5482.7,
+     "total": 11384.84,
+     "profit_2e_semestre": 93738.17
+    },
+    "chaine": {
+     "essai": 5963.68,
+     "exploitation": 6117.18,
+     "total": 12080.87,
+     "profit_2e_semestre": 95254.8
+    },
+    "aveugle:-1": {
+     "essai": 3719.3,
+     "exploitation": 3498.23,
+     "total": 7217.53,
+     "profit_2e_semestre": 89244.98
+    },
+    "aveugle:-0.5": {
+     "essai": 4839.78,
+     "exploitation": 4126.37,
+     "total": 8966.15,
+     "profit_2e_semestre": 90972.93
+    },
+    "aveugle:0": {
+     "essai": 5885.48,
+     "exploitation": 5234.45,
+     "total": 11119.94,
+     "profit_2e_semestre": 93425.3
+    },
+    "aveugle:0.5": {
+     "essai": 6765.45,
+     "exploitation": 5762.76,
+     "total": 12528.21,
+     "profit_2e_semestre": 95988.04
+    },
+    "aveugle:1": {
+     "essai": 6830.06,
+     "exploitation": 6300.5,
+     "total": 13130.56,
+     "profit_2e_semestre": 95392.23
+    },
+    "regle": {
+     "essai": 5885.48,
+     "exploitation": 5234.45,
+     "total": 11119.94,
+     "profit_2e_semestre": 93425.3
+    },
+    "mixte": {
+     "essai": 5963.68,
+     "exploitation": 6117.18,
+     "total": 12080.87,
+     "profit_2e_semestre": 95254.8
+    }
+   },
+   "secs": 3.8
+  },
+  {
+   "graine": 6289,
+   "monde": "t3f",
+   "ecartee": false,
+   "objet": "sewa5",
+   "prix_reference": 15.49,
+   "cout_vrai": 6.934,
+   "cout_au_jour_183": 6.934,
+   "taux_de_marge": 2.234,
+   "zone": "haut",
+   "decision_regle": -1,
+   "decision_chaine": 0,
+   "bras": {
+    "nul": {
+     "essai": 15536.16,
+     "exploitation": 12043.47,
+     "total": 27579.63,
+     "profit_2e_semestre": 410198.12
+    },
+    "chaine": {
+     "essai": 16145.62,
+     "exploitation": 16691.91,
+     "total": 32837.53,
+     "profit_2e_semestre": 414864.6
+    },
+    "aveugle:-1": {
+     "essai": 14757.3,
+     "exploitation": 14342.68,
+     "total": 29099.99,
+     "profit_2e_semestre": 414567.09
+    },
+    "aveugle:-0.5": {
+     "essai": 16071.77,
+     "exploitation": 15808.98,
+     "total": 31880.76,
+     "profit_2e_semestre": 414178.36
+    },
+    "aveugle:0": {
+     "essai": 16760.35,
+     "exploitation": 16247.02,
+     "total": 33007.37,
+     "profit_2e_semestre": 415333.43
+    },
+    "aveugle:0.5": {
+     "essai": 17053.1,
+     "exploitation": 16938.86,
+     "total": 33991.96,
+     "profit_2e_semestre": 416013
+    },
+    "aveugle:1": {
+     "essai": 16352.04,
+     "exploitation": 15929.57,
+     "total": 32281.62,
+     "profit_2e_semestre": 414823.05
+    },
+    "regle": {
+     "essai": 14757.3,
+     "exploitation": 14342.68,
+     "total": 29099.99,
+     "profit_2e_semestre": 414567.09
+    },
+    "mixte": {
+     "essai": 14757.3,
+     "exploitation": 14342.68,
+     "total": 29099.99,
+     "profit_2e_semestre": 414567.09
+    }
+   },
+   "secs": 5.4
+  },
+  {
+   "graine": 6290,
+   "monde": "t3f",
+   "ecartee": false,
+   "objet": "digo2",
+   "prix_reference": 8.73,
+   "cout_vrai": 5.066,
+   "cout_au_jour_183": 5.066,
+   "taux_de_marge": 1.723,
+   "zone": "milieu",
+   "decision_regle": 0,
+   "decision_chaine": -1,
+   "bras": {
+    "nul": {
+     "essai": 2971.84,
+     "exploitation": 2475.81,
+     "total": 5447.65,
+     "profit_2e_semestre": 74005.51
+    },
+    "chaine": {
+     "essai": 3237.39,
+     "exploitation": 3445.95,
+     "total": 6683.34,
+     "profit_2e_semestre": 75245.03
+    },
+    "aveugle:-1": {
+     "essai": 3786.71,
+     "exploitation": 3432.54,
+     "total": 7219.26,
+     "profit_2e_semestre": 77004.89
+    },
+    "aveugle:-0.5": {
+     "essai": 3556.76,
+     "exploitation": 3180.78,
+     "total": 6737.54,
+     "profit_2e_semestre": 76600
+    },
+    "aveugle:0": {
+     "essai": 2968.18,
+     "exploitation": 2583.41,
+     "total": 5551.59,
+     "profit_2e_semestre": 74113.11
+    },
+    "aveugle:0.5": {
+     "essai": 2274.8,
+     "exploitation": 2060.85,
+     "total": 4335.65,
+     "profit_2e_semestre": 72989.4
+    },
+    "aveugle:1": {
+     "essai": 1817.61,
+     "exploitation": 1416.68,
+     "total": 3234.29,
+     "profit_2e_semestre": 71883.33
+    },
+    "regle": {
+     "essai": 2968.18,
+     "exploitation": 2583.41,
+     "total": 5551.59,
+     "profit_2e_semestre": 74113.11
+    },
+    "mixte": {
+     "essai": 3237.39,
+     "exploitation": 3445.95,
+     "total": 6683.34,
+     "profit_2e_semestre": 75245.03
+    }
+   },
+   "secs": 8.7
+  },
+  {
+   "graine": 6291,
+   "monde": "t3f",
+   "ecartee": false,
+   "objet": "nihi8",
+   "prix_reference": 18.15,
+   "cout_vrai": 11.276,
+   "cout_au_jour_183": 11.276,
+   "taux_de_marge": 1.61,
+   "zone": "milieu",
+   "decision_regle": 0,
+   "decision_chaine": -1,
+   "bras": {
+    "nul": {
+     "essai": 7657.55,
+     "exploitation": 8573.07,
+     "total": 16230.62,
+     "profit_2e_semestre": 695830.39
+    },
+    "chaine": {
+     "essai": 9806.65,
+     "exploitation": 12597.7,
+     "total": 22404.35,
+     "profit_2e_semestre": 702010.61
+    },
+    "aveugle:-1": {
+     "essai": 12393.31,
+     "exploitation": 12896.18,
+     "total": 25289.48,
+     "profit_2e_semestre": 704905.48
+    },
+    "aveugle:-0.5": {
+     "essai": 11523.75,
+     "exploitation": 12474.98,
+     "total": 23998.73,
+     "profit_2e_semestre": 703608.4
+    },
+    "aveugle:0": {
+     "essai": 9328.45,
+     "exploitation": 10476.47,
+     "total": 19804.92,
+     "profit_2e_semestre": 699404.69
+    },
+    "aveugle:0.5": {
+     "essai": 7076.24,
+     "exploitation": 7941.62,
+     "total": 15017.86,
+     "profit_2e_semestre": 694617.62
+    },
+    "aveugle:1": {
+     "essai": 5262,
+     "exploitation": 5992.52,
+     "total": 11254.52,
+     "profit_2e_semestre": 690854.29
+    },
+    "regle": {
+     "essai": 9328.45,
+     "exploitation": 10476.47,
+     "total": 19804.92,
+     "profit_2e_semestre": 699404.69
+    },
+    "mixte": {
+     "essai": 9806.65,
+     "exploitation": 12597.7,
+     "total": 22404.35,
+     "profit_2e_semestre": 702010.61
+    }
+   },
+   "secs": 12
+  },
+  {
+   "graine": 6292,
+   "monde": "t3f",
+   "ecartee": false,
+   "objet": "muxoki1",
+   "prix_reference": 54.93,
+   "cout_vrai": 25.404,
+   "cout_au_jour_183": 25.404,
+   "taux_de_marge": 2.162,
+   "zone": "haut",
+   "decision_regle": -1,
+   "decision_chaine": 1,
+   "bras": {
+    "nul": {
+     "essai": 48527.57,
+     "exploitation": 44494.52,
+     "total": 93022.09,
+     "profit_2e_semestre": 580533.66
+    },
+    "chaine": {
+     "essai": 47643.87,
+     "exploitation": 45677.87,
+     "total": 93321.74,
+     "profit_2e_semestre": 581247.09
+    },
+    "aveugle:-1": {
+     "essai": 41334.31,
+     "exploitation": 38702.26,
+     "total": 80036.56,
+     "profit_2e_semestre": 568096.82
+    },
+    "aveugle:-0.5": {
+     "essai": 44722.69,
+     "exploitation": 41756.99,
+     "total": 86479.68,
+     "profit_2e_semestre": 574327.59
+    },
+    "aveugle:0": {
+     "essai": 48185.72,
+     "exploitation": 43077.8,
+     "total": 91263.52,
+     "profit_2e_semestre": 579386.77
+    },
+    "aveugle:0.5": {
+     "essai": 48679.52,
+     "exploitation": 45258.99,
+     "total": 93938.51,
+     "profit_2e_semestre": 582168.02
+    },
+    "aveugle:1": {
+     "essai": 50219.71,
+     "exploitation": 45029.04,
+     "total": 95248.75,
+     "profit_2e_semestre": 583828.17
+    },
+    "regle": {
+     "essai": 41334.31,
+     "exploitation": 38702.26,
+     "total": 80036.56,
+     "profit_2e_semestre": 568096.82
+    },
+    "mixte": {
+     "essai": 41334.31,
+     "exploitation": 38702.26,
+     "total": 80036.56,
+     "profit_2e_semestre": 568096.82
+    }
+   },
+   "secs": 9.5
+  },
+  {
+   "graine": 6293,
+   "monde": "t3f",
+   "ecartee": false,
+   "objet": "jecipi8",
+   "prix_reference": 238.23,
+   "cout_vrai": 143.085,
+   "cout_au_jour_183": 143.085,
+   "taux_de_marge": 1.665,
+   "zone": "milieu",
+   "decision_regle": 0,
+   "decision_chaine": 1,
+   "bras": {
+    "nul": {
+     "essai": 185338.88,
+     "exploitation": 184128.36,
+     "total": 369467.24,
+     "profit_2e_semestre": 513538.54
+    },
+    "chaine": {
+     "essai": 203330.38,
+     "exploitation": 246278.52,
+     "total": 449608.9,
+     "profit_2e_semestre": 570566.34
+    },
+    "aveugle:-1": {
+     "essai": 104773.67,
+     "exploitation": 105581.08,
+     "total": 210354.75,
+     "profit_2e_semestre": 350895.47
+    },
+    "aveugle:-0.5": {
+     "essai": 146149.27,
+     "exploitation": 141529.61,
+     "total": 287678.89,
+     "profit_2e_semestre": 398562.53
+    },
+    "aveugle:0": {
+     "essai": 185342.19,
+     "exploitation": 180299.52,
+     "total": 365641.71,
+     "profit_2e_semestre": 508710.3
+    },
+    "aveugle:0.5": {
+     "essai": 221856.93,
+     "exploitation": 218671.87,
+     "total": 440528.8,
+     "profit_2e_semestre": 549806.25
+    },
+    "aveugle:1": {
+     "essai": 265628.25,
+     "exploitation": 255263.02,
+     "total": 520891.27,
+     "profit_2e_semestre": 633018.92
+    },
+    "regle": {
+     "essai": 185342.19,
+     "exploitation": 180299.52,
+     "total": 365641.71,
+     "profit_2e_semestre": 508710.3
+    },
+    "mixte": {
+     "essai": 203330.38,
+     "exploitation": 246278.52,
+     "total": 449608.9,
+     "profit_2e_semestre": 570566.34
+    }
+   },
+   "secs": 3.6
+  },
+  {
+   "graine": 6294,
+   "monde": "t3f",
+   "ecartee": false,
+   "objet": "fudelo3",
+   "prix_reference": 454.96,
+   "cout_vrai": 179.841,
+   "cout_au_jour_183": 179.841,
+   "taux_de_marge": 2.53,
+   "zone": "haut",
+   "decision_regle": -1,
+   "decision_chaine": -1,
+   "bras": {
+    "nul": {
+     "essai": 270168.97,
+     "exploitation": 281448.9,
+     "total": 551617.87,
+     "profit_2e_semestre": 538770.85
+    },
+    "chaine": {
+     "essai": 256629.3,
+     "exploitation": 256123.64,
+     "total": 512752.94,
+     "profit_2e_semestre": 497177.31
+    },
+    "aveugle:-1": {
+     "essai": 243602.85,
+     "exploitation": 263488.8,
+     "total": 507091.65,
+     "profit_2e_semestre": 482663.9
+    },
+    "aveugle:-0.5": {
+     "essai": 259108.71,
+     "exploitation": 267056.83,
+     "total": 526165.54,
+     "profit_2e_semestre": 513714.71
+    },
+    "aveugle:0": {
+     "essai": 270167,
+     "exploitation": 280621.52,
+     "total": 550788.52,
+     "profit_2e_semestre": 538766.66
+    },
+    "aveugle:0.5": {
+     "essai": 273577.53,
+     "exploitation": 289689.66,
+     "total": 563267.19,
+     "profit_2e_semestre": 547924.87
+    },
+    "aveugle:1": {
+     "essai": 285422.61,
+     "exploitation": 299810.4,
+     "total": 585233.01,
+     "profit_2e_semestre": 566008.11
+    },
+    "regle": {
+     "essai": 243602.85,
+     "exploitation": 263488.8,
+     "total": 507091.65,
+     "profit_2e_semestre": 482663.9
+    },
+    "mixte": {
+     "essai": 243602.85,
+     "exploitation": 263488.8,
+     "total": 507091.65,
+     "profit_2e_semestre": 482663.9
+    }
+   },
+   "secs": 5.6
+  },
+  {
+   "graine": 6295,
+   "monde": "t3f",
+   "ecartee": false,
+   "objet": "kudu0",
+   "prix_reference": 4.38,
+   "cout_vrai": 2.541,
+   "cout_au_jour_183": 2.541,
+   "taux_de_marge": 1.724,
+   "zone": "milieu",
+   "decision_regle": 0,
+   "decision_chaine": 0,
+   "bras": {
+    "nul": {
+     "essai": 2709.89,
+     "exploitation": 2907.19,
+     "total": 5617.08,
+     "profit_2e_semestre": 176949.91
+    },
+    "chaine": {
+     "essai": 2533.34,
+     "exploitation": 2840.1,
+     "total": 5373.44,
+     "profit_2e_semestre": 176699.4
+    },
+    "aveugle:-1": {
+     "essai": 2097.34,
+     "exploitation": 2094.46,
+     "total": 4191.79,
+     "profit_2e_semestre": 175511.74
+    },
+    "aveugle:-0.5": {
+     "essai": 2487.13,
+     "exploitation": 2605.76,
+     "total": 5092.89,
+     "profit_2e_semestre": 176435.4
+    },
+    "aveugle:0": {
+     "essai": 2672.71,
+     "exploitation": 2840.1,
+     "total": 5512.8,
+     "profit_2e_semestre": 176838.76
+    },
+    "aveugle:0.5": {
+     "essai": 2741.49,
+     "exploitation": 2880.88,
+     "total": 5622.36,
+     "profit_2e_semestre": 176997.16
+    },
+    "aveugle:1": {
+     "essai": 2707.22,
+     "exploitation": 2936.5,
+     "total": 5643.73,
+     "profit_2e_semestre": 176966.33
+    },
+    "regle": {
+     "essai": 2672.71,
+     "exploitation": 2840.1,
+     "total": 5512.8,
+     "profit_2e_semestre": 176838.76
+    },
+    "mixte": {
+     "essai": 2533.34,
+     "exploitation": 2840.1,
+     "total": 5373.44,
+     "profit_2e_semestre": 176699.4
+    }
+   },
+   "secs": 8.9
+  },
+  {
+   "graine": 6296,
+   "monde": "t3f",
+   "ecartee": false,
+   "objet": "fusose3",
+   "prix_reference": 142.89,
+   "cout_vrai": 114.781,
+   "cout_au_jour_183": 114.781,
+   "taux_de_marge": 1.245,
+   "zone": "bas",
+   "decision_regle": 1,
+   "decision_chaine": 1,
+   "bras": {
+    "nul": {
+     "essai": 36939.93,
+     "exploitation": 44866.29,
+     "total": 81806.22,
+     "profit_2e_semestre": 861071.94
+    },
+    "chaine": {
+     "essai": 38458.71,
+     "exploitation": 57255.06,
+     "total": 95713.77,
+     "profit_2e_semestre": 875094.27
+    },
+    "aveugle:-1": {
+     "essai": -736.34,
+     "exploitation": -708.58,
+     "total": -1444.92,
+     "profit_2e_semestre": 778739.04
+    },
+    "aveugle:-0.5": {
+     "essai": 17615.38,
+     "exploitation": 18058.04,
+     "total": 35673.42,
+     "profit_2e_semestre": 815168.7
+    },
+    "aveugle:0": {
+     "essai": 34237.37,
+     "exploitation": 33759.5,
+     "total": 67996.87,
+     "profit_2e_semestre": 847262.6
+    },
+    "aveugle:0.5": {
+     "essai": 47003.57,
+     "exploitation": 46643.74,
+     "total": 93647.31,
+     "profit_2e_semestre": 872843.22
+    },
+    "aveugle:1": {
+     "essai": 57318.89,
+     "exploitation": 57255.06,
+     "total": 114573.94,
+     "profit_2e_semestre": 893724.88
+    },
+    "regle": {
+     "essai": 57318.89,
+     "exploitation": 57255.06,
+     "total": 114573.94,
+     "profit_2e_semestre": 893724.88
+    },
+    "mixte": {
+     "essai": 57318.89,
+     "exploitation": 57255.06,
+     "total": 114573.94,
+     "profit_2e_semestre": 893724.88
+    }
+   },
+   "secs": 10.5
+  },
+  {
+   "graine": 6297,
+   "monde": "t3f",
+   "ecartee": false,
+   "objet": "wuzedi9",
+   "prix_reference": 7.93,
+   "cout_vrai": 4.624,
+   "cout_au_jour_183": 4.624,
+   "taux_de_marge": 1.715,
+   "zone": "milieu",
+   "decision_regle": 0,
+   "decision_chaine": -1,
+   "bras": {
+    "nul": {
+     "essai": 3318.41,
+     "exploitation": 3438.27,
+     "total": 6756.67,
+     "profit_2e_semestre": 132836.6
+    },
+    "chaine": {
+     "essai": 3272.33,
+     "exploitation": 3892.65,
+     "total": 7164.98,
+     "profit_2e_semestre": 133242.25
+    },
+    "aveugle:-1": {
+     "essai": 3544.24,
+     "exploitation": 3839.45,
+     "total": 7383.68,
+     "profit_2e_semestre": 133460.96
+    },
+    "aveugle:-0.5": {
+     "essai": 3588.52,
+     "exploitation": 4025.06,
+     "total": 7613.58,
+     "profit_2e_semestre": 133689.14
+    },
+    "aveugle:0": {
+     "essai": 3458.43,
+     "exploitation": 3927.93,
+     "total": 7386.36,
+     "profit_2e_semestre": 133461.92
+    },
+    "aveugle:0.5": {
+     "essai": 3150.78,
+     "exploitation": 3600.89,
+     "total": 6751.68,
+     "profit_2e_semestre": 132831.47
+    },
+    "aveugle:1": {
+     "essai": 2770.7,
+     "exploitation": 3177.09,
+     "total": 5947.79,
+     "profit_2e_semestre": 132027.97
+    },
+    "regle": {
+     "essai": 3458.43,
+     "exploitation": 3927.93,
+     "total": 7386.36,
+     "profit_2e_semestre": 133461.92
+    },
+    "mixte": {
+     "essai": 3272.33,
+     "exploitation": 3892.65,
+     "total": 7164.98,
+     "profit_2e_semestre": 133242.25
+    }
+   },
+   "secs": 6
+  },
+  {
+   "graine": 6298,
+   "monde": "t3f",
+   "ecartee": false,
+   "objet": "vinu7",
+   "prix_reference": 13.76,
+   "cout_vrai": 6.216,
+   "cout_au_jour_183": 6.216,
+   "taux_de_marge": 2.214,
+   "zone": "haut",
+   "decision_regle": -1,
+   "decision_chaine": -1,
+   "bras": {
+    "nul": {
+     "essai": 4209.94,
+     "exploitation": 6112.61,
+     "total": 10322.55,
+     "profit_2e_semestre": -560.36
+    },
+    "chaine": {
+     "essai": 4351.74,
+     "exploitation": 5771.56,
+     "total": 10123.3,
+     "profit_2e_semestre": -607.38
+    },
+    "aveugle:-1": {
+     "essai": 4798.45,
+     "exploitation": 5685.28,
+     "total": 10483.73,
+     "profit_2e_semestre": -131.15
+    },
+    "aveugle:-0.5": {
+     "essai": 4405.71,
+     "exploitation": 5435.54,
+     "total": 9841.25,
+     "profit_2e_semestre": -763.43
+    },
+    "aveugle:0": {
+     "essai": 3907.61,
+     "exploitation": 5167.4,
+     "total": 9075.02,
+     "profit_2e_semestre": -1659.24
+    },
+    "aveugle:0.5": {
+     "essai": 3582.99,
+     "exploitation": 4389.39,
+     "total": 7972.38,
+     "profit_2e_semestre": -2725.68
+    },
+    "aveugle:1": {
+     "essai": 3031.49,
+     "exploitation": 3745.43,
+     "total": 6776.92,
+     "profit_2e_semestre": -3825.76
+    },
+    "regle": {
+     "essai": 4798.45,
+     "exploitation": 5685.28,
+     "total": 10483.73,
+     "profit_2e_semestre": -131.15
+    },
+    "mixte": {
+     "essai": 4798.45,
+     "exploitation": 5685.28,
+     "total": 10483.73,
+     "profit_2e_semestre": -131.15
+    }
+   },
+   "secs": 3.2
+  },
+  {
+   "graine": 6299,
+   "monde": "t3f",
+   "ecartee": false,
+   "objet": "sokege9",
+   "prix_reference": 122.43,
+   "cout_vrai": 76.621,
+   "cout_au_jour_183": 76.621,
+   "taux_de_marge": 1.598,
+   "zone": "milieu",
+   "decision_regle": 0,
+   "decision_chaine": -1,
+   "bras": {
+    "nul": {
+     "essai": 107472.79,
+     "exploitation": 91513.74,
+     "total": 198986.53,
+     "profit_2e_semestre": 545678.38
+    },
+    "chaine": {
+     "essai": 77739.64,
+     "exploitation": 70652.37,
+     "total": 148392,
+     "profit_2e_semestre": 494995.67
+    },
+    "aveugle:-1": {
+     "essai": 67262.59,
+     "exploitation": 69991.47,
+     "total": 137254.05,
+     "profit_2e_semestre": 483857.73
+    },
+    "aveugle:-0.5": {
+     "essai": 92358.13,
+     "exploitation": 86801.52,
+     "total": 179159.64,
+     "profit_2e_semestre": 525720.68
+    },
+    "aveugle:0": {
+     "essai": 106735.81,
+     "exploitation": 104766.01,
+     "total": 211501.82,
+     "profit_2e_semestre": 584696.03
+    },
+    "aveugle:0.5": {
+     "essai": 107924.52,
+     "exploitation": 116601.87,
+     "total": 224526.38,
+     "profit_2e_semestre": 596432.5
+    },
+    "aveugle:1": {
+     "essai": 82532.91,
+     "exploitation": 94530.75,
+     "total": 177063.66,
+     "profit_2e_semestre": 523777.52
+    },
+    "regle": {
+     "essai": 106735.81,
+     "exploitation": 104766.01,
+     "total": 211501.82,
+     "profit_2e_semestre": 584696.03
+    },
+    "mixte": {
+     "essai": 77739.64,
+     "exploitation": 70652.37,
+     "total": 148392,
+     "profit_2e_semestre": 494995.67
+    }
+   },
+   "secs": 9.4
+  },
+  {
+   "graine": 6300,
+   "monde": "t3f",
+   "ecartee": false,
+   "objet": "canera9",
+   "prix_reference": 9.64,
+   "cout_vrai": 5.994,
+   "cout_au_jour_183": 5.994,
+   "taux_de_marge": 1.608,
+   "zone": "milieu",
+   "decision_regle": 0,
+   "decision_chaine": 1,
+   "bras": {
+    "nul": {
+     "essai": 8815.26,
+     "exploitation": 9978.41,
+     "total": 18793.67,
+     "profit_2e_semestre": 305804.31
+    },
+    "chaine": {
+     "essai": 6842.39,
+     "exploitation": 7315.51,
+     "total": 14157.9,
+     "profit_2e_semestre": 301459.6
+    },
+    "aveugle:-1": {
+     "essai": 7519.23,
+     "exploitation": 8260.52,
+     "total": 15779.75,
+     "profit_2e_semestre": 302085.46
+    },
+    "aveugle:-0.5": {
+     "essai": 8765.38,
+     "exploitation": 10015.32,
+     "total": 18780.7,
+     "profit_2e_semestre": 305570.25
+    },
+    "aveugle:0": {
+     "essai": 8400.24,
+     "exploitation": 10934.16,
+     "total": 19334.4,
+     "profit_2e_semestre": 306402.12
+    },
+    "aveugle:0.5": {
+     "essai": 7784.12,
+     "exploitation": 9854.24,
+     "total": 17638.36,
+     "profit_2e_semestre": 303774.88
+    },
+    "aveugle:1": {
+     "essai": 6037.77,
+     "exploitation": 7648.65,
+     "total": 13686.42,
+     "profit_2e_semestre": 299880.91
+    },
+    "regle": {
+     "essai": 8400.24,
+     "exploitation": 10934.16,
+     "total": 19334.4,
+     "profit_2e_semestre": 306402.12
+    },
+    "mixte": {
+     "essai": 6842.39,
+     "exploitation": 7315.51,
+     "total": 14157.9,
+     "profit_2e_semestre": 301459.6
+    }
+   },
+   "secs": 5.7
+  },
+  {
+   "graine": 6301,
+   "monde": "t3f",
+   "ecartee": false,
+   "objet": "jepa2",
+   "prix_reference": 199.22,
+   "cout_vrai": 101.364,
+   "cout_au_jour_183": 101.364,
+   "taux_de_marge": 1.965,
+   "zone": "milieu",
+   "decision_regle": 0,
+   "decision_chaine": -1,
+   "bras": {
+    "nul": {
+     "essai": 150384.15,
+     "exploitation": 161799.77,
+     "total": 312183.92,
+     "profit_2e_semestre": 852120.49
+    },
+    "chaine": {
+     "essai": 137792.13,
+     "exploitation": 143010.08,
+     "total": 280802.21,
+     "profit_2e_semestre": 821793.15
+    },
+    "aveugle:-1": {
+     "essai": 140457.36,
+     "exploitation": 130362.53,
+     "total": 270819.9,
+     "profit_2e_semestre": 810840.57
+    },
+    "aveugle:-0.5": {
+     "essai": 155189.04,
+     "exploitation": 158108.44,
+     "total": 313297.48,
+     "profit_2e_semestre": 853471.81
+    },
+    "aveugle:0": {
+     "essai": 166551.35,
+     "exploitation": 173499.15,
+     "total": 340050.5,
+     "profit_2e_semestre": 880071.18
+    },
+    "aveugle:0.5": {
+     "essai": 145760.88,
+     "exploitation": 159960.73,
+     "total": 305721.61,
+     "profit_2e_semestre": 845863.64
+    },
+    "aveugle:1": {
+     "essai": 119166.67,
+     "exploitation": 128617.31,
+     "total": 247783.98,
+     "profit_2e_semestre": 787804.65
+    },
+    "regle": {
+     "essai": 166551.35,
+     "exploitation": 173499.15,
+     "total": 340050.5,
+     "profit_2e_semestre": 880071.18
+    },
+    "mixte": {
+     "essai": 137792.13,
+     "exploitation": 143010.08,
+     "total": 280802.21,
+     "profit_2e_semestre": 821793.15
+    }
+   },
+   "secs": 9.8
+  },
+  {
+   "graine": 6302,
+   "monde": "t3f",
+   "ecartee": false,
+   "objet": "nece6",
+   "prix_reference": 4.56,
+   "cout_vrai": 2.442,
+   "cout_au_jour_183": 2.442,
+   "taux_de_marge": 1.867,
+   "zone": "milieu",
+   "decision_regle": 0,
+   "decision_chaine": -1,
+   "bras": {
+    "nul": {
+     "essai": 3640.53,
+     "exploitation": 3504.57,
+     "total": 7145.1,
+     "profit_2e_semestre": -39596.68
+    },
+    "chaine": {
+     "essai": 3405.19,
+     "exploitation": 3312.27,
+     "total": 6717.46,
+     "profit_2e_semestre": -40158.65
+    },
+    "aveugle:-1": {
+     "essai": 3540.49,
+     "exploitation": 3273.63,
+     "total": 6814.12,
+     "profit_2e_semestre": -40025.81
+    },
+    "aveugle:-0.5": {
+     "essai": 3753.23,
+     "exploitation": 3854.76,
+     "total": 7607.99,
+     "profit_2e_semestre": -39367.16
+    },
+    "aveugle:0": {
+     "essai": 3640.04,
+     "exploitation": 3551.11,
+     "total": 7191.15,
+     "profit_2e_semestre": -39642.12
+    },
+    "aveugle:0.5": {
+     "essai": 3340.52,
+     "exploitation": 3204.27,
+     "total": 6544.79,
+     "profit_2e_semestre": -40155.87
+    },
+    "aveugle:1": {
+     "essai": 2742.84,
+     "exploitation": 2488.76,
+     "total": 5231.6,
+     "profit_2e_semestre": -41636.01
+    },
+    "regle": {
+     "essai": 3640.04,
+     "exploitation": 3551.11,
+     "total": 7191.15,
+     "profit_2e_semestre": -39642.12
+    },
+    "mixte": {
+     "essai": 3405.19,
+     "exploitation": 3312.27,
+     "total": 6717.46,
+     "profit_2e_semestre": -40158.65
+    }
+   },
+   "secs": 4.3
+  },
+  {
+   "graine": 6303,
+   "monde": "t3f",
+   "ecartee": false,
+   "objet": "gujo9",
+   "prix_reference": 412.79,
+   "cout_vrai": 194.96,
+   "cout_au_jour_183": 194.96,
+   "taux_de_marge": 2.117,
+   "zone": "haut",
+   "decision_regle": -1,
+   "decision_chaine": -1,
+   "bras": {
+    "nul": {
+     "essai": 293937.15,
+     "exploitation": 318581.05,
+     "total": 612518.2,
+     "profit_2e_semestre": 526678.77
+    },
+    "chaine": {
+     "essai": 318686.6,
+     "exploitation": 326134.77,
+     "total": 644821.37,
+     "profit_2e_semestre": 566557.42
+    },
+    "aveugle:-1": {
+     "essai": 340473.34,
+     "exploitation": 319912.38,
+     "total": 660385.72,
+     "profit_2e_semestre": 574270.06
+    },
+    "aveugle:-0.5": {
+     "essai": 332468.05,
+     "exploitation": 339438.03,
+     "total": 671906.09,
+     "profit_2e_semestre": 590650.4
+    },
+    "aveugle:0": {
+     "essai": 325872.94,
+     "exploitation": 320427.2,
+     "total": 646300.14,
+     "profit_2e_semestre": 564575.91
+    },
+    "aveugle:0.5": {
+     "essai": 284408.32,
+     "exploitation": 305517.51,
+     "total": 589925.83,
+     "profit_2e_semestre": 509231.08
+    },
+    "aveugle:1": {
+     "essai": 244945.51,
+     "exploitation": 251045.07,
+     "total": 495990.58,
+     "profit_2e_semestre": 412469.65
+    },
+    "regle": {
+     "essai": 340473.34,
+     "exploitation": 319912.38,
+     "total": 660385.72,
+     "profit_2e_semestre": 574270.06
+    },
+    "mixte": {
+     "essai": 340473.34,
+     "exploitation": 319912.38,
+     "total": 660385.72,
+     "profit_2e_semestre": 574270.06
+    }
+   },
+   "secs": 4.2
+  },
+  {
+   "graine": 6304,
+   "monde": "t3f",
+   "ecartee": false,
+   "objet": "qobu1",
+   "prix_reference": 7.92,
+   "cout_vrai": 5.037,
+   "cout_au_jour_183": 5.037,
+   "taux_de_marge": 1.572,
+   "zone": "milieu",
+   "decision_regle": 0,
+   "decision_chaine": 1,
+   "bras": {
+    "nul": {
+     "essai": 4039.26,
+     "exploitation": 4522.62,
+     "total": 8561.89,
+     "profit_2e_semestre": 85365.38
+    },
+    "chaine": {
+     "essai": 3947.21,
+     "exploitation": 4445.02,
+     "total": 8392.23,
+     "profit_2e_semestre": 85201.9
+    },
+    "aveugle:-1": {
+     "essai": 2566.11,
+     "exploitation": 2533.53,
+     "total": 5099.65,
+     "profit_2e_semestre": 82785.89
+    },
+    "aveugle:-0.5": {
+     "essai": 3453.11,
+     "exploitation": 3446.98,
+     "total": 6900.08,
+     "profit_2e_semestre": 83705.66
+    },
+    "aveugle:0": {
+     "essai": 4042.33,
+     "exploitation": 3889.51,
+     "total": 7931.84,
+     "profit_2e_semestre": 84735.34
+    },
+    "aveugle:0.5": {
+     "essai": 4530.15,
+     "exploitation": 4232.72,
+     "total": 8762.87,
+     "profit_2e_semestre": 85570.17
+    },
+    "aveugle:1": {
+     "essai": 4644.41,
+     "exploitation": 4440.15,
+     "total": 9084.57,
+     "profit_2e_semestre": 85888.06
+    },
+    "regle": {
+     "essai": 4042.33,
+     "exploitation": 3889.51,
+     "total": 7931.84,
+     "profit_2e_semestre": 84735.34
+    },
+    "mixte": {
+     "essai": 3947.21,
+     "exploitation": 4445.02,
+     "total": 8392.23,
+     "profit_2e_semestre": 85201.9
+    }
+   },
+   "secs": 4.6
+  },
+  {
+   "graine": 6305,
+   "monde": "t3f",
+   "ecartee": false,
+   "objet": "jevu3",
+   "prix_reference": 5.16,
+   "cout_vrai": 2.012,
+   "cout_au_jour_183": 2.012,
+   "taux_de_marge": 2.565,
+   "zone": "haut",
+   "decision_regle": -1,
+   "decision_chaine": 1,
+   "bras": {
+    "nul": {
+     "essai": 3683.03,
+     "exploitation": 3300.71,
+     "total": 6983.74,
+     "profit_2e_semestre": 171965.29
+    },
+    "chaine": {
+     "essai": 3458.74,
+     "exploitation": 3321.85,
+     "total": 6780.6,
+     "profit_2e_semestre": 172085.4
+    },
+    "aveugle:-1": {
+     "essai": 3387.15,
+     "exploitation": 2734.71,
+     "total": 6121.86,
+     "profit_2e_semestre": 170266.33
+    },
+    "aveugle:-0.5": {
+     "essai": 3722.03,
+     "exploitation": 3033.44,
+     "total": 6755.47,
+     "profit_2e_semestre": 171702.74
+    },
+    "aveugle:0": {
+     "essai": 3692.68,
+     "exploitation": 3456.82,
+     "total": 7149.51,
+     "profit_2e_semestre": 172002.03
+    },
+    "aveugle:0.5": {
+     "essai": 4182.98,
+     "exploitation": 3367.43,
+     "total": 7550.41,
+     "profit_2e_semestre": 172528.87
+    },
+    "aveugle:1": {
+     "essai": 3843.56,
+     "exploitation": 3342.03,
+     "total": 7185.59,
+     "profit_2e_semestre": 172178.55
+    },
+    "regle": {
+     "essai": 3387.15,
+     "exploitation": 2734.71,
+     "total": 6121.86,
+     "profit_2e_semestre": 170266.33
+    },
+    "mixte": {
+     "essai": 3387.15,
+     "exploitation": 2734.71,
+     "total": 6121.86,
+     "profit_2e_semestre": 170266.33
+    }
+   },
+   "secs": 2.3
+  },
+  {
+   "graine": 6306,
+   "monde": "t3f",
+   "ecartee": false,
+   "objet": "kecafe1",
+   "prix_reference": 3.15,
+   "cout_vrai": 2.334,
+   "cout_au_jour_183": 2.334,
+   "taux_de_marge": 1.349,
+   "zone": "bas",
+   "decision_regle": 1,
+   "decision_chaine": 1,
+   "bras": {
+    "nul": {
+     "essai": 521.58,
+     "exploitation": 648.85,
+     "total": 1170.43,
+     "profit_2e_semestre": 266568.07
+    },
+    "chaine": {
+     "essai": 594.31,
+     "exploitation": 775.53,
+     "total": 1369.84,
+     "profit_2e_semestre": 266783.88
+    },
+    "aveugle:-1": {
+     "essai": 288.13,
+     "exploitation": 315.61,
+     "total": 603.73,
+     "profit_2e_semestre": 265998.51
+    },
+    "aveugle:-0.5": {
+     "essai": 542.96,
+     "exploitation": 604.63,
+     "total": 1147.59,
+     "profit_2e_semestre": 266557.91
+    },
+    "aveugle:0": {
+     "essai": 663.94,
+     "exploitation": 728.38,
+     "total": 1392.31,
+     "profit_2e_semestre": 266805.83
+    },
+    "aveugle:0.5": {
+     "essai": 712.58,
+     "exploitation": 775.42,
+     "total": 1487.99,
+     "profit_2e_semestre": 266901.73
+    },
+    "aveugle:1": {
+     "essai": 700.94,
+     "exploitation": 775.53,
+     "total": 1476.47,
+     "profit_2e_semestre": 266894.45
+    },
+    "regle": {
+     "essai": 700.94,
+     "exploitation": 775.53,
+     "total": 1476.47,
+     "profit_2e_semestre": 266894.45
+    },
+    "mixte": {
+     "essai": 700.94,
+     "exploitation": 775.53,
+     "total": 1476.47,
+     "profit_2e_semestre": 266894.45
+    }
+   },
+   "secs": 5.2
+  },
+  {
+   "graine": 6307,
+   "monde": "t3f",
+   "ecartee": false,
+   "objet": "qafa5",
+   "prix_reference": 128.02,
+   "cout_vrai": 56.031,
+   "cout_au_jour_183": 56.031,
+   "taux_de_marge": 2.285,
+   "zone": "haut",
+   "decision_regle": -1,
+   "decision_chaine": -1,
+   "bras": {
+    "nul": {
+     "essai": 52162.81,
+     "exploitation": 63917.02,
+     "total": 116079.83,
+     "profit_2e_semestre": 98950.82
+    },
+    "chaine": {
+     "essai": 57351.93,
+     "exploitation": 68098.8,
+     "total": 125450.73,
+     "profit_2e_semestre": 108240.97
+    },
+    "aveugle:-1": {
+     "essai": 68191.58,
+     "exploitation": 68098.8,
+     "total": 136290.38,
+     "profit_2e_semestre": 119080.63
+    },
+    "aveugle:-0.5": {
+     "essai": 58761.17,
+     "exploitation": 61575.03,
+     "total": 120336.2,
+     "profit_2e_semestre": 104756.22
+    },
+    "aveugle:0": {
+     "essai": 50032.24,
+     "exploitation": 52911.79,
+     "total": 102944.03,
+     "profit_2e_semestre": 85734.27
+    },
+    "aveugle:0.5": {
+     "essai": 40936.45,
+     "exploitation": 41950.57,
+     "total": 82887.02,
+     "profit_2e_semestre": 65708.33
+    },
+    "aveugle:1": {
+     "essai": 34735.61,
+     "exploitation": 35047.61,
+     "total": 69783.22,
+     "profit_2e_semestre": 52677.45
+    },
+    "regle": {
+     "essai": 68191.58,
+     "exploitation": 68098.8,
+     "total": 136290.38,
+     "profit_2e_semestre": 119080.63
+    },
+    "mixte": {
+     "essai": 68191.58,
+     "exploitation": 68098.8,
+     "total": 136290.38,
+     "profit_2e_semestre": 119080.63
+    }
+   },
+   "secs": 4.9
+  },
+  {
+   "graine": 6308,
+   "monde": "t3f",
+   "ecartee": false,
+   "objet": "fokole2",
+   "prix_reference": 181.15,
+   "cout_vrai": 102.44,
+   "cout_au_jour_183": 102.44,
+   "taux_de_marge": 1.768,
+   "zone": "milieu",
+   "decision_regle": 0,
+   "decision_chaine": 1,
+   "bras": {
+    "nul": {
+     "essai": 55272.35,
+     "exploitation": 53537.93,
+     "total": 108810.29,
+     "profit_2e_semestre": 201580.27
+    },
+    "chaine": {
+     "essai": 49878.36,
+     "exploitation": 47367.82,
+     "total": 97246.18,
+     "profit_2e_semestre": 191326.96
+    },
+    "aveugle:-1": {
+     "essai": 54501.23,
+     "exploitation": 54118.91,
+     "total": 108620.14,
+     "profit_2e_semestre": 200997.03
+    },
+    "aveugle:-0.5": {
+     "essai": 57205.94,
+     "exploitation": 57801.84,
+     "total": 115007.78,
+     "profit_2e_semestre": 207609.28
+    },
+    "aveugle:0": {
+     "essai": 55096.67,
+     "exploitation": 55883.76,
+     "total": 110980.43,
+     "profit_2e_semestre": 203770.32
+    },
+    "aveugle:0.5": {
+     "essai": 52246.73,
+     "exploitation": 51546.1,
+     "total": 103792.84,
+     "profit_2e_semestre": 198072.25
+    },
+    "aveugle:1": {
+     "essai": 47491.82,
+     "exploitation": 47119.82,
+     "total": 94611.64,
+     "profit_2e_semestre": 188940.42
+    },
+    "regle": {
+     "essai": 55096.67,
+     "exploitation": 55883.76,
+     "total": 110980.43,
+     "profit_2e_semestre": 203770.32
+    },
+    "mixte": {
+     "essai": 49878.36,
+     "exploitation": 47367.82,
+     "total": 97246.18,
+     "profit_2e_semestre": 191326.96
+    }
+   },
+   "secs": 4.5
+  },
+  {
+   "graine": 6309,
+   "monde": "t3f",
+   "ecartee": false,
+   "objet": "venoli4",
+   "prix_reference": 6.82,
+   "cout_vrai": 4.128,
+   "cout_au_jour_183": 4.128,
+   "taux_de_marge": 1.652,
+   "zone": "milieu",
+   "decision_regle": 0,
+   "decision_chaine": -1,
+   "bras": {
+    "nul": {
+     "essai": 3941.34,
+     "exploitation": 3783.73,
+     "total": 7725.06,
+     "profit_2e_semestre": 695057.97
+    },
+    "chaine": {
+     "essai": 3869.6,
+     "exploitation": 4209.66,
+     "total": 8079.26,
+     "profit_2e_semestre": 695413.51
+    },
+    "aveugle:-1": {
+     "essai": 4087.1,
+     "exploitation": 4220.32,
+     "total": 8307.41,
+     "profit_2e_semestre": 695642.99
+    },
+    "aveugle:-0.5": {
+     "essai": 4646.43,
+     "exploitation": 4652.35,
+     "total": 9298.78,
+     "profit_2e_semestre": 696635.64
+    },
+    "aveugle:0": {
+     "essai": 3941.34,
+     "exploitation": 4172.86,
+     "total": 8114.2,
+     "profit_2e_semestre": 695447.11
+    },
+    "aveugle:0.5": {
+     "essai": 2895.01,
+     "exploitation": 3080.09,
+     "total": 5975.1,
+     "profit_2e_semestre": 693308.02
+    },
+    "aveugle:1": {
+     "essai": 2148.26,
+     "exploitation": 2152.66,
+     "total": 4300.92,
+     "profit_2e_semestre": 691633.83
+    },
+    "regle": {
+     "essai": 3941.34,
+     "exploitation": 4172.86,
+     "total": 8114.2,
+     "profit_2e_semestre": 695447.11
+    },
+    "mixte": {
+     "essai": 3869.6,
+     "exploitation": 4209.66,
+     "total": 8079.26,
+     "profit_2e_semestre": 695413.51
+    }
+   },
+   "secs": 8.8
+  },
+  {
+   "graine": 6310,
+   "monde": "t3f",
+   "ecartee": false,
+   "objet": "migeko3",
+   "prix_reference": 5.8,
+   "cout_vrai": 3.843,
+   "cout_au_jour_183": 3.843,
+   "taux_de_marge": 1.509,
+   "zone": "milieu",
+   "decision_regle": 0,
+   "decision_chaine": 1,
+   "bras": {
+    "nul": {
+     "essai": 2381.15,
+     "exploitation": 2525.13,
+     "total": 4906.28,
+     "profit_2e_semestre": 179174.78
+    },
+    "chaine": {
+     "essai": 2292.32,
+     "exploitation": 2793.94,
+     "total": 5086.26,
+     "profit_2e_semestre": 179424.62
+    },
+    "aveugle:-1": {
+     "essai": 1243.7,
+     "exploitation": 1367.27,
+     "total": 2610.97,
+     "profit_2e_semestre": 176890.31
+    },
+    "aveugle:-0.5": {
+     "essai": 1900.96,
+     "exploitation": 1942.73,
+     "total": 3843.69,
+     "profit_2e_semestre": 178136.97
+    },
+    "aveugle:0": {
+     "essai": 2295.85,
+     "exploitation": 2380.01,
+     "total": 4675.86,
+     "profit_2e_semestre": 180002.3
+    },
+    "aveugle:0.5": {
+     "essai": 2566.04,
+     "exploitation": 2610.87,
+     "total": 5176.91,
+     "profit_2e_semestre": 179513.59
+    },
+    "aveugle:1": {
+     "essai": 2722.39,
+     "exploitation": 2787.13,
+     "total": 5509.51,
+     "profit_2e_semestre": 179854.69
+    },
+    "regle": {
+     "essai": 2295.85,
+     "exploitation": 2380.01,
+     "total": 4675.86,
+     "profit_2e_semestre": 180002.3
+    },
+    "mixte": {
+     "essai": 2292.32,
+     "exploitation": 2793.94,
+     "total": 5086.26,
+     "profit_2e_semestre": 179424.62
+    }
+   },
+   "secs": 4.6
+  },
+  {
+   "graine": 6311,
+   "monde": "t3f",
+   "ecartee": false,
+   "objet": "likexa0",
+   "prix_reference": 11.37,
+   "cout_vrai": 4.587,
+   "cout_au_jour_183": 4.587,
+   "taux_de_marge": 2.479,
+   "zone": "haut",
+   "decision_regle": -1,
+   "decision_chaine": 1,
+   "bras": {
+    "nul": {
+     "essai": 9819.19,
+     "exploitation": 10613.13,
+     "total": 20432.32,
+     "profit_2e_semestre": 277070.33
+    },
+    "chaine": {
+     "essai": 10040.44,
+     "exploitation": 11596.06,
+     "total": 21636.51,
+     "profit_2e_semestre": 278229.19
+    },
+    "aveugle:-1": {
+     "essai": 7681.62,
+     "exploitation": 8259.32,
+     "total": 15940.93,
+     "profit_2e_semestre": 275003.14
+    },
+    "aveugle:-0.5": {
+     "essai": 8760.18,
+     "exploitation": 8989.09,
+     "total": 17749.27,
+     "profit_2e_semestre": 274363.72
+    },
+    "aveugle:0": {
+     "essai": 9415.2,
+     "exploitation": 10222.41,
+     "total": 19637.62,
+     "profit_2e_semestre": 276068.13
+    },
+    "aveugle:0.5": {
+     "essai": 10129.74,
+     "exploitation": 10925.82,
+     "total": 21055.56,
+     "profit_2e_semestre": 277576.55
+    },
+    "aveugle:1": {
+     "essai": 10758.84,
+     "exploitation": 11750.03,
+     "total": 22508.87,
+     "profit_2e_semestre": 278937.61
+    },
+    "regle": {
+     "essai": 7681.62,
+     "exploitation": 8259.32,
+     "total": 15940.93,
+     "profit_2e_semestre": 275003.14
+    },
+    "mixte": {
+     "essai": 7681.62,
+     "exploitation": 8259.32,
+     "total": 15940.93,
+     "profit_2e_semestre": 275003.14
+    }
+   },
+   "secs": 4.8
+  },
+  {
+   "graine": 6312,
+   "monde": "t3f",
+   "ecartee": false,
+   "objet": "kimori1",
+   "prix_reference": 6.85,
+   "cout_vrai": 4.099,
+   "cout_au_jour_183": 4.099,
+   "taux_de_marge": 1.671,
+   "zone": "milieu",
+   "decision_regle": 0,
+   "decision_chaine": -1,
+   "bras": {
+    "nul": {
+     "essai": 4076.41,
+     "exploitation": 3665.2,
+     "total": 7741.61,
+     "profit_2e_semestre": 88341.4
+    },
+    "chaine": {
+     "essai": 3435.13,
+     "exploitation": 3033.4,
+     "total": 6468.52,
+     "profit_2e_semestre": 87136.17
+    },
+    "aveugle:-1": {
+     "essai": 3160.48,
+     "exploitation": 3125.94,
+     "total": 6286.42,
+     "profit_2e_semestre": 86877.53
+    },
+    "aveugle:-0.5": {
+     "essai": 4221.1,
+     "exploitation": 3707.17,
+     "total": 7928.27,
+     "profit_2e_semestre": 88521.43
+    },
+    "aveugle:0": {
+     "essai": 4058.21,
+     "exploitation": 3386.88,
+     "total": 7445.09,
+     "profit_2e_semestre": 88036.21
+    },
+    "aveugle:0.5": {
+     "essai": 3418.87,
+     "exploitation": 2838.38,
+     "total": 6257.25,
+     "profit_2e_semestre": 86848.37
+    },
+    "aveugle:1": {
+     "essai": 2859.71,
+     "exploitation": 2337.74,
+     "total": 5197.45,
+     "profit_2e_semestre": 85788.56
+    },
+    "regle": {
+     "essai": 4058.21,
+     "exploitation": 3386.88,
+     "total": 7445.09,
+     "profit_2e_semestre": 88036.21
+    },
+    "mixte": {
+     "essai": 3435.13,
+     "exploitation": 3033.4,
+     "total": 6468.52,
+     "profit_2e_semestre": 87136.17
+    }
+   },
+   "secs": 6.7
+  },
+  {
+   "graine": 6313,
+   "monde": "t3f",
+   "ecartee": false,
+   "objet": "mibohu9",
+   "prix_reference": 59.06,
+   "cout_vrai": 33.36,
+   "cout_au_jour_183": 33.36,
+   "taux_de_marge": 1.77,
+   "zone": "milieu",
+   "decision_regle": 0,
+   "decision_chaine": 1,
+   "bras": {
+    "nul": {
+     "essai": 41943.51,
+     "exploitation": 39276.5,
+     "total": 81220.01,
+     "profit_2e_semestre": 703864.5
+    },
+    "chaine": {
+     "essai": 41631.29,
+     "exploitation": 39984.74,
+     "total": 81616.03,
+     "profit_2e_semestre": 704092.35
+    },
+    "aveugle:-1": {
+     "essai": 28933.66,
+     "exploitation": 26780.65,
+     "total": 55714.32,
+     "profit_2e_semestre": 677564.71
+    },
+    "aveugle:-0.5": {
+     "essai": 36721.74,
+     "exploitation": 34697.86,
+     "total": 71419.6,
+     "profit_2e_semestre": 701599.86
+    },
+    "aveugle:0": {
+     "essai": 41917.32,
+     "exploitation": 38635.33,
+     "total": 80552.65,
+     "profit_2e_semestre": 711149.13
+    },
+    "aveugle:0.5": {
+     "essai": 42765.53,
+     "exploitation": 39073.78,
+     "total": 81839.3,
+     "profit_2e_semestre": 704493.31
+    },
+    "aveugle:1": {
+     "essai": 43667.54,
+     "exploitation": 40106.15,
+     "total": 83773.69,
+     "profit_2e_semestre": 706109.96
+    },
+    "regle": {
+     "essai": 41917.32,
+     "exploitation": 38635.33,
+     "total": 80552.65,
+     "profit_2e_semestre": 711149.13
+    },
+    "mixte": {
+     "essai": 41631.29,
+     "exploitation": 39984.74,
+     "total": 81616.03,
+     "profit_2e_semestre": 704092.35
+    }
+   },
+   "secs": 9.5
+  },
+  {
+   "graine": 6314,
+   "monde": "t3f",
+   "ecartee": false,
+   "objet": "sakecu1",
+   "prix_reference": 403.42,
+   "cout_vrai": 181.112,
+   "cout_au_jour_183": 181.112,
+   "taux_de_marge": 2.227,
+   "zone": "haut",
+   "decision_regle": -1,
+   "decision_chaine": -1,
+   "bras": {
+    "nul": {
+     "essai": 86622.44,
+     "exploitation": 80348.43,
+     "total": 166970.87,
+     "profit_2e_semestre": 112653.43
+    },
+    "chaine": {
+     "essai": 85276.36,
+     "exploitation": 81011.2,
+     "total": 166287.56,
+     "profit_2e_semestre": 113125.33
+    },
+    "aveugle:-1": {
+     "essai": 82285.85,
+     "exploitation": 82002.59,
+     "total": 164288.44,
+     "profit_2e_semestre": 132081.98
+    },
+    "aveugle:-0.5": {
+     "essai": 86805.17,
+     "exploitation": 84826.88,
+     "total": 171632.05,
+     "profit_2e_semestre": 117187.86
+    },
+    "aveugle:0": {
+     "essai": 86700.11,
+     "exploitation": 79141.64,
+     "total": 165841.74,
+     "profit_2e_semestre": 135576.81
+    },
+    "aveugle:0.5": {
+     "essai": 82867.89,
+     "exploitation": 71800.84,
+     "total": 154668.72,
+     "profit_2e_semestre": 100138.54
+    },
+    "aveugle:1": {
+     "essai": 78064.59,
+     "exploitation": 68834.78,
+     "total": 146899.37,
+     "profit_2e_semestre": 90298.57
+    },
+    "regle": {
+     "essai": 82285.85,
+     "exploitation": 82002.59,
+     "total": 164288.44,
+     "profit_2e_semestre": 132081.98
+    },
+    "mixte": {
+     "essai": 82285.85,
+     "exploitation": 82002.59,
+     "total": 164288.44,
+     "profit_2e_semestre": 132081.98
+    }
+   },
+   "secs": 3.4
+  },
+  {
+   "graine": 6315,
+   "monde": "t3f",
+   "ecartee": false,
+   "objet": "zole9",
+   "prix_reference": 70.68,
+   "cout_vrai": 43.26,
+   "cout_au_jour_183": 43.26,
+   "taux_de_marge": 1.634,
+   "zone": "milieu",
+   "decision_regle": 0,
+   "decision_chaine": -1,
+   "bras": {
+    "nul": {
+     "essai": 53401.6,
+     "exploitation": 49074.3,
+     "total": 102475.91,
+     "profit_2e_semestre": 417094.97
+    },
+    "chaine": {
+     "essai": 49028.75,
+     "exploitation": 49747.06,
+     "total": 98775.8,
+     "profit_2e_semestre": 414140.34
+    },
+    "aveugle:-1": {
+     "essai": 49972.82,
+     "exploitation": 51592.98,
+     "total": 101565.8,
+     "profit_2e_semestre": 415721.86
+    },
+    "aveugle:-0.5": {
+     "essai": 57065.77,
+     "exploitation": 53612.69,
+     "total": 110678.46,
+     "profit_2e_semestre": 425920.74
+    },
+    "aveugle:0": {
+     "essai": 55086.87,
+     "exploitation": 54648.15,
+     "total": 109735.03,
+     "profit_2e_semestre": 438922.6
+    },
+    "aveugle:0.5": {
+     "essai": 50135.59,
+     "exploitation": 48383.34,
+     "total": 98518.93,
+     "profit_2e_semestre": 413541.53
+    },
+    "aveugle:1": {
+     "essai": 41978.83,
+     "exploitation": 41933.74,
+     "total": 83912.58,
+     "profit_2e_semestre": 398300.86
+    },
+    "regle": {
+     "essai": 55086.87,
+     "exploitation": 54648.15,
+     "total": 109735.03,
+     "profit_2e_semestre": 438922.6
+    },
+    "mixte": {
+     "essai": 49028.75,
+     "exploitation": 49747.06,
+     "total": 98775.8,
+     "profit_2e_semestre": 414140.34
+    }
+   },
+   "secs": 10.9
+  },
+  {
+   "graine": 6316,
+   "monde": "t3f",
+   "ecartee": false,
+   "objet": "cuka2",
+   "prix_reference": 231.75,
+   "cout_vrai": 170.668,
+   "cout_au_jour_183": 170.668,
+   "taux_de_marge": 1.358,
+   "zone": "bas",
+   "decision_regle": 1,
+   "decision_chaine": 1,
+   "bras": {
+    "nul": {
+     "essai": 71034.62,
+     "exploitation": 61933.85,
+     "total": 132968.47,
+     "profit_2e_semestre": 239415.59
+    },
+    "chaine": {
+     "essai": 78425.42,
+     "exploitation": 101168.54,
+     "total": 179593.97,
+     "profit_2e_semestre": 286109.93
+    },
+    "aveugle:-1": {
+     "essai": 18311.65,
+     "exploitation": 18841.99,
+     "total": 37153.64,
+     "profit_2e_semestre": 142342.59
+    },
+    "aveugle:-0.5": {
+     "essai": 43897.57,
+     "exploitation": 41957.14,
+     "total": 85854.71,
+     "profit_2e_semestre": 191396.52
+    },
+    "aveugle:0": {
+     "essai": 70977.07,
+     "exploitation": 61936.96,
+     "total": 132914.03,
+     "profit_2e_semestre": 239422.33
+    },
+    "aveugle:0.5": {
+     "essai": 89404.56,
+     "exploitation": 85867.29,
+     "total": 175271.86,
+     "profit_2e_semestre": 282111.99
+    },
+    "aveugle:1": {
+     "essai": 103310.94,
+     "exploitation": 102001.7,
+     "total": 205312.63,
+     "profit_2e_semestre": 311166.13
+    },
+    "regle": {
+     "essai": 103310.94,
+     "exploitation": 102001.7,
+     "total": 205312.63,
+     "profit_2e_semestre": 311166.13
+    },
+    "mixte": {
+     "essai": 103310.94,
+     "exploitation": 102001.7,
+     "total": 205312.63,
+     "profit_2e_semestre": 311166.13
+    }
+   },
+   "secs": 3.8
+  },
+  {
+   "graine": 6317,
+   "monde": "t3f",
+   "ecartee": false,
+   "objet": "moka3",
+   "prix_reference": 44.07,
+   "cout_vrai": 28.187,
+   "cout_au_jour_183": 28.187,
+   "taux_de_marge": 1.564,
+   "zone": "milieu",
+   "decision_regle": 0,
+   "decision_chaine": -1,
+   "bras": {
+    "nul": {
+     "essai": 6315.09,
+     "exploitation": 7028.28,
+     "total": 13343.37,
+     "profit_2e_semestre": 13768.88
+    },
+    "chaine": {
+     "essai": 8991.05,
+     "exploitation": 12597.49,
+     "total": 21588.54,
+     "profit_2e_semestre": 22093.71
+    },
+    "aveugle:-1": {
+     "essai": 10553.28,
+     "exploitation": 12095.49,
+     "total": 22648.77,
+     "profit_2e_semestre": 23330.68
+    },
+    "aveugle:-0.5": {
+     "essai": 9851.68,
+     "exploitation": 11626.56,
+     "total": 21478.24,
+     "profit_2e_semestre": 22143.35
+    },
+    "aveugle:0": {
+     "essai": 8227.59,
+     "exploitation": 9355.31,
+     "total": 17582.91,
+     "profit_2e_semestre": 18299.4
+    },
+    "aveugle:0.5": {
+     "essai": 6388.27,
+     "exploitation": 7315.94,
+     "total": 13704.2,
+     "profit_2e_semestre": 14123.54
+    },
+    "aveugle:1": {
+     "essai": 4761.9,
+     "exploitation": 5111.64,
+     "total": 9873.54,
+     "profit_2e_semestre": 10441.23
+    },
+    "regle": {
+     "essai": 8227.59,
+     "exploitation": 9355.31,
+     "total": 17582.91,
+     "profit_2e_semestre": 18299.4
+    },
+    "mixte": {
+     "essai": 8991.05,
+     "exploitation": 12597.49,
+     "total": 21588.54,
+     "profit_2e_semestre": 22093.71
+    }
+   },
+   "secs": 5.1
+  },
+  {
+   "graine": 6318,
+   "monde": "t3f",
+   "ecartee": false,
+   "objet": "keco2",
+   "prix_reference": 218.95,
+   "cout_vrai": 151.268,
+   "cout_au_jour_183": 151.268,
+   "taux_de_marge": 1.447,
+   "zone": "milieu",
+   "decision_regle": 0,
+   "decision_chaine": 1,
+   "bras": {
+    "nul": {
+     "essai": 224998.29,
+     "exploitation": 214132.63,
+     "total": 439130.92,
+     "profit_2e_semestre": 713795.32
+    },
+    "chaine": {
+     "essai": 165923.07,
+     "exploitation": 208484.26,
+     "total": 374407.33,
+     "profit_2e_semestre": 701427.34
+    },
+    "aveugle:-1": {
+     "essai": 64412.19,
+     "exploitation": 58893.19,
+     "total": 123305.38,
+     "profit_2e_semestre": 392404.45
+    },
+    "aveugle:-0.5": {
+     "essai": 112295.64,
+     "exploitation": 100932.39,
+     "total": 213228.02,
+     "profit_2e_semestre": 483254.03
+    },
+    "aveugle:0": {
+     "essai": 152960.78,
+     "exploitation": 146124.92,
+     "total": 299085.7,
+     "profit_2e_semestre": 568280.12
+    },
+    "aveugle:0.5": {
+     "essai": 196208.65,
+     "exploitation": 176475.56,
+     "total": 372684.21,
+     "profit_2e_semestre": 647019.85
+    },
+    "aveugle:1": {
+     "essai": 237620.64,
+     "exploitation": 207260.04,
+     "total": 444880.68,
+     "profit_2e_semestre": 718855.51
+    },
+    "regle": {
+     "essai": 152960.78,
+     "exploitation": 146124.92,
+     "total": 299085.7,
+     "profit_2e_semestre": 568280.12
+    },
+    "mixte": {
+     "essai": 165923.07,
+     "exploitation": 208484.26,
+     "total": 374407.33,
+     "profit_2e_semestre": 701427.34
+    }
+   },
+   "secs": 6
+  },
+  {
+   "graine": 6319,
+   "monde": "t3f",
+   "ecartee": false,
+   "objet": "xaqopi8",
+   "prix_reference": 6.72,
+   "cout_vrai": 3.759,
+   "cout_au_jour_183": 3.759,
+   "taux_de_marge": 1.788,
+   "zone": "milieu",
+   "decision_regle": 0,
+   "decision_chaine": 0,
+   "bras": {
+    "nul": {
+     "essai": 4086.31,
+     "exploitation": 3058.53,
+     "total": 7144.83,
+     "profit_2e_semestre": 96919.28
+    },
+    "chaine": {
+     "essai": 3894.02,
+     "exploitation": 3617.82,
+     "total": 7511.84,
+     "profit_2e_semestre": 97293.46
+    },
+    "aveugle:-1": {
+     "essai": 3654.39,
+     "exploitation": 3599.29,
+     "total": 7253.68,
+     "profit_2e_semestre": 97021.72
+    },
+    "aveugle:-0.5": {
+     "essai": 4143.3,
+     "exploitation": 3722.44,
+     "total": 7865.75,
+     "profit_2e_semestre": 97713.48
+    },
+    "aveugle:0": {
+     "essai": 4011.57,
+     "exploitation": 3617.82,
+     "total": 7629.39,
+     "profit_2e_semestre": 97411.01
+    },
+    "aveugle:0.5": {
+     "essai": 3735.57,
+     "exploitation": 3353.01,
+     "total": 7088.58,
+     "profit_2e_semestre": 96871.78
+    },
+    "aveugle:1": {
+     "essai": 3451.7,
+     "exploitation": 2998.69,
+     "total": 6450.39,
+     "profit_2e_semestre": 96271.94
+    },
+    "regle": {
+     "essai": 4011.57,
+     "exploitation": 3617.82,
+     "total": 7629.39,
+     "profit_2e_semestre": 97411.01
+    },
+    "mixte": {
+     "essai": 3894.02,
+     "exploitation": 3617.82,
+     "total": 7511.84,
+     "profit_2e_semestre": 97293.46
+    }
+   },
+   "secs": 6.8
+  },
+  {
+   "graine": 6320,
+   "monde": "t3f",
+   "ecartee": false,
+   "objet": "boti7",
+   "prix_reference": 17.77,
+   "cout_vrai": 8.081,
+   "cout_au_jour_183": 8.081,
+   "taux_de_marge": 2.199,
+   "zone": "haut",
+   "decision_regle": -1,
+   "decision_chaine": -1,
+   "bras": {
+    "nul": {
+     "essai": 13201.83,
+     "exploitation": 8878.37,
+     "total": 22080.21,
+     "profit_2e_semestre": 192924.82
+    },
+    "chaine": {
+     "essai": 13109.9,
+     "exploitation": 12634.51,
+     "total": 25744.41,
+     "profit_2e_semestre": 196631.09
+    },
+    "aveugle:-1": {
+     "essai": 12536.28,
+     "exploitation": 12063.56,
+     "total": 24599.85,
+     "profit_2e_semestre": 195580.09
+    },
+    "aveugle:-0.5": {
+     "essai": 14603.24,
+     "exploitation": 14173.73,
+     "total": 28776.97,
+     "profit_2e_semestre": 199759.7
+    },
+    "aveugle:0": {
+     "essai": 15444.61,
+     "exploitation": 15744.98,
+     "total": 31189.59,
+     "profit_2e_semestre": 202087.64
+    },
+    "aveugle:0.5": {
+     "essai": 13498.66,
+     "exploitation": 13097.82,
+     "total": 26596.48,
+     "profit_2e_semestre": 197337.15
+    },
+    "aveugle:1": {
+     "essai": 10483.88,
+     "exploitation": 9593.74,
+     "total": 20077.62,
+     "profit_2e_semestre": 190836.56
+    },
+    "regle": {
+     "essai": 12536.28,
+     "exploitation": 12063.56,
+     "total": 24599.85,
+     "profit_2e_semestre": 195580.09
+    },
+    "mixte": {
+     "essai": 12536.28,
+     "exploitation": 12063.56,
+     "total": 24599.85,
+     "profit_2e_semestre": 195580.09
+    }
+   },
+   "secs": 5.9
+  },
+  {
+   "graine": 6321,
+   "monde": "t3f",
+   "ecartee": false,
+   "objet": "mabuma9",
+   "prix_reference": 374.02,
+   "cout_vrai": 168.782,
+   "cout_au_jour_183": 168.782,
+   "taux_de_marge": 2.216,
+   "zone": "haut",
+   "decision_regle": -1,
+   "decision_chaine": -1,
+   "bras": {
+    "nul": {
+     "essai": 250447.52,
+     "exploitation": 140586.51,
+     "total": 391034.04,
+     "profit_2e_semestre": 388424.12
+    },
+    "chaine": {
+     "essai": 276513.48,
+     "exploitation": 311093.92,
+     "total": 587607.39,
+     "profit_2e_semestre": 580982.67
+    },
+    "aveugle:-1": {
+     "essai": 328311.69,
+     "exploitation": 300528.46,
+     "total": 628840.15,
+     "profit_2e_semestre": 624771.42
+    },
+    "aveugle:-0.5": {
+     "essai": 304147.03,
+     "exploitation": 274478.19,
+     "total": 578625.22,
+     "profit_2e_semestre": 572815.06
+    },
+    "aveugle:0": {
+     "essai": 259830.93,
+     "exploitation": 228224.32,
+     "total": 488055.25,
+     "profit_2e_semestre": 483103.16
+    },
+    "aveugle:0.5": {
+     "essai": 208488.12,
+     "exploitation": 181554.25,
+     "total": 390042.36,
+     "profit_2e_semestre": 389177.77
+    },
+    "aveugle:1": {
+     "essai": 161025.01,
+     "exploitation": 141307.66,
+     "total": 302332.67,
+     "profit_2e_semestre": 303161.5
+    },
+    "regle": {
+     "essai": 328311.69,
+     "exploitation": 300528.46,
+     "total": 628840.15,
+     "profit_2e_semestre": 624771.42
+    },
+    "mixte": {
+     "essai": 328311.69,
+     "exploitation": 300528.46,
+     "total": 628840.15,
+     "profit_2e_semestre": 624771.42
+    }
+   },
+   "secs": 4.5
+  },
+  {
+   "graine": 6322,
+   "monde": "t3f",
+   "ecartee": false,
+   "objet": "qipira4",
+   "prix_reference": 130.54,
+   "cout_vrai": 60.164,
+   "cout_au_jour_183": 60.164,
+   "taux_de_marge": 2.17,
+   "zone": "haut",
+   "decision_regle": -1,
+   "decision_chaine": 1,
+   "bras": {
+    "nul": {
+     "essai": 81553.28,
+     "exploitation": 73167.5,
+     "total": 154720.78,
+     "profit_2e_semestre": 146277.4
+    },
+    "chaine": {
+     "essai": 87395.07,
+     "exploitation": 85185.82,
+     "total": 172580.89,
+     "profit_2e_semestre": 164877.93
+    },
+    "aveugle:-1": {
+     "essai": 67505.39,
+     "exploitation": 60334.33,
+     "total": 127839.72,
+     "profit_2e_semestre": 119638.73
+    },
+    "aveugle:-0.5": {
+     "essai": 76121.39,
+     "exploitation": 68763.93,
+     "total": 144885.33,
+     "profit_2e_semestre": 135843.3
+    },
+    "aveugle:0": {
+     "essai": 83043.48,
+     "exploitation": 76005.9,
+     "total": 159049.38,
+     "profit_2e_semestre": 150429.59
+    },
+    "aveugle:0.5": {
+     "essai": 89217.26,
+     "exploitation": 79609.25,
+     "total": 168826.51,
+     "profit_2e_semestre": 160985.49
+    },
+    "aveugle:1": {
+     "essai": 94868.37,
+     "exploitation": 86009.87,
+     "total": 180878.24,
+     "profit_2e_semestre": 172454.24
+    },
+    "regle": {
+     "essai": 67505.39,
+     "exploitation": 60334.33,
+     "total": 127839.72,
+     "profit_2e_semestre": 119638.73
+    },
+    "mixte": {
+     "essai": 67505.39,
+     "exploitation": 60334.33,
+     "total": 127839.72,
+     "profit_2e_semestre": 119638.73
+    }
+   },
+   "secs": 4.3
+  },
+  {
+   "graine": 6323,
+   "monde": "t3f",
+   "ecartee": false,
+   "objet": "saki5",
+   "prix_reference": 217.31,
+   "cout_vrai": 126.948,
+   "cout_au_jour_183": 126.948,
+   "taux_de_marge": 1.712,
+   "zone": "milieu",
+   "decision_regle": 0,
+   "decision_chaine": 1,
+   "bras": {
+    "nul": {
+     "essai": 113035.71,
+     "exploitation": 91938.31,
+     "total": 204974.02,
+     "profit_2e_semestre": 1406541.68
+    },
+    "chaine": {
+     "essai": 116320.9,
+     "exploitation": 96654.27,
+     "total": 212975.17,
+     "profit_2e_semestre": 1414499.37
+    },
+    "aveugle:-1": {
+     "essai": 93100.51,
+     "exploitation": 80530.77,
+     "total": 173631.28,
+     "profit_2e_semestre": 1375202.38
+    },
+    "aveugle:-0.5": {
+     "essai": 109156.25,
+     "exploitation": 92570.43,
+     "total": 201726.69,
+     "profit_2e_semestre": 1403204
+    },
+    "aveugle:0": {
+     "essai": 115392.3,
+     "exploitation": 97500.62,
+     "total": 212892.92,
+     "profit_2e_semestre": 1451185.14
+    },
+    "aveugle:0.5": {
+     "essai": 117868.21,
+     "exploitation": 96638.01,
+     "total": 214506.23,
+     "profit_2e_semestre": 1415983.52
+    },
+    "aveugle:1": {
+     "essai": 118792.15,
+     "exploitation": 96654.27,
+     "total": 215446.42,
+     "profit_2e_semestre": 1416923.73
+    },
+    "regle": {
+     "essai": 115392.3,
+     "exploitation": 97500.62,
+     "total": 212892.92,
+     "profit_2e_semestre": 1451185.14
+    },
+    "mixte": {
+     "essai": 116320.9,
+     "exploitation": 96654.27,
+     "total": 212975.17,
+     "profit_2e_semestre": 1414499.37
+    }
+   },
+   "secs": 9.7
+  },
+  {
+   "graine": 6324,
+   "monde": "t3f",
+   "ecartee": false,
+   "objet": "suwa7",
+   "prix_reference": 4.52,
+   "cout_vrai": 2.234,
+   "cout_au_jour_183": 2.234,
+   "taux_de_marge": 2.023,
+   "zone": "milieu",
+   "decision_regle": 0,
+   "decision_chaine": -1,
+   "bras": {
+    "nul": {
+     "essai": 3127.95,
+     "exploitation": 4587.9,
+     "total": 7715.85,
+     "profit_2e_semestre": 1249965.08
+    },
+    "chaine": {
+     "essai": 4076.96,
+     "exploitation": 5543.94,
+     "total": 9620.9,
+     "profit_2e_semestre": 1253041.27
+    },
+    "aveugle:-1": {
+     "essai": 4831.54,
+     "exploitation": 5531.47,
+     "total": 10363.01,
+     "profit_2e_semestre": 1253712.19
+    },
+    "aveugle:-0.5": {
+     "essai": 4738.91,
+     "exploitation": 5640.09,
+     "total": 10379,
+     "profit_2e_semestre": 1252627.25
+    },
+    "aveugle:0": {
+     "essai": 4005.05,
+     "exploitation": 5196.04,
+     "total": 9201.09,
+     "profit_2e_semestre": 1251447.54
+    },
+    "aveugle:0.5": {
+     "essai": 2945.52,
+     "exploitation": 4150.76,
+     "total": 7096.28,
+     "profit_2e_semestre": 1249345.53
+    },
+    "aveugle:1": {
+     "essai": 2046.18,
+     "exploitation": 2985.57,
+     "total": 5031.75,
+     "profit_2e_semestre": 1247278.19
+    },
+    "regle": {
+     "essai": 4005.05,
+     "exploitation": 5196.04,
+     "total": 9201.09,
+     "profit_2e_semestre": 1251447.54
+    },
+    "mixte": {
+     "essai": 4076.96,
+     "exploitation": 5543.94,
+     "total": 9620.9,
+     "profit_2e_semestre": 1253041.27
+    }
+   },
+   "secs": 15
+  },
+  {
+   "graine": 6325,
+   "monde": "t3f",
+   "ecartee": false,
+   "objet": "sicuko9",
+   "prix_reference": 40.89,
+   "cout_vrai": 22.921,
+   "cout_au_jour_183": 22.921,
+   "taux_de_marge": 1.784,
+   "zone": "milieu",
+   "decision_regle": 0,
+   "decision_chaine": 1,
+   "bras": {
+    "nul": {
+     "essai": 50854.88,
+     "exploitation": 47073.06,
+     "total": 97927.94,
+     "profit_2e_semestre": 172028.54
+    },
+    "chaine": {
+     "essai": 43525.26,
+     "exploitation": 47385.41,
+     "total": 90910.67,
+     "profit_2e_semestre": 164842.54
+    },
+    "aveugle:-1": {
+     "essai": 40555.09,
+     "exploitation": 39742.62,
+     "total": 80297.72,
+     "profit_2e_semestre": 164793.46
+    },
+    "aveugle:-0.5": {
+     "essai": 47634.39,
+     "exploitation": 45860.05,
+     "total": 93494.44,
+     "profit_2e_semestre": 168324.07
+    },
+    "aveugle:0": {
+     "essai": 50833.8,
+     "exploitation": 47042.38,
+     "total": 97876.18,
+     "profit_2e_semestre": 171942.78
+    },
+    "aveugle:0.5": {
+     "essai": 48743.88,
+     "exploitation": 52870.47,
+     "total": 101614.36,
+     "profit_2e_semestre": 175388.59
+    },
+    "aveugle:1": {
+     "essai": 45214.87,
+     "exploitation": 47329.03,
+     "total": 92543.91,
+     "profit_2e_semestre": 166109.32
+    },
+    "regle": {
+     "essai": 50833.8,
+     "exploitation": 47042.38,
+     "total": 97876.18,
+     "profit_2e_semestre": 171942.78
+    },
+    "mixte": {
+     "essai": 43525.26,
+     "exploitation": 47385.41,
+     "total": 90910.67,
+     "profit_2e_semestre": 164842.54
+    }
+   },
+   "secs": 4.2
+  },
+  {
+   "graine": 6326,
+   "monde": "t3f",
+   "ecartee": false,
+   "objet": "herute8",
+   "prix_reference": 26.84,
+   "cout_vrai": 21.537,
+   "cout_au_jour_183": 21.537,
+   "taux_de_marge": 1.246,
+   "zone": "bas",
+   "decision_regle": 1,
+   "decision_chaine": 1,
+   "bras": {
+    "nul": {
+     "essai": 3621.27,
+     "exploitation": 4205.14,
+     "total": 7826.41,
+     "profit_2e_semestre": -9511.74
+    },
+    "chaine": {
+     "essai": 2779.78,
+     "exploitation": 4168.56,
+     "total": 6948.35,
+     "profit_2e_semestre": -10413.83
+    },
+    "aveugle:-1": {
+     "essai": -79.01,
+     "exploitation": -73.66,
+     "total": -152.67,
+     "profit_2e_semestre": -17970.19
+    },
+    "aveugle:-0.5": {
+     "essai": 2107.13,
+     "exploitation": 2193.69,
+     "total": 4300.82,
+     "profit_2e_semestre": -13338.77
+    },
+    "aveugle:0": {
+     "essai": 3161,
+     "exploitation": 3484.17,
+     "total": 6645.18,
+     "profit_2e_semestre": -10907.88
+    },
+    "aveugle:0.5": {
+     "essai": 3626.51,
+     "exploitation": 4168.79,
+     "total": 7795.3,
+     "profit_2e_semestre": -9630.02
+    },
+    "aveugle:1": {
+     "essai": 3700.05,
+     "exploitation": 4168.56,
+     "total": 7868.62,
+     "profit_2e_semestre": -3054.04
+    },
+    "regle": {
+     "essai": 3700.05,
+     "exploitation": 4168.56,
+     "total": 7868.62,
+     "profit_2e_semestre": -3054.04
+    },
+    "mixte": {
+     "essai": 3700.05,
+     "exploitation": 4168.56,
+     "total": 7868.62,
+     "profit_2e_semestre": -3054.04
+    }
+   },
+   "secs": 5.3
+  },
+  {
+   "graine": 6327,
+   "monde": "t3f",
+   "ecartee": false,
+   "objet": "qosu4",
+   "prix_reference": 133.42,
+   "cout_vrai": 58.555,
+   "cout_au_jour_183": 58.555,
+   "taux_de_marge": 2.279,
+   "zone": "haut",
+   "decision_regle": -1,
+   "decision_chaine": 1,
+   "bras": {
+    "nul": {
+     "essai": 232143.04,
+     "exploitation": 206615.47,
+     "total": 438758.51,
+     "profit_2e_semestre": 293724.21
+    },
+    "chaine": {
+     "essai": 235388.06,
+     "exploitation": 270429.15,
+     "total": 505817.21,
+     "profit_2e_semestre": 344158.72
+    },
+    "aveugle:-1": {
+     "essai": 159974.02,
+     "exploitation": 156456.52,
+     "total": 316430.54,
+     "profit_2e_semestre": 172496.89
+    },
+    "aveugle:-0.5": {
+     "essai": 200131.9,
+     "exploitation": 183297.24,
+     "total": 383429.13,
+     "profit_2e_semestre": 235152.66
+    },
+    "aveugle:0": {
+     "essai": 232081.33,
+     "exploitation": 206103.19,
+     "total": 438184.53,
+     "profit_2e_semestre": 293749.51
+    },
+    "aveugle:0.5": {
+     "essai": 251184.63,
+     "exploitation": 242666.82,
+     "total": 493851.45,
+     "profit_2e_semestre": 324927.47
+    },
+    "aveugle:1": {
+     "essai": 273242.74,
+     "exploitation": 273134.52,
+     "total": 546377.26,
+     "profit_2e_semestre": 399028.62
+    },
+    "regle": {
+     "essai": 159974.02,
+     "exploitation": 156456.52,
+     "total": 316430.54,
+     "profit_2e_semestre": 172496.89
+    },
+    "mixte": {
+     "essai": 159974.02,
+     "exploitation": 156456.52,
+     "total": 316430.54,
+     "profit_2e_semestre": 172496.89
+    }
+   },
+   "secs": 3.2
+  },
+  {
+   "graine": 6328,
+   "monde": "t3f",
+   "ecartee": false,
+   "objet": "toli3",
+   "prix_reference": 39.1,
+   "cout_vrai": 22.608,
+   "cout_au_jour_183": 22.608,
+   "taux_de_marge": 1.729,
+   "zone": "milieu",
+   "decision_regle": 0,
+   "decision_chaine": 1,
+   "bras": {
+    "nul": {
+     "essai": 21615.86,
+     "exploitation": 20970.94,
+     "total": 42586.8,
+     "profit_2e_semestre": 27932.3
+    },
+    "chaine": {
+     "essai": 21507.11,
+     "exploitation": 22462.41,
+     "total": 43969.52,
+     "profit_2e_semestre": 33702.14
+    },
+    "aveugle:-1": {
+     "essai": 12752.23,
+     "exploitation": 12218.6,
+     "total": 24970.84,
+     "profit_2e_semestre": 14421.03
+    },
+    "aveugle:-0.5": {
+     "essai": 17776.31,
+     "exploitation": 16255.8,
+     "total": 34032.11,
+     "profit_2e_semestre": 19553.38
+    },
+    "aveugle:0": {
+     "essai": 22033.08,
+     "exploitation": 19971.6,
+     "total": 42004.68,
+     "profit_2e_semestre": 27378.02
+    },
+    "aveugle:0.5": {
+     "essai": 26073.1,
+     "exploitation": 21597.4,
+     "total": 47670.5,
+     "profit_2e_semestre": 33357.32
+    },
+    "aveugle:1": {
+     "essai": 27611.69,
+     "exploitation": 22987.85,
+     "total": 50599.54,
+     "profit_2e_semestre": 35756.18
+    },
+    "regle": {
+     "essai": 22033.08,
+     "exploitation": 19971.6,
+     "total": 42004.68,
+     "profit_2e_semestre": 27378.02
+    },
+    "mixte": {
+     "essai": 21507.11,
+     "exploitation": 22462.41,
+     "total": 43969.52,
+     "profit_2e_semestre": 33702.14
+    }
+   },
+   "secs": 3.4
+  },
+  {
+   "graine": 6329,
+   "monde": "t3f",
+   "ecartee": false,
+   "objet": "catobo1",
+   "prix_reference": 9.45,
+   "cout_vrai": 4.229,
+   "cout_au_jour_183": 4.229,
+   "taux_de_marge": 2.234,
+   "zone": "haut",
+   "decision_regle": -1,
+   "decision_chaine": 1,
+   "bras": {
+    "nul": {
+     "essai": 12814.84,
+     "exploitation": 11567.31,
+     "total": 24382.15,
+     "profit_2e_semestre": 10073.81
+    },
+    "chaine": {
+     "essai": 10880.09,
+     "exploitation": 8884.48,
+     "total": 19764.57,
+     "profit_2e_semestre": 5294.46
+    },
+    "aveugle:-1": {
+     "essai": 10667.97,
+     "exploitation": 10571.38,
+     "total": 21239.35,
+     "profit_2e_semestre": 6865.23
+    },
+    "aveugle:-0.5": {
+     "essai": 12767.37,
+     "exploitation": 10825.88,
+     "total": 23593.25,
+     "profit_2e_semestre": 9191.91
+    },
+    "aveugle:0": {
+     "essai": 12733.09,
+     "exploitation": 11474.92,
+     "total": 24208,
+     "profit_2e_semestre": 9885.35
+    },
+    "aveugle:0.5": {
+     "essai": 12180.33,
+     "exploitation": 10595.17,
+     "total": 22775.5,
+     "profit_2e_semestre": 8317.51
+    },
+    "aveugle:1": {
+     "essai": 10264.16,
+     "exploitation": 8914.81,
+     "total": 19178.96,
+     "profit_2e_semestre": 4678.52
+    },
+    "regle": {
+     "essai": 10667.97,
+     "exploitation": 10571.38,
+     "total": 21239.35,
+     "profit_2e_semestre": 6865.23
+    },
+    "mixte": {
+     "essai": 10667.97,
+     "exploitation": 10571.38,
+     "total": 21239.35,
+     "profit_2e_semestre": 6865.23
+    }
+   },
+   "secs": 6
+  },
+  {
+   "graine": 6330,
+   "monde": "t3f",
+   "ecartee": false,
+   "objet": "femede7",
+   "prix_reference": 16.96,
+   "cout_vrai": 13.524,
+   "cout_au_jour_183": 13.524,
+   "taux_de_marge": 1.254,
+   "zone": "bas",
+   "decision_regle": 1,
+   "decision_chaine": 1,
+   "bras": {
+    "nul": {
+     "essai": 7823.81,
+     "exploitation": 4087.5,
+     "total": 11911.31,
+     "profit_2e_semestre": 38734.81
+    },
+    "chaine": {
+     "essai": 6772.5,
+     "exploitation": 7330.34,
+     "total": 14102.85,
+     "profit_2e_semestre": 41386.04
+    },
+    "aveugle:-1": {
+     "essai": 153.86,
+     "exploitation": 143.52,
+     "total": 297.39,
+     "profit_2e_semestre": 33398.38
+    },
+    "aveugle:-0.5": {
+     "essai": 4481.38,
+     "exploitation": 3857.64,
+     "total": 8339.03,
+     "profit_2e_semestre": 40646.75
+    },
+    "aveugle:0": {
+     "essai": 7823.21,
+     "exploitation": 6064.1,
+     "total": 13887.31,
+     "profit_2e_semestre": 40943.94
+    },
+    "aveugle:0.5": {
+     "essai": 9235.34,
+     "exploitation": 6941.46,
+     "total": 16176.8,
+     "profit_2e_semestre": 43613.88
+    },
+    "aveugle:1": {
+     "essai": 9563.99,
+     "exploitation": 7422.45,
+     "total": 16986.44,
+     "profit_2e_semestre": 44167.49
+    },
+    "regle": {
+     "essai": 9563.99,
+     "exploitation": 7422.45,
+     "total": 16986.44,
+     "profit_2e_semestre": 44167.49
+    },
+    "mixte": {
+     "essai": 9563.99,
+     "exploitation": 7422.45,
+     "total": 16986.44,
+     "profit_2e_semestre": 44167.49
+    }
+   },
+   "secs": 5.2
+  },
+  {
+   "graine": 6331,
+   "monde": "t3f",
+   "ecartee": false,
+   "objet": "rowoca6",
+   "prix_reference": 34.13,
+   "cout_vrai": 25.805,
+   "cout_au_jour_183": 25.805,
+   "taux_de_marge": 1.323,
+   "zone": "bas",
+   "decision_regle": 1,
+   "decision_chaine": 1,
+   "bras": {
+    "nul": {
+     "essai": 17374.46,
+     "exploitation": 16864.23,
+     "total": 34238.69,
+     "profit_2e_semestre": 394981.71
+    },
+    "chaine": {
+     "essai": 12478.03,
+     "exploitation": 13450.45,
+     "total": 25928.48,
+     "profit_2e_semestre": 386660.81
+    },
+    "aveugle:-1": {
+     "essai": 6240.99,
+     "exploitation": 6119.88,
+     "total": 12360.87,
+     "profit_2e_semestre": 378802.02
+    },
+    "aveugle:-0.5": {
+     "essai": 14397.7,
+     "exploitation": 14581.98,
+     "total": 28979.69,
+     "profit_2e_semestre": 389712.01
+    },
+    "aveugle:0": {
+     "essai": 16500.56,
+     "exploitation": 17824.27,
+     "total": 34324.82,
+     "profit_2e_semestre": 395065.47
+    },
+    "aveugle:0.5": {
+     "essai": 16518.91,
+     "exploitation": 16383,
+     "total": 32901.91,
+     "profit_2e_semestre": 393646.6
+    },
+    "aveugle:1": {
+     "essai": 13922.4,
+     "exploitation": 13433.6,
+     "total": 27356,
+     "profit_2e_semestre": 388105.18
+    },
+    "regle": {
+     "essai": 13922.4,
+     "exploitation": 13433.6,
+     "total": 27356,
+     "profit_2e_semestre": 388105.18
+    },
+    "mixte": {
+     "essai": 13922.4,
+     "exploitation": 13433.6,
+     "total": 27356,
+     "profit_2e_semestre": 388105.18
+    }
+   },
+   "secs": 9.4
+  },
+  {
+   "graine": 6332,
+   "monde": "t3f",
+   "ecartee": false,
+   "objet": "soru9",
+   "prix_reference": 105.5,
+   "cout_vrai": 76.617,
+   "cout_au_jour_183": 76.617,
+   "taux_de_marge": 1.377,
+   "zone": "bas",
+   "decision_regle": 1,
+   "decision_chaine": 1,
+   "bras": {
+    "nul": {
+     "essai": 45620.2,
+     "exploitation": 50991.63,
+     "total": 96611.83,
+     "profit_2e_semestre": 580698.9
+    },
+    "chaine": {
+     "essai": 44234.1,
+     "exploitation": 54489.81,
+     "total": 98723.91,
+     "profit_2e_semestre": 583496.26
+    },
+    "aveugle:-1": {
+     "essai": 16789.01,
+     "exploitation": 15854.99,
+     "total": 32644,
+     "profit_2e_semestre": 552523.57
+    },
+    "aveugle:-0.5": {
+     "essai": 32364.14,
+     "exploitation": 30820.46,
+     "total": 63184.6,
+     "profit_2e_semestre": 547009.95
+    },
+    "aveugle:0": {
+     "essai": 42603.16,
+     "exploitation": 41650.01,
+     "total": 84253.17,
+     "profit_2e_semestre": 568227.42
+    },
+    "aveugle:0.5": {
+     "essai": 50137.54,
+     "exploitation": 49393.53,
+     "total": 99531.07,
+     "profit_2e_semestre": 584282.17
+    },
+    "aveugle:1": {
+     "essai": 54247.4,
+     "exploitation": 54710.86,
+     "total": 108958.27,
+     "profit_2e_semestre": 593696.92
+    },
+    "regle": {
+     "essai": 54247.4,
+     "exploitation": 54710.86,
+     "total": 108958.27,
+     "profit_2e_semestre": 593696.92
+    },
+    "mixte": {
+     "essai": 54247.4,
+     "exploitation": 54710.86,
+     "total": 108958.27,
+     "profit_2e_semestre": 593696.92
+    }
+   },
+   "secs": 5.8
+  },
+  {
+   "graine": 6333,
+   "monde": "t3f",
+   "ecartee": false,
+   "objet": "deve3",
+   "prix_reference": 45.28,
+   "cout_vrai": 28.688,
+   "cout_au_jour_183": 28.688,
+   "taux_de_marge": 1.578,
+   "zone": "milieu",
+   "decision_regle": 0,
+   "decision_chaine": 1,
+   "bras": {
+    "nul": {
+     "essai": 20679.94,
+     "exploitation": 16045.95,
+     "total": 36725.89,
+     "profit_2e_semestre": 152324.2
+    },
+    "chaine": {
+     "essai": 23967.55,
+     "exploitation": 21018.06,
+     "total": 44985.61,
+     "profit_2e_semestre": 160573.41
+    },
+    "aveugle:-1": {
+     "essai": 13422.79,
+     "exploitation": 10387.22,
+     "total": 23810.01,
+     "profit_2e_semestre": 145799.44
+    },
+    "aveugle:-0.5": {
+     "essai": 19112.51,
+     "exploitation": 13010.54,
+     "total": 32123.05,
+     "profit_2e_semestre": 148285.42
+    },
+    "aveugle:0": {
+     "essai": 21752.68,
+     "exploitation": 18185.3,
+     "total": 39937.98,
+     "profit_2e_semestre": 155167.24
+    },
+    "aveugle:0.5": {
+     "essai": 26494.38,
+     "exploitation": 19695.32,
+     "total": 46189.7,
+     "profit_2e_semestre": 161515.13
+    },
+    "aveugle:1": {
+     "essai": 25260.75,
+     "exploitation": 20906.41,
+     "total": 46167.16,
+     "profit_2e_semestre": 162061.56
+    },
+    "regle": {
+     "essai": 21752.68,
+     "exploitation": 18185.3,
+     "total": 39937.98,
+     "profit_2e_semestre": 155167.24
+    },
+    "mixte": {
+     "essai": 23967.55,
+     "exploitation": 21018.06,
+     "total": 44985.61,
+     "profit_2e_semestre": 160573.41
+    }
+   },
+   "secs": 3.5
+  },
+  {
+   "graine": 6334,
+   "monde": "t3f",
+   "ecartee": false,
+   "objet": "muli9",
+   "prix_reference": 11.27,
+   "cout_vrai": 3.803,
+   "cout_au_jour_183": 3.803,
+   "taux_de_marge": 2.964,
+   "zone": "haut",
+   "decision_regle": -1,
+   "decision_chaine": 1,
+   "bras": {
+    "nul": {
+     "essai": 7082.4,
+     "exploitation": 8012.58,
+     "total": 15094.99,
+     "profit_2e_semestre": 144673.75
+    },
+    "chaine": {
+     "essai": 7326.92,
+     "exploitation": 8404.76,
+     "total": 15731.68,
+     "profit_2e_semestre": 145236.68
+    },
+    "aveugle:-1": {
+     "essai": 6594.72,
+     "exploitation": 7231.24,
+     "total": 13825.96,
+     "profit_2e_semestre": 143387.12
+    },
+    "aveugle:-0.5": {
+     "essai": 6930.19,
+     "exploitation": 8041.28,
+     "total": 14971.46,
+     "profit_2e_semestre": 144319.04
+    },
+    "aveugle:0": {
+     "essai": 7079.04,
+     "exploitation": 7999.4,
+     "total": 15078.44,
+     "profit_2e_semestre": 144709.28
+    },
+    "aveugle:0.5": {
+     "essai": 7354.58,
+     "exploitation": 8401.46,
+     "total": 15756.04,
+     "profit_2e_semestre": 145162.8
+    },
+    "aveugle:1": {
+     "essai": 7458.32,
+     "exploitation": 8322.46,
+     "total": 15780.78,
+     "profit_2e_semestre": 145362.86
+    },
+    "regle": {
+     "essai": 6594.72,
+     "exploitation": 7231.24,
+     "total": 13825.96,
+     "profit_2e_semestre": 143387.12
+    },
+    "mixte": {
+     "essai": 6594.72,
+     "exploitation": 7231.24,
+     "total": 13825.96,
+     "profit_2e_semestre": 143387.12
+    }
+   },
+   "secs": 3.2
+  },
+  {
+   "graine": 6335,
+   "monde": "t3f",
+   "ecartee": false,
+   "objet": "quru6",
+   "prix_reference": 238.92,
+   "cout_vrai": 172.983,
+   "cout_au_jour_183": 172.983,
+   "taux_de_marge": 1.381,
+   "zone": "bas",
+   "decision_regle": 1,
+   "decision_chaine": 1,
+   "bras": {
+    "nul": {
+     "essai": 173064.98,
+     "exploitation": 162277.5,
+     "total": 335342.48,
+     "profit_2e_semestre": 879791.46
+    },
+    "chaine": {
+     "essai": 165333.07,
+     "exploitation": 182468.29,
+     "total": 347801.35,
+     "profit_2e_semestre": 838237.05
+    },
+    "aveugle:-1": {
+     "essai": 44847.46,
+     "exploitation": 18866.22,
+     "total": 63713.67,
+     "profit_2e_semestre": 567738.41
+    },
+    "aveugle:-0.5": {
+     "essai": 91083.63,
+     "exploitation": 76802.12,
+     "total": 167885.75,
+     "profit_2e_semestre": 655464.29
+    },
+    "aveugle:0": {
+     "essai": 136423.37,
+     "exploitation": 112356.42,
+     "total": 248779.79,
+     "profit_2e_semestre": 739569.28
+    },
+    "aveugle:0.5": {
+     "essai": 178279.93,
+     "exploitation": 152125.17,
+     "total": 330405.1,
+     "profit_2e_semestre": 823389.17
+    },
+    "aveugle:1": {
+     "essai": 209612.33,
+     "exploitation": 178446.95,
+     "total": 388059.28,
+     "profit_2e_semestre": 884401.3
+    },
+    "regle": {
+     "essai": 209612.33,
+     "exploitation": 178446.95,
+     "total": 388059.28,
+     "profit_2e_semestre": 884401.3
+    },
+    "mixte": {
+     "essai": 209612.33,
+     "exploitation": 178446.95,
+     "total": 388059.28,
+     "profit_2e_semestre": 884401.3
+    }
+   },
+   "secs": 3.9
+  },
+  {
+   "graine": 6336,
+   "monde": "t3f",
+   "ecartee": false,
+   "objet": "reho7",
+   "prix_reference": 161.24,
+   "cout_vrai": 83.571,
+   "cout_au_jour_183": 83.571,
+   "taux_de_marge": 1.929,
+   "zone": "milieu",
+   "decision_regle": 0,
+   "decision_chaine": 0,
+   "bras": {
+    "nul": {
+     "essai": 160629.64,
+     "exploitation": 153236.06,
+     "total": 313865.7,
+     "profit_2e_semestre": 1062375.48
+    },
+    "chaine": {
+     "essai": 190401.56,
+     "exploitation": 212968.67,
+     "total": 403370.24,
+     "profit_2e_semestre": 1151152.46
+    },
+    "aveugle:-1": {
+     "essai": 230910.71,
+     "exploitation": 227186.34,
+     "total": 458097.05,
+     "profit_2e_semestre": 1233411.57
+    },
+    "aveugle:-0.5": {
+     "essai": 223795.18,
+     "exploitation": 241929.26,
+     "total": 465724.45,
+     "profit_2e_semestre": 1215143.83
+    },
+    "aveugle:0": {
+     "essai": 211337.62,
+     "exploitation": 216541.45,
+     "total": 427879.08,
+     "profit_2e_semestre": 1172321.53
+    },
+    "aveugle:0.5": {
+     "essai": 170383.82,
+     "exploitation": 181214.12,
+     "total": 351597.93,
+     "profit_2e_semestre": 1076984.3
+    },
+    "aveugle:1": {
+     "essai": 121872.41,
+     "exploitation": 129305.09,
+     "total": 251177.51,
+     "profit_2e_semestre": 998922.43
+    },
+    "regle": {
+     "essai": 211337.62,
+     "exploitation": 216541.45,
+     "total": 427879.08,
+     "profit_2e_semestre": 1172321.53
+    },
+    "mixte": {
+     "essai": 190401.56,
+     "exploitation": 212968.67,
+     "total": 403370.24,
+     "profit_2e_semestre": 1151152.46
+    }
+   },
+   "secs": 7.6
+  },
+  {
+   "graine": 6337,
+   "monde": "t3f",
+   "ecartee": false,
+   "objet": "mitoke4",
+   "prix_reference": 6.75,
+   "cout_vrai": 3.455,
+   "cout_au_jour_183": 3.455,
+   "taux_de_marge": 1.954,
+   "zone": "milieu",
+   "decision_regle": 0,
+   "decision_chaine": 1,
+   "bras": {
+    "nul": {
+     "essai": 4713.61,
+     "exploitation": 3943.98,
+     "total": 8657.58,
+     "profit_2e_semestre": -118512.88
+    },
+    "chaine": {
+     "essai": 4655.32,
+     "exploitation": 4355.49,
+     "total": 9010.81,
+     "profit_2e_semestre": -118217.01
+    },
+    "aveugle:-1": {
+     "essai": 3372.89,
+     "exploitation": 2906.06,
+     "total": 6278.95,
+     "profit_2e_semestre": -120924.65
+    },
+    "aveugle:-0.5": {
+     "essai": 4177.61,
+     "exploitation": 3319.34,
+     "total": 7496.94,
+     "profit_2e_semestre": -119748.31
+    },
+    "aveugle:0": {
+     "essai": 4702.18,
+     "exploitation": 3917.94,
+     "total": 8620.12,
+     "profit_2e_semestre": -118554.83
+    },
+    "aveugle:0.5": {
+     "essai": 5303.22,
+     "exploitation": 4246.67,
+     "total": 9549.9,
+     "profit_2e_semestre": -117739.21
+    },
+    "aveugle:1": {
+     "essai": 5423.85,
+     "exploitation": 4322.13,
+     "total": 9745.97,
+     "profit_2e_semestre": -117522.85
+    },
+    "regle": {
+     "essai": 4702.18,
+     "exploitation": 3917.94,
+     "total": 8620.12,
+     "profit_2e_semestre": -118554.83
+    },
+    "mixte": {
+     "essai": 4655.32,
+     "exploitation": 4355.49,
+     "total": 9010.81,
+     "profit_2e_semestre": -118217.01
+    }
+   },
+   "secs": 2.8
+  },
+  {
+   "graine": 6338,
+   "monde": "t3f",
+   "ecartee": false,
+   "objet": "cirewe5",
+   "prix_reference": 210.17,
+   "cout_vrai": 93.995,
+   "cout_au_jour_183": 93.995,
+   "taux_de_marge": 2.236,
+   "zone": "haut",
+   "decision_regle": -1,
+   "decision_chaine": -1,
+   "bras": {
+    "nul": {
+     "essai": 115478.05,
+     "exploitation": 123023.97,
+     "total": 238502.02,
+     "profit_2e_semestre": 443548.4
+    },
+    "chaine": {
+     "essai": 119367.38,
+     "exploitation": 134869.67,
+     "total": 254237.04,
+     "profit_2e_semestre": 461482.52
+    },
+    "aveugle:-1": {
+     "essai": 129086.36,
+     "exploitation": 132422.88,
+     "total": 261509.24,
+     "profit_2e_semestre": 468680.58
+    },
+    "aveugle:-0.5": {
+     "essai": 122368.41,
+     "exploitation": 130357.13,
+     "total": 252725.53,
+     "profit_2e_semestre": 460103.37
+    },
+    "aveugle:0": {
+     "essai": 115477.9,
+     "exploitation": 122332.22,
+     "total": 237810.12,
+     "profit_2e_semestre": 443021.77
+    },
+    "aveugle:0.5": {
+     "essai": 103060,
+     "exploitation": 110438.21,
+     "total": 213498.21,
+     "profit_2e_semestre": 420664.82
+    },
+    "aveugle:1": {
+     "essai": 91780.93,
+     "exploitation": 98192.1,
+     "total": 189973.03,
+     "profit_2e_semestre": 398507.58
+    },
+    "regle": {
+     "essai": 129086.36,
+     "exploitation": 132422.88,
+     "total": 261509.24,
+     "profit_2e_semestre": 468680.58
+    },
+    "mixte": {
+     "essai": 129086.36,
+     "exploitation": 132422.88,
+     "total": 261509.24,
+     "profit_2e_semestre": 468680.58
+    }
+   },
+   "secs": 8.2
+  },
+  {
+   "graine": 6339,
+   "monde": "t3f",
+   "ecartee": false,
+   "objet": "naxe5",
+   "prix_reference": 21.62,
+   "cout_vrai": 10.871,
+   "cout_au_jour_183": 10.871,
+   "taux_de_marge": 1.989,
+   "zone": "milieu",
+   "decision_regle": 0,
+   "decision_chaine": -1,
+   "bras": {
+    "nul": {
+     "essai": 13612.63,
+     "exploitation": 11597.37,
+     "total": 25210,
+     "profit_2e_semestre": 31797.34
+    },
+    "chaine": {
+     "essai": 14728.78,
+     "exploitation": 13925.71,
+     "total": 28654.49,
+     "profit_2e_semestre": 35367.85
+    },
+    "aveugle:-1": {
+     "essai": 16265.95,
+     "exploitation": 14350.04,
+     "total": 30615.98,
+     "profit_2e_semestre": 37274.99
+    },
+    "aveugle:-0.5": {
+     "essai": 15498.69,
+     "exploitation": 13508.42,
+     "total": 29007.11,
+     "profit_2e_semestre": 35619.86
+    },
+    "aveugle:0": {
+     "essai": 13651.76,
+     "exploitation": 11781.15,
+     "total": 25432.92,
+     "profit_2e_semestre": 32009.26
+    },
+    "aveugle:0.5": {
+     "essai": 11690.02,
+     "exploitation": 10147.31,
+     "total": 21837.33,
+     "profit_2e_semestre": 28437.97
+    },
+    "aveugle:1": {
+     "essai": 9824.81,
+     "exploitation": 8532.07,
+     "total": 18356.88,
+     "profit_2e_semestre": 24960.39
+    },
+    "regle": {
+     "essai": 13651.76,
+     "exploitation": 11781.15,
+     "total": 25432.92,
+     "profit_2e_semestre": 32009.26
+    },
+    "mixte": {
+     "essai": 14728.78,
+     "exploitation": 13925.71,
+     "total": 28654.49,
+     "profit_2e_semestre": 35367.85
+    }
+   },
+   "secs": 4.8
+  },
+  {
+   "graine": 6340,
+   "monde": "t3f",
+   "ecartee": false,
+   "objet": "riba9",
+   "prix_reference": 5.17,
+   "cout_vrai": 3.638,
+   "cout_au_jour_183": 3.638,
+   "taux_de_marge": 1.421,
+   "zone": "milieu",
+   "decision_regle": 0,
+   "decision_chaine": 1,
+   "bras": {
+    "nul": {
+     "essai": 2180.19,
+     "exploitation": 2002.85,
+     "total": 4183.04,
+     "profit_2e_semestre": 166382.05
+    },
+    "chaine": {
+     "essai": 2176.45,
+     "exploitation": 2113.55,
+     "total": 4290,
+     "profit_2e_semestre": 164436.75
+    },
+    "aveugle:-1": {
+     "essai": 1054.34,
+     "exploitation": 945.44,
+     "total": 1999.78,
+     "profit_2e_semestre": 162026.99
+    },
+    "aveugle:-0.5": {
+     "essai": 1679.91,
+     "exploitation": 1487.47,
+     "total": 3167.37,
+     "profit_2e_semestre": 163263.59
+    },
+    "aveugle:0": {
+     "essai": 2046.52,
+     "exploitation": 1837.23,
+     "total": 3883.76,
+     "profit_2e_semestre": 164006.82
+    },
+    "aveugle:0.5": {
+     "essai": 2270.34,
+     "exploitation": 1996.18,
+     "total": 4266.52,
+     "profit_2e_semestre": 164439.97
+    },
+    "aveugle:1": {
+     "essai": 2407.02,
+     "exploitation": 2054.29,
+     "total": 4461.31,
+     "profit_2e_semestre": 166744.7
+    },
+    "regle": {
+     "essai": 2046.52,
+     "exploitation": 1837.23,
+     "total": 3883.76,
+     "profit_2e_semestre": 164006.82
+    },
+    "mixte": {
+     "essai": 2176.45,
+     "exploitation": 2113.55,
+     "total": 4290,
+     "profit_2e_semestre": 164436.75
+    }
+   },
+   "secs": 6.7
+  },
+  {
+   "graine": 6341,
+   "monde": "t3f",
+   "ecartee": false,
+   "objet": "nega6",
+   "prix_reference": 189.13,
+   "cout_vrai": 143.948,
+   "cout_au_jour_183": 143.948,
+   "taux_de_marge": 1.314,
+   "zone": "bas",
+   "decision_regle": 1,
+   "decision_chaine": 0,
+   "bras": {
+    "nul": {
+     "essai": 47573.27,
+     "exploitation": 40718.71,
+     "total": 88291.97,
+     "profit_2e_semestre": 167689.21
+    },
+    "chaine": {
+     "essai": 39103.49,
+     "exploitation": 41748.46,
+     "total": 80851.94,
+     "profit_2e_semestre": 96825.45
+    },
+    "aveugle:-1": {
+     "essai": 16616.23,
+     "exploitation": 15667.78,
+     "total": 32284,
+     "profit_2e_semestre": 47320.99
+    },
+    "aveugle:-0.5": {
+     "essai": 42064.7,
+     "exploitation": 36759.55,
+     "total": 78824.25,
+     "profit_2e_semestre": 94401.27
+    },
+    "aveugle:0": {
+     "essai": 48119.16,
+     "exploitation": 42245.46,
+     "total": 90364.62,
+     "profit_2e_semestre": 105841.12
+    },
+    "aveugle:0.5": {
+     "essai": 45969.07,
+     "exploitation": 39961.37,
+     "total": 85930.44,
+     "profit_2e_semestre": 101244.74
+    },
+    "aveugle:1": {
+     "essai": 39388.95,
+     "exploitation": 34673.37,
+     "total": 74062.31,
+     "profit_2e_semestre": 89658.54
+    },
+    "regle": {
+     "essai": 39388.95,
+     "exploitation": 34673.37,
+     "total": 74062.31,
+     "profit_2e_semestre": 89658.54
+    },
+    "mixte": {
+     "essai": 39388.95,
+     "exploitation": 34673.37,
+     "total": 74062.31,
+     "profit_2e_semestre": 89658.54
+    }
+   },
+   "secs": 5.8
+  },
+  {
+   "graine": 6342,
+   "monde": "t3f",
+   "ecartee": false,
+   "objet": "zilo9",
+   "prix_reference": 33.57,
+   "cout_vrai": 16.961,
+   "cout_au_jour_183": 16.961,
+   "taux_de_marge": 1.979,
+   "zone": "milieu",
+   "decision_regle": 0,
+   "decision_chaine": 1,
+   "bras": {
+    "nul": {
+     "essai": 26840.31,
+     "exploitation": 28811.31,
+     "total": 55651.63,
+     "profit_2e_semestre": 435672.34
+    },
+    "chaine": {
+     "essai": 26790.46,
+     "exploitation": 28974.08,
+     "total": 55764.54,
+     "profit_2e_semestre": 436035
+    },
+    "aveugle:-1": {
+     "essai": 23866.99,
+     "exploitation": 23837.29,
+     "total": 47704.28,
+     "profit_2e_semestre": 433514.65
+    },
+    "aveugle:-0.5": {
+     "essai": 26608.91,
+     "exploitation": 27667.51,
+     "total": 54276.42,
+     "profit_2e_semestre": 439989.48
+    },
+    "aveugle:0": {
+     "essai": 27886.86,
+     "exploitation": 28634.27,
+     "total": 56521.13,
+     "profit_2e_semestre": 442069.99
+    },
+    "aveugle:0.5": {
+     "essai": 27912.41,
+     "exploitation": 28982.01,
+     "total": 56894.43,
+     "profit_2e_semestre": 442473.2
+    },
+    "aveugle:1": {
+     "essai": 27124.14,
+     "exploitation": 29174.07,
+     "total": 56298.21,
+     "profit_2e_semestre": 436368.67
+    },
+    "regle": {
+     "essai": 27886.86,
+     "exploitation": 28634.27,
+     "total": 56521.13,
+     "profit_2e_semestre": 442069.99
+    },
+    "mixte": {
+     "essai": 26790.46,
+     "exploitation": 28974.08,
+     "total": 55764.54,
+     "profit_2e_semestre": 436035
+    }
+   },
+   "secs": 11.5
+  },
+  {
+   "graine": 6343,
+   "monde": "t3f",
+   "ecartee": false,
+   "objet": "qulo6",
+   "prix_reference": 4.79,
+   "cout_vrai": 3.225,
+   "cout_au_jour_183": 3.225,
+   "taux_de_marge": 1.485,
+   "zone": "milieu",
+   "decision_regle": 0,
+   "decision_chaine": 1,
+   "bras": {
+    "nul": {
+     "essai": 1650.67,
+     "exploitation": 1708.69,
+     "total": 3359.36,
+     "profit_2e_semestre": 299748.13
+    },
+    "chaine": {
+     "essai": 1570.37,
+     "exploitation": 1786.08,
+     "total": 3356.45,
+     "profit_2e_semestre": 299714.26
+    },
+    "aveugle:-1": {
+     "essai": 1017.93,
+     "exploitation": 1069.95,
+     "total": 2087.88,
+     "profit_2e_semestre": 298451.39
+    },
+    "aveugle:-0.5": {
+     "essai": 1444.07,
+     "exploitation": 1478.88,
+     "total": 2922.94,
+     "profit_2e_semestre": 299281.16
+    },
+    "aveugle:0": {
+     "essai": 1650.9,
+     "exploitation": 1682.2,
+     "total": 3333.09,
+     "profit_2e_semestre": 299716.31
+    },
+    "aveugle:0.5": {
+     "essai": 1752.7,
+     "exploitation": 1756.97,
+     "total": 3509.67,
+     "profit_2e_semestre": 299907.41
+    },
+    "aveugle:1": {
+     "essai": 1744.61,
+     "exploitation": 1739.08,
+     "total": 3483.69,
+     "profit_2e_semestre": 299888.5
+    },
+    "regle": {
+     "essai": 1650.9,
+     "exploitation": 1682.2,
+     "total": 3333.09,
+     "profit_2e_semestre": 299716.31
+    },
+    "mixte": {
+     "essai": 1570.37,
+     "exploitation": 1786.08,
+     "total": 3356.45,
+     "profit_2e_semestre": 299714.26
+    }
+   },
+   "secs": 4.4
+  },
+  {
+   "graine": 6344,
+   "monde": "t3f",
+   "ecartee": false,
+   "objet": "robihi5",
+   "prix_reference": 6.61,
+   "cout_vrai": 3.09,
+   "cout_au_jour_183": 3.09,
+   "taux_de_marge": 2.139,
+   "zone": "haut",
+   "decision_regle": -1,
+   "decision_chaine": -1,
+   "bras": {
+    "nul": {
+     "essai": 4023.56,
+     "exploitation": 3901.04,
+     "total": 7924.6,
+     "profit_2e_semestre": 430549.49
+    },
+    "chaine": {
+     "essai": 4525.52,
+     "exploitation": 4391.59,
+     "total": 8917.11,
+     "profit_2e_semestre": 431378.81
+    },
+    "aveugle:-1": {
+     "essai": 4569.8,
+     "exploitation": 4213.37,
+     "total": 8783.18,
+     "profit_2e_semestre": 431286.67
+    },
+    "aveugle:-0.5": {
+     "essai": 4957.9,
+     "exploitation": 4997.38,
+     "total": 9955.29,
+     "profit_2e_semestre": 432377.36
+    },
+    "aveugle:0": {
+     "essai": 4667.78,
+     "exploitation": 4745.22,
+     "total": 9413,
+     "profit_2e_semestre": 431891.4
+    },
+    "aveugle:0.5": {
+     "essai": 4153.99,
+     "exploitation": 4403.4,
+     "total": 8557.39,
+     "profit_2e_semestre": 431713.12
+    },
+    "aveugle:1": {
+     "essai": 3541.58,
+     "exploitation": 3794.92,
+     "total": 7336.51,
+     "profit_2e_semestre": 429825.79
+    },
+    "regle": {
+     "essai": 4569.8,
+     "exploitation": 4213.37,
+     "total": 8783.18,
+     "profit_2e_semestre": 431286.67
+    },
+    "mixte": {
+     "essai": 4569.8,
+     "exploitation": 4213.37,
+     "total": 8783.18,
+     "profit_2e_semestre": 431286.67
+    }
+   },
+   "secs": 7.7
+  },
+  {
+   "graine": 6345,
+   "monde": "t3f",
+   "ecartee": false,
+   "objet": "juve0",
+   "prix_reference": 7.93,
+   "cout_vrai": 3.625,
+   "cout_au_jour_183": 3.625,
+   "taux_de_marge": 2.188,
+   "zone": "haut",
+   "decision_regle": -1,
+   "decision_chaine": -1,
+   "bras": {
+    "nul": {
+     "essai": 3677.07,
+     "exploitation": 4684.32,
+     "total": 8361.39,
+     "profit_2e_semestre": 136505.95
+    },
+    "chaine": {
+     "essai": 3753.84,
+     "exploitation": 4721.58,
+     "total": 8475.41,
+     "profit_2e_semestre": 136667.98
+    },
+    "aveugle:-1": {
+     "essai": 3888.04,
+     "exploitation": 5058.25,
+     "total": 8946.29,
+     "profit_2e_semestre": 137106.28
+    },
+    "aveugle:-0.5": {
+     "essai": 3815.09,
+     "exploitation": 4951.64,
+     "total": 8766.73,
+     "profit_2e_semestre": 138953.34
+    },
+    "aveugle:0": {
+     "essai": 3680.87,
+     "exploitation": 4729.28,
+     "total": 8410.15,
+     "profit_2e_semestre": 138475.17
+    },
+    "aveugle:0.5": {
+     "essai": 3388.34,
+     "exploitation": 4437.36,
+     "total": 7825.71,
+     "profit_2e_semestre": 135997.54
+    },
+    "aveugle:1": {
+     "essai": 3249.4,
+     "exploitation": 4179.6,
+     "total": 7429,
+     "profit_2e_semestre": 135594.37
+    },
+    "regle": {
+     "essai": 3888.04,
+     "exploitation": 5058.25,
+     "total": 8946.29,
+     "profit_2e_semestre": 137106.28
+    },
+    "mixte": {
+     "essai": 3888.04,
+     "exploitation": 5058.25,
+     "total": 8946.29,
+     "profit_2e_semestre": 137106.28
+    }
+   },
+   "secs": 4.4
+  },
+  {
+   "graine": 6346,
+   "monde": "t3f",
+   "ecartee": false,
+   "objet": "fiko8",
+   "prix_reference": 5.3,
+   "cout_vrai": 3.325,
+   "cout_au_jour_183": 3.325,
+   "taux_de_marge": 1.594,
+   "zone": "milieu",
+   "decision_regle": 0,
+   "decision_chaine": -1,
+   "bras": {
+    "nul": {
+     "essai": 3781.23,
+     "exploitation": 3596.24,
+     "total": 7377.47,
+     "profit_2e_semestre": 45716.94
+    },
+    "chaine": {
+     "essai": 3236.1,
+     "exploitation": 2905.04,
+     "total": 6141.14,
+     "profit_2e_semestre": 44441.67
+    },
+    "aveugle:-1": {
+     "essai": 2633.3,
+     "exploitation": 2823.61,
+     "total": 5456.91,
+     "profit_2e_semestre": 43765.68
+    },
+    "aveugle:-0.5": {
+     "essai": 3494.99,
+     "exploitation": 3711.48,
+     "total": 7206.46,
+     "profit_2e_semestre": 45512.79
+    },
+    "aveugle:0": {
+     "essai": 3780.1,
+     "exploitation": 3934.15,
+     "total": 7714.25,
+     "profit_2e_semestre": 46040.43
+    },
+    "aveugle:0.5": {
+     "essai": 3774.61,
+     "exploitation": 4087.2,
+     "total": 7861.81,
+     "profit_2e_semestre": 46191.08
+    },
+    "aveugle:1": {
+     "essai": 3546.24,
+     "exploitation": 3913.09,
+     "total": 7459.33,
+     "profit_2e_semestre": 45740.2
+    },
+    "regle": {
+     "essai": 3780.1,
+     "exploitation": 3934.15,
+     "total": 7714.25,
+     "profit_2e_semestre": 46040.43
+    },
+    "mixte": {
+     "essai": 3236.1,
+     "exploitation": 2905.04,
+     "total": 6141.14,
+     "profit_2e_semestre": 44441.67
+    }
+   },
+   "secs": 6.6
+  },
+  {
+   "graine": 6347,
+   "monde": "t3f",
+   "ecartee": false,
+   "objet": "nedu5",
+   "prix_reference": 39.42,
+   "cout_vrai": 18.365,
+   "cout_au_jour_183": 18.365,
+   "taux_de_marge": 2.146,
+   "zone": "haut",
+   "decision_regle": -1,
+   "decision_chaine": -1,
+   "bras": {
+    "nul": {
+     "essai": 18133.28,
+     "exploitation": 19941.58,
+     "total": 38074.86,
+     "profit_2e_semestre": 17300.39
+    },
+    "chaine": {
+     "essai": 18118.89,
+     "exploitation": 20710.48,
+     "total": 38829.37,
+     "profit_2e_semestre": 18522.6
+    },
+    "aveugle:-1": {
+     "essai": 19933.18,
+     "exploitation": 21237.46,
+     "total": 41170.64,
+     "profit_2e_semestre": 20415.93
+    },
+    "aveugle:-0.5": {
+     "essai": 19226.06,
+     "exploitation": 20510.05,
+     "total": 39736.11,
+     "profit_2e_semestre": 19395.4
+    },
+    "aveugle:0": {
+     "essai": 17875.36,
+     "exploitation": 19033.36,
+     "total": 36908.72,
+     "profit_2e_semestre": 16540.5
+    },
+    "aveugle:0.5": {
+     "essai": 16425.24,
+     "exploitation": 17633.36,
+     "total": 34058.6,
+     "profit_2e_semestre": 13617.14
+    },
+    "aveugle:1": {
+     "essai": 14220.72,
+     "exploitation": 16359.64,
+     "total": 30580.36,
+     "profit_2e_semestre": 9861.44
+    },
+    "regle": {
+     "essai": 19933.18,
+     "exploitation": 21237.46,
+     "total": 41170.64,
+     "profit_2e_semestre": 20415.93
+    },
+    "mixte": {
+     "essai": 19933.18,
+     "exploitation": 21237.46,
+     "total": 41170.64,
+     "profit_2e_semestre": 20415.93
+    }
+   },
+   "secs": 4.1
+  },
+  {
+   "graine": 6348,
+   "monde": "t3f",
+   "ecartee": false,
+   "objet": "dawiju6",
+   "prix_reference": 197.6,
+   "cout_vrai": 140.945,
+   "cout_au_jour_183": 140.945,
+   "taux_de_marge": 1.402,
+   "zone": "milieu",
+   "decision_regle": 0,
+   "decision_chaine": 1,
+   "bras": {
+    "nul": {
+     "essai": 98866.2,
+     "exploitation": 112427.96,
+     "total": 211294.16,
+     "profit_2e_semestre": 956671.77
+    },
+    "chaine": {
+     "essai": 101141.81,
+     "exploitation": 132674.39,
+     "total": 233816.2,
+     "profit_2e_semestre": 979688.38
+    },
+    "aveugle:-1": {
+     "essai": 39135.58,
+     "exploitation": 43779.07,
+     "total": 82914.65,
+     "profit_2e_semestre": 827390.66
+    },
+    "aveugle:-0.5": {
+     "essai": 70837.64,
+     "exploitation": 75025.62,
+     "total": 145863.26,
+     "profit_2e_semestre": 890571.23
+    },
+    "aveugle:0": {
+     "essai": 94386.67,
+     "exploitation": 100477.74,
+     "total": 194864.41,
+     "profit_2e_semestre": 995742.49
+    },
+    "aveugle:0.5": {
+     "essai": 111484.68,
+     "exploitation": 120041.97,
+     "total": 231526.66,
+     "profit_2e_semestre": 977408.41
+    },
+    "aveugle:1": {
+     "essai": 123977.9,
+     "exploitation": 132992.55,
+     "total": 256970.45,
+     "profit_2e_semestre": 1001952.79
+    },
+    "regle": {
+     "essai": 94386.67,
+     "exploitation": 100477.74,
+     "total": 194864.41,
+     "profit_2e_semestre": 995742.49
+    },
+    "mixte": {
+     "essai": 101141.81,
+     "exploitation": 132674.39,
+     "total": 233816.2,
+     "profit_2e_semestre": 979688.38
+    }
+   },
+   "secs": 9.8
+  },
+  {
+   "graine": 6349,
+   "monde": "t3f",
+   "ecartee": false,
+   "objet": "muqu1",
+   "prix_reference": 8.56,
+   "cout_vrai": 3.477,
+   "cout_au_jour_183": 3.477,
+   "taux_de_marge": 2.462,
+   "zone": "haut",
+   "decision_regle": -1,
+   "decision_chaine": 1,
+   "bras": {
+    "nul": {
+     "essai": 3249.52,
+     "exploitation": 2278.26,
+     "total": 5527.78,
+     "profit_2e_semestre": 145588.91
+    },
+    "chaine": {
+     "essai": 3280.39,
+     "exploitation": 2426.92,
+     "total": 5707.31,
+     "profit_2e_semestre": 145982.49
+    },
+    "aveugle:-1": {
+     "essai": 2796.2,
+     "exploitation": 1777.45,
+     "total": 4573.65,
+     "profit_2e_semestre": 144570.98
+    },
+    "aveugle:-0.5": {
+     "essai": 3053.57,
+     "exploitation": 2104.04,
+     "total": 5157.61,
+     "profit_2e_semestre": 145198.03
+    },
+    "aveugle:0": {
+     "essai": 3217.52,
+     "exploitation": 2383.91,
+     "total": 5601.44,
+     "profit_2e_semestre": 145484.53
+    },
+    "aveugle:0.5": {
+     "essai": 3393.79,
+     "exploitation": 2412.82,
+     "total": 5806.6,
+     "profit_2e_semestre": 145817.18
+    },
+    "aveugle:1": {
+     "essai": 3517.59,
+     "exploitation": 2426.92,
+     "total": 5944.51,
+     "profit_2e_semestre": 146017.95
+    },
+    "regle": {
+     "essai": 2796.2,
+     "exploitation": 1777.45,
+     "total": 4573.65,
+     "profit_2e_semestre": 144570.98
+    },
+    "mixte": {
+     "essai": 2796.2,
+     "exploitation": 1777.45,
+     "total": 4573.65,
+     "profit_2e_semestre": 144570.98
+    }
+   },
+   "secs": 4.3
+  },
+  {
+   "graine": 6350,
+   "monde": "t3f",
+   "ecartee": false,
+   "objet": "quci4",
+   "prix_reference": 24.4,
+   "cout_vrai": 14.909,
+   "cout_au_jour_183": 14.909,
+   "taux_de_marge": 1.637,
+   "zone": "milieu",
+   "decision_regle": 0,
+   "decision_chaine": 0,
+   "bras": {
+    "nul": {
+     "essai": 8608.02,
+     "exploitation": 7607.95,
+     "total": 16215.97,
+     "profit_2e_semestre": -95726.32
+    },
+    "chaine": {
+     "essai": 8920.05,
+     "exploitation": 8119.15,
+     "total": 17039.19,
+     "profit_2e_semestre": -94657.89
+    },
+    "aveugle:-1": {
+     "essai": 5930.15,
+     "exploitation": 5616.58,
+     "total": 11546.73,
+     "profit_2e_semestre": -100358.78
+    },
+    "aveugle:-0.5": {
+     "essai": 7471.13,
+     "exploitation": 7312.17,
+     "total": 14783.3,
+     "profit_2e_semestre": -97359.86
+    },
+    "aveugle:0": {
+     "essai": 9235.05,
+     "exploitation": 8327.96,
+     "total": 17563,
+     "profit_2e_semestre": -94067.66
+    },
+    "aveugle:0.5": {
+     "essai": 8882.6,
+     "exploitation": 8573.64,
+     "total": 17456.24,
+     "profit_2e_semestre": -94703.55
+    },
+    "aveugle:1": {
+     "essai": 8653.18,
+     "exploitation": 7873.61,
+     "total": 16526.79,
+     "profit_2e_semestre": -95549.99
+    },
+    "regle": {
+     "essai": 9235.05,
+     "exploitation": 8327.96,
+     "total": 17563,
+     "profit_2e_semestre": -94067.66
+    },
+    "mixte": {
+     "essai": 8920.05,
+     "exploitation": 8119.15,
+     "total": 17039.19,
+     "profit_2e_semestre": -94657.89
+    }
+   },
+   "secs": 3.6
+  },
+  {
+   "graine": 6351,
+   "monde": "t3f",
+   "ecartee": false,
+   "objet": "xicufo3",
+   "prix_reference": 59.48,
+   "cout_vrai": 27.819,
+   "cout_au_jour_183": 27.819,
+   "taux_de_marge": 2.138,
+   "zone": "haut",
+   "decision_regle": -1,
+   "decision_chaine": 1,
+   "bras": {
+    "nul": {
+     "essai": 51078.29,
+     "exploitation": 43904.84,
+     "total": 94983.13,
+     "profit_2e_semestre": 551775.73
+    },
+    "chaine": {
+     "essai": 52080.91,
+     "exploitation": 43181.02,
+     "total": 95261.93,
+     "profit_2e_semestre": 552739.64
+    },
+    "aveugle:-1": {
+     "essai": 40807.02,
+     "exploitation": 37388.32,
+     "total": 78195.34,
+     "profit_2e_semestre": 535233.49
+    },
+    "aveugle:-0.5": {
+     "essai": 47691.4,
+     "exploitation": 40990.75,
+     "total": 88682.15,
+     "profit_2e_semestre": 545926.86
+    },
+    "aveugle:0": {
+     "essai": 52336.08,
+     "exploitation": 42964.34,
+     "total": 95300.42,
+     "profit_2e_semestre": 551990.4
+    },
+    "aveugle:0.5": {
+     "essai": 53728.28,
+     "exploitation": 43671.15,
+     "total": 97399.43,
+     "profit_2e_semestre": 554226.62
+    },
+    "aveugle:1": {
+     "essai": 54488.12,
+     "exploitation": 43181.02,
+     "total": 97669.13,
+     "profit_2e_semestre": 555127.08
+    },
+    "regle": {
+     "essai": 40807.02,
+     "exploitation": 37388.32,
+     "total": 78195.34,
+     "profit_2e_semestre": 535233.49
+    },
+    "mixte": {
+     "essai": 40807.02,
+     "exploitation": 37388.32,
+     "total": 78195.34,
+     "profit_2e_semestre": 535233.49
+    }
+   },
+   "secs": 9.5
+  },
+  {
+   "graine": 6352,
+   "monde": "t3f",
+   "ecartee": false,
+   "objet": "civudo4",
+   "prix_reference": 8.72,
+   "cout_vrai": 6.124,
+   "cout_au_jour_183": 6.124,
+   "taux_de_marge": 1.424,
+   "zone": "milieu",
+   "decision_regle": 0,
+   "decision_chaine": -1,
+   "bras": {
+    "nul": {
+     "essai": 1276.22,
+     "exploitation": 1569.16,
+     "total": 2845.39,
+     "profit_2e_semestre": -62075.01
+    },
+    "chaine": {
+     "essai": 939.28,
+     "exploitation": 837.27,
+     "total": 1776.55,
+     "profit_2e_semestre": -63137
+    },
+    "aveugle:-1": {
+     "essai": 779.91,
+     "exploitation": 879.35,
+     "total": 1659.26,
+     "profit_2e_semestre": -63267.27
+    },
+    "aveugle:-0.5": {
+     "essai": 1216.85,
+     "exploitation": 1405.67,
+     "total": 2622.52,
+     "profit_2e_semestre": -62295.63
+    },
+    "aveugle:0": {
+     "essai": 1342.18,
+     "exploitation": 1583.62,
+     "total": 2925.81,
+     "profit_2e_semestre": -61994.59
+    },
+    "aveugle:0.5": {
+     "essai": 1174.13,
+     "exploitation": 1573.73,
+     "total": 2747.86,
+     "profit_2e_semestre": -62117.43
+    },
+    "aveugle:1": {
+     "essai": 1103.28,
+     "exploitation": 1361.19,
+     "total": 2464.47,
+     "profit_2e_semestre": -62455.93
+    },
+    "regle": {
+     "essai": 1342.18,
+     "exploitation": 1583.62,
+     "total": 2925.81,
+     "profit_2e_semestre": -61994.59
+    },
+    "mixte": {
+     "essai": 939.28,
+     "exploitation": 837.27,
+     "total": 1776.55,
+     "profit_2e_semestre": -63137
+    }
+   },
+   "secs": 4.7
+  },
+  {
+   "graine": 6353,
+   "monde": "t3f",
+   "ecartee": false,
+   "objet": "kaji1",
+   "prix_reference": 9.58,
+   "cout_vrai": 4.996,
+   "cout_au_jour_183": 4.996,
+   "taux_de_marge": 1.918,
+   "zone": "milieu",
+   "decision_regle": 0,
+   "decision_chaine": 1,
+   "bras": {
+    "nul": {
+     "essai": 8228.09,
+     "exploitation": 9947.65,
+     "total": 18175.73,
+     "profit_2e_semestre": 184692.28
+    },
+    "chaine": {
+     "essai": 8177.74,
+     "exploitation": 9345.07,
+     "total": 17522.82,
+     "profit_2e_semestre": 184836.56
+    },
+    "aveugle:-1": {
+     "essai": 5565.85,
+     "exploitation": 5219.48,
+     "total": 10785.33,
+     "profit_2e_semestre": 176963.46
+    },
+    "aveugle:-0.5": {
+     "essai": 6594.69,
+     "exploitation": 6380.23,
+     "total": 12974.93,
+     "profit_2e_semestre": 179289.86
+    },
+    "aveugle:0": {
+     "essai": 7775.07,
+     "exploitation": 7458.75,
+     "total": 15233.83,
+     "profit_2e_semestre": 181595.91
+    },
+    "aveugle:0.5": {
+     "essai": 8662.97,
+     "exploitation": 8565.83,
+     "total": 17228.8,
+     "profit_2e_semestre": 183601.37
+    },
+    "aveugle:1": {
+     "essai": 9149.51,
+     "exploitation": 9177.45,
+     "total": 18326.96,
+     "profit_2e_semestre": 185808.31
+    },
+    "regle": {
+     "essai": 7775.07,
+     "exploitation": 7458.75,
+     "total": 15233.83,
+     "profit_2e_semestre": 181595.91
+    },
+    "mixte": {
+     "essai": 8177.74,
+     "exploitation": 9345.07,
+     "total": 17522.82,
+     "profit_2e_semestre": 184836.56
+    }
+   },
+   "secs": 5.2
+  },
+  {
+   "graine": 6354,
+   "monde": "t3f",
+   "ecartee": false,
+   "objet": "binuri3",
+   "prix_reference": 84.49,
+   "cout_vrai": 65.155,
+   "cout_au_jour_183": 65.155,
+   "taux_de_marge": 1.297,
+   "zone": "bas",
+   "decision_regle": 1,
+   "decision_chaine": 0,
+   "bras": {
+    "nul": {
+     "essai": 31298.31,
+     "exploitation": 4424.7,
+     "total": 35723.01,
+     "profit_2e_semestre": 204773.45
+    },
+    "chaine": {
+     "essai": 31573.77,
+     "exploitation": 42788.93,
+     "total": 74362.71,
+     "profit_2e_semestre": 243844.64
+    },
+    "aveugle:-1": {
+     "essai": 8355.38,
+     "exploitation": 10335.25,
+     "total": 18690.63,
+     "profit_2e_semestre": 187633.63
+    },
+    "aveugle:-0.5": {
+     "essai": 31027.06,
+     "exploitation": 30974.99,
+     "total": 62002.05,
+     "profit_2e_semestre": 255982.87
+    },
+    "aveugle:0": {
+     "essai": 40082,
+     "exploitation": 44219.74,
+     "total": 84301.74,
+     "profit_2e_semestre": 279173.88
+    },
+    "aveugle:0.5": {
+     "essai": 42053.05,
+     "exploitation": 49496.59,
+     "total": 91549.63,
+     "profit_2e_semestre": 285574.78
+    },
+    "aveugle:1": {
+     "essai": 34589.25,
+     "exploitation": 40131.62,
+     "total": 74720.87,
+     "profit_2e_semestre": 244510.98
+    },
+    "regle": {
+     "essai": 34589.25,
+     "exploitation": 40131.62,
+     "total": 74720.87,
+     "profit_2e_semestre": 244510.98
+    },
+    "mixte": {
+     "essai": 34589.25,
+     "exploitation": 40131.62,
+     "total": 74720.87,
+     "profit_2e_semestre": 244510.98
+    }
+   },
+   "secs": 4.4
+  },
+  {
+   "graine": 6355,
+   "monde": "t3f",
+   "ecartee": false,
+   "objet": "hosawo7",
+   "prix_reference": 157.74,
+   "cout_vrai": 134.991,
+   "cout_au_jour_183": 134.991,
+   "taux_de_marge": 1.169,
+   "zone": "bas",
+   "decision_regle": 1,
+   "decision_chaine": 1,
+   "bras": {
+    "nul": {
+     "essai": 17393.78,
+     "exploitation": 11115.11,
+     "total": 28508.89,
+     "profit_2e_semestre": -95625.42
+    },
+    "chaine": {
+     "essai": 53997.26,
+     "exploitation": 84763.84,
+     "total": 138761.1,
+     "profit_2e_semestre": 17434.33
+    },
+    "aveugle:-1": {
+     "essai": -15647.87,
+     "exploitation": -14758.99,
+     "total": -30406.86,
+     "profit_2e_semestre": -153497.09
+    },
+    "aveugle:-0.5": {
+     "essai": 10388.51,
+     "exploitation": -1041.4,
+     "total": 9347.11,
+     "profit_2e_semestre": -103226.97
+    },
+    "aveugle:0": {
+     "essai": 35826.94,
+     "exploitation": 33850.77,
+     "total": 69677.71,
+     "profit_2e_semestre": -53268.55
+    },
+    "aveugle:0.5": {
+     "essai": 63068.38,
+     "exploitation": 59902.56,
+     "total": 122970.95,
+     "profit_2e_semestre": 1037.32
+    },
+    "aveugle:1": {
+     "essai": 88868.33,
+     "exploitation": 82462.84,
+     "total": 171331.17,
+     "profit_2e_semestre": 74181.4
+    },
+    "regle": {
+     "essai": 88868.33,
+     "exploitation": 82462.84,
+     "total": 171331.17,
+     "profit_2e_semestre": 74181.4
+    },
+    "mixte": {
+     "essai": 88868.33,
+     "exploitation": 82462.84,
+     "total": 171331.17,
+     "profit_2e_semestre": 74181.4
+    }
+   },
+   "secs": 2.5
+  },
+  {
+   "graine": 6356,
+   "monde": "t3f",
+   "ecartee": false,
+   "objet": "goni2",
+   "prix_reference": 3.33,
+   "cout_vrai": 2.178,
+   "cout_au_jour_183": 2.178,
+   "taux_de_marge": 1.529,
+   "zone": "milieu",
+   "decision_regle": 0,
+   "decision_chaine": 0,
+   "bras": {
+    "nul": {
+     "essai": 1607.76,
+     "exploitation": 1563.84,
+     "total": 3171.6,
+     "profit_2e_semestre": 61303.62
+    },
+    "chaine": {
+     "essai": 1404.93,
+     "exploitation": 1613.46,
+     "total": 3018.38,
+     "profit_2e_semestre": 60730
+    },
+    "aveugle:-1": {
+     "essai": 1209.07,
+     "exploitation": 1150.21,
+     "total": 2359.28,
+     "profit_2e_semestre": 60071.85
+    },
+    "aveugle:-0.5": {
+     "essai": 1526.3,
+     "exploitation": 1460.5,
+     "total": 2986.79,
+     "profit_2e_semestre": 60699.23
+    },
+    "aveugle:0": {
+     "essai": 1612.31,
+     "exploitation": 1575.43,
+     "total": 3187.73,
+     "profit_2e_semestre": 61328.33
+    },
+    "aveugle:0.5": {
+     "essai": 1431.41,
+     "exploitation": 1408.28,
+     "total": 2839.69,
+     "profit_2e_semestre": 60552.87
+    },
+    "aveugle:1": {
+     "essai": 1141.9,
+     "exploitation": 1153.8,
+     "total": 2295.7,
+     "profit_2e_semestre": 60418.89
+    },
+    "regle": {
+     "essai": 1612.31,
+     "exploitation": 1575.43,
+     "total": 3187.73,
+     "profit_2e_semestre": 61328.33
+    },
+    "mixte": {
+     "essai": 1404.93,
+     "exploitation": 1613.46,
+     "total": 3018.38,
+     "profit_2e_semestre": 60730
+    }
+   },
+   "secs": 6.6
+  },
+  {
+   "graine": 6357,
+   "monde": "t3f",
+   "ecartee": false,
+   "objet": "zoca2",
+   "prix_reference": 44.05,
+   "cout_vrai": 21.311,
+   "cout_au_jour_183": 21.311,
+   "taux_de_marge": 2.067,
+   "zone": "milieu",
+   "decision_regle": 0,
+   "decision_chaine": -1,
+   "bras": {
+    "nul": {
+     "essai": 7767.35,
+     "exploitation": 10855.5,
+     "total": 18622.85,
+     "profit_2e_semestre": -9650.68
+    },
+    "chaine": {
+     "essai": 8148.14,
+     "exploitation": 11979.34,
+     "total": 20127.48,
+     "profit_2e_semestre": -7976.13
+    },
+    "aveugle:-1": {
+     "essai": 9934.93,
+     "exploitation": 11798.26,
+     "total": 21733.18,
+     "profit_2e_semestre": -5997.54
+    },
+    "aveugle:-0.5": {
+     "essai": 7995.54,
+     "exploitation": 9949.21,
+     "total": 17944.75,
+     "profit_2e_semestre": -10152.18
+    },
+    "aveugle:0": {
+     "essai": 6503.49,
+     "exploitation": 7822.38,
+     "total": 14325.86,
+     "profit_2e_semestre": -13860.49
+    },
+    "aveugle:0.5": {
+     "essai": 5385.69,
+     "exploitation": 6146.68,
+     "total": 11532.37,
+     "profit_2e_semestre": -16605.75
+    },
+    "aveugle:1": {
+     "essai": 4083.69,
+     "exploitation": 5298.67,
+     "total": 9382.35,
+     "profit_2e_semestre": -18952.17
+    },
+    "regle": {
+     "essai": 6503.49,
+     "exploitation": 7822.38,
+     "total": 14325.86,
+     "profit_2e_semestre": -13860.49
+    },
+    "mixte": {
+     "essai": 8148.14,
+     "exploitation": 11979.34,
+     "total": 20127.48,
+     "profit_2e_semestre": -7976.13
+    }
+   },
+   "secs": 5.3
+  },
+  {
+   "graine": 6358,
+   "monde": "t3f",
+   "ecartee": false,
+   "objet": "jecegu4",
+   "prix_reference": 162.1,
+   "cout_vrai": 116.275,
+   "cout_au_jour_183": 116.275,
+   "taux_de_marge": 1.394,
+   "zone": "bas",
+   "decision_regle": 1,
+   "decision_chaine": 1,
+   "bras": {
+    "nul": {
+     "essai": 59217.18,
+     "exploitation": -9238.03,
+     "total": 49979.15,
+     "profit_2e_semestre": -16240.09
+    },
+    "chaine": {
+     "essai": 81584.32,
+     "exploitation": 105525.97,
+     "total": 187110.3,
+     "profit_2e_semestre": 124584.13
+    },
+    "aveugle:-1": {
+     "essai": 28097.16,
+     "exploitation": 25027.39,
+     "total": 53124.55,
+     "profit_2e_semestre": -10955.53
+    },
+    "aveugle:-0.5": {
+     "essai": 48901.87,
+     "exploitation": 51140.24,
+     "total": 100042.12,
+     "profit_2e_semestre": 37641.26
+    },
+    "aveugle:0": {
+     "essai": 74694.97,
+     "exploitation": 72128.76,
+     "total": 146823.73,
+     "profit_2e_semestre": 84451.14
+    },
+    "aveugle:0.5": {
+     "essai": 89832.95,
+     "exploitation": 95743.87,
+     "total": 185576.82,
+     "profit_2e_semestre": 120572.29
+    },
+    "aveugle:1": {
+     "essai": 101954.78,
+     "exploitation": 107339.43,
+     "total": 209294.21,
+     "profit_2e_semestre": 149339.43
+    },
+    "regle": {
+     "essai": 101954.78,
+     "exploitation": 107339.43,
+     "total": 209294.21,
+     "profit_2e_semestre": 149339.43
+    },
+    "mixte": {
+     "essai": 101954.78,
+     "exploitation": 107339.43,
+     "total": 209294.21,
+     "profit_2e_semestre": 149339.43
+    }
+   },
+   "secs": 3.8
+  },
+  {
+   "graine": 6359,
+   "monde": "t3f",
+   "ecartee": false,
+   "objet": "zoro1",
+   "prix_reference": 33.58,
+   "cout_vrai": 14.12,
+   "cout_au_jour_183": 14.12,
+   "taux_de_marge": 2.378,
+   "zone": "haut",
+   "decision_regle": -1,
+   "decision_chaine": 1,
+   "bras": {
+    "nul": {
+     "essai": 15582.02,
+     "exploitation": 15779.86,
+     "total": 31361.87,
+     "profit_2e_semestre": 34453.75
+    },
+    "chaine": {
+     "essai": 12319.64,
+     "exploitation": 9886.84,
+     "total": 22206.49,
+     "profit_2e_semestre": 25254.89
+    },
+    "aveugle:-1": {
+     "essai": 17938.28,
+     "exploitation": 16982.76,
+     "total": 34921.05,
+     "profit_2e_semestre": 37572.26
+    },
+    "aveugle:-0.5": {
+     "essai": 16260.28,
+     "exploitation": 15926.17,
+     "total": 32186.45,
+     "profit_2e_semestre": 35069.25
+    },
+    "aveugle:0": {
+     "essai": 14342.21,
+     "exploitation": 13485.96,
+     "total": 27828.17,
+     "profit_2e_semestre": 30919.39
+    },
+    "aveugle:0.5": {
+     "essai": 12234.68,
+     "exploitation": 12178.53,
+     "total": 24413.21,
+     "profit_2e_semestre": 27499.41
+    },
+    "aveugle:1": {
+     "essai": 10583.1,
+     "exploitation": 9956.66,
+     "total": 20539.76,
+     "profit_2e_semestre": 27919.97
+    },
+    "regle": {
+     "essai": 17938.28,
+     "exploitation": 16982.76,
+     "total": 34921.05,
+     "profit_2e_semestre": 37572.26
+    },
+    "mixte": {
+     "essai": 17938.28,
+     "exploitation": 16982.76,
+     "total": 34921.05,
+     "profit_2e_semestre": 37572.26
+    }
+   },
+   "secs": 4.9
+  },
+  {
+   "graine": 6360,
+   "monde": "t3f",
+   "ecartee": false,
+   "objet": "duheki8",
+   "prix_reference": 4.21,
+   "cout_vrai": 2.918,
+   "cout_au_jour_183": 2.918,
+   "taux_de_marge": 1.443,
+   "zone": "milieu",
+   "decision_regle": 0,
+   "decision_chaine": 0,
+   "bras": {
+    "nul": {
+     "essai": 1681.21,
+     "exploitation": 1317.45,
+     "total": 2998.65,
+     "profit_2e_semestre": 4117.9
+    },
+    "chaine": {
+     "essai": 1472.12,
+     "exploitation": 1259.84,
+     "total": 2731.96,
+     "profit_2e_semestre": 3812.29
+    },
+    "aveugle:-1": {
+     "essai": 1090.12,
+     "exploitation": 846.87,
+     "total": 1936.99,
+     "profit_2e_semestre": 3055.94
+    },
+    "aveugle:-0.5": {
+     "essai": 1529.6,
+     "exploitation": 1237.31,
+     "total": 2766.91,
+     "profit_2e_semestre": 3837.8
+    },
+    "aveugle:0": {
+     "essai": 1647.48,
+     "exploitation": 1239.17,
+     "total": 2886.65,
+     "profit_2e_semestre": 3954.8
+    },
+    "aveugle:0.5": {
+     "essai": 1629.06,
+     "exploitation": 1175.65,
+     "total": 2804.71,
+     "profit_2e_semestre": 3879.74
+    },
+    "aveugle:1": {
+     "essai": 1258.01,
+     "exploitation": 995.41,
+     "total": 2253.42,
+     "profit_2e_semestre": 3454.21
+    },
+    "regle": {
+     "essai": 1647.48,
+     "exploitation": 1239.17,
+     "total": 2886.65,
+     "profit_2e_semestre": 3954.8
+    },
+    "mixte": {
+     "essai": 1472.12,
+     "exploitation": 1259.84,
+     "total": 2731.96,
+     "profit_2e_semestre": 3812.29
+    }
+   },
+   "secs": 3.9
+  },
+  {
+   "graine": 6361,
+   "monde": "t3f",
+   "ecartee": false,
+   "objet": "tiruje3",
+   "prix_reference": 132.91,
+   "cout_vrai": 50.141,
+   "cout_au_jour_183": 50.141,
+   "taux_de_marge": 2.651,
+   "zone": "haut",
+   "decision_regle": -1,
+   "decision_chaine": -1,
+   "bras": {
+    "nul": {
+     "essai": 109465.77,
+     "exploitation": 92858.23,
+     "total": 202324,
+     "profit_2e_semestre": 666091.51
+    },
+    "chaine": {
+     "essai": 120339.38,
+     "exploitation": 131987.93,
+     "total": 252327.31,
+     "profit_2e_semestre": 716518.52
+    },
+    "aveugle:-1": {
+     "essai": 124627.18,
+     "exploitation": 127998.52,
+     "total": 252625.69,
+     "profit_2e_semestre": 719599.78
+    },
+    "aveugle:-0.5": {
+     "essai": 131841.38,
+     "exploitation": 132391.29,
+     "total": 264232.67,
+     "profit_2e_semestre": 730844.24
+    },
+    "aveugle:0": {
+     "essai": 118525.19,
+     "exploitation": 124981.17,
+     "total": 243506.37,
+     "profit_2e_semestre": 707104.71
+    },
+    "aveugle:0.5": {
+     "essai": 104071.15,
+     "exploitation": 108995.92,
+     "total": 213067.07,
+     "profit_2e_semestre": 676601.97
+    },
+    "aveugle:1": {
+     "essai": 90595.21,
+     "exploitation": 94191.18,
+     "total": 184786.39,
+     "profit_2e_semestre": 649597.94
+    },
+    "regle": {
+     "essai": 124627.18,
+     "exploitation": 127998.52,
+     "total": 252625.69,
+     "profit_2e_semestre": 719599.78
+    },
+    "mixte": {
+     "essai": 124627.18,
+     "exploitation": 127998.52,
+     "total": 252625.69,
+     "profit_2e_semestre": 719599.78
+    }
+   },
+   "secs": 5.7
+  },
+  {
+   "graine": 6362,
+   "monde": "t3f",
+   "ecartee": false,
+   "objet": "murumi3",
+   "prix_reference": 31.47,
+   "cout_vrai": 14.635,
+   "cout_au_jour_183": 14.635,
+   "taux_de_marge": 2.15,
+   "zone": "haut",
+   "decision_regle": -1,
+   "decision_chaine": 1,
+   "bras": {
+    "nul": {
+     "essai": 41257.86,
+     "exploitation": 38280.32,
+     "total": 79538.19,
+     "profit_2e_semestre": 411108.81
+    },
+    "chaine": {
+     "essai": 46585.08,
+     "exploitation": 43460.69,
+     "total": 90045.76,
+     "profit_2e_semestre": 421858.05
+    },
+    "aveugle:-1": {
+     "essai": 41779.35,
+     "exploitation": 41104.47,
+     "total": 82883.82,
+     "profit_2e_semestre": 412504.58
+    },
+    "aveugle:-0.5": {
+     "essai": 46140.26,
+     "exploitation": 43639.99,
+     "total": 89780.25,
+     "profit_2e_semestre": 421428.82
+    },
+    "aveugle:0": {
+     "essai": 45673.4,
+     "exploitation": 45521.88,
+     "total": 91195.28,
+     "profit_2e_semestre": 422587.43
+    },
+    "aveugle:0.5": {
+     "essai": 46719.37,
+     "exploitation": 45527.76,
+     "total": 92247.12,
+     "profit_2e_semestre": 423275.4
+    },
+    "aveugle:1": {
+     "essai": 45531.34,
+     "exploitation": 42072.64,
+     "total": 87603.99,
+     "profit_2e_semestre": 418852.59
+    },
+    "regle": {
+     "essai": 41779.35,
+     "exploitation": 41104.47,
+     "total": 82883.82,
+     "profit_2e_semestre": 412504.58
+    },
+    "mixte": {
+     "essai": 41779.35,
+     "exploitation": 41104.47,
+     "total": 82883.82,
+     "profit_2e_semestre": 412504.58
+    }
+   },
+   "secs": 3.7
+  },
+  {
+   "graine": 6363,
+   "monde": "t3f",
+   "ecartee": false,
+   "objet": "qewa7",
+   "prix_reference": 404.74,
+   "cout_vrai": 197.49,
+   "cout_au_jour_183": 197.49,
+   "taux_de_marge": 2.049,
+   "zone": "milieu",
+   "decision_regle": 0,
+   "decision_chaine": 1,
+   "bras": {
+    "nul": {
+     "essai": 267577.01,
+     "exploitation": 255831.88,
+     "total": 523408.89,
+     "profit_2e_semestre": 618397.88
+    },
+    "chaine": {
+     "essai": 284380.39,
+     "exploitation": 300728.73,
+     "total": 585109.11,
+     "profit_2e_semestre": 679689.17
+    },
+    "aveugle:-1": {
+     "essai": 211552.03,
+     "exploitation": 201953.25,
+     "total": 413505.28,
+     "profit_2e_semestre": 508085.35
+    },
+    "aveugle:-0.5": {
+     "essai": 243818.22,
+     "exploitation": 235427.72,
+     "total": 479245.94,
+     "profit_2e_semestre": 573990.53
+    },
+    "aveugle:0": {
+     "essai": 271289.88,
+     "exploitation": 259476.65,
+     "total": 530766.53,
+     "profit_2e_semestre": 625346.6
+    },
+    "aveugle:0.5": {
+     "essai": 296587.93,
+     "exploitation": 280521.69,
+     "total": 577109.62,
+     "profit_2e_semestre": 671689.69
+    },
+    "aveugle:1": {
+     "essai": 315533.83,
+     "exploitation": 300728.73,
+     "total": 616262.56,
+     "profit_2e_semestre": 710842.63
+    },
+    "regle": {
+     "essai": 271289.88,
+     "exploitation": 259476.65,
+     "total": 530766.53,
+     "profit_2e_semestre": 625346.6
+    },
+    "mixte": {
+     "essai": 284380.39,
+     "exploitation": 300728.73,
+     "total": 585109.11,
+     "profit_2e_semestre": 679689.17
+    }
+   },
+   "secs": 7.8
+  },
+  {
+   "graine": 6364,
+   "monde": "t3f",
+   "ecartee": false,
+   "objet": "duwipi0",
+   "prix_reference": 22.34,
+   "cout_vrai": 17.475,
+   "cout_au_jour_183": 17.475,
+   "taux_de_marge": 1.278,
+   "zone": "bas",
+   "decision_regle": 1,
+   "decision_chaine": 1,
+   "bras": {
+    "nul": {
+     "essai": 5065.69,
+     "exploitation": 3476.14,
+     "total": 8541.83,
+     "profit_2e_semestre": 964948.84
+    },
+    "chaine": {
+     "essai": 5633.75,
+     "exploitation": 8938.69,
+     "total": 14572.44,
+     "profit_2e_semestre": 966194.92
+    },
+    "aveugle:-1": {
+     "essai": 501.16,
+     "exploitation": 550.09,
+     "total": 1051.24,
+     "profit_2e_semestre": 952262.84
+    },
+    "aveugle:-0.5": {
+     "essai": 2842.73,
+     "exploitation": 3150.8,
+     "total": 5993.53,
+     "profit_2e_semestre": 957212.43
+    },
+    "aveugle:0": {
+     "essai": 5056.31,
+     "exploitation": 5321.88,
+     "total": 10378.2,
+     "profit_2e_semestre": 961686.82
+    },
+    "aveugle:0.5": {
+     "essai": 6926.76,
+     "exploitation": 7429.56,
+     "total": 14356.32,
+     "profit_2e_semestre": 965808.98
+    },
+    "aveugle:1": {
+     "essai": 8530.96,
+     "exploitation": 9116.42,
+     "total": 17647.38,
+     "profit_2e_semestre": 969081.68
+    },
+    "regle": {
+     "essai": 8530.96,
+     "exploitation": 9116.42,
+     "total": 17647.38,
+     "profit_2e_semestre": 969081.68
+    },
+    "mixte": {
+     "essai": 8530.96,
+     "exploitation": 9116.42,
+     "total": 17647.38,
+     "profit_2e_semestre": 969081.68
+    }
+   },
+   "secs": 4.6
+  },
+  {
+   "graine": 6365,
+   "monde": "t3f",
+   "ecartee": false,
+   "objet": "moki5",
+   "prix_reference": 42.61,
+   "cout_vrai": 30.288,
+   "cout_au_jour_183": 30.288,
+   "taux_de_marge": 1.407,
+   "zone": "milieu",
+   "decision_regle": 0,
+   "decision_chaine": 1,
+   "bras": {
+    "nul": {
+     "essai": 32937.22,
+     "exploitation": 31841.12,
+     "total": 64778.34,
+     "profit_2e_semestre": 1179141.91
+    },
+    "chaine": {
+     "essai": 25080.22,
+     "exploitation": 25774.8,
+     "total": 50855.01,
+     "profit_2e_semestre": 1155445.9
+    },
+    "aveugle:-1": {
+     "essai": 17277.14,
+     "exploitation": 15600.38,
+     "total": 32877.52,
+     "profit_2e_semestre": 1137362.95
+    },
+    "aveugle:-0.5": {
+     "essai": 27463.7,
+     "exploitation": 26165.22,
+     "total": 53628.92,
+     "profit_2e_semestre": 1158736.67
+    },
+    "aveugle:0": {
+     "essai": 33442.42,
+     "exploitation": 31187.46,
+     "total": 64629.88,
+     "profit_2e_semestre": 1169149.14
+    },
+    "aveugle:0.5": {
+     "essai": 32223.01,
+     "exploitation": 29064.92,
+     "total": 61287.93,
+     "profit_2e_semestre": 1166242.64
+    },
+    "aveugle:1": {
+     "essai": 27313.93,
+     "exploitation": 25476.16,
+     "total": 52790.09,
+     "profit_2e_semestre": 1157656.67
+    },
+    "regle": {
+     "essai": 33442.42,
+     "exploitation": 31187.46,
+     "total": 64629.88,
+     "profit_2e_semestre": 1169149.14
+    },
+    "mixte": {
+     "essai": 25080.22,
+     "exploitation": 25774.8,
+     "total": 50855.01,
+     "profit_2e_semestre": 1155445.9
+    }
+   },
+   "secs": 7.5
+  },
+  {
+   "graine": 6366,
+   "monde": "t3f",
+   "ecartee": false,
+   "objet": "faqi0",
+   "prix_reference": 32.25,
+   "cout_vrai": 15.752,
+   "cout_au_jour_183": 15.752,
+   "taux_de_marge": 2.047,
+   "zone": "milieu",
+   "decision_regle": 0,
+   "decision_chaine": -1,
+   "bras": {
+    "nul": {
+     "essai": 21813.81,
+     "exploitation": 18766.96,
+     "total": 40580.77,
+     "profit_2e_semestre": 591268.19
+    },
+    "chaine": {
+     "essai": 23455.01,
+     "exploitation": 23521.75,
+     "total": 46976.76,
+     "profit_2e_semestre": 597646.92
+    },
+    "aveugle:-1": {
+     "essai": 25511.2,
+     "exploitation": 23461.47,
+     "total": 48972.67,
+     "profit_2e_semestre": 599652.89
+    },
+    "aveugle:-0.5": {
+     "essai": 24636.84,
+     "exploitation": 23484.24,
+     "total": 48121.09,
+     "profit_2e_semestre": 598804.37
+    },
+    "aveugle:0": {
+     "essai": 23327.8,
+     "exploitation": 21513.05,
+     "total": 44840.85,
+     "profit_2e_semestre": 595527.54
+    },
+    "aveugle:0.5": {
+     "essai": 20871.8,
+     "exploitation": 19434.5,
+     "total": 40306.3,
+     "profit_2e_semestre": 591021.65
+    },
+    "aveugle:1": {
+     "essai": 18663.88,
+     "exploitation": 17141.3,
+     "total": 35805.18,
+     "profit_2e_semestre": 586475.37
+    },
+    "regle": {
+     "essai": 23327.8,
+     "exploitation": 21513.05,
+     "total": 44840.85,
+     "profit_2e_semestre": 595527.54
+    },
+    "mixte": {
+     "essai": 23455.01,
+     "exploitation": 23521.75,
+     "total": 46976.76,
+     "profit_2e_semestre": 597646.92
+    }
+   },
+   "secs": 11.9
+  },
+  {
+   "graine": 6367,
+   "monde": "t3f",
+   "ecartee": false,
+   "objet": "bibo0",
+   "prix_reference": 15.82,
+   "cout_vrai": 13.261,
+   "cout_au_jour_183": 13.261,
+   "taux_de_marge": 1.193,
+   "zone": "bas",
+   "decision_regle": 1,
+   "decision_chaine": 1,
+   "bras": {
+    "nul": {
+     "essai": -4387.79,
+     "exploitation": -13858.55,
+     "total": -18246.34,
+     "profit_2e_semestre": 394257.92
+    },
+    "chaine": {
+     "essai": 4296.63,
+     "exploitation": 7660.77,
+     "total": 11957.4,
+     "profit_2e_semestre": 418376.29
+    },
+    "aveugle:-1": {
+     "essai": -3608.24,
+     "exploitation": -4122.33,
+     "total": -7730.58,
+     "profit_2e_semestre": 405427.34
+    },
+    "aveugle:-0.5": {
+     "essai": 3791.31,
+     "exploitation": 4361.87,
+     "total": 8153.17,
+     "profit_2e_semestre": 414400
+    },
+    "aveugle:0": {
+     "essai": 7195.14,
+     "exploitation": 8167.45,
+     "total": 15362.59,
+     "profit_2e_semestre": 421595.54
+    },
+    "aveugle:0.5": {
+     "essai": 7750.27,
+     "exploitation": 8485.44,
+     "total": 16235.71,
+     "profit_2e_semestre": 429203.73
+    },
+    "aveugle:1": {
+     "essai": 6814.64,
+     "exploitation": 7569.65,
+     "total": 14384.28,
+     "profit_2e_semestre": 420774.95
+    },
+    "regle": {
+     "essai": 6814.64,
+     "exploitation": 7569.65,
+     "total": 14384.28,
+     "profit_2e_semestre": 420774.95
+    },
+    "mixte": {
+     "essai": 6814.64,
+     "exploitation": 7569.65,
+     "total": 14384.28,
+     "profit_2e_semestre": 420774.95
+    }
+   },
+   "secs": 8.1
+  },
+  {
+   "graine": 6368,
+   "monde": "t3f",
+   "ecartee": false,
+   "objet": "wase2",
+   "prix_reference": 3.66,
+   "cout_vrai": 2.414,
+   "cout_au_jour_183": 2.414,
+   "taux_de_marge": 1.516,
+   "zone": "milieu",
+   "decision_regle": 0,
+   "decision_chaine": 0,
+   "bras": {
+    "nul": {
+     "essai": 2037.3,
+     "exploitation": 2160.93,
+     "total": 4198.23,
+     "profit_2e_semestre": 620673.59
+    },
+    "chaine": {
+     "essai": 1716.16,
+     "exploitation": 2185.71,
+     "total": 3901.86,
+     "profit_2e_semestre": 619831.27
+    },
+    "aveugle:-1": {
+     "essai": 1429.15,
+     "exploitation": 1469.41,
+     "total": 2898.56,
+     "profit_2e_semestre": 619359.84
+    },
+    "aveugle:-0.5": {
+     "essai": 1960.53,
+     "exploitation": 1975.08,
+     "total": 3935.61,
+     "profit_2e_semestre": 619919.55
+    },
+    "aveugle:0": {
+     "essai": 2028.69,
+     "exploitation": 2162.03,
+     "total": 4190.72,
+     "profit_2e_semestre": 620149.08
+    },
+    "aveugle:0.5": {
+     "essai": 1640.93,
+     "exploitation": 1768.31,
+     "total": 3409.24,
+     "profit_2e_semestre": 619374.86
+    },
+    "aveugle:1": {
+     "essai": 1278.26,
+     "exploitation": 1310.51,
+     "total": 2588.77,
+     "profit_2e_semestre": 618566.79
+    },
+    "regle": {
+     "essai": 2028.69,
+     "exploitation": 2162.03,
+     "total": 4190.72,
+     "profit_2e_semestre": 620149.08
+    },
+    "mixte": {
+     "essai": 1716.16,
+     "exploitation": 2185.71,
+     "total": 3901.86,
+     "profit_2e_semestre": 619831.27
+    }
+   },
+   "secs": 13.7
+  },
+  {
+   "graine": 6369,
+   "monde": "t3f",
+   "ecartee": false,
+   "objet": "wedire2",
+   "prix_reference": 52.5,
+   "cout_vrai": 32.702,
+   "cout_au_jour_183": 32.702,
+   "taux_de_marge": 1.605,
+   "zone": "milieu",
+   "decision_regle": 0,
+   "decision_chaine": -1,
+   "bras": {
+    "nul": {
+     "essai": 27493.64,
+     "exploitation": 27989.93,
+     "total": 55483.57,
+     "profit_2e_semestre": 59209.33
+    },
+    "chaine": {
+     "essai": 19438.56,
+     "exploitation": 20036.5,
+     "total": 39475.06,
+     "profit_2e_semestre": 41944.12
+    },
+    "aveugle:-1": {
+     "essai": 20268.94,
+     "exploitation": 20194.56,
+     "total": 40463.51,
+     "profit_2e_semestre": 43276.56
+    },
+    "aveugle:-0.5": {
+     "essai": 25307.38,
+     "exploitation": 25107.78,
+     "total": 50415.16,
+     "profit_2e_semestre": 58160.87
+    },
+    "aveugle:0": {
+     "essai": 27498.98,
+     "exploitation": 29676.72,
+     "total": 57175.7,
+     "profit_2e_semestre": 61467.34
+    },
+    "aveugle:0.5": {
+     "essai": 23787.88,
+     "exploitation": 26153.67,
+     "total": 49941.55,
+     "profit_2e_semestre": 53457.9
+    },
+    "aveugle:1": {
+     "essai": 17846.8,
+     "exploitation": 20513.95,
+     "total": 38360.75,
+     "profit_2e_semestre": 41272.18
+    },
+    "regle": {
+     "essai": 27498.98,
+     "exploitation": 29676.72,
+     "total": 57175.7,
+     "profit_2e_semestre": 61467.34
+    },
+    "mixte": {
+     "essai": 19438.56,
+     "exploitation": 20036.5,
+     "total": 39475.06,
+     "profit_2e_semestre": 41944.12
+    }
+   },
+   "secs": 4.6
+  },
+  {
+   "graine": 6370,
+   "monde": "t3f",
+   "ecartee": false,
+   "objet": "netosu4",
+   "prix_reference": 14.62,
+   "cout_vrai": 6.765,
+   "cout_au_jour_183": 6.765,
+   "taux_de_marge": 2.161,
+   "zone": "haut",
+   "decision_regle": -1,
+   "decision_chaine": 1,
+   "bras": {
+    "nul": {
+     "essai": 10239.72,
+     "exploitation": 11554.87,
+     "total": 21794.6,
+     "profit_2e_semestre": 673919.61
+    },
+    "chaine": {
+     "essai": 10085.1,
+     "exploitation": 11597.21,
+     "total": 21682.31,
+     "profit_2e_semestre": 675530.43
+    },
+    "aveugle:-1": {
+     "essai": 7397.81,
+     "exploitation": 7580.42,
+     "total": 14978.23,
+     "profit_2e_semestre": 667187.14
+    },
+    "aveugle:-0.5": {
+     "essai": 8594.94,
+     "exploitation": 8695.98,
+     "total": 17290.93,
+     "profit_2e_semestre": 669510.66
+    },
+    "aveugle:0": {
+     "essai": 9591.16,
+     "exploitation": 9638.29,
+     "total": 19229.45,
+     "profit_2e_semestre": 671511.56
+    },
+    "aveugle:0.5": {
+     "essai": 10467,
+     "exploitation": 10610.78,
+     "total": 21077.78,
+     "profit_2e_semestre": 673375.33
+    },
+    "aveugle:1": {
+     "essai": 11378.61,
+     "exploitation": 11712.26,
+     "total": 23090.87,
+     "profit_2e_semestre": 675342.44
+    },
+    "regle": {
+     "essai": 7397.81,
+     "exploitation": 7580.42,
+     "total": 14978.23,
+     "profit_2e_semestre": 667187.14
+    },
+    "mixte": {
+     "essai": 7397.81,
+     "exploitation": 7580.42,
+     "total": 14978.23,
+     "profit_2e_semestre": 667187.14
+    }
+   },
+   "secs": 6.1
+  },
+  {
+   "graine": 6371,
+   "monde": "t3f",
+   "ecartee": false,
+   "objet": "bakuxi5",
+   "prix_reference": 4.65,
+   "cout_vrai": 2.063,
+   "cout_au_jour_183": 2.063,
+   "taux_de_marge": 2.254,
+   "zone": "haut",
+   "decision_regle": -1,
+   "decision_chaine": -1,
+   "bras": {
+    "nul": {
+     "essai": 2692.57,
+     "exploitation": 2763.02,
+     "total": 5455.59,
+     "profit_2e_semestre": 300120.41
+    },
+    "chaine": {
+     "essai": 3431.31,
+     "exploitation": 4393.89,
+     "total": 7825.19,
+     "profit_2e_semestre": 302546.35
+    },
+    "aveugle:-1": {
+     "essai": 4140.39,
+     "exploitation": 4660.64,
+     "total": 8801.03,
+     "profit_2e_semestre": 303351.53
+    },
+    "aveugle:-0.5": {
+     "essai": 3696.69,
+     "exploitation": 3895.89,
+     "total": 7592.59,
+     "profit_2e_semestre": 302336.44
+    },
+    "aveugle:0": {
+     "essai": 2817.05,
+     "exploitation": 3057.62,
+     "total": 5874.67,
+     "profit_2e_semestre": 300563.19
+    },
+    "aveugle:0.5": {
+     "essai": 1960.51,
+     "exploitation": 2129.9,
+     "total": 4090.41,
+     "profit_2e_semestre": 298761.59
+    },
+    "aveugle:1": {
+     "essai": 1393.82,
+     "exploitation": 1547.44,
+     "total": 2941.25,
+     "profit_2e_semestre": 297535.05
+    },
+    "regle": {
+     "essai": 4140.39,
+     "exploitation": 4660.64,
+     "total": 8801.03,
+     "profit_2e_semestre": 303351.53
+    },
+    "mixte": {
+     "essai": 4140.39,
+     "exploitation": 4660.64,
+     "total": 8801.03,
+     "profit_2e_semestre": 303351.53
+    }
+   },
+   "secs": 5.4
+  },
+  {
+   "graine": 6372,
+   "monde": "t3f",
+   "ecartee": false,
+   "objet": "soli1",
+   "prix_reference": 6.63,
+   "cout_vrai": 3.093,
+   "cout_au_jour_183": 3.093,
+   "taux_de_marge": 2.144,
+   "zone": "haut",
+   "decision_regle": -1,
+   "decision_chaine": 0,
+   "bras": {
+    "nul": {
+     "essai": 9192.69,
+     "exploitation": 7617.15,
+     "total": 16809.84,
+     "profit_2e_semestre": -5998.83
+    },
+    "chaine": {
+     "essai": 7729.03,
+     "exploitation": 8124.95,
+     "total": 15853.98,
+     "profit_2e_semestre": -6759.18
+    },
+    "aveugle:-1": {
+     "essai": 9020.84,
+     "exploitation": 8005.52,
+     "total": 17026.36,
+     "profit_2e_semestre": -5498.28
+    },
+    "aveugle:-0.5": {
+     "essai": 9422.35,
+     "exploitation": 8463.63,
+     "total": 17885.98,
+     "profit_2e_semestre": -4898.63
+    },
+    "aveugle:0": {
+     "essai": 8397.32,
+     "exploitation": 7803.07,
+     "total": 16200.39,
+     "profit_2e_semestre": -6580.17
+    },
+    "aveugle:0.5": {
+     "essai": 7144.97,
+     "exploitation": 6635.54,
+     "total": 13780.51,
+     "profit_2e_semestre": -8954.27
+    },
+    "aveugle:1": {
+     "essai": 5836.46,
+     "exploitation": 5649.36,
+     "total": 11485.82,
+     "profit_2e_semestre": -11264.22
+    },
+    "regle": {
+     "essai": 9020.84,
+     "exploitation": 8005.52,
+     "total": 17026.36,
+     "profit_2e_semestre": -5498.28
+    },
+    "mixte": {
+     "essai": 9020.84,
+     "exploitation": 8005.52,
+     "total": 17026.36,
+     "profit_2e_semestre": -5498.28
+    }
+   },
+   "secs": 3.8
+  },
+  {
+   "graine": 6373,
+   "monde": "t3f",
+   "ecartee": false,
+   "objet": "hade5",
+   "prix_reference": 136.56,
+   "cout_vrai": 65.602,
+   "cout_au_jour_183": 65.602,
+   "taux_de_marge": 2.082,
+   "zone": "milieu",
+   "decision_regle": 0,
+   "decision_chaine": -1,
+   "bras": {
+    "nul": {
+     "essai": 95180.39,
+     "exploitation": 103493.89,
+     "total": 198674.28,
+     "profit_2e_semestre": 250416.42
+    },
+    "chaine": {
+     "essai": 86480.15,
+     "exploitation": 78828.73,
+     "total": 165308.88,
+     "profit_2e_semestre": 216219.66
+    },
+    "aveugle:-1": {
+     "essai": 77126.45,
+     "exploitation": 77868.47,
+     "total": 154994.91,
+     "profit_2e_semestre": 217452.35
+    },
+    "aveugle:-0.5": {
+     "essai": 89952.34,
+     "exploitation": 88934.66,
+     "total": 178887,
+     "profit_2e_semestre": 230992.73
+    },
+    "aveugle:0": {
+     "essai": 94800.21,
+     "exploitation": 98064.29,
+     "total": 192864.5,
+     "profit_2e_semestre": 252431.63
+    },
+    "aveugle:0.5": {
+     "essai": 92302.94,
+     "exploitation": 105800.07,
+     "total": 198103,
+     "profit_2e_semestre": 248310.39
+    },
+    "aveugle:1": {
+     "essai": 74829.95,
+     "exploitation": 86075.46,
+     "total": 160905.41,
+     "profit_2e_semestre": 219502.54
+    },
+    "regle": {
+     "essai": 94800.21,
+     "exploitation": 98064.29,
+     "total": 192864.5,
+     "profit_2e_semestre": 252431.63
+    },
+    "mixte": {
+     "essai": 86480.15,
+     "exploitation": 78828.73,
+     "total": 165308.88,
+     "profit_2e_semestre": 216219.66
+    }
+   },
+   "secs": 3.6
+  },
+  {
+   "graine": 6374,
+   "monde": "t3f",
+   "ecartee": false,
+   "objet": "mizili9",
+   "prix_reference": 15.08,
+   "cout_vrai": 6.993,
+   "cout_au_jour_183": 6.993,
+   "taux_de_marge": 2.156,
+   "zone": "haut",
+   "decision_regle": -1,
+   "decision_chaine": 1,
+   "bras": {
+    "nul": {
+     "essai": 6264.87,
+     "exploitation": 5521.67,
+     "total": 11786.54,
+     "profit_2e_semestre": -2910.19
+    },
+    "chaine": {
+     "essai": 7847.63,
+     "exploitation": 8916.13,
+     "total": 16763.76,
+     "profit_2e_semestre": 767.78
+    },
+    "aveugle:-1": {
+     "essai": 5157.75,
+     "exploitation": 4570.03,
+     "total": 9727.78,
+     "profit_2e_semestre": -5619.13
+    },
+    "aveugle:-0.5": {
+     "essai": 6121.36,
+     "exploitation": 6113.26,
+     "total": 12234.61,
+     "profit_2e_semestre": -3547.61
+    },
+    "aveugle:0": {
+     "essai": 7237.47,
+     "exploitation": 7116.17,
+     "total": 14353.63,
+     "profit_2e_semestre": -1467.61
+    },
+    "aveugle:0.5": {
+     "essai": 7636.71,
+     "exploitation": 8189.24,
+     "total": 15825.95,
+     "profit_2e_semestre": 159.22
+    },
+    "aveugle:1": {
+     "essai": 8529.4,
+     "exploitation": 8904.27,
+     "total": 17433.68,
+     "profit_2e_semestre": 1551.74
+    },
+    "regle": {
+     "essai": 5157.75,
+     "exploitation": 4570.03,
+     "total": 9727.78,
+     "profit_2e_semestre": -5619.13
+    },
+    "mixte": {
+     "essai": 5157.75,
+     "exploitation": 4570.03,
+     "total": 9727.78,
+     "profit_2e_semestre": -5619.13
+    }
+   },
+   "secs": 2.1
+  },
+  {
+   "graine": 6375,
+   "monde": "t3f",
+   "ecartee": false,
+   "objet": "rosohi1",
+   "prix_reference": 140.83,
+   "cout_vrai": 70.513,
+   "cout_au_jour_183": 70.513,
+   "taux_de_marge": 1.997,
+   "zone": "milieu",
+   "decision_regle": 0,
+   "decision_chaine": -1,
+   "bras": {
+    "nul": {
+     "essai": 22495.3,
+     "exploitation": 20088.49,
+     "total": 42583.79,
+     "profit_2e_semestre": 72789.29
+    },
+    "chaine": {
+     "essai": 42790.67,
+     "exploitation": 57066.71,
+     "total": 99857.39,
+     "profit_2e_semestre": 131575.16
+    },
+    "aveugle:-1": {
+     "essai": 56476.66,
+     "exploitation": 58331.11,
+     "total": 114807.77,
+     "profit_2e_semestre": 145303.28
+    },
+    "aveugle:-0.5": {
+     "essai": 46797.06,
+     "exploitation": 46797.06,
+     "total": 93594.13,
+     "profit_2e_semestre": 123898.77
+    },
+    "aveugle:0": {
+     "essai": 35018.14,
+     "exploitation": 34384.9,
+     "total": 69403.03,
+     "profit_2e_semestre": 99097.37
+    },
+    "aveugle:0.5": {
+     "essai": 23568.61,
+     "exploitation": 26167.96,
+     "total": 49736.58,
+     "profit_2e_semestre": 81509.03
+    },
+    "aveugle:1": {
+     "essai": 17411.92,
+     "exploitation": 20015.07,
+     "total": 37426.99,
+     "profit_2e_semestre": 67578.83
+    },
+    "regle": {
+     "essai": 35018.14,
+     "exploitation": 34384.9,
+     "total": 69403.03,
+     "profit_2e_semestre": 99097.37
+    },
+    "mixte": {
+     "essai": 42790.67,
+     "exploitation": 57066.71,
+     "total": 99857.39,
+     "profit_2e_semestre": 131575.16
+    }
+   },
+   "secs": 5.8
+  },
+  {
+   "graine": 6376,
+   "monde": "t3f",
+   "ecartee": false,
+   "objet": "dipi5",
+   "prix_reference": 4.18,
+   "cout_vrai": 2.142,
+   "cout_au_jour_183": 2.142,
+   "taux_de_marge": 1.951,
+   "zone": "milieu",
+   "decision_regle": 0,
+   "decision_chaine": -1,
+   "bras": {
+    "nul": {
+     "essai": 3066.97,
+     "exploitation": 2530.74,
+     "total": 5597.71,
+     "profit_2e_semestre": 202577.55
+    },
+    "chaine": {
+     "essai": 3883.76,
+     "exploitation": 5065.53,
+     "total": 8949.29,
+     "profit_2e_semestre": 205933.91
+    },
+    "aveugle:-1": {
+     "essai": 4872.73,
+     "exploitation": 5167.32,
+     "total": 10040.04,
+     "profit_2e_semestre": 207027.04
+    },
+    "aveugle:-0.5": {
+     "essai": 3990.62,
+     "exploitation": 4330.89,
+     "total": 8321.5,
+     "profit_2e_semestre": 205302.92
+    },
+    "aveugle:0": {
+     "essai": 3368.03,
+     "exploitation": 3382.29,
+     "total": 6750.32,
+     "profit_2e_semestre": 203732.18
+    },
+    "aveugle:0.5": {
+     "essai": 2494.67,
+     "exploitation": 2724.67,
+     "total": 5219.34,
+     "profit_2e_semestre": 202199.17
+    },
+    "aveugle:1": {
+     "essai": 1806.2,
+     "exploitation": 1994.54,
+     "total": 3800.74,
+     "profit_2e_semestre": 200780.59
+    },
+    "regle": {
+     "essai": 3368.03,
+     "exploitation": 3382.29,
+     "total": 6750.32,
+     "profit_2e_semestre": 203732.18
+    },
+    "mixte": {
+     "essai": 3883.76,
+     "exploitation": 5065.53,
+     "total": 8949.29,
+     "profit_2e_semestre": 205933.91
+    }
+   },
+   "secs": 6.5
+  },
+  {
+   "graine": 6377,
+   "monde": "t3f",
+   "ecartee": false,
+   "objet": "labe8",
+   "prix_reference": 26.04,
+   "cout_vrai": 13.144,
+   "cout_au_jour_183": 13.144,
+   "taux_de_marge": 1.981,
+   "zone": "milieu",
+   "decision_regle": 0,
+   "decision_chaine": 1,
+   "bras": {
+    "nul": {
+     "essai": 3974.42,
+     "exploitation": 3798.35,
+     "total": 7772.77,
+     "profit_2e_semestre": 24480.76
+    },
+    "chaine": {
+     "essai": 3800.18,
+     "exploitation": 3473.67,
+     "total": 7273.85,
+     "profit_2e_semestre": 23934.81
+    },
+    "aveugle:-1": {
+     "essai": 3543.22,
+     "exploitation": 3635.46,
+     "total": 7178.68,
+     "profit_2e_semestre": 23800.97
+    },
+    "aveugle:-0.5": {
+     "essai": 3889.36,
+     "exploitation": 3598.58,
+     "total": 7487.93,
+     "profit_2e_semestre": 24325.01
+    },
+    "aveugle:0": {
+     "essai": 4229.62,
+     "exploitation": 3778.51,
+     "total": 8008.14,
+     "profit_2e_semestre": 24601.39
+    },
+    "aveugle:0.5": {
+     "essai": 3895.69,
+     "exploitation": 3752,
+     "total": 7647.69,
+     "profit_2e_semestre": 24355.69
+    },
+    "aveugle:1": {
+     "essai": 3751.61,
+     "exploitation": 3434.85,
+     "total": 7186.47,
+     "profit_2e_semestre": 23922.8
+    },
+    "regle": {
+     "essai": 4229.62,
+     "exploitation": 3778.51,
+     "total": 8008.14,
+     "profit_2e_semestre": 24601.39
+    },
+    "mixte": {
+     "essai": 3800.18,
+     "exploitation": 3473.67,
+     "total": 7273.85,
+     "profit_2e_semestre": 23934.81
+    }
+   },
+   "secs": 2.5
+  },
+  {
+   "graine": 6378,
+   "monde": "t3f",
+   "ecartee": false,
+   "objet": "tisu4",
+   "prix_reference": 315.01,
+   "cout_vrai": 128.384,
+   "cout_au_jour_183": 128.384,
+   "taux_de_marge": 2.454,
+   "zone": "haut",
+   "decision_regle": -1,
+   "decision_chaine": 1,
+   "bras": {
+    "nul": {
+     "essai": 179349.82,
+     "exploitation": 139201.57,
+     "total": 318551.39,
+     "profit_2e_semestre": 377219.58
+    },
+    "chaine": {
+     "essai": 172518.67,
+     "exploitation": 126045.12,
+     "total": 298563.79,
+     "profit_2e_semestre": 391525.98
+    },
+    "aveugle:-1": {
+     "essai": 180123.48,
+     "exploitation": 134258.13,
+     "total": 314381.61,
+     "profit_2e_semestre": 375331.22
+    },
+    "aveugle:-0.5": {
+     "essai": 184346.26,
+     "exploitation": 134042.12,
+     "total": 318388.38,
+     "profit_2e_semestre": 412379.19
+    },
+    "aveugle:0": {
+     "essai": 183080.37,
+     "exploitation": 133251.16,
+     "total": 316331.53,
+     "profit_2e_semestre": 377881.33
+    },
+    "aveugle:0.5": {
+     "essai": 175240.31,
+     "exploitation": 130031.44,
+     "total": 305271.75,
+     "profit_2e_semestre": 364456.66
+    },
+    "aveugle:1": {
+     "essai": 164267.91,
+     "exploitation": 125788.35,
+     "total": 290056.26,
+     "profit_2e_semestre": 351307.67
+    },
+    "regle": {
+     "essai": 180123.48,
+     "exploitation": 134258.13,
+     "total": 314381.61,
+     "profit_2e_semestre": 375331.22
+    },
+    "mixte": {
+     "essai": 180123.48,
+     "exploitation": 134258.13,
+     "total": 314381.61,
+     "profit_2e_semestre": 375331.22
+    }
+   },
+   "secs": 4.7
+  },
+  {
+   "graine": 6379,
+   "monde": "t3f",
+   "ecartee": false,
+   "objet": "coga8",
+   "prix_reference": 8.9,
+   "cout_vrai": 3.532,
+   "cout_au_jour_183": 3.532,
+   "taux_de_marge": 2.52,
+   "zone": "haut",
+   "decision_regle": -1,
+   "decision_chaine": -1,
+   "bras": {
+    "nul": {
+     "essai": 5498.92,
+     "exploitation": 3753.06,
+     "total": 9251.98,
+     "profit_2e_semestre": 276922.49
+    },
+    "chaine": {
+     "essai": 7566.28,
+     "exploitation": 7495.79,
+     "total": 15062.07,
+     "profit_2e_semestre": 282736.16
+    },
+    "aveugle:-1": {
+     "essai": 8644.01,
+     "exploitation": 7499.37,
+     "total": 16143.39,
+     "profit_2e_semestre": 283817.49
+    },
+    "aveugle:-0.5": {
+     "essai": 7930.94,
+     "exploitation": 6637.9,
+     "total": 14568.83,
+     "profit_2e_semestre": 282243.77
+    },
+    "aveugle:0": {
+     "essai": 7010.89,
+     "exploitation": 5631.26,
+     "total": 12642.15,
+     "profit_2e_semestre": 280312.66
+    },
+    "aveugle:0.5": {
+     "essai": 6020.29,
+     "exploitation": 4743.06,
+     "total": 10763.35,
+     "profit_2e_semestre": 278440.28
+    },
+    "aveugle:1": {
+     "essai": 5128.8,
+     "exploitation": 3897.89,
+     "total": 9026.68,
+     "profit_2e_semestre": 276697.19
+    },
+    "regle": {
+     "essai": 8644.01,
+     "exploitation": 7499.37,
+     "total": 16143.39,
+     "profit_2e_semestre": 283817.49
+    },
+    "mixte": {
+     "essai": 8644.01,
+     "exploitation": 7499.37,
+     "total": 16143.39,
+     "profit_2e_semestre": 283817.49
+    }
+   },
+   "secs": 11.2
+  },
+  {
+   "graine": 6380,
+   "monde": "t3f",
+   "ecartee": false,
+   "objet": "reki6",
+   "prix_reference": 5.92,
+   "cout_vrai": 3.911,
+   "cout_au_jour_183": 3.911,
+   "taux_de_marge": 1.514,
+   "zone": "milieu",
+   "decision_regle": 0,
+   "decision_chaine": 1,
+   "bras": {
+    "nul": {
+     "essai": 8918.42,
+     "exploitation": 8462.26,
+     "total": 17380.68,
+     "profit_2e_semestre": -2291.75
+    },
+    "chaine": {
+     "essai": 8512.15,
+     "exploitation": 9761.35,
+     "total": 18273.5,
+     "profit_2e_semestre": -1872.79
+    },
+    "aveugle:-1": {
+     "essai": 4338.19,
+     "exploitation": 3924.67,
+     "total": 8262.86,
+     "profit_2e_semestre": -10206.86
+    },
+    "aveugle:-0.5": {
+     "essai": 6435.18,
+     "exploitation": 5639.47,
+     "total": 12074.65,
+     "profit_2e_semestre": -7406.17
+    },
+    "aveugle:0": {
+     "essai": 8804.08,
+     "exploitation": 7596.86,
+     "total": 16400.94,
+     "profit_2e_semestre": -3053.55
+    },
+    "aveugle:0.5": {
+     "essai": 9512.92,
+     "exploitation": 8564.87,
+     "total": 18077.79,
+     "profit_2e_semestre": -1484.84
+    },
+    "aveugle:1": {
+     "essai": 10511.42,
+     "exploitation": 9782.28,
+     "total": 20293.7,
+     "profit_2e_semestre": -81.78
+    },
+    "regle": {
+     "essai": 8804.08,
+     "exploitation": 7596.86,
+     "total": 16400.94,
+     "profit_2e_semestre": -3053.55
+    },
+    "mixte": {
+     "essai": 8512.15,
+     "exploitation": 9761.35,
+     "total": 18273.5,
+     "profit_2e_semestre": -1872.79
+    }
+   },
+   "secs": 4.2
+  },
+  {
+   "graine": 6381,
+   "monde": "t3f",
+   "ecartee": false,
+   "objet": "cuxo5",
+   "prix_reference": 4.95,
+   "cout_vrai": 4.138,
+   "cout_au_jour_183": 4.138,
+   "taux_de_marge": 1.196,
+   "zone": "bas",
+   "decision_regle": 1,
+   "decision_chaine": 1,
+   "bras": {
+    "nul": {
+     "essai": 906.71,
+     "exploitation": 863.88,
+     "total": 1770.6,
+     "profit_2e_semestre": 286276.15
+    },
+    "chaine": {
+     "essai": 628.15,
+     "exploitation": 871.96,
+     "total": 1500.11,
+     "profit_2e_semestre": 286002.07
+    },
+    "aveugle:-1": {
+     "essai": -444.21,
+     "exploitation": -409.08,
+     "total": -853.3,
+     "profit_2e_semestre": 283642.95
+    },
+    "aveugle:-0.5": {
+     "essai": 485.34,
+     "exploitation": 456.76,
+     "total": 942.1,
+     "profit_2e_semestre": 285441.7
+    },
+    "aveugle:0": {
+     "essai": 887.16,
+     "exploitation": 821.41,
+     "total": 1708.57,
+     "profit_2e_semestre": 286208.84
+    },
+    "aveugle:0.5": {
+     "essai": 995.05,
+     "exploitation": 914.33,
+     "total": 1909.37,
+     "profit_2e_semestre": 286423.92
+    },
+    "aveugle:1": {
+     "essai": 935.56,
+     "exploitation": 878.15,
+     "total": 1813.71,
+     "profit_2e_semestre": 286309.47
+    },
+    "regle": {
+     "essai": 935.56,
+     "exploitation": 878.15,
+     "total": 1813.71,
+     "profit_2e_semestre": 286309.47
+    },
+    "mixte": {
+     "essai": 935.56,
+     "exploitation": 878.15,
+     "total": 1813.71,
+     "profit_2e_semestre": 286309.47
+    }
+   },
+   "secs": 8.1
+  },
+  {
+   "graine": 6382,
+   "monde": "t3f",
+   "ecartee": false,
+   "objet": "ganide1",
+   "prix_reference": 11.15,
+   "cout_vrai": 5.806,
+   "cout_au_jour_183": 5.806,
+   "taux_de_marge": 1.92,
+   "zone": "milieu",
+   "decision_regle": 0,
+   "decision_chaine": 1,
+   "bras": {
+    "nul": {
+     "essai": 4792.25,
+     "exploitation": 4364.69,
+     "total": 9156.94,
+     "profit_2e_semestre": -104128.98
+    },
+    "chaine": {
+     "essai": 4998.56,
+     "exploitation": 4579.49,
+     "total": 9578.05,
+     "profit_2e_semestre": -103828.16
+    },
+    "aveugle:-1": {
+     "essai": 3556.29,
+     "exploitation": 3051.81,
+     "total": 6608.11,
+     "profit_2e_semestre": -106493.24
+    },
+    "aveugle:-0.5": {
+     "essai": 4176.59,
+     "exploitation": 4126.62,
+     "total": 8303.2,
+     "profit_2e_semestre": -104977.26
+    },
+    "aveugle:0": {
+     "essai": 5055.51,
+     "exploitation": 4408.88,
+     "total": 9464.39,
+     "profit_2e_semestre": -103184.96
+    },
+    "aveugle:0.5": {
+     "essai": 5484.55,
+     "exploitation": 4604.89,
+     "total": 10089.44,
+     "profit_2e_semestre": -102565.58
+    },
+    "aveugle:1": {
+     "essai": 5287.16,
+     "exploitation": 4302.94,
+     "total": 9590.1,
+     "profit_2e_semestre": -103692.99
+    },
+    "regle": {
+     "essai": 5055.51,
+     "exploitation": 4408.88,
+     "total": 9464.39,
+     "profit_2e_semestre": -103184.96
+    },
+    "mixte": {
+     "essai": 4998.56,
+     "exploitation": 4579.49,
+     "total": 9578.05,
+     "profit_2e_semestre": -103828.16
+    }
+   },
+   "secs": 4.3
+  },
+  {
+   "graine": 6383,
+   "monde": "t3f",
+   "ecartee": false,
+   "objet": "lagajo7",
+   "prix_reference": 89.92,
+   "cout_vrai": 46.73,
+   "cout_au_jour_183": 46.73,
+   "taux_de_marge": 1.924,
+   "zone": "milieu",
+   "decision_regle": 0,
+   "decision_chaine": 1,
+   "bras": {
+    "nul": {
+     "essai": 92812.35,
+     "exploitation": 96730.11,
+     "total": 189542.46,
+     "profit_2e_semestre": 859661.76
+    },
+    "chaine": {
+     "essai": 95604.04,
+     "exploitation": 98636.21,
+     "total": 194240.25,
+     "profit_2e_semestre": 866251.88
+    },
+    "aveugle:-1": {
+     "essai": 68520.55,
+     "exploitation": 63478.56,
+     "total": 131999.11,
+     "profit_2e_semestre": 803605.85
+    },
+    "aveugle:-0.5": {
+     "essai": 79430.7,
+     "exploitation": 75420.41,
+     "total": 154851.11,
+     "profit_2e_semestre": 825774.93
+    },
+    "aveugle:0": {
+     "essai": 91562.62,
+     "exploitation": 85084.13,
+     "total": 176646.75,
+     "profit_2e_semestre": 848935.41
+    },
+    "aveugle:0.5": {
+     "essai": 98938.04,
+     "exploitation": 91567.45,
+     "total": 190505.5,
+     "profit_2e_semestre": 862695.02
+    },
+    "aveugle:1": {
+     "essai": 105353.48,
+     "exploitation": 99818.27,
+     "total": 205171.75,
+     "profit_2e_semestre": 876048.06
+    },
+    "regle": {
+     "essai": 91562.62,
+     "exploitation": 85084.13,
+     "total": 176646.75,
+     "profit_2e_semestre": 848935.41
+    },
+    "mixte": {
+     "essai": 95604.04,
+     "exploitation": 98636.21,
+     "total": 194240.25,
+     "profit_2e_semestre": 866251.88
+    }
+   },
+   "secs": 6
+  },
+  {
+   "graine": 6384,
+   "monde": "t3f",
+   "ecartee": false,
+   "objet": "huxo7",
+   "prix_reference": 116.66,
+   "cout_vrai": 58.386,
+   "cout_au_jour_183": 38.859,
+   "taux_de_marge": 3.002,
+   "zone": "haut",
+   "decision_regle": -1,
+   "decision_chaine": -1,
+   "bras": {
+    "nul": {
+     "essai": 49275.86,
+     "exploitation": 45146,
+     "total": 94421.86,
+     "profit_2e_semestre": 188832.59
+    },
+    "chaine": {
+     "essai": 51740.38,
+     "exploitation": 68036.48,
+     "total": 119776.85,
+     "profit_2e_semestre": 214812.14
+    },
+    "aveugle:-1": {
+     "essai": 70762.13,
+     "exploitation": 68945.03,
+     "total": 139707.16,
+     "profit_2e_semestre": 234742.45
+    },
+    "aveugle:-0.5": {
+     "essai": 54363.89,
+     "exploitation": 61119.17,
+     "total": 115483.06,
+     "profit_2e_semestre": 210258.42
+    },
+    "aveugle:0": {
+     "essai": 48425.91,
+     "exploitation": 49941.04,
+     "total": 98366.96,
+     "profit_2e_semestre": 192913.53
+    },
+    "aveugle:0.5": {
+     "essai": 36166.22,
+     "exploitation": 38975.95,
+     "total": 75142.17,
+     "profit_2e_semestre": 169535.07
+    },
+    "aveugle:1": {
+     "essai": 26142.84,
+     "exploitation": 28588.41,
+     "total": 54731.25,
+     "profit_2e_semestre": 149980.12
+    },
+    "regle": {
+     "essai": 70762.13,
+     "exploitation": 68945.03,
+     "total": 139707.16,
+     "profit_2e_semestre": 234742.45
+    },
+    "mixte": {
+     "essai": 70762.13,
+     "exploitation": 68945.03,
+     "total": 139707.16,
+     "profit_2e_semestre": 234742.45
+    }
+   },
+   "secs": 5.8
+  },
+  {
+   "graine": 6385,
+   "monde": "t3f",
+   "ecartee": false,
+   "objet": "fituve4",
+   "prix_reference": 53.05,
+   "cout_vrai": 33.779,
+   "cout_au_jour_183": 33.779,
+   "taux_de_marge": 1.57,
+   "zone": "milieu",
+   "decision_regle": 0,
+   "decision_chaine": -1,
+   "bras": {
+    "nul": {
+     "essai": 20969.36,
+     "exploitation": 24163.32,
+     "total": 45132.69,
+     "profit_2e_semestre": 350041.95
+    },
+    "chaine": {
+     "essai": 20102.11,
+     "exploitation": 24760.45,
+     "total": 44862.57,
+     "profit_2e_semestre": 349008.44
+    },
+    "aveugle:-1": {
+     "essai": 22560.68,
+     "exploitation": 23019.69,
+     "total": 45580.36,
+     "profit_2e_semestre": 349929.96
+    },
+    "aveugle:-0.5": {
+     "essai": 24415.56,
+     "exploitation": 25850.97,
+     "total": 50266.53,
+     "profit_2e_semestre": 354143.43
+    },
+    "aveugle:0": {
+     "essai": 20879.73,
+     "exploitation": 22291.24,
+     "total": 43170.97,
+     "profit_2e_semestre": 348168.29
+    },
+    "aveugle:0.5": {
+     "essai": 15777.87,
+     "exploitation": 17437.35,
+     "total": 33215.22,
+     "profit_2e_semestre": 338649.13
+    },
+    "aveugle:1": {
+     "essai": 11288.09,
+     "exploitation": 12361.6,
+     "total": 23649.69,
+     "profit_2e_semestre": 329328.44
+    },
+    "regle": {
+     "essai": 20879.73,
+     "exploitation": 22291.24,
+     "total": 43170.97,
+     "profit_2e_semestre": 348168.29
+    },
+    "mixte": {
+     "essai": 20102.11,
+     "exploitation": 24760.45,
+     "total": 44862.57,
+     "profit_2e_semestre": 349008.44
+    }
+   },
+   "secs": 6
+  },
+  {
+   "graine": 6386,
+   "monde": "t3f",
+   "ecartee": false,
+   "objet": "pena8",
+   "prix_reference": 5.27,
+   "cout_vrai": 2.976,
+   "cout_au_jour_183": 2.976,
+   "taux_de_marge": 1.771,
+   "zone": "milieu",
+   "decision_regle": 0,
+   "decision_chaine": 0,
+   "bras": {
+    "nul": {
+     "essai": 3341.27,
+     "exploitation": 3001.13,
+     "total": 6342.4,
+     "profit_2e_semestre": 734554.53
+    },
+    "chaine": {
+     "essai": 3180.26,
+     "exploitation": 3122.69,
+     "total": 6302.96,
+     "profit_2e_semestre": 734560.88
+    },
+    "aveugle:-1": {
+     "essai": 3190.67,
+     "exploitation": 3167.03,
+     "total": 6357.7,
+     "profit_2e_semestre": 735406.39
+    },
+    "aveugle:-0.5": {
+     "essai": 3333.54,
+     "exploitation": 3227.74,
+     "total": 6561.28,
+     "profit_2e_semestre": 734871.88
+    },
+    "aveugle:0": {
+     "essai": 3308.54,
+     "exploitation": 3092.87,
+     "total": 6401.41,
+     "profit_2e_semestre": 734636.36
+    },
+    "aveugle:0.5": {
+     "essai": 3019.33,
+     "exploitation": 2917.33,
+     "total": 5936.66,
+     "profit_2e_semestre": 734190.66
+    },
+    "aveugle:1": {
+     "essai": 2754.18,
+     "exploitation": 2595.15,
+     "total": 5349.33,
+     "profit_2e_semestre": 733589.7
+    },
+    "regle": {
+     "essai": 3308.54,
+     "exploitation": 3092.87,
+     "total": 6401.41,
+     "profit_2e_semestre": 734636.36
+    },
+    "mixte": {
+     "essai": 3180.26,
+     "exploitation": 3122.69,
+     "total": 6302.96,
+     "profit_2e_semestre": 734560.88
+    }
+   },
+   "secs": 12.1
+  },
+  {
+   "graine": 6387,
+   "monde": "t3f",
+   "ecartee": false,
+   "objet": "ruxa5",
+   "prix_reference": 47.18,
+   "cout_vrai": 21.465,
+   "cout_au_jour_183": 21.465,
+   "taux_de_marge": 2.198,
+   "zone": "haut",
+   "decision_regle": -1,
+   "decision_chaine": -1,
+   "bras": {
+    "nul": {
+     "essai": 6226.06,
+     "exploitation": 4629.42,
+     "total": 10855.47,
+     "profit_2e_semestre": 102958.67
+    },
+    "chaine": {
+     "essai": 10797.16,
+     "exploitation": 15347.29,
+     "total": 26144.45,
+     "profit_2e_semestre": 118028.27
+    },
+    "aveugle:-1": {
+     "essai": 14045.29,
+     "exploitation": 14208.04,
+     "total": 28253.33,
+     "profit_2e_semestre": 120581.78
+    },
+    "aveugle:-0.5": {
+     "essai": 10761.44,
+     "exploitation": 11093.2,
+     "total": 21854.65,
+     "profit_2e_semestre": 114153.9
+    },
+    "aveugle:0": {
+     "essai": 7997.35,
+     "exploitation": 8408.79,
+     "total": 16406.14,
+     "profit_2e_semestre": 109005.75
+    },
+    "aveugle:0.5": {
+     "essai": 6194.42,
+     "exploitation": 6425.06,
+     "total": 12619.48,
+     "profit_2e_semestre": 104763.42
+    },
+    "aveugle:1": {
+     "essai": 4764.4,
+     "exploitation": 4839.43,
+     "total": 9603.83,
+     "profit_2e_semestre": 101621.68
+    },
+    "regle": {
+     "essai": 14045.29,
+     "exploitation": 14208.04,
+     "total": 28253.33,
+     "profit_2e_semestre": 120581.78
+    },
+    "mixte": {
+     "essai": 14045.29,
+     "exploitation": 14208.04,
+     "total": 28253.33,
+     "profit_2e_semestre": 120581.78
+    }
+   },
+   "secs": 5.3
+  },
+  {
+   "graine": 6388,
+   "monde": "t3f",
+   "ecartee": false,
+   "objet": "luwu0",
+   "prix_reference": 5.11,
+   "cout_vrai": 4.006,
+   "cout_au_jour_183": 4.006,
+   "taux_de_marge": 1.276,
+   "zone": "bas",
+   "decision_regle": 1,
+   "decision_chaine": 1,
+   "bras": {
+    "nul": {
+     "essai": 1590.3,
+     "exploitation": 1578.27,
+     "total": 3168.56,
+     "profit_2e_semestre": 760827.17
+    },
+    "chaine": {
+     "essai": 1418.77,
+     "exploitation": 1523.49,
+     "total": 2942.26,
+     "profit_2e_semestre": 760597.53
+    },
+    "aveugle:-1": {
+     "essai": 233.43,
+     "exploitation": 220.81,
+     "total": 454.24,
+     "profit_2e_semestre": 758109.68
+    },
+    "aveugle:-0.5": {
+     "essai": 1215.24,
+     "exploitation": 1123.85,
+     "total": 2339.09,
+     "profit_2e_semestre": 759996.08
+    },
+    "aveugle:0": {
+     "essai": 1704.85,
+     "exploitation": 1521.56,
+     "total": 3226.41,
+     "profit_2e_semestre": 760881.69
+    },
+    "aveugle:0.5": {
+     "essai": 1816.66,
+     "exploitation": 1590,
+     "total": 3406.66,
+     "profit_2e_semestre": 761061.93
+    },
+    "aveugle:1": {
+     "essai": 1809.59,
+     "exploitation": 1523.49,
+     "total": 3333.08,
+     "profit_2e_semestre": 760988.36
+    },
+    "regle": {
+     "essai": 1809.59,
+     "exploitation": 1523.49,
+     "total": 3333.08,
+     "profit_2e_semestre": 760988.36
+    },
+    "mixte": {
+     "essai": 1809.59,
+     "exploitation": 1523.49,
+     "total": 3333.08,
+     "profit_2e_semestre": 760988.36
+    }
+   },
+   "secs": 10.8
+  },
+  {
+   "graine": 6389,
+   "monde": "t3f",
+   "ecartee": false,
+   "objet": "selu3",
+   "prix_reference": 41.26,
+   "cout_vrai": 27.769,
+   "cout_au_jour_183": 27.769,
+   "taux_de_marge": 1.486,
+   "zone": "milieu",
+   "decision_regle": 0,
+   "decision_chaine": -1,
+   "bras": {
+    "nul": {
+     "essai": 25641,
+     "exploitation": 20744.28,
+     "total": 46385.28,
+     "profit_2e_semestre": 194047.17
+    },
+    "chaine": {
+     "essai": 20071.34,
+     "exploitation": 17401.78,
+     "total": 37473.12,
+     "profit_2e_semestre": 185150.75
+    },
+    "aveugle:-1": {
+     "essai": 17842.06,
+     "exploitation": 17407.02,
+     "total": 35249.08,
+     "profit_2e_semestre": 182916.23
+    },
+    "aveugle:-0.5": {
+     "essai": 23988.45,
+     "exploitation": 23614.06,
+     "total": 47602.51,
+     "profit_2e_semestre": 210212.98
+    },
+    "aveugle:0": {
+     "essai": 25647.34,
+     "exploitation": 26618.73,
+     "total": 52266.07,
+     "profit_2e_semestre": 199941.44
+    },
+    "aveugle:0.5": {
+     "essai": 21850.18,
+     "exploitation": 22401.03,
+     "total": 44251.21,
+     "profit_2e_semestre": 191913.11
+    },
+    "aveugle:1": {
+     "essai": 17739.57,
+     "exploitation": 17858.62,
+     "total": 35598.19,
+     "profit_2e_semestre": 183260.09
+    },
+    "regle": {
+     "essai": 25647.34,
+     "exploitation": 26618.73,
+     "total": 52266.07,
+     "profit_2e_semestre": 199941.44
+    },
+    "mixte": {
+     "essai": 20071.34,
+     "exploitation": 17401.78,
+     "total": 37473.12,
+     "profit_2e_semestre": 185150.75
+    }
+   },
+   "secs": 6.1
+  },
+  {
+   "graine": 6390,
+   "monde": "t3f",
+   "ecartee": false,
+   "objet": "zovepe9",
+   "prix_reference": 6.56,
+   "cout_vrai": 4.523,
+   "cout_au_jour_183": 4.523,
+   "taux_de_marge": 1.45,
+   "zone": "milieu",
+   "decision_regle": 0,
+   "decision_chaine": 1,
+   "bras": {
+    "nul": {
+     "essai": 3791.01,
+     "exploitation": 3965.38,
+     "total": 7756.4,
+     "profit_2e_semestre": -8846.09
+    },
+    "chaine": {
+     "essai": 4024.8,
+     "exploitation": 4243.34,
+     "total": 8268.14,
+     "profit_2e_semestre": -9418.06
+    },
+    "aveugle:-1": {
+     "essai": 1679.54,
+     "exploitation": 1405.44,
+     "total": 3084.98,
+     "profit_2e_semestre": -14614.48
+    },
+    "aveugle:-0.5": {
+     "essai": 2850.41,
+     "exploitation": 2399.14,
+     "total": 5249.55,
+     "profit_2e_semestre": -11251.63
+    },
+    "aveugle:0": {
+     "essai": 4021.64,
+     "exploitation": 3452.84,
+     "total": 7474.48,
+     "profit_2e_semestre": -10126.03
+    },
+    "aveugle:0.5": {
+     "essai": 4621.07,
+     "exploitation": 4087.1,
+     "total": 8708.17,
+     "profit_2e_semestre": -8011.94
+    },
+    "aveugle:1": {
+     "essai": 5182.69,
+     "exploitation": 4390.43,
+     "total": 9573.12,
+     "profit_2e_semestre": -8100.05
+    },
+    "regle": {
+     "essai": 4021.64,
+     "exploitation": 3452.84,
+     "total": 7474.48,
+     "profit_2e_semestre": -10126.03
+    },
+    "mixte": {
+     "essai": 4024.8,
+     "exploitation": 4243.34,
+     "total": 8268.14,
+     "profit_2e_semestre": -9418.06
+    }
+   },
+   "secs": 3.4
+  },
+  {
+   "graine": 6391,
+   "monde": "t3f",
+   "ecartee": false,
+   "objet": "habo7",
+   "prix_reference": 38.11,
+   "cout_vrai": 14.691,
+   "cout_au_jour_183": 14.691,
+   "taux_de_marge": 2.594,
+   "zone": "haut",
+   "decision_regle": -1,
+   "decision_chaine": 1,
+   "bras": {
+    "nul": {
+     "essai": 23609.3,
+     "exploitation": 23859.52,
+     "total": 47468.82,
+     "profit_2e_semestre": -26760.28
+    },
+    "chaine": {
+     "essai": 23886.95,
+     "exploitation": 24678.89,
+     "total": 48565.83,
+     "profit_2e_semestre": -25768.06
+    },
+    "aveugle:-1": {
+     "essai": 21186.61,
+     "exploitation": 20523.05,
+     "total": 41709.66,
+     "profit_2e_semestre": -32707.28
+    },
+    "aveugle:-0.5": {
+     "essai": 22852.15,
+     "exploitation": 22134.39,
+     "total": 44986.54,
+     "profit_2e_semestre": -29384.39
+    },
+    "aveugle:0": {
+     "essai": 23957.75,
+     "exploitation": 23489.37,
+     "total": 47447.12,
+     "profit_2e_semestre": -26884.32
+    },
+    "aveugle:0.5": {
+     "essai": 24596.74,
+     "exploitation": 24122.11,
+     "total": 48718.85,
+     "profit_2e_semestre": -25673.85
+    },
+    "aveugle:1": {
+     "essai": 25173.12,
+     "exploitation": 24693.58,
+     "total": 49866.7,
+     "profit_2e_semestre": -24497.68
+    },
+    "regle": {
+     "essai": 21186.61,
+     "exploitation": 20523.05,
+     "total": 41709.66,
+     "profit_2e_semestre": -32707.28
+    },
+    "mixte": {
+     "essai": 21186.61,
+     "exploitation": 20523.05,
+     "total": 41709.66,
+     "profit_2e_semestre": -32707.28
+    }
+   },
+   "secs": 3.6
+  },
+  {
+   "graine": 6392,
+   "monde": "t3f",
+   "ecartee": false,
+   "objet": "jediqe7",
+   "prix_reference": 93.37,
+   "cout_vrai": 54.482,
+   "cout_au_jour_183": 54.482,
+   "taux_de_marge": 1.714,
+   "zone": "milieu",
+   "decision_regle": 0,
+   "decision_chaine": -1,
+   "bras": {
+    "nul": {
+     "essai": 66158.61,
+     "exploitation": 79191.74,
+     "total": 145350.34,
+     "profit_2e_semestre": 356462.47
+    },
+    "chaine": {
+     "essai": 63392.55,
+     "exploitation": 78991.47,
+     "total": 142384.02,
+     "profit_2e_semestre": 376522.77
+    },
+    "aveugle:-1": {
+     "essai": 71328.87,
+     "exploitation": 81053.7,
+     "total": 152382.58,
+     "profit_2e_semestre": 362586.41
+    },
+    "aveugle:-0.5": {
+     "essai": 70508.85,
+     "exploitation": 77765.84,
+     "total": 148274.69,
+     "profit_2e_semestre": 360409.38
+    },
+    "aveugle:0": {
+     "essai": 62804.01,
+     "exploitation": 71903.79,
+     "total": 134707.81,
+     "profit_2e_semestre": 346430.35
+    },
+    "aveugle:0.5": {
+     "essai": 54050.29,
+     "exploitation": 62933.91,
+     "total": 116984.2,
+     "profit_2e_semestre": 329206.16
+    },
+    "aveugle:1": {
+     "essai": 45426.39,
+     "exploitation": 52955.97,
+     "total": 98382.37,
+     "profit_2e_semestre": 310839.43
+    },
+    "regle": {
+     "essai": 62804.01,
+     "exploitation": 71903.79,
+     "total": 134707.81,
+     "profit_2e_semestre": 346430.35
+    },
+    "mixte": {
+     "essai": 63392.55,
+     "exploitation": 78991.47,
+     "total": 142384.02,
+     "profit_2e_semestre": 376522.77
+    }
+   },
+   "secs": 10.1
+  },
+  {
+   "graine": 6393,
+   "monde": "t3f",
+   "ecartee": false,
+   "objet": "sipe8",
+   "prix_reference": 48.19,
+   "cout_vrai": 16.87,
+   "cout_au_jour_183": 16.87,
+   "taux_de_marge": 2.857,
+   "zone": "haut",
+   "decision_regle": -1,
+   "decision_chaine": -1,
+   "bras": {
+    "nul": {
+     "essai": 9666.86,
+     "exploitation": 11940.62,
+     "total": 21607.49,
+     "profit_2e_semestre": 293951.12
+    },
+    "chaine": {
+     "essai": 22958.01,
+     "exploitation": 28834.94,
+     "total": 51792.95,
+     "profit_2e_semestre": 331547.14
+    },
+    "aveugle:-1": {
+     "essai": 30504.34,
+     "exploitation": 28813.26,
+     "total": 59317.6,
+     "profit_2e_semestre": 331422.62
+    },
+    "aveugle:-0.5": {
+     "essai": 22689.3,
+     "exploitation": 21771.24,
+     "total": 44460.54,
+     "profit_2e_semestre": 316500.52
+    },
+    "aveugle:0": {
+     "essai": 16443.21,
+     "exploitation": 15221.72,
+     "total": 31664.93,
+     "profit_2e_semestre": 303704.91
+    },
+    "aveugle:0.5": {
+     "essai": 11510.24,
+     "exploitation": 10510.96,
+     "total": 22021.19,
+     "profit_2e_semestre": 294135.19
+    },
+    "aveugle:1": {
+     "essai": 8370.49,
+     "exploitation": 6765.78,
+     "total": 15136.27,
+     "profit_2e_semestre": 287176.25
+    },
+    "regle": {
+     "essai": 30504.34,
+     "exploitation": 28813.26,
+     "total": 59317.6,
+     "profit_2e_semestre": 331422.62
+    },
+    "mixte": {
+     "essai": 30504.34,
+     "exploitation": 28813.26,
+     "total": 59317.6,
+     "profit_2e_semestre": 331422.62
+    }
+   },
+   "secs": 8
+  },
+  {
+   "graine": 6394,
+   "monde": "t3f",
+   "ecartee": false,
+   "objet": "lume2",
+   "prix_reference": 52.9,
+   "cout_vrai": 26.124,
+   "cout_au_jour_183": 26.124,
+   "taux_de_marge": 2.025,
+   "zone": "milieu",
+   "decision_regle": 0,
+   "decision_chaine": -1,
+   "bras": {
+    "nul": {
+     "essai": 20847.4,
+     "exploitation": 24805.91,
+     "total": 45653.31,
+     "profit_2e_semestre": 23120.79
+    },
+    "chaine": {
+     "essai": 24017.89,
+     "exploitation": 27128.9,
+     "total": 51146.79,
+     "profit_2e_semestre": 28489.76
+    },
+    "aveugle:-1": {
+     "essai": 28473.2,
+     "exploitation": 26406.33,
+     "total": 54879.53,
+     "profit_2e_semestre": 32945.08
+    },
+    "aveugle:-0.5": {
+     "essai": 24799.74,
+     "exploitation": 25880.75,
+     "total": 50680.49,
+     "profit_2e_semestre": 28125.59
+    },
+    "aveugle:0": {
+     "essai": 20510.69,
+     "exploitation": 21474.64,
+     "total": 41985.33,
+     "profit_2e_semestre": 19799.44
+    },
+    "aveugle:0.5": {
+     "essai": 16211.03,
+     "exploitation": 17894.87,
+     "total": 34105.9,
+     "profit_2e_semestre": 23112.16
+    },
+    "aveugle:1": {
+     "essai": 12081.92,
+     "exploitation": 14134.49,
+     "total": 26216.41,
+     "profit_2e_semestre": 4527.81
+    },
+    "regle": {
+     "essai": 20510.69,
+     "exploitation": 21474.64,
+     "total": 41985.33,
+     "profit_2e_semestre": 19799.44
+    },
+    "mixte": {
+     "essai": 24017.89,
+     "exploitation": 27128.9,
+     "total": 51146.79,
+     "profit_2e_semestre": 28489.76
+    }
+   },
+   "secs": 6.4
+  },
+  {
+   "graine": 6395,
+   "monde": "t3f",
+   "ecartee": false,
+   "objet": "giwe2",
+   "prix_reference": 9.14,
+   "cout_vrai": 6.706,
+   "cout_au_jour_183": 6.706,
+   "taux_de_marge": 1.363,
+   "zone": "bas",
+   "decision_regle": 1,
+   "decision_chaine": 1,
+   "bras": {
+    "nul": {
+     "essai": 4151,
+     "exploitation": 3819.04,
+     "total": 7970.03,
+     "profit_2e_semestre": 65955.13
+    },
+    "chaine": {
+     "essai": 3946.1,
+     "exploitation": 5107.05,
+     "total": 9053.15,
+     "profit_2e_semestre": 66957.82
+    },
+    "aveugle:-1": {
+     "essai": 1332.05,
+     "exploitation": 1296.99,
+     "total": 2629.04,
+     "profit_2e_semestre": 60425.51
+    },
+    "aveugle:-0.5": {
+     "essai": 3053.43,
+     "exploitation": 2631.76,
+     "total": 5685.2,
+     "profit_2e_semestre": 63551.52
+    },
+    "aveugle:0": {
+     "essai": 4204.17,
+     "exploitation": 3771.45,
+     "total": 7975.62,
+     "profit_2e_semestre": 65915.98
+    },
+    "aveugle:0.5": {
+     "essai": 4638.98,
+     "exploitation": 4674.12,
+     "total": 9313.1,
+     "profit_2e_semestre": 67334.2
+    },
+    "aveugle:1": {
+     "essai": 5248.78,
+     "exploitation": 5088.15,
+     "total": 10336.94,
+     "profit_2e_semestre": 68293.58
+    },
+    "regle": {
+     "essai": 5248.78,
+     "exploitation": 5088.15,
+     "total": 10336.94,
+     "profit_2e_semestre": 68293.58
+    },
+    "mixte": {
+     "essai": 5248.78,
+     "exploitation": 5088.15,
+     "total": 10336.94,
+     "profit_2e_semestre": 68293.58
+    }
+   },
+   "secs": 5.4
+  },
+  {
+   "graine": 6396,
+   "monde": "t3f",
+   "ecartee": false,
+   "objet": "zori6",
+   "prix_reference": 15.76,
+   "cout_vrai": 9.049,
+   "cout_au_jour_183": 9.049,
+   "taux_de_marge": 1.742,
+   "zone": "milieu",
+   "decision_regle": 0,
+   "decision_chaine": 1,
+   "bras": {
+    "nul": {
+     "essai": 12455.45,
+     "exploitation": 13242.87,
+     "total": 25698.33,
+     "profit_2e_semestre": 621317.71
+    },
+    "chaine": {
+     "essai": 11425.97,
+     "exploitation": 12727.64,
+     "total": 24153.61,
+     "profit_2e_semestre": 619639.16
+    },
+    "aveugle:-1": {
+     "essai": 10087.59,
+     "exploitation": 11643.64,
+     "total": 21731.23,
+     "profit_2e_semestre": 617399.2
+    },
+    "aveugle:-0.5": {
+     "essai": 12258.16,
+     "exploitation": 13515.79,
+     "total": 25773.95,
+     "profit_2e_semestre": 621232.18
+    },
+    "aveugle:0": {
+     "essai": 12461.85,
+     "exploitation": 13542.28,
+     "total": 26004.14,
+     "profit_2e_semestre": 621649.05
+    },
+    "aveugle:0.5": {
+     "essai": 12341.87,
+     "exploitation": 13644.63,
+     "total": 25986.5,
+     "profit_2e_semestre": 621295.07
+    },
+    "aveugle:1": {
+     "essai": 11513.46,
+     "exploitation": 12727.64,
+     "total": 24241.1,
+     "profit_2e_semestre": 623452.48
+    },
+    "regle": {
+     "essai": 12461.85,
+     "exploitation": 13542.28,
+     "total": 26004.14,
+     "profit_2e_semestre": 621649.05
+    },
+    "mixte": {
+     "essai": 11425.97,
+     "exploitation": 12727.64,
+     "total": 24153.61,
+     "profit_2e_semestre": 619639.16
+    }
+   },
+   "secs": 10
+  },
+  {
+   "graine": 6397,
+   "monde": "t3f",
+   "ecartee": false,
+   "objet": "dupovo1",
+   "prix_reference": 34.03,
+   "cout_vrai": 12.301,
+   "cout_au_jour_183": 12.301,
+   "taux_de_marge": 2.766,
+   "zone": "haut",
+   "decision_regle": -1,
+   "decision_chaine": 1,
+   "bras": {
+    "nul": {
+     "essai": 7229.32,
+     "exploitation": 8447.85,
+     "total": 15677.18,
+     "profit_2e_semestre": 8881.59
+    },
+    "chaine": {
+     "essai": 8188.08,
+     "exploitation": 8466.82,
+     "total": 16654.89,
+     "profit_2e_semestre": 10437.49
+    },
+    "aveugle:-1": {
+     "essai": 6056.97,
+     "exploitation": 7116.19,
+     "total": 13173.16,
+     "profit_2e_semestre": 6918.86
+    },
+    "aveugle:-0.5": {
+     "essai": 6928.96,
+     "exploitation": 7527.53,
+     "total": 14456.49,
+     "profit_2e_semestre": 7673.21
+    },
+    "aveugle:0": {
+     "essai": 7126.99,
+     "exploitation": 7856.34,
+     "total": 14983.33,
+     "profit_2e_semestre": 8187.76
+    },
+    "aveugle:0.5": {
+     "essai": 7132.37,
+     "exploitation": 8071.62,
+     "total": 15204,
+     "profit_2e_semestre": 8408.4
+    },
+    "aveugle:1": {
+     "essai": 8013.24,
+     "exploitation": 8648.25,
+     "total": 16661.49,
+     "profit_2e_semestre": 10444.07
+    },
+    "regle": {
+     "essai": 6056.97,
+     "exploitation": 7116.19,
+     "total": 13173.16,
+     "profit_2e_semestre": 6918.86
+    },
+    "mixte": {
+     "essai": 6056.97,
+     "exploitation": 7116.19,
+     "total": 13173.16,
+     "profit_2e_semestre": 6918.86
+    }
+   },
+   "secs": 2.5
+  },
+  {
+   "graine": 6398,
+   "monde": "t3f",
+   "ecartee": false,
+   "objet": "difo5",
+   "prix_reference": 10.17,
+   "cout_vrai": 5.24,
+   "cout_au_jour_183": 5.24,
+   "taux_de_marge": 1.941,
+   "zone": "milieu",
+   "decision_regle": 0,
+   "decision_chaine": -1,
+   "bras": {
+    "nul": {
+     "essai": 5758.37,
+     "exploitation": 5015.05,
+     "total": 10773.42,
+     "profit_2e_semestre": 63966.56
+    },
+    "chaine": {
+     "essai": 6025.18,
+     "exploitation": 6543.28,
+     "total": 12568.46,
+     "profit_2e_semestre": 65919.99
+    },
+    "aveugle:-1": {
+     "essai": 6569.38,
+     "exploitation": 6551.98,
+     "total": 13121.36,
+     "profit_2e_semestre": 66429.38
+    },
+    "aveugle:-0.5": {
+     "essai": 6331.04,
+     "exploitation": 6311.74,
+     "total": 12642.78,
+     "profit_2e_semestre": 65996.79
+    },
+    "aveugle:0": {
+     "essai": 5753.46,
+     "exploitation": 5630.51,
+     "total": 11383.96,
+     "profit_2e_semestre": 64712.03
+    },
+    "aveugle:0.5": {
+     "essai": 4941.09,
+     "exploitation": 5033.05,
+     "total": 9974.14,
+     "profit_2e_semestre": 63121.74
+    },
+    "aveugle:1": {
+     "essai": 4280.53,
+     "exploitation": 4175.95,
+     "total": 8456.48,
+     "profit_2e_semestre": 61731.64
+    },
+    "regle": {
+     "essai": 5753.46,
+     "exploitation": 5630.51,
+     "total": 11383.96,
+     "profit_2e_semestre": 64712.03
+    },
+    "mixte": {
+     "essai": 6025.18,
+     "exploitation": 6543.28,
+     "total": 12568.46,
+     "profit_2e_semestre": 65919.99
+    }
+   },
+   "secs": 6.6
+  },
+  {
+   "graine": 6399,
+   "monde": "t3f",
+   "ecartee": false,
+   "objet": "ritiza0",
+   "prix_reference": 177.42,
+   "cout_vrai": 112.236,
+   "cout_au_jour_183": 112.236,
+   "taux_de_marge": 1.581,
+   "zone": "milieu",
+   "decision_regle": 0,
+   "decision_chaine": 1,
+   "bras": {
+    "nul": {
+     "essai": 79523.11,
+     "exploitation": 118920.72,
+     "total": 198443.83,
+     "profit_2e_semestre": 557183.13
+    },
+    "chaine": {
+     "essai": 78021.18,
+     "exploitation": 131987.96,
+     "total": 210009.14,
+     "profit_2e_semestre": 568292.84
+    },
+    "aveugle:-1": {
+     "essai": 36386.88,
+     "exploitation": 52040.67,
+     "total": 88427.55,
+     "profit_2e_semestre": 443202.99
+    },
+    "aveugle:-0.5": {
+     "essai": 52167.37,
+     "exploitation": 73210.84,
+     "total": 125378.21,
+     "profit_2e_semestre": 480853.85
+    },
+    "aveugle:0": {
+     "essai": 65835.41,
+     "exploitation": 93147.33,
+     "total": 158982.75,
+     "profit_2e_semestre": 516798.69
+    },
+    "aveugle:0.5": {
+     "essai": 78975.32,
+     "exploitation": 113805.9,
+     "total": 192781.23,
+     "profit_2e_semestre": 551283.15
+    },
+    "aveugle:1": {
+     "essai": 92117.74,
+     "exploitation": 130673.56,
+     "total": 222791.3,
+     "profit_2e_semestre": 582539.31
+    },
+    "regle": {
+     "essai": 65835.41,
+     "exploitation": 93147.33,
+     "total": 158982.75,
+     "profit_2e_semestre": 516798.69
+    },
+    "mixte": {
+     "essai": 78021.18,
+     "exploitation": 131987.96,
+     "total": 210009.14,
+     "profit_2e_semestre": 568292.84
+    }
+   },
+   "secs": 6.3
+  },
+  {
+   "graine": 6400,
+   "monde": "t3f",
+   "ecartee": false,
+   "objet": "tasolo6",
+   "prix_reference": 147.83,
+   "cout_vrai": 70.082,
+   "cout_au_jour_183": 70.082,
+   "taux_de_marge": 2.109,
+   "zone": "haut",
+   "decision_regle": -1,
+   "decision_chaine": -1,
+   "bras": {
+    "nul": {
+     "essai": 125917.71,
+     "exploitation": 141611.71,
+     "total": 267529.42,
+     "profit_2e_semestre": 174788.61
+    },
+    "chaine": {
+     "essai": 104725.17,
+     "exploitation": 104449.13,
+     "total": 209174.31,
+     "profit_2e_semestre": 96801.54
+    },
+    "aveugle:-1": {
+     "essai": 107773.39,
+     "exploitation": 100064.97,
+     "total": 207838.36,
+     "profit_2e_semestre": 93345.79
+    },
+    "aveugle:-0.5": {
+     "essai": 117145.35,
+     "exploitation": 130426.92,
+     "total": 247572.27,
+     "profit_2e_semestre": 142073.73
+    },
+    "aveugle:0": {
+     "essai": 127739.38,
+     "exploitation": 132792.98,
+     "total": 260532.36,
+     "profit_2e_semestre": 153814.55
+    },
+    "aveugle:0.5": {
+     "essai": 126041.68,
+     "exploitation": 135656.64,
+     "total": 261698.33,
+     "profit_2e_semestre": 152632.01
+    },
+    "aveugle:1": {
+     "essai": 114592.94,
+     "exploitation": 130881.42,
+     "total": 245474.36,
+     "profit_2e_semestre": 137864.23
+    },
+    "regle": {
+     "essai": 107773.39,
+     "exploitation": 100064.97,
+     "total": 207838.36,
+     "profit_2e_semestre": 93345.79
+    },
+    "mixte": {
+     "essai": 107773.39,
+     "exploitation": 100064.97,
+     "total": 207838.36,
+     "profit_2e_semestre": 93345.79
+    }
+   },
+   "secs": 4.9
+  }
+ ]
+}

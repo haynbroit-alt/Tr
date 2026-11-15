@@ -468,3 +468,17 @@ fractionné ; l'appariement de l'abonnement réaliste. PR `haynbroit-alt/A#14`.
 - **État de l'art des quatre domaines** : `programme/sota/ETAT_DE_L_ART.md`. CORTEX et LAVOISIER ne sont mesurés
   contre aucune référence publique.
 
+
+### T3f : se passer d'essai, mesuré (15 novembre 2026)
+
+- **T3f exécuté** (`programme/t3f/`, 120 entreprises neuves, dossier `essai-prix#T3F`) : une règle sans essai, lue
+  sur le coût de LAVOISIER (marge < 1,4 : +25 % ; marge > 2,1 : −20 % ; sinon prix tenu), gagne 8,2 points sur prix
+  tenu (établi) et fait **jeu égal avec la chaîne** (+0,9 point, non établi), avec 27 perdantes contre 50.
+- **Deux critères manqués** : la variante mixte ne fait pas mieux que la chaîne ; la règle ne divise pas tout à fait
+  par deux le nombre de perdantes. L'avance sur la chaîne lue après coup sur 200 entreprises n'existait pas.
+- **Non vendable telle quelle** : la règle exploite une propriété du simulateur (prix tiré sans lien avec la
+  demande).
+- **Ce qui se transporte** : à marge faible, notre essai perd 19,7 points parce qu'il passe des semaines à un prix
+  presque coûtant. **Prochain pas** : un plan d'essai qui écarte d'avance les niveaux dont le seuil de rentabilité
+  est hors d'atteinte (protocole à écrire, graines 6401 et suivantes).
+- **Quatre lots à chaîne identique (320 entreprises)** : +6,5 points sur prix tenu (t = 4,71) ; 42 % y perdent.
