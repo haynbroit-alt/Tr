@@ -53,7 +53,7 @@ autoentrepreneur.urssaf.fr/portail/accueil/creer-mon-auto-entreprise/guichet-uni
 **Tarif** : [à fixer par vous — aucun tarif de marché sourcé n'a été trouvé ; une première mission courte, à
 périmètre fermé, limite le risque des deux côtés.]
 
-## 3. Quatre exemples de travaux (trois sur données simulées, un sur mesures réelles)
+## 3. Cinq exemples de travaux (quatre sur données simulées, un sur mesures réelles)
 
 Aucun n'est un travail pour un client. Chacun se relit dans les dépôts.
 
@@ -83,9 +83,18 @@ loi que si elle y prédit mieux qu'une droite et qu'une constante (calculé apr�
 7 écartés, 2 passent encore).
 
 **C. Repérer des flux cachés dans les écritures d'une entreprise.**
-Sur 100 entreprises simulées de développement : 80 flux cachés retrouvés sur 95 ; 1 entreprise sans flux caché
-touchée à tort sur 34. Limite assumée : l'erreur médiane sur le profit est de 2,9 % pour un objectif de 2 %, et le
-test final n'a pas été exécuté. Source : dépôt LAVOISIER, `bench/DEV_M0_BILAN.md`, `PROTOCOLE_M0.md` § 9.
+Sur 100 entreprises simulées de développement : 85 flux cachés retrouvés sur 95 ; 1 entreprise sans flux caché
+touchée à tort sur 34. Limite assumée : sur les journaux les plus désordonnés, l'erreur médiane sur le profit est de
+3,8 % pour un objectif de 2 %, et le test final n'a pas été exécuté. Source : dépôt LAVOISIER,
+`bench/DEV_M0_BILAN.md`, `PROTOCOLE_M0.md` § 9.
+
+**E. Conduire un essai de prix à partir des seules écritures.**
+Sur 40 entreprises simulées jamais vues pendant la mise au point : le coût unitaire de l'objet est reconstitué
+exactement dans les 40 ; un essai en trois niveaux alternés rapporte 9,8 points de marge de plus qu'un essai
+« avant / après » ; le prix retenu est le meilleur des cinq niveaux dans 32 cas sur 40. Limite, à dire au client :
+dans ces entreprises simulées, monter le prix de 25 % à l'aveugle aurait rapporté deux fois plus, parce que la
+hausse y est presque toujours la bonne réponse ; l'essai n'a donc pas montré qu'il fait mieux qu'une règle simple.
+Source : dépôt commun, `programme/t3/RESULTATS_T3.md`.
 
 ## 4. Première réponse à une demande (brouillon)
 

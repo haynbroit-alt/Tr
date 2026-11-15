@@ -9,6 +9,7 @@
 
 // seuil du rapport de vraisemblance pour les stocks relevés chaque mois, par stock (fixé sur les graines de
 // développement uniquement ; voir PROTOCOLE_M0.md, § 9)
+import { MAX_SHIFT } from './dates.js';
 export const LR_MONTHLY = 22;
 
 function fitLoss(t, e) {
@@ -49,7 +50,11 @@ export function inferEcarts(observed, S, typeOf, links, dup) {
   }
   // ---- 2. stocks relevés chaque mois ----
   for (const st of S.stocks.filter((x) => x.releveM)) {
-    const t = st.releveM.map((x) => x.jour), e = st.releveM.map((x) => x.valeur - st.raw[x.jour]);
+    // un relevé pris dans les derniers jours des données est comparé à un journal dont la saisie n'est pas
+    // terminée : des pièces produites avant lui manquent encore. Il ne compte pas pour déclarer un manque
+    const rel = st.releveM.filter((x) => D - 1 - x.jour >= MAX_SHIFT);
+    if (rel.length < 4) continue;
+    const t = rel.map((x) => x.jour), e = rel.map((x) => x.valeur - st.raw[x.jour]);
     const f = fitLoss(t, e);
     if (f.tau == null || f.rss <= 0) continue;
     const lr = f.n * Math.log(f.rss0 / f.rss), lrStep = f.n * Math.log(f.step / f.rss);
@@ -61,6 +66,13 @@ export function inferEcarts(observed, S, typeOf, links, dup) {
     const A = t.map((d) => amb[d]), am = A.reduce((s, x) => s + x, 0) / A.length, em = e.reduce((s, x) => s + x, 0) / e.length;
     const saa = A.reduce((s, x) => s + (x - am) ** 2, 0), sae = A.reduce((s, x, k) => s + (x - am) * (e[k] - em), 0);
     const rssTypage = saa > 0 ? f.rss0 - (sae * sae) / saa : f.rss0;
+    // matérialité : une copie mal jugée déplace le stock d'une pièce entière ; un manque dont le taux (manque total
+    // rapporté au flux du stock depuis son début) ne dépasse pas le taux de copies du journal ne se distingue pas
+    // de l'incertitude sur les pièces elles-mêmes
+    let flux = 0;
+    for (const r of observed.journal) { if (r.jour < f.tau) continue; const dl = S.deltas.get(r.id)?.find(([s]) => s === st.id); if (dl) flux += Math.abs(dl[1]); }
+    const taux = flux > 0 ? (f.b * (D - f.tau)) / flux : Infinity;
+    if (taux <= dup.size / observed.journal.length) continue;
     if (lr >= LR_MONTHLY && lrStep > 2 && rssTypage > f.rss) ecarts.push({ stock: st.id, debut: f.tau, debit: f.b, preuve: `rapport de vraisemblance ${lr.toFixed(1)}` });
   }
   // ---- 3. stocks en cours soldés à taux constant < 1 ----
@@ -110,6 +122,8 @@ export function inferEcarts(observed, S, typeOf, links, dup) {
       const tau = j > 0 ? Math.round((gs[j - 1].payDay + gs[j].payDay) / 2) : gs[j].payDay;
       const manque = idx.reduce((s, i) => s + (ok(i) ? gs[i].inv - gs[i].paid : (gs[i].paid * (1 - rho)) / rho), 0);
       ecarts.push({ stock: st.id, debut: tau, debit: manque / (D - tau), preuve: `${nOk} opérations soldées à ${(100 * rho).toFixed(1)} %` });
+      // la part non soldée des opérations du régime ne reviendra pas : elle sort du stock en cours au jour du solde
+      for (const i of idx) if (ok(i)) S.manques.push({ stock: st.id, jour: gs[i].payDay, montant: gs[i].inv - gs[i].paid });
     }
   }
   return ecarts;

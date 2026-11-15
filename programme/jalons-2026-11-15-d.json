@@ -1,0 +1,11 @@
+[
+ {
+  "moteur": "LAVOISIER", "travail": "L2",
+  "mesure": "entreprise pilotable : le prix d'un objet se fixe jour par jour, vérité scellée",
+  "avant": "impossible : six expériences de prix consignées « impossibles »", "apres": "critères A1 à A5 tenus",
+  "seuil": "sans intervention, sortie identique à l'octet sur les 100 graines de développement",
+  "commit": "718b7d3", "source": "haynbroit-alt/A PROTOCOLE_L2.md § 6",
+  "portee": "simulateur seulement ; le bilan de matière n'est pas touché",
+  "note": "la réalité ne change pas avant le jour de l'intervention ; le désordre du journal observé, lui, n'est pas le même d'une relance à l'autre"
+ }
+]

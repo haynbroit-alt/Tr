@@ -20,13 +20,49 @@ export function inferLinks(journal, typeOf) {
   for (const r of journal) { const t = T(r); if (!byType.has(t)) byType.set(t, []); byType.get(t).push(r); }
   const dup = new Set();
 
-  // ---- doublons : même type, même contrepartie, mêmes valeurs, à un jour près ----
+  // ---- doublons : même type, même contrepartie, mêmes valeurs, à un jour près — et plus tôt que le rythme habituel.
+  // Une répétition qui est la règle n'est pas une copie : si ce type revient d'ordinaire chaque jour pour cette
+  // contrepartie, la pièce identique du lendemain est la suivante ; s'il en vient d'ordinaire plusieurs par jour,
+  // deux pièces identiques le même jour ne se distinguent pas d'une coïncidence ----
+  const med = (a) => { const s = [...a].sort((x, y) => x - y); return s[(s.length - 1) >> 1]; };
+  const parGroupe = new Map();
+  for (const r of journal) {
+    if (r.contrepartie == null) continue;
+    const g = T(r) + '\u0000' + r.contrepartie;
+    if (!parGroupe.has(g)) parGroupe.set(g, new Map());
+    const m = parGroupe.get(g); m.set(r.jour, (m.get(r.jour) ?? 0) + 1);
+  }
+  const rythme = new Map(), parType = new Map();
+  for (const [g, m] of parGroupe) {
+    const days = [...m.keys()].sort((x, y) => x - y);
+    if (days.length < 4) continue; // trop peu de jours pour parler d'un rythme : celui du type sert de repère
+    const v = { ecart: med(days.slice(1).map((d, i) => d - days[i])), parJour: med([...m.values()]) };
+    rythme.set(g, v);
+    const t = g.slice(0, g.indexOf('\u0000'));
+    if (!parType.has(t)) parType.set(t, []);
+    parType.get(t).push(v);
+  }
+  const repere = new Map([...parType].map(([t, vs]) => [t, { ecart: med(vs.map((v) => v.ecart)), parJour: med(vs.map((v) => v.parJour)) }]));
+  const rythmeDe = (r) => rythme.get(T(r) + '\u0000' + r.contrepartie) ?? repere.get(T(r)) ?? { ecart: Infinity, parJour: 1 };
+  // une pièce citée en référence par un enregistrement d'une autre source n'est jamais une copie : seule l'originale
+  // est citée par la pièce qui la solde. Deux pièces citées toutes deux sont donc deux pièces ; des deux, la copie
+  // est celle qui n'est pas citée
+  const citee = new Set();
+  for (const r of journal) { const b = r.reference && byId.get(r.reference); if (b && b.source !== r.source) citee.add(b.id); }
   const seen = new Map();
   for (const r of journal) {
     if (r.contrepartie == null) continue;
     const k = [T(r), r.contrepartie, r.montant, r.quantite, r.objet].join('|');
     const prev = seen.get(k);
-    if (prev && r.jour - prev.jour <= 1) { dup.add(r.id); link(r.id, prev.id); continue; }
+    if (prev && r.jour - prev.jour <= 1 && !(citee.has(r.id) && citee.has(prev.id))) {
+      const ry = rythmeDe(r);
+      if (r.jour === prev.jour ? ry.parJour <= 1 : ry.ecart > 1) {
+        const [copie, orig] = citee.has(r.id) ? [prev, r] : [r, prev];
+        dup.add(copie.id); link(copie.id, orig.id);
+        if (copie === prev) seen.set(k, r);
+        continue;
+      }
+    }
     seen.set(k, r);
   }
 

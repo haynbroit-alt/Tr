@@ -5,12 +5,17 @@ import { Engine, DAYS } from './engine.js';
 import { makeRng, derive } from './rng.js';
 import { ARCHETYPES } from './archetypes.js';
 
-function build(seed, archetype, level, plan) {
+function build(seed, archetype, level, plan, pilotage = []) {
   const make = ARCHETYPES[archetype];
   if (!make) throw new Error(`archétype inconnu ou pas encore écrit : ${archetype}`);
   const eng = new Engine(seed, level);
   const ctx = {};
   make(eng, ctx);
+  for (const { jour, objet, prix } of pilotage) {
+    const o = ctx.prix.get(objet);
+    if (!o) throw new Error(`pilotage : jeton sans prix dans cette entreprise : ${objet}`);
+    eng.at(jour, () => { o.p = prix; o.pilote = true; eng.record('tarif.changement', 'tarif', { m: prix, objet }, { statut: 'levier' }); });
+  }
   const remises = [];
   const hrng = makeRng(derive(seed, 5));
   for (const h of plan) {
@@ -33,9 +38,22 @@ function build(seed, archetype, level, plan) {
   return { eng, ctx };
 }
 
+// Pilotage (protocole L2) : liste facultative d'interventions { jour, objet, prix } sur le prix d'un objet.
+function validerPilotage(pilotage) {
+  if (pilotage == null) return [];
+  if (!Array.isArray(pilotage)) throw new Error('pilotage : une liste d’interventions est attendue');
+  for (const x of pilotage) {
+    if (!x || !Number.isInteger(x.jour) || x.jour < 0 || x.jour >= DAYS) throw new Error(`pilotage : jour invalide (${x?.jour}), entier de 0 à ${DAYS - 1} attendu`);
+    if (typeof x.prix !== 'number' || !Number.isFinite(x.prix) || x.prix <= 0) throw new Error(`pilotage : prix invalide (${x.prix}), nombre strictement positif attendu`);
+    if (typeof x.objet !== 'string') throw new Error(`pilotage : jeton d’objet invalide (${x.objet})`);
+  }
+  return pilotage.map(({ jour, objet, prix }) => ({ jour, objet, prix })).sort((a, b) => a.jour - b.jour);
+}
+
 // cfg : { archetype, nHidden, level }
-export function generate(seed, cfg) {
+export function generate(seed, cfg, pilotage) {
   const { archetype, nHidden = 0, level = 'realiste' } = cfg;
+  const pil = validerPilotage(pilotage);
   const plan = [];
   if (nHidden > 0) {
     const { eng: e1, ctx } = build(seed, archetype, level, []);
@@ -57,9 +75,10 @@ export function generate(seed, cfg) {
       }
     }
   }
-  const { eng } = build(seed, archetype, level, plan);
+  const { eng } = build(seed, archetype, level, plan, pil);
   const out = eng.finalize();
   out.truth.archetype = archetype;
   out.truth.nHiddenPlanned = nHidden;
+  if (pil.length) out.truth.pilotage = pil;
   return out;
 }

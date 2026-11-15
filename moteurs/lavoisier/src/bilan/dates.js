@@ -6,7 +6,7 @@
 //      (0 à 10 jours) qui explique le mieux les relevés.
 // Les relevés quotidiens des comptes sont exacts : les sources qui les expliquent ne sont jamais décalées.
 
-const MAX_SHIFT = 10;
+export const MAX_SHIFT = 10;
 
 export function monthEnds(D) {
   const monthOf = (d) => Math.min(11, Math.floor((d * 12) / D));
@@ -128,6 +128,42 @@ export function estimateDates(observed, typeOf, S, links, rules) {
           const f = ins.find((g) => at.get(g.r.id) > d && g.r.jour - d <= MAX_SHIFT);
           if (!f) break;
           at.set(f.r.id, d); level += f.x; day.set(f.r.id, d);
+        }
+      }
+    }
+    // ---- 4. une à une : une pièce produite avant un relevé et saisie après manque à la variation qui précède ce
+    // relevé et se retrouve en trop dans celle qui suit, de la même quantité. Elle n'est déplacée que si le
+    // déplacement réduit les deux écarts à la fois ; un manque réel, lui, pèse sur les deux périodes sans se rattraper ----
+    for (const st of items) {
+      const days = st.releveM.map((x) => x.jour), y = st.releveM.map((x) => x.valeur), n = days.length;
+      const seg = (d) => { for (let i = 0; i < n; i++) if (d <= days[i]) return i; return n; };
+      const fl = [];
+      for (const r of observed.journal) {
+        if (r.objet !== st.objet || r.quantite == null) continue;
+        const c = S.coef(T(r)); if (!c) continue;
+        fl.push({ r, x: c * r.quantite, libre: !S.isBank(r) && !fixed.has(r.id) && !batch.has(T(r)) });
+      }
+      const sum = new Float64Array(n + 1);
+      for (const f of fl) sum[seg(day.get(f.r.id))] += f.x;
+      const res = (i) => y[i] - y[i - 1] - sum[i];
+      const mieux = (a, b, x) => Math.abs(a - x) < Math.abs(a) && Math.abs(b + x) < Math.abs(b);
+      for (let i = 1; i + 1 < n; i++) {
+        for (;;) {
+          const a = res(i), b = res(i + 1);
+          let best = null, gain = 0;
+          for (const f of fl) {
+            if (!f.libre) continue;
+            const d = day.get(f.r.id);
+            if (d > days[i] && d <= days[i + 1] && f.r.jour - days[i] <= MAX_SHIFT && mieux(a, b, f.x)) {
+              const g = Math.abs(a) + Math.abs(b) - Math.abs(a - f.x) - Math.abs(b + f.x);
+              if (g > gain) { gain = g; best = { f, jour: days[i], de: i + 1, vers: i }; }
+            } else if (d <= days[i] && d > days[i - 1] && f.r.jour > days[i] && mieux(a, b, -f.x)) {
+              const g = Math.abs(a) + Math.abs(b) - Math.abs(a + f.x) - Math.abs(b - f.x);
+              if (g > gain) { gain = g; best = { f, jour: days[i] + 1, de: i, vers: i + 1 }; }
+            }
+          }
+          if (!best) break;
+          sum[best.de] -= best.f.x; sum[best.vers] += best.f.x; day.set(best.f.r.id, best.jour);
         }
       }
     }
