@@ -1,0 +1,53 @@
+{
+ "protocole": "programme/t3h/PROTOCOLE_ETALONNAGE.md",
+ "entreprises": 199,
+ "rien_a_trouver": {
+  "repetitions": 200,
+  "fausses_inventions": 1,
+  "profondeurs": {
+   "1": 1
+  }
+ },
+ "effet_plante": {
+  "0.05": {
+   "repetitions": 200,
+   "trouve": 176,
+   "refus": 24,
+   "regle_a_cote": 0,
+   "profondeurs": {
+    "1": 173,
+    "2": 3
+   }
+  },
+  "0.1": {
+   "repetitions": 200,
+   "trouve": 199,
+   "refus": 0,
+   "regle_a_cote": 1,
+   "profondeurs": {
+    "1": 196,
+    "2": 3
+   }
+  },
+  "0.2": {
+   "repetitions": 200,
+   "trouve": 199,
+   "refus": 0,
+   "regle_a_cote": 1,
+   "profondeurs": {
+    "1": 197,
+    "2": 2
+   }
+  }
+ },
+ "criteres": {
+  "E1": {
+   "taux": 0.005,
+   "tenu": true
+  },
+  "E2": {
+   "taux": 0.995,
+   "tenu": true
+  }
+ }
+}

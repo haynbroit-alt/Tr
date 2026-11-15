@@ -73,3 +73,19 @@ restent neuves.
 2. **À un client, on peut dire la vérité simple** : « près d'une fois sur deux l'essai confirmera votre prix
    actuel ; il vous aura alors coûté quelques points de marge pendant huit semaines ».
 3. La décision sans essai reste une piste, pas un produit : historique simulé sans promotions.
+
+## 7. Étalonnage de l'atelier (protocole `PROTOCOLE_ETALONNAGE.md`, `etalonnage.json`)
+
+| Épreuve | Résultat | Verdict |
+|---|---|---|
+| **E1** — rien à trouver : fausses inventions | 1 sur 200 (0,5 %) | **tenu** (seuil 10 %) |
+| **E2** — effet planté de 20 points : trouvé | 199 sur 200 | **tenu** (seuil 80 %) |
+| effet de 10 points | 199 sur 200 | sans critère |
+| effet de 5 points | 176 sur 200 (24 refus) | sans critère |
+
+- **L'atelier se tait quand il n'y a rien** : une fausse invention sur 200, bien moins que les 5 à 8 % attendus.
+- **Il trouve un effet planté**, bien plus souvent que je ne l'attendais (une fois sur deux à 10 points). Mais mon
+  épreuve était trop facile : l'effet planté est le même pour toutes les entreprises visées, sans aucun bruit. Un
+  effet réel varie d'une entreprise à l'autre. **La puissance de l'atelier sur un effet bruité n'est pas mesurée.**
+- Ce que cela ajoute au refus de T3h : s'il existait une moitié d'entreprises où ne pas essayer valait
+  régulièrement 5 points de mieux, l'atelier l'aurait presque toujours vue. Un effet irrégulier a pu lui échapper.
