@@ -1,0 +1,8 @@
+[
+  {
+    "cle": "missions#pilote-gratuit",
+    "action": "Proposer un essai de prix gratuit (huit semaines, un produit) à une entreprise que connaît le propriétaire, avec le message brouillon de programme/offre/DEMARRAGE.md § 4",
+    "nature": { "depense_eur": 0, "tiers": true, "engagement": false, "irreversible": false },
+    "attendu": "Un premier export de ventes réel et un premier essai conduit sur une vraie entreprise ; un refus est aussi un résultat"
+  }
+]
