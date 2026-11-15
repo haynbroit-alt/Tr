@@ -28,18 +28,19 @@ impots.gouv.fr et le site de l'Urssaf, ou auprès d'un expert-comptable.
 
 | Point | Ce que disent les sources | État |
 |---|---|---|
-| Mentions de la facture | nom et prénom suivis de « EI » ou « Entrepreneur individuel », adresse, SIREN, date, numéro, désignation, prix HT, conditions de paiement ; mentions supplémentaires prévues avec la facture électronique | modèle à écrire |
+| Mentions de la facture | nom et prénom suivis de « EI » ou « Entrepreneur individuel », adresse, SIREN, date, numéro, désignation, prix HT, conditions de paiement ; mentions supplémentaires prévues avec la facture électronique | modèle prêt : `MODELES.md` § 2 et 3, à vérifier |
 | TVA | franchise en base pour les prestations de services jusqu'à 37 500 € de chiffre d'affaires (seuil majoré 41 250 €) d'après plusieurs sources concordantes ; une réforme de ces seuils a été discutée, adoption à vérifier ; en franchise, mention « TVA non applicable, art. 293 B du CGI » | à vérifier |
 | Facture électronique | réception obligatoire pour toutes les entreprises à partir du 1er septembre 2026 ; émission obligatoire plus tard pour les très petites entreprises (calendrier à vérifier) | choisir un outil de facturation qui le permet |
 | Assurance responsabilité civile professionnelle | non obligatoire pour du conseil d'après les sources générales, fortement recommandée : une décision de prix peut faire perdre de la marge | devis à demander |
 | Compte bancaire | compte dédié exigé en micro-entreprise au-delà d'un certain chiffre d'affaires ; recommandé dès le début | à ouvrir |
-| Conditions de mission | périmètre, délai, confidentialité, propriété des données, **aucune promesse de gain** | modèle court à écrire |
+| Conditions de mission | périmètre, délai, confidentialité, propriété des données, **aucune promesse de gain** | brouillon prêt : `MODELES.md` § 1 |
 
 ## 4. Le pilote gratuit, préparé jusqu'au dernier geste
 
 - **Qui** : une entreprise que le propriétaire connaît (commerce, artisan, boutique en ligne), qui peut exporter ses
   ventes (date, produit, quantité, montant) sur au moins six mois et donner le coût d'achat d'un produit.
-- **Quoi** : `essai-prix-client plan` sur son export ; huit semaines d'essai sur un seul produit, lues à quatre
+- **Quoi** : `essai-prix-client plan` sur son export (CSV de caisse ou de boutique en ligne : guillemets, en-têtes
+  anglais et prix unitaire sans montant sont lus) ; huit semaines d'essai sur un seul produit, lues à quatre
   semaines ; décision par la table des ventes ; rapport tel que `EXEMPLE_LIVRABLE.md`.
 - **Ce qu'on dit d'avance** : c'est un premier essai ; près d'une fois sur deux, il confirmera le prix actuel ; il
   coûtera quelques points de marge pendant les semaines à prix différent ; aucun gain n'est promis.
