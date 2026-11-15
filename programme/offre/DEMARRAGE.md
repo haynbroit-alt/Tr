@@ -57,3 +57,33 @@ Message de proposition, **brouillon à adapter et à envoyer par le propriétair
 > confirme souvent le prix actuel ; c'est aussi une réponse utile. Vos données restent confidentielles. Seriez-vous
 > d'accord pour qu'on en parle dix minutes ?
 > [signature]
+
+## 5. Étapes faites le 15 novembre 2026 (soir), et ce qui revient au propriétaire
+
+### Vérifié (sources publiques, pas l'administration elle-même)
+
+- **TVA** : la baisse du seuil de franchise à 25 000 € pour les prestations de services a été écartée lors de
+  l'examen du budget 2026 — suppression de l'article par l'Assemblée, maintien à 37 500 € par le Sénat. **Le texte
+  définitif de la loi de finances 2026 n'a pas été retrouvé** : reste à le lire sur Légifrance ou le BOFiP avant la
+  première facture.
+- **Facture électronique** : réception par une plateforme agréée obligatoire depuis le 1er septembre 2026, même en
+  franchise de TVA ; **émission et e-reporting obligatoires au 1er septembre 2027** pour les micro-entreprises. Pour
+  les premières factures de 2026-2027, une facture PDF conforme suffit ; il faut en revanche **dès maintenant**
+  une plateforme agréée pour recevoir. Aucune source ne confirme une plateforme gratuite : comparer les tarifs sur
+  la liste officielle des plateformes agréées.
+- Conditions de mission, devis et facture : modèles prêts (`MODELES.md`).
+- Lecture des vrais exports de ventes : corrigée et testée (`src/essai-prix-client.js`).
+
+### Ce que je ne peux pas faire, dans l'ordre où le faire
+
+| # | Étape | Pourquoi c'est à vous | Préparé |
+|---|---|---|---|
+| 1 | Vérifier l'inscription SIRENE (avis de situation) | votre numéro, votre compte | — |
+| 2 | Choisir une plateforme agréée de facturation et s'y inscrire | contrat à votre nom | critères ci-dessus |
+| 3 | Ouvrir un compte bancaire dédié | contrat à votre nom | — |
+| 4 | Demander deux devis d'assurance responsabilité civile professionnelle | engagement, dépense | activité à déclarer : conseil et analyse de données de vente |
+| 5 | **Envoyer le message du pilote** à une entreprise que vous connaissez | message à un tiers, en votre nom | brouillon § 4, consigné « à valider » au mandat |
+| 6 | Relire `MODELES.md`, au mieux avec un expert-comptable | engagement juridique | brouillons prêts |
+
+Seule l'étape 5 fait avancer vers un premier résultat réel ; les étapes 2 à 4 ne deviennent urgentes qu'avant un
+premier client payant.
