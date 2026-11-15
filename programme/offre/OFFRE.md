@@ -104,7 +104,7 @@ de missions, six exemples de travaux, un exemple de livrable.
 
 Ce qui reste, dans l'ordre :
 
-1. **Immatriculation.** D'après les sources lues (sites d'information, pas l'administration — à vérifier sur
+1. **Immatriculation — faite** (15 novembre 2026, voir `DEMARRAGE.md`). Ce qui suit reste pour mémoire. D'après les sources lues (sites d'information, pas l'administration — à vérifier sur
    le site de l'Urssaf) : prospecter avant l'immatriculation n'est pas interdit ; un devis est toléré une fois la
    demande déposée, avec une mention provisoire ; **facturer sans SIRET est interdit**. Donc : préparer et montrer
    l'offre est possible dès maintenant ; signer et encaisser attend le numéro.
