@@ -52,3 +52,19 @@ erreurs. GALILÉE n'a qu'une graine : cet écart de traitement avantage légère
   la longueur des formules est seulement relevée.
 - Réglages par défaut : un concurrent mieux réglé ferait peut-être mieux. PySR n'est pas mesuré (il demande un
   environnement Julia que cet environnement ne peut pas télécharger).
+
+## 7. Précision ajoutée avant toute mesure d'Operon
+
+Une première exécution a rendu les résultats de gplearn, mais rien pour Operon : j'avais donné à sa bibliothèque un
+nom de paramètre qui n'existe pas (`time_limit` au lieu de `max_time`), et mon script avalait l'erreur. Aucun
+chiffre d'Operon n'a donc été vu. Avant de le relancer, deux choses sont fixées :
+
+- Les réglages par défaut d'Operon n'autorisent que les quatre opérations et n'activent pas son optimisation locale
+  des constantes, qui fait sa force sur SRBench. Operon est donc mesuré dans **deux réglages** :
+  - **Operon par défaut**, comme écrit au § 3 ; le critère S1 porte sur lui ;
+  - **Operon réglé** : mêmes fonctions élémentaires que GALILÉE (exponentielle, logarithme, racine, sinus,
+    cosinus, puissance en plus des quatre opérations) et optimisation locale des constantes (10 itérations).
+    C'est l'adversaire le plus dur ; le même critère lui est appliqué sous le nom **S1 bis**.
+- Les résultats de gplearn de la première exécution sont gardés : mêmes graines, calcul déterministe.
+
+Attendu : Operon réglé fait mieux que GALILÉE sur 10 jeux au moins.
