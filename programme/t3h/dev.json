@@ -1,0 +1,9960 @@
+{
+ "protocole": "programme/t3h/PROTOCOLE_T3H.md",
+ "entreprises": [
+  {
+   "graine": 301,
+   "monde": "t3h",
+   "ecartee": false,
+   "objet": "piqi7",
+   "prix_reference": 38.01,
+   "cout_au_jour_183": 14.755,
+   "cout_vrai": 14.755,
+   "traits": {
+    "m": 2.576,
+    "e": 1.286,
+    "t": 3.082,
+    "etendue": 0.1041,
+    "g": 0.057,
+    "g_galilee": null,
+    "loi_retenue": 0,
+    "bruit": 0.225
+   },
+   "niveau_direct": 1,
+   "niveau_galilee": 0,
+   "loi": {
+    "texte": "cos(p)",
+    "retenue": false,
+    "sans_variable": false
+   },
+   "semaines": 26,
+   "plan_chaine": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "decision_chaine": -1,
+   "marge_temoin_nul": 70464.1,
+   "gains": {
+    "tenu": -0.19243,
+    "chaine": 0.10136,
+    "direct": -0.52772,
+    "direct_galilee": -0.19243,
+    "niveau:-1": 0.18771,
+    "niveau:-0.5": 0.02719,
+    "niveau:0.5": -0.37316,
+    "niveau:1": -0.52772
+   },
+   "secs": 3.7
+  },
+  {
+   "graine": 302,
+   "monde": "t3h",
+   "ecartee": false,
+   "objet": "podi6",
+   "prix_reference": 180.98,
+   "cout_au_jour_183": 86.439,
+   "cout_vrai": 86.439,
+   "traits": {
+    "m": 2.094,
+    "e": 3.339,
+    "t": 1.981,
+    "etendue": 0.0403,
+    "g": 0.3,
+    "g_galilee": null,
+    "loi_retenue": 0,
+    "bruit": 0.308
+   },
+   "niveau_direct": -1,
+   "niveau_galilee": 0,
+   "loi": {
+    "texte": "5/3 − p",
+    "retenue": false,
+    "sans_variable": false
+   },
+   "semaines": 26,
+   "plan_chaine": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "decision_chaine": 0,
+   "marge_temoin_nul": 234706.03,
+   "gains": {
+    "tenu": 0.06663,
+    "chaine": 0.06583,
+    "direct": 0.05866,
+    "direct_galilee": 0.06663,
+    "niveau:-1": 0.05866,
+    "niveau:-0.5": 0.09528,
+    "niveau:0.5": 0.02713,
+    "niveau:1": -0.06431
+   },
+   "secs": 2.2
+  },
+  {
+   "graine": 303,
+   "monde": "t3h",
+   "ecartee": false,
+   "objet": "paro9",
+   "prix_reference": 5.21,
+   "cout_au_jour_183": 2.383,
+   "cout_vrai": 2.383,
+   "traits": {
+    "m": 2.186,
+    "e": -0.017,
+    "t": -0.024,
+    "etendue": 0.0731,
+    "g": 0.465,
+    "g_galilee": null,
+    "loi_retenue": 0,
+    "bruit": 0.279
+   },
+   "niveau_direct": 1,
+   "niveau_galilee": 0,
+   "loi": {
+    "texte": "cos(p)",
+    "retenue": false,
+    "sans_variable": false
+   },
+   "semaines": 26,
+   "plan_chaine": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "decision_chaine": -1,
+   "marge_temoin_nul": 5795.66,
+   "gains": {
+    "tenu": 0.04986,
+    "chaine": 0.34727,
+    "direct": -0.40471,
+    "direct_galilee": 0.04986,
+    "niveau:-1": 0.4818,
+    "niveau:-0.5": 0.38997,
+    "niveau:0.5": -0.21188,
+    "niveau:1": -0.40471
+   },
+   "secs": 2
+  },
+  {
+   "graine": 304,
+   "monde": "t3h",
+   "ecartee": false,
+   "objet": "suzaje1",
+   "prix_reference": 47.06,
+   "cout_au_jour_183": 24.576,
+   "cout_vrai": 24.576,
+   "traits": {
+    "m": 1.915,
+    "e": 2.017,
+    "t": 3.513,
+    "etendue": 0.1038,
+    "g": 0,
+    "g_galilee": null,
+    "loi_retenue": 0,
+    "bruit": 0.291
+   },
+   "niveau_direct": 0,
+   "niveau_galilee": 0,
+   "loi": {
+    "texte": "cos(p)",
+    "retenue": false,
+    "sans_variable": false
+   },
+   "semaines": 26,
+   "plan_chaine": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "decision_chaine": 0,
+   "marge_temoin_nul": 58005.22,
+   "gains": {
+    "tenu": -0.00343,
+    "chaine": -0.00537,
+    "direct": -0.00343,
+    "direct_galilee": -0.00343,
+    "niveau:-1": -0.08107,
+    "niveau:-0.5": -0.00602,
+    "niveau:0.5": -0.02131,
+    "niveau:1": -0.07168
+   },
+   "secs": 3
+  },
+  {
+   "graine": 305,
+   "monde": "t3h",
+   "ecartee": false,
+   "objet": "fibeka8",
+   "prix_reference": 201.13,
+   "cout_au_jour_183": 101.287,
+   "cout_vrai": 101.287,
+   "traits": {
+    "m": 1.986,
+    "e": 0.48,
+    "t": 0.646,
+    "etendue": 0.0711,
+    "g": 0.351,
+    "g_galilee": null,
+    "loi_retenue": 0,
+    "bruit": 0.311
+   },
+   "niveau_direct": 1,
+   "niveau_galilee": 0,
+   "loi": {
+    "texte": "cos(p)",
+    "retenue": false,
+    "sans_variable": false
+   },
+   "semaines": 26,
+   "plan_chaine": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "decision_chaine": 1,
+   "marge_temoin_nul": 182143.24,
+   "gains": {
+    "tenu": -0.05224,
+    "chaine": 0.09415,
+    "direct": 0.16048,
+    "direct_galilee": -0.05224,
+    "niveau:-1": -0.28717,
+    "niveau:-0.5": -0.15536,
+    "niveau:0.5": 0.05382,
+    "niveau:1": 0.16048
+   },
+   "secs": 3.2
+  },
+  {
+   "graine": 306,
+   "monde": "t3h",
+   "ecartee": false,
+   "objet": "quko1",
+   "prix_reference": 152.95,
+   "cout_au_jour_183": 67.218,
+   "cout_vrai": 67.218,
+   "traits": {
+    "m": 2.275,
+    "e": 2.164,
+    "t": 1.477,
+    "etendue": 0.0411,
+    "g": 0.042,
+    "g_galilee": null,
+    "loi_retenue": 0,
+    "bruit": 0.277
+   },
+   "niveau_direct": -1,
+   "niveau_galilee": 0,
+   "loi": {
+    "texte": "2/3",
+    "retenue": false,
+    "sans_variable": true
+   },
+   "semaines": 26,
+   "plan_chaine": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "decision_chaine": -1,
+   "marge_temoin_nul": 107855.71,
+   "gains": {
+    "tenu": 0.57465,
+    "chaine": 0.99886,
+    "direct": 1.22703,
+    "direct_galilee": 0.57465,
+    "niveau:-1": 1.22703,
+    "niveau:-0.5": 1.03541,
+    "niveau:0.5": 0.1489,
+    "niveau:1": -0.18966
+   },
+   "secs": 2.3
+  },
+  {
+   "graine": 307,
+   "monde": "t3h",
+   "ecartee": false,
+   "objet": "liku4",
+   "prix_reference": 65.99,
+   "cout_au_jour_183": 43.306,
+   "cout_vrai": 43.306,
+   "traits": {
+    "m": 1.524,
+    "e": 2.802,
+    "t": 2.692,
+    "etendue": 0.0598,
+    "g": 0,
+    "g_galilee": null,
+    "loi_retenue": 0,
+    "bruit": 0.286
+   },
+   "niveau_direct": 0,
+   "niveau_galilee": 0,
+   "loi": {
+    "texte": "2/3",
+    "retenue": false,
+    "sans_variable": true
+   },
+   "semaines": 26,
+   "plan_chaine": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "decision_chaine": 1,
+   "marge_temoin_nul": 73879.04,
+   "gains": {
+    "tenu": -0.04084,
+    "chaine": 0.04933,
+    "direct": -0.04084,
+    "direct_galilee": -0.04084,
+    "niveau:-1": -0.444,
+    "niveau:-0.5": -0.17662,
+    "niveau:0.5": 0.05185,
+    "niveau:1": 0.07934
+   },
+   "secs": 2.3
+  },
+  {
+   "graine": 308,
+   "monde": "t3h",
+   "ecartee": false,
+   "objet": "jemiji0",
+   "prix_reference": 4.77,
+   "cout_au_jour_183": 2.711,
+   "cout_vrai": 2.711,
+   "traits": {
+    "m": 1.759,
+    "e": -0.782,
+    "t": -0.638,
+    "etendue": 0.0643,
+    "g": 0.879,
+    "g_galilee": 0.973,
+    "loi_retenue": 1,
+    "bruit": 0.425
+   },
+   "niveau_direct": 1,
+   "niveau_galilee": 1,
+   "loi": {
+    "texte": "p / 2",
+    "retenue": true,
+    "sans_variable": false
+   },
+   "semaines": 26,
+   "plan_chaine": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "decision_chaine": 1,
+   "marge_temoin_nul": 3817.27,
+   "gains": {
+    "tenu": 0.09069,
+    "chaine": 0.13756,
+    "direct": 0.17447,
+    "direct_galilee": 0.17447,
+    "niveau:-1": -0.15622,
+    "niveau:-0.5": 0.02861,
+    "niveau:0.5": 0.14912,
+    "niveau:1": 0.17447
+   },
+   "secs": 1.1
+  },
+  {
+   "graine": 309,
+   "monde": "t3h",
+   "ecartee": false,
+   "objet": "roqe7",
+   "prix_reference": 12.54,
+   "cout_au_jour_183": 5.974,
+   "cout_vrai": 5.974,
+   "traits": {
+    "m": 2.099,
+    "e": 1.179,
+    "t": 0.979,
+    "etendue": 0.0521,
+    "g": 0.136,
+    "g_galilee": null,
+    "loi_retenue": 0,
+    "bruit": 0.297
+   },
+   "niveau_direct": 1,
+   "niveau_galilee": 0,
+   "loi": {
+    "texte": "2/3",
+    "retenue": false,
+    "sans_variable": true
+   },
+   "semaines": 26,
+   "plan_chaine": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "decision_chaine": -1,
+   "marge_temoin_nul": 13128.73,
+   "gains": {
+    "tenu": 0.15032,
+    "chaine": 0.04344,
+    "direct": -0.39746,
+    "direct_galilee": 0.15032,
+    "niveau:-1": 0.09494,
+    "niveau:-0.5": 0.30948,
+    "niveau:0.5": -0.15853,
+    "niveau:1": -0.39746
+   },
+   "secs": 1.8
+  },
+  {
+   "graine": 310,
+   "monde": "t3h",
+   "ecartee": false,
+   "objet": "repeso9",
+   "prix_reference": 4.8,
+   "cout_au_jour_183": 2.286,
+   "cout_vrai": 2.286,
+   "traits": {
+    "m": 2.1,
+    "e": 2.807,
+    "t": 2.22,
+    "etendue": 0.0429,
+    "g": 0.157,
+    "g_galilee": null,
+    "loi_retenue": 0,
+    "bruit": 0.268
+   },
+   "niveau_direct": -1,
+   "niveau_galilee": 0,
+   "loi": {
+    "texte": "cos(p)",
+    "retenue": false,
+    "sans_variable": false
+   },
+   "semaines": 26,
+   "plan_chaine": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "decision_chaine": -1,
+   "marge_temoin_nul": 5875.36,
+   "gains": {
+    "tenu": -0.16605,
+    "chaine": -0.03333,
+    "direct": 0.03417,
+    "direct_galilee": -0.16605,
+    "niveau:-1": 0.03417,
+    "niveau:-0.5": 0.03485,
+    "niveau:0.5": -0.39426,
+    "niveau:1": -0.56952
+   },
+   "secs": 3.1
+  },
+  {
+   "graine": 311,
+   "monde": "t3h",
+   "ecartee": false,
+   "objet": "purivi5",
+   "prix_reference": 6.54,
+   "cout_au_jour_183": 2.602,
+   "cout_vrai": 2.602,
+   "traits": {
+    "m": 2.513,
+    "e": 2.588,
+    "t": 3.719,
+    "etendue": 0.0881,
+    "g": 0.189,
+    "g_galilee": null,
+    "loi_retenue": 0,
+    "bruit": 0.298
+   },
+   "niveau_direct": -1,
+   "niveau_galilee": 0,
+   "loi": {
+    "texte": "cos(p)",
+    "retenue": false,
+    "sans_variable": false
+   },
+   "semaines": 26,
+   "plan_chaine": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "decision_chaine": -1,
+   "marge_temoin_nul": 10297.33,
+   "gains": {
+    "tenu": -0.04503,
+    "chaine": 0.11482,
+    "direct": 0.21095,
+    "direct_galilee": -0.04503,
+    "niveau:-1": 0.21095,
+    "niveau:-0.5": 0.09613,
+    "niveau:0.5": -0.1711,
+    "niveau:1": -0.32231
+   },
+   "secs": 1.1
+  },
+  {
+   "graine": 312,
+   "monde": "t3h",
+   "ecartee": false,
+   "objet": "cana5",
+   "prix_reference": 12.71,
+   "cout_au_jour_183": 7.085,
+   "cout_vrai": 7.085,
+   "traits": {
+    "m": 1.794,
+    "e": 0.347,
+    "t": 0.247,
+    "etendue": 0.0507,
+    "g": 0.449,
+    "g_galilee": null,
+    "loi_retenue": 0,
+    "bruit": 0.387
+   },
+   "niveau_direct": 1,
+   "niveau_galilee": 0,
+   "loi": {
+    "texte": "cos(p)",
+    "retenue": false,
+    "sans_variable": false
+   },
+   "semaines": 26,
+   "plan_chaine": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "decision_chaine": 1,
+   "marge_temoin_nul": 10765.37,
+   "gains": {
+    "tenu": -0.08249,
+    "chaine": 0.0177,
+    "direct": 0.1426,
+    "direct_galilee": -0.08249,
+    "niveau:-1": -0.38896,
+    "niveau:-0.5": -0.20116,
+    "niveau:0.5": 0.0371,
+    "niveau:1": 0.1426
+   },
+   "secs": 1.9
+  },
+  {
+   "graine": 313,
+   "monde": "t3h",
+   "ecartee": false,
+   "objet": "medudu8",
+   "prix_reference": 31.18,
+   "cout_au_jour_183": 23.792,
+   "cout_vrai": 23.792,
+   "traits": {
+    "m": 1.311,
+    "e": 1.153,
+    "t": 3.594,
+    "etendue": 0.1179,
+    "g": 0.589,
+    "g_galilee": 0.61,
+    "loi_retenue": 1,
+    "bruit": 0.337
+   },
+   "niveau_direct": 1,
+   "niveau_galilee": 1,
+   "loi": {
+    "texte": "cos(p)",
+    "retenue": true,
+    "sans_variable": false
+   },
+   "semaines": 26,
+   "plan_chaine": [
+    0,
+    0,
+    1,
+    0,
+    1,
+    1,
+    0,
+    0
+   ],
+   "decision_chaine": 1,
+   "marge_temoin_nul": 22680.83,
+   "gains": {
+    "tenu": 0.14664,
+    "chaine": 0.55535,
+    "direct": 0.67413,
+    "direct_galilee": 0.67413,
+    "niveau:-1": -0.77188,
+    "niveau:-0.5": -0.30759,
+    "niveau:0.5": 0.45229,
+    "niveau:1": 0.67413
+   },
+   "secs": 2
+  },
+  {
+   "graine": 314,
+   "monde": "t3h",
+   "ecartee": false,
+   "objet": "tiqu1",
+   "prix_reference": 67.59,
+   "cout_au_jour_183": 21.334,
+   "cout_vrai": 21.334,
+   "traits": {
+    "m": 3.168,
+    "e": 2.722,
+    "t": 5.981,
+    "etendue": 0.1329,
+    "g": 0.299,
+    "g_galilee": null,
+    "loi_retenue": 0,
+    "bruit": 0.315
+   },
+   "niveau_direct": -1,
+   "niveau_galilee": 0,
+   "loi": {
+    "texte": "4/3 − p",
+    "retenue": false,
+    "sans_variable": false
+   },
+   "semaines": 26,
+   "plan_chaine": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "decision_chaine": 1,
+   "marge_temoin_nul": 57513.97,
+   "gains": {
+    "tenu": 0.21683,
+    "chaine": 0.05151,
+    "direct": 0.59255,
+    "direct_galilee": 0.21683,
+    "niveau:-1": 0.59255,
+    "niveau:-0.5": 0.4119,
+    "niveau:0.5": 0.10236,
+    "niveau:1": -0.03258
+   },
+   "secs": 1.1
+  },
+  {
+   "graine": 315,
+   "monde": "t3h",
+   "ecartee": false,
+   "objet": "wamipe8",
+   "prix_reference": 58.26,
+   "cout_au_jour_183": 22.685,
+   "cout_vrai": 22.685,
+   "traits": {
+    "m": 2.568,
+    "e": 3.13,
+    "t": 1.369,
+    "etendue": 0.0346,
+    "g": 0.352,
+    "g_galilee": 0,
+    "loi_retenue": 1,
+    "bruit": 0.367
+   },
+   "niveau_direct": -1,
+   "niveau_galilee": 0,
+   "loi": {
+    "texte": "cos(p)",
+    "retenue": true,
+    "sans_variable": false
+   },
+   "semaines": 26,
+   "plan_chaine": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "decision_chaine": -1,
+   "marge_temoin_nul": 26513.74,
+   "gains": {
+    "tenu": 0.60073,
+    "chaine": 0.80466,
+    "direct": 0.83181,
+    "direct_galilee": 0.60073,
+    "niveau:-1": 0.83181,
+    "niveau:-0.5": 0.97213,
+    "niveau:0.5": 0.21147,
+    "niveau:1": -0.1119
+   },
+   "secs": 0.6
+  },
+  {
+   "graine": 316,
+   "monde": "t3h",
+   "ecartee": false,
+   "objet": "nahe1",
+   "prix_reference": 12.12,
+   "cout_au_jour_183": 8.874,
+   "cout_vrai": 8.874,
+   "traits": {
+    "m": 1.366,
+    "e": 3.842,
+    "t": 6.153,
+    "etendue": 0.104,
+    "g": 0,
+    "g_galilee": null,
+    "loi_retenue": 0,
+    "bruit": 0.345
+   },
+   "niveau_direct": 0,
+   "niveau_galilee": 0,
+   "loi": {
+    "texte": "sin(3·p)",
+    "retenue": false,
+    "sans_variable": false
+   },
+   "semaines": 26,
+   "plan_chaine": [
+    0,
+    0,
+    1,
+    0,
+    1,
+    1,
+    0,
+    0
+   ],
+   "decision_chaine": 0,
+   "marge_temoin_nul": 9540.51,
+   "gains": {
+    "tenu": 0.23097,
+    "chaine": 0.18092,
+    "direct": 0.23097,
+    "direct_galilee": 0.23097,
+    "niveau:-1": -0.53593,
+    "niveau:-0.5": -0.05929,
+    "niveau:0.5": 0.25226,
+    "niveau:1": 0.13607
+   },
+   "secs": 2.1
+  },
+  {
+   "graine": 317,
+   "monde": "t3h",
+   "ecartee": false,
+   "objet": "luhijo2",
+   "prix_reference": 171.35,
+   "cout_au_jour_183": 170.338,
+   "cout_vrai": 170.338,
+   "traits": {
+    "m": 1.006,
+    "e": 3.434,
+    "t": 5.175,
+    "etendue": 0.0886,
+    "g": 9.99,
+    "g_galilee": 9.99,
+    "loi_retenue": 1,
+    "bruit": 0.992
+   },
+   "niveau_direct": 1,
+   "niveau_galilee": 1,
+   "loi": {
+    "texte": "4/3 − p",
+    "retenue": true,
+    "sans_variable": false
+   },
+   "semaines": 26,
+   "plan_chaine": [
+    0,
+    0,
+    1,
+    0,
+    1,
+    1,
+    0,
+    0
+   ],
+   "decision_chaine": 1,
+   "marge_temoin_nul": 21872.77,
+   "gains": {
+    "tenu": -0.72334,
+    "chaine": 4.48437,
+    "direct": 5.9429,
+    "direct_galilee": 5.9429,
+    "niveau:-1": -13.76162,
+    "niveau:-0.5": -6.37486,
+    "niveau:0.5": 3.63445,
+    "niveau:1": 5.9429
+   },
+   "secs": 1.1
+  },
+  {
+   "graine": 318,
+   "monde": "t3h",
+   "ecartee": false,
+   "objet": "dene3",
+   "prix_reference": 160.33,
+   "cout_au_jour_183": 72.763,
+   "cout_vrai": 72.763,
+   "traits": {
+    "m": 2.203,
+    "e": -1.645,
+    "t": -0.375,
+    "etendue": 0.0267,
+    "g": 1.104,
+    "g_galilee": 0.018,
+    "loi_retenue": 1,
+    "bruit": 0.445
+   },
+   "niveau_direct": 1,
+   "niveau_galilee": 0.5,
+   "loi": {
+    "texte": "cos(p)",
+    "retenue": true,
+    "sans_variable": false
+   },
+   "semaines": 26,
+   "plan_chaine": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "decision_chaine": -1,
+   "marge_temoin_nul": 135249.64,
+   "gains": {
+    "tenu": 0.00484,
+    "chaine": -0.07571,
+    "direct": -0.18403,
+    "direct_galilee": -0.11338,
+    "niveau:-1": -0.04065,
+    "niveau:-0.5": 0.02261,
+    "niveau:0.5": -0.11338,
+    "niveau:1": -0.18403
+   },
+   "secs": 0.6
+  },
+  {
+   "graine": 319,
+   "monde": "t3h",
+   "ecartee": false,
+   "objet": "viro4",
+   "prix_reference": 34.54,
+   "cout_au_jour_183": 21.658,
+   "cout_vrai": 21.658,
+   "traits": {
+    "m": 1.595,
+    "e": 1.328,
+    "t": 4.921,
+    "etendue": 0.2027,
+    "g": 0.242,
+    "g_galilee": 0,
+    "loi_retenue": 1,
+    "bruit": 0.791
+   },
+   "niveau_direct": 1,
+   "niveau_galilee": 0,
+   "loi": {
+    "texte": "5/4 − p",
+    "retenue": true,
+    "sans_variable": false
+   },
+   "semaines": 26,
+   "plan_chaine": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "decision_chaine": -1,
+   "marge_temoin_nul": 22918.07,
+   "gains": {
+    "tenu": 0.00055,
+    "chaine": -0.11725,
+    "direct": -0.15669,
+    "direct_galilee": 0.00055,
+    "niveau:-1": -0.11293,
+    "niveau:-0.5": -0.00337,
+    "niveau:0.5": -0.063,
+    "niveau:1": -0.15669
+   },
+   "secs": 1.7
+  },
+  {
+   "graine": 320,
+   "monde": "t3h",
+   "ecartee": false,
+   "objet": "nare0",
+   "prix_reference": 104.76,
+   "cout_au_jour_183": 43.455,
+   "cout_vrai": 43.455,
+   "traits": {
+    "m": 2.411,
+    "e": 2.65,
+    "t": 1.919,
+    "etendue": 0.038,
+    "g": 0.189,
+    "g_galilee": null,
+    "loi_retenue": 0,
+    "bruit": 0.299
+   },
+   "niveau_direct": -1,
+   "niveau_galilee": 0,
+   "loi": {
+    "texte": "1/2",
+    "retenue": false,
+    "sans_variable": true
+   },
+   "semaines": 26,
+   "plan_chaine": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "decision_chaine": -1,
+   "marge_temoin_nul": 134238.69,
+   "gains": {
+    "tenu": -0.01675,
+    "chaine": 0.20001,
+    "direct": 0.27228,
+    "direct_galilee": -0.01675,
+    "niveau:-1": 0.27228,
+    "niveau:-0.5": 0.19064,
+    "niveau:0.5": -0.17949,
+    "niveau:1": -0.32996
+   },
+   "secs": 3
+  },
+  {
+   "graine": 321,
+   "monde": "t3h",
+   "ecartee": false,
+   "objet": "jonu3",
+   "prix_reference": 119.49,
+   "cout_au_jour_183": 63.325,
+   "cout_vrai": 63.325,
+   "traits": {
+    "m": 1.887,
+    "e": 3.063,
+    "t": 1.467,
+    "etendue": 0.0216,
+    "g": 0.138,
+    "g_galilee": null,
+    "loi_retenue": 0,
+    "bruit": 0.22
+   },
+   "niveau_direct": -1,
+   "niveau_galilee": 0,
+   "loi": {
+    "texte": "2/3",
+    "retenue": false,
+    "sans_variable": true
+   },
+   "semaines": 26,
+   "plan_chaine": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "decision_chaine": 1,
+   "marge_temoin_nul": 139979.51,
+   "gains": {
+    "tenu": 0.01432,
+    "chaine": 0.06265,
+    "direct": -0.19258,
+    "direct_galilee": 0.01432,
+    "niveau:-1": -0.19258,
+    "niveau:-0.5": -0.0734,
+    "niveau:0.5": 0.07119,
+    "niveau:1": 0.10509
+   },
+   "secs": 1.9
+  },
+  {
+   "graine": 322,
+   "monde": "t3h",
+   "ecartee": false,
+   "objet": "kopu6",
+   "prix_reference": 78.15,
+   "cout_au_jour_183": 38.777,
+   "cout_vrai": 38.777,
+   "traits": {
+    "m": 2.015,
+    "e": 1.026,
+    "t": 2.14,
+    "etendue": 0.159,
+    "g": 0.19,
+    "g_galilee": null,
+    "loi_retenue": 0,
+    "bruit": 0.461
+   },
+   "niveau_direct": 1,
+   "niveau_galilee": 0,
+   "loi": {
+    "texte": "4/3 − p",
+    "retenue": false,
+    "sans_variable": false
+   },
+   "semaines": 26,
+   "plan_chaine": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "decision_chaine": 1,
+   "marge_temoin_nul": 51048.79,
+   "gains": {
+    "tenu": 0.36517,
+    "chaine": 0.26046,
+    "direct": 0.27984,
+    "direct_galilee": 0.36517,
+    "niveau:-1": 0.17253,
+    "niveau:-0.5": 0.30226,
+    "niveau:0.5": 0.32884,
+    "niveau:1": 0.27984
+   },
+   "secs": 0.9
+  },
+  {
+   "graine": 323,
+   "monde": "t3h",
+   "ecartee": false,
+   "objet": "tatalu7",
+   "prix_reference": 18.03,
+   "cout_au_jour_183": 8.428,
+   "cout_vrai": 8.427,
+   "traits": {
+    "m": 2.139,
+    "e": 1.314,
+    "t": 0.636,
+    "etendue": 0.0543,
+    "g": 0.096,
+    "g_galilee": null,
+    "loi_retenue": 0,
+    "bruit": 0.546
+   },
+   "niveau_direct": 1,
+   "niveau_galilee": 0,
+   "loi": {
+    "texte": "0.4566",
+    "retenue": false,
+    "sans_variable": true
+   },
+   "semaines": 26,
+   "plan_chaine": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "decision_chaine": 0,
+   "marge_temoin_nul": 16500.91,
+   "gains": {
+    "tenu": 0.13704,
+    "chaine": 0.18054,
+    "direct": -0.06486,
+    "direct_galilee": 0.13704,
+    "niveau:-1": 0.14033,
+    "niveau:-0.5": 0.19779,
+    "niveau:0.5": 0.08217,
+    "niveau:1": -0.06486
+   },
+   "secs": 0.9
+  },
+  {
+   "graine": 324,
+   "monde": "t3h",
+   "ecartee": false,
+   "objet": "deva2",
+   "prix_reference": 195.61,
+   "cout_au_jour_183": 105.022,
+   "cout_vrai": 105.022,
+   "traits": {
+    "m": 1.863,
+    "e": 2.855,
+    "t": 2.934,
+    "etendue": 0.0488,
+    "g": 0.074,
+    "g_galilee": 0.039,
+    "loi_retenue": 1,
+    "bruit": 0.255
+   },
+   "niveau_direct": -1,
+   "niveau_galilee": 0.5,
+   "loi": {
+    "texte": "cos(p)",
+    "retenue": true,
+    "sans_variable": false
+   },
+   "semaines": 26,
+   "plan_chaine": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "decision_chaine": -1,
+   "marge_temoin_nul": 203792.27,
+   "gains": {
+    "tenu": 0.05216,
+    "chaine": 0.06497,
+    "direct": 0.12284,
+    "direct_galilee": -0.04395,
+    "niveau:-1": 0.12284,
+    "niveau:-0.5": 0.10831,
+    "niveau:0.5": -0.04395,
+    "niveau:1": -0.14237
+   },
+   "secs": 2.1
+  },
+  {
+   "graine": 325,
+   "monde": "t3h",
+   "ecartee": false,
+   "objet": "buko0",
+   "prix_reference": 5.37,
+   "cout_au_jour_183": 2.469,
+   "cout_vrai": 2.469,
+   "traits": {
+    "m": 2.175,
+    "e": -0.393,
+    "t": -0.356,
+    "etendue": 0.0485,
+    "g": 0.596,
+    "g_galilee": null,
+    "loi_retenue": 0,
+    "bruit": 0.281
+   },
+   "niveau_direct": 1,
+   "niveau_galilee": 0,
+   "loi": {
+    "texte": "2/3",
+    "retenue": false,
+    "sans_variable": true
+   },
+   "semaines": 26,
+   "plan_chaine": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "decision_chaine": -1,
+   "marge_temoin_nul": 6676.79,
+   "gains": {
+    "tenu": 0.10345,
+    "chaine": 0.22102,
+    "direct": -0.38837,
+    "direct_galilee": 0.10345,
+    "niveau:-1": 0.31192,
+    "niveau:-0.5": 0.37774,
+    "niveau:0.5": -0.18144,
+    "niveau:1": -0.38837
+   },
+   "secs": 2.6
+  },
+  {
+   "graine": 326,
+   "monde": "t3h",
+   "ecartee": false,
+   "objet": "fovola5",
+   "prix_reference": 251.94,
+   "cout_au_jour_183": 113.82,
+   "cout_vrai": 113.82,
+   "traits": {
+    "m": 2.213,
+    "e": -3.474,
+    "t": -0.325,
+    "etendue": 0.007,
+    "g": 2.161,
+    "g_galilee": null,
+    "loi_retenue": 0,
+    "bruit": 0.339
+   },
+   "niveau_direct": 1,
+   "niveau_galilee": 0,
+   "loi": {
+    "texte": "2/3",
+    "retenue": false,
+    "sans_variable": true
+   },
+   "semaines": 26,
+   "plan_chaine": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "decision_chaine": 1,
+   "marge_temoin_nul": 448700.04,
+   "gains": {
+    "tenu": -0.0141,
+    "chaine": -0.02557,
+    "direct": 0.00129,
+    "direct_galilee": -0.0141,
+    "niveau:-1": -0.21811,
+    "niveau:-0.5": -0.11047,
+    "niveau:0.5": 0.01158,
+    "niveau:1": 0.00129
+   },
+   "secs": 1.9
+  },
+  {
+   "graine": 327,
+   "monde": "t3h",
+   "ecartee": false,
+   "objet": "maru1",
+   "prix_reference": 78.23,
+   "cout_au_jour_183": 47.575,
+   "cout_vrai": 47.575,
+   "traits": {
+    "m": 1.644,
+    "e": 7.707,
+    "t": 2.026,
+    "etendue": 0.0187,
+    "g": 1.733,
+    "g_galilee": 0.08,
+    "loi_retenue": 1,
+    "bruit": 0.362
+   },
+   "niveau_direct": -1,
+   "niveau_galilee": 0.5,
+   "loi": {
+    "texte": "cos(p)",
+    "retenue": true,
+    "sans_variable": false
+   },
+   "semaines": 26,
+   "plan_chaine": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "decision_chaine": -1,
+   "marge_temoin_nul": 63096.45,
+   "gains": {
+    "tenu": 0.00665,
+    "chaine": -0.07915,
+    "direct": -0.142,
+    "direct_galilee": -0.17248,
+    "niveau:-1": -0.142,
+    "niveau:-0.5": 0.05165,
+    "niveau:0.5": -0.17248,
+    "niveau:1": -0.24714
+   },
+   "secs": 1.2
+  },
+  {
+   "graine": 328,
+   "monde": "t3h",
+   "ecartee": false,
+   "objet": "vuqagu8",
+   "prix_reference": 334.45,
+   "cout_au_jour_183": 171.571,
+   "cout_vrai": 171.571,
+   "traits": {
+    "m": 1.949,
+    "e": 3.044,
+    "t": 1.678,
+    "etendue": 0.0182,
+    "g": 0.162,
+    "g_galilee": null,
+    "loi_retenue": 0,
+    "bruit": 0.174
+   },
+   "niveau_direct": -1,
+   "niveau_galilee": 0,
+   "loi": {
+    "texte": "sin(p)",
+    "retenue": false,
+    "sans_variable": false
+   },
+   "semaines": 26,
+   "plan_chaine": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "decision_chaine": 1,
+   "marge_temoin_nul": 512414.2,
+   "gains": {
+    "tenu": 0.01528,
+    "chaine": -0.09667,
+    "direct": -0.03414,
+    "direct_galilee": 0.01528,
+    "niveau:-1": -0.03414,
+    "niveau:-0.5": -0.00791,
+    "niveau:0.5": -0.02535,
+    "niveau:1": -0.09758
+   },
+   "secs": 4.3
+  },
+  {
+   "graine": 329,
+   "monde": "t3h",
+   "ecartee": false,
+   "objet": "seqepi7",
+   "prix_reference": 296.13,
+   "cout_au_jour_183": 161.724,
+   "cout_vrai": 161.724,
+   "traits": {
+    "m": 1.831,
+    "e": 0.483,
+    "t": 1.104,
+    "etendue": 0.0776,
+    "g": 0.392,
+    "g_galilee": null,
+    "loi_retenue": 0,
+    "bruit": 0.237
+   },
+   "niveau_direct": 1,
+   "niveau_galilee": 0,
+   "loi": {
+    "texte": "2/3",
+    "retenue": false,
+    "sans_variable": true
+   },
+   "semaines": 26,
+   "plan_chaine": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "decision_chaine": 0,
+   "marge_temoin_nul": 495559.13,
+   "gains": {
+    "tenu": 0.01952,
+    "chaine": -0.0292,
+    "direct": -0.10495,
+    "direct_galilee": 0.01952,
+    "niveau:-1": -0.0678,
+    "niveau:-0.5": 0.00366,
+    "niveau:0.5": -0.02397,
+    "niveau:1": -0.10495
+   },
+   "secs": 1.9
+  },
+  {
+   "graine": 330,
+   "monde": "t3h",
+   "ecartee": false,
+   "objet": "vefu1",
+   "prix_reference": 214.01,
+   "cout_au_jour_183": 103.963,
+   "cout_vrai": 103.963,
+   "traits": {
+    "m": 2.059,
+    "e": 1.406,
+    "t": 2.998,
+    "etendue": 0.1217,
+    "g": 0.086,
+    "g_galilee": null,
+    "loi_retenue": 0,
+    "bruit": 0.255
+   },
+   "niveau_direct": 1,
+   "niveau_galilee": 0,
+   "loi": {
+    "texte": "1/2",
+    "retenue": false,
+    "sans_variable": true
+   },
+   "semaines": 26,
+   "plan_chaine": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "decision_chaine": 1,
+   "marge_temoin_nul": 238748.07,
+   "gains": {
+    "tenu": -0.05232,
+    "chaine": 0.05266,
+    "direct": 0.12592,
+    "direct_galilee": -0.05232,
+    "niveau:-1": -0.31753,
+    "niveau:-0.5": -0.17982,
+    "niveau:0.5": 0.02409,
+    "niveau:1": 0.12592
+   },
+   "secs": 1.6
+  },
+  {
+   "graine": 331,
+   "monde": "t3h",
+   "ecartee": false,
+   "objet": "xegoxa8",
+   "prix_reference": 14.59,
+   "cout_au_jour_183": 10.001,
+   "cout_vrai": 10.001,
+   "traits": {
+    "m": 1.459,
+    "e": 0.708,
+    "t": 0.618,
+    "etendue": 0.068,
+    "g": 0.533,
+    "g_galilee": null,
+    "loi_retenue": 0,
+    "bruit": 0.381
+   },
+   "niveau_direct": 1,
+   "niveau_galilee": 0,
+   "loi": {
+    "texte": "0.4041",
+    "retenue": false,
+    "sans_variable": true
+   },
+   "semaines": 26,
+   "plan_chaine": [
+    -0.5,
+    0,
+    1,
+    -0.5,
+    1,
+    1,
+    -0.5,
+    0
+   ],
+   "decision_chaine": -0.5,
+   "marge_temoin_nul": 10719.05,
+   "gains": {
+    "tenu": 0.04812,
+    "chaine": -0.08084,
+    "direct": -0.14979,
+    "direct_galilee": 0.04812,
+    "niveau:-1": -0.36193,
+    "niveau:-0.5": -0.00971,
+    "niveau:0.5": -0.01996,
+    "niveau:1": -0.14979
+   },
+   "secs": 1.9
+  },
+  {
+   "graine": 332,
+   "monde": "t3h",
+   "ecartee": false,
+   "objet": "fike4",
+   "prix_reference": 104.81,
+   "cout_au_jour_183": 52.691,
+   "cout_vrai": 52.691,
+   "traits": {
+    "m": 1.989,
+    "e": 2.809,
+    "t": 1.766,
+    "etendue": 0.0416,
+    "g": 0.119,
+    "g_galilee": 0.002,
+    "loi_retenue": 1,
+    "bruit": 0.323
+   },
+   "niveau_direct": -1,
+   "niveau_galilee": 0.5,
+   "loi": {
+    "texte": "cos(p)",
+    "retenue": true,
+    "sans_variable": false
+   },
+   "semaines": 26,
+   "plan_chaine": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "decision_chaine": 0,
+   "marge_temoin_nul": 104543.93,
+   "gains": {
+    "tenu": 0.03945,
+    "chaine": 0.03343,
+    "direct": 0.00591,
+    "direct_galilee": -0.034,
+    "niveau:-1": 0.00591,
+    "niveau:-0.5": 0.10845,
+    "niveau:0.5": -0.034,
+    "niveau:1": -0.11226
+   },
+   "secs": 2.6
+  },
+  {
+   "graine": 333,
+   "monde": "t3h",
+   "ecartee": false,
+   "objet": "gerore1",
+   "prix_reference": 17.7,
+   "cout_au_jour_183": 8.831,
+   "cout_vrai": 8.831,
+   "traits": {
+    "m": 2.004,
+    "e": 1.033,
+    "t": 2.548,
+    "etendue": 0.0908,
+    "g": 0.191,
+    "g_galilee": null,
+    "loi_retenue": 0,
+    "bruit": 0.205
+   },
+   "niveau_direct": 1,
+   "niveau_galilee": 0,
+   "loi": {
+    "texte": "3/4",
+    "retenue": false,
+    "sans_variable": true
+   },
+   "semaines": 26,
+   "plan_chaine": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "decision_chaine": -1,
+   "marge_temoin_nul": 16061.06,
+   "gains": {
+    "tenu": 0.28501,
+    "chaine": 0.34834,
+    "direct": -0.20674,
+    "direct_galilee": 0.28501,
+    "niveau:-1": 0.47157,
+    "niveau:-0.5": 0.41369,
+    "niveau:0.5": 0.01465,
+    "niveau:1": -0.20674
+   },
+   "secs": 1.7
+  },
+  {
+   "graine": 334,
+   "monde": "t3h",
+   "ecartee": false,
+   "objet": "boku5",
+   "prix_reference": 167.08,
+   "cout_au_jour_183": 86.501,
+   "cout_vrai": 86.501,
+   "traits": {
+    "m": 1.932,
+    "e": 1.045,
+    "t": 3.719,
+    "etendue": 0.2735,
+    "g": 0.203,
+    "g_galilee": null,
+    "loi_retenue": 0,
+    "bruit": 1.058
+   },
+   "niveau_direct": 1,
+   "niveau_galilee": 0,
+   "loi": {
+    "texte": "0.2349 / p",
+    "retenue": false,
+    "sans_variable": false
+   },
+   "semaines": 26,
+   "plan_chaine": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "decision_chaine": 0,
+   "marge_temoin_nul": 129268.43,
+   "gains": {
+    "tenu": 0.01232,
+    "chaine": 0.0186,
+    "direct": 0.12723,
+    "direct_galilee": 0.01232,
+    "niveau:-1": -0.17478,
+    "niveau:-0.5": -0.0642,
+    "niveau:0.5": 0.10643,
+    "niveau:1": 0.12723
+   },
+   "secs": 2.1
+  },
+  {
+   "graine": 335,
+   "monde": "t3h",
+   "ecartee": false,
+   "objet": "goku9",
+   "prix_reference": 46.34,
+   "cout_au_jour_183": 25.257,
+   "cout_vrai": 25.257,
+   "traits": {
+    "m": 1.835,
+    "e": 3.135,
+    "t": 3.939,
+    "etendue": 0.0513,
+    "g": 0.128,
+    "g_galilee": null,
+    "loi_retenue": 0,
+    "bruit": 0.181
+   },
+   "niveau_direct": -1,
+   "niveau_galilee": 0,
+   "loi": {
+    "texte": "3/4",
+    "retenue": false,
+    "sans_variable": true
+   },
+   "semaines": 26,
+   "plan_chaine": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "decision_chaine": 1,
+   "marge_temoin_nul": 81032.9,
+   "gains": {
+    "tenu": -0.01706,
+    "chaine": -0.04655,
+    "direct": -0.28248,
+    "direct_galilee": -0.01706,
+    "niveau:-1": -0.28248,
+    "niveau:-0.5": -0.14253,
+    "niveau:0.5": 0.02498,
+    "niveau:1": 0.00035
+   },
+   "secs": 2.4
+  },
+  {
+   "graine": 336,
+   "monde": "t3h",
+   "ecartee": false,
+   "objet": "dehe5",
+   "prix_reference": 41.33,
+   "cout_au_jour_183": 26.729,
+   "cout_vrai": 26.729,
+   "traits": {
+    "m": 1.546,
+    "e": 3.471,
+    "t": 6.907,
+    "etendue": 0.0864,
+    "g": 0.033,
+    "g_galilee": null,
+    "loi_retenue": 0,
+    "bruit": 0.218
+   },
+   "niveau_direct": -0.5,
+   "niveau_galilee": 0,
+   "loi": {
+    "texte": "cos(p)",
+    "retenue": false,
+    "sans_variable": false
+   },
+   "semaines": 26,
+   "plan_chaine": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "decision_chaine": 1,
+   "marge_temoin_nul": 57279.71,
+   "gains": {
+    "tenu": -0.0469,
+    "chaine": -0.0234,
+    "direct": -0.1629,
+    "direct_galilee": -0.0469,
+    "niveau:-1": -0.35628,
+    "niveau:-0.5": -0.1629,
+    "niveau:0.5": 0.02575,
+    "niveau:1": 0.0298
+   },
+   "secs": 1.5
+  },
+  {
+   "graine": 337,
+   "monde": "t3h",
+   "ecartee": false,
+   "objet": "jihu3",
+   "prix_reference": 8.23,
+   "cout_au_jour_183": 3.725,
+   "cout_vrai": 3.725,
+   "traits": {
+    "m": 2.209,
+    "e": 1.271,
+    "t": 1.379,
+    "etendue": 0.0708,
+    "g": 0.097,
+    "g_galilee": null,
+    "loi_retenue": 0,
+    "bruit": 0.299
+   },
+   "niveau_direct": 1,
+   "niveau_galilee": 0,
+   "loi": {
+    "texte": "2/3",
+    "retenue": false,
+    "sans_variable": true
+   },
+   "semaines": 26,
+   "plan_chaine": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "decision_chaine": 1,
+   "marge_temoin_nul": 8805.72,
+   "gains": {
+    "tenu": -0.0311,
+    "chaine": 0.02587,
+    "direct": 0.03433,
+    "direct_galilee": -0.0311,
+    "niveau:-1": -0.16944,
+    "niveau:-0.5": -0.06344,
+    "niveau:0.5": 0.01581,
+    "niveau:1": 0.03433
+   },
+   "secs": 1.7
+  },
+  {
+   "graine": 338,
+   "monde": "t3h",
+   "ecartee": false,
+   "objet": "lifeni9",
+   "prix_reference": 114.25,
+   "cout_au_jour_183": 38.629,
+   "cout_vrai": 38.629,
+   "traits": {
+    "m": 2.958,
+    "e": 0.465,
+    "t": 0.862,
+    "etendue": 0.0643,
+    "g": 0.242,
+    "g_galilee": null,
+    "loi_retenue": 0,
+    "bruit": 0.177
+   },
+   "niveau_direct": 1,
+   "niveau_galilee": 0,
+   "loi": {
+    "texte": "3/4",
+    "retenue": false,
+    "sans_variable": true
+   },
+   "semaines": 26,
+   "plan_chaine": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "decision_chaine": -1,
+   "marge_temoin_nul": 208988.56,
+   "gains": {
+    "tenu": 0.00736,
+    "chaine": -0.02326,
+    "direct": -0.02244,
+    "direct_galilee": 0.00736,
+    "niveau:-1": -0.00892,
+    "niveau:-0.5": 0.00821,
+    "niveau:0.5": -0.00097,
+    "niveau:1": -0.02244
+   },
+   "secs": 1.4
+  },
+  {
+   "graine": 339,
+   "monde": "t3h",
+   "ecartee": false,
+   "objet": "jusi4",
+   "prix_reference": 110.85,
+   "cout_au_jour_183": 93.799,
+   "cout_vrai": 93.799,
+   "traits": {
+    "m": 1.182,
+    "e": 3.013,
+    "t": 8.957,
+    "etendue": 0.1009,
+    "g": 0.34,
+    "g_galilee": 0.334,
+    "loi_retenue": 1,
+    "bruit": 0.287
+   },
+   "niveau_direct": 1,
+   "niveau_galilee": 0.5,
+   "loi": {
+    "texte": "4/3 − p^(5/2)",
+    "retenue": true,
+    "sans_variable": false
+   },
+   "semaines": 26,
+   "plan_chaine": [
+    0,
+    0,
+    1,
+    0,
+    1,
+    1,
+    0,
+    0
+   ],
+   "decision_chaine": 1,
+   "marge_temoin_nul": 100701.2,
+   "gains": {
+    "tenu": 0.00902,
+    "chaine": 0.1802,
+    "direct": 0.22903,
+    "direct_galilee": 0.27137,
+    "niveau:-1": -1.47399,
+    "niveau:-0.5": -0.60362,
+    "niveau:0.5": 0.27137,
+    "niveau:1": 0.22903
+   },
+   "secs": 2.2
+  },
+  {
+   "graine": 340,
+   "monde": "t3h",
+   "ecartee": false,
+   "objet": "soki2",
+   "prix_reference": 40.53,
+   "cout_au_jour_183": 22.016,
+   "cout_vrai": 22.016,
+   "traits": {
+    "m": 1.841,
+    "e": -0.623,
+    "t": -0.601,
+    "etendue": 0.0641,
+    "g": 0.778,
+    "g_galilee": 0.025,
+    "loi_retenue": 1,
+    "bruit": 0.398
+   },
+   "niveau_direct": 1,
+   "niveau_galilee": 0.5,
+   "loi": {
+    "texte": "cos(p)",
+    "retenue": true,
+    "sans_variable": false
+   },
+   "semaines": 26,
+   "plan_chaine": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "decision_chaine": 1,
+   "marge_temoin_nul": 72632.54,
+   "gains": {
+    "tenu": -0.04897,
+    "chaine": 0.00204,
+    "direct": 0.04942,
+    "direct_galilee": 0.02435,
+    "niveau:-1": -0.27677,
+    "niveau:-0.5": -0.1389,
+    "niveau:0.5": 0.02435,
+    "niveau:1": 0.04942
+   },
+   "secs": 1.9
+  },
+  {
+   "graine": 341,
+   "monde": "t3h",
+   "ecartee": false,
+   "objet": "bofola5",
+   "prix_reference": 13.08,
+   "cout_au_jour_183": 6.34,
+   "cout_vrai": 6.34,
+   "traits": {
+    "m": 2.063,
+    "e": -0.089,
+    "t": -0.164,
+    "etendue": 0.0855,
+    "g": 0.515,
+    "g_galilee": null,
+    "loi_retenue": 0,
+    "bruit": 0.276
+   },
+   "niveau_direct": 1,
+   "niveau_galilee": 0,
+   "loi": {
+    "texte": "0.6363",
+    "retenue": false,
+    "sans_variable": true
+   },
+   "semaines": 26,
+   "plan_chaine": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "decision_chaine": -1,
+   "marge_temoin_nul": 18538.35,
+   "gains": {
+    "tenu": 0.0045,
+    "chaine": 0.39656,
+    "direct": -0.48165,
+    "direct_galilee": 0.0045,
+    "niveau:-1": 0.58869,
+    "niveau:-0.5": 0.30997,
+    "niveau:0.5": -0.2662,
+    "niveau:1": -0.48165
+   },
+   "secs": 2.3
+  },
+  {
+   "graine": 342,
+   "monde": "t3h",
+   "ecartee": false,
+   "objet": "poloda3",
+   "prix_reference": 226.1,
+   "cout_au_jour_183": 132.29,
+   "cout_vrai": 132.29,
+   "traits": {
+    "m": 1.709,
+    "e": 0.928,
+    "t": 0.523,
+    "etendue": 0.054,
+    "g": 0.303,
+    "g_galilee": null,
+    "loi_retenue": 0,
+    "bruit": 0.464
+   },
+   "niveau_direct": 1,
+   "niveau_galilee": 0,
+   "loi": {
+    "texte": "cos(p)",
+    "retenue": false,
+    "sans_variable": false
+   },
+   "semaines": 26,
+   "plan_chaine": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "decision_chaine": 1,
+   "marge_temoin_nul": 211311.55,
+   "gains": {
+    "tenu": -0.18714,
+    "chaine": -0.05212,
+    "direct": -0.05147,
+    "direct_galilee": -0.18714,
+    "niveau:-1": -0.47062,
+    "niveau:-0.5": -0.31523,
+    "niveau:0.5": -0.06251,
+    "niveau:1": -0.05147
+   },
+   "secs": 0.9
+  },
+  {
+   "graine": 343,
+   "ecartee": true,
+   "motif": "aucun objet éligible (5 objets vendus)"
+  },
+  {
+   "graine": 344,
+   "monde": "t3h",
+   "ecartee": false,
+   "objet": "juki8",
+   "prix_reference": 3.79,
+   "cout_au_jour_183": 2.823,
+   "cout_vrai": 2.823,
+   "traits": {
+    "m": 1.343,
+    "e": 0.647,
+    "t": 0.691,
+    "etendue": 0.0673,
+    "g": 0.716,
+    "g_galilee": null,
+    "loi_retenue": 0,
+    "bruit": 0.332
+   },
+   "niveau_direct": 1,
+   "niveau_galilee": 0,
+   "loi": {
+    "texte": "cos(p)",
+    "retenue": false,
+    "sans_variable": false
+   },
+   "semaines": 26,
+   "plan_chaine": [
+    0,
+    0,
+    1,
+    0,
+    1,
+    1,
+    0,
+    0
+   ],
+   "decision_chaine": 1,
+   "marge_temoin_nul": 3248.39,
+   "gains": {
+    "tenu": -0.26221,
+    "chaine": 0.03049,
+    "direct": 0.12195,
+    "direct_galilee": -0.26221,
+    "niveau:-1": -0.79841,
+    "niveau:-0.5": -0.50694,
+    "niveau:0.5": -0.05243,
+    "niveau:1": 0.12195
+   },
+   "secs": 1.5
+  },
+  {
+   "graine": 345,
+   "monde": "t3h",
+   "ecartee": false,
+   "objet": "xofuji8",
+   "prix_reference": 77.68,
+   "cout_au_jour_183": 66.155,
+   "cout_vrai": 66.155,
+   "traits": {
+    "m": 1.174,
+    "e": 1.099,
+    "t": 3.197,
+    "etendue": 0.0909,
+    "g": 1.101,
+    "g_galilee": null,
+    "loi_retenue": 0,
+    "bruit": 0.362
+   },
+   "niveau_direct": 1,
+   "niveau_galilee": 0,
+   "loi": {
+    "texte": "π/2 − p",
+    "retenue": false,
+    "sans_variable": false
+   },
+   "semaines": 26,
+   "plan_chaine": [
+    0,
+    0,
+    1,
+    0,
+    1,
+    1,
+    0,
+    0
+   ],
+   "decision_chaine": 1,
+   "marge_temoin_nul": 61160.09,
+   "gains": {
+    "tenu": -0.22083,
+    "chaine": 0.27024,
+    "direct": 0.41618,
+    "direct_galilee": -0.22083,
+    "niveau:-1": -1.29925,
+    "niveau:-0.5": -0.75984,
+    "niveau:0.5": 0.20899,
+    "niveau:1": 0.41618
+   },
+   "secs": 4.4
+  },
+  {
+   "graine": 346,
+   "monde": "t3h",
+   "ecartee": false,
+   "objet": "gecoto5",
+   "prix_reference": 16.96,
+   "cout_au_jour_183": 9.662,
+   "cout_vrai": 9.662,
+   "traits": {
+    "m": 1.755,
+    "e": -16.533,
+    "t": -0.971,
+    "etendue": 0.0038,
+    "g": 9.99,
+    "g_galilee": null,
+    "loi_retenue": 1,
+    "bruit": 0.364
+   },
+   "niveau_direct": 1,
+   "niveau_galilee": 0,
+   "loi": {
+    "texte": "cos(2614·p)",
+    "retenue": true,
+    "sans_variable": false
+   },
+   "semaines": 26,
+   "plan_chaine": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "decision_chaine": -1,
+   "marge_temoin_nul": 15803.07,
+   "gains": {
+    "tenu": 0.00554,
+    "chaine": -0.10327,
+    "direct": -0.03871,
+    "direct_galilee": 0.00554,
+    "niveau:-1": -0.10092,
+    "niveau:-0.5": -0.01613,
+    "niveau:0.5": -0.01099,
+    "niveau:1": -0.03871
+   },
+   "secs": 1.7
+  },
+  {
+   "graine": 347,
+   "monde": "t3h",
+   "ecartee": false,
+   "objet": "miduqi4",
+   "prix_reference": 86.89,
+   "cout_au_jour_183": 75.631,
+   "cout_vrai": 75.631,
+   "traits": {
+    "m": 1.149,
+    "e": 2.621,
+    "t": 2.995,
+    "etendue": 0.0789,
+    "g": 0.632,
+    "g_galilee": null,
+    "loi_retenue": 0,
+    "bruit": 0.376
+   },
+   "niveau_direct": 1,
+   "niveau_galilee": 0,
+   "loi": {
+    "texte": "cos(p)",
+    "retenue": false,
+    "sans_variable": false
+   },
+   "semaines": 26,
+   "plan_chaine": [
+    0,
+    0,
+    1,
+    0,
+    1,
+    1,
+    0,
+    0
+   ],
+   "decision_chaine": 1,
+   "marge_temoin_nul": 43516.73,
+   "gains": {
+    "tenu": 0.30784,
+    "chaine": 1.24814,
+    "direct": 1.53422,
+    "direct_galilee": 0.30784,
+    "niveau:-1": -1.9163,
+    "niveau:-0.5": -0.72565,
+    "niveau:0.5": 1.09319,
+    "niveau:1": 1.53422
+   },
+   "secs": 1.7
+  },
+  {
+   "graine": 348,
+   "monde": "t3h",
+   "ecartee": false,
+   "objet": "tuve9",
+   "prix_reference": 220.13,
+   "cout_au_jour_183": 133.016,
+   "cout_vrai": 133.016,
+   "traits": {
+    "m": 1.655,
+    "e": 3.395,
+    "t": 1.104,
+    "etendue": 0.0235,
+    "g": 0.071,
+    "g_galilee": null,
+    "loi_retenue": 0,
+    "bruit": 0.353
+   },
+   "niveau_direct": -0.5,
+   "niveau_galilee": 0,
+   "loi": {
+    "texte": "cos(p)",
+    "retenue": false,
+    "sans_variable": false
+   },
+   "semaines": 26,
+   "plan_chaine": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "decision_chaine": 0,
+   "marge_temoin_nul": 105580.01,
+   "gains": {
+    "tenu": 0.02065,
+    "chaine": 0.0066,
+    "direct": -0.01932,
+    "direct_galilee": 0.02065,
+    "niveau:-1": -0.1386,
+    "niveau:-0.5": -0.01932,
+    "niveau:0.5": 0.03047,
+    "niveau:1": -0.00911
+   },
+   "secs": 1.3
+  },
+  {
+   "graine": 349,
+   "monde": "t3h",
+   "ecartee": false,
+   "objet": "lusa9",
+   "prix_reference": 4.19,
+   "cout_au_jour_183": 3.109,
+   "cout_vrai": 3.109,
+   "traits": {
+    "m": 1.348,
+    "e": 1.144,
+    "t": 3.459,
+    "etendue": 0.1171,
+    "g": 0.527,
+    "g_galilee": null,
+    "loi_retenue": 0,
+    "bruit": 0.64
+   },
+   "niveau_direct": 1,
+   "niveau_galilee": 0,
+   "loi": {
+    "texte": "1 / (p·2)",
+    "retenue": false,
+    "sans_variable": false
+   },
+   "semaines": 26,
+   "plan_chaine": [
+    0,
+    0,
+    1,
+    0,
+    1,
+    1,
+    0,
+    0
+   ],
+   "decision_chaine": 1,
+   "marge_temoin_nul": 3549.72,
+   "gains": {
+    "tenu": 0.00936,
+    "chaine": 0.21345,
+    "direct": 0.2762,
+    "direct_galilee": 0.00936,
+    "niveau:-1": -0.69836,
+    "niveau:-0.5": -0.30261,
+    "niveau:0.5": 0.17357,
+    "niveau:1": 0.2762
+   },
+   "secs": 2.6
+  },
+  {
+   "graine": 350,
+   "monde": "t3h",
+   "ecartee": false,
+   "objet": "zeqo2",
+   "prix_reference": 76.03,
+   "cout_au_jour_183": 27.736,
+   "cout_vrai": 27.736,
+   "traits": {
+    "m": 2.741,
+    "e": 0.874,
+    "t": 0.825,
+    "etendue": 0.0543,
+    "g": 0.147,
+    "g_galilee": null,
+    "loi_retenue": 0,
+    "bruit": 0.275
+   },
+   "niveau_direct": 1,
+   "niveau_galilee": 0,
+   "loi": {
+    "texte": "cos(p)",
+    "retenue": false,
+    "sans_variable": false
+   },
+   "semaines": 26,
+   "plan_chaine": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "decision_chaine": -1,
+   "marge_temoin_nul": 107394.86,
+   "gains": {
+    "tenu": 0.04956,
+    "chaine": -0.10747,
+    "direct": 0.00459,
+    "direct_galilee": 0.04956,
+    "niveau:-1": -0.13837,
+    "niveau:-0.5": -0.02111,
+    "niveau:0.5": 0.03175,
+    "niveau:1": 0.00459
+   },
+   "secs": 0.7
+  },
+  {
+   "graine": 351,
+   "monde": "t3h",
+   "ecartee": false,
+   "objet": "deka4",
+   "prix_reference": 10.51,
+   "cout_au_jour_183": 7.151,
+   "cout_vrai": 7.151,
+   "traits": {
+    "m": 1.47,
+    "e": 1.911,
+    "t": 2.545,
+    "etendue": 0.0645,
+    "g": 0.164,
+    "g_galilee": 0.381,
+    "loi_retenue": 1,
+    "bruit": 0.239
+   },
+   "niveau_direct": 1,
+   "niveau_galilee": 1,
+   "loi": {
+    "texte": "cos(p)",
+    "retenue": true,
+    "sans_variable": false
+   },
+   "semaines": 26,
+   "plan_chaine": [
+    -0.5,
+    0,
+    1,
+    -0.5,
+    1,
+    1,
+    -0.5,
+    0
+   ],
+   "decision_chaine": 1,
+   "marge_temoin_nul": 19595.42,
+   "gains": {
+    "tenu": -0.01308,
+    "chaine": -0.03101,
+    "direct": -0.03233,
+    "direct_galilee": -0.03233,
+    "niveau:-1": -0.38444,
+    "niveau:-0.5": -0.14865,
+    "niveau:0.5": 0.01324,
+    "niveau:1": -0.03233
+   },
+   "secs": 1.9
+  },
+  {
+   "graine": 352,
+   "monde": "t3h",
+   "ecartee": false,
+   "objet": "koli7",
+   "prix_reference": 18.74,
+   "cout_au_jour_183": 8.362,
+   "cout_vrai": 8.362,
+   "traits": {
+    "m": 2.241,
+    "e": 2.349,
+    "t": 3.947,
+    "etendue": 0.0788,
+    "g": 0.079,
+    "g_galilee": null,
+    "loi_retenue": 0,
+    "bruit": 0.218
+   },
+   "niveau_direct": -1,
+   "niveau_galilee": 0,
+   "loi": {
+    "texte": "cos(p)",
+    "retenue": false,
+    "sans_variable": false
+   },
+   "semaines": 26,
+   "plan_chaine": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "decision_chaine": -1,
+   "marge_temoin_nul": 11474.15,
+   "gains": {
+    "tenu": 0.77452,
+    "chaine": 1.14028,
+    "direct": 1.43987,
+    "direct_galilee": 0.77452,
+    "niveau:-1": 1.43987,
+    "niveau:-0.5": 1.181,
+    "niveau:0.5": 0.35157,
+    "niveau:1": 0.00393
+   },
+   "secs": 1.5
+  },
+  {
+   "graine": 353,
+   "monde": "t3h",
+   "ecartee": false,
+   "objet": "koxozo7",
+   "prix_reference": 36.26,
+   "cout_au_jour_183": 30.04,
+   "cout_vrai": 30.04,
+   "traits": {
+    "m": 1.207,
+    "e": 2.642,
+    "t": 4.143,
+    "etendue": 0.0959,
+    "g": 0.363,
+    "g_galilee": null,
+    "loi_retenue": 0,
+    "bruit": 0.309
+   },
+   "niveau_direct": 1,
+   "niveau_galilee": 0,
+   "loi": {
+    "texte": "cos(5 / p)",
+    "retenue": false,
+    "sans_variable": false
+   },
+   "semaines": 26,
+   "plan_chaine": [
+    0,
+    0,
+    1,
+    0,
+    1,
+    1,
+    0,
+    0
+   ],
+   "decision_chaine": 1,
+   "marge_temoin_nul": 14909.14,
+   "gains": {
+    "tenu": 0.51785,
+    "chaine": 0.6048,
+    "direct": 0.7486,
+    "direct_galilee": 0.51785,
+    "niveau:-1": -1.39328,
+    "niveau:-0.5": -0.23009,
+    "niveau:0.5": 0.97413,
+    "niveau:1": 0.7486
+   },
+   "secs": 2.1
+  },
+  {
+   "graine": 354,
+   "monde": "t3h",
+   "ecartee": false,
+   "objet": "voziku5",
+   "prix_reference": 23.85,
+   "cout_au_jour_183": 18.033,
+   "cout_vrai": 18.033,
+   "traits": {
+    "m": 1.323,
+    "e": 1.166,
+    "t": 4.265,
+    "etendue": 0.1141,
+    "g": 0.561,
+    "g_galilee": null,
+    "loi_retenue": 0,
+    "bruit": 0.276
+   },
+   "niveau_direct": 1,
+   "niveau_galilee": 0,
+   "loi": {
+    "texte": "cos(p)",
+    "retenue": false,
+    "sans_variable": false
+   },
+   "semaines": 26,
+   "plan_chaine": [
+    0,
+    0,
+    1,
+    0,
+    1,
+    1,
+    0,
+    0
+   ],
+   "decision_chaine": 1,
+   "marge_temoin_nul": 18343.14,
+   "gains": {
+    "tenu": -0.24772,
+    "chaine": 0.01487,
+    "direct": 0.06647,
+    "direct_galilee": -0.24772,
+    "niveau:-1": -0.82457,
+    "niveau:-0.5": -0.50762,
+    "niveau:0.5": -0.05776,
+    "niveau:1": 0.06647
+   },
+   "secs": 3
+  },
+  {
+   "graine": 355,
+   "monde": "t3h",
+   "ecartee": false,
+   "objet": "xiti4",
+   "prix_reference": 181.28,
+   "cout_au_jour_183": 138.953,
+   "cout_vrai": 138.953,
+   "traits": {
+    "m": 1.305,
+    "e": 2.093,
+    "t": 6.028,
+    "etendue": 0.0856,
+    "g": 0.298,
+    "g_galilee": null,
+    "loi_retenue": 0,
+    "bruit": 0.284
+   },
+   "niveau_direct": 1,
+   "niveau_galilee": 0,
+   "loi": {
+    "texte": "cos(p)",
+    "retenue": false,
+    "sans_variable": false
+   },
+   "semaines": 26,
+   "plan_chaine": [
+    0,
+    0,
+    1,
+    0,
+    1,
+    1,
+    0,
+    0
+   ],
+   "decision_chaine": 0,
+   "marge_temoin_nul": 173572.5,
+   "gains": {
+    "tenu": -0.03848,
+    "chaine": -0.04379,
+    "direct": -0.09613,
+    "direct_galilee": -0.03848,
+    "niveau:-1": -0.79652,
+    "niveau:-0.5": -0.33195,
+    "niveau:0.5": -0.01091,
+    "niveau:1": -0.09613
+   },
+   "secs": 3.2
+  },
+  {
+   "graine": 356,
+   "monde": "t3h",
+   "ecartee": false,
+   "objet": "buva7",
+   "prix_reference": 5.2,
+   "cout_au_jour_183": 2.474,
+   "cout_vrai": 2.474,
+   "traits": {
+    "m": 2.102,
+    "e": 0.736,
+    "t": 3.168,
+    "etendue": 0.1585,
+    "g": 0.253,
+    "g_galilee": null,
+    "loi_retenue": 0,
+    "bruit": 0.312
+   },
+   "niveau_direct": 1,
+   "niveau_galilee": 0,
+   "loi": {
+    "texte": "cos(p)",
+    "retenue": false,
+    "sans_variable": false
+   },
+   "semaines": 26,
+   "plan_chaine": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "decision_chaine": 1,
+   "marge_temoin_nul": 9019.73,
+   "gains": {
+    "tenu": 0.00007,
+    "chaine": 0.05755,
+    "direct": 0.11411,
+    "direct_galilee": 0.00007,
+    "niveau:-1": -0.2009,
+    "niveau:-0.5": -0.10014,
+    "niveau:0.5": 0.06408,
+    "niveau:1": 0.11411
+   },
+   "secs": 2.1
+  },
+  {
+   "graine": 357,
+   "monde": "t3h",
+   "ecartee": false,
+   "objet": "luxigu0",
+   "prix_reference": 41.34,
+   "cout_au_jour_183": 16.515,
+   "cout_vrai": 16.515,
+   "traits": {
+    "m": 2.503,
+    "e": 2.602,
+    "t": 2.651,
+    "etendue": 0.0756,
+    "g": 0.192,
+    "g_galilee": null,
+    "loi_retenue": 0,
+    "bruit": 0.353
+   },
+   "niveau_direct": -1,
+   "niveau_galilee": 0,
+   "loi": {
+    "texte": "cos(p)",
+    "retenue": false,
+    "sans_variable": false
+   },
+   "semaines": 26,
+   "plan_chaine": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "decision_chaine": -1,
+   "marge_temoin_nul": 21352.08,
+   "gains": {
+    "tenu": 0.21848,
+    "chaine": 0.56546,
+    "direct": 0.78177,
+    "direct_galilee": 0.21848,
+    "niveau:-1": 0.78177,
+    "niveau:-0.5": 0.48137,
+    "niveau:0.5": 0.00663,
+    "niveau:1": -0.21771
+   },
+   "secs": 1.1
+  },
+  {
+   "graine": 358,
+   "monde": "t3h",
+   "ecartee": false,
+   "objet": "patu6",
+   "prix_reference": 3.53,
+   "cout_au_jour_183": 2.343,
+   "cout_vrai": 2.343,
+   "traits": {
+    "m": 1.506,
+    "e": 0.755,
+    "t": 1.151,
+    "etendue": 0.0468,
+    "g": 0.472,
+    "g_galilee": null,
+    "loi_retenue": 0,
+    "bruit": 0.189
+   },
+   "niveau_direct": 1,
+   "niveau_galilee": 0,
+   "loi": {
+    "texte": "sin(p)",
+    "retenue": false,
+    "sans_variable": false
+   },
+   "semaines": 26,
+   "plan_chaine": [
+    -0.5,
+    0,
+    1,
+    -0.5,
+    1,
+    1,
+    -0.5,
+    0
+   ],
+   "decision_chaine": 1,
+   "marge_temoin_nul": 3482.12,
+   "gains": {
+    "tenu": 0.0589,
+    "chaine": -0.01518,
+    "direct": -0.02898,
+    "direct_galilee": 0.0589,
+    "niveau:-1": -0.31872,
+    "niveau:-0.5": -0.02026,
+    "niveau:0.5": 0.03591,
+    "niveau:1": -0.02898
+   },
+   "secs": 2
+  },
+  {
+   "graine": 359,
+   "monde": "t3h",
+   "ecartee": false,
+   "objet": "dihusi9",
+   "prix_reference": 24.44,
+   "cout_au_jour_183": 13.317,
+   "cout_vrai": 13.317,
+   "traits": {
+    "m": 1.835,
+    "e": 2.166,
+    "t": 4.661,
+    "etendue": 0.0767,
+    "g": 0,
+    "g_galilee": null,
+    "loi_retenue": 0,
+    "bruit": 0.174
+   },
+   "niveau_direct": 0,
+   "niveau_galilee": 0,
+   "loi": {
+    "texte": "π/2 − p",
+    "retenue": false,
+    "sans_variable": false
+   },
+   "semaines": 26,
+   "plan_chaine": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "decision_chaine": 0,
+   "marge_temoin_nul": 38326.18,
+   "gains": {
+    "tenu": 0.07182,
+    "chaine": 0.04264,
+    "direct": 0.07182,
+    "direct_galilee": 0.07182,
+    "niveau:-1": -0.02301,
+    "niveau:-0.5": 0.07913,
+    "niveau:0.5": 0.0088,
+    "niveau:1": -0.08046
+   },
+   "secs": 3.1
+  },
+  {
+   "graine": 360,
+   "monde": "t3h",
+   "ecartee": false,
+   "objet": "hoba9",
+   "prix_reference": 135.9,
+   "cout_au_jour_183": 60.302,
+   "cout_vrai": 60.302,
+   "traits": {
+    "m": 2.254,
+    "e": 0.656,
+    "t": 0.328,
+    "etendue": 0.0352,
+    "g": 0.252,
+    "g_galilee": null,
+    "loi_retenue": 0,
+    "bruit": 0.356
+   },
+   "niveau_direct": 1,
+   "niveau_galilee": 0,
+   "loi": {
+    "texte": "1/2",
+    "retenue": false,
+    "sans_variable": true
+   },
+   "semaines": 26,
+   "plan_chaine": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "decision_chaine": 1,
+   "marge_temoin_nul": 201601.97,
+   "gains": {
+    "tenu": 0.09609,
+    "chaine": 0.23689,
+    "direct": 0.2431,
+    "direct_galilee": 0.09609,
+    "niveau:-1": -0.13684,
+    "niveau:-0.5": -0.05122,
+    "niveau:0.5": 0.18092,
+    "niveau:1": 0.2431
+   },
+   "secs": 1.1
+  },
+  {
+   "graine": 361,
+   "monde": "t3h",
+   "ecartee": false,
+   "objet": "jivapo7",
+   "prix_reference": 9.6,
+   "cout_au_jour_183": 4.825,
+   "cout_vrai": 4.825,
+   "traits": {
+    "m": 1.989,
+    "e": 0.832,
+    "t": 1.532,
+    "etendue": 0.1759,
+    "g": 0.248,
+    "g_galilee": null,
+    "loi_retenue": 0,
+    "bruit": 0.594
+   },
+   "niveau_direct": 1,
+   "niveau_galilee": 0,
+   "loi": {
+    "texte": "1/2",
+    "retenue": false,
+    "sans_variable": true
+   },
+   "semaines": 26,
+   "plan_chaine": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "decision_chaine": -1,
+   "marge_temoin_nul": 2411.76,
+   "gains": {
+    "tenu": 0.0449,
+    "chaine": 0.54821,
+    "direct": -0.37231,
+    "direct_galilee": 0.0449,
+    "niveau:-1": 0.77421,
+    "niveau:-0.5": 0.39234,
+    "niveau:0.5": -0.1607,
+    "niveau:1": -0.37231
+   },
+   "secs": 1.1
+  },
+  {
+   "graine": 362,
+   "monde": "t3h",
+   "ecartee": false,
+   "objet": "xubonu5",
+   "prix_reference": 146.41,
+   "cout_au_jour_183": 65.853,
+   "cout_vrai": 65.853,
+   "traits": {
+    "m": 2.223,
+    "e": 1.561,
+    "t": 1.156,
+    "etendue": 0.0325,
+    "g": 0.027,
+    "g_galilee": null,
+    "loi_retenue": 0,
+    "bruit": 0.216
+   },
+   "niveau_direct": 1,
+   "niveau_galilee": 0,
+   "loi": {
+    "texte": "cos(p)",
+    "retenue": false,
+    "sans_variable": false
+   },
+   "semaines": 26,
+   "plan_chaine": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "decision_chaine": -1,
+   "marge_temoin_nul": 239853.18,
+   "gains": {
+    "tenu": 0.01631,
+    "chaine": 0.08781,
+    "direct": -0.28735,
+    "direct_galilee": 0.01631,
+    "niveau:-1": 0.11703,
+    "niveau:-0.5": 0.10271,
+    "niveau:0.5": -0.13606,
+    "niveau:1": -0.28735
+   },
+   "secs": 2.1
+  },
+  {
+   "graine": 363,
+   "monde": "t3h",
+   "ecartee": false,
+   "objet": "gugu5",
+   "prix_reference": 10.57,
+   "cout_au_jour_183": 7.425,
+   "cout_vrai": 7.425,
+   "traits": {
+    "m": 1.424,
+    "e": 1.121,
+    "t": 1.944,
+    "etendue": 0.0867,
+    "g": 0.432,
+    "g_galilee": null,
+    "loi_retenue": 0,
+    "bruit": 0.281
+   },
+   "niveau_direct": 1,
+   "niveau_galilee": 0,
+   "loi": {
+    "texte": "2/3",
+    "retenue": false,
+    "sans_variable": true
+   },
+   "semaines": 26,
+   "plan_chaine": [
+    -0.5,
+    0,
+    1,
+    -0.5,
+    1,
+    1,
+    -0.5,
+    0
+   ],
+   "decision_chaine": 1,
+   "marge_temoin_nul": 9619.91,
+   "gains": {
+    "tenu": -0.11792,
+    "chaine": 0.07535,
+    "direct": 0.13959,
+    "direct_galilee": -0.11792,
+    "niveau:-1": -0.63458,
+    "niveau:-0.5": -0.35414,
+    "niveau:0.5": 0.09651,
+    "niveau:1": 0.13959
+   },
+   "secs": 1.7
+  },
+  {
+   "graine": 364,
+   "monde": "t3h",
+   "ecartee": false,
+   "objet": "refehu1",
+   "prix_reference": 131.78,
+   "cout_au_jour_183": 106.292,
+   "cout_vrai": 106.292,
+   "traits": {
+    "m": 1.24,
+    "e": 1.213,
+    "t": 1.76,
+    "etendue": 0.1492,
+    "g": 0.749,
+    "g_galilee": null,
+    "loi_retenue": 0,
+    "bruit": 0.523
+   },
+   "niveau_direct": 1,
+   "niveau_galilee": 0,
+   "loi": {
+    "texte": "0.4469",
+    "retenue": false,
+    "sans_variable": true
+   },
+   "semaines": 26,
+   "plan_chaine": [
+    0,
+    0,
+    1,
+    0,
+    1,
+    1,
+    0,
+    0
+   ],
+   "decision_chaine": 0,
+   "marge_temoin_nul": 102476.77,
+   "gains": {
+    "tenu": 0.18913,
+    "chaine": 0.303,
+    "direct": 1.29471,
+    "direct_galilee": 0.18913,
+    "niveau:-1": -1.05263,
+    "niveau:-0.5": -0.32233,
+    "niveau:0.5": 0.79928,
+    "niveau:1": 1.29471
+   },
+   "secs": 1.2
+  },
+  {
+   "graine": 365,
+   "monde": "t3h",
+   "ecartee": false,
+   "objet": "gota4",
+   "prix_reference": 120.55,
+   "cout_au_jour_183": 57.933,
+   "cout_vrai": 57.933,
+   "traits": {
+    "m": 2.081,
+    "e": 3.401,
+    "t": 5.286,
+    "etendue": 0.0865,
+    "g": 0.314,
+    "g_galilee": null,
+    "loi_retenue": 0,
+    "bruit": 0.26
+   },
+   "niveau_direct": -1,
+   "niveau_galilee": 0,
+   "loi": {
+    "texte": "cos(p)",
+    "retenue": false,
+    "sans_variable": false
+   },
+   "semaines": 26,
+   "plan_chaine": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "decision_chaine": -1,
+   "marge_temoin_nul": 108876.97,
+   "gains": {
+    "tenu": 0.0053,
+    "chaine": -0.06253,
+    "direct": -0.05074,
+    "direct_galilee": 0.0053,
+    "niveau:-1": -0.05074,
+    "niveau:-0.5": -0.00526,
+    "niveau:0.5": -0.02245,
+    "niveau:1": -0.05094
+   },
+   "secs": 1.9
+  },
+  {
+   "graine": 366,
+   "monde": "t3h",
+   "ecartee": false,
+   "objet": "toto6",
+   "prix_reference": 6.07,
+   "cout_au_jour_183": 3.845,
+   "cout_vrai": 3.845,
+   "traits": {
+    "m": 1.579,
+    "e": 2.225,
+    "t": 4.698,
+    "etendue": 0.0781,
+    "g": 0.033,
+    "g_galilee": null,
+    "loi_retenue": 0,
+    "bruit": 0.215
+   },
+   "niveau_direct": 0.5,
+   "niveau_galilee": 0,
+   "loi": {
+    "texte": "cos(p)",
+    "retenue": false,
+    "sans_variable": false
+   },
+   "semaines": 26,
+   "plan_chaine": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "decision_chaine": 0,
+   "marge_temoin_nul": 4174.65,
+   "gains": {
+    "tenu": 0.01846,
+    "chaine": 0.00021,
+    "direct": -0.11308,
+    "direct_galilee": 0.01846,
+    "niveau:-1": 0.01981,
+    "niveau:-0.5": 0.08805,
+    "niveau:0.5": -0.11308,
+    "niveau:1": -0.26083
+   },
+   "secs": 1.6
+  },
+  {
+   "graine": 367,
+   "monde": "t3h",
+   "ecartee": false,
+   "objet": "fatuni7",
+   "prix_reference": 226.04,
+   "cout_au_jour_183": 133.348,
+   "cout_vrai": 133.348,
+   "traits": {
+    "m": 1.695,
+    "e": 5.598,
+    "t": 4.265,
+    "etendue": 0.0601,
+    "g": 0.786,
+    "g_galilee": null,
+    "loi_retenue": 0,
+    "bruit": 0.445
+   },
+   "niveau_direct": -1,
+   "niveau_galilee": 0,
+   "loi": {
+    "texte": "4/3 − p",
+    "retenue": false,
+    "sans_variable": false
+   },
+   "semaines": 26,
+   "plan_chaine": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "decision_chaine": -1,
+   "marge_temoin_nul": 294838.78,
+   "gains": {
+    "tenu": 0.08274,
+    "chaine": 0.1621,
+    "direct": 0.27065,
+    "direct_galilee": 0.08274,
+    "niveau:-1": 0.27065,
+    "niveau:-0.5": 0.20814,
+    "niveau:0.5": -0.10685,
+    "niveau:1": -0.32099
+   },
+   "secs": 0.9
+  },
+  {
+   "graine": 368,
+   "monde": "t3h",
+   "ecartee": false,
+   "objet": "pulope1",
+   "prix_reference": 11.28,
+   "cout_au_jour_183": 5.179,
+   "cout_vrai": 5.179,
+   "traits": {
+    "m": 2.178,
+    "e": 2.191,
+    "t": 1.174,
+    "etendue": 0.0242,
+    "g": 0.028,
+    "g_galilee": null,
+    "loi_retenue": 0,
+    "bruit": 0.205
+   },
+   "niveau_direct": -0.5,
+   "niveau_galilee": 0,
+   "loi": {
+    "texte": "3/4",
+    "retenue": false,
+    "sans_variable": true
+   },
+   "semaines": 26,
+   "plan_chaine": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "decision_chaine": -1,
+   "marge_temoin_nul": 32441.8,
+   "gains": {
+    "tenu": 0.00239,
+    "chaine": -0.08618,
+    "direct": 0.05319,
+    "direct_galilee": 0.00239,
+    "niveau:-1": -0.04922,
+    "niveau:-0.5": 0.05319,
+    "niveau:0.5": -0.09635,
+    "niveau:1": -0.27017
+   },
+   "secs": 1.3
+  },
+  {
+   "graine": 369,
+   "monde": "t3h",
+   "ecartee": false,
+   "objet": "goxuxi4",
+   "prix_reference": 32.78,
+   "cout_au_jour_183": 21.089,
+   "cout_vrai": 21.089,
+   "traits": {
+    "m": 1.554,
+    "e": 0.618,
+    "t": 1.672,
+    "etendue": 0.1892,
+    "g": 0.482,
+    "g_galilee": null,
+    "loi_retenue": 0,
+    "bruit": 0.583
+   },
+   "niveau_direct": 1,
+   "niveau_galilee": 0,
+   "loi": {
+    "texte": "2/3",
+    "retenue": false,
+    "sans_variable": true
+   },
+   "semaines": 26,
+   "plan_chaine": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "decision_chaine": -1,
+   "marge_temoin_nul": 17774.13,
+   "gains": {
+    "tenu": -0.01472,
+    "chaine": -0.12242,
+    "direct": -0.21665,
+    "direct_galilee": -0.01472,
+    "niveau:-1": -0.10257,
+    "niveau:-0.5": 0.00717,
+    "niveau:0.5": -0.11228,
+    "niveau:1": -0.21665
+   },
+   "secs": 1.4
+  },
+  {
+   "graine": 370,
+   "monde": "t3h",
+   "ecartee": false,
+   "objet": "xonu3",
+   "prix_reference": 15.28,
+   "cout_au_jour_183": 10.403,
+   "cout_vrai": 10.403,
+   "traits": {
+    "m": 1.469,
+    "e": 2.069,
+    "t": 4.387,
+    "etendue": 0.0685,
+    "g": 0.124,
+    "g_galilee": null,
+    "loi_retenue": 0,
+    "bruit": 0.196
+   },
+   "niveau_direct": 1,
+   "niveau_galilee": 0,
+   "loi": {
+    "texte": "7/4 − p",
+    "retenue": false,
+    "sans_variable": false
+   },
+   "semaines": 26,
+   "plan_chaine": [
+    -0.5,
+    0,
+    1,
+    -0.5,
+    1,
+    1,
+    -0.5,
+    0
+   ],
+   "decision_chaine": -0.5,
+   "marge_temoin_nul": 13826.87,
+   "gains": {
+    "tenu": -0.00179,
+    "chaine": -0.04278,
+    "direct": -0.21438,
+    "direct_galilee": -0.00179,
+    "niveau:-1": -0.30048,
+    "niveau:-0.5": -0.02415,
+    "niveau:0.5": -0.09987,
+    "niveau:1": -0.21438
+   },
+   "secs": 3.7
+  },
+  {
+   "graine": 371,
+   "monde": "t3h",
+   "ecartee": false,
+   "objet": "pogiha4",
+   "prix_reference": 435.91,
+   "cout_au_jour_183": 139.211,
+   "cout_vrai": 139.211,
+   "traits": {
+    "m": 3.131,
+    "e": 1.713,
+    "t": 2.125,
+    "etendue": 0.0724,
+    "g": 0.035,
+    "g_galilee": 0,
+    "loi_retenue": 1,
+    "bruit": 0.272
+   },
+   "niveau_direct": -1,
+   "niveau_galilee": 0,
+   "loi": {
+    "texte": "cos(p)",
+    "retenue": true,
+    "sans_variable": false
+   },
+   "semaines": 26,
+   "plan_chaine": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "decision_chaine": 1,
+   "marge_temoin_nul": 775511.13,
+   "gains": {
+    "tenu": 0.02533,
+    "chaine": 0.11389,
+    "direct": -0.12951,
+    "direct_galilee": 0.02533,
+    "niveau:-1": -0.12951,
+    "niveau:-0.5": -0.06453,
+    "niveau:0.5": 0.09718,
+    "niveau:1": 0.15085
+   },
+   "secs": 1.3
+  },
+  {
+   "graine": 372,
+   "monde": "t3h",
+   "ecartee": false,
+   "objet": "vulu2",
+   "prix_reference": 42.74,
+   "cout_au_jour_183": 30.119,
+   "cout_vrai": 30.119,
+   "traits": {
+    "m": 1.419,
+    "e": 9.881,
+    "t": 1.398,
+    "etendue": 0.0103,
+    "g": 1.925,
+    "g_galilee": null,
+    "loi_retenue": 0,
+    "bruit": 0.348
+   },
+   "niveau_direct": -1,
+   "niveau_galilee": 0,
+   "loi": {
+    "texte": "cos(p)",
+    "retenue": false,
+    "sans_variable": false
+   },
+   "semaines": 26,
+   "plan_chaine": [
+    -0.5,
+    0,
+    1,
+    -0.5,
+    1,
+    1,
+    -0.5,
+    0
+   ],
+   "decision_chaine": -0.5,
+   "marge_temoin_nul": 17614.41,
+   "gains": {
+    "tenu": -0.00838,
+    "chaine": 0.01137,
+    "direct": -0.20388,
+    "direct_galilee": -0.00838,
+    "niveau:-1": -0.20388,
+    "niveau:-0.5": 0.06088,
+    "niveau:0.5": -0.17184,
+    "niveau:1": -0.35816
+   },
+   "secs": 1.6
+  },
+  {
+   "graine": 373,
+   "monde": "t3h",
+   "ecartee": false,
+   "objet": "sogezo2",
+   "prix_reference": 8.06,
+   "cout_au_jour_183": 3.087,
+   "cout_vrai": 3.087,
+   "traits": {
+    "m": 2.611,
+    "e": 0.657,
+    "t": 2.201,
+    "etendue": 0.132,
+    "g": 0.214,
+    "g_galilee": null,
+    "loi_retenue": 0,
+    "bruit": 0.247
+   },
+   "niveau_direct": 1,
+   "niveau_galilee": 0,
+   "loi": {
+    "texte": "cos(p)",
+    "retenue": false,
+    "sans_variable": false
+   },
+   "semaines": 26,
+   "plan_chaine": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "decision_chaine": 0,
+   "marge_temoin_nul": 6839.76,
+   "gains": {
+    "tenu": -0.01042,
+    "chaine": -0.01612,
+    "direct": 0.1032,
+    "direct_galilee": -0.01042,
+    "niveau:-1": -0.15869,
+    "niveau:-0.5": -0.08913,
+    "niveau:0.5": 0.04612,
+    "niveau:1": 0.1032
+   },
+   "secs": 1.5
+  },
+  {
+   "graine": 374,
+   "monde": "t3h",
+   "ecartee": false,
+   "objet": "xiwune7",
+   "prix_reference": 9.13,
+   "cout_au_jour_183": 5.178,
+   "cout_vrai": 5.178,
+   "traits": {
+    "m": 1.763,
+    "e": 0.747,
+    "t": 0.935,
+    "etendue": 0.052,
+    "g": 0.335,
+    "g_galilee": null,
+    "loi_retenue": 0,
+    "bruit": 0.217
+   },
+   "niveau_direct": 1,
+   "niveau_galilee": 0,
+   "loi": {
+    "texte": "2/3",
+    "retenue": false,
+    "sans_variable": true
+   },
+   "semaines": 26,
+   "plan_chaine": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "decision_chaine": -1,
+   "marge_temoin_nul": 12302.7,
+   "gains": {
+    "tenu": -0.00679,
+    "chaine": -0.21802,
+    "direct": -0.01376,
+    "direct_galilee": -0.00679,
+    "niveau:-1": -0.22888,
+    "niveau:-0.5": -0.07783,
+    "niveau:0.5": 0.01065,
+    "niveau:1": -0.01376
+   },
+   "secs": 0.8
+  },
+  {
+   "graine": 375,
+   "monde": "t3h",
+   "ecartee": false,
+   "objet": "jokubi1",
+   "prix_reference": 59.45,
+   "cout_au_jour_183": 27.379,
+   "cout_vrai": 27.379,
+   "traits": {
+    "m": 2.171,
+    "e": 1.812,
+    "t": 2.548,
+    "etendue": 0.0997,
+    "g": 0,
+    "g_galilee": null,
+    "loi_retenue": 0,
+    "bruit": 0.355
+   },
+   "niveau_direct": 0,
+   "niveau_galilee": 0,
+   "loi": {
+    "texte": "4/3 − p",
+    "retenue": false,
+    "sans_variable": false
+   },
+   "semaines": 26,
+   "plan_chaine": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "decision_chaine": 1,
+   "marge_temoin_nul": 60498.45,
+   "gains": {
+    "tenu": -0.03149,
+    "chaine": -0.01478,
+    "direct": -0.03149,
+    "direct_galilee": -0.03149,
+    "niveau:-1": -0.21076,
+    "niveau:-0.5": -0.14867,
+    "niveau:0.5": 0.01768,
+    "niveau:1": 0.03794
+   },
+   "secs": 0.8
+  },
+  {
+   "graine": 376,
+   "monde": "t3h",
+   "ecartee": false,
+   "objet": "kaxu7",
+   "prix_reference": 3.03,
+   "cout_au_jour_183": 2.558,
+   "cout_vrai": 2.558,
+   "traits": {
+    "m": 1.184,
+    "e": 3.397,
+    "t": 1.534,
+    "etendue": 0.0217,
+    "g": 0.224,
+    "g_galilee": null,
+    "loi_retenue": 0,
+    "bruit": 0.242
+   },
+   "niveau_direct": 1,
+   "niveau_galilee": 0,
+   "loi": {
+    "texte": "3/4",
+    "retenue": false,
+    "sans_variable": true
+   },
+   "semaines": 26,
+   "plan_chaine": [
+    0,
+    0,
+    1,
+    0,
+    1,
+    1,
+    0,
+    0
+   ],
+   "decision_chaine": 1,
+   "marge_temoin_nul": 1807.84,
+   "gains": {
+    "tenu": 0.07867,
+    "chaine": 0.64453,
+    "direct": 0.78034,
+    "direct_galilee": 0.07867,
+    "niveau:-1": -1.4565,
+    "niveau:-0.5": -0.58803,
+    "niveau:0.5": 0.51774,
+    "niveau:1": 0.78034
+   },
+   "secs": 2.4
+  },
+  {
+   "graine": 377,
+   "monde": "t3h",
+   "ecartee": false,
+   "objet": "cikune4",
+   "prix_reference": 235.72,
+   "cout_au_jour_183": 125.332,
+   "cout_vrai": 125.332,
+   "traits": {
+    "m": 1.881,
+    "e": 3.97,
+    "t": 2.049,
+    "etendue": 0.0463,
+    "g": 0.39,
+    "g_galilee": 0.145,
+    "loi_retenue": 1,
+    "bruit": 0.463
+   },
+   "niveau_direct": -1,
+   "niveau_galilee": 1,
+   "loi": {
+    "texte": "cos(p)",
+    "retenue": true,
+    "sans_variable": false
+   },
+   "semaines": 26,
+   "plan_chaine": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "decision_chaine": -1,
+   "marge_temoin_nul": 214260.08,
+   "gains": {
+    "tenu": -0.08809,
+    "chaine": 0.12101,
+    "direct": 0.14829,
+    "direct_galilee": -0.49029,
+    "niveau:-1": 0.14829,
+    "niveau:-0.5": 0.10435,
+    "niveau:0.5": -0.27819,
+    "niveau:1": -0.49029
+   },
+   "secs": 1.1
+  },
+  {
+   "graine": 378,
+   "monde": "t3h",
+   "ecartee": false,
+   "objet": "vuxudi4",
+   "prix_reference": 46.19,
+   "cout_au_jour_183": 30.413,
+   "cout_vrai": 30.413,
+   "traits": {
+    "m": 1.519,
+    "e": 0.986,
+    "t": 1.223,
+    "etendue": 0.1011,
+    "g": 0.39,
+    "g_galilee": null,
+    "loi_retenue": 0,
+    "bruit": 0.439
+   },
+   "niveau_direct": 1,
+   "niveau_galilee": 0,
+   "loi": {
+    "texte": "2/3",
+    "retenue": false,
+    "sans_variable": true
+   },
+   "semaines": 26,
+   "plan_chaine": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "decision_chaine": 1,
+   "marge_temoin_nul": 13950.41,
+   "gains": {
+    "tenu": -0.0149,
+    "chaine": -0.04381,
+    "direct": -0.05584,
+    "direct_galilee": -0.0149,
+    "niveau:-1": -0.27731,
+    "niveau:-0.5": -0.08091,
+    "niveau:0.5": 0.0014,
+    "niveau:1": -0.05584
+   },
+   "secs": 1.5
+  },
+  {
+   "graine": 379,
+   "monde": "t3h",
+   "ecartee": false,
+   "objet": "nugo1",
+   "prix_reference": 25.52,
+   "cout_au_jour_183": 12.735,
+   "cout_vrai": 12.735,
+   "traits": {
+    "m": 2.004,
+    "e": 1.832,
+    "t": 2.964,
+    "etendue": 0.0687,
+    "g": 0.007,
+    "g_galilee": null,
+    "loi_retenue": 0,
+    "bruit": 0.219
+   },
+   "niveau_direct": 0.5,
+   "niveau_galilee": 0,
+   "loi": {
+    "texte": "cos(p)",
+    "retenue": false,
+    "sans_variable": false
+   },
+   "semaines": 26,
+   "plan_chaine": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "decision_chaine": -1,
+   "marge_temoin_nul": 61800.3,
+   "gains": {
+    "tenu": 0.02485,
+    "chaine": -0.04262,
+    "direct": -0.06126,
+    "direct_galilee": 0.02485,
+    "niveau:-1": -0.01354,
+    "niveau:-0.5": 0.03087,
+    "niveau:0.5": -0.06126,
+    "niveau:1": -0.24582
+   },
+   "secs": 1.5
+  },
+  {
+   "graine": 380,
+   "monde": "t3h",
+   "ecartee": false,
+   "objet": "nasu4",
+   "prix_reference": 95.87,
+   "cout_au_jour_183": 48.295,
+   "cout_vrai": 48.295,
+   "traits": {
+    "m": 1.985,
+    "e": 3.118,
+    "t": 4.453,
+    "etendue": 0.0816,
+    "g": 0.197,
+    "g_galilee": null,
+    "loi_retenue": 0,
+    "bruit": 0.308
+   },
+   "niveau_direct": -1,
+   "niveau_galilee": 0,
+   "loi": {
+    "texte": "cos(p)",
+    "retenue": false,
+    "sans_variable": false
+   },
+   "semaines": 26,
+   "plan_chaine": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "decision_chaine": -1,
+   "marge_temoin_nul": 496970.64,
+   "gains": {
+    "tenu": -0.03216,
+    "chaine": 0.03763,
+    "direct": 0.11439,
+    "direct_galilee": -0.03216,
+    "niveau:-1": 0.11439,
+    "niveau:-0.5": 0.08989,
+    "niveau:0.5": -0.22697,
+    "niveau:1": -0.37693
+   },
+   "secs": 1.7
+  },
+  {
+   "graine": 381,
+   "monde": "t3h",
+   "ecartee": false,
+   "objet": "vicopa8",
+   "prix_reference": 9.63,
+   "cout_au_jour_183": 5.044,
+   "cout_vrai": 5.044,
+   "traits": {
+    "m": 1.909,
+    "e": 1.878,
+    "t": 5.144,
+    "etendue": 0.0973,
+    "g": 0.013,
+    "g_galilee": null,
+    "loi_retenue": 0,
+    "bruit": 0.179
+   },
+   "niveau_direct": 0.5,
+   "niveau_galilee": 0,
+   "loi": {
+    "texte": "π/2 − p",
+    "retenue": false,
+    "sans_variable": false
+   },
+   "semaines": 26,
+   "plan_chaine": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "decision_chaine": -1,
+   "marge_temoin_nul": 20532.46,
+   "gains": {
+    "tenu": 0.00154,
+    "chaine": -0.15494,
+    "direct": -0.09225,
+    "direct_galilee": 0.00154,
+    "niveau:-1": -0.15864,
+    "niveau:-0.5": -0.02912,
+    "niveau:0.5": -0.09225,
+    "niveau:1": -0.22074
+   },
+   "secs": 4.1
+  },
+  {
+   "graine": 382,
+   "monde": "t3h",
+   "ecartee": false,
+   "objet": "viniso1",
+   "prix_reference": 3.36,
+   "cout_au_jour_183": 2.475,
+   "cout_vrai": 2.475,
+   "traits": {
+    "m": 1.357,
+    "e": 1.08,
+    "t": 2.955,
+    "etendue": 0.1379,
+    "g": 0.532,
+    "g_galilee": null,
+    "loi_retenue": 0,
+    "bruit": 0.632
+   },
+   "niveau_direct": 1,
+   "niveau_galilee": 0,
+   "loi": {
+    "texte": "cos(p)",
+    "retenue": false,
+    "sans_variable": false
+   },
+   "semaines": 26,
+   "plan_chaine": [
+    0,
+    0,
+    1,
+    0,
+    1,
+    1,
+    0,
+    0
+   ],
+   "decision_chaine": 0,
+   "marge_temoin_nul": 3713.56,
+   "gains": {
+    "tenu": -0.0019,
+    "chaine": -0.0444,
+    "direct": -0.2732,
+    "direct_galilee": -0.0019,
+    "niveau:-1": -0.43377,
+    "niveau:-0.5": -0.07188,
+    "niveau:0.5": -0.11271,
+    "niveau:1": -0.2732
+   },
+   "secs": 3
+  },
+  {
+   "graine": 383,
+   "monde": "t3h",
+   "ecartee": false,
+   "objet": "bagaxu7",
+   "prix_reference": 21.4,
+   "cout_au_jour_183": 8.185,
+   "cout_vrai": 8.185,
+   "traits": {
+    "m": 2.615,
+    "e": 3.002,
+    "t": 7.389,
+    "etendue": 0.0753,
+    "g": 0.321,
+    "g_galilee": null,
+    "loi_retenue": 0,
+    "bruit": 0.185
+   },
+   "niveau_direct": -1,
+   "niveau_galilee": 0,
+   "loi": {
+    "texte": "5/2 − p − p",
+    "retenue": false,
+    "sans_variable": false
+   },
+   "semaines": 26,
+   "plan_chaine": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "decision_chaine": -1,
+   "marge_temoin_nul": 16285.21,
+   "gains": {
+    "tenu": -0.11305,
+    "chaine": 0.19352,
+    "direct": 0.31187,
+    "direct_galilee": -0.11305,
+    "niveau:-1": 0.31187,
+    "niveau:-0.5": 0.09786,
+    "niveau:0.5": -0.28937,
+    "niveau:1": -0.4129
+   },
+   "secs": 0.9
+  },
+  {
+   "graine": 384,
+   "monde": "t3h",
+   "ecartee": false,
+   "objet": "puji5",
+   "prix_reference": 45.71,
+   "cout_au_jour_183": 23.339,
+   "cout_vrai": 23.339,
+   "traits": {
+    "m": 1.959,
+    "e": 3.902,
+    "t": 4.324,
+    "etendue": 0.0772,
+    "g": 0.413,
+    "g_galilee": null,
+    "loi_retenue": 0,
+    "bruit": 0.351
+   },
+   "niveau_direct": -1,
+   "niveau_galilee": 0,
+   "loi": {
+    "texte": "4/3 − p",
+    "retenue": false,
+    "sans_variable": false
+   },
+   "semaines": 26,
+   "plan_chaine": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "decision_chaine": -1,
+   "marge_temoin_nul": 12939.91,
+   "gains": {
+    "tenu": 0.29507,
+    "chaine": 0.55282,
+    "direct": 0.63834,
+    "direct_galilee": 0.29507,
+    "niveau:-1": 0.63834,
+    "niveau:-0.5": 0.4871,
+    "niveau:0.5": 0.04519,
+    "niveau:1": -0.08573
+   },
+   "secs": 1.4
+  },
+  {
+   "graine": 385,
+   "monde": "t3h",
+   "ecartee": false,
+   "objet": "libe4",
+   "prix_reference": 169.52,
+   "cout_au_jour_183": 69.52,
+   "cout_vrai": 69.52,
+   "traits": {
+    "m": 2.438,
+    "e": -1.812,
+    "t": -0.603,
+    "etendue": 0.0411,
+    "g": 1.133,
+    "g_galilee": null,
+    "loi_retenue": 0,
+    "bruit": 0.547
+   },
+   "niveau_direct": 1,
+   "niveau_galilee": 0,
+   "loi": {
+    "texte": "1 / (p·3)",
+    "retenue": false,
+    "sans_variable": false
+   },
+   "semaines": 26,
+   "plan_chaine": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "decision_chaine": -1,
+   "marge_temoin_nul": 52751.56,
+   "gains": {
+    "tenu": 0.32129,
+    "chaine": 0.75917,
+    "direct": -0.19568,
+    "direct_galilee": 0.32129,
+    "niveau:-1": 0.80696,
+    "niveau:-0.5": 0.56103,
+    "niveau:0.5": 0.05788,
+    "niveau:1": -0.19568
+   },
+   "secs": 1.4
+  },
+  {
+   "graine": 386,
+   "monde": "t3h",
+   "ecartee": false,
+   "objet": "defepo3",
+   "prix_reference": 8.28,
+   "cout_au_jour_183": 5.118,
+   "cout_vrai": 5.118,
+   "traits": {
+    "m": 1.618,
+    "e": 0.974,
+    "t": 1.312,
+    "etendue": 0.0737,
+    "g": 0.331,
+    "g_galilee": null,
+    "loi_retenue": 0,
+    "bruit": 0.283
+   },
+   "niveau_direct": 1,
+   "niveau_galilee": 0,
+   "loi": {
+    "texte": "cos(p)",
+    "retenue": false,
+    "sans_variable": false
+   },
+   "semaines": 26,
+   "plan_chaine": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "decision_chaine": 0,
+   "marge_temoin_nul": 7456.07,
+   "gains": {
+    "tenu": -0.00591,
+    "chaine": -0.04052,
+    "direct": -0.03797,
+    "direct_galilee": -0.00591,
+    "niveau:-1": -0.28522,
+    "niveau:-0.5": -0.08052,
+    "niveau:0.5": 0.00078,
+    "niveau:1": -0.03797
+   },
+   "secs": 3.4
+  },
+  {
+   "graine": 387,
+   "monde": "t3h",
+   "ecartee": false,
+   "objet": "veta2",
+   "prix_reference": 31.16,
+   "cout_au_jour_183": 17.804,
+   "cout_vrai": 17.804,
+   "traits": {
+    "m": 1.75,
+    "e": 1.319,
+    "t": 1.229,
+    "etendue": 0.0378,
+    "g": 0.18,
+    "g_galilee": null,
+    "loi_retenue": 0,
+    "bruit": 0.203
+   },
+   "niveau_direct": 1,
+   "niveau_galilee": 0,
+   "loi": {
+    "texte": "2/3",
+    "retenue": false,
+    "sans_variable": true
+   },
+   "semaines": 26,
+   "plan_chaine": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "decision_chaine": 1,
+   "marge_temoin_nul": 46011.15,
+   "gains": {
+    "tenu": 0.00398,
+    "chaine": 0.00102,
+    "direct": 0.08003,
+    "direct_galilee": 0.00398,
+    "niveau:-1": -0.24559,
+    "niveau:-0.5": -0.12621,
+    "niveau:0.5": 0.06672,
+    "niveau:1": 0.08003
+   },
+   "secs": 1.6
+  },
+  {
+   "graine": 388,
+   "monde": "t3h",
+   "ecartee": false,
+   "objet": "julo2",
+   "prix_reference": 5.12,
+   "cout_au_jour_183": 3.77,
+   "cout_vrai": 3.77,
+   "traits": {
+    "m": 1.358,
+    "e": 0.234,
+    "t": 0.236,
+    "etendue": 0.0407,
+    "g": 0.849,
+    "g_galilee": null,
+    "loi_retenue": 0,
+    "bruit": 0.248
+   },
+   "niveau_direct": 1,
+   "niveau_galilee": 0,
+   "loi": {
+    "texte": "2/3",
+    "retenue": false,
+    "sans_variable": true
+   },
+   "semaines": 26,
+   "plan_chaine": [
+    0,
+    0,
+    1,
+    0,
+    1,
+    1,
+    0,
+    0
+   ],
+   "decision_chaine": 1,
+   "marge_temoin_nul": 4571.1,
+   "gains": {
+    "tenu": -0.07011,
+    "chaine": 0.3244,
+    "direct": 0.4452,
+    "direct_galilee": -0.07011,
+    "niveau:-1": -0.71007,
+    "niveau:-0.5": -0.37071,
+    "niveau:0.5": 0.2255,
+    "niveau:1": 0.4452
+   },
+   "secs": 3.1
+  },
+  {
+   "graine": 389,
+   "monde": "t3h",
+   "ecartee": false,
+   "objet": "powi7",
+   "prix_reference": 14.27,
+   "cout_au_jour_183": 6.059,
+   "cout_vrai": 6.059,
+   "traits": {
+    "m": 2.355,
+    "e": 3.89,
+    "t": 3.912,
+    "etendue": 0.05,
+    "g": 0.555,
+    "g_galilee": null,
+    "loi_retenue": 0,
+    "bruit": 0.278
+   },
+   "niveau_direct": -1,
+   "niveau_galilee": 0,
+   "loi": {
+    "texte": "1/2",
+    "retenue": false,
+    "sans_variable": true
+   },
+   "semaines": 26,
+   "plan_chaine": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "decision_chaine": -1,
+   "marge_temoin_nul": 27383.98,
+   "gains": {
+    "tenu": -0.09928,
+    "chaine": 0.22304,
+    "direct": 0.32591,
+    "direct_galilee": -0.09928,
+    "niveau:-1": 0.32591,
+    "niveau:-0.5": 0.11974,
+    "niveau:0.5": -0.31699,
+    "niveau:1": -0.50182
+   },
+   "secs": 1.2
+  },
+  {
+   "graine": 390,
+   "monde": "t3h",
+   "ecartee": false,
+   "objet": "sofini3",
+   "prix_reference": 37.92,
+   "cout_au_jour_183": 16.898,
+   "cout_vrai": 16.898,
+   "traits": {
+    "m": 2.244,
+    "e": 5.254,
+    "t": 6.77,
+    "etendue": 0.0514,
+    "g": 1.065,
+    "g_galilee": 1.182,
+    "loi_retenue": 1,
+    "bruit": 0.259
+   },
+   "niveau_direct": -1,
+   "niveau_galilee": -1,
+   "loi": {
+    "texte": "1 / (p^(11/2)·3)",
+    "retenue": true,
+    "sans_variable": false
+   },
+   "semaines": 26,
+   "plan_chaine": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "decision_chaine": -1,
+   "marge_temoin_nul": 46391.45,
+   "gains": {
+    "tenu": 0.00245,
+    "chaine": 0.22314,
+    "direct": 0.32272,
+    "direct_galilee": 0.32272,
+    "niveau:-1": 0.32272,
+    "niveau:-0.5": 0.17562,
+    "niveau:0.5": -0.18697,
+    "niveau:1": -0.33462
+   },
+   "secs": 1.6
+  },
+  {
+   "graine": 391,
+   "monde": "t3h",
+   "ecartee": false,
+   "objet": "noduju7",
+   "prix_reference": 17.04,
+   "cout_au_jour_183": 12.514,
+   "cout_vrai": 12.514,
+   "traits": {
+    "m": 1.362,
+    "e": 4.024,
+    "t": 2.36,
+    "etendue": 0.038,
+    "g": 0,
+    "g_galilee": null,
+    "loi_retenue": 0,
+    "bruit": 0.342
+   },
+   "niveau_direct": 0,
+   "niveau_galilee": 0,
+   "loi": {
+    "texte": "cos(p)",
+    "retenue": false,
+    "sans_variable": false
+   },
+   "semaines": 26,
+   "plan_chaine": [
+    0,
+    0,
+    1,
+    0,
+    1,
+    1,
+    0,
+    0
+   ],
+   "decision_chaine": 1,
+   "marge_temoin_nul": 8618.47,
+   "gains": {
+    "tenu": -0.01386,
+    "chaine": 0.04829,
+    "direct": -0.01386,
+    "direct_galilee": -0.01386,
+    "niveau:-1": -0.5687,
+    "niveau:-0.5": -0.21349,
+    "niveau:0.5": 0.04194,
+    "niveau:1": 0.04488
+   },
+   "secs": 1.5
+  },
+  {
+   "graine": 392,
+   "monde": "t3h",
+   "ecartee": false,
+   "objet": "hebu0",
+   "prix_reference": 62.72,
+   "cout_au_jour_183": 24.748,
+   "cout_vrai": 24.748,
+   "traits": {
+    "m": 2.534,
+    "e": 5.981,
+    "t": 3.179,
+    "etendue": 0.0271,
+    "g": 1.544,
+    "g_galilee": null,
+    "loi_retenue": 0,
+    "bruit": 0.271
+   },
+   "niveau_direct": -1,
+   "niveau_galilee": 0,
+   "loi": {
+    "texte": "2/3",
+    "retenue": false,
+    "sans_variable": true
+   },
+   "semaines": 26,
+   "plan_chaine": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "decision_chaine": -1,
+   "marge_temoin_nul": 86692.78,
+   "gains": {
+    "tenu": 0.10201,
+    "chaine": 0.43946,
+    "direct": 0.63457,
+    "direct_galilee": 0.10201,
+    "niveau:-1": 0.63457,
+    "niveau:-0.5": 0.38581,
+    "niveau:0.5": -0.18984,
+    "niveau:1": -0.41269
+   },
+   "secs": 2.3
+  },
+  {
+   "graine": 393,
+   "monde": "t3h",
+   "ecartee": false,
+   "objet": "fava0",
+   "prix_reference": 133.74,
+   "cout_au_jour_183": 62.385,
+   "cout_vrai": 62.385,
+   "traits": {
+    "m": 2.144,
+    "e": 5.54,
+    "t": 2.594,
+    "etendue": 0.0293,
+    "g": 1.152,
+    "g_galilee": 0,
+    "loi_retenue": 1,
+    "bruit": 0.314
+   },
+   "niveau_direct": -1,
+   "niveau_galilee": 0,
+   "loi": {
+    "texte": "cos(p)",
+    "retenue": true,
+    "sans_variable": false
+   },
+   "semaines": 26,
+   "plan_chaine": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "decision_chaine": 1,
+   "marge_temoin_nul": 247065.21,
+   "gains": {
+    "tenu": 0.0192,
+    "chaine": -0.09196,
+    "direct": -0.16989,
+    "direct_galilee": 0.0192,
+    "niveau:-1": -0.16989,
+    "niveau:-0.5": -0.05808,
+    "niveau:0.5": -0.01838,
+    "niveau:1": -0.09739
+   },
+   "secs": 1.6
+  },
+  {
+   "graine": 394,
+   "monde": "t3h",
+   "ecartee": false,
+   "objet": "diqo7",
+   "prix_reference": 340.47,
+   "cout_au_jour_183": 127.261,
+   "cout_vrai": 127.261,
+   "traits": {
+    "m": 2.675,
+    "e": 1.16,
+    "t": 1.131,
+    "etendue": 0.0489,
+    "g": 0.08,
+    "g_galilee": null,
+    "loi_retenue": 0,
+    "bruit": 0.256
+   },
+   "niveau_direct": 1,
+   "niveau_galilee": 0,
+   "loi": {
+    "texte": "2/3",
+    "retenue": false,
+    "sans_variable": true
+   },
+   "semaines": 26,
+   "plan_chaine": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "decision_chaine": 1,
+   "marge_temoin_nul": 496453.97,
+   "gains": {
+    "tenu": 0.01397,
+    "chaine": 0.10001,
+    "direct": 0.13874,
+    "direct_galilee": 0.01397,
+    "niveau:-1": -0.13563,
+    "niveau:-0.5": -0.05305,
+    "niveau:0.5": 0.078,
+    "niveau:1": 0.13874
+   },
+   "secs": 3.7
+  },
+  {
+   "graine": 395,
+   "monde": "t3h",
+   "ecartee": false,
+   "objet": "cidu8",
+   "prix_reference": 4.54,
+   "cout_au_jour_183": 3.262,
+   "cout_vrai": 3.262,
+   "traits": {
+    "m": 1.392,
+    "e": 1.489,
+    "t": 2.081,
+    "etendue": 0.0899,
+    "g": 0.357,
+    "g_galilee": null,
+    "loi_retenue": 0,
+    "bruit": 0.337
+   },
+   "niveau_direct": 1,
+   "niveau_galilee": 0,
+   "loi": {
+    "texte": "1/2",
+    "retenue": false,
+    "sans_variable": true
+   },
+   "semaines": 26,
+   "plan_chaine": [
+    0,
+    0,
+    1,
+    0,
+    1,
+    1,
+    0,
+    0
+   ],
+   "decision_chaine": 1,
+   "marge_temoin_nul": 3044.96,
+   "gains": {
+    "tenu": 0.16945,
+    "chaine": 0.30852,
+    "direct": 0.28786,
+    "direct_galilee": 0.16945,
+    "niveau:-1": -0.52169,
+    "niveau:-0.5": -0.06607,
+    "niveau:0.5": 0.3324,
+    "niveau:1": 0.28786
+   },
+   "secs": 1.5
+  },
+  {
+   "graine": 396,
+   "monde": "t3h",
+   "ecartee": false,
+   "objet": "gole2",
+   "prix_reference": 31.36,
+   "cout_au_jour_183": 15.935,
+   "cout_vrai": 15.935,
+   "traits": {
+    "m": 1.968,
+    "e": 3.73,
+    "t": 3.223,
+    "etendue": 0.0727,
+    "g": 0.364,
+    "g_galilee": null,
+    "loi_retenue": 0,
+    "bruit": 0.398
+   },
+   "niveau_direct": -1,
+   "niveau_galilee": 0,
+   "loi": {
+    "texte": "1/2",
+    "retenue": false,
+    "sans_variable": true
+   },
+   "semaines": 26,
+   "plan_chaine": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "decision_chaine": -1,
+   "marge_temoin_nul": 32316.41,
+   "gains": {
+    "tenu": 0.09781,
+    "chaine": -0.07725,
+    "direct": -0.00963,
+    "direct_galilee": 0.09781,
+    "niveau:-1": -0.00963,
+    "niveau:-0.5": 0.13027,
+    "niveau:0.5": -0.11112,
+    "niveau:1": -0.32905
+   },
+   "secs": 3
+  },
+  {
+   "graine": 397,
+   "monde": "t3h",
+   "ecartee": false,
+   "objet": "giha6",
+   "prix_reference": 6.06,
+   "cout_au_jour_183": 2.718,
+   "cout_vrai": 2.718,
+   "traits": {
+    "m": 2.23,
+    "e": 1.96,
+    "t": 1.894,
+    "etendue": 0.0561,
+    "g": 0.006,
+    "g_galilee": null,
+    "loi_retenue": 0,
+    "bruit": 0.266
+   },
+   "niveau_direct": -0.5,
+   "niveau_galilee": 0,
+   "loi": {
+    "texte": "π/2 − p",
+    "retenue": false,
+    "sans_variable": false
+   },
+   "semaines": 26,
+   "plan_chaine": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "decision_chaine": -1,
+   "marge_temoin_nul": 7829.09,
+   "gains": {
+    "tenu": 0.01338,
+    "chaine": -0.02821,
+    "direct": 0.05918,
+    "direct_galilee": 0.01338,
+    "niveau:-1": 0.01737,
+    "niveau:-0.5": 0.05918,
+    "niveau:0.5": -0.09931,
+    "niveau:1": -0.26003
+   },
+   "secs": 1.3
+  },
+  {
+   "graine": 398,
+   "monde": "t3h",
+   "ecartee": false,
+   "objet": "jofu7",
+   "prix_reference": 4.73,
+   "cout_au_jour_183": 2.335,
+   "cout_vrai": 2.335,
+   "traits": {
+    "m": 2.026,
+    "e": 1.298,
+    "t": 1.928,
+    "etendue": 0.0751,
+    "g": 0.117,
+    "g_galilee": null,
+    "loi_retenue": 0,
+    "bruit": 0.252
+   },
+   "niveau_direct": 1,
+   "niveau_galilee": 0,
+   "loi": {
+    "texte": "cos(p)",
+    "retenue": false,
+    "sans_variable": false
+   },
+   "semaines": 26,
+   "plan_chaine": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "decision_chaine": -1,
+   "marge_temoin_nul": 5235.38,
+   "gains": {
+    "tenu": 0.06463,
+    "chaine": -0.04699,
+    "direct": 0.0626,
+    "direct_galilee": 0.06463,
+    "niveau:-1": -0.05037,
+    "niveau:-0.5": 0.02376,
+    "niveau:0.5": 0.07533,
+    "niveau:1": 0.0626
+   },
+   "secs": 1.3
+  },
+  {
+   "graine": 399,
+   "monde": "t3h",
+   "ecartee": false,
+   "objet": "meruko6",
+   "prix_reference": 8.68,
+   "cout_au_jour_183": 5.204,
+   "cout_vrai": 5.204,
+   "traits": {
+    "m": 1.668,
+    "e": -0.716,
+    "t": -0.935,
+    "etendue": 0.064,
+    "g": 0.906,
+    "g_galilee": null,
+    "loi_retenue": 0,
+    "bruit": 0.343
+   },
+   "niveau_direct": 1,
+   "niveau_galilee": 0,
+   "loi": {
+    "texte": "p − 1/3",
+    "retenue": false,
+    "sans_variable": false
+   },
+   "semaines": 26,
+   "plan_chaine": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "decision_chaine": 1,
+   "marge_temoin_nul": 10491.64,
+   "gains": {
+    "tenu": -0.10921,
+    "chaine": 0.08583,
+    "direct": 0.18813,
+    "direct_galilee": -0.10921,
+    "niveau:-1": -0.44979,
+    "niveau:-0.5": -0.2768,
+    "niveau:0.5": 0.03695,
+    "niveau:1": 0.18813
+   },
+   "secs": 2.3
+  },
+  {
+   "graine": 400,
+   "monde": "t3h",
+   "ecartee": false,
+   "objet": "kuca9",
+   "prix_reference": 10.16,
+   "cout_au_jour_183": 5.681,
+   "cout_vrai": 5.681,
+   "traits": {
+    "m": 1.788,
+    "e": 2.401,
+    "t": 1.939,
+    "etendue": 0.0565,
+    "g": 0,
+    "g_galilee": null,
+    "loi_retenue": 0,
+    "bruit": 0.36
+   },
+   "niveau_direct": 0,
+   "niveau_galilee": 0,
+   "loi": {
+    "texte": "cos(p)",
+    "retenue": false,
+    "sans_variable": false
+   },
+   "semaines": 26,
+   "plan_chaine": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "decision_chaine": -1,
+   "marge_temoin_nul": 12704.45,
+   "gains": {
+    "tenu": -0.11222,
+    "chaine": 0.059,
+    "direct": -0.11222,
+    "direct_galilee": -0.11222,
+    "niveau:-1": 0.08616,
+    "niveau:-0.5": 0.06347,
+    "niveau:0.5": -0.33303,
+    "niveau:1": -0.50938
+   },
+   "secs": 2.6
+  },
+  {
+   "graine": 401,
+   "monde": "t3h",
+   "ecartee": false,
+   "objet": "hici8",
+   "prix_reference": 16.16,
+   "cout_au_jour_183": 10.905,
+   "cout_vrai": 10.905,
+   "traits": {
+    "m": 1.482,
+    "e": 1.43,
+    "t": 2.839,
+    "etendue": 0.0697,
+    "g": 0.286,
+    "g_galilee": null,
+    "loi_retenue": 0,
+    "bruit": 0.213
+   },
+   "niveau_direct": 1,
+   "niveau_galilee": 0,
+   "loi": {
+    "texte": "3/4",
+    "retenue": false,
+    "sans_variable": true
+   },
+   "semaines": 26,
+   "plan_chaine": [
+    -0.5,
+    0,
+    1,
+    -0.5,
+    1,
+    1,
+    -0.5,
+    0
+   ],
+   "decision_chaine": 1,
+   "marge_temoin_nul": 26178.43,
+   "gains": {
+    "tenu": -0.07227,
+    "chaine": -0.12068,
+    "direct": -0.09854,
+    "direct_galilee": -0.07227,
+    "niveau:-1": -0.47187,
+    "niveau:-0.5": -0.24502,
+    "niveau:0.5": 0.00304,
+    "niveau:1": -0.09854
+   },
+   "secs": 2.3
+  },
+  {
+   "graine": 402,
+   "monde": "t3h",
+   "ecartee": false,
+   "objet": "nuda6",
+   "prix_reference": 93.55,
+   "cout_au_jour_183": 78.309,
+   "cout_vrai": 78.309,
+   "traits": {
+    "m": 1.195,
+    "e": 0.643,
+    "t": 1.049,
+    "etendue": 0.0906,
+    "g": 1.196,
+    "g_galilee": null,
+    "loi_retenue": 0,
+    "bruit": 0.528
+   },
+   "niveau_direct": 1,
+   "niveau_galilee": 0,
+   "loi": {
+    "texte": "2/3",
+    "retenue": false,
+    "sans_variable": true
+   },
+   "semaines": 26,
+   "plan_chaine": [
+    0,
+    0,
+    1,
+    0,
+    1,
+    1,
+    0,
+    0
+   ],
+   "decision_chaine": 1,
+   "marge_temoin_nul": 17211.08,
+   "gains": {
+    "tenu": 2.23758,
+    "chaine": 4.97121,
+    "direct": 5.59003,
+    "direct_galilee": 2.23758,
+    "niveau:-1": -1.82228,
+    "niveau:-0.5": 0.24103,
+    "niveau:0.5": 4.00398,
+    "niveau:1": 5.59003
+   },
+   "secs": 2.4
+  },
+  {
+   "graine": 403,
+   "monde": "t3h",
+   "ecartee": false,
+   "objet": "duwa8",
+   "prix_reference": 130.1,
+   "cout_au_jour_183": 81.588,
+   "cout_vrai": 81.588,
+   "traits": {
+    "m": 1.595,
+    "e": 0.994,
+    "t": 2.564,
+    "etendue": 0.0766,
+    "g": 0.338,
+    "g_galilee": null,
+    "loi_retenue": 0,
+    "bruit": 0.201
+   },
+   "niveau_direct": 1,
+   "niveau_galilee": 0,
+   "loi": {
+    "texte": "3/4",
+    "retenue": false,
+    "sans_variable": true
+   },
+   "semaines": 26,
+   "plan_chaine": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "decision_chaine": 0,
+   "marge_temoin_nul": 85030.15,
+   "gains": {
+    "tenu": 0.01497,
+    "chaine": -0.01635,
+    "direct": -0.02784,
+    "direct_galilee": 0.01497,
+    "niveau:-1": -0.18871,
+    "niveau:-0.5": -0.03735,
+    "niveau:0.5": 0.02385,
+    "niveau:1": -0.02784
+   },
+   "secs": 1.2
+  },
+  {
+   "graine": 404,
+   "monde": "t3h",
+   "ecartee": false,
+   "objet": "tijope8",
+   "prix_reference": 30.95,
+   "cout_au_jour_183": 17.935,
+   "cout_vrai": 17.935,
+   "traits": {
+    "m": 1.726,
+    "e": 1.271,
+    "t": 0.874,
+    "etendue": 0.0457,
+    "g": 0.201,
+    "g_galilee": null,
+    "loi_retenue": 0,
+    "bruit": 0.341
+   },
+   "niveau_direct": 1,
+   "niveau_galilee": 0,
+   "loi": {
+    "texte": "2/3",
+    "retenue": false,
+    "sans_variable": true
+   },
+   "semaines": 26,
+   "plan_chaine": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "decision_chaine": 1,
+   "marge_temoin_nul": 50645.75,
+   "gains": {
+    "tenu": 0.02303,
+    "chaine": 0.25826,
+    "direct": 0.34211,
+    "direct_galilee": 0.02303,
+    "niveau:-1": -0.31194,
+    "niveau:-0.5": -0.10529,
+    "niveau:0.5": 0.18884,
+    "niveau:1": 0.34211
+   },
+   "secs": 1.1
+  },
+  {
+   "graine": 405,
+   "monde": "t3h",
+   "ecartee": false,
+   "objet": "kojoce2",
+   "prix_reference": 16.04,
+   "cout_au_jour_183": 8.861,
+   "cout_vrai": 8.861,
+   "traits": {
+    "m": 1.81,
+    "e": -1.747,
+    "t": -0.927,
+    "etendue": 0.0175,
+    "g": 1.302,
+    "g_galilee": null,
+    "loi_retenue": 0,
+    "bruit": 0.178
+   },
+   "niveau_direct": 1,
+   "niveau_galilee": 0,
+   "loi": {
+    "texte": "3/4",
+    "retenue": false,
+    "sans_variable": true
+   },
+   "semaines": 26,
+   "plan_chaine": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "decision_chaine": -1,
+   "marge_temoin_nul": 31936.17,
+   "gains": {
+    "tenu": 0.03694,
+    "chaine": -0.2535,
+    "direct": -0.16687,
+    "direct_galilee": 0.03694,
+    "niveau:-1": -0.28381,
+    "niveau:-0.5": -0.11848,
+    "niveau:0.5": -0.00043,
+    "niveau:1": -0.16687
+   },
+   "secs": 2.1
+  },
+  {
+   "graine": 406,
+   "monde": "t3h",
+   "ecartee": false,
+   "objet": "soqabu4",
+   "prix_reference": 309.49,
+   "cout_au_jour_183": 168.203,
+   "cout_vrai": 168.203,
+   "traits": {
+    "m": 1.84,
+    "e": 2.652,
+    "t": 4.16,
+    "etendue": 0.0756,
+    "g": 0.033,
+    "g_galilee": null,
+    "loi_retenue": 0,
+    "bruit": 0.256
+   },
+   "niveau_direct": -0.5,
+   "niveau_galilee": 0,
+   "loi": {
+    "texte": "cos(p)",
+    "retenue": false,
+    "sans_variable": false
+   },
+   "semaines": 26,
+   "plan_chaine": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "decision_chaine": -1,
+   "marge_temoin_nul": 525884.58,
+   "gains": {
+    "tenu": -0.01991,
+    "chaine": -0.05679,
+    "direct": 0.0232,
+    "direct_galilee": -0.01991,
+    "niveau:-1": -0.0467,
+    "niveau:-0.5": 0.0232,
+    "niveau:0.5": -0.04174,
+    "niveau:1": -0.16634
+   },
+   "secs": 2.2
+  },
+  {
+   "graine": 407,
+   "monde": "t3h",
+   "ecartee": false,
+   "objet": "zapika2",
+   "prix_reference": 227.12,
+   "cout_au_jour_183": 133.972,
+   "cout_vrai": 133.972,
+   "traits": {
+    "m": 1.695,
+    "e": 2.933,
+    "t": 2.905,
+    "etendue": 0.0758,
+    "g": 0.03,
+    "g_galilee": 0.041,
+    "loi_retenue": 1,
+    "bruit": 0.371
+   },
+   "niveau_direct": -0.5,
+   "niveau_galilee": 0.5,
+   "loi": {
+    "texte": "4/3 − p",
+    "retenue": true,
+    "sans_variable": false
+   },
+   "semaines": 26,
+   "plan_chaine": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "decision_chaine": 1,
+   "marge_temoin_nul": 359813.93,
+   "gains": {
+    "tenu": 0.05777,
+    "chaine": -0.02458,
+    "direct": -0.03557,
+    "direct_galilee": 0.07018,
+    "niveau:-1": -0.18224,
+    "niveau:-0.5": -0.03557,
+    "niveau:0.5": 0.07018,
+    "niveau:1": -0.04108
+   },
+   "secs": 1.8
+  },
+  {
+   "graine": 408,
+   "monde": "t3h",
+   "ecartee": false,
+   "objet": "nutuzo6",
+   "prix_reference": 101.81,
+   "cout_au_jour_183": 47.073,
+   "cout_vrai": 47.073,
+   "traits": {
+    "m": 2.163,
+    "e": 3.11,
+    "t": 10.286,
+    "etendue": 0.1373,
+    "g": 0.257,
+    "g_galilee": null,
+    "loi_retenue": 0,
+    "bruit": 0.223
+   },
+   "niveau_direct": -1,
+   "niveau_galilee": 0,
+   "loi": {
+    "texte": "1 / (p^3·3)",
+    "retenue": false,
+    "sans_variable": false
+   },
+   "semaines": 26,
+   "plan_chaine": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "decision_chaine": -1,
+   "marge_temoin_nul": 86339.05,
+   "gains": {
+    "tenu": 0.01055,
+    "chaine": 0.13034,
+    "direct": 0.18652,
+    "direct_galilee": 0.01055,
+    "niveau:-1": 0.18652,
+    "niveau:-0.5": 0.11281,
+    "niveau:0.5": -0.08586,
+    "niveau:1": -0.1985
+   },
+   "secs": 1.9
+  },
+  {
+   "graine": 409,
+   "monde": "t3h",
+   "ecartee": false,
+   "objet": "tori3",
+   "prix_reference": 9.06,
+   "cout_au_jour_183": 8.769,
+   "cout_vrai": 8.769,
+   "traits": {
+    "m": 1.033,
+    "e": 2.524,
+    "t": 2.315,
+    "etendue": 0.0858,
+    "g": 4.009,
+    "g_galilee": null,
+    "loi_retenue": 0,
+    "bruit": 1.115
+   },
+   "niveau_direct": 1,
+   "niveau_galilee": 0,
+   "loi": {
+    "texte": "4/3 − p",
+    "retenue": false,
+    "sans_variable": false
+   },
+   "semaines": 26,
+   "plan_chaine": [
+    0,
+    0,
+    1,
+    0,
+    1,
+    1,
+    0,
+    0
+   ],
+   "decision_chaine": 1,
+   "marge_temoin_nul": 1502.74,
+   "gains": {
+    "tenu": -0.45959,
+    "chaine": 1.54287,
+    "direct": 2.22788,
+    "direct_galilee": -0.45959,
+    "niveau:-1": -4.70246,
+    "niveau:-0.5": -2.44403,
+    "niveau:0.5": 1.07864,
+    "niveau:1": 2.22788
+   },
+   "secs": 1.4
+  },
+  {
+   "graine": 410,
+   "monde": "t3h",
+   "ecartee": false,
+   "objet": "soke5",
+   "prix_reference": 164.66,
+   "cout_au_jour_183": 73.009,
+   "cout_vrai": 73.009,
+   "traits": {
+    "m": 2.255,
+    "e": 1.569,
+    "t": 1.82,
+    "etendue": 0.083,
+    "g": 0.021,
+    "g_galilee": null,
+    "loi_retenue": 0,
+    "bruit": 0.365
+   },
+   "niveau_direct": 1,
+   "niveau_galilee": 0,
+   "loi": {
+    "texte": "cos(p)",
+    "retenue": false,
+    "sans_variable": false
+   },
+   "semaines": 26,
+   "plan_chaine": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "decision_chaine": -1,
+   "marge_temoin_nul": 321668.36,
+   "gains": {
+    "tenu": -0.20193,
+    "chaine": -0.00389,
+    "direct": -0.5842,
+    "direct_galilee": -0.20193,
+    "niveau:-1": 0.1017,
+    "niveau:-0.5": 0.00531,
+    "niveau:0.5": -0.42014,
+    "niveau:1": -0.5842
+   },
+   "secs": 2.1
+  },
+  {
+   "graine": 411,
+   "monde": "t3h",
+   "ecartee": false,
+   "objet": "tevedu9",
+   "prix_reference": 215.22,
+   "cout_au_jour_183": 123.786,
+   "cout_vrai": 123.786,
+   "traits": {
+    "m": 1.739,
+    "e": 1.03,
+    "t": 1.941,
+    "etendue": 0.1123,
+    "g": 0.262,
+    "g_galilee": null,
+    "loi_retenue": 0,
+    "bruit": 0.304
+   },
+   "niveau_direct": 1,
+   "niveau_galilee": 0,
+   "loi": {
+    "texte": "cos(p)",
+    "retenue": false,
+    "sans_variable": false
+   },
+   "semaines": 26,
+   "plan_chaine": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "decision_chaine": 1,
+   "marge_temoin_nul": 280747.74,
+   "gains": {
+    "tenu": 0.45775,
+    "chaine": 0.58257,
+    "direct": 0.69678,
+    "direct_galilee": 0.45775,
+    "niveau:-1": 0.01081,
+    "niveau:-0.5": 0.37968,
+    "niveau:0.5": 0.57514,
+    "niveau:1": 0.69678
+   },
+   "secs": 1.5
+  },
+  {
+   "graine": 412,
+   "monde": "t3h",
+   "ecartee": false,
+   "objet": "farake7",
+   "prix_reference": 4.83,
+   "cout_au_jour_183": 3.032,
+   "cout_vrai": 3.032,
+   "traits": {
+    "m": 1.593,
+    "e": 1.695,
+    "t": 3.695,
+    "etendue": 0.0861,
+    "g": 0.146,
+    "g_galilee": null,
+    "loi_retenue": 0,
+    "bruit": 0.231
+   },
+   "niveau_direct": 1,
+   "niveau_galilee": 0,
+   "loi": {
+    "texte": "π/2 − p",
+    "retenue": false,
+    "sans_variable": false
+   },
+   "semaines": 26,
+   "plan_chaine": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "decision_chaine": 0,
+   "marge_temoin_nul": 5968.11,
+   "gains": {
+    "tenu": 0.00446,
+    "chaine": -0.0494,
+    "direct": -0.37412,
+    "direct_galilee": 0.00446,
+    "niveau:-1": -0.17569,
+    "niveau:-0.5": 0.07672,
+    "niveau:0.5": -0.18995,
+    "niveau:1": -0.37412
+   },
+   "secs": 5.8
+  },
+  {
+   "graine": 413,
+   "monde": "t3h",
+   "ecartee": false,
+   "objet": "qici6",
+   "prix_reference": 166.71,
+   "cout_au_jour_183": 89.525,
+   "cout_vrai": 89.525,
+   "traits": {
+    "m": 1.862,
+    "e": 1.809,
+    "t": 1.8,
+    "etendue": 0.0611,
+    "g": 0.028,
+    "g_galilee": null,
+    "loi_retenue": 0,
+    "bruit": 0.297
+   },
+   "niveau_direct": 1,
+   "niveau_galilee": 0,
+   "loi": {
+    "texte": "2/3",
+    "retenue": false,
+    "sans_variable": true
+   },
+   "semaines": 26,
+   "plan_chaine": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "decision_chaine": -1,
+   "marge_temoin_nul": 293380.01,
+   "gains": {
+    "tenu": 0.02026,
+    "chaine": -0.13364,
+    "direct": -0.35499,
+    "direct_galilee": 0.02026,
+    "niveau:-1": -0.09943,
+    "niveau:-0.5": 0.05469,
+    "niveau:0.5": -0.16137,
+    "niveau:1": -0.35499
+   },
+   "secs": 2.7
+  },
+  {
+   "graine": 414,
+   "monde": "t3h",
+   "ecartee": false,
+   "objet": "panobo1",
+   "prix_reference": 28.24,
+   "cout_au_jour_183": 17.398,
+   "cout_vrai": 17.398,
+   "traits": {
+    "m": 1.623,
+    "e": 2.278,
+    "t": 1.226,
+    "etendue": 0.0379,
+    "g": 0.014,
+    "g_galilee": 0.129,
+    "loi_retenue": 1,
+    "bruit": 0.303
+   },
+   "niveau_direct": 0.5,
+   "niveau_galilee": 1,
+   "loi": {
+    "texte": "5/3 − p",
+    "retenue": true,
+    "sans_variable": false
+   },
+   "semaines": 26,
+   "plan_chaine": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "decision_chaine": -1,
+   "marge_temoin_nul": 16374.69,
+   "gains": {
+    "tenu": 0.12101,
+    "chaine": 0.19356,
+    "direct": -0.13713,
+    "direct_galilee": -0.31997,
+    "niveau:-1": 0.27285,
+    "niveau:-0.5": 0.29407,
+    "niveau:0.5": -0.13713,
+    "niveau:1": -0.31997
+   },
+   "secs": 2.2
+  },
+  {
+   "graine": 415,
+   "monde": "t3h",
+   "ecartee": false,
+   "objet": "saxeha6",
+   "prix_reference": 208.51,
+   "cout_au_jour_183": 97.072,
+   "cout_vrai": 97.072,
+   "traits": {
+    "m": 2.148,
+    "e": 0.839,
+    "t": 0.509,
+    "etendue": 0.0244,
+    "g": 0.217,
+    "g_galilee": null,
+    "loi_retenue": 0,
+    "bruit": 0.205
+   },
+   "niveau_direct": 1,
+   "niveau_galilee": 0,
+   "loi": {
+    "texte": "3/4",
+    "retenue": false,
+    "sans_variable": true
+   },
+   "semaines": 26,
+   "plan_chaine": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "decision_chaine": -1,
+   "marge_temoin_nul": 408348.61,
+   "gains": {
+    "tenu": -0.00665,
+    "chaine": -0.03951,
+    "direct": -0.38434,
+    "direct_galilee": -0.00665,
+    "niveau:-1": 0.0141,
+    "niveau:-0.5": 0.07441,
+    "niveau:0.5": -0.17408,
+    "niveau:1": -0.38434
+   },
+   "secs": 1.4
+  },
+  {
+   "graine": 416,
+   "monde": "t3h",
+   "ecartee": false,
+   "objet": "cizovi4",
+   "prix_reference": 69.49,
+   "cout_au_jour_183": 28.313,
+   "cout_vrai": 28.313,
+   "traits": {
+    "m": 2.454,
+    "e": 1.154,
+    "t": 1.553,
+    "etendue": 0.0792,
+    "g": 0.099,
+    "g_galilee": null,
+    "loi_retenue": 0,
+    "bruit": 0.276
+   },
+   "niveau_direct": 1,
+   "niveau_galilee": 0,
+   "loi": {
+    "texte": "2/3",
+    "retenue": false,
+    "sans_variable": true
+   },
+   "semaines": 26,
+   "plan_chaine": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "decision_chaine": -1,
+   "marge_temoin_nul": 134312.57,
+   "gains": {
+    "tenu": -0.19095,
+    "chaine": 0.20301,
+    "direct": -0.60289,
+    "direct_galilee": -0.19095,
+    "niveau:-1": 0.34016,
+    "niveau:-0.5": 0.06716,
+    "niveau:0.5": -0.42613,
+    "niveau:1": -0.60289
+   },
+   "secs": 1.5
+  },
+  {
+   "graine": 417,
+   "monde": "t3h",
+   "ecartee": false,
+   "objet": "qica7",
+   "prix_reference": 152.23,
+   "cout_au_jour_183": 94.829,
+   "cout_vrai": 94.829,
+   "traits": {
+    "m": 1.605,
+    "e": 0.277,
+    "t": 0.435,
+    "etendue": 0.0646,
+    "g": 0.563,
+    "g_galilee": null,
+    "loi_retenue": 0,
+    "bruit": 0.241
+   },
+   "niveau_direct": 1,
+   "niveau_galilee": 0,
+   "loi": {
+    "texte": "3/4",
+    "retenue": false,
+    "sans_variable": true
+   },
+   "semaines": 26,
+   "plan_chaine": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "decision_chaine": 1,
+   "marge_temoin_nul": 175363.81,
+   "gains": {
+    "tenu": 0.02485,
+    "chaine": 0.34505,
+    "direct": 0.59116,
+    "direct_galilee": 0.02485,
+    "niveau:-1": -0.48469,
+    "niveau:-0.5": -0.32277,
+    "niveau:0.5": 0.30014,
+    "niveau:1": 0.59116
+   },
+   "secs": 0.9
+  },
+  {
+   "graine": 418,
+   "monde": "t3h",
+   "ecartee": false,
+   "objet": "juxu7",
+   "prix_reference": 128.41,
+   "cout_au_jour_183": 95.108,
+   "cout_vrai": 95.108,
+   "traits": {
+    "m": 1.35,
+    "e": 8.058,
+    "t": 1.034,
+    "etendue": 0.0134,
+    "g": 0.457,
+    "g_galilee": null,
+    "loi_retenue": 0,
+    "bruit": 0.498
+   },
+   "niveau_direct": -0.5,
+   "niveau_galilee": 0,
+   "loi": {
+    "texte": "0.4641",
+    "retenue": false,
+    "sans_variable": true
+   },
+   "semaines": 26,
+   "plan_chaine": [
+    0,
+    0,
+    1,
+    0,
+    1,
+    1,
+    0,
+    0
+   ],
+   "decision_chaine": 0,
+   "marge_temoin_nul": 62160.76,
+   "gains": {
+    "tenu": 0.02327,
+    "chaine": 0.01607,
+    "direct": -0.23248,
+    "direct_galilee": 0.02327,
+    "niveau:-1": -0.57206,
+    "niveau:-0.5": -0.23248,
+    "niveau:0.5": 0.01351,
+    "niveau:1": -0.07832
+   },
+   "secs": 1.6
+  },
+  {
+   "graine": 419,
+   "monde": "t3h",
+   "ecartee": false,
+   "objet": "cekugi7",
+   "prix_reference": 287.43,
+   "cout_au_jour_183": 170.234,
+   "cout_vrai": 170.234,
+   "traits": {
+    "m": 1.688,
+    "e": 1.431,
+    "t": 2.643,
+    "etendue": 0.0858,
+    "g": 0.172,
+    "g_galilee": 0.159,
+    "loi_retenue": 1,
+    "bruit": 0.235
+   },
+   "niveau_direct": 1,
+   "niveau_galilee": 1,
+   "loi": {
+    "texte": "cos(p)",
+    "retenue": true,
+    "sans_variable": false
+   },
+   "semaines": 26,
+   "plan_chaine": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "decision_chaine": 1,
+   "marge_temoin_nul": 265500.66,
+   "gains": {
+    "tenu": -0.15582,
+    "chaine": 0.01134,
+    "direct": 0.09374,
+    "direct_galilee": 0.09374,
+    "niveau:-1": -0.48165,
+    "niveau:-0.5": -0.30025,
+    "niveau:0.5": -0.01071,
+    "niveau:1": 0.09374
+   },
+   "secs": 1.1
+  },
+  {
+   "graine": 420,
+   "monde": "t3h",
+   "ecartee": false,
+   "objet": "ledanu8",
+   "prix_reference": 50.98,
+   "cout_au_jour_183": 21.035,
+   "cout_vrai": 21.035,
+   "traits": {
+    "m": 2.424,
+    "e": -2.422,
+    "t": -0.813,
+    "etendue": 0.0195,
+    "g": 1.447,
+    "g_galilee": 0.961,
+    "loi_retenue": 1,
+    "bruit": 0.289
+   },
+   "niveau_direct": 1,
+   "niveau_galilee": 1,
+   "loi": {
+    "texte": "p − 1/3",
+    "retenue": true,
+    "sans_variable": false
+   },
+   "semaines": 26,
+   "plan_chaine": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "decision_chaine": -1,
+   "marge_temoin_nul": 69741.18,
+   "gains": {
+    "tenu": -0.01158,
+    "chaine": -0.25304,
+    "direct": 0.30061,
+    "direct_galilee": 0.30061,
+    "niveau:-1": -0.29984,
+    "niveau:-0.5": -0.18166,
+    "niveau:0.5": 0.16908,
+    "niveau:1": 0.30061
+   },
+   "secs": 1.1
+  },
+  {
+   "graine": 421,
+   "monde": "t3h",
+   "ecartee": false,
+   "objet": "gareso9",
+   "prix_reference": 4.03,
+   "cout_au_jour_183": 2.369,
+   "cout_vrai": 2.37,
+   "traits": {
+    "m": 1.701,
+    "e": 0.336,
+    "t": 0.603,
+    "etendue": 0.068,
+    "g": 0.492,
+    "g_galilee": null,
+    "loi_retenue": 0,
+    "bruit": 0.242
+   },
+   "niveau_direct": 1,
+   "niveau_galilee": 0,
+   "loi": {
+    "texte": "3/4",
+    "retenue": false,
+    "sans_variable": true
+   },
+   "semaines": 26,
+   "plan_chaine": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "decision_chaine": -1,
+   "marge_temoin_nul": 3857.03,
+   "gains": {
+    "tenu": -0.01973,
+    "chaine": -0.08023,
+    "direct": -0.26885,
+    "direct_galilee": -0.01973,
+    "niveau:-1": -0.06417,
+    "niveau:-0.5": 0.0295,
+    "niveau:0.5": -0.13038,
+    "niveau:1": -0.26885
+   },
+   "secs": 1.7
+  },
+  {
+   "graine": 422,
+   "monde": "t3h",
+   "ecartee": false,
+   "objet": "gosudi5",
+   "prix_reference": 28.39,
+   "cout_au_jour_183": 19.772,
+   "cout_vrai": 19.772,
+   "traits": {
+    "m": 1.436,
+    "e": -0.185,
+    "t": -0.369,
+    "etendue": 0.0748,
+    "g": 0.901,
+    "g_galilee": null,
+    "loi_retenue": 0,
+    "bruit": 0.286
+   },
+   "niveau_direct": 1,
+   "niveau_galilee": 0,
+   "loi": {
+    "texte": "3/4",
+    "retenue": false,
+    "sans_variable": true
+   },
+   "semaines": 26,
+   "plan_chaine": [
+    -0.5,
+    0,
+    1,
+    -0.5,
+    1,
+    1,
+    -0.5,
+    0
+   ],
+   "decision_chaine": 1,
+   "marge_temoin_nul": 28482.04,
+   "gains": {
+    "tenu": 0.04173,
+    "chaine": 0.45168,
+    "direct": 0.58324,
+    "direct_galilee": 0.04173,
+    "niveau:-1": -0.56175,
+    "niveau:-0.5": -0.23591,
+    "niveau:0.5": 0.32778,
+    "niveau:1": 0.58324
+   },
+   "secs": 1.1
+  },
+  {
+   "graine": 423,
+   "monde": "t3h",
+   "ecartee": false,
+   "objet": "bufe2",
+   "prix_reference": 17.49,
+   "cout_au_jour_183": 10.218,
+   "cout_vrai": 10.218,
+   "traits": {
+    "m": 1.712,
+    "e": 2.953,
+    "t": 2.97,
+    "etendue": 0.0543,
+    "g": 0.037,
+    "g_galilee": null,
+    "loi_retenue": 0,
+    "bruit": 0.256
+   },
+   "niveau_direct": -0.5,
+   "niveau_galilee": 0,
+   "loi": {
+    "texte": "cos(p)",
+    "retenue": false,
+    "sans_variable": false
+   },
+   "semaines": 26,
+   "plan_chaine": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "decision_chaine": 0,
+   "marge_temoin_nul": 25956.76,
+   "gains": {
+    "tenu": -0.01079,
+    "chaine": -0.02941,
+    "direct": 0.00366,
+    "direct_galilee": -0.01079,
+    "niveau:-1": -0.10097,
+    "niveau:-0.5": 0.00366,
+    "niveau:0.5": -0.04262,
+    "niveau:1": -0.13662
+   },
+   "secs": 3.8
+  },
+  {
+   "graine": 424,
+   "monde": "t3h",
+   "ecartee": false,
+   "objet": "geza3",
+   "prix_reference": 12.4,
+   "cout_au_jour_183": 5.477,
+   "cout_vrai": 5.477,
+   "traits": {
+    "m": 2.264,
+    "e": 1.049,
+    "t": 1.045,
+    "etendue": 0.119,
+    "g": 0.146,
+    "g_galilee": null,
+    "loi_retenue": 0,
+    "bruit": 0.616
+   },
+   "niveau_direct": 1,
+   "niveau_galilee": 0,
+   "loi": {
+    "texte": "0.4056",
+    "retenue": false,
+    "sans_variable": true
+   },
+   "semaines": 26,
+   "plan_chaine": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "decision_chaine": -1,
+   "marge_temoin_nul": 3161.11,
+   "gains": {
+    "tenu": 0.70661,
+    "chaine": 1.6227,
+    "direct": -0.08189,
+    "direct_galilee": 0.70661,
+    "niveau:-1": 1.9631,
+    "niveau:-0.5": 1.31378,
+    "niveau:0.5": 0.25972,
+    "niveau:1": -0.08189
+   },
+   "secs": 0.9
+  },
+  {
+   "graine": 425,
+   "monde": "t3h",
+   "ecartee": false,
+   "objet": "zisali3",
+   "prix_reference": 94.02,
+   "cout_au_jour_183": 47.245,
+   "cout_vrai": 47.245,
+   "traits": {
+    "m": 1.99,
+    "e": 0.758,
+    "t": 1.113,
+    "etendue": 0.0963,
+    "g": 0.269,
+    "g_galilee": 0.073,
+    "loi_retenue": 1,
+    "bruit": 0.314
+   },
+   "niveau_direct": 1,
+   "niveau_galilee": 0.5,
+   "loi": {
+    "texte": "cos(p)",
+    "retenue": true,
+    "sans_variable": false
+   },
+   "semaines": 26,
+   "plan_chaine": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "decision_chaine": 1,
+   "marge_temoin_nul": 82445.85,
+   "gains": {
+    "tenu": 0.00532,
+    "chaine": -0.05071,
+    "direct": -0.06283,
+    "direct_galilee": -0.0129,
+    "niveau:-1": -0.06385,
+    "niveau:-0.5": -0.00879,
+    "niveau:0.5": -0.0129,
+    "niveau:1": -0.06283
+   },
+   "secs": 0.8
+  },
+  {
+   "graine": 426,
+   "monde": "t3h",
+   "ecartee": false,
+   "objet": "niwuzu2",
+   "prix_reference": 147.3,
+   "cout_au_jour_183": 66.612,
+   "cout_vrai": 66.612,
+   "traits": {
+    "m": 2.211,
+    "e": -3.911,
+    "t": -0.555,
+    "etendue": 0.0099,
+    "g": 2.486,
+    "g_galilee": null,
+    "loi_retenue": 0,
+    "bruit": 0.328
+   },
+   "niveau_direct": 1,
+   "niveau_galilee": 0,
+   "loi": {
+    "texte": "cos(p)",
+    "retenue": false,
+    "sans_variable": false
+   },
+   "semaines": 26,
+   "plan_chaine": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "decision_chaine": -1,
+   "marge_temoin_nul": 187392.75,
+   "gains": {
+    "tenu": 0.00067,
+    "chaine": -0.12031,
+    "direct": -0.16746,
+    "direct_galilee": 0.00067,
+    "niveau:-1": -0.13752,
+    "niveau:-0.5": -0.07191,
+    "niveau:0.5": -0.0129,
+    "niveau:1": -0.16746
+   },
+   "secs": 0.8
+  },
+  {
+   "graine": 427,
+   "monde": "t3h",
+   "ecartee": false,
+   "objet": "lamu4",
+   "prix_reference": 8.25,
+   "cout_au_jour_183": 4.998,
+   "cout_vrai": 4.998,
+   "traits": {
+    "m": 1.651,
+    "e": -12.372,
+    "t": -0.914,
+    "etendue": 0.0069,
+    "g": 9.99,
+    "g_galilee": 0.051,
+    "loi_retenue": 1,
+    "bruit": 0.446
+   },
+   "niveau_direct": 1,
+   "niveau_galilee": 0.5,
+   "loi": {
+    "texte": "cos(p)",
+    "retenue": true,
+    "sans_variable": false
+   },
+   "semaines": 26,
+   "plan_chaine": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "decision_chaine": 1,
+   "marge_temoin_nul": 3934.22,
+   "gains": {
+    "tenu": 0.06726,
+    "chaine": -0.05776,
+    "direct": -0.07702,
+    "direct_galilee": -0.01798,
+    "niveau:-1": -0.04,
+    "niveau:-0.5": 0.07008,
+    "niveau:0.5": -0.01798,
+    "niveau:1": -0.07702
+   },
+   "secs": 0.7
+  },
+  {
+   "graine": 428,
+   "monde": "t3h",
+   "ecartee": false,
+   "objet": "fomivo5",
+   "prix_reference": 254.51,
+   "cout_au_jour_183": 158.845,
+   "cout_vrai": 158.845,
+   "traits": {
+    "m": 1.602,
+    "e": 5.815,
+    "t": 3.287,
+    "etendue": 0.0409,
+    "g": 0.713,
+    "g_galilee": null,
+    "loi_retenue": 0,
+    "bruit": 0.414
+   },
+   "niveau_direct": -1,
+   "niveau_galilee": 0,
+   "loi": {
+    "texte": "1/2",
+    "retenue": false,
+    "sans_variable": true
+   },
+   "semaines": 26,
+   "plan_chaine": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "decision_chaine": -1,
+   "marge_temoin_nul": 167650.49,
+   "gains": {
+    "tenu": -0.00692,
+    "chaine": -0.02754,
+    "direct": 0.05818,
+    "direct_galilee": -0.00692,
+    "niveau:-1": 0.05818,
+    "niveau:-0.5": 0.16088,
+    "niveau:0.5": -0.19301,
+    "niveau:1": -0.36997
+   },
+   "secs": 1.1
+  },
+  {
+   "graine": 429,
+   "monde": "t3h",
+   "ecartee": false,
+   "objet": "soresi0",
+   "prix_reference": 12.42,
+   "cout_au_jour_183": 5.498,
+   "cout_vrai": 5.498,
+   "traits": {
+    "m": 2.259,
+    "e": 0.997,
+    "t": 1.126,
+    "etendue": 0.07,
+    "g": 0.16,
+    "g_galilee": null,
+    "loi_retenue": 0,
+    "bruit": 0.303
+   },
+   "niveau_direct": 1,
+   "niveau_galilee": 0,
+   "loi": {
+    "texte": "cos(p)",
+    "retenue": false,
+    "sans_variable": false
+   },
+   "semaines": 26,
+   "plan_chaine": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "decision_chaine": 1,
+   "marge_temoin_nul": 8981.24,
+   "gains": {
+    "tenu": -0.01354,
+    "chaine": -0.01661,
+    "direct": 0.00525,
+    "direct_galilee": -0.01354,
+    "niveau:-1": -0.10043,
+    "niveau:-0.5": -0.04591,
+    "niveau:0.5": -0.01043,
+    "niveau:1": 0.00525
+   },
+   "secs": 0.7
+  },
+  {
+   "graine": 430,
+   "monde": "t3h",
+   "ecartee": false,
+   "objet": "biheqe2",
+   "prix_reference": 16.93,
+   "cout_au_jour_183": 13.328,
+   "cout_vrai": 13.328,
+   "traits": {
+    "m": 1.27,
+    "e": 2.977,
+    "t": 7.491,
+    "etendue": 0.1221,
+    "g": 0.119,
+    "g_galilee": 0.748,
+    "loi_retenue": 1,
+    "bruit": 0.248
+   },
+   "niveau_direct": 1,
+   "niveau_galilee": 1,
+   "loi": {
+    "texte": "cos(p)",
+    "retenue": true,
+    "sans_variable": false
+   },
+   "semaines": 26,
+   "plan_chaine": [
+    0,
+    0,
+    1,
+    0,
+    1,
+    1,
+    0,
+    0
+   ],
+   "decision_chaine": 0,
+   "marge_temoin_nul": 30390.27,
+   "gains": {
+    "tenu": -0.02786,
+    "chaine": -0.0271,
+    "direct": 0.15739,
+    "direct_galilee": 0.15739,
+    "niveau:-1": -0.90954,
+    "niveau:-0.5": -0.35153,
+    "niveau:0.5": 0.18104,
+    "niveau:1": 0.15739
+   },
+   "secs": 2.1
+  },
+  {
+   "graine": 431,
+   "monde": "t3h",
+   "ecartee": false,
+   "objet": "voxe5",
+   "prix_reference": 4.46,
+   "cout_au_jour_183": 2.57,
+   "cout_vrai": 2.57,
+   "traits": {
+    "m": 1.735,
+    "e": 0.24,
+    "t": 0.252,
+    "etendue": 0.0745,
+    "g": 0.509,
+    "g_galilee": 0.037,
+    "loi_retenue": 1,
+    "bruit": 0.383
+   },
+   "niveau_direct": 1,
+   "niveau_galilee": 0.5,
+   "loi": {
+    "texte": "cos(p)",
+    "retenue": true,
+    "sans_variable": false
+   },
+   "semaines": 26,
+   "plan_chaine": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "decision_chaine": 1,
+   "marge_temoin_nul": 7060.82,
+   "gains": {
+    "tenu": -0.00248,
+    "chaine": 0.06768,
+    "direct": 0.14411,
+    "direct_galilee": 0.07405,
+    "niveau:-1": -0.35926,
+    "niveau:-0.5": -0.14178,
+    "niveau:0.5": 0.07405,
+    "niveau:1": 0.14411
+   },
+   "secs": 0.8
+  },
+  {
+   "graine": 432,
+   "monde": "t3h",
+   "ecartee": false,
+   "objet": "xucigu9",
+   "prix_reference": 4.55,
+   "cout_au_jour_183": 2.804,
+   "cout_vrai": 2.804,
+   "traits": {
+    "m": 1.623,
+    "e": 2.737,
+    "t": 2.119,
+    "etendue": 0.0578,
+    "g": 0,
+    "g_galilee": null,
+    "loi_retenue": 0,
+    "bruit": 0.346
+   },
+   "niveau_direct": 0,
+   "niveau_galilee": 0,
+   "loi": {
+    "texte": "cos(p)",
+    "retenue": false,
+    "sans_variable": false
+   },
+   "semaines": 26,
+   "plan_chaine": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "decision_chaine": 1,
+   "marge_temoin_nul": 4278.24,
+   "gains": {
+    "tenu": -0.12156,
+    "chaine": 0.05779,
+    "direct": -0.12156,
+    "direct_galilee": -0.12156,
+    "niveau:-1": -0.48469,
+    "niveau:-0.5": -0.29967,
+    "niveau:0.5": 0.0202,
+    "niveau:1": 0.14085
+   },
+   "secs": 1.2
+  },
+  {
+   "graine": 433,
+   "monde": "t3h",
+   "ecartee": false,
+   "objet": "poti2",
+   "prix_reference": 4.47,
+   "cout_au_jour_183": 2.326,
+   "cout_vrai": 2.326,
+   "traits": {
+    "m": 1.922,
+    "e": 3.411,
+    "t": 3.087,
+    "etendue": 0.0595,
+    "g": 0.252,
+    "g_galilee": null,
+    "loi_retenue": 0,
+    "bruit": 0.329
+   },
+   "niveau_direct": -1,
+   "niveau_galilee": 0,
+   "loi": {
+    "texte": "cos(p)",
+    "retenue": false,
+    "sans_variable": false
+   },
+   "semaines": 26,
+   "plan_chaine": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "decision_chaine": -1,
+   "marge_temoin_nul": 5542.92,
+   "gains": {
+    "tenu": -0.04499,
+    "chaine": 0.10785,
+    "direct": 0.20584,
+    "direct_galilee": -0.04499,
+    "niveau:-1": 0.20584,
+    "niveau:-0.5": 0.19626,
+    "niveau:0.5": -0.24308,
+    "niveau:1": -0.40567
+   },
+   "secs": 1.8
+  },
+  {
+   "graine": 434,
+   "monde": "t3h",
+   "ecartee": false,
+   "objet": "zebo0",
+   "prix_reference": 11.87,
+   "cout_au_jour_183": 4.992,
+   "cout_vrai": 4.992,
+   "traits": {
+    "m": 2.378,
+    "e": 4.105,
+    "t": 2.885,
+    "etendue": 0.0557,
+    "g": 0.638,
+    "g_galilee": null,
+    "loi_retenue": 0,
+    "bruit": 0.368
+   },
+   "niveau_direct": -1,
+   "niveau_galilee": 0,
+   "loi": {
+    "texte": "cos(p)",
+    "retenue": false,
+    "sans_variable": false
+   },
+   "semaines": 26,
+   "plan_chaine": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "decision_chaine": -1,
+   "marge_temoin_nul": 11356.2,
+   "gains": {
+    "tenu": -0.01215,
+    "chaine": -0.01358,
+    "direct": 0.01749,
+    "direct_galilee": -0.01215,
+    "niveau:-1": 0.01749,
+    "niveau:-0.5": 0.03234,
+    "niveau:0.5": -0.09449,
+    "niveau:1": -0.20521
+   },
+   "secs": 1.2
+  },
+  {
+   "graine": 435,
+   "monde": "t3h",
+   "ecartee": false,
+   "objet": "qoke6",
+   "prix_reference": 109.17,
+   "cout_au_jour_183": 59.291,
+   "cout_vrai": 59.291,
+   "traits": {
+    "m": 1.841,
+    "e": -11.302,
+    "t": -1.353,
+    "etendue": 0.0085,
+    "g": 9.99,
+    "g_galilee": null,
+    "loi_retenue": 0,
+    "bruit": 0.353
+   },
+   "niveau_direct": 1,
+   "niveau_galilee": 0,
+   "loi": {
+    "texte": "cos(p)",
+    "retenue": false,
+    "sans_variable": false
+   },
+   "semaines": 26,
+   "plan_chaine": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "decision_chaine": -1,
+   "marge_temoin_nul": 63329.45,
+   "gains": {
+    "tenu": 0.23339,
+    "chaine": 0.385,
+    "direct": -0.03858,
+    "direct_galilee": 0.23339,
+    "niveau:-1": 0.43367,
+    "niveau:-0.5": 0.35531,
+    "niveau:0.5": 0.10215,
+    "niveau:1": -0.03858
+   },
+   "secs": 1.2
+  },
+  {
+   "graine": 436,
+   "monde": "t3h",
+   "ecartee": false,
+   "objet": "puri7",
+   "prix_reference": 70.88,
+   "cout_au_jour_183": 58.587,
+   "cout_vrai": 58.587,
+   "traits": {
+    "m": 1.21,
+    "e": 4.297,
+    "t": 3.105,
+    "etendue": 0.0443,
+    "g": 0.041,
+    "g_galilee": null,
+    "loi_retenue": 0,
+    "bruit": 0.293
+   },
+   "niveau_direct": 0.5,
+   "niveau_galilee": 0,
+   "loi": {
+    "texte": "1/2",
+    "retenue": false,
+    "sans_variable": true
+   },
+   "semaines": 26,
+   "plan_chaine": [
+    0,
+    0,
+    1,
+    0,
+    1,
+    1,
+    0,
+    0
+   ],
+   "decision_chaine": 1,
+   "marge_temoin_nul": 39578.8,
+   "gains": {
+    "tenu": 0.07,
+    "chaine": -0.04338,
+    "direct": 0.0833,
+    "direct_galilee": 0.07,
+    "niveau:-1": -1.33822,
+    "niveau:-0.5": -0.36047,
+    "niveau:0.5": 0.0833,
+    "niveau:1": -0.05439
+   },
+   "secs": 1.2
+  },
+  {
+   "graine": 437,
+   "monde": "t3h",
+   "ecartee": false,
+   "objet": "pidu1",
+   "prix_reference": 189.18,
+   "cout_au_jour_183": 91.691,
+   "cout_vrai": 91.691,
+   "traits": {
+    "m": 2.063,
+    "e": 0.102,
+    "t": 0.079,
+    "etendue": 0.0469,
+    "g": 0.452,
+    "g_galilee": null,
+    "loi_retenue": 0,
+    "bruit": 0.28
+   },
+   "niveau_direct": 1,
+   "niveau_galilee": 0,
+   "loi": {
+    "texte": "cos(p)",
+    "retenue": false,
+    "sans_variable": false
+   },
+   "semaines": 26,
+   "plan_chaine": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "decision_chaine": 1,
+   "marge_temoin_nul": 204451.89,
+   "gains": {
+    "tenu": -0.01057,
+    "chaine": 0.00407,
+    "direct": 0.02899,
+    "direct_galilee": -0.01057,
+    "niveau:-1": -0.18251,
+    "niveau:-0.5": -0.09154,
+    "niveau:0.5": -0.02232,
+    "niveau:1": 0.02899
+   },
+   "secs": 1.3
+  },
+  {
+   "graine": 438,
+   "monde": "t3h",
+   "ecartee": false,
+   "objet": "sifiki4",
+   "prix_reference": 184.62,
+   "cout_au_jour_183": 113.615,
+   "cout_vrai": 113.615,
+   "traits": {
+    "m": 1.625,
+    "e": 0.837,
+    "t": 0.672,
+    "etendue": 0.0462,
+    "g": 0.369,
+    "g_galilee": 0.102,
+    "loi_retenue": 1,
+    "bruit": 0.286
+   },
+   "niveau_direct": 1,
+   "niveau_galilee": 0.5,
+   "loi": {
+    "texte": "cos(p)",
+    "retenue": true,
+    "sans_variable": false
+   },
+   "semaines": 26,
+   "plan_chaine": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "decision_chaine": 0,
+   "marge_temoin_nul": 326365.32,
+   "gains": {
+    "tenu": 0.09043,
+    "chaine": 0.04706,
+    "direct": -0.07809,
+    "direct_galilee": 0.02899,
+    "niveau:-1": -0.14235,
+    "niveau:-0.5": 0.01731,
+    "niveau:0.5": 0.02899,
+    "niveau:1": -0.07809
+   },
+   "secs": 2.1
+  },
+  {
+   "graine": 439,
+   "monde": "t3h",
+   "ecartee": false,
+   "objet": "jamine8",
+   "prix_reference": 4.07,
+   "cout_au_jour_183": 2.934,
+   "cout_vrai": 2.934,
+   "traits": {
+    "m": 1.387,
+    "e": -9.211,
+    "t": -0.814,
+    "etendue": 0.0058,
+    "g": 9.99,
+    "g_galilee": null,
+    "loi_retenue": 0,
+    "bruit": 0.324
+   },
+   "niveau_direct": 1,
+   "niveau_galilee": 0,
+   "loi": {
+    "texte": "1/2",
+    "retenue": false,
+    "sans_variable": true
+   },
+   "semaines": 26,
+   "plan_chaine": [
+    0,
+    0,
+    1,
+    0,
+    1,
+    1,
+    0,
+    0
+   ],
+   "decision_chaine": 0,
+   "marge_temoin_nul": 2116.66,
+   "gains": {
+    "tenu": -0.0077,
+    "chaine": -0.02813,
+    "direct": -0.19307,
+    "direct_galilee": -0.0077,
+    "niveau:-1": -0.36339,
+    "niveau:-0.5": -0.06548,
+    "niveau:0.5": -0.07623,
+    "niveau:1": -0.19307
+   },
+   "secs": 2
+  },
+  {
+   "graine": 440,
+   "monde": "t3h",
+   "ecartee": false,
+   "objet": "xegi0",
+   "prix_reference": 16.97,
+   "cout_au_jour_183": 6.417,
+   "cout_vrai": 6.417,
+   "traits": {
+    "m": 2.645,
+    "e": 0.977,
+    "t": 3.327,
+    "etendue": 0.1699,
+    "g": 0.127,
+    "g_galilee": null,
+    "loi_retenue": 0,
+    "bruit": 0.32
+   },
+   "niveau_direct": 1,
+   "niveau_galilee": 0,
+   "loi": {
+    "texte": "1/2",
+    "retenue": false,
+    "sans_variable": true
+   },
+   "semaines": 26,
+   "plan_chaine": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "decision_chaine": -1,
+   "marge_temoin_nul": 16566.9,
+   "gains": {
+    "tenu": 0.21673,
+    "chaine": 0.52152,
+    "direct": -0.13206,
+    "direct_galilee": 0.21673,
+    "niveau:-1": 0.64869,
+    "niveau:-0.5": 0.42873,
+    "niveau:0.5": 0.03052,
+    "niveau:1": -0.13206
+   },
+   "secs": 1.7
+  },
+  {
+   "graine": 441,
+   "monde": "t3h",
+   "ecartee": false,
+   "objet": "tuwoxe8",
+   "prix_reference": 16.37,
+   "cout_au_jour_183": 8.873,
+   "cout_vrai": 8.873,
+   "traits": {
+    "m": 1.845,
+    "e": 0.904,
+    "t": 1.503,
+    "etendue": 0.092,
+    "g": 0.263,
+    "g_galilee": null,
+    "loi_retenue": 0,
+    "bruit": 0.309
+   },
+   "niveau_direct": 1,
+   "niveau_galilee": 0,
+   "loi": {
+    "texte": "cos(p)",
+    "retenue": false,
+    "sans_variable": false
+   },
+   "semaines": 26,
+   "plan_chaine": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "decision_chaine": 1,
+   "marge_temoin_nul": 13955.93,
+   "gains": {
+    "tenu": 0.07009,
+    "chaine": 0.13879,
+    "direct": 0.19392,
+    "direct_galilee": 0.07009,
+    "niveau:-1": -0.14737,
+    "niveau:-0.5": -0.03551,
+    "niveau:0.5": 0.12739,
+    "niveau:1": 0.19392
+   },
+   "secs": 2.5
+  },
+  {
+   "graine": 442,
+   "monde": "t3h",
+   "ecartee": false,
+   "objet": "recafu9",
+   "prix_reference": 80.17,
+   "cout_au_jour_183": 40.531,
+   "cout_vrai": 40.531,
+   "traits": {
+    "m": 1.978,
+    "e": 1.052,
+    "t": 1.395,
+    "etendue": 0.0566,
+    "g": 0.19,
+    "g_galilee": null,
+    "loi_retenue": 0,
+    "bruit": 0.21
+   },
+   "niveau_direct": 1,
+   "niveau_galilee": 0,
+   "loi": {
+    "texte": "2/3",
+    "retenue": false,
+    "sans_variable": true
+   },
+   "semaines": 26,
+   "plan_chaine": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "decision_chaine": 1,
+   "marge_temoin_nul": 58783.5,
+   "gains": {
+    "tenu": 0.0108,
+    "chaine": -0.00994,
+    "direct": 0.00204,
+    "direct_galilee": 0.0108,
+    "niveau:-1": -0.08589,
+    "niveau:-0.5": -0.01556,
+    "niveau:0.5": -0.00103,
+    "niveau:1": 0.00204
+   },
+   "secs": 0.7
+  },
+  {
+   "graine": 443,
+   "monde": "t3h",
+   "ecartee": false,
+   "objet": "duvo4",
+   "prix_reference": 35.7,
+   "cout_au_jour_183": 16.174,
+   "cout_vrai": 16.174,
+   "traits": {
+    "m": 2.207,
+    "e": 0.932,
+    "t": 1.969,
+    "etendue": 0.0734,
+    "g": 0.184,
+    "g_galilee": null,
+    "loi_retenue": 0,
+    "bruit": 0.183
+   },
+   "niveau_direct": 1,
+   "niveau_galilee": 0,
+   "loi": {
+    "texte": "3/4",
+    "retenue": false,
+    "sans_variable": true
+   },
+   "semaines": 26,
+   "plan_chaine": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "decision_chaine": -1,
+   "marge_temoin_nul": 38951.74,
+   "gains": {
+    "tenu": 0.0146,
+    "chaine": -0.07202,
+    "direct": -0.14662,
+    "direct_galilee": 0.0146,
+    "niveau:-1": -0.12014,
+    "niveau:-0.5": -0.02758,
+    "niveau:0.5": -0.04207,
+    "niveau:1": -0.14662
+   },
+   "secs": 1.6
+  },
+  {
+   "graine": 444,
+   "monde": "t3h",
+   "ecartee": false,
+   "objet": "namigo7",
+   "prix_reference": 51.29,
+   "cout_au_jour_183": 21.697,
+   "cout_vrai": 21.697,
+   "traits": {
+    "m": 2.364,
+    "e": -0.865,
+    "t": -0.534,
+    "etendue": 0.0382,
+    "g": 0.738,
+    "g_galilee": null,
+    "loi_retenue": 0,
+    "bruit": 0.306
+   },
+   "niveau_direct": 1,
+   "niveau_galilee": 0,
+   "loi": {
+    "texte": "2/3",
+    "retenue": false,
+    "sans_variable": true
+   },
+   "semaines": 26,
+   "plan_chaine": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "decision_chaine": 0,
+   "marge_temoin_nul": 58131.1,
+   "gains": {
+    "tenu": -0.01115,
+    "chaine": -0.01429,
+    "direct": -0.1354,
+    "direct_galilee": -0.01115,
+    "niveau:-1": 0.03064,
+    "niveau:-0.5": 0.02836,
+    "niveau:0.5": -0.06802,
+    "niveau:1": -0.1354
+   },
+   "secs": 1.1
+  },
+  {
+   "graine": 445,
+   "monde": "t3h",
+   "ecartee": false,
+   "objet": "xixiqa7",
+   "prix_reference": 29.38,
+   "cout_au_jour_183": 19.096,
+   "cout_vrai": 19.096,
+   "traits": {
+    "m": 1.539,
+    "e": 2.103,
+    "t": 2.659,
+    "etendue": 0.0526,
+    "g": 0.073,
+    "g_galilee": null,
+    "loi_retenue": 0,
+    "bruit": 0.207
+   },
+   "niveau_direct": 1,
+   "niveau_galilee": 0,
+   "loi": {
+    "texte": "2/3",
+    "retenue": false,
+    "sans_variable": true
+   },
+   "semaines": 26,
+   "plan_chaine": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "decision_chaine": 1,
+   "marge_temoin_nul": 41778.97,
+   "gains": {
+    "tenu": -0.06162,
+    "chaine": 0.05617,
+    "direct": 0.12234,
+    "direct_galilee": -0.06162,
+    "niveau:-1": -0.47879,
+    "niveau:-0.5": -0.24319,
+    "niveau:0.5": 0.05877,
+    "niveau:1": 0.12234
+   },
+   "secs": 2.9
+  },
+  {
+   "graine": 446,
+   "monde": "t3h",
+   "ecartee": false,
+   "objet": "fami7",
+   "prix_reference": 384.88,
+   "cout_au_jour_183": 127.966,
+   "cout_vrai": 127.966,
+   "traits": {
+    "m": 3.008,
+    "e": 4.227,
+    "t": 16.789,
+    "etendue": 0.2557,
+    "g": 0.799,
+    "g_galilee": null,
+    "loi_retenue": 1,
+    "bruit": 0.49
+   },
+   "niveau_direct": -1,
+   "niveau_galilee": 0,
+   "loi": {
+    "texte": "(−5·log(p) / 4)^(3/2)",
+    "retenue": true,
+    "sans_variable": false
+   },
+   "semaines": 26,
+   "plan_chaine": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "decision_chaine": -1,
+   "marge_temoin_nul": 73375.06,
+   "gains": {
+    "tenu": 0.08193,
+    "chaine": 0.63052,
+    "direct": 0.85145,
+    "direct_galilee": 0.08193,
+    "niveau:-1": 0.85145,
+    "niveau:-0.5": 0.47087,
+    "niveau:0.5": -0.22789,
+    "niveau:1": -0.65348
+   },
+   "secs": 1.8
+  },
+  {
+   "graine": 447,
+   "monde": "t3h",
+   "ecartee": false,
+   "objet": "vege1",
+   "prix_reference": 32.72,
+   "cout_au_jour_183": 22.037,
+   "cout_vrai": 22.037,
+   "traits": {
+    "m": 1.485,
+    "e": 3.291,
+    "t": 1.227,
+    "etendue": 0.0271,
+    "g": 0,
+    "g_galilee": null,
+    "loi_retenue": 0,
+    "bruit": 0.344
+   },
+   "niveau_direct": 0,
+   "niveau_galilee": 0,
+   "loi": {
+    "texte": "cos(p)",
+    "retenue": false,
+    "sans_variable": false
+   },
+   "semaines": 26,
+   "plan_chaine": [
+    -0.5,
+    0,
+    1,
+    -0.5,
+    1,
+    1,
+    -0.5,
+    0
+   ],
+   "decision_chaine": 1,
+   "marge_temoin_nul": 25905.31,
+   "gains": {
+    "tenu": 0.07057,
+    "chaine": 0.26684,
+    "direct": 0.07057,
+    "direct_galilee": 0.07057,
+    "niveau:-1": -0.45169,
+    "niveau:-0.5": -0.16319,
+    "niveau:0.5": 0.21936,
+    "niveau:1": 0.33981
+   },
+   "secs": 1.7
+  },
+  {
+   "graine": 448,
+   "monde": "t3h",
+   "ecartee": false,
+   "objet": "liduno6",
+   "prix_reference": 7.38,
+   "cout_au_jour_183": 5.055,
+   "cout_vrai": 5.055,
+   "traits": {
+    "m": 1.46,
+    "e": 4.8,
+    "t": 3.858,
+    "etendue": 0.0555,
+    "g": 0.135,
+    "g_galilee": null,
+    "loi_retenue": 0,
+    "bruit": 0.355
+   },
+   "niveau_direct": -0.5,
+   "niveau_galilee": 0,
+   "loi": {
+    "texte": "3 − exp(p)",
+    "retenue": false,
+    "sans_variable": false
+   },
+   "semaines": 26,
+   "plan_chaine": [
+    -0.5,
+    0,
+    1,
+    -0.5,
+    1,
+    1,
+    -0.5,
+    0
+   ],
+   "decision_chaine": 0,
+   "marge_temoin_nul": 5343.11,
+   "gains": {
+    "tenu": 0.05991,
+    "chaine": 0.07236,
+    "direct": -0.18998,
+    "direct_galilee": 0.05991,
+    "niveau:-1": -0.47661,
+    "niveau:-0.5": -0.18998,
+    "niveau:0.5": 0.08543,
+    "niveau:1": -0.0093
+   },
+   "secs": 1.6
+  },
+  {
+   "graine": 449,
+   "monde": "t3h",
+   "ecartee": false,
+   "objet": "hawa1",
+   "prix_reference": 49.85,
+   "cout_au_jour_183": 30.706,
+   "cout_vrai": 30.706,
+   "traits": {
+    "m": 1.623,
+    "e": 2.237,
+    "t": 1.962,
+    "etendue": 0.0721,
+    "g": 0.018,
+    "g_galilee": 0.097,
+    "loi_retenue": 1,
+    "bruit": 0.397
+   },
+   "niveau_direct": 0.5,
+   "niveau_galilee": 0.5,
+   "loi": {
+    "texte": "cos(p)",
+    "retenue": true,
+    "sans_variable": false
+   },
+   "semaines": 26,
+   "plan_chaine": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "decision_chaine": -1,
+   "marge_temoin_nul": 33393.8,
+   "gains": {
+    "tenu": 0.01919,
+    "chaine": 0.02202,
+    "direct": -0.16227,
+    "direct_galilee": -0.16227,
+    "niveau:-1": 0.01649,
+    "niveau:-0.5": 0.12727,
+    "niveau:0.5": -0.16227,
+    "niveau:1": -0.32047
+   },
+   "secs": 1.2
+  },
+  {
+   "graine": 450,
+   "monde": "t3h",
+   "ecartee": false,
+   "objet": "nedo7",
+   "prix_reference": 239.74,
+   "cout_au_jour_183": 102.842,
+   "cout_vrai": 102.842,
+   "traits": {
+    "m": 2.331,
+    "e": -3.721,
+    "t": -0.466,
+    "etendue": 0.0099,
+    "g": 2.299,
+    "g_galilee": null,
+    "loi_retenue": 0,
+    "bruit": 0.454
+   },
+   "niveau_direct": 1,
+   "niveau_galilee": 0,
+   "loi": {
+    "texte": "cos(p)",
+    "retenue": false,
+    "sans_variable": false
+   },
+   "semaines": 26,
+   "plan_chaine": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "decision_chaine": 0,
+   "marge_temoin_nul": 204159.89,
+   "gains": {
+    "tenu": -0.00223,
+    "chaine": -0.02407,
+    "direct": 0.01909,
+    "direct_galilee": -0.00223,
+    "niveau:-1": -0.08246,
+    "niveau:-0.5": -0.03703,
+    "niveau:0.5": 0.00174,
+    "niveau:1": 0.01909
+   },
+   "secs": 1.2
+  },
+  {
+   "graine": 451,
+   "monde": "t3h",
+   "ecartee": false,
+   "objet": "budoza0",
+   "prix_reference": 13.64,
+   "cout_au_jour_183": 8.127,
+   "cout_vrai": 8.127,
+   "traits": {
+    "m": 1.678,
+    "e": 1.38,
+    "t": 3.767,
+    "etendue": 0.0938,
+    "g": 0.189,
+    "g_galilee": null,
+    "loi_retenue": 0,
+    "bruit": 0.19
+   },
+   "niveau_direct": 1,
+   "niveau_galilee": 0,
+   "loi": {
+    "texte": "3/4",
+    "retenue": false,
+    "sans_variable": true
+   },
+   "semaines": 26,
+   "plan_chaine": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "decision_chaine": 0,
+   "marge_temoin_nul": 16771.75,
+   "gains": {
+    "tenu": 0.0069,
+    "chaine": -0.00606,
+    "direct": -0.17479,
+    "direct_galilee": 0.0069,
+    "niveau:-1": -0.05024,
+    "niveau:-0.5": 0.00694,
+    "niveau:0.5": -0.0741,
+    "niveau:1": -0.17479
+   },
+   "secs": 3.1
+  },
+  {
+   "graine": 452,
+   "monde": "t3h",
+   "ecartee": false,
+   "objet": "cirahe0",
+   "prix_reference": 22.17,
+   "cout_au_jour_183": 9.711,
+   "cout_vrai": 9.711,
+   "traits": {
+    "m": 2.283,
+    "e": 2.409,
+    "t": 3.311,
+    "etendue": 0.0678,
+    "g": 0.103,
+    "g_galilee": null,
+    "loi_retenue": 0,
+    "bruit": 0.241
+   },
+   "niveau_direct": -1,
+   "niveau_galilee": 0,
+   "loi": {
+    "texte": "π/2 − p",
+    "retenue": false,
+    "sans_variable": false
+   },
+   "semaines": 26,
+   "plan_chaine": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "decision_chaine": -1,
+   "marge_temoin_nul": 21096.43,
+   "gains": {
+    "tenu": -0.03384,
+    "chaine": 0.1676,
+    "direct": 0.23877,
+    "direct_galilee": -0.03384,
+    "niveau:-1": 0.23877,
+    "niveau:-0.5": 0.14443,
+    "niveau:0.5": -0.21734,
+    "niveau:1": -0.39852
+   },
+   "secs": 1.8
+  },
+  {
+   "graine": 453,
+   "monde": "t3h",
+   "ecartee": false,
+   "objet": "dezi1",
+   "prix_reference": 7.59,
+   "cout_au_jour_183": 6.781,
+   "cout_vrai": 6.781,
+   "traits": {
+    "m": 1.119,
+    "e": 2.915,
+    "t": 3.612,
+    "etendue": 0.0816,
+    "g": 0.747,
+    "g_galilee": null,
+    "loi_retenue": 0,
+    "bruit": 0.388
+   },
+   "niveau_direct": 1,
+   "niveau_galilee": 0,
+   "loi": {
+    "texte": "cos(p)",
+    "retenue": false,
+    "sans_variable": false
+   },
+   "semaines": 26,
+   "plan_chaine": [
+    0,
+    0,
+    1,
+    0,
+    1,
+    1,
+    0,
+    0
+   ],
+   "decision_chaine": 1,
+   "marge_temoin_nul": 9572.07,
+   "gains": {
+    "tenu": -0.2307,
+    "chaine": 0.12881,
+    "direct": 0.19735,
+    "direct_galilee": -0.2307,
+    "niveau:-1": -2.10526,
+    "niveau:-0.5": -0.98789,
+    "niveau:0.5": 0.1278,
+    "niveau:1": 0.19735
+   },
+   "secs": 2.1
+  },
+  {
+   "graine": 454,
+   "monde": "t3h",
+   "ecartee": false,
+   "objet": "paqu7",
+   "prix_reference": 131.38,
+   "cout_au_jour_183": 67.663,
+   "cout_vrai": 67.663,
+   "traits": {
+    "m": 1.942,
+    "e": 2.249,
+    "t": 3.354,
+    "etendue": 0.0602,
+    "g": 0.005,
+    "g_galilee": null,
+    "loi_retenue": 0,
+    "bruit": 0.202
+   },
+   "niveau_direct": -0.5,
+   "niveau_galilee": 0,
+   "loi": {
+    "texte": "cos(p)",
+    "retenue": false,
+    "sans_variable": false
+   },
+   "semaines": 26,
+   "plan_chaine": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "decision_chaine": -1,
+   "marge_temoin_nul": 92405.1,
+   "gains": {
+    "tenu": 0.14326,
+    "chaine": 0.09533,
+    "direct": 0.16681,
+    "direct_galilee": 0.14326,
+    "niveau:-1": 0.10482,
+    "niveau:-0.5": 0.16681,
+    "niveau:0.5": 0.08374,
+    "niveau:1": -0.00721
+   },
+   "secs": 0.9
+  },
+  {
+   "graine": 455,
+   "monde": "t3h",
+   "ecartee": false,
+   "objet": "xodi4",
+   "prix_reference": 11.87,
+   "cout_au_jour_183": 6.588,
+   "cout_vrai": 6.588,
+   "traits": {
+    "m": 1.802,
+    "e": 1.767,
+    "t": 3.656,
+    "etendue": 0.0713,
+    "g": 0.053,
+    "g_galilee": 0.003,
+    "loi_retenue": 1,
+    "bruit": 0.184
+   },
+   "niveau_direct": 1,
+   "niveau_galilee": -0.5,
+   "loi": {
+    "texte": "sin(5·p / 2)",
+    "retenue": true,
+    "sans_variable": false
+   },
+   "semaines": 26,
+   "plan_chaine": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "decision_chaine": 0,
+   "marge_temoin_nul": 10021.98,
+   "gains": {
+    "tenu": 0.01081,
+    "chaine": -0.0117,
+    "direct": -0.07948,
+    "direct_galilee": -0.00515,
+    "niveau:-1": -0.06188,
+    "niveau:-0.5": -0.00515,
+    "niveau:0.5": -0.02196,
+    "niveau:1": -0.07948
+   },
+   "secs": 1.2
+  },
+  {
+   "graine": 456,
+   "monde": "t3h",
+   "ecartee": false,
+   "objet": "maso4",
+   "prix_reference": 93.08,
+   "cout_au_jour_183": 79.883,
+   "cout_vrai": 79.883,
+   "traits": {
+    "m": 1.165,
+    "e": 1.443,
+    "t": 2.523,
+    "etendue": 0.0699,
+    "g": 1.003,
+    "g_galilee": null,
+    "loi_retenue": 0,
+    "bruit": 0.431
+   },
+   "niveau_direct": 1,
+   "niveau_galilee": 0,
+   "loi": {
+    "texte": "π/2 − p",
+    "retenue": false,
+    "sans_variable": false
+   },
+   "semaines": 26,
+   "plan_chaine": [
+    0,
+    0,
+    1,
+    0,
+    1,
+    1,
+    0,
+    0
+   ],
+   "decision_chaine": 1,
+   "marge_temoin_nul": 55697.95,
+   "gains": {
+    "tenu": -0.15838,
+    "chaine": 0.11492,
+    "direct": 0.16411,
+    "direct_galilee": -0.15838,
+    "niveau:-1": -1.54687,
+    "niveau:-0.5": -0.72112,
+    "niveau:0.5": 0.11778,
+    "niveau:1": 0.16411
+   },
+   "secs": 3
+  },
+  {
+   "graine": 457,
+   "monde": "t3h",
+   "ecartee": false,
+   "objet": "gowi8",
+   "prix_reference": 45.63,
+   "cout_au_jour_183": 20.629,
+   "cout_vrai": 20.629,
+   "traits": {
+    "m": 2.212,
+    "e": 4.95,
+    "t": 2.093,
+    "etendue": 0.0289,
+    "g": 0.916,
+    "g_galilee": 0.015,
+    "loi_retenue": 1,
+    "bruit": 0.326
+   },
+   "niveau_direct": -1,
+   "niveau_galilee": 0.5,
+   "loi": {
+    "texte": "cos(p)",
+    "retenue": true,
+    "sans_variable": false
+   },
+   "semaines": 26,
+   "plan_chaine": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "decision_chaine": -1,
+   "marge_temoin_nul": 78416.71,
+   "gains": {
+    "tenu": -0.11053,
+    "chaine": 0.17925,
+    "direct": 0.29028,
+    "direct_galilee": -0.29902,
+    "niveau:-1": 0.29028,
+    "niveau:-0.5": 0.15117,
+    "niveau:0.5": -0.29902,
+    "niveau:1": -0.47126
+   },
+   "secs": 1.2
+  },
+  {
+   "graine": 458,
+   "monde": "t3h",
+   "ecartee": false,
+   "objet": "nexolo4",
+   "prix_reference": 15.18,
+   "cout_au_jour_183": 8.844,
+   "cout_vrai": 8.844,
+   "traits": {
+    "m": 1.716,
+    "e": 1.724,
+    "t": 1.483,
+    "etendue": 0.0473,
+    "g": 0.089,
+    "g_galilee": null,
+    "loi_retenue": 0,
+    "bruit": 0.269
+   },
+   "niveau_direct": 1,
+   "niveau_galilee": 0,
+   "loi": {
+    "texte": "2/3",
+    "retenue": false,
+    "sans_variable": true
+   },
+   "semaines": 26,
+   "plan_chaine": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "decision_chaine": 1,
+   "marge_temoin_nul": 19882.22,
+   "gains": {
+    "tenu": -0.15237,
+    "chaine": 0.04653,
+    "direct": 0.13528,
+    "direct_galilee": -0.15237,
+    "niveau:-1": -0.46295,
+    "niveau:-0.5": -0.30475,
+    "niveau:0.5": 0.02131,
+    "niveau:1": 0.13528
+   },
+   "secs": 1.2
+  },
+  {
+   "graine": 459,
+   "monde": "t3h",
+   "ecartee": false,
+   "objet": "huhipe2",
+   "prix_reference": 22.75,
+   "cout_au_jour_183": 10.554,
+   "cout_vrai": 10.554,
+   "traits": {
+    "m": 2.156,
+    "e": 1.485,
+    "t": 2.155,
+    "etendue": 0.0838,
+    "g": 0.053,
+    "g_galilee": null,
+    "loi_retenue": 0,
+    "bruit": 0.283
+   },
+   "niveau_direct": 1,
+   "niveau_galilee": 0,
+   "loi": {
+    "texte": "cos(p)",
+    "retenue": false,
+    "sans_variable": false
+   },
+   "semaines": 26,
+   "plan_chaine": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "decision_chaine": 1,
+   "marge_temoin_nul": 50611.66,
+   "gains": {
+    "tenu": -0.00865,
+    "chaine": -0.00011,
+    "direct": 0.07468,
+    "direct_galilee": -0.00865,
+    "niveau:-1": -0.26278,
+    "niveau:-0.5": -0.14257,
+    "niveau:0.5": 0.05354,
+    "niveau:1": 0.07468
+   },
+   "secs": 1
+  },
+  {
+   "graine": 460,
+   "monde": "t3h",
+   "ecartee": false,
+   "objet": "xukuce6",
+   "prix_reference": 26.19,
+   "cout_au_jour_183": 10.779,
+   "cout_vrai": 10.779,
+   "traits": {
+    "m": 2.43,
+    "e": 1.291,
+    "t": 1.151,
+    "etendue": 0.043,
+    "g": 0.068,
+    "g_galilee": null,
+    "loi_retenue": 0,
+    "bruit": 0.247
+   },
+   "niveau_direct": 1,
+   "niveau_galilee": 0,
+   "loi": {
+    "texte": "2/3",
+    "retenue": false,
+    "sans_variable": true
+   },
+   "semaines": 26,
+   "plan_chaine": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "decision_chaine": 0,
+   "marge_temoin_nul": 42556.64,
+   "gains": {
+    "tenu": 0.01032,
+    "chaine": -0.00841,
+    "direct": 0.06303,
+    "direct_galilee": 0.01032,
+    "niveau:-1": -0.08705,
+    "niveau:-0.5": 0.00179,
+    "niveau:0.5": 0.04814,
+    "niveau:1": 0.06303
+   },
+   "secs": 2.2
+  },
+  {
+   "graine": 461,
+   "monde": "t3h",
+   "ecartee": false,
+   "objet": "reso1",
+   "prix_reference": 202.97,
+   "cout_au_jour_183": 132.829,
+   "cout_vrai": 132.829,
+   "traits": {
+    "m": 1.528,
+    "e": 1.211,
+    "t": 2.085,
+    "etendue": 0.0657,
+    "g": 0.315,
+    "g_galilee": null,
+    "loi_retenue": 0,
+    "bruit": 0.236
+   },
+   "niveau_direct": 1,
+   "niveau_galilee": 0,
+   "loi": {
+    "texte": "5/3 − p",
+    "retenue": false,
+    "sans_variable": false
+   },
+   "semaines": 26,
+   "plan_chaine": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "decision_chaine": 1,
+   "marge_temoin_nul": 185086.27,
+   "gains": {
+    "tenu": 0.13576,
+    "chaine": 0.27379,
+    "direct": 0.35847,
+    "direct_galilee": 0.13576,
+    "niveau:-1": -0.37029,
+    "niveau:-0.5": -0.0307,
+    "niveau:0.5": 0.26444,
+    "niveau:1": 0.35847
+   },
+   "secs": 1.7
+  },
+  {
+   "graine": 462,
+   "monde": "t3h",
+   "ecartee": false,
+   "objet": "sokecu0",
+   "prix_reference": 206.18,
+   "cout_au_jour_183": 94.139,
+   "cout_vrai": 94.139,
+   "traits": {
+    "m": 2.19,
+    "e": 2.661,
+    "t": 2.443,
+    "etendue": 0.0514,
+    "g": 0.144,
+    "g_galilee": null,
+    "loi_retenue": 0,
+    "bruit": 0.29
+   },
+   "niveau_direct": -1,
+   "niveau_galilee": 0,
+   "loi": {
+    "texte": "cos(p)",
+    "retenue": false,
+    "sans_variable": false
+   },
+   "semaines": 26,
+   "plan_chaine": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "decision_chaine": -1,
+   "marge_temoin_nul": 268540.07,
+   "gains": {
+    "tenu": 0.27629,
+    "chaine": 0.76515,
+    "direct": 0.92651,
+    "direct_galilee": 0.27629,
+    "niveau:-1": 0.92651,
+    "niveau:-0.5": 0.61187,
+    "niveau:0.5": -0.02744,
+    "niveau:1": -0.26227
+   },
+   "secs": 1.5
+  },
+  {
+   "graine": 463,
+   "monde": "t3h",
+   "ecartee": false,
+   "objet": "xuko7",
+   "prix_reference": 29.4,
+   "cout_au_jour_183": 14.785,
+   "cout_vrai": 14.785,
+   "traits": {
+    "m": 1.988,
+    "e": 0.937,
+    "t": 2.76,
+    "etendue": 0.1093,
+    "g": 0.219,
+    "g_galilee": null,
+    "loi_retenue": 0,
+    "bruit": 0.297
+   },
+   "niveau_direct": 1,
+   "niveau_galilee": 0,
+   "loi": {
+    "texte": "cos(p)",
+    "retenue": false,
+    "sans_variable": false
+   },
+   "semaines": 26,
+   "plan_chaine": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "decision_chaine": 1,
+   "marge_temoin_nul": 33175.6,
+   "gains": {
+    "tenu": -0.03611,
+    "chaine": 0.11813,
+    "direct": 0.19439,
+    "direct_galilee": -0.03611,
+    "niveau:-1": -0.30464,
+    "niveau:-0.5": -0.17497,
+    "niveau:0.5": 0.07663,
+    "niveau:1": 0.19439
+   },
+   "secs": 1.2
+  },
+  {
+   "graine": 464,
+   "monde": "t3h",
+   "ecartee": false,
+   "objet": "bosuro2",
+   "prix_reference": 102.91,
+   "cout_au_jour_183": 38.83,
+   "cout_vrai": 38.83,
+   "traits": {
+    "m": 2.65,
+    "e": 3.261,
+    "t": 4.084,
+    "etendue": 0.0576,
+    "g": 0.405,
+    "g_galilee": null,
+    "loi_retenue": 0,
+    "bruit": 0.223
+   },
+   "niveau_direct": -1,
+   "niveau_galilee": 0,
+   "loi": {
+    "texte": "cos(p)",
+    "retenue": false,
+    "sans_variable": false
+   },
+   "semaines": 26,
+   "plan_chaine": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "decision_chaine": -1,
+   "marge_temoin_nul": 118816.64,
+   "gains": {
+    "tenu": -0.16783,
+    "chaine": 0.30524,
+    "direct": 0.42014,
+    "direct_galilee": -0.16783,
+    "niveau:-1": 0.42014,
+    "niveau:-0.5": 0.19862,
+    "niveau:0.5": -0.41873,
+    "niveau:1": -0.5915
+   },
+   "secs": 1.9
+  },
+  {
+   "graine": 465,
+   "monde": "t3h",
+   "ecartee": false,
+   "objet": "mulevu3",
+   "prix_reference": 223.43,
+   "cout_au_jour_183": 115.616,
+   "cout_vrai": 115.616,
+   "traits": {
+    "m": 1.933,
+    "e": 5.82,
+    "t": 3.953,
+    "etendue": 0.0504,
+    "g": 1.145,
+    "g_galilee": null,
+    "loi_retenue": 0,
+    "bruit": 0.464
+   },
+   "niveau_direct": -1,
+   "niveau_galilee": 0,
+   "loi": {
+    "texte": "3 − exp(p)",
+    "retenue": false,
+    "sans_variable": false
+   },
+   "semaines": 26,
+   "plan_chaine": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "decision_chaine": -1,
+   "marge_temoin_nul": 199758.3,
+   "gains": {
+    "tenu": 0.0978,
+    "chaine": 0.04564,
+    "direct": 0.00415,
+    "direct_galilee": 0.0978,
+    "niveau:-1": 0.00415,
+    "niveau:-0.5": 0.10846,
+    "niveau:0.5": -0.16235,
+    "niveau:1": -0.3822
+   },
+   "secs": 1.6
+  },
+  {
+   "graine": 466,
+   "monde": "t3h",
+   "ecartee": false,
+   "objet": "nibage7",
+   "prix_reference": 173.78,
+   "cout_au_jour_183": 66.623,
+   "cout_vrai": 66.623,
+   "traits": {
+    "m": 2.608,
+    "e": -4.304,
+    "t": -1.348,
+    "etendue": 0.0145,
+    "g": 2.672,
+    "g_galilee": null,
+    "loi_retenue": 0,
+    "bruit": 0.242
+   },
+   "niveau_direct": 1,
+   "niveau_galilee": 0,
+   "loi": {
+    "texte": "2/3",
+    "retenue": false,
+    "sans_variable": true
+   },
+   "semaines": 26,
+   "plan_chaine": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "decision_chaine": -1,
+   "marge_temoin_nul": 460069.63,
+   "gains": {
+    "tenu": -0.03899,
+    "chaine": -0.20294,
+    "direct": 0.02725,
+    "direct_galilee": -0.03899,
+    "niveau:-1": -0.22563,
+    "niveau:-0.5": -0.10087,
+    "niveau:0.5": -0.01822,
+    "niveau:1": 0.02725
+   },
+   "secs": 1.2
+  },
+  {
+   "graine": 467,
+   "monde": "t3h",
+   "ecartee": false,
+   "objet": "sazo2",
+   "prix_reference": 195.44,
+   "cout_au_jour_183": 82.309,
+   "cout_vrai": 82.309,
+   "traits": {
+    "m": 2.374,
+    "e": 2.411,
+    "t": 2.72,
+    "etendue": 0.0659,
+    "g": 0.121,
+    "g_galilee": null,
+    "loi_retenue": 0,
+    "bruit": 0.29
+   },
+   "niveau_direct": -1,
+   "niveau_galilee": 0,
+   "loi": {
+    "texte": "cos(p)",
+    "retenue": false,
+    "sans_variable": false
+   },
+   "semaines": 26,
+   "plan_chaine": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "decision_chaine": 0,
+   "marge_temoin_nul": 135730.15,
+   "gains": {
+    "tenu": 0.01459,
+    "chaine": 0.00283,
+    "direct": 0.08173,
+    "direct_galilee": 0.01459,
+    "niveau:-1": 0.08173,
+    "niveau:-0.5": 0.06247,
+    "niveau:0.5": -0.04871,
+    "niveau:1": -0.16337
+   },
+   "secs": 1.3
+  },
+  {
+   "graine": 468,
+   "monde": "t3h",
+   "ecartee": false,
+   "objet": "wona1",
+   "prix_reference": 57.13,
+   "cout_au_jour_183": 39.348,
+   "cout_vrai": 39.348,
+   "traits": {
+    "m": 1.452,
+    "e": 2.646,
+    "t": 4.721,
+    "etendue": 0.0892,
+    "g": 0.026,
+    "g_galilee": null,
+    "loi_retenue": 0,
+    "bruit": 0.252
+   },
+   "niveau_direct": 0.5,
+   "niveau_galilee": 0,
+   "loi": {
+    "texte": "cos(p^(7/2))",
+    "retenue": false,
+    "sans_variable": false
+   },
+   "semaines": 26,
+   "plan_chaine": [
+    -0.5,
+    0,
+    1,
+    -0.5,
+    1,
+    1,
+    -0.5,
+    0
+   ],
+   "decision_chaine": -0.5,
+   "marge_temoin_nul": 73923.7,
+   "gains": {
+    "tenu": 0.06299,
+    "chaine": 0.01799,
+    "direct": -0.11098,
+    "direct_galilee": 0.06299,
+    "niveau:-1": -0.30001,
+    "niveau:-0.5": 0.03289,
+    "niveau:0.5": -0.11098,
+    "niveau:1": -0.32166
+   },
+   "secs": 1.6
+  },
+  {
+   "graine": 469,
+   "monde": "t3h",
+   "ecartee": false,
+   "objet": "kaxi4",
+   "prix_reference": 41.7,
+   "cout_au_jour_183": 21.127,
+   "cout_vrai": 21.127,
+   "traits": {
+    "m": 1.974,
+    "e": 1.33,
+    "t": 5.085,
+    "etendue": 0.1721,
+    "g": 0.12,
+    "g_galilee": null,
+    "loi_retenue": 0,
+    "bruit": 0.314
+   },
+   "niveau_direct": 1,
+   "niveau_galilee": 0,
+   "loi": {
+    "texte": "cos(p)^2",
+    "retenue": false,
+    "sans_variable": false
+   },
+   "semaines": 26,
+   "plan_chaine": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "decision_chaine": 1,
+   "marge_temoin_nul": 73602.47,
+   "gains": {
+    "tenu": 0.1636,
+    "chaine": 0.23005,
+    "direct": 0.29608,
+    "direct_galilee": 0.1636,
+    "niveau:-1": -0.15705,
+    "niveau:-0.5": 0.0035,
+    "niveau:0.5": 0.23545,
+    "niveau:1": 0.29608
+   },
+   "secs": 2.4
+  },
+  {
+   "graine": 470,
+   "monde": "t3h",
+   "ecartee": false,
+   "objet": "dabice6",
+   "prix_reference": 185.41,
+   "cout_au_jour_183": 108.535,
+   "cout_vrai": 108.535,
+   "traits": {
+    "m": 1.708,
+    "e": 2.177,
+    "t": 4.529,
+    "etendue": 0.1369,
+    "g": 0.008,
+    "g_galilee": 0,
+    "loi_retenue": 1,
+    "bruit": 0.368
+   },
+   "niveau_direct": 0.5,
+   "niveau_galilee": 0,
+   "loi": {
+    "texte": "5/4 − p",
+    "retenue": true,
+    "sans_variable": false
+   },
+   "semaines": 26,
+   "plan_chaine": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "decision_chaine": -1,
+   "marge_temoin_nul": 270885.19,
+   "gains": {
+    "tenu": 0.08295,
+    "chaine": -0.09903,
+    "direct": 0.00806,
+    "direct_galilee": 0.08295,
+    "niveau:-1": -0.04069,
+    "niveau:-0.5": 0.05372,
+    "niveau:0.5": 0.00806,
+    "niveau:1": -0.11704
+   },
+   "secs": 1.6
+  },
+  {
+   "graine": 471,
+   "monde": "t3h",
+   "ecartee": false,
+   "objet": "texake3",
+   "prix_reference": 24.07,
+   "cout_au_jour_183": 10.008,
+   "cout_vrai": 10.008,
+   "traits": {
+    "m": 2.405,
+    "e": 2.727,
+    "t": 1.703,
+    "etendue": 0.0387,
+    "g": 0.209,
+    "g_galilee": null,
+    "loi_retenue": 0,
+    "bruit": 0.255
+   },
+   "niveau_direct": -1,
+   "niveau_galilee": 0,
+   "loi": {
+    "texte": "2/3",
+    "retenue": false,
+    "sans_variable": true
+   },
+   "semaines": 26,
+   "plan_chaine": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "decision_chaine": -1,
+   "marge_temoin_nul": 41973.8,
+   "gains": {
+    "tenu": -0.02977,
+    "chaine": 0.03773,
+    "direct": 0.09157,
+    "direct_galilee": -0.02977,
+    "niveau:-1": 0.09157,
+    "niveau:-0.5": 0.04526,
+    "niveau:0.5": -0.16926,
+    "niveau:1": -0.29764
+   },
+   "secs": 1.3
+  },
+  {
+   "graine": 472,
+   "monde": "t3h",
+   "ecartee": false,
+   "objet": "pibawa8",
+   "prix_reference": 4.5,
+   "cout_au_jour_183": 2.35,
+   "cout_vrai": 2.35,
+   "traits": {
+    "m": 1.915,
+    "e": 3.062,
+    "t": 2.618,
+    "etendue": 0.0452,
+    "g": 0.152,
+    "g_galilee": null,
+    "loi_retenue": 1,
+    "bruit": 0.26
+   },
+   "niveau_direct": -1,
+   "niveau_galilee": 0,
+   "loi": {
+    "texte": "π − exp(p)",
+    "retenue": true,
+    "sans_variable": false
+   },
+   "semaines": 26,
+   "plan_chaine": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "decision_chaine": 0,
+   "marge_temoin_nul": 3454.96,
+   "gains": {
+    "tenu": 0.07428,
+    "chaine": 0.07541,
+    "direct": 0.43754,
+    "direct_galilee": 0.07428,
+    "niveau:-1": 0.43754,
+    "niveau:-0.5": 0.28316,
+    "niveau:0.5": -0.10548,
+    "niveau:1": -0.29617
+   },
+   "secs": 2.5
+  },
+  {
+   "graine": 473,
+   "monde": "t3h",
+   "ecartee": false,
+   "objet": "fugi9",
+   "prix_reference": 19.14,
+   "cout_au_jour_183": 6.848,
+   "cout_vrai": 6.848,
+   "traits": {
+    "m": 2.795,
+    "e": 3.231,
+    "t": 5.13,
+    "etendue": 0.0943,
+    "g": 0.416,
+    "g_galilee": 0.09,
+    "loi_retenue": 1,
+    "bruit": 0.331
+   },
+   "niveau_direct": -1,
+   "niveau_galilee": -0.5,
+   "loi": {
+    "texte": "4/3 − p",
+    "retenue": true,
+    "sans_variable": false
+   },
+   "semaines": 26,
+   "plan_chaine": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "decision_chaine": -1,
+   "marge_temoin_nul": 13520.23,
+   "gains": {
+    "tenu": 0.15005,
+    "chaine": 0.74587,
+    "direct": 0.97643,
+    "direct_galilee": 0.50957,
+    "niveau:-1": 0.97643,
+    "niveau:-0.5": 0.50957,
+    "niveau:0.5": -0.17557,
+    "niveau:1": -0.38955
+   },
+   "secs": 1.8
+  },
+  {
+   "graine": 474,
+   "monde": "t3h",
+   "ecartee": false,
+   "objet": "widimo5",
+   "prix_reference": 10.68,
+   "cout_au_jour_183": 7.098,
+   "cout_vrai": 7.098,
+   "traits": {
+    "m": 1.505,
+    "e": -1.062,
+    "t": -0.386,
+    "etendue": 0.0225,
+    "g": 1.212,
+    "g_galilee": null,
+    "loi_retenue": 0,
+    "bruit": 0.28
+   },
+   "niveau_direct": 1,
+   "niveau_galilee": 0,
+   "loi": {
+    "texte": "cos(p)",
+    "retenue": false,
+    "sans_variable": false
+   },
+   "semaines": 26,
+   "plan_chaine": [
+    -0.5,
+    0,
+    1,
+    -0.5,
+    1,
+    1,
+    -0.5,
+    0
+   ],
+   "decision_chaine": 1,
+   "marge_temoin_nul": 6742.77,
+   "gains": {
+    "tenu": -0.1203,
+    "chaine": 0.24442,
+    "direct": 0.40007,
+    "direct_galilee": -0.1203,
+    "niveau:-1": -0.59285,
+    "niveau:-0.5": -0.36764,
+    "niveau:0.5": -0.03206,
+    "niveau:1": 0.40007
+   },
+   "secs": 1.7
+  },
+  {
+   "graine": 475,
+   "monde": "t3h",
+   "ecartee": false,
+   "objet": "jita2",
+   "prix_reference": 116.55,
+   "cout_au_jour_183": 68.703,
+   "cout_vrai": 68.703,
+   "traits": {
+    "m": 1.696,
+    "e": 1.913,
+    "t": 3.868,
+    "etendue": 0.1335,
+    "g": 0.05,
+    "g_galilee": null,
+    "loi_retenue": 0,
+    "bruit": 0.415
+   },
+   "niveau_direct": 1,
+   "niveau_galilee": 0,
+   "loi": {
+    "texte": "4/3 − p",
+    "retenue": false,
+    "sans_variable": false
+   },
+   "semaines": 26,
+   "plan_chaine": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "decision_chaine": 1,
+   "marge_temoin_nul": 167159.74,
+   "gains": {
+    "tenu": -0.07747,
+    "chaine": 0.13523,
+    "direct": 0.26009,
+    "direct_galilee": -0.07747,
+    "niveau:-1": -0.43839,
+    "niveau:-0.5": -0.2587,
+    "niveau:0.5": 0.09357,
+    "niveau:1": 0.26009
+   },
+   "secs": 1.2
+  },
+  {
+   "graine": 476,
+   "monde": "t3h",
+   "ecartee": false,
+   "objet": "xijira6",
+   "prix_reference": 4.62,
+   "cout_au_jour_183": 3.182,
+   "cout_vrai": 3.182,
+   "traits": {
+    "m": 1.452,
+    "e": 2.809,
+    "t": 3.417,
+    "etendue": 0.077,
+    "g": 0.01,
+    "g_galilee": null,
+    "loi_retenue": 0,
+    "bruit": 0.292
+   },
+   "niveau_direct": 0.5,
+   "niveau_galilee": 0,
+   "loi": {
+    "texte": "cos(p)",
+    "retenue": false,
+    "sans_variable": false
+   },
+   "semaines": 26,
+   "plan_chaine": [
+    -0.5,
+    0,
+    1,
+    -0.5,
+    1,
+    1,
+    -0.5,
+    0
+   ],
+   "decision_chaine": -0.5,
+   "marge_temoin_nul": 9568.55,
+   "gains": {
+    "tenu": 0.05382,
+    "chaine": -0.10751,
+    "direct": 0.07147,
+    "direct_galilee": 0.05382,
+    "niveau:-1": -0.41993,
+    "niveau:-0.5": -0.1429,
+    "niveau:0.5": 0.07147,
+    "niveau:1": 0.06805
+   },
+   "secs": 1.2
+  },
+  {
+   "graine": 477,
+   "monde": "t3h",
+   "ecartee": false,
+   "objet": "seju4",
+   "prix_reference": 63.56,
+   "cout_au_jour_183": 31.718,
+   "cout_vrai": 31.718,
+   "traits": {
+    "m": 2.004,
+    "e": 2.457,
+    "t": 2.297,
+    "etendue": 0.0555,
+    "g": 0.04,
+    "g_galilee": null,
+    "loi_retenue": 0,
+    "bruit": 0.257
+   },
+   "niveau_direct": -1,
+   "niveau_galilee": 0,
+   "loi": {
+    "texte": "cos(p)",
+    "retenue": false,
+    "sans_variable": false
+   },
+   "semaines": 26,
+   "plan_chaine": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "decision_chaine": 1,
+   "marge_temoin_nul": 176435.65,
+   "gains": {
+    "tenu": -0.00669,
+    "chaine": -0.03371,
+    "direct": -0.10943,
+    "direct_galilee": -0.00669,
+    "niveau:-1": -0.10943,
+    "niveau:-0.5": -0.04522,
+    "niveau:0.5": 0.00452,
+    "niveau:1": -0.02608
+   },
+   "secs": 1.3
+  },
+  {
+   "graine": 478,
+   "monde": "t3h",
+   "ecartee": false,
+   "objet": "kafibi7",
+   "prix_reference": 14.74,
+   "cout_au_jour_183": 7.743,
+   "cout_vrai": 7.743,
+   "traits": {
+    "m": 1.904,
+    "e": 0.696,
+    "t": 0.651,
+    "etendue": 0.0519,
+    "g": 0.308,
+    "g_galilee": null,
+    "loi_retenue": 0,
+    "bruit": 0.281
+   },
+   "niveau_direct": 1,
+   "niveau_galilee": 0,
+   "loi": {
+    "texte": "cos(p)",
+    "retenue": false,
+    "sans_variable": false
+   },
+   "semaines": 26,
+   "plan_chaine": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "decision_chaine": 1,
+   "marge_temoin_nul": 23635.91,
+   "gains": {
+    "tenu": 0.02815,
+    "chaine": 0.0729,
+    "direct": 0.13578,
+    "direct_galilee": 0.02815,
+    "niveau:-1": -0.30385,
+    "niveau:-0.5": -0.14386,
+    "niveau:0.5": 0.09931,
+    "niveau:1": 0.13578
+   },
+   "secs": 1.3
+  },
+  {
+   "graine": 479,
+   "monde": "t3h",
+   "ecartee": false,
+   "objet": "napewa2",
+   "prix_reference": 11.76,
+   "cout_au_jour_183": 4.166,
+   "cout_vrai": 4.166,
+   "traits": {
+    "m": 2.823,
+    "e": 0.488,
+    "t": 0.645,
+    "etendue": 0.1035,
+    "g": 0.244,
+    "g_galilee": 0,
+    "loi_retenue": 1,
+    "bruit": 0.363
+   },
+   "niveau_direct": 1,
+   "niveau_galilee": 0,
+   "loi": {
+    "texte": "cos(p)",
+    "retenue": true,
+    "sans_variable": false
+   },
+   "semaines": 26,
+   "plan_chaine": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "decision_chaine": -1,
+   "marge_temoin_nul": 10562.86,
+   "gains": {
+    "tenu": -0.00494,
+    "chaine": -0.01956,
+    "direct": -0.06253,
+    "direct_galilee": -0.00494,
+    "niveau:-1": 0.02923,
+    "niveau:-0.5": -0.00117,
+    "niveau:0.5": -0.02015,
+    "niveau:1": -0.06253
+   },
+   "secs": 1.1
+  },
+  {
+   "graine": 480,
+   "monde": "t3h",
+   "ecartee": false,
+   "objet": "wahuxa9",
+   "prix_reference": 3.97,
+   "cout_au_jour_183": 2.232,
+   "cout_vrai": 2.232,
+   "traits": {
+    "m": 1.779,
+    "e": 4.692,
+    "t": 1.362,
+    "etendue": 0.0164,
+    "g": 0.554,
+    "g_galilee": null,
+    "loi_retenue": 0,
+    "bruit": 0.271
+   },
+   "niveau_direct": -1,
+   "niveau_galilee": 0,
+   "loi": {
+    "texte": "2/3",
+    "retenue": false,
+    "sans_variable": true
+   },
+   "semaines": 26,
+   "plan_chaine": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "decision_chaine": 0,
+   "marge_temoin_nul": 4113.13,
+   "gains": {
+    "tenu": -0.05534,
+    "chaine": -0.05689,
+    "direct": -0.24409,
+    "direct_galilee": -0.05534,
+    "niveau:-1": -0.24409,
+    "niveau:-0.5": -0.11398,
+    "niveau:0.5": -0.01848,
+    "niveau:1": 0.01627
+   },
+   "secs": 1.5
+  },
+  {
+   "graine": 481,
+   "monde": "t3h",
+   "ecartee": false,
+   "objet": "heduti1",
+   "prix_reference": 5.16,
+   "cout_au_jour_183": 2.394,
+   "cout_vrai": 2.394,
+   "traits": {
+    "m": 2.156,
+    "e": 3.052,
+    "t": 2.874,
+    "etendue": 0.0472,
+    "g": 0.24,
+    "g_galilee": 0.037,
+    "loi_retenue": 1,
+    "bruit": 0.22
+   },
+   "niveau_direct": -1,
+   "niveau_galilee": 0.5,
+   "loi": {
+    "texte": "cos(p)",
+    "retenue": true,
+    "sans_variable": false
+   },
+   "semaines": 26,
+   "plan_chaine": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "decision_chaine": -1,
+   "marge_temoin_nul": 8419.82,
+   "gains": {
+    "tenu": 0.41312,
+    "chaine": 0.93521,
+    "direct": 1.16971,
+    "direct_galilee": 0.05544,
+    "niveau:-1": 1.16971,
+    "niveau:-0.5": 0.783,
+    "niveau:0.5": 0.05544,
+    "niveau:1": -0.2472
+   },
+   "secs": 1.2
+  },
+  {
+   "graine": 482,
+   "monde": "t3h",
+   "ecartee": false,
+   "objet": "hohe6",
+   "prix_reference": 79.65,
+   "cout_au_jour_183": 45.554,
+   "cout_vrai": 45.554,
+   "traits": {
+    "m": 1.748,
+    "e": 3.119,
+    "t": 1.63,
+    "etendue": 0.0488,
+    "g": 0.069,
+    "g_galilee": null,
+    "loi_retenue": 0,
+    "bruit": 0.41
+   },
+   "niveau_direct": -1,
+   "niveau_galilee": 0,
+   "loi": {
+    "texte": "cos(p)",
+    "retenue": false,
+    "sans_variable": false
+   },
+   "semaines": 26,
+   "plan_chaine": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "decision_chaine": -1,
+   "marge_temoin_nul": 112767.38,
+   "gains": {
+    "tenu": 0.00051,
+    "chaine": -0.33101,
+    "direct": -0.28812,
+    "direct_galilee": 0.00051,
+    "niveau:-1": -0.28812,
+    "niveau:-0.5": -0.06268,
+    "niveau:0.5": -0.16916,
+    "niveau:1": -0.37836
+   },
+   "secs": 1
+  },
+  {
+   "graine": 483,
+   "monde": "t3h",
+   "ecartee": false,
+   "objet": "lekidi6",
+   "prix_reference": 316.84,
+   "cout_au_jour_183": 104.854,
+   "cout_vrai": 104.854,
+   "traits": {
+    "m": 3.022,
+    "e": 0.665,
+    "t": 1.845,
+    "etendue": 0.1326,
+    "g": 0.184,
+    "g_galilee": null,
+    "loi_retenue": 0,
+    "bruit": 0.289
+   },
+   "niveau_direct": 1,
+   "niveau_galilee": 0,
+   "loi": {
+    "texte": "2/3",
+    "retenue": false,
+    "sans_variable": true
+   },
+   "semaines": 26,
+   "plan_chaine": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "decision_chaine": 1,
+   "marge_temoin_nul": 608842.35,
+   "gains": {
+    "tenu": -0.02754,
+    "chaine": -0.01543,
+    "direct": 0.00008,
+    "direct_galilee": -0.02754,
+    "niveau:-1": -0.08757,
+    "niveau:-0.5": -0.04463,
+    "niveau:0.5": -0.01612,
+    "niveau:1": 0.00008
+   },
+   "secs": 2
+  },
+  {
+   "graine": 484,
+   "monde": "t3h",
+   "ecartee": false,
+   "objet": "qeli0",
+   "prix_reference": 11.53,
+   "cout_au_jour_183": 6.244,
+   "cout_vrai": 6.244,
+   "traits": {
+    "m": 1.847,
+    "e": 5.411,
+    "t": 4.246,
+    "etendue": 0.0639,
+    "g": 0.883,
+    "g_galilee": null,
+    "loi_retenue": 0,
+    "bruit": 0.388
+   },
+   "niveau_direct": -1,
+   "niveau_galilee": 0,
+   "loi": {
+    "texte": "−7·log(p) / 2",
+    "retenue": false,
+    "sans_variable": false
+   },
+   "semaines": 26,
+   "plan_chaine": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "decision_chaine": 1,
+   "marge_temoin_nul": 6430.74,
+   "gains": {
+    "tenu": -0.03347,
+    "chaine": -0.31124,
+    "direct": 0.02463,
+    "direct_galilee": -0.03347,
+    "niveau:-1": 0.02463,
+    "niveau:-0.5": 0.09231,
+    "niveau:0.5": -0.19594,
+    "niveau:1": -0.36253
+   },
+   "secs": 1.3
+  },
+  {
+   "graine": 485,
+   "monde": "t3h",
+   "ecartee": false,
+   "objet": "niho7",
+   "prix_reference": 4.62,
+   "cout_au_jour_183": 2.053,
+   "cout_vrai": 2.053,
+   "traits": {
+    "m": 2.251,
+    "e": 2.646,
+    "t": 1.119,
+    "etendue": 0.0317,
+    "g": 0.158,
+    "g_galilee": null,
+    "loi_retenue": 0,
+    "bruit": 0.354
+   },
+   "niveau_direct": -1,
+   "niveau_galilee": 0,
+   "loi": {
+    "texte": "cos(p)",
+    "retenue": false,
+    "sans_variable": false
+   },
+   "semaines": 26,
+   "plan_chaine": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "decision_chaine": 0,
+   "marge_temoin_nul": 4846.3,
+   "gains": {
+    "tenu": 0.01906,
+    "chaine": 0.00913,
+    "direct": -0.17179,
+    "direct_galilee": 0.01906,
+    "niveau:-1": -0.17179,
+    "niveau:-0.5": -0.06864,
+    "niveau:0.5": 0.09408,
+    "niveau:1": 0.14488
+   },
+   "secs": 0.8
+  },
+  {
+   "graine": 486,
+   "monde": "t3h",
+   "ecartee": false,
+   "objet": "kita0",
+   "prix_reference": 16.03,
+   "cout_au_jour_183": 13.621,
+   "cout_vrai": 13.621,
+   "traits": {
+    "m": 1.177,
+    "e": 3.536,
+    "t": 6.192,
+    "etendue": 0.1052,
+    "g": 0.211,
+    "g_galilee": 0.802,
+    "loi_retenue": 1,
+    "bruit": 0.287
+   },
+   "niveau_direct": 1,
+   "niveau_galilee": 1,
+   "loi": {
+    "texte": "4/3 − p",
+    "retenue": true,
+    "sans_variable": false
+   },
+   "semaines": 26,
+   "plan_chaine": [
+    0,
+    0,
+    1,
+    0,
+    1,
+    1,
+    0,
+    0
+   ],
+   "decision_chaine": 1,
+   "marge_temoin_nul": 13416.2,
+   "gains": {
+    "tenu": -0.19057,
+    "chaine": -0.03745,
+    "direct": 0.01813,
+    "direct_galilee": 0.01813,
+    "niveau:-1": -1.52442,
+    "niveau:-0.5": -0.66224,
+    "niveau:0.5": 0.0007,
+    "niveau:1": 0.01813
+   },
+   "secs": 1.5
+  },
+  {
+   "graine": 487,
+   "monde": "t3h",
+   "ecartee": false,
+   "objet": "fofaxo5",
+   "prix_reference": 7.55,
+   "cout_au_jour_183": 4.466,
+   "cout_vrai": 4.466,
+   "traits": {
+    "m": 1.691,
+    "e": 4.105,
+    "t": 2.45,
+    "etendue": 0.0371,
+    "g": 0.275,
+    "g_galilee": null,
+    "loi_retenue": 0,
+    "bruit": 0.288
+   },
+   "niveau_direct": -1,
+   "niveau_galilee": 0,
+   "loi": {
+    "texte": "π − exp(p)",
+    "retenue": false,
+    "sans_variable": false
+   },
+   "semaines": 26,
+   "plan_chaine": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "decision_chaine": 0,
+   "marge_temoin_nul": 8740.68,
+   "gains": {
+    "tenu": 0.00201,
+    "chaine": -0.03287,
+    "direct": -0.0878,
+    "direct_galilee": 0.00201,
+    "niveau:-1": -0.0878,
+    "niveau:-0.5": 0.0031,
+    "niveau:0.5": -0.03934,
+    "niveau:1": -0.12253
+   },
+   "secs": 2.5
+  },
+  {
+   "graine": 488,
+   "monde": "t3h",
+   "ecartee": false,
+   "objet": "gepane0",
+   "prix_reference": 131.74,
+   "cout_au_jour_183": 77.967,
+   "cout_vrai": 77.967,
+   "traits": {
+    "m": 1.69,
+    "e": 1.695,
+    "t": 0.551,
+    "etendue": 0.0315,
+    "g": 0.105,
+    "g_galilee": 0.044,
+    "loi_retenue": 1,
+    "bruit": 0.418
+   },
+   "niveau_direct": 1,
+   "niveau_galilee": 0.5,
+   "loi": {
+    "texte": "cos(p)",
+    "retenue": true,
+    "sans_variable": false
+   },
+   "semaines": 26,
+   "plan_chaine": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "decision_chaine": 1,
+   "marge_temoin_nul": 72754.46,
+   "gains": {
+    "tenu": 0.017,
+    "chaine": 0.09684,
+    "direct": 0.11655,
+    "direct_galilee": 0.08718,
+    "niveau:-1": -0.26915,
+    "niveau:-0.5": -0.12444,
+    "niveau:0.5": 0.08718,
+    "niveau:1": 0.11655
+   },
+   "secs": 0.7
+  },
+  {
+   "graine": 489,
+   "monde": "t3h",
+   "ecartee": false,
+   "objet": "wuda6",
+   "prix_reference": 14.58,
+   "cout_au_jour_183": 9.874,
+   "cout_vrai": 9.874,
+   "traits": {
+    "m": 1.477,
+    "e": 3.886,
+    "t": 2.579,
+    "etendue": 0.0768,
+    "g": 0.038,
+    "g_galilee": null,
+    "loi_retenue": 0,
+    "bruit": 0.551
+   },
+   "niveau_direct": -0.5,
+   "niveau_galilee": 0,
+   "loi": {
+    "texte": "5/4 − p",
+    "retenue": false,
+    "sans_variable": false
+   },
+   "semaines": 26,
+   "plan_chaine": [
+    -0.5,
+    0,
+    1,
+    -0.5,
+    1,
+    1,
+    -0.5,
+    0
+   ],
+   "decision_chaine": -0.5,
+   "marge_temoin_nul": 8229.28,
+   "gains": {
+    "tenu": 0.05168,
+    "chaine": -0.00825,
+    "direct": 0.06804,
+    "direct_galilee": 0.05168,
+    "niveau:-1": -0.30394,
+    "niveau:-0.5": 0.06804,
+    "niveau:0.5": 0.04404,
+    "niveau:1": -0.11557
+   },
+   "secs": 1.7
+  },
+  {
+   "graine": 490,
+   "monde": "t3h",
+   "ecartee": false,
+   "objet": "cabe2",
+   "prix_reference": 66.16,
+   "cout_au_jour_183": 31.823,
+   "cout_vrai": 31.823,
+   "traits": {
+    "m": 2.079,
+    "e": 0.525,
+    "t": 0.635,
+    "etendue": 0.0667,
+    "g": 0.318,
+    "g_galilee": null,
+    "loi_retenue": 0,
+    "bruit": 0.269
+   },
+   "niveau_direct": 1,
+   "niveau_galilee": 0,
+   "loi": {
+    "texte": "2/3",
+    "retenue": false,
+    "sans_variable": true
+   },
+   "semaines": 26,
+   "plan_chaine": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "decision_chaine": 0,
+   "marge_temoin_nul": 60917.02,
+   "gains": {
+    "tenu": -0.00399,
+    "chaine": 0.00597,
+    "direct": -0.25334,
+    "direct_galilee": -0.00399,
+    "niveau:-1": 0.12575,
+    "niveau:-0.5": 0.13395,
+    "niveau:0.5": -0.10059,
+    "niveau:1": -0.25334
+   },
+   "secs": 1.8
+  },
+  {
+   "graine": 491,
+   "monde": "t3h",
+   "ecartee": false,
+   "objet": "jeru8",
+   "prix_reference": 221.41,
+   "cout_au_jour_183": 131.896,
+   "cout_vrai": 131.896,
+   "traits": {
+    "m": 1.679,
+    "e": 1.679,
+    "t": 2.062,
+    "etendue": 0.0535,
+    "g": 0.113,
+    "g_galilee": null,
+    "loi_retenue": 0,
+    "bruit": 0.207
+   },
+   "niveau_direct": 1,
+   "niveau_galilee": 0,
+   "loi": {
+    "texte": "π/2 − p",
+    "retenue": false,
+    "sans_variable": false
+   },
+   "semaines": 26,
+   "plan_chaine": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "decision_chaine": 1,
+   "marge_temoin_nul": 352868.55,
+   "gains": {
+    "tenu": 0.03271,
+    "chaine": 0.02289,
+    "direct": 0.0953,
+    "direct_galilee": 0.03271,
+    "niveau:-1": -0.39533,
+    "niveau:-0.5": -0.18049,
+    "niveau:0.5": 0.12115,
+    "niveau:1": 0.0953
+   },
+   "secs": 1.9
+  },
+  {
+   "graine": 492,
+   "monde": "t3h",
+   "ecartee": false,
+   "objet": "jada8",
+   "prix_reference": 260.69,
+   "cout_au_jour_183": 131.009,
+   "cout_vrai": 131.009,
+   "traits": {
+    "m": 1.99,
+    "e": 0.961,
+    "t": 1.187,
+    "etendue": 0.074,
+    "g": 0.213,
+    "g_galilee": null,
+    "loi_retenue": 0,
+    "bruit": 0.271
+   },
+   "niveau_direct": 1,
+   "niveau_galilee": 0,
+   "loi": {
+    "texte": "0.7114",
+    "retenue": false,
+    "sans_variable": true
+   },
+   "semaines": 26,
+   "plan_chaine": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "decision_chaine": 0,
+   "marge_temoin_nul": 472463.12,
+   "gains": {
+    "tenu": 0.11686,
+    "chaine": 0.09096,
+    "direct": 0.07764,
+    "direct_galilee": 0.11686,
+    "niveau:-1": -0.03431,
+    "niveau:-0.5": 0.05651,
+    "niveau:0.5": 0.1078,
+    "niveau:1": 0.07764
+   },
+   "secs": 0.9
+  },
+  {
+   "graine": 493,
+   "monde": "t3h",
+   "ecartee": false,
+   "objet": "kazo0",
+   "prix_reference": 106.24,
+   "cout_au_jour_183": 40.571,
+   "cout_vrai": 40.571,
+   "traits": {
+    "m": 2.619,
+    "e": 3.775,
+    "t": 7.105,
+    "etendue": 0.109,
+    "g": 0.571,
+    "g_galilee": null,
+    "loi_retenue": 1,
+    "bruit": 0.335
+   },
+   "niveau_direct": -1,
+   "niveau_galilee": 0,
+   "loi": {
+    "texte": "sin(3·p)",
+    "retenue": true,
+    "sans_variable": false
+   },
+   "semaines": 26,
+   "plan_chaine": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "decision_chaine": -1,
+   "marge_temoin_nul": 74927.62,
+   "gains": {
+    "tenu": 0.18931,
+    "chaine": 0.80126,
+    "direct": 1.04346,
+    "direct_galilee": 0.18931,
+    "niveau:-1": 1.04346,
+    "niveau:-0.5": 0.56455,
+    "niveau:0.5": -0.15244,
+    "niveau:1": -0.35254
+   },
+   "secs": 1.7
+  },
+  {
+   "graine": 494,
+   "monde": "t3h",
+   "ecartee": false,
+   "objet": "luqe3",
+   "prix_reference": 58.49,
+   "cout_au_jour_183": 43.679,
+   "cout_vrai": 43.679,
+   "traits": {
+    "m": 1.339,
+    "e": 1.751,
+    "t": 2.064,
+    "etendue": 0.0728,
+    "g": 0.344,
+    "g_galilee": null,
+    "loi_retenue": 0,
+    "bruit": 0.332
+   },
+   "niveau_direct": 1,
+   "niveau_galilee": 0,
+   "loi": {
+    "texte": "cos(p)",
+    "retenue": false,
+    "sans_variable": false
+   },
+   "semaines": 26,
+   "plan_chaine": [
+    0,
+    0,
+    1,
+    0,
+    1,
+    1,
+    0,
+    0
+   ],
+   "decision_chaine": 1,
+   "marge_temoin_nul": 21724.4,
+   "gains": {
+    "tenu": 0.15695,
+    "chaine": -0.07556,
+    "direct": -0.13703,
+    "direct_galilee": 0.15695,
+    "niveau:-1": -0.38826,
+    "niveau:-0.5": 0.09381,
+    "niveau:0.5": 0.04135,
+    "niveau:1": -0.13703
+   },
+   "secs": 1.6
+  },
+  {
+   "graine": 495,
+   "monde": "t3h",
+   "ecartee": false,
+   "objet": "vifabu9",
+   "prix_reference": 80.03,
+   "cout_au_jour_183": 45.888,
+   "cout_vrai": 45.888,
+   "traits": {
+    "m": 1.744,
+    "e": 3.852,
+    "t": 2.196,
+    "etendue": 0.0496,
+    "g": 0.254,
+    "g_galilee": null,
+    "loi_retenue": 0,
+    "bruit": 0.424
+   },
+   "niveau_direct": -1,
+   "niveau_galilee": 0,
+   "loi": {
+    "texte": "1/2",
+    "retenue": false,
+    "sans_variable": true
+   },
+   "semaines": 26,
+   "plan_chaine": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "decision_chaine": 0,
+   "marge_temoin_nul": 79952.67,
+   "gains": {
+    "tenu": 0.07613,
+    "chaine": 0.0207,
+    "direct": -0.11552,
+    "direct_galilee": 0.07613,
+    "niveau:-1": -0.11552,
+    "niveau:-0.5": -0.02921,
+    "niveau:0.5": 0.00704,
+    "niveau:1": -0.03213
+   },
+   "secs": 0.9
+  },
+  {
+   "graine": 496,
+   "monde": "t3h",
+   "ecartee": false,
+   "objet": "tutu6",
+   "prix_reference": 193.34,
+   "cout_au_jour_183": 106.054,
+   "cout_vrai": 106.054,
+   "traits": {
+    "m": 1.823,
+    "e": 5.091,
+    "t": 3.378,
+    "etendue": 0.0458,
+    "g": 0.735,
+    "g_galilee": null,
+    "loi_retenue": 0,
+    "bruit": 0.362
+   },
+   "niveau_direct": -1,
+   "niveau_galilee": 0,
+   "loi": {
+    "texte": "1/2",
+    "retenue": false,
+    "sans_variable": true
+   },
+   "semaines": 26,
+   "plan_chaine": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "decision_chaine": -1,
+   "marge_temoin_nul": 161142.84,
+   "gains": {
+    "tenu": -0.012,
+    "chaine": -0.2311,
+    "direct": -0.2355,
+    "direct_galilee": -0.012,
+    "niveau:-1": -0.2355,
+    "niveau:-0.5": -0.11188,
+    "niveau:0.5": -0.06259,
+    "niveau:1": -0.2873
+   },
+   "secs": 1.2
+  },
+  {
+   "graine": 497,
+   "monde": "t3h",
+   "ecartee": false,
+   "objet": "lasa0",
+   "prix_reference": 51.76,
+   "cout_au_jour_183": 25.622,
+   "cout_vrai": 25.622,
+   "traits": {
+    "m": 2.02,
+    "e": 2.926,
+    "t": 2.576,
+    "etendue": 0.0544,
+    "g": 0.16,
+    "g_galilee": null,
+    "loi_retenue": 0,
+    "bruit": 0.315
+   },
+   "niveau_direct": -1,
+   "niveau_galilee": 0,
+   "loi": {
+    "texte": "cos(p)",
+    "retenue": false,
+    "sans_variable": false
+   },
+   "semaines": 26,
+   "plan_chaine": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "decision_chaine": -1,
+   "marge_temoin_nul": 42649.92,
+   "gains": {
+    "tenu": 0.13131,
+    "chaine": 0.2712,
+    "direct": 0.34557,
+    "direct_galilee": 0.13131,
+    "niveau:-1": 0.34557,
+    "niveau:-0.5": 0.29884,
+    "niveau:0.5": -0.04353,
+    "niveau:1": -0.22669
+   },
+   "secs": 2.3
+  },
+  {
+   "graine": 498,
+   "monde": "t3h",
+   "ecartee": false,
+   "objet": "duloze6",
+   "prix_reference": 96.65,
+   "cout_au_jour_183": 45.084,
+   "cout_vrai": 45.084,
+   "traits": {
+    "m": 2.144,
+    "e": 1.574,
+    "t": 1.183,
+    "etendue": 0.0374,
+    "g": 0.033,
+    "g_galilee": null,
+    "loi_retenue": 0,
+    "bruit": 0.24
+   },
+   "niveau_direct": 1,
+   "niveau_galilee": 0,
+   "loi": {
+    "texte": "2/3",
+    "retenue": false,
+    "sans_variable": true
+   },
+   "semaines": 26,
+   "plan_chaine": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "decision_chaine": 0,
+   "marge_temoin_nul": 43332.85,
+   "gains": {
+    "tenu": 0.01031,
+    "chaine": -0.00664,
+    "direct": -0.07555,
+    "direct_galilee": 0.01031,
+    "niveau:-1": -0.05746,
+    "niveau:-0.5": -0.00625,
+    "niveau:0.5": -0.02524,
+    "niveau:1": -0.07555
+   },
+   "secs": 0.6
+  },
+  {
+   "graine": 499,
+   "monde": "t3h",
+   "ecartee": false,
+   "objet": "veze4",
+   "prix_reference": 5.24,
+   "cout_au_jour_183": 3.332,
+   "cout_vrai": 3.332,
+   "traits": {
+    "m": 1.573,
+    "e": 1.31,
+    "t": 2.203,
+    "etendue": 0.1161,
+    "g": 0.259,
+    "g_galilee": null,
+    "loi_retenue": 0,
+    "bruit": 0.495
+   },
+   "niveau_direct": 1,
+   "niveau_galilee": 0,
+   "loi": {
+    "texte": "4/3 − p",
+    "retenue": false,
+    "sans_variable": false
+   },
+   "semaines": 26,
+   "plan_chaine": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "decision_chaine": 0,
+   "marge_temoin_nul": 1613.83,
+   "gains": {
+    "tenu": 0.01998,
+    "chaine": 0.04909,
+    "direct": -0.09878,
+    "direct_galilee": 0.01998,
+    "niveau:-1": -0.02257,
+    "niveau:-0.5": 0.08699,
+    "niveau:0.5": 0.02123,
+    "niveau:1": -0.09878
+   },
+   "secs": 1.3
+  },
+  {
+   "graine": 500,
+   "monde": "t3h",
+   "ecartee": false,
+   "objet": "rujavu0",
+   "prix_reference": 39.11,
+   "cout_au_jour_183": 19.437,
+   "cout_vrai": 19.437,
+   "traits": {
+    "m": 2.012,
+    "e": 0.295,
+    "t": 0.31,
+    "etendue": 0.0783,
+    "g": 0.402,
+    "g_galilee": 0.075,
+    "loi_retenue": 1,
+    "bruit": 0.393
+   },
+   "niveau_direct": 1,
+   "niveau_galilee": 0.5,
+   "loi": {
+    "texte": "cos(p)",
+    "retenue": true,
+    "sans_variable": false
+   },
+   "semaines": 26,
+   "plan_chaine": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "decision_chaine": 1,
+   "marge_temoin_nul": 46657.51,
+   "gains": {
+    "tenu": 0.0465,
+    "chaine": 0.15626,
+    "direct": 0.24672,
+    "direct_galilee": 0.15222,
+    "niveau:-1": -0.26559,
+    "niveau:-0.5": -0.12456,
+    "niveau:0.5": 0.15222,
+    "niveau:1": 0.24672
+   },
+   "secs": 1.2
+  }
+ ]
+}

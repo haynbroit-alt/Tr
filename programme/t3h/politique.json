@@ -1,0 +1,206 @@
+{
+ "protocole": "programme/t3h/PROTOCOLE_T3H.md",
+ "entreprises": 199,
+ "restreinte": {
+  "actions": [
+   "tenu",
+   "chaine"
+  ],
+  "traits": [
+   "m",
+   "e",
+   "t",
+   "etendue",
+   "g",
+   "g_galilee",
+   "loi_retenue",
+   "bruit"
+  ],
+  "reference": "chaine",
+  "validation": [
+   {
+    "profondeur": 0,
+    "gain": {
+     "n": 199,
+     "moyenne": 0.12373723618090461,
+     "erreur_type": 0.019202931285227726,
+     "t": 6.443663956455032
+    },
+    "avantage": {
+     "n": 199,
+     "moyenne": 0,
+     "erreur_type": 0,
+     "t": 0
+    }
+   },
+   {
+    "profondeur": 1,
+    "gain": {
+     "n": 199,
+     "moyenne": 0.12373723618090461,
+     "erreur_type": 0.019202931285227726,
+     "t": 6.443663956455032
+    },
+    "avantage": {
+     "n": 199,
+     "moyenne": 0,
+     "erreur_type": 0,
+     "t": 0
+    }
+   },
+   {
+    "profondeur": 2,
+    "gain": {
+     "n": 199,
+     "moyenne": 0.12373723618090461,
+     "erreur_type": 0.019202931285227726,
+     "t": 6.443663956455032
+    },
+    "avantage": {
+     "n": 199,
+     "moyenne": 0,
+     "erreur_type": 0,
+     "t": 0
+    }
+   },
+   {
+    "profondeur": 3,
+    "gain": {
+     "n": 199,
+     "moyenne": 0.12373723618090461,
+     "erreur_type": 0.019202931285227726,
+     "t": 6.443663956455032
+    },
+    "avantage": {
+     "n": 199,
+     "moyenne": 0,
+     "erreur_type": 0,
+     "t": 0
+    }
+   }
+  ],
+  "profondeur": 0,
+  "refus": true,
+  "annonce": {
+   "n": 199,
+   "moyenne": 0,
+   "erreur_type": 0,
+   "t": 0
+  },
+  "regle": {
+   "action": "chaine",
+   "n": 199
+  },
+  "en_clair": [
+   "→ chaine (199 entreprises de l’atelier)"
+  ],
+  "traits_utilises": [],
+  "actions_utilisees": [
+   "chaine"
+  ]
+ },
+ "complete": {
+  "actions": [
+   "tenu",
+   "chaine",
+   "direct",
+   "direct_galilee",
+   "niveau:-1",
+   "niveau:-0.5",
+   "niveau:0.5",
+   "niveau:1"
+  ],
+  "traits": [
+   "m",
+   "e",
+   "t",
+   "etendue",
+   "g",
+   "g_galilee",
+   "loi_retenue",
+   "bruit"
+  ],
+  "reference": "chaine",
+  "validation": [
+   {
+    "profondeur": 0,
+    "gain": {
+     "n": 199,
+     "moyenne": 0.12373723618090461,
+     "erreur_type": 0.019202931285227726,
+     "t": 6.443663956455032
+    },
+    "avantage": {
+     "n": 199,
+     "moyenne": 0,
+     "erreur_type": 0,
+     "t": 0
+    }
+   },
+   {
+    "profondeur": 1,
+    "gain": {
+     "n": 199,
+     "moyenne": 0.120224824120603,
+     "erreur_type": 0.020643874052755123,
+     "t": 5.8237530326609335
+    },
+    "avantage": {
+     "n": 199,
+     "moyenne": -0.003512412060301506,
+     "erreur_type": 0.008785737172955693,
+     "t": -0.39978569710842626
+    }
+   },
+   {
+    "profondeur": 2,
+    "gain": {
+     "n": 199,
+     "moyenne": 0.11381065326633165,
+     "erreur_type": 0.02075756793014727,
+     "t": 5.482851056989131
+    },
+    "avantage": {
+     "n": 199,
+     "moyenne": -0.00992658291457287,
+     "erreur_type": 0.009253338110180583,
+     "t": -1.0727569657971947
+    }
+   },
+   {
+    "profondeur": 3,
+    "gain": {
+     "n": 199,
+     "moyenne": 0.11703693467336682,
+     "erreur_type": 0.021024374188680073,
+     "t": 5.566726201837758
+    },
+    "avantage": {
+     "n": 199,
+     "moyenne": -0.006700301507537689,
+     "erreur_type": 0.010031013905742882,
+     "t": -0.6679585504015383
+    }
+   }
+  ],
+  "profondeur": 0,
+  "refus": true,
+  "annonce": {
+   "n": 199,
+   "moyenne": 0,
+   "erreur_type": 0,
+   "t": 0
+  },
+  "regle": {
+   "action": "chaine",
+   "n": 199
+  },
+  "en_clair": [
+   "→ chaine (199 entreprises de l’atelier)"
+  ],
+  "traits_utilises": [],
+  "actions_utilisees": [
+   "chaine"
+  ]
+ }
+}
