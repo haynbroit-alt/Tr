@@ -87,8 +87,9 @@ non de neuf.
 
 ## 7. Ce que cela change
 
-1. **Ce qui est solide, sur 200 entreprises et trois tests** : reconstituer le coût depuis les écritures (exact
-   200 fois sur 200, et décisif pour la décision) ; choisir, après un essai, un meilleur prix qu'une règle fixe
+1. **Ce qui est solide, sur 160 entreprises et trois tests** (40 + 40 + 80 ; une première version de ce compte
+   rendu disait 200, par erreur d'addition) : reconstituer le coût depuis les écritures (exact 160 fois sur 160,
+   et décisif pour la décision) ; choisir, après un essai, un meilleur prix qu'une règle fixe
    **pendant la période d'exploitation** ; ne pas faire durer l'essai.
 2. **Ce qui ne l'est pas** : que l'essai se rembourse face à « ne rien changer » sur six mois. L'avantage, s'il
    existe, est de quelques points et demande plus de 80 entreprises pour être établi.

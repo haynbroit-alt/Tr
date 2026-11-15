@@ -127,7 +127,7 @@ export function verdictCortex(obs, corps, tok, pref, niveaux, jours, aLHeure) {
 }
 
 // Marge sur ventes de l'objet, lue dans la vérité ouverte : montant − coût vrai × quantité, doublons exclus.
-function margeVraie(E, tok) {
+export function margeVraie(E, tok) {
   const T = E.verite, stock = T.releves.find((r) => r.cle === tok).stock, c = T.stocks.find((s) => s.id === stock).na;
   const lignes = E.observe.journal.filter((r) => r.objet === tok && estVente(r) && !T.records[r.id].dup && T.records[r.id].type.startsWith('vente.'));
   const pj = new Map();

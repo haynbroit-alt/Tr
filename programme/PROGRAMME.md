@@ -407,7 +407,7 @@ fractionné ; l'appariement de l'abonnement réaliste. PR `haynbroit-alt/A#14`.
 - **Corrections à la note précédente** : l'avantage de 8,8 points de l'essai court n'est pas reproduit ; la loi de
   GALILÉE ne gêne pas (elle n'aide pas non plus) ; le plan de CORTEX ne pèse pas de façon établie dans le monde
   sensible ; le bras bref ne vaut pas le court.
-- **Ce qui tient sur les trois tests (200 entreprises)** : le coût de LAVOISIER, exact partout et décisif ; une
+- **Ce qui tient sur les trois tests (160 entreprises jamais vues en mise au point ; j'avais d'abord écrit 200 par erreur)** : le coût de LAVOISIER, exact partout et décisif ; une
   décision meilleure qu'une règle fixe pendant l'exploitation ; un essai de 8 blocs meilleur qu'un essai de 13.
 - **Ce qui reste ouvert** : que l'essai se rembourse face à « ne rien changer ». Pistes : coût de l'essai,
   comparateur moins bruité, ventes réelles. **Gains réels : 0 €.**
@@ -433,3 +433,18 @@ fractionné ; l'appariement de l'abonnement réaliste. PR `haynbroit-alt/A#14`.
 - **Conséquences** : l'outil `essai-prix-client` écarte les ventes signalées en promotion ; une mission ne conclut
   jamais sur l'historique seul et demande au client ses semaines de promotion ; exemple F au dossier.
 - **Gains réels : 0 €.** Le prochain pas reste un vrai essai avec un client.
+
+### État de l'art, T3d, L2c et offre (15 novembre 2026, suite)
+
+- **Décision du propriétaire** : le travail technique et l'offre continuent sans attendre l'immatriculation ; la
+  structure sera régularisée avant le démarrage commercial. Consigne : ne tenir aucune contrainte pour éternelle
+  (`programme/CONTRAINTES.md`).
+- **T3d exécuté** (`programme/t3d/`, 60 entreprises, dossier `essai-prix#T3D`) : notre chaîne (+11,5 %) et le
+  bandit de Thompson, méthode de référence publiée (+12,0 %), font jeu égal ; les deux dépassent la meilleure
+  règle aveugle de 12 points (établi). Sur les trois lots T3b, T3c, T3d (180 entreprises), l'avantage de l'essai
+  sur « ne rien changer » est de 6,6 points en moyenne, mais varie de 2 à 12 points d'un lot à l'autre.
+- **L2c fait** (`haynbroit-alt/A`, `PROTOCOLE_L2C.md`) : option de hasard commun du simulateur. Avec elle, deux
+  relances ne diffèrent plus que par l'effet du prix. Pas encore utilisée dans un essai.
+- **Offre commerciale en brouillon** : `programme/offre/OFFRE.md`. Rien n'est publié.
+- **Gains réels : 0 €.**
+
