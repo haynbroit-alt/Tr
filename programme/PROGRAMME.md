@@ -407,7 +407,7 @@ fractionné ; l'appariement de l'abonnement réaliste. PR `haynbroit-alt/A#14`.
 - **Corrections à la note précédente** : l'avantage de 8,8 points de l'essai court n'est pas reproduit ; la loi de
   GALILÉE ne gêne pas (elle n'aide pas non plus) ; le plan de CORTEX ne pèse pas de façon établie dans le monde
   sensible ; le bras bref ne vaut pas le court.
-- **Ce qui tient sur les trois tests (200 entreprises)** : le coût de LAVOISIER, exact partout et décisif ; une
+- **Ce qui tient sur les trois tests (160 entreprises jamais vues en mise au point ; j'avais d'abord écrit 200 par erreur)** : le coût de LAVOISIER, exact partout et décisif ; une
   décision meilleure qu'une règle fixe pendant l'exploitation ; un essai de 8 blocs meilleur qu'un essai de 13.
 - **Ce qui reste ouvert** : que l'essai se rembourse face à « ne rien changer ». Pistes : coût de l'essai,
   comparateur moins bruité, ventes réelles. **Gains réels : 0 €.**

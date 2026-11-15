@@ -39,7 +39,7 @@ export function lireVentes(texte) {
 }
 
 const LIMITES = [
-  'Méthode éprouvée en simulation seulement (200 entreprises simulées, trois tests) ; jamais encore sur une entreprise réelle.',
+  'Méthode éprouvée en simulation seulement (160 entreprises simulées, trois tests) ; jamais encore sur une entreprise réelle.',
   'Établi en simulation : le prix choisi après l’essai fait mieux qu’une règle fixe pendant qu’on l’applique.',
   'NON établi : que l’essai se rembourse face à « ne rien changer ». En simulation, près d’une entreprise sur deux y perd.',
   'Une semaine à prix bas peut vendre plus que le réapprovisionnement ne soutient : la hausse des ventes est alors surestimée.',
