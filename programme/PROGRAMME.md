@@ -527,3 +527,6 @@ fractionné ; l'appariement de l'abonnement réaliste. PR `haynbroit-alt/A#14`.
   reste juste dans 57 à 60 entreprises sur 60 pour chacun des six dégâts. **Je corrige** ce que j'avais écrit après
   SYNERGIE : la fragilité de LAVOISIER touche l'audit, pas le coût ni donc l'essai de prix. Seul défaut : le coût
   « par sommes » (une entreprise sur 60), faux et instable — à refuser.
+- **ARÈNE-2 exécutée** (`programme/arene/RESULTATS_ARENE_2.md`, 200 entreprises neuves) : l'arrêt anticipé prend la
+  place (+0,8 point, t = 2,17 : mince) ; le plan naïf est relégué (−3,3 points), ce qui établit enfin l'apport du
+  plan de CORTEX quand le coût est connu. L'outil de livraison n'est pas changé : décision du propriétaire.
