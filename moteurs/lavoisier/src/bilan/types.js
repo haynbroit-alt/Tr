@@ -90,3 +90,32 @@ export function refineByLinks(journal, typeOf, links) {
   }
   return out;
 }
+
+// Après l'apprentissage des liens : un enregistrement dont le libellé ne garde aucun mot de son groupe de forme
+// (type « ? »), ou isolé dans un type minuscule, suit le type que portent nettement les autres enregistrements de sa
+// contrepartie dans le même groupe. Les règles de liens restent apprises sur les types du vocabulaire seul (des
+// types minuscules grossis par cette règle fabriqueraient des règles sur trop peu de références).
+export function adoptCounterpartType(journal, typeOf) {
+  const out = new Map(typeOf);
+  out.ambiguous = typeOf.ambiguous;
+  const groups = new Map();
+  for (const r of journal) { const k = shapeKey(r); if (!groups.has(k)) groups.set(k, []); groups.get(k).push(r); }
+  for (const g of groups.values()) {
+    const size = new Map();
+    for (const r of g) { const t = typeOf.get(r.id); size.set(t, (size.get(t) ?? 0) + 1); }
+    const frag = (t) => t.endsWith('#?') || size.get(t) < 3;
+    const byCp = new Map();
+    for (const r of g) {
+      const t = typeOf.get(r.id);
+      if (r.contrepartie == null || frag(t)) continue;
+      if (!byCp.has(r.contrepartie)) byCp.set(r.contrepartie, new Map());
+      const c = byCp.get(r.contrepartie); c.set(t, (c.get(t) ?? 0) + 1);
+    }
+    for (const r of g) {
+      if (r.contrepartie == null || !frag(typeOf.get(r.id)) || !byCp.has(r.contrepartie)) continue;
+      const c = [...byCp.get(r.contrepartie)].sort((a, b) => b[1] - a[1]), tot = c.reduce((s, [, n]) => s + n, 0);
+      if (c[0][1] >= 2 && c[0][1] >= 0.75 * tot) out.set(r.id, c[0][0]);
+    }
+  }
+  return out;
+}

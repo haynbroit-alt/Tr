@@ -1,0 +1,6130 @@
+{
+ "protocole": "programme/t3/PROTOCOLE_T3.md",
+ "entreprises": [
+  {
+   "graine": 201,
+   "ecartee": false,
+   "objet": "veru3",
+   "prix_reference": 43.2,
+   "cout_vrai": 37.361,
+   "eligibles": 6,
+   "objets": 15,
+   "plan_cortex": {
+    "niveaux": [
+     -1,
+     0,
+     1,
+     -1,
+     1,
+     1,
+     -1,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
+    ],
+    "budget": {
+     "u0": 0.46153846153846156,
+     "u1": 0,
+     "jours": 91
+    }
+   },
+   "collectif": {
+    "niveaux": [
+     -1,
+     0,
+     1,
+     -1,
+     1,
+     1,
+     -1,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
+    ],
+    "cout": {
+     "cout": 37.361026615969585,
+     "methode": "paires reliées",
+     "paires": 13
+    },
+    "table": [
+     {
+      "u": -1,
+      "jours": 21,
+      "parJour": 17.476,
+      "tardParJour": 3.19
+     },
+     {
+      "u": -0.5,
+      "jours": 0,
+      "parJour": null,
+      "tardParJour": null
+     },
+     {
+      "u": 0,
+      "jours": 49,
+      "parJour": 12.551,
+      "tardParJour": 2.592
+     },
+     {
+      "u": 0.5,
+      "jours": 0,
+      "parJour": null,
+      "tardParJour": null
+     },
+     {
+      "u": 1,
+      "jours": 21,
+      "parJour": 11.048,
+      "tardParJour": 3.429
+     }
+    ],
+    "types_a_l_heure": 1,
+    "bilan_s": 0.5,
+    "loi": {
+     "texte": "exp(−3·p / 2)",
+     "retenue": true,
+     "sans_variable": false,
+     "erreur_loi": 5.632,
+     "erreur_constante": 5.971,
+     "erreur_droite": 5.669,
+     "secs": 1
+    },
+    "decisions": {
+     "complet": {
+      "niveau": 1,
+      "par": "loi",
+      "prevu": {
+       "0": 76.69,
+       "1": 186.99,
+       "-1": -46.47,
+       "-0.5": 19,
+       "0.5": 133.02
+      }
+     },
+     "sans_galilee": {
+      "niveau": 1,
+      "par": "table",
+      "prevu": {
+       "0": 73.29,
+       "1": 183.82,
+       "-1": -48.95
+      }
+     },
+     "sans_lavoisier": {
+      "niveau": 1,
+      "par": "loi",
+      "prevu": {
+       "0": 567.37,
+       "1": 606.86,
+       "-1": 573.41,
+       "-0.5": 574.06,
+       "0.5": 587.32
+      }
+     }
+    },
+    "juge": {
+     "verdict": "indecis",
+     "loi": "1 / (p·4)",
+     "logE": 0,
+     "seuil": 2.3,
+     "diagnostic": "mal estimé",
+     "secs": 1.304
+    }
+   },
+   "naif": {
+    "niveaux": [
+     0.5,
+     0.5,
+     0.5,
+     0.5,
+     0.5,
+     0.5,
+     -0.5,
+     -0.5,
+     -0.5,
+     -0.5,
+     -0.5,
+     -0.5,
+     -0.5
+    ],
+    "cout": {
+     "cout": 37.361015625,
+     "methode": "paires reliées",
+     "paires": 13
+    },
+    "table": [
+     {
+      "u": -1,
+      "jours": 0,
+      "parJour": null,
+      "tardParJour": null
+     },
+     {
+      "u": -0.5,
+      "jours": 49,
+      "parJour": 13.837,
+      "tardParJour": 1.857
+     },
+     {
+      "u": 0,
+      "jours": 0,
+      "parJour": null,
+      "tardParJour": null
+     },
+     {
+      "u": 0.5,
+      "jours": 42,
+      "parJour": 12.048,
+      "tardParJour": 4.381
+     },
+     {
+      "u": 1,
+      "jours": 0,
+      "parJour": null,
+      "tardParJour": null
+     }
+    ],
+    "types_a_l_heure": 1,
+    "bilan_s": 0.4,
+    "loi": {
+     "texte": "5/4 − p",
+     "retenue": false,
+     "sans_variable": false,
+     "erreur_loi": 5.593,
+     "erreur_constante": 5.932,
+     "erreur_droite": 5.542,
+     "secs": 0.7
+    },
+    "decisions": {
+     "complet": {
+      "niveau": 0.5,
+      "par": "table",
+      "prevu": {
+       "-0.5": 17.7,
+       "0.5": 131.79
+      }
+     },
+     "sans_galilee": {
+      "niveau": 0.5,
+      "par": "table",
+      "prevu": {
+       "-0.5": 17.7,
+       "0.5": 131.79
+      }
+     },
+     "sans_lavoisier": {
+      "niveau": 0.5,
+      "par": "table",
+      "prevu": {
+       "-0.5": 534.65,
+       "0.5": 581.9
+      }
+     }
+    },
+    "juge": null
+   },
+   "bras": {
+    "nul": {
+     "essai": 7108.95,
+     "exploitation": 8820.21,
+     "total": 15929.16,
+     "profit_2e_semestre": 349718.13
+    },
+    "aveugle:-1": {
+     "essai": -4576.87,
+     "exploitation": -4515.25,
+     "total": -9092.12,
+     "profit_2e_semestre": 314581.12
+    },
+    "aveugle:-0.5": {
+     "essai": 1927.42,
+     "exploitation": 1724.06,
+     "total": 3651.48,
+     "profit_2e_semestre": 309534.52
+    },
+    "aveugle:0": {
+     "essai": 6872.48,
+     "exploitation": 7006.77,
+     "total": 13879.25,
+     "profit_2e_semestre": 365673.02
+    },
+    "aveugle:0.5": {
+     "essai": 10906.16,
+     "exploitation": 11496.86,
+     "total": 22403.02,
+     "profit_2e_semestre": 319250.76
+    },
+    "aveugle:1": {
+     "essai": 17454.29,
+     "exploitation": 17304.54,
+     "total": 34758.82,
+     "profit_2e_semestre": 354478.61
+    },
+    "collectif": {
+     "essai": 6431.17,
+     "exploitation": 14542.47,
+     "total": 20973.63,
+     "profit_2e_semestre": 282583.29
+    },
+    "sans_galilee": {
+     "essai": 6431.17,
+     "exploitation": 14542.47,
+     "total": 20973.63,
+     "profit_2e_semestre": 282583.29
+    },
+    "sans_lavoisier": {
+     "essai": 6431.17,
+     "exploitation": 14542.47,
+     "total": 20973.63,
+     "profit_2e_semestre": 282583.29
+    },
+    "sans_plan_cortex": {
+     "essai": 6440.64,
+     "exploitation": 11004.61,
+     "total": 17445.25,
+     "profit_2e_semestre": 359450.72
+    }
+   },
+   "courses": 8,
+   "secs": 5.9,
+   "identites": {
+    "lavoisier": {
+     "nom": "LAVOISIER",
+     "depot": "haynbroit-alt/A",
+     "commit": "718b7d3"
+    },
+    "cortex": {
+     "nom": "CORTEX",
+     "depot": "haynbroit-alt/1",
+     "commit": "93931fb"
+    },
+    "galilee": {
+     "nom": "GALILÉE",
+     "depot": "haynbroit-alt/All",
+     "commit": "be42b7e"
+    }
+   }
+  },
+  {
+   "graine": 202,
+   "ecartee": false,
+   "objet": "guda2",
+   "prix_reference": 147.99,
+   "cout_vrai": 65.347,
+   "eligibles": 11,
+   "objets": 26,
+   "plan_cortex": {
+    "niveaux": [
+     -1,
+     0,
+     1,
+     -1,
+     1,
+     1,
+     -1,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
+    ],
+    "budget": {
+     "u0": 0.46153846153846156,
+     "u1": 0,
+     "jours": 91
+    }
+   },
+   "collectif": {
+    "niveaux": [
+     -1,
+     0,
+     1,
+     -1,
+     1,
+     1,
+     -1,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
+    ],
+    "cout": {
+     "cout": 65.34690476190477,
+     "methode": "paires reliées",
+     "paires": 11
+    },
+    "table": [
+     {
+      "u": -1,
+      "jours": 21,
+      "parJour": 18.048,
+      "tardParJour": 9.19
+     },
+     {
+      "u": -0.5,
+      "jours": 0,
+      "parJour": null,
+      "tardParJour": null
+     },
+     {
+      "u": 0,
+      "jours": 49,
+      "parJour": 14.531,
+      "tardParJour": 7.633
+     },
+     {
+      "u": 0.5,
+      "jours": 0,
+      "parJour": null,
+      "tardParJour": null
+     },
+     {
+      "u": 1,
+      "jours": 21,
+      "parJour": 13.762,
+      "tardParJour": 5.429
+     }
+    ],
+    "types_a_l_heure": 1,
+    "bilan_s": 1.1,
+    "loi": {
+     "texte": "0.3662",
+     "retenue": false,
+     "sans_variable": true,
+     "erreur_loi": 5.001,
+     "erreur_constante": 5.001,
+     "erreur_droite": 5.008,
+     "secs": 0.7
+    },
+    "decisions": {
+     "complet": {
+      "niveau": 1,
+      "par": "table",
+      "prevu": {
+       "0": 1200.85,
+       "1": 1646.52,
+       "-1": 957.3
+      }
+     },
+     "sans_galilee": {
+      "niveau": 1,
+      "par": "table",
+      "prevu": {
+       "0": 1200.85,
+       "1": 1646.52,
+       "-1": 957.3
+      }
+     },
+     "sans_lavoisier": {
+      "niveau": 1,
+      "par": "table",
+      "prevu": {
+       "0": 2150.39,
+       "1": 2545.81,
+       "-1": 2136.66
+      }
+     }
+    },
+    "juge": {
+     "verdict": "sans objet",
+     "raison": "aucune loi dépendant du prix sur les 56 premiers jours",
+     "loi": "0.3658"
+    }
+   },
+   "naif": {
+    "niveaux": [
+     0.5,
+     0.5,
+     0.5,
+     0.5,
+     0.5,
+     0.5,
+     -0.5,
+     -0.5,
+     -0.5,
+     -0.5,
+     -0.5,
+     -0.5,
+     -0.5
+    ],
+    "cout": {
+     "cout": 65.34690410958903,
+     "methode": "paires reliées",
+     "paires": 12
+    },
+    "table": [
+     {
+      "u": -1,
+      "jours": 0,
+      "parJour": null,
+      "tardParJour": null
+     },
+     {
+      "u": -0.5,
+      "jours": 49,
+      "parJour": 17.918,
+      "tardParJour": 9.143
+     },
+     {
+      "u": 0,
+      "jours": 0,
+      "parJour": null,
+      "tardParJour": null
+     },
+     {
+      "u": 0.5,
+      "jours": 42,
+      "parJour": 16.69,
+      "tardParJour": 9.5
+     },
+     {
+      "u": 1,
+      "jours": 0,
+      "parJour": null,
+      "tardParJour": null
+     }
+    ],
+    "types_a_l_heure": 1,
+    "bilan_s": 0.9,
+    "loi": {
+     "texte": "0.3993",
+     "retenue": false,
+     "sans_variable": true,
+     "erreur_loi": 5.255,
+     "erreur_constante": 5.255,
+     "erreur_droite": 5.221,
+     "secs": 0.4
+    },
+    "decisions": {
+     "complet": {
+      "niveau": 0.5,
+      "par": "table",
+      "prevu": {
+       "-0.5": 1200.94,
+       "0.5": 1670.94
+      }
+     },
+     "sans_galilee": {
+      "niveau": 0.5,
+      "par": "table",
+      "prevu": {
+       "-0.5": 1200.94,
+       "0.5": 1670.94
+      }
+     },
+     "sans_lavoisier": {
+      "niveau": 0.5,
+      "par": "table",
+      "prevu": {
+       "-0.5": 2371.85,
+       "0.5": 2761.61
+      }
+     }
+    },
+    "juge": null
+   },
+   "bras": {
+    "nul": {
+     "essai": 99482.9,
+     "exploitation": 102985.36,
+     "total": 202468.26,
+     "profit_2e_semestre": 373601.27
+    },
+    "aveugle:-1": {
+     "essai": 89165.45,
+     "exploitation": 90226.32,
+     "total": 179391.77,
+     "profit_2e_semestre": 334397.93
+    },
+    "aveugle:-0.5": {
+     "essai": 109448.73,
+     "exploitation": 112665.83,
+     "total": 222114.56,
+     "profit_2e_semestre": 414497.83
+    },
+    "aveugle:0": {
+     "essai": 129336.45,
+     "exploitation": 137518.12,
+     "total": 266854.58,
+     "profit_2e_semestre": 464842.95
+    },
+    "aveugle:0.5": {
+     "essai": 131448.5,
+     "exploitation": 142260.72,
+     "total": 273709.22,
+     "profit_2e_semestre": 465663.36
+    },
+    "aveugle:1": {
+     "essai": 141657.43,
+     "exploitation": 134598.49,
+     "total": 276255.92,
+     "profit_2e_semestre": 487064.83
+    },
+    "collectif": {
+     "essai": 115837.44,
+     "exploitation": 180302.15,
+     "total": 296139.59,
+     "profit_2e_semestre": 456861.08
+    },
+    "sans_galilee": {
+     "essai": 115837.44,
+     "exploitation": 180302.15,
+     "total": 296139.59,
+     "profit_2e_semestre": 456861.08
+    },
+    "sans_lavoisier": {
+     "essai": 115837.44,
+     "exploitation": 180302.15,
+     "total": 296139.59,
+     "profit_2e_semestre": 456861.08
+    },
+    "sans_plan_cortex": {
+     "essai": 132108.63,
+     "exploitation": 129446.24,
+     "total": 261554.87,
+     "profit_2e_semestre": 429637.78
+    }
+   },
+   "courses": 8,
+   "secs": 5.1,
+   "identites": {
+    "lavoisier": {
+     "nom": "LAVOISIER",
+     "depot": "haynbroit-alt/A",
+     "commit": "718b7d3"
+    },
+    "cortex": {
+     "nom": "CORTEX",
+     "depot": "haynbroit-alt/1",
+     "commit": "93931fb"
+    },
+    "galilee": {
+     "nom": "GALILÉE",
+     "depot": "haynbroit-alt/All",
+     "commit": "be42b7e"
+    }
+   }
+  },
+  {
+   "graine": 203,
+   "ecartee": false,
+   "objet": "tobe1",
+   "prix_reference": 27.44,
+   "cout_vrai": 14.858,
+   "eligibles": 8,
+   "objets": 30,
+   "plan_cortex": {
+    "niveaux": [
+     -1,
+     0,
+     1,
+     -1,
+     1,
+     1,
+     -1,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
+    ],
+    "budget": {
+     "u0": 0.46153846153846156,
+     "u1": 0,
+     "jours": 91
+    }
+   },
+   "collectif": {
+    "niveaux": [
+     -1,
+     0,
+     1,
+     -1,
+     1,
+     1,
+     -1,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
+    ],
+    "cout": {
+     "cout": 14.858062678062678,
+     "methode": "paires reliées",
+     "paires": 6
+    },
+    "table": [
+     {
+      "u": -1,
+      "jours": 21,
+      "parJour": 9.238,
+      "tardParJour": 2.476
+     },
+     {
+      "u": -0.5,
+      "jours": 0,
+      "parJour": null,
+      "tardParJour": null
+     },
+     {
+      "u": 0,
+      "jours": 49,
+      "parJour": 10.143,
+      "tardParJour": 4.224
+     },
+     {
+      "u": 0.5,
+      "jours": 0,
+      "parJour": null,
+      "tardParJour": null
+     },
+     {
+      "u": 1,
+      "jours": 21,
+      "parJour": 7,
+      "tardParJour": 3
+     }
+    ],
+    "types_a_l_heure": 1,
+    "bilan_s": 0.6,
+    "loi": {
+     "texte": "1 / (p·3)",
+     "retenue": false,
+     "sans_variable": false,
+     "erreur_loi": 3.082,
+     "erreur_constante": 3.221,
+     "erreur_droite": 3.066,
+     "secs": 0.8
+    },
+    "decisions": {
+     "complet": {
+      "niveau": 1,
+      "par": "table",
+      "prevu": {
+       "0": 127.62,
+       "1": 136.09,
+       "-1": 65.52
+      }
+     },
+     "sans_galilee": {
+      "niveau": 1,
+      "par": "table",
+      "prevu": {
+       "0": 127.62,
+       "1": 136.09,
+       "-1": 65.52
+      }
+     },
+     "sans_lavoisier": {
+      "niveau": 0,
+      "par": "table",
+      "prevu": {
+       "0": 278.32,
+       "1": 240.1,
+       "-1": 202.78
+      }
+     }
+    },
+    "juge": {
+     "verdict": "indecis",
+     "loi": "1 / (p·3)",
+     "logE": 0,
+     "seuil": 2.3,
+     "diagnostic": "compris",
+     "secs": 0.836
+    }
+   },
+   "naif": {
+    "niveaux": [
+     0.5,
+     0.5,
+     0.5,
+     0.5,
+     0.5,
+     0.5,
+     -0.5,
+     -0.5,
+     -0.5,
+     -0.5,
+     -0.5,
+     -0.5,
+     -0.5
+    ],
+    "cout": {
+     "cout": 14.858052325581395,
+     "methode": "paires reliées",
+     "paires": 6
+    },
+    "table": [
+     {
+      "u": -1,
+      "jours": 0,
+      "parJour": null,
+      "tardParJour": null
+     },
+     {
+      "u": -0.5,
+      "jours": 49,
+      "parJour": 9.408,
+      "tardParJour": 4.122
+     },
+     {
+      "u": 0,
+      "jours": 0,
+      "parJour": null,
+      "tardParJour": null
+     },
+     {
+      "u": 0.5,
+      "jours": 42,
+      "parJour": 8.476,
+      "tardParJour": 4.095
+     },
+     {
+      "u": 1,
+      "jours": 0,
+      "parJour": null,
+      "tardParJour": null
+     }
+    ],
+    "types_a_l_heure": 1,
+    "bilan_s": 0.6,
+    "loi": {
+     "texte": "0.2704",
+     "retenue": false,
+     "sans_variable": true,
+     "erreur_loi": 3.248,
+     "erreur_constante": 3.248,
+     "erreur_droite": 3.255,
+     "secs": 0.5
+    },
+    "decisions": {
+     "complet": {
+      "niveau": 0.5,
+      "par": "table",
+      "prevu": {
+       "-0.5": 91.09,
+       "0.5": 134.11
+      }
+     },
+     "sans_galilee": {
+      "niveau": 0.5,
+      "par": "table",
+      "prevu": {
+       "-0.5": 91.09,
+       "0.5": 134.11
+      }
+     },
+     "sans_lavoisier": {
+      "niveau": 0.5,
+      "par": "table",
+      "prevu": {
+       "-0.5": 230.88,
+       "0.5": 260.05
+      }
+     }
+    },
+    "juge": null
+   },
+   "bras": {
+    "nul": {
+     "essai": 10742.21,
+     "exploitation": 12369.49,
+     "total": 23111.69,
+     "profit_2e_semestre": 219164.22
+    },
+    "aveugle:-1": {
+     "essai": 5701.92,
+     "exploitation": 6616.78,
+     "total": 12318.7,
+     "profit_2e_semestre": 201413.65
+    },
+    "aveugle:-0.5": {
+     "essai": 8781.52,
+     "exploitation": 9396.66,
+     "total": 18178.18,
+     "profit_2e_semestre": 250191.58
+    },
+    "aveugle:0": {
+     "essai": 10193.65,
+     "exploitation": 9927.15,
+     "total": 20120.8,
+     "profit_2e_semestre": 245099.42
+    },
+    "aveugle:0.5": {
+     "essai": 11750.57,
+     "exploitation": 11898.1,
+     "total": 23648.67,
+     "profit_2e_semestre": 227587.74
+    },
+    "aveugle:1": {
+     "essai": 15825.74,
+     "exploitation": 14164.01,
+     "total": 29989.75,
+     "profit_2e_semestre": 214137.82
+    },
+    "collectif": {
+     "essai": 10468.49,
+     "exploitation": 15048.06,
+     "total": 25516.55,
+     "profit_2e_semestre": 260797.99
+    },
+    "sans_galilee": {
+     "essai": 10468.49,
+     "exploitation": 15048.06,
+     "total": 25516.55,
+     "profit_2e_semestre": 260797.99
+    },
+    "sans_lavoisier": {
+     "essai": 10468.49,
+     "exploitation": 12116.41,
+     "total": 22584.9,
+     "profit_2e_semestre": 240304.55
+    },
+    "sans_plan_cortex": {
+     "essai": 10580.08,
+     "exploitation": 14572.01,
+     "total": 25152.09,
+     "profit_2e_semestre": 235222.61
+    }
+   },
+   "courses": 9,
+   "secs": 4.8,
+   "identites": {
+    "lavoisier": {
+     "nom": "LAVOISIER",
+     "depot": "haynbroit-alt/A",
+     "commit": "718b7d3"
+    },
+    "cortex": {
+     "nom": "CORTEX",
+     "depot": "haynbroit-alt/1",
+     "commit": "93931fb"
+    },
+    "galilee": {
+     "nom": "GALILÉE",
+     "depot": "haynbroit-alt/All",
+     "commit": "be42b7e"
+    }
+   }
+  },
+  {
+   "graine": 204,
+   "ecartee": false,
+   "objet": "cezu5",
+   "prix_reference": 335.16,
+   "cout_vrai": 169.628,
+   "eligibles": 9,
+   "objets": 19,
+   "plan_cortex": {
+    "niveaux": [
+     -1,
+     0,
+     1,
+     -1,
+     1,
+     1,
+     -1,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
+    ],
+    "budget": {
+     "u0": 0.46153846153846156,
+     "u1": 0,
+     "jours": 91
+    }
+   },
+   "collectif": {
+    "niveaux": [
+     -1,
+     0,
+     1,
+     -1,
+     1,
+     1,
+     -1,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
+    ],
+    "cout": {
+     "cout": 169.62832020997377,
+     "methode": "paires reliées",
+     "paires": 8
+    },
+    "table": [
+     {
+      "u": -1,
+      "jours": 21,
+      "parJour": 14.524,
+      "tardParJour": 4
+     },
+     {
+      "u": -0.5,
+      "jours": 0,
+      "parJour": null,
+      "tardParJour": null
+     },
+     {
+      "u": 0,
+      "jours": 49,
+      "parJour": 10.204,
+      "tardParJour": 2.306
+     },
+     {
+      "u": 0.5,
+      "jours": 0,
+      "parJour": null,
+      "tardParJour": null
+     },
+     {
+      "u": 1,
+      "jours": 21,
+      "parJour": 9,
+      "tardParJour": 3.905
+     }
+    ],
+    "types_a_l_heure": 1,
+    "bilan_s": 0.4,
+    "loi": {
+     "texte": "exp(−π·p / 2)",
+     "retenue": false,
+     "sans_variable": false,
+     "erreur_loi": 4.568,
+     "erreur_constante": 4.926,
+     "erreur_droite": 4.557,
+     "secs": 0.7
+    },
+    "decisions": {
+     "complet": {
+      "niveau": 1,
+      "par": "table",
+      "prevu": {
+       "0": 1689.1,
+       "1": 2243.9,
+       "-1": 1430.62
+      }
+     },
+     "sans_galilee": {
+      "niveau": 1,
+      "par": "table",
+      "prevu": {
+       "0": 1689.1,
+       "1": 2243.9,
+       "-1": 1430.62
+      }
+     },
+     "sans_lavoisier": {
+      "niveau": -1,
+      "par": "table",
+      "prevu": {
+       "0": 3420,
+       "1": 3770.55,
+       "-1": 3894.27
+      }
+     }
+    },
+    "juge": {
+     "verdict": "indecis",
+     "loi": "exp(−π·p / 2)",
+     "logE": 0,
+     "seuil": 2.3,
+     "diagnostic": "mal estimé",
+     "secs": 0.871
+    }
+   },
+   "naif": {
+    "niveaux": [
+     0.5,
+     0.5,
+     0.5,
+     0.5,
+     0.5,
+     0.5,
+     -0.5,
+     -0.5,
+     -0.5,
+     -0.5,
+     -0.5,
+     -0.5,
+     -0.5
+    ],
+    "cout": {
+     "cout": 169.62831658291458,
+     "methode": "paires reliées",
+     "paires": 9
+    },
+    "table": [
+     {
+      "u": -1,
+      "jours": 0,
+      "parJour": null,
+      "tardParJour": null
+     },
+     {
+      "u": -0.5,
+      "jours": 49,
+      "parJour": 13.245,
+      "tardParJour": 3.592
+     },
+     {
+      "u": 0,
+      "jours": 0,
+      "parJour": null,
+      "tardParJour": null
+     },
+     {
+      "u": 0.5,
+      "jours": 42,
+      "parJour": 12.262,
+      "tardParJour": 5.595
+     },
+     {
+      "u": 1,
+      "jours": 0,
+      "parJour": null,
+      "tardParJour": null
+     }
+    ],
+    "types_a_l_heure": 1,
+    "bilan_s": 0.5,
+    "loi": {
+     "texte": "5/4 − p",
+     "retenue": false,
+     "sans_variable": false,
+     "erreur_loi": 5.019,
+     "erreur_constante": 4.982,
+     "erreur_droite": 4.898,
+     "secs": 0.7
+    },
+    "decisions": {
+     "complet": {
+      "niveau": 0.5,
+      "par": "table",
+      "prevu": {
+       "-0.5": 1723.85,
+       "0.5": 2514.81
+      }
+     },
+     "sans_galilee": {
+      "niveau": 0.5,
+      "par": "table",
+      "prevu": {
+       "-0.5": 1723.85,
+       "0.5": 2514.81
+      }
+     },
+     "sans_lavoisier": {
+      "niveau": 0.5,
+      "par": "table",
+      "prevu": {
+       "-0.5": 3970.56,
+       "0.5": 4594.78
+      }
+     }
+    },
+    "juge": null
+   },
+   "bras": {
+    "nul": {
+     "essai": 187216.95,
+     "exploitation": 186568.29,
+     "total": 373785.25,
+     "profit_2e_semestre": 544696.86
+    },
+    "aveugle:-1": {
+     "essai": 137212.84,
+     "exploitation": 139084.37,
+     "total": 276297.22,
+     "profit_2e_semestre": 434486.08
+    },
+    "aveugle:-0.5": {
+     "essai": 154620.2,
+     "exploitation": 165552.94,
+     "total": 320173.14,
+     "profit_2e_semestre": 555870.18
+    },
+    "aveugle:0": {
+     "essai": 187050.8,
+     "exploitation": 192347.81,
+     "total": 379398.61,
+     "profit_2e_semestre": 549018.38
+    },
+    "aveugle:0.5": {
+     "essai": 214525.9,
+     "exploitation": 176789.03,
+     "total": 391314.93,
+     "profit_2e_semestre": 580031.55
+    },
+    "aveugle:1": {
+     "essai": 213918,
+     "exploitation": 256552.01,
+     "total": 470470.01,
+     "profit_2e_semestre": 633707.95
+    },
+    "collectif": {
+     "essai": 162218.67,
+     "exploitation": 227630.7,
+     "total": 389849.37,
+     "profit_2e_semestre": 562966.78
+    },
+    "sans_galilee": {
+     "essai": 162218.67,
+     "exploitation": 227630.7,
+     "total": 389849.37,
+     "profit_2e_semestre": 562966.78
+    },
+    "sans_lavoisier": {
+     "essai": 162218.67,
+     "exploitation": 134947.3,
+     "total": 297165.98,
+     "profit_2e_semestre": 491004.5
+    },
+    "sans_plan_cortex": {
+     "essai": 192934.27,
+     "exploitation": 235650.34,
+     "total": 428584.61,
+     "profit_2e_semestre": 636045.64
+    }
+   },
+   "courses": 9,
+   "secs": 4.5,
+   "identites": {
+    "lavoisier": {
+     "nom": "LAVOISIER",
+     "depot": "haynbroit-alt/A",
+     "commit": "718b7d3"
+    },
+    "cortex": {
+     "nom": "CORTEX",
+     "depot": "haynbroit-alt/1",
+     "commit": "93931fb"
+    },
+    "galilee": {
+     "nom": "GALILÉE",
+     "depot": "haynbroit-alt/All",
+     "commit": "be42b7e"
+    }
+   }
+  },
+  {
+   "graine": 205,
+   "ecartee": false,
+   "objet": "dero7",
+   "prix_reference": 17.75,
+   "cout_vrai": 7.479,
+   "eligibles": 14,
+   "objets": 23,
+   "plan_cortex": {
+    "niveaux": [
+     -1,
+     0,
+     1,
+     -1,
+     1,
+     1,
+     -1,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
+    ],
+    "budget": {
+     "u0": 0.46153846153846156,
+     "u1": 0,
+     "jours": 91
+    }
+   },
+   "collectif": {
+    "niveaux": [
+     -1,
+     0,
+     1,
+     -1,
+     1,
+     1,
+     -1,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
+    ],
+    "cout": {
+     "cout": 7.478721461187214,
+     "methode": "paires reliées",
+     "paires": 19
+    },
+    "table": [
+     {
+      "u": -1,
+      "jours": 21,
+      "parJour": 25.19,
+      "tardParJour": 13.476
+     },
+     {
+      "u": -0.5,
+      "jours": 0,
+      "parJour": null,
+      "tardParJour": null
+     },
+     {
+      "u": 0,
+      "jours": 49,
+      "parJour": 12.163,
+      "tardParJour": 6.612
+     },
+     {
+      "u": 0.5,
+      "jours": 0,
+      "parJour": null,
+      "tardParJour": null
+     },
+     {
+      "u": 1,
+      "jours": 21,
+      "parJour": 15.714,
+      "tardParJour": 11
+     }
+    ],
+    "types_a_l_heure": 1,
+    "bilan_s": 0.8,
+    "loi": {
+     "texte": "1/3",
+     "retenue": false,
+     "sans_variable": true,
+     "erreur_loi": 5.082,
+     "erreur_constante": 5.071,
+     "erreur_droite": 4.652,
+     "secs": 0.8
+    },
+    "decisions": {
+     "complet": {
+      "niveau": 1,
+      "par": "table",
+      "prevu": {
+       "0": 124.93,
+       "1": 231.18,
+       "-1": 169.31
+      }
+     },
+     "sans_galilee": {
+      "niveau": 1,
+      "par": "table",
+      "prevu": {
+       "0": 124.93,
+       "1": 231.18,
+       "-1": 169.31
+      }
+     },
+     "sans_lavoisier": {
+      "niveau": -1,
+      "par": "table",
+      "prevu": {
+       "0": 215.9,
+       "1": 348.7,
+       "-1": 357.7
+      }
+     }
+    },
+    "juge": {
+     "verdict": "indecis",
+     "loi": "cos(p)^3",
+     "logE": 0,
+     "seuil": 2.3,
+     "diagnostic": "hors de portée",
+     "secs": 0.886
+    }
+   },
+   "naif": {
+    "niveaux": [
+     0.5,
+     0.5,
+     0.5,
+     0.5,
+     0.5,
+     0.5,
+     -0.5,
+     -0.5,
+     -0.5,
+     -0.5,
+     -0.5,
+     -0.5,
+     -0.5
+    ],
+    "cout": {
+     "cout": 7.478721461187214,
+     "methode": "paires reliées",
+     "paires": 20
+    },
+    "table": [
+     {
+      "u": -1,
+      "jours": 0,
+      "parJour": null,
+      "tardParJour": null
+     },
+     {
+      "u": -0.5,
+      "jours": 49,
+      "parJour": 16.184,
+      "tardParJour": 7.837
+     },
+     {
+      "u": 0,
+      "jours": 0,
+      "parJour": null,
+      "tardParJour": null
+     },
+     {
+      "u": 0.5,
+      "jours": 42,
+      "parJour": 15.5,
+      "tardParJour": 10.119
+     },
+     {
+      "u": 1,
+      "jours": 0,
+      "parJour": null,
+      "tardParJour": null
+     }
+    ],
+    "types_a_l_heure": 1,
+    "bilan_s": 0.5,
+    "loi": {
+     "texte": "1/3",
+     "retenue": false,
+     "sans_variable": true,
+     "erreur_loi": 4.943,
+     "erreur_constante": 4.927,
+     "erreur_droite": 4.791,
+     "secs": 0.6
+    },
+    "decisions": {
+     "complet": {
+      "niveau": 0.5,
+      "par": "table",
+      "prevu": {
+       "-0.5": 135.96,
+       "0.5": 191.75
+      }
+     },
+     "sans_galilee": {
+      "niveau": 0.5,
+      "par": "table",
+      "prevu": {
+       "-0.5": 135.96,
+       "0.5": 191.75
+      }
+     },
+     "sans_lavoisier": {
+      "niveau": 0.5,
+      "par": "table",
+      "prevu": {
+       "-0.5": 257,
+       "0.5": 307.68
+      }
+     }
+    },
+    "juge": null
+   },
+   "bras": {
+    "nul": {
+     "essai": 16860.89,
+     "exploitation": 18245.01,
+     "total": 35105.89,
+     "profit_2e_semestre": 344251.63
+    },
+    "aveugle:-1": {
+     "essai": 10733.88,
+     "exploitation": 10344.05,
+     "total": 21077.93,
+     "profit_2e_semestre": 360183.67
+    },
+    "aveugle:-0.5": {
+     "essai": 12904.36,
+     "exploitation": 12652.32,
+     "total": 25556.69,
+     "profit_2e_semestre": 326736.62
+    },
+    "aveugle:0": {
+     "essai": 16372.42,
+     "exploitation": 14184.63,
+     "total": 30557.05,
+     "profit_2e_semestre": 332932.58
+    },
+    "aveugle:0.5": {
+     "essai": 16886.79,
+     "exploitation": 16255.86,
+     "total": 33142.65,
+     "profit_2e_semestre": 371492.13
+    },
+    "aveugle:1": {
+     "essai": 19006.97,
+     "exploitation": 19080.53,
+     "total": 38087.5,
+     "profit_2e_semestre": 356423.15
+    },
+    "collectif": {
+     "essai": 14986.55,
+     "exploitation": 15814.62,
+     "total": 30801.17,
+     "profit_2e_semestre": 345213.29
+    },
+    "sans_galilee": {
+     "essai": 14986.55,
+     "exploitation": 15814.62,
+     "total": 30801.17,
+     "profit_2e_semestre": 345213.29
+    },
+    "sans_lavoisier": {
+     "essai": 14986.55,
+     "exploitation": 11076.67,
+     "total": 26063.21,
+     "profit_2e_semestre": 331825.81
+    },
+    "sans_plan_cortex": {
+     "essai": 15060.37,
+     "exploitation": 15934.21,
+     "total": 30994.57,
+     "profit_2e_semestre": 344374.66
+    }
+   },
+   "courses": 9,
+   "secs": 5.4,
+   "identites": {
+    "lavoisier": {
+     "nom": "LAVOISIER",
+     "depot": "haynbroit-alt/A",
+     "commit": "718b7d3"
+    },
+    "cortex": {
+     "nom": "CORTEX",
+     "depot": "haynbroit-alt/1",
+     "commit": "93931fb"
+    },
+    "galilee": {
+     "nom": "GALILÉE",
+     "depot": "haynbroit-alt/All",
+     "commit": "be42b7e"
+    }
+   }
+  },
+  {
+   "graine": 206,
+   "ecartee": false,
+   "objet": "daxa5",
+   "prix_reference": 83.12,
+   "cout_vrai": 61.666,
+   "eligibles": 5,
+   "objets": 10,
+   "plan_cortex": {
+    "niveaux": [
+     -1,
+     0,
+     1,
+     -1,
+     1,
+     1,
+     -1,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
+    ],
+    "budget": {
+     "u0": 0.46153846153846156,
+     "u1": 0,
+     "jours": 91
+    }
+   },
+   "collectif": {
+    "niveaux": [
+     -1,
+     0,
+     1,
+     -1,
+     1,
+     1,
+     -1,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
+    ],
+    "cout": {
+     "cout": 61.666244444444445,
+     "methode": "paires reliées",
+     "paires": 15
+    },
+    "table": [
+     {
+      "u": -1,
+      "jours": 21,
+      "parJour": 28.429,
+      "tardParJour": 14.286
+     },
+     {
+      "u": -0.5,
+      "jours": 0,
+      "parJour": null,
+      "tardParJour": null
+     },
+     {
+      "u": 0,
+      "jours": 49,
+      "parJour": 21.612,
+      "tardParJour": 11.796
+     },
+     {
+      "u": 0.5,
+      "jours": 0,
+      "parJour": null,
+      "tardParJour": null
+     },
+     {
+      "u": 1,
+      "jours": 21,
+      "parJour": 18.571,
+      "tardParJour": 12.286
+     }
+    ],
+    "types_a_l_heure": 1,
+    "bilan_s": 0.4,
+    "loi": {
+     "texte": "1/3",
+     "retenue": false,
+     "sans_variable": true,
+     "erreur_loi": 5.573,
+     "erreur_constante": 5.551,
+     "erreur_droite": 5.165,
+     "secs": 1.1
+    },
+    "decisions": {
+     "complet": {
+      "niveau": 1,
+      "par": "table",
+      "prevu": {
+       "0": 463.66,
+       "1": 784.34,
+       "-1": 137.42
+      }
+     },
+     "sans_galilee": {
+      "niveau": 1,
+      "par": "table",
+      "prevu": {
+       "0": 463.66,
+       "1": 784.34,
+       "-1": 137.42
+      }
+     },
+     "sans_lavoisier": {
+      "niveau": 1,
+      "par": "table",
+      "prevu": {
+       "0": 1796.41,
+       "1": 1929.57,
+       "-1": 1890.5
+      }
+     }
+    },
+    "juge": {
+     "verdict": "sans objet",
+     "raison": "aucune loi dépendant du prix sur les 56 premiers jours",
+     "loi": "1/3"
+    }
+   },
+   "naif": {
+    "niveaux": [
+     0.5,
+     0.5,
+     0.5,
+     0.5,
+     0.5,
+     0.5,
+     -0.5,
+     -0.5,
+     -0.5,
+     -0.5,
+     -0.5,
+     -0.5,
+     -0.5
+    ],
+    "cout": {
+     "cout": 61.6662443438914,
+     "methode": "paires reliées",
+     "paires": 15
+    },
+    "table": [
+     {
+      "u": -1,
+      "jours": 0,
+      "parJour": null,
+      "tardParJour": null
+     },
+     {
+      "u": -0.5,
+      "jours": 49,
+      "parJour": 23.184,
+      "tardParJour": 11.571
+     },
+     {
+      "u": 0,
+      "jours": 0,
+      "parJour": null,
+      "tardParJour": null
+     },
+     {
+      "u": 0.5,
+      "jours": 42,
+      "parJour": 23.119,
+      "tardParJour": 16.571
+     },
+     {
+      "u": 1,
+      "jours": 0,
+      "parJour": null,
+      "tardParJour": null
+     }
+    ],
+    "types_a_l_heure": 1,
+    "bilan_s": 0.5,
+    "loi": {
+     "texte": "5/4 − p",
+     "retenue": false,
+     "sans_variable": false,
+     "erreur_loi": 6.292,
+     "erreur_constante": 6.649,
+     "erreur_droite": 6.238,
+     "secs": 0.8
+    },
+    "decisions": {
+     "complet": {
+      "niveau": 0.5,
+      "par": "table",
+      "prevu": {
+       "-0.5": 293.82,
+       "0.5": 722.79
+      }
+     },
+     "sans_galilee": {
+      "niveau": 0.5,
+      "par": "table",
+      "prevu": {
+       "-0.5": 293.82,
+       "0.5": 722.79
+      }
+     },
+     "sans_lavoisier": {
+      "niveau": 0.5,
+      "par": "table",
+      "prevu": {
+       "-0.5": 1723.47,
+       "0.5": 2148.45
+      }
+     }
+    },
+    "juge": null
+   },
+   "bras": {
+    "nul": {
+     "essai": 40567.14,
+     "exploitation": 50538.05,
+     "total": 91105.19,
+     "profit_2e_semestre": 515693
+    },
+    "aveugle:-1": {
+     "essai": 10919.45,
+     "exploitation": 10421.57,
+     "total": 21341.02,
+     "profit_2e_semestre": 614952.59
+    },
+    "aveugle:-0.5": {
+     "essai": 27704.83,
+     "exploitation": 28439.9,
+     "total": 56144.73,
+     "profit_2e_semestre": 547806.62
+    },
+    "aveugle:0": {
+     "essai": 46640.46,
+     "exploitation": 50115.97,
+     "total": 96756.43,
+     "profit_2e_semestre": 596143.74
+    },
+    "aveugle:0.5": {
+     "essai": 60870.53,
+     "exploitation": 61026.85,
+     "total": 121897.38,
+     "profit_2e_semestre": 663054.68
+    },
+    "aveugle:1": {
+     "essai": 87550.57,
+     "exploitation": 78259.15,
+     "total": 165809.72,
+     "profit_2e_semestre": 727964.91
+    },
+    "collectif": {
+     "essai": 42348.83,
+     "exploitation": 82693.69,
+     "total": 125042.52,
+     "profit_2e_semestre": 580543.14
+    },
+    "sans_galilee": {
+     "essai": 42348.83,
+     "exploitation": 82693.69,
+     "total": 125042.52,
+     "profit_2e_semestre": 580543.14
+    },
+    "sans_lavoisier": {
+     "essai": 42348.83,
+     "exploitation": 82693.69,
+     "total": 125042.52,
+     "profit_2e_semestre": 580543.14
+    },
+    "sans_plan_cortex": {
+     "essai": 45173.54,
+     "exploitation": 59713.77,
+     "total": 104887.31,
+     "profit_2e_semestre": 648400.55
+    }
+   },
+   "courses": 8,
+   "secs": 4.6,
+   "identites": {
+    "lavoisier": {
+     "nom": "LAVOISIER",
+     "depot": "haynbroit-alt/A",
+     "commit": "718b7d3"
+    },
+    "cortex": {
+     "nom": "CORTEX",
+     "depot": "haynbroit-alt/1",
+     "commit": "93931fb"
+    },
+    "galilee": {
+     "nom": "GALILÉE",
+     "depot": "haynbroit-alt/All",
+     "commit": "be42b7e"
+    }
+   }
+  },
+  {
+   "graine": 207,
+   "ecartee": false,
+   "objet": "jumajo5",
+   "prix_reference": 5.86,
+   "cout_vrai": 3.995,
+   "eligibles": 16,
+   "objets": 27,
+   "plan_cortex": {
+    "niveaux": [
+     -1,
+     0,
+     1,
+     -1,
+     1,
+     1,
+     -1,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
+    ],
+    "budget": {
+     "u0": 0.46153846153846156,
+     "u1": 0,
+     "jours": 91
+    }
+   },
+   "collectif": {
+    "niveaux": [
+     -1,
+     0,
+     1,
+     -1,
+     1,
+     1,
+     -1,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
+    ],
+    "cout": {
+     "cout": 3.9946931407942237,
+     "methode": "paires reliées",
+     "paires": 17
+    },
+    "table": [
+     {
+      "u": -1,
+      "jours": 21,
+      "parJour": 19.952,
+      "tardParJour": 4.048
+     },
+     {
+      "u": -0.5,
+      "jours": 0,
+      "parJour": null,
+      "tardParJour": null
+     },
+     {
+      "u": 0,
+      "jours": 49,
+      "parJour": 17.898,
+      "tardParJour": 5.082
+     },
+     {
+      "u": 0.5,
+      "jours": 0,
+      "parJour": null,
+      "tardParJour": null
+     },
+     {
+      "u": 1,
+      "jours": 21,
+      "parJour": 16,
+      "tardParJour": 6.714
+     }
+    ],
+    "types_a_l_heure": 1,
+    "bilan_s": 3.2,
+    "loi": {
+     "texte": "sin(1 / (p·3))",
+     "retenue": false,
+     "sans_variable": false,
+     "erreur_loi": 6.056,
+     "erreur_constante": 6.379,
+     "erreur_droite": 6.041,
+     "secs": 1
+    },
+    "decisions": {
+     "complet": {
+      "niveau": 1,
+      "par": "table",
+      "prevu": {
+       "0": 33.39,
+       "1": 53.36,
+       "-1": 13.87
+      }
+     },
+     "sans_galilee": {
+      "niveau": 1,
+      "par": "table",
+      "prevu": {
+       "0": 33.39,
+       "1": 53.36,
+       "-1": 13.87
+      }
+     },
+     "sans_lavoisier": {
+      "niveau": 1,
+      "par": "table",
+      "prevu": {
+       "0": 104.88,
+       "1": 117.28,
+       "-1": 93.58
+      }
+     }
+    },
+    "juge": {
+     "verdict": "indecis",
+     "loi": "0.3092 / p",
+     "logE": 0,
+     "seuil": 2.3,
+     "diagnostic": "mal estimé",
+     "secs": 1.041
+    }
+   },
+   "naif": {
+    "niveaux": [
+     0.5,
+     0.5,
+     0.5,
+     0.5,
+     0.5,
+     0.5,
+     -0.5,
+     -0.5,
+     -0.5,
+     -0.5,
+     -0.5,
+     -0.5,
+     -0.5
+    ],
+    "cout": {
+     "cout": 3.9946931407942237,
+     "methode": "paires reliées",
+     "paires": 16
+    },
+    "table": [
+     {
+      "u": -1,
+      "jours": 0,
+      "parJour": null,
+      "tardParJour": null
+     },
+     {
+      "u": -0.5,
+      "jours": 49,
+      "parJour": 19.796,
+      "tardParJour": 6.041
+     },
+     {
+      "u": 0,
+      "jours": 0,
+      "parJour": null,
+      "tardParJour": null
+     },
+     {
+      "u": 0.5,
+      "jours": 42,
+      "parJour": 15,
+      "tardParJour": 4.31
+     },
+     {
+      "u": 1,
+      "jours": 0,
+      "parJour": null,
+      "tardParJour": null
+     }
+    ],
+    "types_a_l_heure": 1,
+    "bilan_s": 1,
+    "loi": {
+     "texte": "0.4542",
+     "retenue": false,
+     "sans_variable": true,
+     "erreur_loi": 6.378,
+     "erreur_constante": 6.378,
+     "erreur_droite": 6.274,
+     "secs": 0.7
+    },
+    "decisions": {
+     "complet": {
+      "niveau": 0.5,
+      "par": "table",
+      "prevu": {
+       "-0.5": 24.65,
+       "0.5": 38.33
+      }
+     },
+     "sans_galilee": {
+      "niveau": 0.5,
+      "par": "table",
+      "prevu": {
+       "-0.5": 24.65,
+       "0.5": 38.33
+      }
+     },
+     "sans_lavoisier": {
+      "niveau": -0.5,
+      "par": "table",
+      "prevu": {
+       "-0.5": 103.73,
+       "0.5": 98.25
+      }
+     }
+    },
+    "juge": null
+   },
+   "bras": {
+    "nul": {
+     "essai": 3111.14,
+     "exploitation": 3050.07,
+     "total": 6161.21,
+     "profit_2e_semestre": 536990.19
+    },
+    "aveugle:-1": {
+     "essai": 1262.67,
+     "exploitation": 1280.75,
+     "total": 2543.43,
+     "profit_2e_semestre": 501077.27
+    },
+    "aveugle:-0.5": {
+     "essai": 2118.26,
+     "exploitation": 2015.42,
+     "total": 4133.69,
+     "profit_2e_semestre": 519124.72
+    },
+    "aveugle:0": {
+     "essai": 2952.78,
+     "exploitation": 2876.3,
+     "total": 5829.08,
+     "profit_2e_semestre": 521931.1
+    },
+    "aveugle:0.5": {
+     "essai": 3633.64,
+     "exploitation": 3283.57,
+     "total": 6917.21,
+     "profit_2e_semestre": 552646.87
+    },
+    "aveugle:1": {
+     "essai": 4479.32,
+     "exploitation": 3745.55,
+     "total": 8224.86,
+     "profit_2e_semestre": 493931.43
+    },
+    "collectif": {
+     "essai": 3088.92,
+     "exploitation": 4105.76,
+     "total": 7194.68,
+     "profit_2e_semestre": 473282.45
+    },
+    "sans_galilee": {
+     "essai": 3088.92,
+     "exploitation": 4105.76,
+     "total": 7194.68,
+     "profit_2e_semestre": 473282.45
+    },
+    "sans_lavoisier": {
+     "essai": 3088.92,
+     "exploitation": 4105.76,
+     "total": 7194.68,
+     "profit_2e_semestre": 473282.45
+    },
+    "sans_plan_cortex": {
+     "essai": 2850.36,
+     "exploitation": 3268.24,
+     "total": 6118.6,
+     "profit_2e_semestre": 524174.76
+    }
+   },
+   "courses": 9,
+   "secs": 10.1,
+   "identites": {
+    "lavoisier": {
+     "nom": "LAVOISIER",
+     "depot": "haynbroit-alt/A",
+     "commit": "718b7d3"
+    },
+    "cortex": {
+     "nom": "CORTEX",
+     "depot": "haynbroit-alt/1",
+     "commit": "93931fb"
+    },
+    "galilee": {
+     "nom": "GALILÉE",
+     "depot": "haynbroit-alt/All",
+     "commit": "be42b7e"
+    }
+   }
+  },
+  {
+   "graine": 208,
+   "ecartee": false,
+   "objet": "zagube9",
+   "prix_reference": 8.65,
+   "cout_vrai": 3.828,
+   "eligibles": 3,
+   "objets": 5,
+   "plan_cortex": {
+    "niveaux": [
+     -1,
+     0,
+     1,
+     -1,
+     1,
+     1,
+     -1,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
+    ],
+    "budget": {
+     "u0": 0.46153846153846156,
+     "u1": 0,
+     "jours": 91
+    }
+   },
+   "collectif": {
+    "niveaux": [
+     -1,
+     0,
+     1,
+     -1,
+     1,
+     1,
+     -1,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
+    ],
+    "cout": {
+     "cout": 3.8280729166666667,
+     "methode": "paires reliées",
+     "paires": 22
+    },
+    "table": [
+     {
+      "u": -1,
+      "jours": 21,
+      "parJour": 15.286,
+      "tardParJour": 11.762
+     },
+     {
+      "u": -0.5,
+      "jours": 0,
+      "parJour": null,
+      "tardParJour": null
+     },
+     {
+      "u": 0,
+      "jours": 49,
+      "parJour": 14.755,
+      "tardParJour": 12.816
+     },
+     {
+      "u": 0.5,
+      "jours": 0,
+      "parJour": null,
+      "tardParJour": null
+     },
+     {
+      "u": 1,
+      "jours": 21,
+      "parJour": 15.762,
+      "tardParJour": 14.81
+     }
+    ],
+    "types_a_l_heure": 1,
+    "bilan_s": 0.2,
+    "loi": {
+     "texte": "0.1422",
+     "retenue": false,
+     "sans_variable": true,
+     "erreur_loi": 2.312,
+     "erreur_constante": 2.312,
+     "erreur_droite": 2.35,
+     "secs": 1
+    },
+    "decisions": {
+     "complet": {
+      "niveau": 1,
+      "par": "table",
+      "prevu": {
+       "0": 71.15,
+       "1": 110.05,
+       "-1": 47.26
+      }
+     },
+     "sans_galilee": {
+      "niveau": 1,
+      "par": "table",
+      "prevu": {
+       "0": 71.15,
+       "1": 110.05,
+       "-1": 47.26
+      }
+     },
+     "sans_lavoisier": {
+      "niveau": 1,
+      "par": "table",
+      "prevu": {
+       "0": 127.63,
+       "1": 170.39,
+       "-1": 105.78
+      }
+     }
+    },
+    "juge": {
+     "verdict": "indecis",
+     "loi": "exp(−5·p / 2)",
+     "logE": 0,
+     "seuil": 2.3,
+     "diagnostic": "mal estimé",
+     "secs": 0.932
+    }
+   },
+   "naif": {
+    "niveaux": [
+     0.5,
+     0.5,
+     0.5,
+     0.5,
+     0.5,
+     0.5,
+     -0.5,
+     -0.5,
+     -0.5,
+     -0.5,
+     -0.5,
+     -0.5,
+     -0.5
+    ],
+    "cout": {
+     "cout": 3.8280628272251307,
+     "methode": "paires reliées",
+     "paires": 21
+    },
+    "table": [
+     {
+      "u": -1,
+      "jours": 0,
+      "parJour": null,
+      "tardParJour": null
+     },
+     {
+      "u": -0.5,
+      "jours": 49,
+      "parJour": 15.735,
+      "tardParJour": 13.245
+     },
+     {
+      "u": 0,
+      "jours": 0,
+      "parJour": null,
+      "tardParJour": null
+     },
+     {
+      "u": 0.5,
+      "jours": 42,
+      "parJour": 16.214,
+      "tardParJour": 14.881
+     },
+     {
+      "u": 1,
+      "jours": 0,
+      "parJour": null,
+      "tardParJour": null
+     }
+    ],
+    "types_a_l_heure": 1,
+    "bilan_s": 0.2,
+    "loi": {
+     "texte": "0.1926",
+     "retenue": false,
+     "sans_variable": true,
+     "erreur_loi": 2.334,
+     "erreur_constante": 2.334,
+     "erreur_droite": 2.317,
+     "secs": 0.8
+    },
+    "decisions": {
+     "complet": {
+      "niveau": 0.5,
+      "par": "table",
+      "prevu": {
+       "-0.5": 61.55,
+       "0.5": 94.72
+      }
+     },
+     "sans_galilee": {
+      "niveau": 0.5,
+      "par": "table",
+      "prevu": {
+       "-0.5": 61.55,
+       "0.5": 94.72
+      }
+     },
+     "sans_lavoisier": {
+      "niveau": 0.5,
+      "par": "table",
+      "prevu": {
+       "-0.5": 121.79,
+       "0.5": 156.79
+      }
+     }
+    },
+    "juge": null
+   },
+   "bras": {
+    "nul": {
+     "essai": 7776.38,
+     "exploitation": 8486.69,
+     "total": 16263.07,
+     "profit_2e_semestre": -83223.81
+    },
+    "aveugle:-1": {
+     "essai": 5117.16,
+     "exploitation": 4600.81,
+     "total": 9717.97,
+     "profit_2e_semestre": -99875.56
+    },
+    "aveugle:-0.5": {
+     "essai": 5738.82,
+     "exploitation": 5222.44,
+     "total": 10961.26,
+     "profit_2e_semestre": -88147.87
+    },
+    "aveugle:0": {
+     "essai": 7169.23,
+     "exploitation": 6027.43,
+     "total": 13196.66,
+     "profit_2e_semestre": -88229.6
+    },
+    "aveugle:0.5": {
+     "essai": 8885.59,
+     "exploitation": 7230.31,
+     "total": 16115.9,
+     "profit_2e_semestre": -84964.46
+    },
+    "aveugle:1": {
+     "essai": 10270.44,
+     "exploitation": 8350.4,
+     "total": 18620.84,
+     "profit_2e_semestre": -84253.86
+    },
+    "collectif": {
+     "essai": 7315.89,
+     "exploitation": 8901.98,
+     "total": 16217.87,
+     "profit_2e_semestre": -90182.79
+    },
+    "sans_galilee": {
+     "essai": 7315.89,
+     "exploitation": 8901.98,
+     "total": 16217.87,
+     "profit_2e_semestre": -90182.79
+    },
+    "sans_lavoisier": {
+     "essai": 7315.89,
+     "exploitation": 8901.98,
+     "total": 16217.87,
+     "profit_2e_semestre": -90182.79
+    },
+    "sans_plan_cortex": {
+     "essai": 7471.26,
+     "exploitation": 6786.32,
+     "total": 14257.58,
+     "profit_2e_semestre": -85977.6
+    }
+   },
+   "courses": 8,
+   "secs": 4.2,
+   "identites": {
+    "lavoisier": {
+     "nom": "LAVOISIER",
+     "depot": "haynbroit-alt/A",
+     "commit": "718b7d3"
+    },
+    "cortex": {
+     "nom": "CORTEX",
+     "depot": "haynbroit-alt/1",
+     "commit": "93931fb"
+    },
+    "galilee": {
+     "nom": "GALILÉE",
+     "depot": "haynbroit-alt/All",
+     "commit": "be42b7e"
+    }
+   }
+  },
+  {
+   "graine": 209,
+   "ecartee": false,
+   "objet": "cobe7",
+   "prix_reference": 7.97,
+   "cout_vrai": 4.87,
+   "eligibles": 7,
+   "objets": 12,
+   "plan_cortex": {
+    "niveaux": [
+     -1,
+     0,
+     1,
+     -1,
+     1,
+     1,
+     -1,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
+    ],
+    "budget": {
+     "u0": 0.46153846153846156,
+     "u1": 0,
+     "jours": 91
+    }
+   },
+   "collectif": {
+    "niveaux": [
+     -1,
+     0,
+     1,
+     -1,
+     1,
+     1,
+     -1,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
+    ],
+    "cout": {
+     "cout": 4.86968253968254,
+     "methode": "paires reliées",
+     "paires": 14
+    },
+    "table": [
+     {
+      "u": -1,
+      "jours": 21,
+      "parJour": 15.905,
+      "tardParJour": 4
+     },
+     {
+      "u": -0.5,
+      "jours": 0,
+      "parJour": null,
+      "tardParJour": null
+     },
+     {
+      "u": 0,
+      "jours": 49,
+      "parJour": 13.612,
+      "tardParJour": 5.959
+     },
+     {
+      "u": 0.5,
+      "jours": 0,
+      "parJour": null,
+      "tardParJour": null
+     },
+     {
+      "u": 1,
+      "jours": 21,
+      "parJour": 14,
+      "tardParJour": 8.714
+     }
+    ],
+    "types_a_l_heure": 1,
+    "bilan_s": 0.3,
+    "loi": {
+     "texte": "1.16 − p",
+     "retenue": false,
+     "sans_variable": false,
+     "erreur_loi": 4.505,
+     "erreur_constante": 4.898,
+     "erreur_droite": 4.439,
+     "secs": 1
+    },
+    "decisions": {
+     "complet": {
+      "niveau": 1,
+      "par": "table",
+      "prevu": {
+       "0": 42.2,
+       "1": 71.26,
+       "-1": 24.02
+      }
+     },
+     "sans_galilee": {
+      "niveau": 1,
+      "par": "table",
+      "prevu": {
+       "0": 42.2,
+       "1": 71.26,
+       "-1": 24.02
+      }
+     },
+     "sans_lavoisier": {
+      "niveau": 1,
+      "par": "table",
+      "prevu": {
+       "0": 108.49,
+       "1": 139.44,
+       "-1": 101.47
+      }
+     }
+    },
+    "juge": {
+     "verdict": "indecis",
+     "loi": "5/4 − p^(2/3)",
+     "logE": 0,
+     "seuil": 2.3,
+     "diagnostic": "compris",
+     "secs": 1.681
+    }
+   },
+   "naif": {
+    "niveaux": [
+     0.5,
+     0.5,
+     0.5,
+     0.5,
+     0.5,
+     0.5,
+     -0.5,
+     -0.5,
+     -0.5,
+     -0.5,
+     -0.5,
+     -0.5,
+     -0.5
+    ],
+    "cout": {
+     "cout": 4.869680000000001,
+     "methode": "paires reliées",
+     "paires": 13
+    },
+    "table": [
+     {
+      "u": -1,
+      "jours": 0,
+      "parJour": null,
+      "tardParJour": null
+     },
+     {
+      "u": -0.5,
+      "jours": 49,
+      "parJour": 13.98,
+      "tardParJour": 5.735
+     },
+     {
+      "u": 0,
+      "jours": 0,
+      "parJour": null,
+      "tardParJour": null
+     },
+     {
+      "u": 0.5,
+      "jours": 42,
+      "parJour": 11.643,
+      "tardParJour": 5.643
+     },
+     {
+      "u": 1,
+      "jours": 0,
+      "parJour": null,
+      "tardParJour": null
+     }
+    ],
+    "types_a_l_heure": 1,
+    "bilan_s": 0.4,
+    "loi": {
+     "texte": "5/4 − p",
+     "retenue": false,
+     "sans_variable": false,
+     "erreur_loi": 5.497,
+     "erreur_constante": 5.458,
+     "erreur_droite": 5.393,
+     "secs": 0.8
+    },
+    "decisions": {
+     "complet": {
+      "niveau": 0.5,
+      "par": "table",
+      "prevu": {
+       "-0.5": 31.6,
+       "0.5": 47.04
+      }
+     },
+     "sans_galilee": {
+      "niveau": 0.5,
+      "par": "table",
+      "prevu": {
+       "-0.5": 31.6,
+       "0.5": 47.04
+      }
+     },
+     "sans_lavoisier": {
+      "niveau": 0.5,
+      "par": "table",
+      "prevu": {
+       "-0.5": 99.67,
+       "0.5": 103.74
+      }
+     }
+    },
+    "juge": null
+   },
+   "bras": {
+    "nul": {
+     "essai": 4078.26,
+     "exploitation": 3796.11,
+     "total": 7874.37,
+     "profit_2e_semestre": 10703.33
+    },
+    "aveugle:-1": {
+     "essai": 2254.91,
+     "exploitation": 2344.02,
+     "total": 4598.94,
+     "profit_2e_semestre": 22307.02
+    },
+    "aveugle:-0.5": {
+     "essai": 3128.29,
+     "exploitation": 2994.93,
+     "total": 6123.22,
+     "profit_2e_semestre": 11327.62
+    },
+    "aveugle:0": {
+     "essai": 4011.82,
+     "exploitation": 3357.65,
+     "total": 7369.47,
+     "profit_2e_semestre": -3778.43
+    },
+    "aveugle:0.5": {
+     "essai": 4565.57,
+     "exploitation": 4169.61,
+     "total": 8735.18,
+     "profit_2e_semestre": 12.07
+    },
+    "aveugle:1": {
+     "essai": 5762.25,
+     "exploitation": 4555.84,
+     "total": 10318.09,
+     "profit_2e_semestre": -6923.72
+    },
+    "collectif": {
+     "essai": 4058.27,
+     "exploitation": 4611.83,
+     "total": 8670.1,
+     "profit_2e_semestre": -5865.88
+    },
+    "sans_galilee": {
+     "essai": 4058.27,
+     "exploitation": 4611.83,
+     "total": 8670.1,
+     "profit_2e_semestre": -5865.88
+    },
+    "sans_lavoisier": {
+     "essai": 4058.27,
+     "exploitation": 4611.83,
+     "total": 8670.1,
+     "profit_2e_semestre": -5865.88
+    },
+    "sans_plan_cortex": {
+     "essai": 3551.98,
+     "exploitation": 4218.1,
+     "total": 7770.08,
+     "profit_2e_semestre": 5750.43
+    }
+   },
+   "courses": 8,
+   "secs": 5.6,
+   "identites": {
+    "lavoisier": {
+     "nom": "LAVOISIER",
+     "depot": "haynbroit-alt/A",
+     "commit": "718b7d3"
+    },
+    "cortex": {
+     "nom": "CORTEX",
+     "depot": "haynbroit-alt/1",
+     "commit": "93931fb"
+    },
+    "galilee": {
+     "nom": "GALILÉE",
+     "depot": "haynbroit-alt/All",
+     "commit": "be42b7e"
+    }
+   }
+  },
+  {
+   "graine": 210,
+   "ecartee": false,
+   "objet": "kipa8",
+   "prix_reference": 82,
+   "cout_vrai": 41.113,
+   "eligibles": 14,
+   "objets": 28,
+   "plan_cortex": {
+    "niveaux": [
+     -1,
+     0,
+     1,
+     -1,
+     1,
+     1,
+     -1,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
+    ],
+    "budget": {
+     "u0": 0.46153846153846156,
+     "u1": 0,
+     "jours": 91
+    }
+   },
+   "collectif": {
+    "niveaux": [
+     -1,
+     0,
+     1,
+     -1,
+     1,
+     1,
+     -1,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
+    ],
+    "cout": {
+     "cout": 41.11258064516129,
+     "methode": "paires reliées",
+     "paires": 12
+    },
+    "table": [
+     {
+      "u": -1,
+      "jours": 21,
+      "parJour": 14.429,
+      "tardParJour": 2.619
+     },
+     {
+      "u": -0.5,
+      "jours": 0,
+      "parJour": null,
+      "tardParJour": null
+     },
+     {
+      "u": 0,
+      "jours": 49,
+      "parJour": 14.469,
+      "tardParJour": 6.531
+     },
+     {
+      "u": 0.5,
+      "jours": 0,
+      "parJour": null,
+      "tardParJour": null
+     },
+     {
+      "u": 1,
+      "jours": 21,
+      "parJour": 14.476,
+      "tardParJour": 8.619
+     }
+    ],
+    "types_a_l_heure": 1,
+    "bilan_s": 1.3,
+    "loi": {
+     "texte": "1.157 − p",
+     "retenue": false,
+     "sans_variable": false,
+     "erreur_loi": 5.697,
+     "erreur_constante": 5.705,
+     "erreur_droite": 5.54,
+     "secs": 0.9
+    },
+    "decisions": {
+     "complet": {
+      "niveau": 1,
+      "par": "table",
+      "prevu": {
+       "0": 591.62,
+       "1": 888.66,
+       "-1": 353.32
+      }
+     },
+     "sans_galilee": {
+      "niveau": 1,
+      "par": "table",
+      "prevu": {
+       "0": 591.62,
+       "1": 888.66,
+       "-1": 353.32
+      }
+     },
+     "sans_lavoisier": {
+      "niveau": 1,
+      "par": "table",
+      "prevu": {
+       "0": 1186.49,
+       "1": 1483.81,
+       "-1": 946.51
+      }
+     }
+    },
+    "juge": {
+     "verdict": "sans objet",
+     "raison": "aucune loi dépendant du prix sur les 56 premiers jours",
+     "loi": "0.3864"
+    }
+   },
+   "naif": {
+    "niveaux": [
+     0.5,
+     0.5,
+     0.5,
+     0.5,
+     0.5,
+     0.5,
+     -0.5,
+     -0.5,
+     -0.5,
+     -0.5,
+     -0.5,
+     -0.5,
+     -0.5
+    ],
+    "cout": {
+     "cout": 41.11258620689655,
+     "methode": "paires reliées",
+     "paires": 12
+    },
+    "table": [
+     {
+      "u": -1,
+      "jours": 0,
+      "parJour": null,
+      "tardParJour": null
+     },
+     {
+      "u": -0.5,
+      "jours": 49,
+      "parJour": 14.02,
+      "tardParJour": 5.429
+     },
+     {
+      "u": 0,
+      "jours": 0,
+      "parJour": null,
+      "tardParJour": null
+     },
+     {
+      "u": 0.5,
+      "jours": 42,
+      "parJour": 14.429,
+      "tardParJour": 6.833
+     },
+     {
+      "u": 1,
+      "jours": 0,
+      "parJour": null,
+      "tardParJour": null
+     }
+    ],
+    "types_a_l_heure": 1,
+    "bilan_s": 1.1,
+    "loi": {
+     "texte": "0.3111",
+     "retenue": false,
+     "sans_variable": true,
+     "erreur_loi": 5.288,
+     "erreur_constante": 5.288,
+     "erreur_droite": 5.283,
+     "secs": 0.5
+    },
+    "decisions": {
+     "complet": {
+      "niveau": 0.5,
+      "par": "table",
+      "prevu": {
+       "-0.5": 451.84,
+       "0.5": 729.62
+      }
+     },
+     "sans_galilee": {
+      "niveau": 0.5,
+      "par": "table",
+      "prevu": {
+       "-0.5": 451.84,
+       "0.5": 729.62
+      }
+     },
+     "sans_lavoisier": {
+      "niveau": 0.5,
+      "par": "table",
+      "prevu": {
+       "-0.5": 1028.26,
+       "0.5": 1322.81
+      }
+     }
+    },
+    "juge": null
+   },
+   "bras": {
+    "nul": {
+     "essai": 51822.87,
+     "exploitation": 52614.3,
+     "total": 104437.16,
+     "profit_2e_semestre": 730609.69
+    },
+    "aveugle:-1": {
+     "essai": 38249.35,
+     "exploitation": 35351.97,
+     "total": 73601.32,
+     "profit_2e_semestre": 654677.26
+    },
+    "aveugle:-0.5": {
+     "essai": 46375.25,
+     "exploitation": 46085.21,
+     "total": 92460.46,
+     "profit_2e_semestre": 644943.52
+    },
+    "aveugle:0": {
+     "essai": 56301.97,
+     "exploitation": 51395.48,
+     "total": 107697.46,
+     "profit_2e_semestre": 743317.97
+    },
+    "aveugle:0.5": {
+     "essai": 67153.53,
+     "exploitation": 58759.34,
+     "total": 125912.87,
+     "profit_2e_semestre": 729914.46
+    },
+    "aveugle:1": {
+     "essai": 71823.28,
+     "exploitation": 72498.54,
+     "total": 144321.82,
+     "profit_2e_semestre": 760473.67
+    },
+    "collectif": {
+     "essai": 54869.4,
+     "exploitation": 56353.65,
+     "total": 111223.05,
+     "profit_2e_semestre": 735219.51
+    },
+    "sans_galilee": {
+     "essai": 54869.4,
+     "exploitation": 56353.65,
+     "total": 111223.05,
+     "profit_2e_semestre": 735219.51
+    },
+    "sans_lavoisier": {
+     "essai": 54869.4,
+     "exploitation": 56353.65,
+     "total": 111223.05,
+     "profit_2e_semestre": 735219.51
+    },
+    "sans_plan_cortex": {
+     "essai": 54308.22,
+     "exploitation": 56938.91,
+     "total": 111247.13,
+     "profit_2e_semestre": 744448.29
+    }
+   },
+   "courses": 8,
+   "secs": 5.8,
+   "identites": {
+    "lavoisier": {
+     "nom": "LAVOISIER",
+     "depot": "haynbroit-alt/A",
+     "commit": "718b7d3"
+    },
+    "cortex": {
+     "nom": "CORTEX",
+     "depot": "haynbroit-alt/1",
+     "commit": "93931fb"
+    },
+    "galilee": {
+     "nom": "GALILÉE",
+     "depot": "haynbroit-alt/All",
+     "commit": "be42b7e"
+    }
+   }
+  },
+  {
+   "graine": 211,
+   "ecartee": false,
+   "objet": "pome1",
+   "prix_reference": 303.67,
+   "cout_vrai": 177.734,
+   "eligibles": 12,
+   "objets": 22,
+   "plan_cortex": {
+    "niveaux": [
+     -1,
+     0,
+     1,
+     -1,
+     1,
+     1,
+     -1,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
+    ],
+    "budget": {
+     "u0": 0.46153846153846156,
+     "u1": 0,
+     "jours": 91
+    }
+   },
+   "collectif": {
+    "niveaux": [
+     -1,
+     0,
+     1,
+     -1,
+     1,
+     1,
+     -1,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
+    ],
+    "cout": {
+     "cout": 177.7342156862745,
+     "methode": "paires reliées",
+     "paires": 10
+    },
+    "table": [
+     {
+      "u": -1,
+      "jours": 21,
+      "parJour": 24.762,
+      "tardParJour": 4.667
+     },
+     {
+      "u": -0.5,
+      "jours": 0,
+      "parJour": null,
+      "tardParJour": null
+     },
+     {
+      "u": 0,
+      "jours": 49,
+      "parJour": 16.857,
+      "tardParJour": 4.245
+     },
+     {
+      "u": 0.5,
+      "jours": 0,
+      "parJour": null,
+      "tardParJour": null
+     },
+     {
+      "u": 1,
+      "jours": 21,
+      "parJour": 13.571,
+      "tardParJour": 5.429
+     }
+    ],
+    "types_a_l_heure": 1,
+    "bilan_s": 1.1,
+    "loi": {
+     "texte": "cos(p)^π",
+     "retenue": false,
+     "sans_variable": false,
+     "erreur_loi": 6.862,
+     "erreur_constante": 7.424,
+     "erreur_droite": 6.753,
+     "secs": 1.1
+    },
+    "decisions": {
+     "complet": {
+      "niveau": 1,
+      "par": "table",
+      "prevu": {
+       "0": 2122.92,
+       "1": 2739.47,
+       "-1": 1614.62
+      }
+     },
+     "sans_galilee": {
+      "niveau": 1,
+      "par": "table",
+      "prevu": {
+       "0": 2122.92,
+       "1": 2739.47,
+       "-1": 1614.62
+      }
+     },
+     "sans_lavoisier": {
+      "niveau": -1,
+      "par": "table",
+      "prevu": {
+       "0": 5119.01,
+       "1": 5151.58,
+       "-1": 6015.66
+      }
+     }
+    },
+    "juge": {
+     "verdict": "sans objet",
+     "raison": "aucune loi dépendant du prix sur les 56 premiers jours",
+     "loi": "1/3"
+    }
+   },
+   "naif": {
+    "niveaux": [
+     0.5,
+     0.5,
+     0.5,
+     0.5,
+     0.5,
+     0.5,
+     -0.5,
+     -0.5,
+     -0.5,
+     -0.5,
+     -0.5,
+     -0.5,
+     -0.5
+    ],
+    "cout": {
+     "cout": 177.7342216981132,
+     "methode": "paires reliées",
+     "paires": 10
+    },
+    "table": [
+     {
+      "u": -1,
+      "jours": 0,
+      "parJour": null,
+      "tardParJour": null
+     },
+     {
+      "u": -0.5,
+      "jours": 49,
+      "parJour": 19.653,
+      "tardParJour": 3.469
+     },
+     {
+      "u": 0,
+      "jours": 0,
+      "parJour": null,
+      "tardParJour": null
+     },
+     {
+      "u": 0.5,
+      "jours": 42,
+      "parJour": 14.119,
+      "tardParJour": 2.31
+     },
+     {
+      "u": 1,
+      "jours": 0,
+      "parJour": null,
+      "tardParJour": null
+     }
+    ],
+    "types_a_l_heure": 1,
+    "bilan_s": 1.1,
+    "loi": {
+     "texte": "log(5/2 − p)",
+     "retenue": false,
+     "sans_variable": false,
+     "erreur_loi": 6.383,
+     "erreur_constante": 6.646,
+     "erreur_droite": 6.332,
+     "secs": 0.6
+    },
+    "decisions": {
+     "complet": {
+      "niveau": 0.5,
+      "par": "table",
+      "prevu": {
+       "-0.5": 1844.95,
+       "0.5": 2284.12
+      }
+     },
+     "sans_galilee": {
+      "niveau": 0.5,
+      "par": "table",
+      "prevu": {
+       "-0.5": 1844.95,
+       "0.5": 2284.12
+      }
+     },
+     "sans_lavoisier": {
+      "niveau": -0.5,
+      "par": "table",
+      "prevu": {
+       "-0.5": 5337.97,
+       "0.5": 4793.56
+      }
+     }
+    },
+    "juge": null
+   },
+   "bras": {
+    "nul": {
+     "essai": 201392.58,
+     "exploitation": 234951.3,
+     "total": 436343.88,
+     "profit_2e_semestre": 762275.98
+    },
+    "aveugle:-1": {
+     "essai": 135171.59,
+     "exploitation": 135954.06,
+     "total": 271125.64,
+     "profit_2e_semestre": 586426.04
+    },
+    "aveugle:-0.5": {
+     "essai": 174984.46,
+     "exploitation": 172731.44,
+     "total": 347715.9,
+     "profit_2e_semestre": 728477
+    },
+    "aveugle:0": {
+     "essai": 202882.54,
+     "exploitation": 208045.91,
+     "total": 410928.46,
+     "profit_2e_semestre": 725832.59
+    },
+    "aveugle:0.5": {
+     "essai": 214191.14,
+     "exploitation": 234882.48,
+     "total": 449073.61,
+     "profit_2e_semestre": 771776.94
+    },
+    "aveugle:1": {
+     "essai": 241419.52,
+     "exploitation": 241621.37,
+     "total": 483040.89,
+     "profit_2e_semestre": 796690.72
+    },
+    "collectif": {
+     "essai": 195938.49,
+     "exploitation": 216389.4,
+     "total": 412327.89,
+     "profit_2e_semestre": 740938.45
+    },
+    "sans_galilee": {
+     "essai": 195938.49,
+     "exploitation": 216389.4,
+     "total": 412327.89,
+     "profit_2e_semestre": 740938.45
+    },
+    "sans_lavoisier": {
+     "essai": 195938.49,
+     "exploitation": 126564.42,
+     "total": 322502.92,
+     "profit_2e_semestre": 606811.22
+    },
+    "sans_plan_cortex": {
+     "essai": 187002.57,
+     "exploitation": 237972.18,
+     "total": 424974.75,
+     "profit_2e_semestre": 747638.64
+    }
+   },
+   "courses": 10,
+   "secs": 5.9,
+   "identites": {
+    "lavoisier": {
+     "nom": "LAVOISIER",
+     "depot": "haynbroit-alt/A",
+     "commit": "718b7d3"
+    },
+    "cortex": {
+     "nom": "CORTEX",
+     "depot": "haynbroit-alt/1",
+     "commit": "93931fb"
+    },
+    "galilee": {
+     "nom": "GALILÉE",
+     "depot": "haynbroit-alt/All",
+     "commit": "be42b7e"
+    }
+   }
+  },
+  {
+   "graine": 212,
+   "ecartee": false,
+   "objet": "cave0",
+   "prix_reference": 43.21,
+   "cout_vrai": 26.472,
+   "eligibles": 13,
+   "objets": 24,
+   "plan_cortex": {
+    "niveaux": [
+     -1,
+     0,
+     1,
+     -1,
+     1,
+     1,
+     -1,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
+    ],
+    "budget": {
+     "u0": 0.46153846153846156,
+     "u1": 0,
+     "jours": 91
+    }
+   },
+   "collectif": {
+    "niveaux": [
+     -1,
+     0,
+     1,
+     -1,
+     1,
+     1,
+     -1,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
+    ],
+    "cout": {
+     "cout": 26.47194300518135,
+     "methode": "paires reliées",
+     "paires": 11
+    },
+    "table": [
+     {
+      "u": -1,
+      "jours": 21,
+      "parJour": 23.571,
+      "tardParJour": 10.762
+     },
+     {
+      "u": -0.5,
+      "jours": 0,
+      "parJour": null,
+      "tardParJour": null
+     },
+     {
+      "u": 0,
+      "jours": 49,
+      "parJour": 15.163,
+      "tardParJour": 6.429
+     },
+     {
+      "u": 0.5,
+      "jours": 0,
+      "parJour": null,
+      "tardParJour": null
+     },
+     {
+      "u": 1,
+      "jours": 21,
+      "parJour": 12.571,
+      "tardParJour": 4.571
+     }
+    ],
+    "types_a_l_heure": 1,
+    "bilan_s": 0.8,
+    "loi": {
+     "texte": "1 / (p·4)",
+     "retenue": true,
+     "sans_variable": false,
+     "erreur_loi": 5.12,
+     "erreur_constante": 5.395,
+     "erreur_droite": 5.179,
+     "secs": 0.7
+    },
+    "decisions": {
+     "complet": {
+      "niveau": 1,
+      "par": "loi",
+      "prevu": {
+       "0": 264.52,
+       "1": 332.42,
+       "-1": 182.05,
+       "-0.5": 232.32,
+       "0.5": 303.23
+      }
+     },
+     "sans_galilee": {
+      "niveau": 1,
+      "par": "table",
+      "prevu": {
+       "0": 253.8,
+       "1": 346.19,
+       "-1": 190.88
+      }
+     },
+     "sans_lavoisier": {
+      "niveau": -1,
+      "par": "loi",
+      "prevu": {
+       "0": 682.87,
+       "1": 651.98,
+       "-1": 777.16,
+       "-0.5": 737.32,
+       "0.5": 670.8
+      }
+     }
+    },
+    "juge": {
+     "verdict": "indecis",
+     "loi": "1 / (p·4)",
+     "logE": 0,
+     "seuil": 2.3,
+     "diagnostic": "mal estimé",
+     "secs": 1.128
+    }
+   },
+   "naif": {
+    "niveaux": [
+     0.5,
+     0.5,
+     0.5,
+     0.5,
+     0.5,
+     0.5,
+     -0.5,
+     -0.5,
+     -0.5,
+     -0.5,
+     -0.5,
+     -0.5,
+     -0.5
+    ],
+    "cout": {
+     "cout": 26.471940700808627,
+     "methode": "paires reliées",
+     "paires": 11
+    },
+    "table": [
+     {
+      "u": -1,
+      "jours": 0,
+      "parJour": null,
+      "tardParJour": null
+     },
+     {
+      "u": -0.5,
+      "jours": 49,
+      "parJour": 16.776,
+      "tardParJour": 7.122
+     },
+     {
+      "u": 0,
+      "jours": 0,
+      "parJour": null,
+      "tardParJour": null
+     },
+     {
+      "u": 0.5,
+      "jours": 42,
+      "parJour": 15.333,
+      "tardParJour": 5.786
+     },
+     {
+      "u": 1,
+      "jours": 0,
+      "parJour": null,
+      "tardParJour": null
+     }
+    ],
+    "types_a_l_heure": 1,
+    "bilan_s": 0.7,
+    "loi": {
+     "texte": "0.3529",
+     "retenue": false,
+     "sans_variable": true,
+     "erreur_loi": 5.305,
+     "erreur_constante": 5.305,
+     "erreur_droite": 5.316,
+     "secs": 0.5
+    },
+    "decisions": {
+     "complet": {
+      "niveau": 0.5,
+      "par": "table",
+      "prevu": {
+       "-0.5": 204.29,
+       "0.5": 334.85
+      }
+     },
+     "sans_galilee": {
+      "niveau": 0.5,
+      "par": "table",
+      "prevu": {
+       "-0.5": 204.29,
+       "0.5": 334.85
+      }
+     },
+     "sans_lavoisier": {
+      "niveau": 0.5,
+      "par": "table",
+      "prevu": {
+       "-0.5": 648.37,
+       "0.5": 740.75
+      }
+     }
+    },
+    "juge": null
+   },
+   "bras": {
+    "nul": {
+     "essai": 28669.99,
+     "exploitation": 27181.35,
+     "total": 55851.34,
+     "profit_2e_semestre": 248304.44
+    },
+    "aveugle:-1": {
+     "essai": 13791,
+     "exploitation": 12333.35,
+     "total": 26124.35,
+     "profit_2e_semestre": 206373.38
+    },
+    "aveugle:-0.5": {
+     "essai": 18047.89,
+     "exploitation": 15928.9,
+     "total": 33976.79,
+     "profit_2e_semestre": 211383.74
+    },
+    "aveugle:0": {
+     "essai": 24638.43,
+     "exploitation": 21123.43,
+     "total": 45761.86,
+     "profit_2e_semestre": 211038.52
+    },
+    "aveugle:0.5": {
+     "essai": 34351.27,
+     "exploitation": 27646.99,
+     "total": 61998.26,
+     "profit_2e_semestre": 247289.15
+    },
+    "aveugle:1": {
+     "essai": 34147.2,
+     "exploitation": 34808.11,
+     "total": 68955.31,
+     "profit_2e_semestre": 223956.96
+    },
+    "collectif": {
+     "essai": 23848.33,
+     "exploitation": 37561.92,
+     "total": 61410.25,
+     "profit_2e_semestre": 223321.33
+    },
+    "sans_galilee": {
+     "essai": 23848.33,
+     "exploitation": 37561.92,
+     "total": 61410.25,
+     "profit_2e_semestre": 223321.33
+    },
+    "sans_lavoisier": {
+     "essai": 23848.33,
+     "exploitation": 11896.05,
+     "total": 35744.38,
+     "profit_2e_semestre": 224439.56
+    },
+    "sans_plan_cortex": {
+     "essai": 24008.56,
+     "exploitation": 29394.03,
+     "total": 53402.59,
+     "profit_2e_semestre": 214035
+    }
+   },
+   "courses": 9,
+   "secs": 5.4,
+   "identites": {
+    "lavoisier": {
+     "nom": "LAVOISIER",
+     "depot": "haynbroit-alt/A",
+     "commit": "718b7d3"
+    },
+    "cortex": {
+     "nom": "CORTEX",
+     "depot": "haynbroit-alt/1",
+     "commit": "93931fb"
+    },
+    "galilee": {
+     "nom": "GALILÉE",
+     "depot": "haynbroit-alt/All",
+     "commit": "be42b7e"
+    }
+   }
+  },
+  {
+   "graine": 213,
+   "ecartee": false,
+   "objet": "gowowu0",
+   "prix_reference": 45.43,
+   "cout_vrai": 26.851,
+   "eligibles": 2,
+   "objets": 5,
+   "plan_cortex": {
+    "niveaux": [
+     -1,
+     0,
+     1,
+     -1,
+     1,
+     1,
+     -1,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
+    ],
+    "budget": {
+     "u0": 0.46153846153846156,
+     "u1": 0,
+     "jours": 91
+    }
+   },
+   "collectif": {
+    "niveaux": [
+     -1,
+     0,
+     1,
+     -1,
+     1,
+     1,
+     -1,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
+    ],
+    "cout": {
+     "cout": 26.85128378378378,
+     "methode": "paires reliées",
+     "paires": 3
+    },
+    "table": [
+     {
+      "u": -1,
+      "jours": 21,
+      "parJour": 6.095,
+      "tardParJour": 2.238
+     },
+     {
+      "u": -0.5,
+      "jours": 0,
+      "parJour": null,
+      "tardParJour": null
+     },
+     {
+      "u": 0,
+      "jours": 49,
+      "parJour": 4.347,
+      "tardParJour": 1.612
+     },
+     {
+      "u": 0.5,
+      "jours": 0,
+      "parJour": null,
+      "tardParJour": null
+     },
+     {
+      "u": 1,
+      "jours": 21,
+      "parJour": 5.19,
+      "tardParJour": 3.762
+     }
+    ],
+    "types_a_l_heure": 1,
+    "bilan_s": 0.1,
+    "loi": {
+     "texte": "0.1824",
+     "retenue": false,
+     "sans_variable": true,
+     "erreur_loi": 2.657,
+     "erreur_constante": 2.657,
+     "erreur_droite": 2.586,
+     "secs": 0.7
+    },
+    "decisions": {
+     "complet": {
+      "niveau": 1,
+      "par": "table",
+      "prevu": {
+       "0": 80.76,
+       "1": 155.4,
+       "-1": 57.84
+      }
+     },
+     "sans_galilee": {
+      "niveau": 1,
+      "par": "table",
+      "prevu": {
+       "0": 80.76,
+       "1": 155.4,
+       "-1": 57.84
+      }
+     },
+     "sans_lavoisier": {
+      "niveau": 1,
+      "par": "table",
+      "prevu": {
+       "0": 197.48,
+       "1": 294.77,
+       "-1": 221.5
+      }
+     }
+    },
+    "juge": {
+     "verdict": "sans objet",
+     "raison": "aucune loi dépendant du prix sur les 56 premiers jours",
+     "loi": "0.2302"
+    }
+   },
+   "naif": {
+    "niveaux": [
+     0.5,
+     0.5,
+     0.5,
+     0.5,
+     0.5,
+     0.5,
+     -0.5,
+     -0.5,
+     -0.5,
+     -0.5,
+     -0.5,
+     -0.5,
+     -0.5
+    ],
+    "cout": {
+     "cout": 26.85128378378378,
+     "methode": "paires reliées",
+     "paires": 4
+    },
+    "table": [
+     {
+      "u": -1,
+      "jours": 0,
+      "parJour": null,
+      "tardParJour": null
+     },
+     {
+      "u": -0.5,
+      "jours": 49,
+      "parJour": 6.694,
+      "tardParJour": 2.49
+     },
+     {
+      "u": 0,
+      "jours": 0,
+      "parJour": null,
+      "tardParJour": null
+     },
+     {
+      "u": 0.5,
+      "jours": 42,
+      "parJour": 7.333,
+      "tardParJour": 4.476
+     },
+     {
+      "u": 1,
+      "jours": 0,
+      "parJour": null,
+      "tardParJour": null
+     }
+    ],
+    "types_a_l_heure": 1,
+    "bilan_s": 0.1,
+    "loi": {
+     "texte": "0.2243",
+     "retenue": false,
+     "sans_variable": true,
+     "erreur_loi": 3.832,
+     "erreur_constante": 3.832,
+     "erreur_droite": 3.816,
+     "secs": 0.5
+    },
+    "decisions": {
+     "complet": {
+      "niveau": 0.5,
+      "par": "table",
+      "prevu": {
+       "-0.5": 92.23,
+       "0.5": 175.55
+      }
+     },
+     "sans_galilee": {
+      "niveau": 0.5,
+      "par": "table",
+      "prevu": {
+       "-0.5": 92.23,
+       "0.5": 175.55
+      }
+     },
+     "sans_lavoisier": {
+      "niveau": 0.5,
+      "par": "table",
+      "prevu": {
+       "-0.5": 271.97,
+       "0.5": 372.46
+      }
+     }
+    },
+    "juge": null
+   },
+   "bras": {
+    "nul": {
+     "essai": 10162.13,
+     "exploitation": 11772.04,
+     "total": 21934.16,
+     "profit_2e_semestre": -37020.74
+    },
+    "aveugle:-1": {
+     "essai": 6053.8,
+     "exploitation": 6253.06,
+     "total": 12306.86,
+     "profit_2e_semestre": -31840.68
+    },
+    "aveugle:-0.5": {
+     "essai": 6737.79,
+     "exploitation": 8542.8,
+     "total": 15280.6,
+     "profit_2e_semestre": -44276.03
+    },
+    "aveugle:0": {
+     "essai": 10162.56,
+     "exploitation": 9066.41,
+     "total": 19228.97,
+     "profit_2e_semestre": -30473.94
+    },
+    "aveugle:0.5": {
+     "essai": 13262.05,
+     "exploitation": 9431.85,
+     "total": 22693.9,
+     "profit_2e_semestre": -25682.14
+    },
+    "aveugle:1": {
+     "essai": 14310.71,
+     "exploitation": 15508.25,
+     "total": 29818.96,
+     "profit_2e_semestre": -30584.74
+    },
+    "collectif": {
+     "essai": 8374.2,
+     "exploitation": 15867.52,
+     "total": 24241.72,
+     "profit_2e_semestre": -22220.34
+    },
+    "sans_galilee": {
+     "essai": 8374.2,
+     "exploitation": 15867.52,
+     "total": 24241.72,
+     "profit_2e_semestre": -22220.34
+    },
+    "sans_lavoisier": {
+     "essai": 8374.2,
+     "exploitation": 15867.52,
+     "total": 24241.72,
+     "profit_2e_semestre": -22220.34
+    },
+    "sans_plan_cortex": {
+     "essai": 12392.2,
+     "exploitation": 9360.04,
+     "total": 21752.23,
+     "profit_2e_semestre": -32932.31
+    }
+   },
+   "courses": 8,
+   "secs": 2.2,
+   "identites": {
+    "lavoisier": {
+     "nom": "LAVOISIER",
+     "depot": "haynbroit-alt/A",
+     "commit": "718b7d3"
+    },
+    "cortex": {
+     "nom": "CORTEX",
+     "depot": "haynbroit-alt/1",
+     "commit": "93931fb"
+    },
+    "galilee": {
+     "nom": "GALILÉE",
+     "depot": "haynbroit-alt/All",
+     "commit": "be42b7e"
+    }
+   }
+  },
+  {
+   "graine": 214,
+   "ecartee": false,
+   "objet": "jotogo3",
+   "prix_reference": 354.18,
+   "cout_vrai": 168.949,
+   "eligibles": 8,
+   "objets": 10,
+   "plan_cortex": {
+    "niveaux": [
+     -1,
+     0,
+     1,
+     -1,
+     1,
+     1,
+     -1,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
+    ],
+    "budget": {
+     "u0": 0.46153846153846156,
+     "u1": 0,
+     "jours": 91
+    }
+   },
+   "collectif": {
+    "niveaux": [
+     -1,
+     0,
+     1,
+     -1,
+     1,
+     1,
+     -1,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
+    ],
+    "cout": {
+     "cout": 168.9487278106509,
+     "methode": "paires reliées",
+     "paires": 20
+    },
+    "table": [
+     {
+      "u": -1,
+      "jours": 21,
+      "parJour": 32.048,
+      "tardParJour": 14.714
+     },
+     {
+      "u": -0.5,
+      "jours": 0,
+      "parJour": null,
+      "tardParJour": null
+     },
+     {
+      "u": 0,
+      "jours": 49,
+      "parJour": 25.673,
+      "tardParJour": 12.224
+     },
+     {
+      "u": 0.5,
+      "jours": 0,
+      "parJour": null,
+      "tardParJour": null
+     },
+     {
+      "u": 1,
+      "jours": 21,
+      "parJour": 19.857,
+      "tardParJour": 9.714
+     }
+    ],
+    "types_a_l_heure": 1,
+    "bilan_s": 0.6,
+    "loi": {
+     "texte": "1 / (p·4)",
+     "retenue": true,
+     "sans_variable": false,
+     "erreur_loi": 6.435,
+     "erreur_constante": 6.871,
+     "erreur_droite": 6.454,
+     "secs": 0.9
+    },
+    "decisions": {
+     "complet": {
+      "niveau": 1,
+      "par": "loi",
+      "prevu": {
+       "0": 4753.4,
+       "1": 5602.74,
+       "-1": 3604.6,
+       "-0.5": 4212.44,
+       "0.5": 5219.28
+      }
+     },
+     "sans_galilee": {
+      "niveau": 1,
+      "par": "table",
+      "prevu": {
+       "0": 4755.53,
+       "1": 5436.51,
+       "-1": 3665.97
+      }
+     },
+     "sans_lavoisier": {
+      "niveau": 0.5,
+      "par": "loi",
+      "prevu": {
+       "0": 9088.96,
+       "1": 9060.15,
+       "-1": 8928.37,
+       "-0.5": 9026.29,
+       "0.5": 9103.12
+      }
+     }
+    },
+    "juge": {
+     "verdict": "sans objet",
+     "raison": "aucune loi dépendant du prix sur les 56 premiers jours",
+     "loi": "1/3"
+    }
+   },
+   "naif": {
+    "niveaux": [
+     0.5,
+     0.5,
+     0.5,
+     0.5,
+     0.5,
+     0.5,
+     -0.5,
+     -0.5,
+     -0.5,
+     -0.5,
+     -0.5,
+     -0.5,
+     -0.5
+    ],
+    "cout": {
+     "cout": 168.94873493975905,
+     "methode": "paires reliées",
+     "paires": 19
+    },
+    "table": [
+     {
+      "u": -1,
+      "jours": 0,
+      "parJour": null,
+      "tardParJour": null
+     },
+     {
+      "u": -0.5,
+      "jours": 49,
+      "parJour": 26.592,
+      "tardParJour": 11.204
+     },
+     {
+      "u": 0,
+      "jours": 0,
+      "parJour": null,
+      "tardParJour": null
+     },
+     {
+      "u": 0.5,
+      "jours": 42,
+      "parJour": 24.476,
+      "tardParJour": 12.095
+     },
+     {
+      "u": 1,
+      "jours": 0,
+      "parJour": null,
+      "tardParJour": null
+     }
+    ],
+    "types_a_l_heure": 1,
+    "bilan_s": 0.4,
+    "loi": {
+     "texte": "0.4647",
+     "retenue": false,
+     "sans_variable": true,
+     "erreur_loi": 6.829,
+     "erreur_constante": 6.829,
+     "erreur_droite": 6.713,
+     "secs": 0.7
+    },
+    "decisions": {
+     "complet": {
+      "niveau": 0.5,
+      "par": "table",
+      "prevu": {
+       "-0.5": 3931.37,
+       "0.5": 5557.11
+      }
+     },
+     "sans_galilee": {
+      "niveau": 0.5,
+      "par": "table",
+      "prevu": {
+       "-0.5": 3931.37,
+       "0.5": 5557.11
+      }
+     },
+     "sans_lavoisier": {
+      "niveau": 0.5,
+      "par": "table",
+      "prevu": {
+       "-0.5": 8424.03,
+       "0.5": 9692.33
+      }
+     }
+    },
+    "juge": null
+   },
+   "bras": {
+    "nul": {
+     "essai": 392953.96,
+     "exploitation": 412269.23,
+     "total": 805223.19,
+     "profit_2e_semestre": 901415.19
+    },
+    "aveugle:-1": {
+     "essai": 311830.59,
+     "exploitation": 303136.86,
+     "total": 614967.45,
+     "profit_2e_semestre": 721916.79
+    },
+    "aveugle:-0.5": {
+     "essai": 356445.29,
+     "exploitation": 356001.77,
+     "total": 712447.06,
+     "profit_2e_semestre": 852137.92
+    },
+    "aveugle:0": {
+     "essai": 407694.02,
+     "exploitation": 420104.51,
+     "total": 827798.53,
+     "profit_2e_semestre": 999240.18
+    },
+    "aveugle:0.5": {
+     "essai": 548985.78,
+     "exploitation": 492679.55,
+     "total": 1041665.33,
+     "profit_2e_semestre": 1103075.46
+    },
+    "aveugle:1": {
+     "essai": 573024.19,
+     "exploitation": 554407.06,
+     "total": 1127431.26,
+     "profit_2e_semestre": 1329706.05
+    },
+    "collectif": {
+     "essai": 429995.63,
+     "exploitation": 546741.19,
+     "total": 976736.82,
+     "profit_2e_semestre": 1130946.62
+    },
+    "sans_galilee": {
+     "essai": 429995.63,
+     "exploitation": 546741.19,
+     "total": 976736.82,
+     "profit_2e_semestre": 1130946.62
+    },
+    "sans_lavoisier": {
+     "essai": 429995.63,
+     "exploitation": 498128.54,
+     "total": 928124.17,
+     "profit_2e_semestre": 1039062.09
+    },
+    "sans_plan_cortex": {
+     "essai": 432577.57,
+     "exploitation": 510388.77,
+     "total": 942966.34,
+     "profit_2e_semestre": 1020411.06
+    }
+   },
+   "courses": 9,
+   "secs": 4.2,
+   "identites": {
+    "lavoisier": {
+     "nom": "LAVOISIER",
+     "depot": "haynbroit-alt/A",
+     "commit": "718b7d3"
+    },
+    "cortex": {
+     "nom": "CORTEX",
+     "depot": "haynbroit-alt/1",
+     "commit": "93931fb"
+    },
+    "galilee": {
+     "nom": "GALILÉE",
+     "depot": "haynbroit-alt/All",
+     "commit": "be42b7e"
+    }
+   }
+  },
+  {
+   "graine": 215,
+   "ecartee": false,
+   "objet": "tuledo7",
+   "prix_reference": 4.33,
+   "cout_vrai": 2.324,
+   "eligibles": 8,
+   "objets": 10,
+   "plan_cortex": {
+    "niveaux": [
+     -1,
+     0,
+     1,
+     -1,
+     1,
+     1,
+     -1,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
+    ],
+    "budget": {
+     "u0": 0.46153846153846156,
+     "u1": 0,
+     "jours": 91
+    }
+   },
+   "collectif": {
+    "niveaux": [
+     -1,
+     0,
+     1,
+     -1,
+     1,
+     1,
+     -1,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
+    ],
+    "cout": {
+     "cout": 2.323832335329341,
+     "methode": "paires reliées",
+     "paires": 17
+    },
+    "table": [
+     {
+      "u": -1,
+      "jours": 21,
+      "parJour": 26.286,
+      "tardParJour": 15.619
+     },
+     {
+      "u": -0.5,
+      "jours": 0,
+      "parJour": null,
+      "tardParJour": null
+     },
+     {
+      "u": 0,
+      "jours": 49,
+      "parJour": 19.245,
+      "tardParJour": 12.245
+     },
+     {
+      "u": 0.5,
+      "jours": 0,
+      "parJour": null,
+      "tardParJour": null
+     },
+     {
+      "u": 1,
+      "jours": 21,
+      "parJour": 19.762,
+      "tardParJour": 14.048
+     }
+    ],
+    "types_a_l_heure": 1,
+    "bilan_s": 0.3,
+    "loi": {
+     "texte": "exp(−4·p / 3)",
+     "retenue": true,
+     "sans_variable": false,
+     "erreur_loi": 5.119,
+     "erreur_constante": 5.375,
+     "erreur_droite": 5.136,
+     "secs": 0.7
+    },
+    "decisions": {
+     "complet": {
+      "niveau": 1,
+      "par": "loi",
+      "prevu": {
+       "0": 39.75,
+       "1": 61.25,
+       "-1": 28.39,
+       "-0.5": 34.64,
+       "0.5": 49.88
+      }
+     },
+     "sans_galilee": {
+      "niveau": 1,
+      "par": "table",
+      "prevu": {
+       "0": 38.61,
+       "1": 60.99,
+       "-1": 29.86
+      }
+     },
+     "sans_lavoisier": {
+      "niveau": 1,
+      "par": "loi",
+      "prevu": {
+       "0": 85.8,
+       "1": 107.37,
+       "-1": 86.47,
+       "-0.5": 86.71,
+       "0.5": 95.94
+      }
+     }
+    },
+    "juge": {
+     "verdict": "sans objet",
+     "raison": "aucune loi dépendant du prix sur les 56 premiers jours",
+     "loi": "0.3492"
+    }
+   },
+   "naif": {
+    "niveaux": [
+     0.5,
+     0.5,
+     0.5,
+     0.5,
+     0.5,
+     0.5,
+     -0.5,
+     -0.5,
+     -0.5,
+     -0.5,
+     -0.5,
+     -0.5,
+     -0.5
+    ],
+    "cout": {
+     "cout": 2.323831775700935,
+     "methode": "paires reliées",
+     "paires": 17
+    },
+    "table": [
+     {
+      "u": -1,
+      "jours": 0,
+      "parJour": null,
+      "tardParJour": null
+     },
+     {
+      "u": -0.5,
+      "jours": 49,
+      "parJour": 20.918,
+      "tardParJour": 11.918
+     },
+     {
+      "u": 0,
+      "jours": 0,
+      "parJour": null,
+      "tardParJour": null
+     },
+     {
+      "u": 0.5,
+      "jours": 42,
+      "parJour": 21.476,
+      "tardParJour": 14.952
+     },
+     {
+      "u": 1,
+      "jours": 0,
+      "parJour": null,
+      "tardParJour": null
+     }
+    ],
+    "types_a_l_heure": 1,
+    "bilan_s": 0.5,
+    "loi": {
+     "texte": "0.3009",
+     "retenue": false,
+     "sans_variable": true,
+     "erreur_loi": 6.253,
+     "erreur_constante": 6.253,
+     "erreur_droite": 6.224,
+     "secs": 0.5
+    },
+    "decisions": {
+     "complet": {
+      "niveau": 0.5,
+      "par": "table",
+      "prevu": {
+       "-0.5": 32.34,
+       "0.5": 54.04
+      }
+     },
+     "sans_galilee": {
+      "niveau": 0.5,
+      "par": "table",
+      "prevu": {
+       "-0.5": 32.34,
+       "0.5": 54.04
+      }
+     },
+     "sans_lavoisier": {
+      "niveau": 0.5,
+      "par": "table",
+      "prevu": {
+       "-0.5": 80.95,
+       "0.5": 103.94
+      }
+     }
+    },
+    "juge": null
+   },
+   "bras": {
+    "nul": {
+     "essai": 3946.59,
+     "exploitation": 3858.28,
+     "total": 7804.86,
+     "profit_2e_semestre": 653248.55
+    },
+    "aveugle:-1": {
+     "essai": 2320.05,
+     "exploitation": 2122.36,
+     "total": 4442.41,
+     "profit_2e_semestre": 687340.05
+    },
+    "aveugle:-0.5": {
+     "essai": 3246.95,
+     "exploitation": 2815.57,
+     "total": 6062.52,
+     "profit_2e_semestre": 706939.03
+    },
+    "aveugle:0": {
+     "essai": 4235.02,
+     "exploitation": 3432.55,
+     "total": 7667.57,
+     "profit_2e_semestre": 709305.63
+    },
+    "aveugle:0.5": {
+     "essai": 4818.46,
+     "exploitation": 4408.32,
+     "total": 9226.78,
+     "profit_2e_semestre": 721085.95
+    },
+    "aveugle:1": {
+     "essai": 6280.35,
+     "exploitation": 5095.26,
+     "total": 11375.61,
+     "profit_2e_semestre": 623740.33
+    },
+    "collectif": {
+     "essai": 3827.9,
+     "exploitation": 4965.64,
+     "total": 8793.54,
+     "profit_2e_semestre": 716552.1
+    },
+    "sans_galilee": {
+     "essai": 3827.9,
+     "exploitation": 4965.64,
+     "total": 8793.54,
+     "profit_2e_semestre": 716552.1
+    },
+    "sans_lavoisier": {
+     "essai": 3827.9,
+     "exploitation": 4965.64,
+     "total": 8793.54,
+     "profit_2e_semestre": 716552.1
+    },
+    "sans_plan_cortex": {
+     "essai": 3998.44,
+     "exploitation": 4332.84,
+     "total": 8331.28,
+     "profit_2e_semestre": 682984.87
+    }
+   },
+   "courses": 8,
+   "secs": 3.2,
+   "identites": {
+    "lavoisier": {
+     "nom": "LAVOISIER",
+     "depot": "haynbroit-alt/A",
+     "commit": "718b7d3"
+    },
+    "cortex": {
+     "nom": "CORTEX",
+     "depot": "haynbroit-alt/1",
+     "commit": "93931fb"
+    },
+    "galilee": {
+     "nom": "GALILÉE",
+     "depot": "haynbroit-alt/All",
+     "commit": "be42b7e"
+    }
+   }
+  },
+  {
+   "graine": 216,
+   "ecartee": false,
+   "objet": "dugi8",
+   "prix_reference": 9.98,
+   "cout_vrai": 4.367,
+   "eligibles": 14,
+   "objets": 22,
+   "plan_cortex": {
+    "niveaux": [
+     -1,
+     0,
+     1,
+     -1,
+     1,
+     1,
+     -1,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
+    ],
+    "budget": {
+     "u0": 0.46153846153846156,
+     "u1": 0,
+     "jours": 91
+    }
+   },
+   "collectif": {
+    "niveaux": [
+     -1,
+     0,
+     1,
+     -1,
+     1,
+     1,
+     -1,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
+    ],
+    "cout": {
+     "cout": 4.367241379310345,
+     "methode": "paires reliées",
+     "paires": 7
+    },
+    "table": [
+     {
+      "u": -1,
+      "jours": 21,
+      "parJour": 17.524,
+      "tardParJour": 0
+     },
+     {
+      "u": -0.5,
+      "jours": 0,
+      "parJour": null,
+      "tardParJour": null
+     },
+     {
+      "u": 0,
+      "jours": 49,
+      "parJour": 10.959,
+      "tardParJour": 0
+     },
+     {
+      "u": 0.5,
+      "jours": 0,
+      "parJour": null,
+      "tardParJour": null
+     },
+     {
+      "u": 1,
+      "jours": 21,
+      "parJour": 8.476,
+      "tardParJour": 0
+     }
+    ],
+    "types_a_l_heure": 1,
+    "bilan_s": 0.9,
+    "loi": {
+     "texte": "1 / (p·4)",
+     "retenue": true,
+     "sans_variable": false,
+     "erreur_loi": 7.852,
+     "erreur_constante": 8.277,
+     "erreur_droite": 7.938,
+     "secs": 0.8
+    },
+    "decisions": {
+     "complet": {
+      "niveau": 1,
+      "par": "loi",
+      "prevu": {
+       "0": 66.65,
+       "1": 77.07,
+       "-1": 53.63,
+       "-0.5": 60.58,
+       "0.5": 72.15
+      }
+     },
+     "sans_galilee": {
+      "niveau": 1,
+      "par": "table",
+      "prevu": {
+       "0": 61.51,
+       "1": 68.77,
+       "-1": 63.31
+      }
+     },
+     "sans_lavoisier": {
+      "niveau": -0.5,
+      "par": "loi",
+      "prevu": {
+       "0": 118.51,
+       "1": 118.56,
+       "-1": 118.45,
+       "-0.5": 118.56,
+       "0.5": 118.53
+      }
+     }
+    },
+    "juge": {
+     "verdict": "sans objet",
+     "raison": "aucune loi dépendant du prix sur les 56 premiers jours",
+     "loi": "1/3"
+    }
+   },
+   "naif": {
+    "niveaux": [
+     0.5,
+     0.5,
+     0.5,
+     0.5,
+     0.5,
+     0.5,
+     -0.5,
+     -0.5,
+     -0.5,
+     -0.5,
+     -0.5,
+     -0.5,
+     -0.5
+    ],
+    "cout": {
+     "cout": 4.367241379310345,
+     "methode": "paires reliées",
+     "paires": 7
+    },
+    "table": [
+     {
+      "u": -1,
+      "jours": 0,
+      "parJour": null,
+      "tardParJour": null
+     },
+     {
+      "u": -0.5,
+      "jours": 49,
+      "parJour": 14.714,
+      "tardParJour": 0
+     },
+     {
+      "u": 0,
+      "jours": 0,
+      "parJour": null,
+      "tardParJour": null
+     },
+     {
+      "u": 0.5,
+      "jours": 42,
+      "parJour": 8.881,
+      "tardParJour": 0
+     },
+     {
+      "u": 1,
+      "jours": 0,
+      "parJour": null,
+      "tardParJour": null
+     }
+    ],
+    "types_a_l_heure": 1,
+    "bilan_s": 1,
+    "loi": {
+     "texte": "5/4 − p",
+     "retenue": false,
+     "sans_variable": false,
+     "erreur_loi": 6.03,
+     "erreur_constante": 6.554,
+     "erreur_droite": 5.981,
+     "secs": 0.6
+    },
+    "decisions": {
+     "complet": {
+      "niveau": -0.5,
+      "par": "table",
+      "prevu": {
+       "-0.5": 67.14,
+       "0.5": 60.33
+      }
+     },
+     "sans_galilee": {
+      "niveau": -0.5,
+      "par": "table",
+      "prevu": {
+       "-0.5": 67.14,
+       "0.5": 60.33
+      }
+     },
+     "sans_lavoisier": {
+      "niveau": -0.5,
+      "par": "table",
+      "prevu": {
+       "-0.5": 131.4,
+       "0.5": 99.11
+      }
+     }
+    },
+    "juge": null
+   },
+   "bras": {
+    "nul": {
+     "essai": 6204.98,
+     "exploitation": 5422.98,
+     "total": 11627.97,
+     "profit_2e_semestre": 401511.2
+    },
+    "aveugle:-1": {
+     "essai": 5075.93,
+     "exploitation": 5556.42,
+     "total": 10632.35,
+     "profit_2e_semestre": 372290.96
+    },
+    "aveugle:-0.5": {
+     "essai": 6095.84,
+     "exploitation": 5753.64,
+     "total": 11849.48,
+     "profit_2e_semestre": 423481.07
+    },
+    "aveugle:0": {
+     "essai": 6101.07,
+     "exploitation": 4624.91,
+     "total": 10725.98,
+     "profit_2e_semestre": 356922.41
+    },
+    "aveugle:0.5": {
+     "essai": 5407.04,
+     "exploitation": 6079.52,
+     "total": 11486.55,
+     "profit_2e_semestre": 356297.83
+    },
+    "aveugle:1": {
+     "essai": 6441.53,
+     "exploitation": 5979.1,
+     "total": 12420.63,
+     "profit_2e_semestre": 412917.9
+    },
+    "collectif": {
+     "essai": 5717.76,
+     "exploitation": 5451.77,
+     "total": 11169.54,
+     "profit_2e_semestre": 374661.54
+    },
+    "sans_galilee": {
+     "essai": 5717.76,
+     "exploitation": 5451.77,
+     "total": 11169.54,
+     "profit_2e_semestre": 374661.54
+    },
+    "sans_lavoisier": {
+     "essai": 5717.76,
+     "exploitation": 5639.57,
+     "total": 11357.33,
+     "profit_2e_semestre": 368001.48
+    },
+    "sans_plan_cortex": {
+     "essai": 5809.66,
+     "exploitation": 5242.61,
+     "total": 11052.27,
+     "profit_2e_semestre": 366507.1
+    }
+   },
+   "courses": 9,
+   "secs": 5.2,
+   "identites": {
+    "lavoisier": {
+     "nom": "LAVOISIER",
+     "depot": "haynbroit-alt/A",
+     "commit": "718b7d3"
+    },
+    "cortex": {
+     "nom": "CORTEX",
+     "depot": "haynbroit-alt/1",
+     "commit": "93931fb"
+    },
+    "galilee": {
+     "nom": "GALILÉE",
+     "depot": "haynbroit-alt/All",
+     "commit": "be42b7e"
+    }
+   }
+  },
+  {
+   "graine": 217,
+   "ecartee": false,
+   "objet": "tozonu7",
+   "prix_reference": 78.95,
+   "cout_vrai": 51.097,
+   "eligibles": 6,
+   "objets": 12,
+   "plan_cortex": {
+    "niveaux": [
+     -1,
+     0,
+     1,
+     -1,
+     1,
+     1,
+     -1,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
+    ],
+    "budget": {
+     "u0": 0.46153846153846156,
+     "u1": 0,
+     "jours": 91
+    }
+   },
+   "collectif": {
+    "niveaux": [
+     -1,
+     0,
+     1,
+     -1,
+     1,
+     1,
+     -1,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
+    ],
+    "cout": {
+     "cout": 51.09710610932476,
+     "methode": "paires reliées",
+     "paires": 16
+    },
+    "table": [
+     {
+      "u": -1,
+      "jours": 21,
+      "parJour": 30.762,
+      "tardParJour": 17.714
+     },
+     {
+      "u": -0.5,
+      "jours": 0,
+      "parJour": null,
+      "tardParJour": null
+     },
+     {
+      "u": 0,
+      "jours": 49,
+      "parJour": 17.388,
+      "tardParJour": 10.694
+     },
+     {
+      "u": 0.5,
+      "jours": 0,
+      "parJour": null,
+      "tardParJour": null
+     },
+     {
+      "u": 1,
+      "jours": 21,
+      "parJour": 22.095,
+      "tardParJour": 17.905
+     }
+    ],
+    "types_a_l_heure": 1,
+    "bilan_s": 0.3,
+    "loi": {
+     "texte": "1 / (p + p)^(5/2)",
+     "retenue": true,
+     "sans_variable": false,
+     "erreur_loi": 4.852,
+     "erreur_constante": 5.769,
+     "erreur_droite": 4.984,
+     "secs": 1
+    },
+    "decisions": {
+     "complet": {
+      "niveau": 1,
+      "par": "loi",
+      "prevu": {
+       "0": 504.29,
+       "1": 1054.06,
+       "-1": 369.87,
+       "-0.5": 468.55,
+       "0.5": 740
+      }
+     },
+     "sans_galilee": {
+      "niveau": 1,
+      "par": "table",
+      "prevu": {
+       "0": 484.3,
+       "1": 1051.58,
+       "-1": 371.08
+      }
+     },
+     "sans_lavoisier": {
+      "niveau": 1,
+      "par": "loi",
+      "prevu": {
+       "0": 1429.43,
+       "1": 2185.73,
+       "-1": 1936.6,
+       "-0.5": 1694.89,
+       "0.5": 1757.18
+      }
+     }
+    },
+    "juge": {
+     "verdict": "indecis",
+     "loi": "1 / (p + p)^(5/2)",
+     "logE": 0,
+     "seuil": 2.3,
+     "diagnostic": "mal estimé",
+     "secs": 1.302
+    }
+   },
+   "naif": {
+    "niveaux": [
+     0.5,
+     0.5,
+     0.5,
+     0.5,
+     0.5,
+     0.5,
+     -0.5,
+     -0.5,
+     -0.5,
+     -0.5,
+     -0.5,
+     -0.5,
+     -0.5
+    ],
+    "cout": {
+     "cout": 51.09710610932476,
+     "methode": "paires reliées",
+     "paires": 16
+    },
+    "table": [
+     {
+      "u": -1,
+      "jours": 0,
+      "parJour": null,
+      "tardParJour": null
+     },
+     {
+      "u": -0.5,
+      "jours": 49,
+      "parJour": 21.714,
+      "tardParJour": 12.796
+     },
+     {
+      "u": 0,
+      "jours": 0,
+      "parJour": null,
+      "tardParJour": null
+     },
+     {
+      "u": 0.5,
+      "jours": 42,
+      "parJour": 21.167,
+      "tardParJour": 16.071
+     },
+     {
+      "u": 1,
+      "jours": 0,
+      "parJour": null,
+      "tardParJour": null
+     }
+    ],
+    "types_a_l_heure": 1,
+    "bilan_s": 0.3,
+    "loi": {
+     "texte": "cos(p) − 1/3",
+     "retenue": true,
+     "sans_variable": false,
+     "erreur_loi": 4.373,
+     "erreur_constante": 4.672,
+     "erreur_droite": 4.375,
+     "secs": 0.7
+    },
+    "decisions": {
+     "complet": {
+      "niveau": 0.5,
+      "par": "loi",
+      "prevu": {
+       "0": 597.64,
+       "-0.5": 420.07,
+       "0.5": 782.07
+      }
+     },
+     "sans_galilee": {
+      "niveau": 0.5,
+      "par": "table",
+      "prevu": {
+       "-0.5": 423.93,
+       "0.5": 786.83
+      }
+     },
+     "sans_lavoisier": {
+      "niveau": 0.5,
+      "par": "loi",
+      "prevu": {
+       "0": 1694.02,
+       "-0.5": 1519.52,
+       "0.5": 1857.08
+      }
+     }
+    },
+    "juge": null
+   },
+   "bras": {
+    "nul": {
+     "essai": 56559.24,
+     "exploitation": 35900.13,
+     "total": 92459.37,
+     "profit_2e_semestre": 254146.68
+    },
+    "aveugle:-1": {
+     "essai": 27853.22,
+     "exploitation": 23245.19,
+     "total": 51098.41,
+     "profit_2e_semestre": 201293.4
+    },
+    "aveugle:-0.5": {
+     "essai": 41798.51,
+     "exploitation": 39475.29,
+     "total": 81273.8,
+     "profit_2e_semestre": 309527.45
+    },
+    "aveugle:0": {
+     "essai": 56402.11,
+     "exploitation": 51416.44,
+     "total": 107818.54,
+     "profit_2e_semestre": 261405.96
+    },
+    "aveugle:0.5": {
+     "essai": 70293.94,
+     "exploitation": 66688.17,
+     "total": 136982.1,
+     "profit_2e_semestre": 297515.58
+    },
+    "aveugle:1": {
+     "essai": 81003.1,
+     "exploitation": 75669.19,
+     "total": 156672.29,
+     "profit_2e_semestre": 355397.48
+    },
+    "collectif": {
+     "essai": 56029.59,
+     "exploitation": 74102.13,
+     "total": 130131.73,
+     "profit_2e_semestre": 262550.86
+    },
+    "sans_galilee": {
+     "essai": 56029.59,
+     "exploitation": 74102.13,
+     "total": 130131.73,
+     "profit_2e_semestre": 262550.86
+    },
+    "sans_lavoisier": {
+     "essai": 56029.59,
+     "exploitation": 74102.13,
+     "total": 130131.73,
+     "profit_2e_semestre": 262550.86
+    },
+    "sans_plan_cortex": {
+     "essai": 55070.39,
+     "exploitation": 64346.27,
+     "total": 119416.67,
+     "profit_2e_semestre": 247909.59
+    }
+   },
+   "courses": 8,
+   "secs": 5,
+   "identites": {
+    "lavoisier": {
+     "nom": "LAVOISIER",
+     "depot": "haynbroit-alt/A",
+     "commit": "718b7d3"
+    },
+    "cortex": {
+     "nom": "CORTEX",
+     "depot": "haynbroit-alt/1",
+     "commit": "93931fb"
+    },
+    "galilee": {
+     "nom": "GALILÉE",
+     "depot": "haynbroit-alt/All",
+     "commit": "be42b7e"
+    }
+   }
+  },
+  {
+   "graine": 218,
+   "ecartee": false,
+   "objet": "ciza6",
+   "prix_reference": 18.17,
+   "cout_vrai": 11.19,
+   "eligibles": 3,
+   "objets": 5,
+   "plan_cortex": {
+    "niveaux": [
+     -1,
+     0,
+     1,
+     -1,
+     1,
+     1,
+     -1,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
+    ],
+    "budget": {
+     "u0": 0.46153846153846156,
+     "u1": 0,
+     "jours": 91
+    }
+   },
+   "collectif": {
+    "niveaux": [
+     -1,
+     0,
+     1,
+     -1,
+     1,
+     1,
+     -1,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
+    ],
+    "cout": {
+     "cout": 11.189819004524885,
+     "methode": "paires reliées",
+     "paires": 24
+    },
+    "table": [
+     {
+      "u": -1,
+      "jours": 21,
+      "parJour": 24.905,
+      "tardParJour": 10.762
+     },
+     {
+      "u": -0.5,
+      "jours": 0,
+      "parJour": null,
+      "tardParJour": null
+     },
+     {
+      "u": 0,
+      "jours": 49,
+      "parJour": 22.041,
+      "tardParJour": 9.816
+     },
+     {
+      "u": 0.5,
+      "jours": 0,
+      "parJour": null,
+      "tardParJour": null
+     },
+     {
+      "u": 1,
+      "jours": 21,
+      "parJour": 18.667,
+      "tardParJour": 8.143
+     }
+    ],
+    "types_a_l_heure": 1,
+    "bilan_s": 0.3,
+    "loi": {
+     "texte": "1 / (p·3)",
+     "retenue": false,
+     "sans_variable": false,
+     "erreur_loi": 5.499,
+     "erreur_constante": 5.507,
+     "erreur_droite": 5.423,
+     "secs": 0.7
+    },
+    "decisions": {
+     "complet": {
+      "niveau": 1,
+      "par": "table",
+      "prevu": {
+       "0": 153.85,
+       "1": 215.04,
+       "-1": 83.44
+      }
+     },
+     "sans_galilee": {
+      "niveau": 1,
+      "par": "table",
+      "prevu": {
+       "0": 153.85,
+       "1": 215.04,
+       "-1": 83.44
+      }
+     },
+     "sans_lavoisier": {
+      "niveau": 1,
+      "par": "table",
+      "prevu": {
+       "0": 400.48,
+       "1": 423.92,
+       "-1": 362.12
+      }
+     }
+    },
+    "juge": {
+     "verdict": "sans objet",
+     "raison": "aucune loi dépendant du prix sur les 56 premiers jours",
+     "loi": "0.3984"
+    }
+   },
+   "naif": {
+    "niveaux": [
+     0.5,
+     0.5,
+     0.5,
+     0.5,
+     0.5,
+     0.5,
+     -0.5,
+     -0.5,
+     -0.5,
+     -0.5,
+     -0.5,
+     -0.5,
+     -0.5
+    ],
+    "cout": {
+     "cout": 11.189819004524885,
+     "methode": "paires reliées",
+     "paires": 24
+    },
+    "table": [
+     {
+      "u": -1,
+      "jours": 0,
+      "parJour": null,
+      "tardParJour": null
+     },
+     {
+      "u": -0.5,
+      "jours": 49,
+      "parJour": 24.98,
+      "tardParJour": 10
+     },
+     {
+      "u": 0,
+      "jours": 0,
+      "parJour": null,
+      "tardParJour": null
+     },
+     {
+      "u": 0.5,
+      "jours": 42,
+      "parJour": 19.548,
+      "tardParJour": 8.357
+     },
+     {
+      "u": 1,
+      "jours": 0,
+      "parJour": null,
+      "tardParJour": null
+     }
+    ],
+    "types_a_l_heure": 1,
+    "bilan_s": 0.2,
+    "loi": {
+     "texte": "1/3",
+     "retenue": false,
+     "sans_variable": true,
+     "erreur_loi": 6.924,
+     "erreur_constante": 6.923,
+     "erreur_droite": 6.763,
+     "secs": 0.4
+    },
+    "decisions": {
+     "complet": {
+      "niveau": 0.5,
+      "par": "table",
+      "prevu": {
+       "-0.5": 126.4,
+       "0.5": 178.28
+      }
+     },
+     "sans_galilee": {
+      "niveau": 0.5,
+      "par": "table",
+      "prevu": {
+       "-0.5": 126.4,
+       "0.5": 178.28
+      }
+     },
+     "sans_lavoisier": {
+      "niveau": -0.5,
+      "par": "table",
+      "prevu": {
+       "-0.5": 405.92,
+       "0.5": 397.01
+      }
+     }
+    },
+    "juge": null
+   },
+   "bras": {
+    "nul": {
+     "essai": 13796.41,
+     "exploitation": 12136.35,
+     "total": 25932.76,
+     "profit_2e_semestre": 408774.93
+    },
+    "aveugle:-1": {
+     "essai": 7574.78,
+     "exploitation": 6435.72,
+     "total": 14010.5,
+     "profit_2e_semestre": 233818.28
+    },
+    "aveugle:-0.5": {
+     "essai": 10616.28,
+     "exploitation": 9605.6,
+     "total": 20221.88,
+     "profit_2e_semestre": 243662.08
+    },
+    "aveugle:0": {
+     "essai": 13639.3,
+     "exploitation": 12550.39,
+     "total": 26189.68,
+     "profit_2e_semestre": 402636.79
+    },
+    "aveugle:0.5": {
+     "essai": 16261.3,
+     "exploitation": 17100.36,
+     "total": 33361.66,
+     "profit_2e_semestre": 294743.43
+    },
+    "aveugle:1": {
+     "essai": 20367.7,
+     "exploitation": 18593.59,
+     "total": 38961.29,
+     "profit_2e_semestre": 279506.33
+    },
+    "collectif": {
+     "essai": 14135.93,
+     "exploitation": 18409.27,
+     "total": 32545.2,
+     "profit_2e_semestre": 366790.21
+    },
+    "sans_galilee": {
+     "essai": 14135.93,
+     "exploitation": 18409.27,
+     "total": 32545.2,
+     "profit_2e_semestre": 366790.21
+    },
+    "sans_lavoisier": {
+     "essai": 14135.93,
+     "exploitation": 18409.27,
+     "total": 32545.2,
+     "profit_2e_semestre": 366790.21
+    },
+    "sans_plan_cortex": {
+     "essai": 13626.63,
+     "exploitation": 17164.2,
+     "total": 30790.83,
+     "profit_2e_semestre": 233807.55
+    }
+   },
+   "courses": 9,
+   "secs": 2.8,
+   "identites": {
+    "lavoisier": {
+     "nom": "LAVOISIER",
+     "depot": "haynbroit-alt/A",
+     "commit": "718b7d3"
+    },
+    "cortex": {
+     "nom": "CORTEX",
+     "depot": "haynbroit-alt/1",
+     "commit": "93931fb"
+    },
+    "galilee": {
+     "nom": "GALILÉE",
+     "depot": "haynbroit-alt/All",
+     "commit": "be42b7e"
+    }
+   }
+  },
+  {
+   "graine": 219,
+   "ecartee": false,
+   "objet": "weje3",
+   "prix_reference": 117.16,
+   "cout_vrai": 39.143,
+   "eligibles": 13,
+   "objets": 19,
+   "plan_cortex": {
+    "niveaux": [
+     -1,
+     0,
+     1,
+     -1,
+     1,
+     1,
+     -1,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
+    ],
+    "budget": {
+     "u0": 0.46153846153846156,
+     "u1": 0,
+     "jours": 91
+    }
+   },
+   "collectif": {
+    "niveaux": [
+     -1,
+     0,
+     1,
+     -1,
+     1,
+     1,
+     -1,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
+    ],
+    "cout": {
+     "cout": 39.14347345132743,
+     "methode": "paires reliées",
+     "paires": 9
+    },
+    "table": [
+     {
+      "u": -1,
+      "jours": 21,
+      "parJour": 19.238,
+      "tardParJour": 8.762
+     },
+     {
+      "u": -0.5,
+      "jours": 0,
+      "parJour": null,
+      "tardParJour": null
+     },
+     {
+      "u": 0,
+      "jours": 49,
+      "parJour": 11.612,
+      "tardParJour": 5.327
+     },
+     {
+      "u": 0.5,
+      "jours": 0,
+      "parJour": null,
+      "tardParJour": null
+     },
+     {
+      "u": 1,
+      "jours": 21,
+      "parJour": 10.286,
+      "tardParJour": 6.095
+     }
+    ],
+    "types_a_l_heure": 1,
+    "bilan_s": 0.8,
+    "loi": {
+     "texte": "1/4",
+     "retenue": false,
+     "sans_variable": true,
+     "erreur_loi": 4.046,
+     "erreur_constante": 4.051,
+     "erreur_droite": 3.61,
+     "secs": 0.9
+    },
+    "decisions": {
+     "complet": {
+      "niveau": 1,
+      "par": "table",
+      "prevu": {
+       "0": 905.95,
+       "1": 1103.72,
+       "-1": 1050.14
+      }
+     },
+     "sans_galilee": {
+      "niveau": 1,
+      "par": "table",
+      "prevu": {
+       "0": 905.95,
+       "1": 1103.72,
+       "-1": 1050.14
+      }
+     },
+     "sans_lavoisier": {
+      "niveau": -1,
+      "par": "table",
+      "prevu": {
+       "0": 1360.49,
+       "1": 1506.34,
+       "-1": 1803.19
+      }
+     }
+    },
+    "juge": {
+     "verdict": "indecis",
+     "loi": "exp(−5·p / 3)",
+     "logE": 0,
+     "seuil": 2.3,
+     "diagnostic": "mal estimé",
+     "secs": 1.044
+    }
+   },
+   "naif": {
+    "niveaux": [
+     0.5,
+     0.5,
+     0.5,
+     0.5,
+     0.5,
+     0.5,
+     -0.5,
+     -0.5,
+     -0.5,
+     -0.5,
+     -0.5,
+     -0.5,
+     -0.5
+    ],
+    "cout": {
+     "cout": 39.14347533632287,
+     "methode": "paires reliées",
+     "paires": 9
+    },
+    "table": [
+     {
+      "u": -1,
+      "jours": 0,
+      "parJour": null,
+      "tardParJour": null
+     },
+     {
+      "u": -0.5,
+      "jours": 49,
+      "parJour": 16.122,
+      "tardParJour": 8.49
+     },
+     {
+      "u": 0,
+      "jours": 0,
+      "parJour": null,
+      "tardParJour": null
+     },
+     {
+      "u": 0.5,
+      "jours": 42,
+      "parJour": 15.857,
+      "tardParJour": 10.738
+     },
+     {
+      "u": 1,
+      "jours": 0,
+      "parJour": null,
+      "tardParJour": null
+     }
+    ],
+    "types_a_l_heure": 1,
+    "bilan_s": 1,
+    "loi": {
+     "texte": "1 / (p·4)",
+     "retenue": true,
+     "sans_variable": false,
+     "erreur_loi": 4.227,
+     "erreur_constante": 4.312,
+     "erreur_droite": 4.23,
+     "secs": 0.6
+    },
+    "decisions": {
+     "complet": {
+      "niveau": 0.5,
+      "par": "loi",
+      "prevu": {
+       "0": 1273.4,
+       "-0.5": 1049.67,
+       "0.5": 1537.34
+      }
+     },
+     "sans_galilee": {
+      "niveau": 0.5,
+      "par": "table",
+      "prevu": {
+       "-0.5": 1058.38,
+       "0.5": 1456.42
+      }
+     },
+     "sans_lavoisier": {
+      "niveau": 0.5,
+      "par": "loi",
+      "prevu": {
+       "0": 1912.3,
+       "-0.5": 1675.57,
+       "0.5": 2192.52
+      }
+     }
+    },
+    "juge": null
+   },
+   "bras": {
+    "nul": {
+     "essai": 102566.56,
+     "exploitation": 86636.25,
+     "total": 189202.81,
+     "profit_2e_semestre": 593788.82
+    },
+    "aveugle:-1": {
+     "essai": 81006.4,
+     "exploitation": 82753.17,
+     "total": 163759.58,
+     "profit_2e_semestre": 588714.5
+    },
+    "aveugle:-0.5": {
+     "essai": 80088.76,
+     "exploitation": 82386.39,
+     "total": 162475.15,
+     "profit_2e_semestre": 573061.02
+    },
+    "aveugle:0": {
+     "essai": 88548.76,
+     "exploitation": 84725.95,
+     "total": 173274.7,
+     "profit_2e_semestre": 554626.57
+    },
+    "aveugle:0.5": {
+     "essai": 112879.38,
+     "exploitation": 113246.77,
+     "total": 226126.15,
+     "profit_2e_semestre": 619103.98
+    },
+    "aveugle:1": {
+     "essai": 116534.89,
+     "exploitation": 133703.93,
+     "total": 250238.82,
+     "profit_2e_semestre": 670509.64
+    },
+    "collectif": {
+     "essai": 91202.34,
+     "exploitation": 103765.41,
+     "total": 194967.75,
+     "profit_2e_semestre": 595717.75
+    },
+    "sans_galilee": {
+     "essai": 91202.34,
+     "exploitation": 103765.41,
+     "total": 194967.75,
+     "profit_2e_semestre": 595717.75
+    },
+    "sans_lavoisier": {
+     "essai": 91202.34,
+     "exploitation": 81006.4,
+     "total": 172208.74,
+     "profit_2e_semestre": 570502.86
+    },
+    "sans_plan_cortex": {
+     "essai": 113018.47,
+     "exploitation": 98826.86,
+     "total": 211845.33,
+     "profit_2e_semestre": 606952
+    }
+   },
+   "courses": 9,
+   "secs": 6.7,
+   "identites": {
+    "lavoisier": {
+     "nom": "LAVOISIER",
+     "depot": "haynbroit-alt/A",
+     "commit": "718b7d3"
+    },
+    "cortex": {
+     "nom": "CORTEX",
+     "depot": "haynbroit-alt/1",
+     "commit": "93931fb"
+    },
+    "galilee": {
+     "nom": "GALILÉE",
+     "depot": "haynbroit-alt/All",
+     "commit": "be42b7e"
+    }
+   }
+  },
+  {
+   "graine": 220,
+   "ecartee": false,
+   "objet": "tuva1",
+   "prix_reference": 224.42,
+   "cout_vrai": 129.486,
+   "eligibles": 4,
+   "objets": 11,
+   "plan_cortex": {
+    "niveaux": [
+     -1,
+     0,
+     1,
+     -1,
+     1,
+     1,
+     -1,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
+    ],
+    "budget": {
+     "u0": 0.46153846153846156,
+     "u1": 0,
+     "jours": 91
+    }
+   },
+   "collectif": {
+    "niveaux": [
+     -1,
+     0,
+     1,
+     -1,
+     1,
+     1,
+     -1,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
+    ],
+    "cout": {
+     "cout": 129.48590673575129,
+     "methode": "paires reliées",
+     "paires": 19
+    },
+    "table": [
+     {
+      "u": -1,
+      "jours": 21,
+      "parJour": 16.238,
+      "tardParJour": 10.952
+     },
+     {
+      "u": -0.5,
+      "jours": 0,
+      "parJour": null,
+      "tardParJour": null
+     },
+     {
+      "u": 0,
+      "jours": 49,
+      "parJour": 14.02,
+      "tardParJour": 11.204
+     },
+     {
+      "u": 0.5,
+      "jours": 0,
+      "parJour": null,
+      "tardParJour": null
+     },
+     {
+      "u": 1,
+      "jours": 21,
+      "parJour": 16.286,
+      "tardParJour": 14.048
+     }
+    ],
+    "types_a_l_heure": 1,
+    "bilan_s": 0.3,
+    "loi": {
+     "texte": "1 − sin(p)",
+     "retenue": true,
+     "sans_variable": false,
+     "erreur_loi": 2.519,
+     "erreur_constante": 2.725,
+     "erreur_droite": 2.541,
+     "secs": 0.9
+    },
+    "decisions": {
+     "complet": {
+      "niveau": 1,
+      "par": "loi",
+      "prevu": {
+       "0": 1358.81,
+       "1": 2385.05,
+       "-1": 769.99,
+       "-0.5": 1058.83,
+       "0.5": 1827.13
+      }
+     },
+     "sans_galilee": {
+      "niveau": 1,
+      "par": "table",
+      "prevu": {
+       "0": 1331.01,
+       "1": 2459.7,
+       "-1": 812.78
+      }
+     },
+     "sans_lavoisier": {
+      "niveau": 1,
+      "par": "loi",
+      "prevu": {
+       "0": 3212.16,
+       "1": 4429.81,
+       "-1": 2761.91,
+       "-0.5": 2983.24,
+       "0.5": 3775.57
+      }
+     }
+    },
+    "juge": {
+     "verdict": "indecis",
+     "loi": "1 − sin(p)",
+     "logE": 0,
+     "seuil": 2.3,
+     "diagnostic": "mal estimé",
+     "secs": 1.121
+    }
+   },
+   "naif": {
+    "niveaux": [
+     0.5,
+     0.5,
+     0.5,
+     0.5,
+     0.5,
+     0.5,
+     -0.5,
+     -0.5,
+     -0.5,
+     -0.5,
+     -0.5,
+     -0.5,
+     -0.5
+    ],
+    "cout": {
+     "cout": 129.48590673575129,
+     "methode": "paires reliées",
+     "paires": 17
+    },
+    "table": [
+     {
+      "u": -1,
+      "jours": 0,
+      "parJour": null,
+      "tardParJour": null
+     },
+     {
+      "u": -0.5,
+      "jours": 49,
+      "parJour": 13.755,
+      "tardParJour": 9.429
+     },
+     {
+      "u": 0,
+      "jours": 0,
+      "parJour": null,
+      "tardParJour": null
+     },
+     {
+      "u": 0.5,
+      "jours": 42,
+      "parJour": 10.286,
+      "tardParJour": 7.714
+     },
+     {
+      "u": 1,
+      "jours": 0,
+      "parJour": null,
+      "tardParJour": null
+     }
+    ],
+    "types_a_l_heure": 1,
+    "bilan_s": 0.2,
+    "loi": {
+     "texte": "0.2692",
+     "retenue": false,
+     "sans_variable": true,
+     "erreur_loi": 3.255,
+     "erreur_constante": 3.255,
+     "erreur_droite": 3.158,
+     "secs": 0.5
+    },
+    "decisions": {
+     "complet": {
+      "niveau": 0.5,
+      "par": "table",
+      "prevu": {
+       "-0.5": 979.97,
+       "0.5": 1248.93
+      }
+     },
+     "sans_galilee": {
+      "niveau": 0.5,
+      "par": "table",
+      "prevu": {
+       "-0.5": 979.97,
+       "0.5": 1248.93
+      }
+     },
+     "sans_lavoisier": {
+      "niveau": -0.5,
+      "par": "table",
+      "prevu": {
+       "-0.5": 2761.06,
+       "0.5": 2580.79
+      }
+     }
+    },
+    "juge": null
+   },
+   "bras": {
+    "nul": {
+     "essai": 106423.26,
+     "exploitation": 104231.23,
+     "total": 210654.5,
+     "profit_2e_semestre": 255924.48
+    },
+    "aveugle:-1": {
+     "essai": 69475.09,
+     "exploitation": 79435.85,
+     "total": 148910.94,
+     "profit_2e_semestre": 227303.52
+    },
+    "aveugle:-0.5": {
+     "essai": 94754.65,
+     "exploitation": 86134.11,
+     "total": 180888.76,
+     "profit_2e_semestre": 311157.51
+    },
+    "aveugle:0": {
+     "essai": 106421.12,
+     "exploitation": 113351.31,
+     "total": 219772.44,
+     "profit_2e_semestre": 281669.26
+    },
+    "aveugle:0.5": {
+     "essai": 132352.27,
+     "exploitation": 133323.66,
+     "total": 265675.93,
+     "profit_2e_semestre": 348276.26
+    },
+    "aveugle:1": {
+     "essai": 182902.29,
+     "exploitation": 161455.45,
+     "total": 344357.74,
+     "profit_2e_semestre": 456253.07
+    },
+    "collectif": {
+     "essai": 136124.45,
+     "exploitation": 152091.34,
+     "total": 288215.78,
+     "profit_2e_semestre": 376208.42
+    },
+    "sans_galilee": {
+     "essai": 136124.45,
+     "exploitation": 152091.34,
+     "total": 288215.78,
+     "profit_2e_semestre": 376208.42
+    },
+    "sans_lavoisier": {
+     "essai": 136124.45,
+     "exploitation": 152091.34,
+     "total": 288215.78,
+     "profit_2e_semestre": 376208.42
+    },
+    "sans_plan_cortex": {
+     "essai": 104730.41,
+     "exploitation": 158337.02,
+     "total": 263067.43,
+     "profit_2e_semestre": 349694.71
+    }
+   },
+   "courses": 9,
+   "secs": 4.1,
+   "identites": {
+    "lavoisier": {
+     "nom": "LAVOISIER",
+     "depot": "haynbroit-alt/A",
+     "commit": "718b7d3"
+    },
+    "cortex": {
+     "nom": "CORTEX",
+     "depot": "haynbroit-alt/1",
+     "commit": "93931fb"
+    },
+    "galilee": {
+     "nom": "GALILÉE",
+     "depot": "haynbroit-alt/All",
+     "commit": "be42b7e"
+    }
+   }
+  }
+ ]
+}

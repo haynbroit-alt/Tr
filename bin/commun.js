@@ -46,7 +46,7 @@ if (cmd === 'executer' && !process.argv.includes('--sans-gardien')) {
   const integ = integrite();
   if (!integ.ok) { console.error('Moteurs altérés, exécution refusée :\n' + integ.erreurs.join('\n')); process.exit(1); }
   const graine = Number(opt('--graine')), fichier = opt('--fichier');
-  const cle = nom === 'confrontation-t2' ? 'confrontation#T2' : nom === 'opportunites' ? `opportunites#${fichier.replace(/\D/g, '')}` : nom === 'confrontation-t1' ? 'confrontation#T1' : nom === 'pistes' ? 'pistes#1' : nom === 'boutique-reelle' ? `boutique-reelle#${fichier.replace(/\D/g, '')}` : `${nom}#${graine}`;
+  const cle = nom === 'essai-prix' ? 'essai-prix#T3' : nom === 'confrontation-t2' ? 'confrontation#T2' : nom === 'opportunites' ? `opportunites#${fichier.replace(/\D/g, '')}` : nom === 'confrontation-t1' ? 'confrontation#T1' : nom === 'pistes' ? 'pistes#1' : nom === 'boutique-reelle' ? `boutique-reelle#${fichier.replace(/\D/g, '')}` : `${nom}#${graine}`;
   if (reg.lignes.some((r) => r.type === 'probleme' && r.cle === cle)) { console.error(`${cle} est déjà au registre (journal en ajout seul).`); process.exit(1); }
   const avant = reg.lignes.length;
   if (nom === 'forme-manquante') (await import('../src/problemes/forme-manquante.js')).formeManquante(reg, graine);
@@ -54,6 +54,7 @@ if (cmd === 'executer' && !process.argv.includes('--sans-gardien')) {
   else if (nom === 'boutique-reelle') (await import('../src/problemes/boutique-reelle.js')).boutiqueReelle(reg, fichier);
   else if (nom === 'confrontation-t1') console.error(JSON.stringify((await import('../src/problemes/confrontation-t1.js')).confrontationT1(reg)));
   else if (nom === 'confrontation-t2') console.error(JSON.stringify((await import('../src/problemes/confrontation-t2.js')).confrontationT2(reg)));
+  else if (nom === 'essai-prix') await (await import('../src/problemes/essai-prix.js')).essaiPrixTest(reg, { sortie: join(RACINE, 'programme', 't3', 'test.json') });
   else if (nom === 'opportunites') (await import('../src/opportunites.js')).opportunites(reg, fichier);
   else if (nom === 'pistes') (await import('../src/pistes.js')).pistes(reg);
   else { console.error('problèmes : forme-manquante, entreprise-opaque, boutique-reelle, pistes'); process.exit(1); }

@@ -134,3 +134,70 @@ Les seuils ne seront pas retouchés. Un critère manqué est publié comme tel.
   journal de sa propre relance.
 - Les ventes saisies en retard après le jour 273 manquent à la décision : les derniers blocs de l'essai sont un
   peu sous-comptés.
+
+---
+
+## 11. Mise au point (graines 201 à 220) — écrit et poussé avant le test
+
+### Réglages figés
+
+1. **Durée annoncée au bilan** = jour de la décision. Le bilan de LAVOISIER ne lit pas une année dont la fin
+   manque : avec 365 jours annoncés sur un journal coupé, il ne rend aucune incidence pour les lignes de coût.
+2. **Coût** : une ligne de coût est rapportée aux lignes « quantité sans montant » du même objet que le bilan lui
+   relie ou qu'elle cite, quelle que soit leur incidence (le bilan ne donne pas toujours d'incidence aux entrées).
+3. **Prix** arrondis au centime.
+4. **Rattachement des ventes à un niveau** par le prix propre de la ligne, comme écrit au § 4 ; un niveau ne reçoit
+   rien avant son premier bloc. Ma première version exigeait en plus que ce prix soit celui du jour de saisie : une
+   facture saisie en retard était alors perdue, les blocs isolés sous-comptés des deux tiers, et 4 décisions sur 20
+   étaient fausses. Erreur de mon code, corrigée.
+5. **Points donnés à GALILÉE** — changement par rapport au § 3. La loi a besoin de points datés ; elle ne reçoit
+   que les types de flux « à l'heure » (au moins 98 % de leurs lignes portent le prix du jour où elles sont
+   saisies). Le reste, la part « en retard », est compté par niveau et ajouté à la prévision de la loi ; pour un
+   niveau non essayé, cette part est interpolée entre les deux niveaux essayés voisins.
+6. **Juge de CORTEX** : la loi qu'il juge n'a vu que les 56 premiers jours de l'essai, et le pari porte sur les 35
+   derniers. Un pari sur des jours que la formule a déjà vus ne prouverait rien.
+7. **Pourcentages** : tout gain est rapporté à la marge du témoin nul sur la fenêtre entière.
+8. **Consignation** : un seul dossier au registre, `essai-prix#T3`, qui interdit toute seconde exécution.
+
+Le calendrier, les niveaux, les bras, la règle de décision et les critères ne changent pas.
+
+### Ce que la mise au point a mesuré (20 entreprises, toutes pilotables)
+
+| Bras | Gain en essai | Gain en exploitation | Gain total | € simulés |
+|---|---:|---:|---:|---:|
+| Collectif | −0,9 % | 16,0 % | 15,1 % | 438 893 |
+| Sans GALILÉE | −0,9 % | 16,0 % | 15,1 % | 438 893 |
+| Sans LAVOISIER | −0,9 % | 9,3 % | 8,4 % | 151 865 |
+| Sans plan de CORTEX | 0,3 % | 7,4 % | 7,7 % | 362 336 |
+| Aveugle −20 % | −21,6 % | −22,0 % | −43,6 % | −824 101 |
+| Aveugle −10,6 % | −10,8 % | −11,8 % | −22,6 % | −401 587 |
+| Aveugle 0 | 0,1 % | −3,0 % | −2,8 % | 57 550 |
+| Aveugle +11,8 % | 10,1 % | 6,9 % | 17,0 % | 548 811 |
+| Aveugle +25 % | 21,9 % | 17,9 % | 39,8 % | 986 854 |
+
+Marge du témoin nul : 2 733 276 € simulés. Détail : `programme/t3/dev.json`.
+
+- **Le meilleur niveau après coup est +25 % dans 20 entreprises sur 20.** Dans ce simulateur, monter le prix est
+  toujours juste dans la plage essayée. La décision de prix y est dégénérée.
+- Le collectif choisit +25 % dans 20 cas sur 20 (13 par la table, 7 par la loi).
+- Coût de LAVOISIER : exact dans 20 cas sur 20.
+- Loi de GALILÉE retenue 7 fois sur 20 ; elle ne change aucune décision.
+- Juge de CORTEX : 11 « indécis », 9 sans objet, aucune confirmation.
+
+Attendus du § 9 confrontés à la mise au point : 1, 2, 3, 4 et 6 tenus ; 5 faux sur un point (j'attendais K3 établi
+pour un moteur au plus : il l'est pour deux, LAVOISIER et le plan de CORTEX).
+
+### Attendus pour le test, écrits avant son exécution
+
+1. Meilleur niveau après coup = +25 % dans au moins 90 % des entreprises.
+2. **K1 tenu** : gain total moyen du collectif entre 10 % et 20 %.
+3. **K2 manqué** : face à une règle aveugle qui a presque toujours raison, le collectif ne peut au mieux
+   qu'égaler. Attendu en exploitation : 13 à 18 % pour le collectif, 15 à 20 % pour « +25 % ».
+4. **K3** : établi sans LAVOISIER et sans le plan de CORTEX ; non établi sans GALILÉE.
+5. Fenêtre entière : la règle aveugle « +25 % » rapporte au moins le double du collectif.
+6. Juge de CORTEX : aucune confirmation.
+
+Si ces attendus se vérifient, la conclusion sera : sur ce simulateur, l'essai commun produit un gain, deux moteurs
+sur trois y contribuent de façon mesurable, mais une règle aveugle fait mieux, parce que la bonne réponse y est
+toujours la même. Montrer qu'un collectif bat une règle aveugle demande un monde où la bonne direction varie d'une
+entreprise à l'autre ; ce simulateur n'en est pas un.

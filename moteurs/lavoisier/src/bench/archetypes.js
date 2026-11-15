@@ -25,6 +25,7 @@ function base(eng, ctx) {
   ctx.invoiced = {};
   ctx.clients = [];
   ctx.objets = [];
+  ctx.prix = new Map(); // jeton → objet à prix (pilotage, protocole L2)
   ctx.pubEffect = () => 1;
 }
 
@@ -131,6 +132,7 @@ function products(eng, ctx, { n, phi, nClients, scale = 1 }) {
     return o;
   });
   ctx.objets.push(...objs.map((o) => o.id));
+  for (const o of objs) ctx.prix.set(o.tok, o);
   if (phi > 0 && !eng.stocks.has('CA')) eng.addStock('CA', '€', 0, 1);
   const clients = Array.from({ length: nClients }, () => ({ cp: eng.party('client'), rho: r.uniform(0.05, 0.4), terms: r.int(15, 60), acc: ctx.account() }));
   ctx.clients.push(...clients.map((c) => c.cp));
@@ -142,8 +144,8 @@ function products(eng, ctx, { n, phi, nClients, scale = 1 }) {
     let total = 0;
     for (const o of objs) {
       if (r.chance(1 / 60)) {
-        o.p *= 1 + r.uniform(-0.12, 0.15);
-        eng.record('tarif.changement', 'tarif', { m: o.p, objet: o.tok }, { statut: 'levier' });
+        const f = 1 + r.uniform(-0.12, 0.15);
+        if (!o.pilote) { o.p *= f; eng.record('tarif.changement', 'tarif', { m: o.p, objet: o.tok }, { statut: 'levier' }); }
       }
       const lamEff = o.lam * dow[d % 7] * (o.p / o.p0) ** -o.e * ctx.pubEffect();
       if (phi > 0) {
@@ -206,13 +208,14 @@ function subscriptions(eng, ctx, nOffers) {
     o.n0 = n0;
     return o;
   });
+  for (const o of offers) ctx.prix.set(o.tok, o);
   const acc = ctx.account();
   let contracts = [];
   const add = (o, d) => { const c = { o, cp: eng.party('client'), bill: r.int(0, 27) }; contracts.push(c); return c; };
   for (const o of offers) for (let i = 0; i < o.n0; i++) add(o);
   eng.every((d) => {
     for (const o of offers) {
-      if (r.chance(1 / 120)) { o.p *= 1 + r.uniform(-0.1, 0.15); eng.record('tarif.changement', 'tarif', { m: o.p, objet: o.tok }, { statut: 'levier' }); }
+      if (r.chance(1 / 120)) { const f = 1 + r.uniform(-0.1, 0.15); if (!o.pilote) { o.p *= f; eng.record('tarif.changement', 'tarif', { m: o.p, objet: o.tok }, { statut: 'levier' }); } }
       const k = r.poisson(o.lam * (o.p / o.p0) ** -o.e * ctx.pubEffect());
       for (let i = 0; i < k; i++) { const c = add(o, d); eng.record('abo.souscription', 'crm', { q: 1, objet: o.tok, cp: c.cp, tx: [eng.newTx()], d: [[o.id, 1, 'q']] }, { auteur: 'auto', statut: 'mesure' }); }
     }
