@@ -343,3 +343,14 @@ l'erreur de stocks. Une règle sans seuil pour les redater une à une, écrite a
 placebo de plus). Deux garde-fous franchis : code retiré, conservé non appliqué. Les repères de LAVOISIER restent
 ceux du point 12 (P 2,27 %). Prochain pas identifié : la détection des manques doit cesser de dépendre de la
 propreté de la série, sinon tout progrès de datation se paie en fausses alertes. PR `haynbroit-alt/A#11`.
+
+### LAVOISIER, points 15 et 16 : la cause première, et le point 14 appliqué (15 novembre 2026)
+
+Plafond de LAVOISIER porté à 1,2 M de tokens sur demande du propriétaire. Les fausses détections du point 14
+venaient de l'étape des doublons, qui retirait des pièces légitimes (1 997 sur les 50 graines propres, où il n'y a
+aucun doublon). Trois changements : doublons jugés au rythme habituel du type et à la citation ; datation une à une
+des entrées de stock ; dernier relevé écarté de la recherche d'un manque. Sur les 100 graines de développement :
+P médian 2,27 % → 1,77 %, R 80 → 85 sur 95, FD2 0,09 → 0,08, le reste inchangé, tous garde-fous tenus.
+**Réserve** : sur le désordre réaliste seul, condition du test, P vaut 4,4 % et FD2 0,15 — hors seuil. Reste à
+faire : un critère de matérialité, les faux doublons restants, le premier passage aveugle sur certaines graines
+réalistes. PR `haynbroit-alt/A#13`.

@@ -21,6 +21,10 @@
     { "mesure": "P médian (profit)", "valeur": 3.8, "unite": "%", "sens": "bas", "seuil": 2, "travail": "L1" },
     { "mesure": "R (flux cachés retrouvés)", "valeur": 73.7, "unite": "%", "sens": "haut", "seuil": 70 },
     { "mesure": "FD1 (placebos touchés)", "valeur": 2.9, "unite": "%", "sens": "bas", "seuil": 10 },
-    { "mesure": "FD2 (fausses détections par entreprise)", "valeur": 0.2, "unite": "", "sens": "bas", "seuil": 0.1, "travail": "L1" }
+    { "mesure": "FD2 (fausses détections par entreprise)", "valeur": 0.2, "unite": "", "sens": "bas", "seuil": 0.1, "travail": "L1" },
+    { "mesure": "P médian, désordre réaliste seul (condition du test)", "valeur": 4.37, "unite": "%", "sens": "bas", "seuil": 2, "travail": "L1" },
+    { "mesure": "FD2, désordre réaliste seul (condition du test)", "valeur": 0.15, "unite": "", "sens": "bas", "seuil": 0.1, "travail": "L1" },
+    { "mesure": "S médian, désordre réaliste seul (condition du test)", "valeur": 2.15, "unite": "%", "sens": "bas", "seuil": 2, "travail": "L1" },
+    { "mesure": "L, désordre réaliste seul (condition du test)", "valeur": 0.824, "unite": "", "sens": "haut", "seuil": 0.85, "travail": "L1" }
   ] }
 }
