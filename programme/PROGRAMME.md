@@ -448,3 +448,13 @@ fractionné ; l'appariement de l'abonnement réaliste. PR `haynbroit-alt/A#14`.
 - **Offre commerciale en brouillon** : `programme/offre/OFFRE.md`. Rien n'est publié.
 - **Gains réels : 0 €.**
 
+### T3e : la contrainte levée valait moins qu'annoncé (15 novembre 2026)
+
+- **T3e exécuté** (`programme/t3e/`, 60 entreprises, monde à hasard commun, dossier `essai-prix#T3E`) : la chaîne
+  dépasse la meilleure règle aveugle de 6,0 points (établi) ; bandit et chaîne font jeu égal.
+- **Critère principal manqué** : l'erreur type ne baisse que de 19 % (2,48 contre 3,06), pas de moitié. Mon
+  diagnostic de T3d était faux : la dispersion d'un lot à l'autre vient des entreprises elles-mêmes, pas du hasard
+  du simulateur.
+- **Quatre lots réunis (240 entreprises)** : l'essai fait 6,4 points de mieux que « ne rien changer » (t = 5,04),
+  et environ quatre entreprises sur dix y perdent. Question ouverte : les reconnaître d'avance.
+

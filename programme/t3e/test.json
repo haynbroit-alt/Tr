@@ -1,0 +1,7584 @@
+{
+ "protocole": "programme/t3e/PROTOCOLE_T3E.md",
+ "agregat": {
+  "entreprises": 60,
+  "mesurees": 60,
+  "moyennes": {
+   "chaine": 0.09326939909260726,
+   "bandit": 0.10421275094279593,
+   "sans_engagement": 0.0902181617609668,
+   "aveugle:-1": -0.13395232575255175,
+   "aveugle:-0.5": -0.006206118875552736,
+   "aveugle:0": 0.03278452052694306,
+   "aveugle:0.5": -0.009180873099597643,
+   "aveugle:1": -0.0684652273335635
+  },
+  "meilleur_aveugle": "aveugle:0",
+  "D1": {
+   "n": 60,
+   "moyenne": 0.01094335185018866,
+   "t": 0.775936964851372,
+   "seuil": 1.684,
+   "etabli": false
+  },
+  "D1_inverse": {
+   "n": 60,
+   "moyenne": -0.01094335185018866,
+   "t": -0.775936964851372,
+   "seuil": 1.684,
+   "etabli": false
+  },
+  "D2": {
+   "n": 60,
+   "moyenne": 0.07142823041585286,
+   "t": 3.6143793410960456,
+   "seuil": 1.684,
+   "etabli": true
+  },
+  "D3": {
+   "n": 60,
+   "moyenne": -0.0030512373316404487,
+   "t": -0.3680332093994757,
+   "seuil": 1.684,
+   "etabli": false
+  },
+  "chaine_contre_prix_tenu": {
+   "moyenne": 0.0604848785656642,
+   "erreur_type": 0.0247956452619834
+  },
+  "chaine_contre_aveugle": {
+   "n": 60,
+   "moyenne": 0.0604848785656642,
+   "t": 2.439334726989316,
+   "seuil": 1.684,
+   "etabli": true
+  },
+  "sans_engagement_contre_aveugle": {
+   "n": 60,
+   "moyenne": 0.05743364123402373,
+   "t": 2.385204596350654,
+   "seuil": 1.684,
+   "etabli": true
+  },
+  "gain_bandit": {
+   "n": 60,
+   "moyenne": 0.10421275094279593,
+   "t": 4.703868836659119,
+   "seuil": 1.684,
+   "etabli": true
+  },
+  "gain_chaine": {
+   "n": 60,
+   "moyenne": 0.09326939909260726,
+   "t": 3.511729268193468,
+   "seuil": 1.684,
+   "etabli": true
+  },
+  "cout_exact": 60,
+  "cout_indisponible": 0,
+  "bandit_finit_au_meilleur": 22,
+  "niveaux_distincts_bandit": 4.05
+ },
+ "entreprises": [
+  {
+   "graine": 6221,
+   "monde": "t3e",
+   "ecartee": false,
+   "objet": "wekoce7",
+   "prix_reference": 4.63,
+   "cout_vrai": 2.458,
+   "cout_au_jour_183": 2.458,
+   "decision_chaine": 0,
+   "joues": {
+    "bandit": [
+     0,
+     0.5,
+     -0.5,
+     1,
+     -1,
+     0,
+     1,
+     1,
+     1,
+     -0.5,
+     1,
+     0,
+     1,
+     1,
+     1,
+     0.5,
+     1,
+     1,
+     1,
+     1,
+     1,
+     1,
+     1,
+     1,
+     1,
+     1
+    ],
+    "sans_engagement": [
+     -1,
+     0,
+     1,
+     -1,
+     1,
+     1,
+     -1,
+     0,
+     -1,
+     -1,
+     0,
+     0,
+     0,
+     0,
+     0,
+     -1,
+     0,
+     0,
+     1,
+     0,
+     0,
+     0,
+     1,
+     0,
+     0,
+     1
+    ]
+   },
+   "bras": {
+    "nul": {
+     "essai": 1335.02,
+     "exploitation": 1954.05,
+     "total": 3289.07,
+     "profit_2e_semestre": 55274.2
+    },
+    "chaine": {
+     "essai": 1148.72,
+     "exploitation": 1566.21,
+     "total": 2714.93,
+     "profit_2e_semestre": 55454.02
+    },
+    "aveugle:-1": {
+     "essai": 877.05,
+     "exploitation": 1113.08,
+     "total": 1990.13,
+     "profit_2e_semestre": 53900.85
+    },
+    "aveugle:-0.5": {
+     "essai": 1078.34,
+     "exploitation": 1413.11,
+     "total": 2491.45,
+     "profit_2e_semestre": 54376.18
+    },
+    "aveugle:0": {
+     "essai": 1251.23,
+     "exploitation": 1590.11,
+     "total": 2841.34,
+     "profit_2e_semestre": 55556.53
+    },
+    "aveugle:0.5": {
+     "essai": 1380.19,
+     "exploitation": 1787.85,
+     "total": 3168.05,
+     "profit_2e_semestre": 55136.88
+    },
+    "aveugle:1": {
+     "essai": 1529.51,
+     "exploitation": 2046.02,
+     "total": 3575.53,
+     "profit_2e_semestre": 55466.62
+    },
+    "bandit": {
+     "essai": 1396.79,
+     "exploitation": 1955.91,
+     "total": 3352.7,
+     "profit_2e_semestre": 55320.42
+    },
+    "sans_engagement": {
+     "essai": 1116.19,
+     "exploitation": 1690.38,
+     "total": 2806.58,
+     "profit_2e_semestre": 54720.25
+    }
+   },
+   "secs": 9.6
+  },
+  {
+   "graine": 6222,
+   "monde": "t3e",
+   "ecartee": false,
+   "objet": "nipu5",
+   "prix_reference": 3.84,
+   "cout_vrai": 2.189,
+   "cout_au_jour_183": 2.189,
+   "decision_chaine": -1,
+   "joues": {
+    "bandit": [
+     0,
+     0.5,
+     -0.5,
+     1,
+     -1,
+     -0.5,
+     -0.5,
+     -0.5,
+     -0.5,
+     -0.5,
+     -1,
+     -0.5,
+     -0.5,
+     -0.5,
+     -0.5,
+     -0.5,
+     -0.5,
+     -0.5,
+     0,
+     -0.5,
+     -0.5,
+     -0.5,
+     -0.5,
+     -0.5,
+     -0.5,
+     -0.5
+    ],
+    "sans_engagement": [
+     -1,
+     0,
+     1,
+     -1,
+     1,
+     1,
+     -1,
+     0,
+     -1,
+     -1,
+     -1,
+     -1,
+     -1,
+     -1,
+     -1,
+     -1,
+     -1,
+     -1,
+     -1,
+     -1,
+     -1,
+     -1,
+     -1,
+     -1,
+     -1,
+     -1
+    ]
+   },
+   "bras": {
+    "nul": {
+     "essai": 1853.85,
+     "exploitation": 1895.3,
+     "total": 3749.15,
+     "profit_2e_semestre": 395941.43
+    },
+    "chaine": {
+     "essai": 1419.23,
+     "exploitation": 1528.98,
+     "total": 2948.21,
+     "profit_2e_semestre": 395597.45
+    },
+    "aveugle:-1": {
+     "essai": 1505.19,
+     "exploitation": 1416.18,
+     "total": 2921.37,
+     "profit_2e_semestre": 395112.75
+    },
+    "aveugle:-0.5": {
+     "essai": 1890.44,
+     "exploitation": 1725.35,
+     "total": 3615.79,
+     "profit_2e_semestre": 395805.39
+    },
+    "aveugle:0": {
+     "essai": 1908.85,
+     "exploitation": 1950.14,
+     "total": 3858.99,
+     "profit_2e_semestre": 396050.24
+    },
+    "aveugle:0.5": {
+     "essai": 1613.77,
+     "exploitation": 1662.1,
+     "total": 3275.86,
+     "profit_2e_semestre": 395467.57
+    },
+    "aveugle:1": {
+     "essai": 1352.63,
+     "exploitation": 1402.25,
+     "total": 2754.88,
+     "profit_2e_semestre": 394944.47
+    },
+    "bandit": {
+     "essai": 1752.88,
+     "exploitation": 1842.99,
+     "total": 3595.87,
+     "profit_2e_semestre": 395787.13
+    },
+    "sans_engagement": {
+     "essai": 1419.23,
+     "exploitation": 1528.98,
+     "total": 2948.21,
+     "profit_2e_semestre": 395597.45
+    }
+   },
+   "secs": 11.8
+  },
+  {
+   "graine": 6223,
+   "monde": "t3e",
+   "ecartee": false,
+   "objet": "qekoga4",
+   "prix_reference": 52.05,
+   "cout_vrai": 30.761,
+   "cout_au_jour_183": 30.761,
+   "decision_chaine": -1,
+   "joues": {
+    "bandit": [
+     0,
+     0.5,
+     -0.5,
+     1,
+     -1,
+     -1,
+     -1,
+     -0.5,
+     -0.5,
+     -0.5,
+     0,
+     0,
+     0,
+     -0.5,
+     -1,
+     0,
+     -0.5,
+     -1,
+     -0.5,
+     0,
+     -1,
+     0,
+     -0.5,
+     0,
+     -0.5,
+     -1
+    ],
+    "sans_engagement": [
+     -1,
+     0,
+     1,
+     -1,
+     1,
+     1,
+     -1,
+     0,
+     -1,
+     -1,
+     0,
+     -1,
+     -1,
+     0,
+     -1,
+     0,
+     0,
+     -1,
+     0,
+     0,
+     0,
+     -1,
+     0,
+     -1,
+     -1,
+     0
+    ]
+   },
+   "bras": {
+    "nul": {
+     "essai": 18402.76,
+     "exploitation": 19249.17,
+     "total": 37651.93,
+     "profit_2e_semestre": 365576.49
+    },
+    "chaine": {
+     "essai": 19587.36,
+     "exploitation": 20593.06,
+     "total": 40180.42,
+     "profit_2e_semestre": 368673.69
+    },
+    "aveugle:-1": {
+     "essai": 20506.04,
+     "exploitation": 20516.91,
+     "total": 41022.95,
+     "profit_2e_semestre": 369782.21
+    },
+    "aveugle:-0.5": {
+     "essai": 22956.53,
+     "exploitation": 23319.66,
+     "total": 46276.19,
+     "profit_2e_semestre": 374667.1
+    },
+    "aveugle:0": {
+     "essai": 22097.5,
+     "exploitation": 22544.56,
+     "total": 44642.06,
+     "profit_2e_semestre": 372601.5
+    },
+    "aveugle:0.5": {
+     "essai": 17468.64,
+     "exploitation": 17773.69,
+     "total": 35242.33,
+     "profit_2e_semestre": 363171.01
+    },
+    "aveugle:1": {
+     "essai": 13650.82,
+     "exploitation": 13753.71,
+     "total": 27404.53,
+     "profit_2e_semestre": 355302.44
+    },
+    "bandit": {
+     "essai": 22233.66,
+     "exploitation": 22726.45,
+     "total": 44960.11,
+     "profit_2e_semestre": 373196.41
+    },
+    "sans_engagement": {
+     "essai": 20116.6,
+     "exploitation": 21455.6,
+     "total": 41572.2,
+     "profit_2e_semestre": 375982.54
+    }
+   },
+   "secs": 11.3
+  },
+  {
+   "graine": 6224,
+   "monde": "t3e",
+   "ecartee": false,
+   "objet": "fotuxe2",
+   "prix_reference": 6.64,
+   "cout_vrai": 2.734,
+   "cout_au_jour_183": 2.734,
+   "decision_chaine": -1,
+   "joues": {
+    "bandit": [
+     0,
+     0.5,
+     -0.5,
+     1,
+     -1,
+     -1,
+     0,
+     -1,
+     -0.5,
+     -1,
+     -1,
+     -1,
+     -1,
+     -1,
+     -1,
+     -0.5,
+     -1,
+     -1,
+     -1,
+     -0.5,
+     -1,
+     -1,
+     -1,
+     -1,
+     0,
+     -1
+    ],
+    "sans_engagement": [
+     -1,
+     0,
+     1,
+     -1,
+     1,
+     1,
+     -1,
+     0,
+     -1,
+     -1,
+     -1,
+     0,
+     -1,
+     -1,
+     -1,
+     -1,
+     -1,
+     -1,
+     -1,
+     -1,
+     -1,
+     -1,
+     -1,
+     -1,
+     -1,
+     -1
+    ]
+   },
+   "bras": {
+    "nul": {
+     "essai": 2127.25,
+     "exploitation": 2716.63,
+     "total": 4843.88,
+     "profit_2e_semestre": 365454.59
+    },
+    "chaine": {
+     "essai": 3087.15,
+     "exploitation": 4203.59,
+     "total": 7290.73,
+     "profit_2e_semestre": 367999.96
+    },
+    "aveugle:-1": {
+     "essai": 3861.01,
+     "exploitation": 4296.31,
+     "total": 8157.33,
+     "profit_2e_semestre": 368799.58
+    },
+    "aveugle:-0.5": {
+     "essai": 2897.98,
+     "exploitation": 3487.83,
+     "total": 6385.81,
+     "profit_2e_semestre": 367061.73
+    },
+    "aveugle:0": {
+     "essai": 2070.04,
+     "exploitation": 2566.06,
+     "total": 4636.1,
+     "profit_2e_semestre": 366196.04
+    },
+    "aveugle:0.5": {
+     "essai": 1386.98,
+     "exploitation": 1832.12,
+     "total": 3219.09,
+     "profit_2e_semestre": 363840.77
+    },
+    "aveugle:1": {
+     "essai": 946.17,
+     "exploitation": 1263.42,
+     "total": 2209.59,
+     "profit_2e_semestre": 362818.69
+    },
+    "bandit": {
+     "essai": 3035.43,
+     "exploitation": 4282.43,
+     "total": 7317.86,
+     "profit_2e_semestre": 368859.69
+    },
+    "sans_engagement": {
+     "essai": 2971.51,
+     "exploitation": 4450.86,
+     "total": 7422.37,
+     "profit_2e_semestre": 368064.62
+    }
+   },
+   "secs": 6.9
+  },
+  {
+   "graine": 6225,
+   "monde": "t3e",
+   "ecartee": false,
+   "objet": "pasune7",
+   "prix_reference": 16.63,
+   "cout_vrai": 9.54,
+   "cout_au_jour_183": 9.54,
+   "decision_chaine": 1,
+   "joues": {
+    "bandit": [
+     0,
+     0.5,
+     -0.5,
+     1,
+     -1,
+     -0.5,
+     0,
+     -1,
+     1,
+     0.5,
+     1,
+     1,
+     0,
+     0,
+     0.5,
+     0,
+     0.5,
+     0.5,
+     0,
+     -0.5,
+     0,
+     0.5,
+     -0.5,
+     0.5,
+     0,
+     0.5
+    ],
+    "sans_engagement": [
+     -1,
+     0,
+     1,
+     -1,
+     1,
+     1,
+     -1,
+     0,
+     1,
+     1,
+     1,
+     0,
+     1,
+     1,
+     1,
+     1,
+     1,
+     1,
+     1,
+     1,
+     1,
+     1,
+     1,
+     1,
+     1,
+     1
+    ]
+   },
+   "bras": {
+    "nul": {
+     "essai": 12717.69,
+     "exploitation": 12719.38,
+     "total": 25437.08,
+     "profit_2e_semestre": 465411.98
+    },
+    "chaine": {
+     "essai": 12744.63,
+     "exploitation": 15435.41,
+     "total": 28180.04,
+     "profit_2e_semestre": 468245.7
+    },
+    "aveugle:-1": {
+     "essai": 8934.47,
+     "exploitation": 9224.02,
+     "total": 18158.49,
+     "profit_2e_semestre": 461302.57
+    },
+    "aveugle:-0.5": {
+     "essai": 10953.77,
+     "exploitation": 11604.06,
+     "total": 22557.83,
+     "profit_2e_semestre": 462543.99
+    },
+    "aveugle:0": {
+     "essai": 12890.16,
+     "exploitation": 13592.1,
+     "total": 26482.27,
+     "profit_2e_semestre": 466495.71
+    },
+    "aveugle:0.5": {
+     "essai": 13874.11,
+     "exploitation": 14951.1,
+     "total": 28825.2,
+     "profit_2e_semestre": 468958.72
+    },
+    "aveugle:1": {
+     "essai": 14389.13,
+     "exploitation": 15604.17,
+     "total": 29993.3,
+     "profit_2e_semestre": 470103.97
+    },
+    "bandit": {
+     "essai": 12403.02,
+     "exploitation": 13860.41,
+     "total": 26263.43,
+     "profit_2e_semestre": 466303.22
+    },
+    "sans_engagement": {
+     "essai": 12648.27,
+     "exploitation": 15469.16,
+     "total": 28117.43,
+     "profit_2e_semestre": 468115.59
+    }
+   },
+   "secs": 12.3
+  },
+  {
+   "graine": 6226,
+   "monde": "t3e",
+   "ecartee": false,
+   "objet": "sovalo7",
+   "prix_reference": 129.06,
+   "cout_vrai": 95.97,
+   "cout_au_jour_183": 95.97,
+   "decision_chaine": 1,
+   "joues": {
+    "bandit": [
+     0,
+     0.5,
+     -0.5,
+     1,
+     -1,
+     1,
+     0.5,
+     -0.5,
+     -0.5,
+     1,
+     1,
+     1,
+     0,
+     0,
+     0.5,
+     1,
+     1,
+     1,
+     0.5,
+     0.5,
+     0,
+     1,
+     1,
+     0,
+     0.5,
+     0.5
+    ],
+    "sans_engagement": [
+     -1,
+     0,
+     1,
+     -1,
+     1,
+     1,
+     -1,
+     0,
+     1,
+     0,
+     1,
+     1,
+     1,
+     0,
+     1,
+     1,
+     1,
+     1,
+     1,
+     1,
+     0,
+     0,
+     1,
+     1,
+     1,
+     1
+    ]
+   },
+   "bras": {
+    "nul": {
+     "essai": 31200.64,
+     "exploitation": 27846.05,
+     "total": 59046.7,
+     "profit_2e_semestre": -1742.89
+    },
+    "chaine": {
+     "essai": 28909.95,
+     "exploitation": 33067.03,
+     "total": 61976.98,
+     "profit_2e_semestre": -12536.33
+    },
+    "aveugle:-1": {
+     "essai": 8961.52,
+     "exploitation": 8764.96,
+     "total": 17726.48,
+     "profit_2e_semestre": -56786.84
+    },
+    "aveugle:-0.5": {
+     "essai": 21619.91,
+     "exploitation": 21444.77,
+     "total": 43064.69,
+     "profit_2e_semestre": -31409.7
+    },
+    "aveugle:0": {
+     "essai": 31170.65,
+     "exploitation": 29254.74,
+     "total": 60425.4,
+     "profit_2e_semestre": -13958.86
+    },
+    "aveugle:0.5": {
+     "essai": 34548.71,
+     "exploitation": 32373.64,
+     "total": 66922.35,
+     "profit_2e_semestre": -7686.94
+    },
+    "aveugle:1": {
+     "essai": 35027.53,
+     "exploitation": 33067.03,
+     "total": 68094.56,
+     "profit_2e_semestre": -6418.74
+    },
+    "bandit": {
+     "essai": 29105.42,
+     "exploitation": 32285.72,
+     "total": 61391.14,
+     "profit_2e_semestre": -13023.73
+    },
+    "sans_engagement": {
+     "essai": 28580.82,
+     "exploitation": 32657.82,
+     "total": 61238.64,
+     "profit_2e_semestre": -13209.32
+    }
+   },
+   "secs": 8.6
+  },
+  {
+   "graine": 6227,
+   "monde": "t3e",
+   "ecartee": false,
+   "objet": "womi3",
+   "prix_reference": 161.04,
+   "cout_vrai": 87.83,
+   "cout_au_jour_183": 87.83,
+   "decision_chaine": -1,
+   "joues": {
+    "bandit": [
+     0,
+     0.5,
+     -0.5,
+     1,
+     -1,
+     0,
+     -1,
+     0,
+     1,
+     0,
+     -1,
+     0.5,
+     1,
+     0,
+     0.5,
+     -0.5,
+     -1,
+     1,
+     0.5,
+     -1,
+     1,
+     0.5,
+     1,
+     0,
+     -1,
+     0
+    ],
+    "sans_engagement": [
+     -1,
+     0,
+     1,
+     -1,
+     1,
+     1,
+     -1,
+     0,
+     -1,
+     1,
+     0,
+     -1,
+     -1,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     -1,
+     0,
+     -1,
+     0,
+     0,
+     0,
+     -1
+    ]
+   },
+   "bras": {
+    "nul": {
+     "essai": 61539.02,
+     "exploitation": 63974.63,
+     "total": 125513.65,
+     "profit_2e_semestre": 437811.71
+    },
+    "chaine": {
+     "essai": 56631.04,
+     "exploitation": 63836.42,
+     "total": 120467.46,
+     "profit_2e_semestre": 432439.17
+    },
+    "aveugle:-1": {
+     "essai": 53750.51,
+     "exploitation": 62606.43,
+     "total": 116356.94,
+     "profit_2e_semestre": 429107.65
+    },
+    "aveugle:-0.5": {
+     "essai": 59357.36,
+     "exploitation": 69812.36,
+     "total": 129169.72,
+     "profit_2e_semestre": 441135.49
+    },
+    "aveugle:0": {
+     "essai": 61349.67,
+     "exploitation": 70062.14,
+     "total": 131411.81,
+     "profit_2e_semestre": 446097.59
+    },
+    "aveugle:0.5": {
+     "essai": 63170.44,
+     "exploitation": 72941.33,
+     "total": 136111.78,
+     "profit_2e_semestre": 448354.2
+    },
+    "aveugle:1": {
+     "essai": 61500.54,
+     "exploitation": 71826.27,
+     "total": 133326.81,
+     "profit_2e_semestre": 445919.29
+    },
+    "bandit": {
+     "essai": 59069.57,
+     "exploitation": 70245.69,
+     "total": 129315.26,
+     "profit_2e_semestre": 441406.29
+    },
+    "sans_engagement": {
+     "essai": 57856.82,
+     "exploitation": 70457.7,
+     "total": 128314.53,
+     "profit_2e_semestre": 440687.44
+    }
+   },
+   "secs": 12
+  },
+  {
+   "graine": 6228,
+   "monde": "t3e",
+   "ecartee": false,
+   "objet": "cebi4",
+   "prix_reference": 4.82,
+   "cout_vrai": 3.445,
+   "cout_au_jour_183": 3.445,
+   "decision_chaine": 0,
+   "joues": {
+    "bandit": [
+     0,
+     0.5,
+     -0.5,
+     1,
+     -1,
+     0,
+     0.5,
+     -0.5,
+     1,
+     0,
+     1,
+     0.5,
+     1,
+     1,
+     1,
+     -0.5,
+     1,
+     0,
+     1,
+     1,
+     1,
+     1,
+     1,
+     0,
+     0.5,
+     1
+    ],
+    "sans_engagement": [
+     -1,
+     0,
+     1,
+     -1,
+     1,
+     1,
+     -1,
+     0,
+     1,
+     1,
+     1,
+     1,
+     1,
+     1,
+     0,
+     0,
+     1,
+     1,
+     1,
+     0,
+     0,
+     1,
+     1,
+     1,
+     1,
+     1
+    ]
+   },
+   "bras": {
+    "nul": {
+     "essai": 3634.44,
+     "exploitation": 3810.87,
+     "total": 7445.31,
+     "profit_2e_semestre": -123231.25
+    },
+    "chaine": {
+     "essai": 2946.57,
+     "exploitation": 3672.55,
+     "total": 6619.12,
+     "profit_2e_semestre": -124058.86
+    },
+    "aveugle:-1": {
+     "essai": 1737.07,
+     "exploitation": 1858.66,
+     "total": 3595.72,
+     "profit_2e_semestre": -127082.34
+    },
+    "aveugle:-0.5": {
+     "essai": 2873.43,
+     "exploitation": 3069.78,
+     "total": 5943.22,
+     "profit_2e_semestre": -124735.6
+    },
+    "aveugle:0": {
+     "essai": 3599.67,
+     "exploitation": 3668.42,
+     "total": 7268.1,
+     "profit_2e_semestre": -121497.02
+    },
+    "aveugle:0.5": {
+     "essai": 3660.44,
+     "exploitation": 3779.08,
+     "total": 7439.51,
+     "profit_2e_semestre": -123239.09
+    },
+    "aveugle:1": {
+     "essai": 3275.16,
+     "exploitation": 3427.67,
+     "total": 6702.83,
+     "profit_2e_semestre": -123975.13
+    },
+    "bandit": {
+     "essai": 3340.99,
+     "exploitation": 3398.41,
+     "total": 6739.4,
+     "profit_2e_semestre": -123941.15
+    },
+    "sans_engagement": {
+     "essai": 2889.16,
+     "exploitation": 3439.05,
+     "total": 6328.21,
+     "profit_2e_semestre": -124349.75
+    }
+   },
+   "secs": 8.5
+  },
+  {
+   "graine": 6229,
+   "monde": "t3e",
+   "ecartee": false,
+   "objet": "qiju8",
+   "prix_reference": 60.48,
+   "cout_vrai": 29.677,
+   "cout_au_jour_183": 29.677,
+   "decision_chaine": -1,
+   "joues": {
+    "bandit": [
+     0,
+     0.5,
+     -0.5,
+     1,
+     -1,
+     -0.5,
+     -0.5,
+     -0.5,
+     -1,
+     0,
+     -0.5,
+     -0.5,
+     -0.5,
+     -0.5,
+     -1,
+     -0.5,
+     -1,
+     -0.5,
+     -1,
+     -1,
+     -1,
+     -1,
+     -1,
+     -1,
+     -1,
+     -1
+    ],
+    "sans_engagement": [
+     -1,
+     0,
+     1,
+     -1,
+     1,
+     1,
+     -1,
+     0,
+     -1,
+     -1,
+     -1,
+     -1,
+     -1,
+     -1,
+     -1,
+     -1,
+     -1,
+     -1,
+     -1,
+     -1,
+     -1,
+     -1,
+     -1,
+     -1,
+     0,
+     -1
+    ]
+   },
+   "bras": {
+    "nul": {
+     "essai": 41326.32,
+     "exploitation": 33944.1,
+     "total": 75270.43,
+     "profit_2e_semestre": 302632.86
+    },
+    "chaine": {
+     "essai": 44773.12,
+     "exploitation": 39987.46,
+     "total": 84760.57,
+     "profit_2e_semestre": 311048.29
+    },
+    "aveugle:-1": {
+     "essai": 48534.82,
+     "exploitation": 37724.37,
+     "total": 86259.19,
+     "profit_2e_semestre": 314205.05
+    },
+    "aveugle:-0.5": {
+     "essai": 46263.03,
+     "exploitation": 40379.45,
+     "total": 86642.47,
+     "profit_2e_semestre": 313901.7
+    },
+    "aveugle:0": {
+     "essai": 44695.45,
+     "exploitation": 34807.62,
+     "total": 79503.08,
+     "profit_2e_semestre": 307106.67
+    },
+    "aveugle:0.5": {
+     "essai": 36880.8,
+     "exploitation": 29208,
+     "total": 66088.8,
+     "profit_2e_semestre": 293559.95
+    },
+    "aveugle:1": {
+     "essai": 29620.47,
+     "exploitation": 23971.91,
+     "total": 53592.38,
+     "profit_2e_semestre": 281425.02
+    },
+    "bandit": {
+     "essai": 46035.87,
+     "exploitation": 40631.81,
+     "total": 86667.69,
+     "profit_2e_semestre": 313110.6
+    },
+    "sans_engagement": {
+     "essai": 44773.12,
+     "exploitation": 40157.82,
+     "total": 84930.94,
+     "profit_2e_semestre": 311256.07
+    }
+   },
+   "secs": 12.7
+  },
+  {
+   "graine": 6230,
+   "monde": "t3e",
+   "ecartee": false,
+   "objet": "salegi7",
+   "prix_reference": 16.13,
+   "cout_vrai": 10.099,
+   "cout_au_jour_183": 10.099,
+   "decision_chaine": -1,
+   "joues": {
+    "bandit": [
+     0,
+     0.5,
+     -0.5,
+     1,
+     -1,
+     1,
+     0,
+     -0.5,
+     0.5,
+     0,
+     0,
+     1,
+     0,
+     1,
+     -0.5,
+     0,
+     1,
+     1,
+     0,
+     -0.5,
+     1,
+     1,
+     0,
+     1,
+     1,
+     1
+    ],
+    "sans_engagement": [
+     -1,
+     0,
+     1,
+     -1,
+     1,
+     1,
+     -1,
+     0,
+     1,
+     0,
+     0,
+     1,
+     0,
+     -1,
+     1,
+     0,
+     0,
+     0,
+     1,
+     0,
+     0,
+     1,
+     0,
+     0,
+     0,
+     1
+    ]
+   },
+   "bras": {
+    "nul": {
+     "essai": 11011.96,
+     "exploitation": 9688.81,
+     "total": 20700.78,
+     "profit_2e_semestre": 335673.48
+    },
+    "chaine": {
+     "essai": 6174.79,
+     "exploitation": 4571.29,
+     "total": 10746.08,
+     "profit_2e_semestre": 327890.99
+    },
+    "aveugle:-1": {
+     "essai": 5209.93,
+     "exploitation": 4842.99,
+     "total": 10052.93,
+     "profit_2e_semestre": 327293.06
+    },
+    "aveugle:-0.5": {
+     "essai": 7219.84,
+     "exploitation": 6908.01,
+     "total": 14127.85,
+     "profit_2e_semestre": 329202.7
+    },
+    "aveugle:0": {
+     "essai": 9577.29,
+     "exploitation": 8775.16,
+     "total": 18352.45,
+     "profit_2e_semestre": 335322.3
+    },
+    "aveugle:0.5": {
+     "essai": 11626.9,
+     "exploitation": 10183.45,
+     "total": 21810.35,
+     "profit_2e_semestre": 336778.97
+    },
+    "aveugle:1": {
+     "essai": 12596.42,
+     "exploitation": 10654.64,
+     "total": 23251.06,
+     "profit_2e_semestre": 338231.48
+    },
+    "bandit": {
+     "essai": 9646.36,
+     "exploitation": 9743.25,
+     "total": 19389.61,
+     "profit_2e_semestre": 334359.98
+    },
+    "sans_engagement": {
+     "essai": 8662.24,
+     "exploitation": 8874.52,
+     "total": 17536.76,
+     "profit_2e_semestre": 332507.15
+    }
+   },
+   "secs": 12.1
+  },
+  {
+   "graine": 6231,
+   "monde": "t3e",
+   "ecartee": false,
+   "objet": "jatosu3",
+   "prix_reference": 163.5,
+   "cout_vrai": 82.393,
+   "cout_au_jour_183": 82.393,
+   "decision_chaine": -1,
+   "joues": {
+    "bandit": [
+     0,
+     0.5,
+     -0.5,
+     1,
+     -1,
+     -0.5,
+     -0.5,
+     -0.5,
+     -0.5,
+     -0.5,
+     -0.5,
+     -0.5,
+     -1,
+     0,
+     -0.5,
+     -0.5,
+     -0.5,
+     -0.5,
+     0,
+     -0.5,
+     -0.5,
+     -0.5,
+     -0.5,
+     -0.5,
+     -0.5,
+     -0.5
+    ],
+    "sans_engagement": [
+     -1,
+     0,
+     1,
+     -1,
+     1,
+     1,
+     -1,
+     0,
+     -1,
+     -1,
+     -1,
+     -1,
+     -1,
+     -1,
+     -1,
+     -1,
+     -1,
+     -1,
+     -1,
+     -1,
+     -1,
+     -1,
+     -1,
+     -1,
+     -1,
+     -1
+    ]
+   },
+   "bras": {
+    "nul": {
+     "essai": 124717.36,
+     "exploitation": 131897.32,
+     "total": 256614.68,
+     "profit_2e_semestre": 932473.18
+    },
+    "chaine": {
+     "essai": 131052.77,
+     "exploitation": 172765.39,
+     "total": 303818.16,
+     "profit_2e_semestre": 979653.5
+    },
+    "aveugle:-1": {
+     "essai": 159743.84,
+     "exploitation": 173830.35,
+     "total": 333574.19,
+     "profit_2e_semestre": 1042449.04
+    },
+    "aveugle:-0.5": {
+     "essai": 150551.76,
+     "exploitation": 164151.22,
+     "total": 314702.97,
+     "profit_2e_semestre": 990584.63
+    },
+    "aveugle:0": {
+     "essai": 129528.24,
+     "exploitation": 141694.32,
+     "total": 271222.56,
+     "profit_2e_semestre": 946993.78
+    },
+    "aveugle:0.5": {
+     "essai": 98097.86,
+     "exploitation": 110849.58,
+     "total": 208947.44,
+     "profit_2e_semestre": 884637.54
+    },
+    "aveugle:1": {
+     "essai": 71240.54,
+     "exploitation": 84537.15,
+     "total": 155777.69,
+     "profit_2e_semestre": 831467.81
+    },
+    "bandit": {
+     "essai": 135634.59,
+     "exploitation": 162656.12,
+     "total": 298290.71,
+     "profit_2e_semestre": 973980.81
+    },
+    "sans_engagement": {
+     "essai": 131052.77,
+     "exploitation": 172910.61,
+     "total": 303963.38,
+     "profit_2e_semestre": 979653.5
+    }
+   },
+   "secs": 15.7
+  },
+  {
+   "graine": 6232,
+   "monde": "t3e",
+   "ecartee": false,
+   "objet": "lire4",
+   "prix_reference": 53.31,
+   "cout_vrai": 35.733,
+   "cout_au_jour_183": 35.733,
+   "decision_chaine": 1,
+   "joues": {
+    "bandit": [
+     0,
+     0.5,
+     -0.5,
+     1,
+     -1,
+     -0.5,
+     0,
+     -0.5,
+     -0.5,
+     1,
+     0,
+     0.5,
+     0.5,
+     1,
+     0.5,
+     0,
+     0.5,
+     -0.5,
+     0,
+     0,
+     1,
+     0.5,
+     1,
+     0,
+     0,
+     -0.5
+    ],
+    "sans_engagement": [
+     -1,
+     0,
+     1,
+     -1,
+     1,
+     1,
+     -1,
+     0,
+     1,
+     -1,
+     1,
+     1,
+     -1,
+     1,
+     1,
+     -1,
+     -1,
+     -1,
+     -1,
+     -1,
+     1,
+     -1,
+     1,
+     1,
+     1,
+     -1
+    ]
+   },
+   "bras": {
+    "nul": {
+     "essai": 35059.16,
+     "exploitation": 35024.06,
+     "total": 70083.23,
+     "profit_2e_semestre": 860403.53
+    },
+    "chaine": {
+     "essai": 27014.16,
+     "exploitation": 30164.94,
+     "total": 57179.1,
+     "profit_2e_semestre": 848544.03
+    },
+    "aveugle:-1": {
+     "essai": 19207.69,
+     "exploitation": 18931.02,
+     "total": 38138.72,
+     "profit_2e_semestre": 827992.5
+    },
+    "aveugle:-0.5": {
+     "essai": 28385.37,
+     "exploitation": 28528.73,
+     "total": 56914.11,
+     "profit_2e_semestre": 847711.34
+    },
+    "aveugle:0": {
+     "essai": 35522.52,
+     "exploitation": 36295.9,
+     "total": 71818.42,
+     "profit_2e_semestre": 862034.64
+    },
+    "aveugle:0.5": {
+     "essai": 34463.52,
+     "exploitation": 34988.59,
+     "total": 69452.11,
+     "profit_2e_semestre": 860721.1
+    },
+    "aveugle:1": {
+     "essai": 30999.43,
+     "exploitation": 30628.55,
+     "total": 61627.97,
+     "profit_2e_semestre": 852553.29
+    },
+    "bandit": {
+     "essai": 32770.71,
+     "exploitation": 33562.96,
+     "total": 66333.67,
+     "profit_2e_semestre": 871278.85
+    },
+    "sans_engagement": {
+     "essai": 24563.1,
+     "exploitation": 22452.48,
+     "total": 47015.59,
+     "profit_2e_semestre": 836698.02
+    }
+   },
+   "secs": 18.1
+  },
+  {
+   "graine": 6233,
+   "monde": "t3e",
+   "ecartee": false,
+   "objet": "degixe6",
+   "prix_reference": 54.15,
+   "cout_vrai": 28.948,
+   "cout_au_jour_183": 28.948,
+   "decision_chaine": 0,
+   "joues": {
+    "bandit": [
+     0,
+     0.5,
+     -0.5,
+     1,
+     -1,
+     0,
+     0,
+     -0.5,
+     0,
+     -0.5,
+     0.5,
+     1,
+     -0.5,
+     -0.5,
+     0,
+     -0.5,
+     0,
+     1,
+     0.5,
+     -1,
+     0.5,
+     1,
+     0,
+     -0.5,
+     0,
+     -0.5
+    ],
+    "sans_engagement": [
+     -1,
+     0,
+     1,
+     -1,
+     1,
+     1,
+     -1,
+     0,
+     -1,
+     0,
+     0,
+     -1,
+     0,
+     0,
+     0,
+     -1,
+     0,
+     0,
+     -1,
+     0,
+     0,
+     1,
+     0,
+     1,
+     0,
+     0
+    ]
+   },
+   "bras": {
+    "nul": {
+     "essai": 46017.87,
+     "exploitation": 45931.23,
+     "total": 91949.1,
+     "profit_2e_semestre": 215054.14
+    },
+    "chaine": {
+     "essai": 43865.04,
+     "exploitation": 44985.41,
+     "total": 88850.46,
+     "profit_2e_semestre": 212299.84
+    },
+    "aveugle:-1": {
+     "essai": 35872.29,
+     "exploitation": 34880.63,
+     "total": 70752.93,
+     "profit_2e_semestre": 206784.27
+    },
+    "aveugle:-0.5": {
+     "essai": 41788.7,
+     "exploitation": 41243.21,
+     "total": 83031.91,
+     "profit_2e_semestre": 207537.6
+    },
+    "aveugle:0": {
+     "essai": 45993.49,
+     "exploitation": 44935.01,
+     "total": 90928.5,
+     "profit_2e_semestre": 214936.1
+    },
+    "aveugle:0.5": {
+     "essai": 46313.74,
+     "exploitation": 44639.37,
+     "total": 90953.12,
+     "profit_2e_semestre": 229117.11
+    },
+    "aveugle:1": {
+     "essai": 45173.07,
+     "exploitation": 43691.08,
+     "total": 88864.15,
+     "profit_2e_semestre": 213095.12
+    },
+    "bandit": {
+     "essai": 43845.26,
+     "exploitation": 42721.79,
+     "total": 86567.05,
+     "profit_2e_semestre": 210732.81
+    },
+    "sans_engagement": {
+     "essai": 42679.13,
+     "exploitation": 44768.56,
+     "total": 87447.69,
+     "profit_2e_semestre": 224971.98
+    }
+   },
+   "secs": 11.3
+  },
+  {
+   "graine": 6234,
+   "monde": "t3e",
+   "ecartee": false,
+   "objet": "vexola8",
+   "prix_reference": 23.2,
+   "cout_vrai": 10.469,
+   "cout_au_jour_183": 10.469,
+   "decision_chaine": -1,
+   "joues": {
+    "bandit": [
+     0,
+     0.5,
+     -0.5,
+     1,
+     -1,
+     -0.5,
+     -1,
+     -1,
+     -1,
+     -1,
+     -0.5,
+     -1,
+     -1,
+     -1,
+     -1,
+     -1,
+     0.5,
+     -1,
+     -1,
+     -1,
+     -1,
+     -1,
+     -1,
+     -1,
+     -1,
+     -1
+    ],
+    "sans_engagement": [
+     -1,
+     0,
+     1,
+     -1,
+     1,
+     1,
+     -1,
+     0,
+     -1,
+     -1,
+     -1,
+     -1,
+     -1,
+     -1,
+     -1,
+     -1,
+     -1,
+     -1,
+     -1,
+     -1,
+     -1,
+     -1,
+     -1,
+     -1,
+     -1,
+     -1
+    ]
+   },
+   "bras": {
+    "nul": {
+     "essai": 15014.82,
+     "exploitation": 12020.55,
+     "total": 27035.37,
+     "profit_2e_semestre": 1733308.99
+    },
+    "chaine": {
+     "essai": 17146.16,
+     "exploitation": 19613.29,
+     "total": 36759.45,
+     "profit_2e_semestre": 1743028.82
+    },
+    "aveugle:-1": {
+     "essai": 19540.46,
+     "exploitation": 19629.47,
+     "total": 39169.93,
+     "profit_2e_semestre": 1745447.37
+    },
+    "aveugle:-0.5": {
+     "essai": 19904.58,
+     "exploitation": 20326.11,
+     "total": 40230.69,
+     "profit_2e_semestre": 1746483.87
+    },
+    "aveugle:0": {
+     "essai": 15990.5,
+     "exploitation": 17072.66,
+     "total": 33063.16,
+     "profit_2e_semestre": 1739316.35
+    },
+    "aveugle:0.5": {
+     "essai": 12315.15,
+     "exploitation": 13305.31,
+     "total": 25620.46,
+     "profit_2e_semestre": 1731873.64
+    },
+    "aveugle:1": {
+     "essai": 8820.89,
+     "exploitation": 9951.3,
+     "total": 18772.2,
+     "profit_2e_semestre": 1725043.91
+    },
+    "bandit": {
+     "essai": 17875.06,
+     "exploitation": 20147.49,
+     "total": 38022.55,
+     "profit_2e_semestre": 1744283.81
+    },
+    "sans_engagement": {
+     "essai": 17146.16,
+     "exploitation": 19621.38,
+     "total": 36767.54,
+     "profit_2e_semestre": 1743028.82
+    }
+   },
+   "secs": 24
+  },
+  {
+   "graine": 6235,
+   "monde": "t3e",
+   "ecartee": false,
+   "objet": "nace4",
+   "prix_reference": 10.71,
+   "cout_vrai": 6.88,
+   "cout_au_jour_183": 6.88,
+   "decision_chaine": 1,
+   "joues": {
+    "bandit": [
+     0,
+     0.5,
+     -0.5,
+     1,
+     -1,
+     1,
+     0,
+     0.5,
+     -1,
+     0,
+     1,
+     0,
+     0,
+     -0.5,
+     0,
+     -0.5,
+     1,
+     1,
+     0.5,
+     0,
+     0.5,
+     0.5,
+     0,
+     0,
+     -0.5,
+     -1
+    ],
+    "sans_engagement": [
+     -1,
+     0,
+     1,
+     -1,
+     1,
+     1,
+     -1,
+     0,
+     1,
+     0,
+     0,
+     1,
+     0,
+     -1,
+     1,
+     0,
+     -1,
+     1,
+     0,
+     1,
+     0,
+     1,
+     1,
+     1,
+     0,
+     -1
+    ]
+   },
+   "bras": {
+    "nul": {
+     "essai": 9187.21,
+     "exploitation": 8172.49,
+     "total": 17359.7,
+     "profit_2e_semestre": -117043.42
+    },
+    "chaine": {
+     "essai": 9107.49,
+     "exploitation": 8862.84,
+     "total": 17970.33,
+     "profit_2e_semestre": -114714.54
+    },
+    "aveugle:-1": {
+     "essai": 5464.78,
+     "exploitation": 4657.06,
+     "total": 10121.83,
+     "profit_2e_semestre": -124644.12
+    },
+    "aveugle:-0.5": {
+     "essai": 6995.15,
+     "exploitation": 6252.71,
+     "total": 13247.86,
+     "profit_2e_semestre": -119706.4
+    },
+    "aveugle:0": {
+     "essai": 9195.32,
+     "exploitation": 7632.77,
+     "total": 16828.09,
+     "profit_2e_semestre": -117624.29
+    },
+    "aveugle:0.5": {
+     "essai": 10001.43,
+     "exploitation": 8179.29,
+     "total": 18180.73,
+     "profit_2e_semestre": -116274.3
+    },
+    "aveugle:1": {
+     "essai": 10467.74,
+     "exploitation": 8768.69,
+     "total": 19236.43,
+     "profit_2e_semestre": -115400.2
+    },
+    "bandit": {
+     "essai": 8855.68,
+     "exploitation": 7204.82,
+     "total": 16060.5,
+     "profit_2e_semestre": -118612.53
+    },
+    "sans_engagement": {
+     "essai": 9082.14,
+     "exploitation": 7228.72,
+     "total": 16310.86,
+     "profit_2e_semestre": -117572.89
+    }
+   },
+   "secs": 5.4
+  },
+  {
+   "graine": 6236,
+   "monde": "t3e",
+   "ecartee": false,
+   "objet": "voce0",
+   "prix_reference": 4.94,
+   "cout_vrai": 2.248,
+   "cout_au_jour_183": 2.248,
+   "decision_chaine": -1,
+   "joues": {
+    "bandit": [
+     0,
+     0.5,
+     -0.5,
+     1,
+     -1,
+     -1,
+     -1,
+     -1,
+     -1,
+     -1,
+     -1,
+     1,
+     0,
+     -1,
+     -1,
+     -1,
+     -0.5,
+     0.5,
+     -1,
+     -1,
+     0.5,
+     -1,
+     -1,
+     -1,
+     -1,
+     -1
+    ],
+    "sans_engagement": [
+     -1,
+     0,
+     1,
+     -1,
+     1,
+     1,
+     -1,
+     0,
+     -1,
+     -1,
+     0,
+     -1,
+     -1,
+     -1,
+     -1,
+     -1,
+     -1,
+     -1,
+     0,
+     -1,
+     0,
+     -1,
+     -1,
+     -1,
+     -1,
+     -1
+    ]
+   },
+   "bras": {
+    "nul": {
+     "essai": 4038.23,
+     "exploitation": 3664.35,
+     "total": 7702.58,
+     "profit_2e_semestre": 705157.26
+    },
+    "chaine": {
+     "essai": 4402.29,
+     "exploitation": 4501.15,
+     "total": 8903.44,
+     "profit_2e_semestre": 706506.86
+    },
+    "aveugle:-1": {
+     "essai": 4877.24,
+     "exploitation": 4678.13,
+     "total": 9555.37,
+     "profit_2e_semestre": 707114.36
+    },
+    "aveugle:-0.5": {
+     "essai": 4636.7,
+     "exploitation": 4541.15,
+     "total": 9177.85,
+     "profit_2e_semestre": 706680.88
+    },
+    "aveugle:0": {
+     "essai": 4172.22,
+     "exploitation": 4279.89,
+     "total": 8452.12,
+     "profit_2e_semestre": 705901.47
+    },
+    "aveugle:0.5": {
+     "essai": 3615.29,
+     "exploitation": 3795.24,
+     "total": 7410.53,
+     "profit_2e_semestre": 704821.49
+    },
+    "aveugle:1": {
+     "essai": 3019.59,
+     "exploitation": 3231.9,
+     "total": 6251.49,
+     "profit_2e_semestre": 703648.04
+    },
+    "bandit": {
+     "essai": 4374.12,
+     "exploitation": 4157.03,
+     "total": 8531.15,
+     "profit_2e_semestre": 706179.38
+    },
+    "sans_engagement": {
+     "essai": 4383.31,
+     "exploitation": 4604.84,
+     "total": 8988.15,
+     "profit_2e_semestre": 706506.68
+    }
+   },
+   "secs": 23.6
+  },
+  {
+   "graine": 6237,
+   "monde": "t3e",
+   "ecartee": false,
+   "objet": "haga6",
+   "prix_reference": 193.69,
+   "cout_vrai": 99.762,
+   "cout_au_jour_183": 99.762,
+   "decision_chaine": 0,
+   "joues": {
+    "bandit": [
+     0,
+     0.5,
+     -0.5,
+     1,
+     -1,
+     0,
+     0,
+     -1,
+     -0.5,
+     0,
+     -1,
+     1,
+     0,
+     0,
+     0,
+     -0.5,
+     0.5,
+     -0.5,
+     -1,
+     -0.5,
+     -0.5,
+     1,
+     0.5,
+     0,
+     -0.5,
+     0
+    ],
+    "sans_engagement": [
+     -1,
+     0,
+     1,
+     -1,
+     1,
+     1,
+     -1,
+     0,
+     0,
+     0,
+     0,
+     0,
+     -1,
+     0,
+     0,
+     0,
+     0,
+     0,
+     -1,
+     0,
+     0,
+     0,
+     -1,
+     1,
+     1,
+     0
+    ]
+   },
+   "bras": {
+    "nul": {
+     "essai": 130163.29,
+     "exploitation": 123236.07,
+     "total": 253399.36,
+     "profit_2e_semestre": 897483.61
+    },
+    "chaine": {
+     "essai": 127924.26,
+     "exploitation": 127741.78,
+     "total": 255666.03,
+     "profit_2e_semestre": 896180.66
+    },
+    "aveugle:-1": {
+     "essai": 118046.66,
+     "exploitation": 108112.86,
+     "total": 226159.51,
+     "profit_2e_semestre": 882398.61
+    },
+    "aveugle:-0.5": {
+     "essai": 120944.42,
+     "exploitation": 128659.59,
+     "total": 249604.01,
+     "profit_2e_semestre": 890652.1
+    },
+    "aveugle:0": {
+     "essai": 129902.12,
+     "exploitation": 125863.22,
+     "total": 255765.34,
+     "profit_2e_semestre": 893546.58
+    },
+    "aveugle:0.5": {
+     "essai": 147853.33,
+     "exploitation": 128583.34,
+     "total": 276436.67,
+     "profit_2e_semestre": 921138.42
+    },
+    "aveugle:1": {
+     "essai": 137650.3,
+     "exploitation": 121849.7,
+     "total": 259500,
+     "profit_2e_semestre": 901121.23
+    },
+    "bandit": {
+     "essai": 123505.71,
+     "exploitation": 130109.88,
+     "total": 253615.59,
+     "profit_2e_semestre": 894668.29
+    },
+    "sans_engagement": {
+     "essai": 121919.56,
+     "exploitation": 115813.06,
+     "total": 237732.62,
+     "profit_2e_semestre": 879429.27
+    }
+   },
+   "secs": 12.6
+  },
+  {
+   "graine": 6238,
+   "monde": "t3e",
+   "ecartee": false,
+   "objet": "tutu3",
+   "prix_reference": 35.16,
+   "cout_vrai": 13.53,
+   "cout_au_jour_183": 13.53,
+   "decision_chaine": 1,
+   "joues": {
+    "bandit": [
+     0,
+     0.5,
+     -0.5,
+     1,
+     -1,
+     0.5,
+     0,
+     0,
+     -1,
+     1,
+     -1,
+     0,
+     0,
+     0,
+     -0.5,
+     -0.5,
+     0.5,
+     0.5,
+     0.5,
+     0,
+     -0.5,
+     1,
+     -0.5,
+     0.5,
+     1,
+     0
+    ],
+    "sans_engagement": [
+     -1,
+     0,
+     1,
+     -1,
+     1,
+     1,
+     -1,
+     0,
+     1,
+     -1,
+     1,
+     1,
+     -1,
+     -1,
+     1,
+     1,
+     0,
+     1,
+     1,
+     1,
+     1,
+     1,
+     1,
+     1,
+     1,
+     1
+    ]
+   },
+   "bras": {
+    "nul": {
+     "essai": 18454.01,
+     "exploitation": 19723.09,
+     "total": 38177.1,
+     "profit_2e_semestre": 38266.55
+    },
+    "chaine": {
+     "essai": 18689.13,
+     "exploitation": 23271.61,
+     "total": 41960.74,
+     "profit_2e_semestre": 42028.55
+    },
+    "aveugle:-1": {
+     "essai": 16294.05,
+     "exploitation": 18206.7,
+     "total": 34500.75,
+     "profit_2e_semestre": 34568.56
+    },
+    "aveugle:-0.5": {
+     "essai": 17777.04,
+     "exploitation": 20160.45,
+     "total": 37937.49,
+     "profit_2e_semestre": 38005.32
+    },
+    "aveugle:0": {
+     "essai": 18796.82,
+     "exploitation": 21414.1,
+     "total": 40210.91,
+     "profit_2e_semestre": 40278.74
+    },
+    "aveugle:0.5": {
+     "essai": 19309.52,
+     "exploitation": 22583.63,
+     "total": 41893.15,
+     "profit_2e_semestre": 41960.96
+    },
+    "aveugle:1": {
+     "essai": 20016.62,
+     "exploitation": 23271.61,
+     "total": 43288.23,
+     "profit_2e_semestre": 43356.05
+    },
+    "bandit": {
+     "essai": 18270.64,
+     "exploitation": 21664.2,
+     "total": 39934.85,
+     "profit_2e_semestre": 40002.67
+    },
+    "sans_engagement": {
+     "essai": 18056.16,
+     "exploitation": 23074.25,
+     "total": 41130.41,
+     "profit_2e_semestre": 41198.23
+    }
+   },
+   "secs": 6.5
+  },
+  {
+   "graine": 6239,
+   "monde": "t3e",
+   "ecartee": false,
+   "objet": "fomofe0",
+   "prix_reference": 21.08,
+   "cout_vrai": 12.452,
+   "cout_au_jour_183": 12.452,
+   "decision_chaine": -1,
+   "joues": {
+    "bandit": [
+     0,
+     0.5,
+     -0.5,
+     1,
+     -1,
+     -0.5,
+     -1,
+     0.5,
+     0,
+     -1,
+     -0.5,
+     0,
+     -1,
+     -0.5,
+     -0.5,
+     -1,
+     -0.5,
+     -1,
+     -0.5,
+     -0.5,
+     -1,
+     -0.5,
+     -1,
+     0,
+     -1,
+     -1
+    ],
+    "sans_engagement": [
+     -1,
+     0,
+     1,
+     -1,
+     1,
+     1,
+     -1,
+     0,
+     0,
+     -1,
+     -1,
+     -1,
+     -1,
+     -1,
+     -1,
+     -1,
+     -1,
+     -1,
+     -1,
+     -1,
+     -1,
+     -1,
+     -1,
+     -1,
+     -1,
+     -1
+    ]
+   },
+   "bras": {
+    "nul": {
+     "essai": 5118.66,
+     "exploitation": 2969.28,
+     "total": 8087.94,
+     "profit_2e_semestre": 393481.96
+    },
+    "chaine": {
+     "essai": 5493.01,
+     "exploitation": 5726.31,
+     "total": 11219.32,
+     "profit_2e_semestre": 396617.76
+    },
+    "aveugle:-1": {
+     "essai": 6391.95,
+     "exploitation": 5594.06,
+     "total": 11986.01,
+     "profit_2e_semestre": 397380.04
+    },
+    "aveugle:-0.5": {
+     "essai": 6276.68,
+     "exploitation": 5272.15,
+     "total": 11548.83,
+     "profit_2e_semestre": 396942.85
+    },
+    "aveugle:0": {
+     "essai": 5504.82,
+     "exploitation": 4616.11,
+     "total": 10120.93,
+     "profit_2e_semestre": 395514.95
+    },
+    "aveugle:0.5": {
+     "essai": 4491.77,
+     "exploitation": 3791.32,
+     "total": 8283.09,
+     "profit_2e_semestre": 393677.11
+    },
+    "aveugle:1": {
+     "essai": 3517.7,
+     "exploitation": 3238.29,
+     "total": 6755.99,
+     "profit_2e_semestre": 392162.46
+    },
+    "bandit": {
+     "essai": 5441.94,
+     "exploitation": 5444.07,
+     "total": 10886.01,
+     "profit_2e_semestre": 396290.82
+    },
+    "sans_engagement": {
+     "essai": 5632.27,
+     "exploitation": 5651.37,
+     "total": 11283.64,
+     "profit_2e_semestre": 396677.66
+    }
+   },
+   "secs": 8.3
+  },
+  {
+   "graine": 6240,
+   "monde": "t3e",
+   "ecartee": false,
+   "objet": "wivu3",
+   "prix_reference": 156.55,
+   "cout_vrai": 63.939,
+   "cout_au_jour_183": 63.939,
+   "decision_chaine": -1,
+   "joues": {
+    "bandit": [
+     0,
+     0.5,
+     -0.5,
+     1,
+     -1,
+     0,
+     -0.5,
+     -1,
+     -0.5,
+     0,
+     1,
+     -0.5,
+     -1,
+     -0.5,
+     0,
+     -0.5,
+     0.5,
+     -0.5,
+     1,
+     0.5,
+     0,
+     0.5,
+     0.5,
+     0,
+     0,
+     -0.5
+    ],
+    "sans_engagement": [
+     -1,
+     0,
+     1,
+     -1,
+     1,
+     1,
+     -1,
+     0,
+     1,
+     -1,
+     -1,
+     -1,
+     -1,
+     -1,
+     0,
+     -1,
+     -1,
+     -1,
+     -1,
+     -1,
+     -1,
+     -1,
+     -1,
+     -1,
+     -1,
+     -1
+    ]
+   },
+   "bras": {
+    "nul": {
+     "essai": 111381.16,
+     "exploitation": 110136.91,
+     "total": 221518.06,
+     "profit_2e_semestre": 242660.81
+    },
+    "chaine": {
+     "essai": 100345.56,
+     "exploitation": 105437.01,
+     "total": 205782.56,
+     "profit_2e_semestre": 242048.44
+    },
+    "aveugle:-1": {
+     "essai": 110463.65,
+     "exploitation": 108440.73,
+     "total": 218904.39,
+     "profit_2e_semestre": 253594.92
+    },
+    "aveugle:-0.5": {
+     "essai": 120435.57,
+     "exploitation": 118229.23,
+     "total": 238664.79,
+     "profit_2e_semestre": 262307.56
+    },
+    "aveugle:0": {
+     "essai": 104927.79,
+     "exploitation": 111503.14,
+     "total": 216430.94,
+     "profit_2e_semestre": 237265.1
+    },
+    "aveugle:0.5": {
+     "essai": 82873.58,
+     "exploitation": 87983.74,
+     "total": 170857.32,
+     "profit_2e_semestre": 191875.64
+    },
+    "aveugle:1": {
+     "essai": 66402.29,
+     "exploitation": 71145.32,
+     "total": 137547.61,
+     "profit_2e_semestre": 158687.16
+    },
+    "bandit": {
+     "essai": 107176.12,
+     "exploitation": 103570.26,
+     "total": 210746.38,
+     "profit_2e_semestre": 234389.15
+    },
+    "sans_engagement": {
+     "essai": 97322.62,
+     "exploitation": 119110.03,
+     "total": 216432.65,
+     "profit_2e_semestre": 234673.7
+    }
+   },
+   "secs": 8.9
+  },
+  {
+   "graine": 6241,
+   "monde": "t3e",
+   "ecartee": false,
+   "objet": "tebu9",
+   "prix_reference": 274.57,
+   "cout_vrai": 114.217,
+   "cout_au_jour_183": 114.217,
+   "decision_chaine": -1,
+   "joues": {
+    "bandit": [
+     0,
+     0.5,
+     -0.5,
+     1,
+     -1,
+     0,
+     -1,
+     0,
+     -0.5,
+     -1,
+     -1,
+     0,
+     -1,
+     -0.5,
+     -1,
+     -1,
+     -1,
+     -1,
+     -1,
+     -1,
+     -1,
+     -1,
+     -1,
+     -1,
+     -1,
+     -1
+    ],
+    "sans_engagement": [
+     -1,
+     0,
+     1,
+     -1,
+     1,
+     1,
+     -1,
+     0,
+     -1,
+     -1,
+     -1,
+     -1,
+     -1,
+     -1,
+     -1,
+     -1,
+     -1,
+     -1,
+     -1,
+     -1,
+     -1,
+     -1,
+     -1,
+     -1,
+     -1,
+     -1
+    ]
+   },
+   "bras": {
+    "nul": {
+     "essai": 223693.26,
+     "exploitation": 215134.13,
+     "total": 438827.4,
+     "profit_2e_semestre": 690764.94
+    },
+    "chaine": {
+     "essai": 245963.17,
+     "exploitation": 251270.01,
+     "total": 497233.18,
+     "profit_2e_semestre": 753621.64
+    },
+    "aveugle:-1": {
+     "essai": 318647.91,
+     "exploitation": 260127.2,
+     "total": 578775.11,
+     "profit_2e_semestre": 833160.14
+    },
+    "aveugle:-0.5": {
+     "essai": 248012.82,
+     "exploitation": 196255.91,
+     "total": 444268.73,
+     "profit_2e_semestre": 698897.09
+    },
+    "aveugle:0": {
+     "essai": 188254.1,
+     "exploitation": 145920.98,
+     "total": 334175.08,
+     "profit_2e_semestre": 633589.68
+    },
+    "aveugle:0.5": {
+     "essai": 134741.14,
+     "exploitation": 103706.35,
+     "total": 238447.49,
+     "profit_2e_semestre": 488575.26
+    },
+    "aveugle:1": {
+     "essai": 97779.89,
+     "exploitation": 69842.78,
+     "total": 167622.67,
+     "profit_2e_semestre": 418269.27
+    },
+    "bandit": {
+     "essai": 226118.56,
+     "exploitation": 266502.8,
+     "total": 492621.36,
+     "profit_2e_semestre": 746584.61
+    },
+    "sans_engagement": {
+     "essai": 245963.17,
+     "exploitation": 256858.47,
+     "total": 502821.65,
+     "profit_2e_semestre": 753621.64
+    }
+   },
+   "secs": 12.6
+  },
+  {
+   "graine": 6242,
+   "monde": "t3e",
+   "ecartee": false,
+   "objet": "vuqo7",
+   "prix_reference": 143.54,
+   "cout_vrai": 67.771,
+   "cout_au_jour_183": 67.771,
+   "decision_chaine": -1,
+   "joues": {
+    "bandit": [
+     0,
+     0.5,
+     -0.5,
+     1,
+     -1,
+     1,
+     -0.5,
+     -1,
+     -0.5,
+     0,
+     -1,
+     0,
+     0,
+     0.5,
+     0,
+     -1,
+     -0.5,
+     -1,
+     0.5,
+     -1,
+     0,
+     0,
+     -0.5,
+     0.5,
+     0,
+     0
+    ],
+    "sans_engagement": [
+     -1,
+     0,
+     1,
+     -1,
+     1,
+     1,
+     -1,
+     0,
+     0,
+     0,
+     -1,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     -1,
+     0,
+     0,
+     0,
+     -1,
+     0,
+     0,
+     0,
+     0
+    ]
+   },
+   "bras": {
+    "nul": {
+     "essai": 110232.63,
+     "exploitation": 83358.45,
+     "total": 193591.08,
+     "profit_2e_semestre": 334243.27
+    },
+    "chaine": {
+     "essai": 112456.59,
+     "exploitation": 109835.71,
+     "total": 222292.3,
+     "profit_2e_semestre": 362811.69
+    },
+    "aveugle:-1": {
+     "essai": 128800.49,
+     "exploitation": 103529.81,
+     "total": 232330.3,
+     "profit_2e_semestre": 376181.08
+    },
+    "aveugle:-0.5": {
+     "essai": 128087.95,
+     "exploitation": 112023.92,
+     "total": 240111.87,
+     "profit_2e_semestre": 385753.83
+    },
+    "aveugle:0": {
+     "essai": 117593.49,
+     "exploitation": 103273.15,
+     "total": 220866.64,
+     "profit_2e_semestre": 380453.23
+    },
+    "aveugle:0.5": {
+     "essai": 100125.72,
+     "exploitation": 92338.17,
+     "total": 192463.89,
+     "profit_2e_semestre": 332038.29
+    },
+    "aveugle:1": {
+     "essai": 80438.37,
+     "exploitation": 75258.17,
+     "total": 155696.54,
+     "profit_2e_semestre": 295656.03
+    },
+    "bandit": {
+     "essai": 119528.89,
+     "exploitation": 109163.9,
+     "total": 228692.79,
+     "profit_2e_semestre": 386148.39
+    },
+    "sans_engagement": {
+     "essai": 106128.49,
+     "exploitation": 105871.59,
+     "total": 212000.08,
+     "profit_2e_semestre": 354326.06
+    }
+   },
+   "secs": 5.8
+  },
+  {
+   "graine": 6243,
+   "monde": "t3e",
+   "ecartee": false,
+   "objet": "pofe6",
+   "prix_reference": 6.04,
+   "cout_vrai": 4.568,
+   "cout_au_jour_183": 4.568,
+   "decision_chaine": 1,
+   "joues": {
+    "bandit": [
+     0,
+     0.5,
+     -0.5,
+     1,
+     -1,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     1,
+     0,
+     0,
+     0,
+     0,
+     0,
+     1,
+     -0.5,
+     1,
+     -0.5,
+     0,
+     0
+    ],
+    "sans_engagement": [
+     -1,
+     0,
+     1,
+     -1,
+     1,
+     1,
+     -1,
+     0,
+     1,
+     1,
+     0,
+     1,
+     0,
+     0,
+     1,
+     0,
+     1,
+     1,
+     0,
+     1,
+     0,
+     1,
+     0,
+     0,
+     0,
+     0
+    ]
+   },
+   "bras": {
+    "nul": {
+     "essai": 2608.27,
+     "exploitation": 1444.78,
+     "total": 4053.05,
+     "profit_2e_semestre": 11318.87
+    },
+    "chaine": {
+     "essai": 2023.13,
+     "exploitation": 2364.73,
+     "total": 4387.86,
+     "profit_2e_semestre": 11652.47
+    },
+    "aveugle:-1": {
+     "essai": 807.5,
+     "exploitation": 767.94,
+     "total": 1575.43,
+     "profit_2e_semestre": 8839.78
+    },
+    "aveugle:-0.5": {
+     "essai": 2047.56,
+     "exploitation": 1857.03,
+     "total": 3904.6,
+     "profit_2e_semestre": 11168.96
+    },
+    "aveugle:0": {
+     "essai": 2606.92,
+     "exploitation": 2394.95,
+     "total": 5001.87,
+     "profit_2e_semestre": 12267.7
+    },
+    "aveugle:0.5": {
+     "essai": 2731.87,
+     "exploitation": 2513.67,
+     "total": 5245.54,
+     "profit_2e_semestre": 12509.89
+    },
+    "aveugle:1": {
+     "essai": 2633.11,
+     "exploitation": 2364.73,
+     "total": 4997.84,
+     "profit_2e_semestre": 12262.18
+    },
+    "bandit": {
+     "essai": 2432.38,
+     "exploitation": 2272.74,
+     "total": 4705.13,
+     "profit_2e_semestre": 11997.44
+    },
+    "sans_engagement": {
+     "essai": 2034.49,
+     "exploitation": 2387.44,
+     "total": 4421.94,
+     "profit_2e_semestre": 11686.54
+    }
+   },
+   "secs": 9.4
+  },
+  {
+   "graine": 6244,
+   "monde": "t3e",
+   "ecartee": false,
+   "objet": "ririce7",
+   "prix_reference": 216.84,
+   "cout_vrai": 139.575,
+   "cout_au_jour_183": 139.575,
+   "decision_chaine": 0,
+   "joues": {
+    "bandit": [
+     0,
+     0.5,
+     -0.5,
+     1,
+     -1,
+     0,
+     0.5,
+     0,
+     1,
+     0.5,
+     0,
+     0.5,
+     0,
+     1,
+     -0.5,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0.5,
+     0,
+     0,
+     -0.5,
+     0,
+     0
+    ],
+    "sans_engagement": [
+     -1,
+     0,
+     1,
+     -1,
+     1,
+     1,
+     -1,
+     0,
+     0,
+     0,
+     1,
+     0,
+     0,
+     0,
+     0,
+     1,
+     0,
+     0,
+     0,
+     -1,
+     0,
+     0,
+     1,
+     -1,
+     -1,
+     0
+    ]
+   },
+   "bras": {
+    "nul": {
+     "essai": 82283.55,
+     "exploitation": 78002.33,
+     "total": 160285.89,
+     "profit_2e_semestre": 303310.15
+    },
+    "chaine": {
+     "essai": 71999.12,
+     "exploitation": 76724.02,
+     "total": 148723.14,
+     "profit_2e_semestre": 316646.25
+    },
+    "aveugle:-1": {
+     "essai": 51316.84,
+     "exploitation": 50164.42,
+     "total": 101481.26,
+     "profit_2e_semestre": 244378.44
+    },
+    "aveugle:-0.5": {
+     "essai": 65576.1,
+     "exploitation": 65412.98,
+     "total": 130989.08,
+     "profit_2e_semestre": 274353.08
+    },
+    "aveugle:0": {
+     "essai": 82364.36,
+     "exploitation": 73593.55,
+     "total": 155957.91,
+     "profit_2e_semestre": 327088.75
+    },
+    "aveugle:0.5": {
+     "essai": 79403.96,
+     "exploitation": 70147.03,
+     "total": 149550.99,
+     "profit_2e_semestre": 319379.86
+    },
+    "aveugle:1": {
+     "essai": 71259.38,
+     "exploitation": 59163.69,
+     "total": 130423.08,
+     "profit_2e_semestre": 274318.69
+    },
+    "bandit": {
+     "essai": 72421.32,
+     "exploitation": 77548.51,
+     "total": 149969.82,
+     "profit_2e_semestre": 293013.2
+    },
+    "sans_engagement": {
+     "essai": 71322.43,
+     "exploitation": 70008.26,
+     "total": 141330.69,
+     "profit_2e_semestre": 285942.25
+    }
+   },
+   "secs": 8.6
+  },
+  {
+   "graine": 6245,
+   "monde": "t3e",
+   "ecartee": false,
+   "objet": "jimi5",
+   "prix_reference": 210.22,
+   "cout_vrai": 167.297,
+   "cout_au_jour_183": 167.297,
+   "decision_chaine": 1,
+   "joues": {
+    "bandit": [
+     0,
+     0.5,
+     -0.5,
+     1,
+     -1,
+     0.5,
+     0,
+     -0.5,
+     0,
+     0.5,
+     0.5,
+     0,
+     0.5,
+     1,
+     0.5,
+     0.5,
+     0.5,
+     0.5,
+     0.5,
+     0.5,
+     0.5,
+     0,
+     0.5,
+     0.5,
+     0,
+     0.5
+    ],
+    "sans_engagement": [
+     -1,
+     0,
+     1,
+     -1,
+     1,
+     1,
+     -1,
+     0,
+     1,
+     1,
+     1,
+     1,
+     1,
+     1,
+     1,
+     1,
+     1,
+     1,
+     1,
+     1,
+     1,
+     1,
+     1,
+     1,
+     1,
+     1
+    ]
+   },
+   "bras": {
+    "nul": {
+     "essai": 133999.2,
+     "exploitation": 143162.99,
+     "total": 277162.18,
+     "profit_2e_semestre": 145143.91
+    },
+    "chaine": {
+     "essai": 165570.3,
+     "exploitation": 245651.63,
+     "total": 411221.93,
+     "profit_2e_semestre": 349841.83
+    },
+    "aveugle:-1": {
+     "essai": 3202.07,
+     "exploitation": 3587.88,
+     "total": 6789.95,
+     "profit_2e_semestre": -127146.12
+    },
+    "aveugle:-0.5": {
+     "essai": 71611.24,
+     "exploitation": 72938.14,
+     "total": 144549.38,
+     "profit_2e_semestre": 10609.31
+    },
+    "aveugle:0": {
+     "essai": 134005.12,
+     "exploitation": 142503.84,
+     "total": 276508.96,
+     "profit_2e_semestre": 142548.18
+    },
+    "aveugle:0.5": {
+     "essai": 188839.17,
+     "exploitation": 189922.89,
+     "total": 378762.06,
+     "profit_2e_semestre": 250626.29
+    },
+    "aveugle:1": {
+     "essai": 229039.35,
+     "exploitation": 251570.94,
+     "total": 480610.29,
+     "profit_2e_semestre": 347413.28
+    },
+    "bandit": {
+     "essai": 136740.58,
+     "exploitation": 185621.48,
+     "total": 322362.05,
+     "profit_2e_semestre": 192329.78
+    },
+    "sans_engagement": {
+     "essai": 165665.78,
+     "exploitation": 247561.08,
+     "total": 413226.86,
+     "profit_2e_semestre": 349841.83
+    }
+   },
+   "secs": 15.6
+  },
+  {
+   "graine": 6246,
+   "monde": "t3e",
+   "ecartee": false,
+   "objet": "gujiza7",
+   "prix_reference": 85.86,
+   "cout_vrai": 55.478,
+   "cout_au_jour_183": 55.478,
+   "decision_chaine": 0,
+   "joues": {
+    "bandit": [
+     0,
+     0.5,
+     -0.5,
+     1,
+     -1,
+     0,
+     -1,
+     -0.5,
+     0.5,
+     -0.5,
+     -0.5,
+     -0.5,
+     0,
+     0,
+     -0.5,
+     0.5,
+     0,
+     -0.5,
+     0,
+     0.5,
+     0.5,
+     0,
+     -1,
+     0,
+     0,
+     1
+    ],
+    "sans_engagement": [
+     -1,
+     0,
+     1,
+     -1,
+     1,
+     1,
+     -1,
+     0,
+     1,
+     0,
+     1,
+     0,
+     1,
+     1,
+     -1,
+     1,
+     0,
+     0,
+     0,
+     1,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
+    ]
+   },
+   "bras": {
+    "nul": {
+     "essai": 39757.72,
+     "exploitation": 40664.07,
+     "total": 80421.79,
+     "profit_2e_semestre": 369987.04
+    },
+    "chaine": {
+     "essai": 37150.84,
+     "exploitation": 42017.88,
+     "total": 79168.72,
+     "profit_2e_semestre": 369789.92
+    },
+    "aveugle:-1": {
+     "essai": 31470.25,
+     "exploitation": 33689.82,
+     "total": 65160.07,
+     "profit_2e_semestre": 373011.31
+    },
+    "aveugle:-0.5": {
+     "essai": 39978.18,
+     "exploitation": 41406.73,
+     "total": 81384.9,
+     "profit_2e_semestre": 370510.02
+    },
+    "aveugle:0": {
+     "essai": 40741.85,
+     "exploitation": 41227.96,
+     "total": 81969.81,
+     "profit_2e_semestre": 371945.09
+    },
+    "aveugle:0.5": {
+     "essai": 37473.32,
+     "exploitation": 39579.92,
+     "total": 77053.24,
+     "profit_2e_semestre": 366937.43
+    },
+    "aveugle:1": {
+     "essai": 33548.05,
+     "exploitation": 36244.33,
+     "total": 69792.38,
+     "profit_2e_semestre": 359326.5
+    },
+    "bandit": {
+     "essai": 37939.82,
+     "exploitation": 40496.35,
+     "total": 78436.18,
+     "profit_2e_semestre": 385340.96
+    },
+    "sans_engagement": {
+     "essai": 35531.73,
+     "exploitation": 40503.56,
+     "total": 76035.29,
+     "profit_2e_semestre": 366048.87
+    }
+   },
+   "secs": 14.9
+  },
+  {
+   "graine": 6247,
+   "monde": "t3e",
+   "ecartee": false,
+   "objet": "boqa2",
+   "prix_reference": 266.28,
+   "cout_vrai": 125.389,
+   "cout_au_jour_183": 125.389,
+   "decision_chaine": -1,
+   "joues": {
+    "bandit": [
+     0,
+     0.5,
+     -0.5,
+     1,
+     -1,
+     1,
+     0,
+     0,
+     -1,
+     0,
+     -1,
+     -1,
+     0.5,
+     0,
+     -0.5,
+     0.5,
+     -0.5,
+     0,
+     -0.5,
+     0,
+     -1,
+     -0.5,
+     -0.5,
+     -1,
+     -1,
+     -0.5
+    ],
+    "sans_engagement": [
+     -1,
+     0,
+     1,
+     -1,
+     1,
+     1,
+     -1,
+     0,
+     -1,
+     0,
+     0,
+     -1,
+     -1,
+     -1,
+     -1,
+     0,
+     -1,
+     -1,
+     -1,
+     -1,
+     -1,
+     -1,
+     -1,
+     0,
+     -1,
+     -1
+    ]
+   },
+   "bras": {
+    "nul": {
+     "essai": 128747.49,
+     "exploitation": 135548.47,
+     "total": 264295.96,
+     "profit_2e_semestre": 672607.79
+    },
+    "chaine": {
+     "essai": 134690.4,
+     "exploitation": 154230.63,
+     "total": 288921.04,
+     "profit_2e_semestre": 698784.6
+    },
+    "aveugle:-1": {
+     "essai": 152127.49,
+     "exploitation": 159137.97,
+     "total": 311265.46,
+     "profit_2e_semestre": 717596.72
+    },
+    "aveugle:-0.5": {
+     "essai": 141540.21,
+     "exploitation": 145600.33,
+     "total": 287140.53,
+     "profit_2e_semestre": 732693.89
+    },
+    "aveugle:0": {
+     "essai": 126661.05,
+     "exploitation": 135255.4,
+     "total": 261916.45,
+     "profit_2e_semestre": 670061.22
+    },
+    "aveugle:0.5": {
+     "essai": 108906.9,
+     "exploitation": 118556.88,
+     "total": 227463.78,
+     "profit_2e_semestre": 636307.58
+    },
+    "aveugle:1": {
+     "essai": 93150.01,
+     "exploitation": 102278.29,
+     "total": 195428.3,
+     "profit_2e_semestre": 604991.03
+    },
+    "bandit": {
+     "essai": 124786.89,
+     "exploitation": 140896.77,
+     "total": 265683.65,
+     "profit_2e_semestre": 676927.5
+    },
+    "sans_engagement": {
+     "essai": 131479.97,
+     "exploitation": 153150.9,
+     "total": 284630.87,
+     "profit_2e_semestre": 695072.27
+    }
+   },
+   "secs": 11.4
+  },
+  {
+   "graine": 6248,
+   "monde": "t3e",
+   "ecartee": false,
+   "objet": "huzuhu8",
+   "prix_reference": 100.8,
+   "cout_vrai": 61.105,
+   "cout_au_jour_183": 61.105,
+   "decision_chaine": 1,
+   "joues": {
+    "bandit": [
+     0,
+     0.5,
+     -0.5,
+     1,
+     -1,
+     0,
+     -1,
+     1,
+     0,
+     0.5,
+     0,
+     0,
+     -1,
+     0.5,
+     0,
+     -0.5,
+     0.5,
+     -0.5,
+     0.5,
+     0,
+     1,
+     0.5,
+     1,
+     0,
+     1,
+     0
+    ],
+    "sans_engagement": [
+     -1,
+     0,
+     1,
+     -1,
+     1,
+     1,
+     -1,
+     0,
+     0,
+     1,
+     -1,
+     1,
+     1,
+     1,
+     0,
+     1,
+     1,
+     -1,
+     1,
+     1,
+     1,
+     0,
+     1,
+     1,
+     1,
+     -1
+    ]
+   },
+   "bras": {
+    "nul": {
+     "essai": 43995.15,
+     "exploitation": 32821.69,
+     "total": 76816.84,
+     "profit_2e_semestre": 265677.76
+    },
+    "chaine": {
+     "essai": 45862.27,
+     "exploitation": 39513.21,
+     "total": 85375.48,
+     "profit_2e_semestre": 273276.24
+    },
+    "aveugle:-1": {
+     "essai": 28618.14,
+     "exploitation": 22191.26,
+     "total": 50809.4,
+     "profit_2e_semestre": 238744.2
+    },
+    "aveugle:-0.5": {
+     "essai": 36637.81,
+     "exploitation": 28153.87,
+     "total": 64791.68,
+     "profit_2e_semestre": 252750.41
+    },
+    "aveugle:0": {
+     "essai": 44100.66,
+     "exploitation": 32192.29,
+     "total": 76292.95,
+     "profit_2e_semestre": 265155.3
+    },
+    "aveugle:0.5": {
+     "essai": 48344.11,
+     "exploitation": 36477.36,
+     "total": 84821.46,
+     "profit_2e_semestre": 273122.06
+    },
+    "aveugle:1": {
+     "essai": 52629.49,
+     "exploitation": 39196.32,
+     "total": 91825.81,
+     "profit_2e_semestre": 280123.6
+    },
+    "bandit": {
+     "essai": 41297.62,
+     "exploitation": 35705.07,
+     "total": 77002.7,
+     "profit_2e_semestre": 266140.85
+    },
+    "sans_engagement": {
+     "essai": 42310.76,
+     "exploitation": 36352.1,
+     "total": 78662.86,
+     "profit_2e_semestre": 267101.15
+    }
+   },
+   "secs": 9.1
+  },
+  {
+   "graine": 6249,
+   "monde": "t3e",
+   "ecartee": false,
+   "objet": "nida2",
+   "prix_reference": 91.94,
+   "cout_vrai": 43.192,
+   "cout_au_jour_183": 43.192,
+   "decision_chaine": -1,
+   "joues": {
+    "bandit": [
+     0,
+     0.5,
+     -0.5,
+     1,
+     -1,
+     0,
+     -1,
+     -1,
+     -0.5,
+     -0.5,
+     -1,
+     -1,
+     -1,
+     -0.5,
+     -1,
+     0,
+     -0.5,
+     -0.5,
+     -1,
+     -1,
+     -1,
+     -1,
+     -1,
+     -1,
+     1,
+     -1
+    ],
+    "sans_engagement": [
+     -1,
+     0,
+     1,
+     -1,
+     1,
+     1,
+     -1,
+     0,
+     -1,
+     -1,
+     -1,
+     -1,
+     -1,
+     -1,
+     0,
+     -1,
+     -1,
+     -1,
+     -1,
+     -1,
+     -1,
+     -1,
+     -1,
+     -1,
+     -1,
+     -1
+    ]
+   },
+   "bras": {
+    "nul": {
+     "essai": 58759.14,
+     "exploitation": 61975.53,
+     "total": 120734.67,
+     "profit_2e_semestre": 674093.42
+    },
+    "chaine": {
+     "essai": 58381.57,
+     "exploitation": 74619.41,
+     "total": 133000.99,
+     "profit_2e_semestre": 706311.63
+    },
+    "aveugle:-1": {
+     "essai": 74497.98,
+     "exploitation": 78990.93,
+     "total": 153488.92,
+     "profit_2e_semestre": 725352.19
+    },
+    "aveugle:-0.5": {
+     "essai": 58868.97,
+     "exploitation": 62850.82,
+     "total": 121719.79,
+     "profit_2e_semestre": 675018.08
+    },
+    "aveugle:0": {
+     "essai": 47480.33,
+     "exploitation": 47772.82,
+     "total": 95253.15,
+     "profit_2e_semestre": 647781.24
+    },
+    "aveugle:0.5": {
+     "essai": 35281.88,
+     "exploitation": 33672.74,
+     "total": 68954.63,
+     "profit_2e_semestre": 621563.01
+    },
+    "aveugle:1": {
+     "essai": 25466.91,
+     "exploitation": 23529.99,
+     "total": 48996.9,
+     "profit_2e_semestre": 601691.74
+    },
+    "bandit": {
+     "essai": 58764.9,
+     "exploitation": 69186.69,
+     "total": 127951.59,
+     "profit_2e_semestre": 699864.36
+    },
+    "sans_engagement": {
+     "essai": 58381.57,
+     "exploitation": 76968.36,
+     "total": 135349.93,
+     "profit_2e_semestre": 706940.35
+    }
+   },
+   "secs": 13.5
+  },
+  {
+   "graine": 6250,
+   "monde": "t3e",
+   "ecartee": false,
+   "objet": "dikuje1",
+   "prix_reference": 4.97,
+   "cout_vrai": 2.137,
+   "cout_au_jour_183": 2.137,
+   "decision_chaine": -1,
+   "joues": {
+    "bandit": [
+     0,
+     0.5,
+     -0.5,
+     1,
+     -1,
+     -1,
+     -1,
+     0,
+     -1,
+     -1,
+     0,
+     -1,
+     -1,
+     -1,
+     -1,
+     -1,
+     -1,
+     -1,
+     -1,
+     -1,
+     -1,
+     -1,
+     -1,
+     -1,
+     -1,
+     -1
+    ],
+    "sans_engagement": [
+     -1,
+     0,
+     1,
+     -1,
+     1,
+     1,
+     -1,
+     0,
+     -1,
+     -1,
+     -1,
+     -1,
+     -1,
+     -1,
+     -1,
+     -1,
+     -1,
+     -1,
+     -1,
+     -1,
+     -1,
+     -1,
+     -1,
+     -1,
+     -1,
+     -1
+    ]
+   },
+   "bras": {
+    "nul": {
+     "essai": 5093.72,
+     "exploitation": 5120.03,
+     "total": 10213.75,
+     "profit_2e_semestre": 32079.36
+    },
+    "chaine": {
+     "essai": 5299.23,
+     "exploitation": 6128.68,
+     "total": 11427.91,
+     "profit_2e_semestre": 34380.73
+    },
+    "aveugle:-1": {
+     "essai": 6578.29,
+     "exploitation": 6182.11,
+     "total": 12760.4,
+     "profit_2e_semestre": 35734.31
+    },
+    "aveugle:-0.5": {
+     "essai": 5735.39,
+     "exploitation": 5672.95,
+     "total": 11408.34,
+     "profit_2e_semestre": 33282.98
+    },
+    "aveugle:0": {
+     "essai": 4750.37,
+     "exploitation": 4537.92,
+     "total": 9288.28,
+     "profit_2e_semestre": 31154.19
+    },
+    "aveugle:0.5": {
+     "essai": 3634.86,
+     "exploitation": 3419.23,
+     "total": 7054.1,
+     "profit_2e_semestre": 28924.02
+    },
+    "aveugle:1": {
+     "essai": 2732.75,
+     "exploitation": 2586.14,
+     "total": 5318.89,
+     "profit_2e_semestre": 27186.04
+    },
+    "bandit": {
+     "essai": 5395.09,
+     "exploitation": 6250.29,
+     "total": 11645.38,
+     "profit_2e_semestre": 33510.3
+    },
+    "sans_engagement": {
+     "essai": 5301.07,
+     "exploitation": 6126.83,
+     "total": 11427.91,
+     "profit_2e_semestre": 34380.73
+    }
+   },
+   "secs": 10.3
+  },
+  {
+   "graine": 6251,
+   "monde": "t3e",
+   "ecartee": false,
+   "objet": "zaqira0",
+   "prix_reference": 184.51,
+   "cout_vrai": 130.619,
+   "cout_au_jour_183": 130.619,
+   "decision_chaine": 0,
+   "joues": {
+    "bandit": [
+     0,
+     0.5,
+     -0.5,
+     1,
+     -1,
+     -0.5,
+     1,
+     -0.5,
+     -0.5,
+     0,
+     -0.5,
+     -0.5,
+     -0.5,
+     -0.5,
+     0,
+     0,
+     0,
+     0,
+     -1,
+     0,
+     -0.5,
+     0.5,
+     0,
+     0,
+     -0.5,
+     -0.5
+    ],
+    "sans_engagement": [
+     -1,
+     0,
+     1,
+     -1,
+     1,
+     1,
+     -1,
+     0,
+     0,
+     1,
+     0,
+     -1,
+     0,
+     -1,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
+    ]
+   },
+   "bras": {
+    "nul": {
+     "essai": 64180.57,
+     "exploitation": 70197.93,
+     "total": 134378.5,
+     "profit_2e_semestre": 308957.87
+    },
+    "chaine": {
+     "essai": 57753.64,
+     "exploitation": 70489.81,
+     "total": 128243.44,
+     "profit_2e_semestre": 302520.21
+    },
+    "aveugle:-1": {
+     "essai": 42801.06,
+     "exploitation": 45774.54,
+     "total": 88575.6,
+     "profit_2e_semestre": 262616.71
+    },
+    "aveugle:-0.5": {
+     "essai": 64693.23,
+     "exploitation": 66819.7,
+     "total": 131512.93,
+     "profit_2e_semestre": 303968.19
+    },
+    "aveugle:0": {
+     "essai": 64130.64,
+     "exploitation": 70489.81,
+     "total": 134620.45,
+     "profit_2e_semestre": 308934.1
+    },
+    "aveugle:0.5": {
+     "essai": 52515.88,
+     "exploitation": 60007.33,
+     "total": 112523.21,
+     "profit_2e_semestre": 286443.42
+    },
+    "aveugle:1": {
+     "essai": 42509.05,
+     "exploitation": 51872.22,
+     "total": 94381.27,
+     "profit_2e_semestre": 266324.17
+    },
+    "bandit": {
+     "essai": 62534.37,
+     "exploitation": 69380.82,
+     "total": 131915.19,
+     "profit_2e_semestre": 305953.18
+    },
+    "sans_engagement": {
+     "essai": 53152.75,
+     "exploitation": 71669.26,
+     "total": 124822.01,
+     "profit_2e_semestre": 346080.41
+    }
+   },
+   "secs": 12.6
+  },
+  {
+   "graine": 6252,
+   "monde": "t3e",
+   "ecartee": false,
+   "objet": "mulepi8",
+   "prix_reference": 70.34,
+   "cout_vrai": 32.376,
+   "cout_au_jour_183": 32.376,
+   "decision_chaine": 1,
+   "joues": {
+    "bandit": [
+     0,
+     0.5,
+     -0.5,
+     1,
+     -1,
+     1,
+     0,
+     1,
+     1,
+     1,
+     -1,
+     -0.5,
+     1,
+     0,
+     1,
+     0.5,
+     0,
+     1,
+     -0.5,
+     1,
+     1,
+     1,
+     1,
+     1,
+     1,
+     1
+    ],
+    "sans_engagement": [
+     -1,
+     0,
+     1,
+     -1,
+     1,
+     1,
+     -1,
+     0,
+     1,
+     1,
+     1,
+     1,
+     1,
+     1,
+     1,
+     1,
+     0,
+     1,
+     1,
+     1,
+     1,
+     1,
+     1,
+     0,
+     1,
+     1
+    ]
+   },
+   "bras": {
+    "nul": {
+     "essai": 53336.96,
+     "exploitation": 53028.66,
+     "total": 106365.63,
+     "profit_2e_semestre": 332640.47
+    },
+    "chaine": {
+     "essai": 59527.6,
+     "exploitation": 64775.53,
+     "total": 124303.13,
+     "profit_2e_semestre": 343797.21
+    },
+    "aveugle:-1": {
+     "essai": 39639.53,
+     "exploitation": 42052.78,
+     "total": 81692.31,
+     "profit_2e_semestre": 306376.24
+    },
+    "aveugle:-0.5": {
+     "essai": 48182.06,
+     "exploitation": 44731.76,
+     "total": 92913.83,
+     "profit_2e_semestre": 312515.68
+    },
+    "aveugle:0": {
+     "essai": 54363.91,
+     "exploitation": 52010.17,
+     "total": 106374.08,
+     "profit_2e_semestre": 325062.44
+    },
+    "aveugle:0.5": {
+     "essai": 60790.41,
+     "exploitation": 54961.19,
+     "total": 115751.59,
+     "profit_2e_semestre": 342149.62
+    },
+    "aveugle:1": {
+     "essai": 65219.96,
+     "exploitation": 63553.35,
+     "total": 128773.31,
+     "profit_2e_semestre": 353246.55
+    },
+    "bandit": {
+     "essai": 54041.05,
+     "exploitation": 56922.49,
+     "total": 110963.54,
+     "profit_2e_semestre": 332331.14
+    },
+    "sans_engagement": {
+     "essai": 59527.6,
+     "exploitation": 62717.74,
+     "total": 122245.34,
+     "profit_2e_semestre": 340864.25
+    }
+   },
+   "secs": 5
+  },
+  {
+   "graine": 6253,
+   "monde": "t3e",
+   "ecartee": false,
+   "objet": "kuzahi4",
+   "prix_reference": 21.77,
+   "cout_vrai": 11.293,
+   "cout_au_jour_183": 11.293,
+   "decision_chaine": -1,
+   "joues": {
+    "bandit": [
+     0,
+     0.5,
+     -0.5,
+     1,
+     -1,
+     -1,
+     -1,
+     -0.5,
+     -0.5,
+     -1,
+     -1,
+     -1,
+     -0.5,
+     -1,
+     -0.5,
+     -0.5,
+     -0.5,
+     -1,
+     -0.5,
+     -0.5,
+     -0.5,
+     -0.5,
+     -0.5,
+     -0.5,
+     -0.5,
+     -0.5
+    ],
+    "sans_engagement": [
+     -1,
+     0,
+     1,
+     -1,
+     1,
+     1,
+     -1,
+     0,
+     -1,
+     -1,
+     0,
+     0,
+     -1,
+     0,
+     -1,
+     -1,
+     -1,
+     -1,
+     -1,
+     0,
+     -1,
+     -1,
+     -1,
+     0,
+     -1,
+     -1
+    ]
+   },
+   "bras": {
+    "nul": {
+     "essai": 22877.98,
+     "exploitation": 19935.5,
+     "total": 42813.48,
+     "profit_2e_semestre": 516352.12
+    },
+    "chaine": {
+     "essai": 26286.42,
+     "exploitation": 30047.56,
+     "total": 56333.98,
+     "profit_2e_semestre": 532867.43
+    },
+    "aveugle:-1": {
+     "essai": 27596.7,
+     "exploitation": 30041.43,
+     "total": 57638.13,
+     "profit_2e_semestre": 534177.69
+    },
+    "aveugle:-0.5": {
+     "essai": 28031.28,
+     "exploitation": 30149.17,
+     "total": 58180.45,
+     "profit_2e_semestre": 534680.17
+    },
+    "aveugle:0": {
+     "essai": 24925.15,
+     "exploitation": 28623.58,
+     "total": 53548.73,
+     "profit_2e_semestre": 526689.03
+    },
+    "aveugle:0.5": {
+     "essai": 21227.72,
+     "exploitation": 23798.01,
+     "total": 45025.73,
+     "profit_2e_semestre": 518520.88
+    },
+    "aveugle:1": {
+     "essai": 16092.24,
+     "exploitation": 17859.05,
+     "total": 33951.29,
+     "profit_2e_semestre": 507399.46
+    },
+    "bandit": {
+     "essai": 27347.17,
+     "exploitation": 30204.75,
+     "total": 57551.92,
+     "profit_2e_semestre": 534075.75
+    },
+    "sans_engagement": {
+     "essai": 25309.89,
+     "exploitation": 28941.43,
+     "total": 54251.32,
+     "profit_2e_semestre": 530090.65
+    }
+   },
+   "secs": 13
+  },
+  {
+   "graine": 6254,
+   "monde": "t3e",
+   "ecartee": false,
+   "objet": "bewe9",
+   "prix_reference": 8.9,
+   "cout_vrai": 5.109,
+   "cout_au_jour_183": 5.109,
+   "decision_chaine": -1,
+   "joues": {
+    "bandit": [
+     0,
+     0.5,
+     -0.5,
+     1,
+     -1,
+     0.5,
+     0.5,
+     -1,
+     -1,
+     0,
+     -1,
+     -1,
+     -1,
+     -1,
+     -1,
+     -0.5,
+     -1,
+     -0.5,
+     -1,
+     -0.5,
+     -0.5,
+     -0.5,
+     -1,
+     -0.5,
+     -1,
+     -0.5
+    ],
+    "sans_engagement": [
+     -1,
+     0,
+     1,
+     -1,
+     1,
+     1,
+     -1,
+     0,
+     -1,
+     -1,
+     -1,
+     -1,
+     -1,
+     -1,
+     -1,
+     0,
+     -1,
+     -1,
+     -1,
+     0,
+     -1,
+     -1,
+     -1,
+     -1,
+     -1,
+     -1
+    ]
+   },
+   "bras": {
+    "nul": {
+     "essai": 4028.07,
+     "exploitation": 2768.62,
+     "total": 6796.69,
+     "profit_2e_semestre": 19083.57
+    },
+    "chaine": {
+     "essai": 4414.16,
+     "exploitation": 4191.83,
+     "total": 8605.99,
+     "profit_2e_semestre": 20919.59
+    },
+    "aveugle:-1": {
+     "essai": 4905.7,
+     "exploitation": 4213.79,
+     "total": 9119.5,
+     "profit_2e_semestre": 21411.13
+    },
+    "aveugle:-0.5": {
+     "essai": 4587.83,
+     "exploitation": 3903.51,
+     "total": 8491.34,
+     "profit_2e_semestre": 20812.84
+    },
+    "aveugle:0": {
+     "essai": 3969.55,
+     "exploitation": 3389.47,
+     "total": 7359.03,
+     "profit_2e_semestre": 19640.6
+    },
+    "aveugle:0.5": {
+     "essai": 3393.79,
+     "exploitation": 2696.64,
+     "total": 6090.43,
+     "profit_2e_semestre": 18444.63
+    },
+    "aveugle:1": {
+     "essai": 2582.09,
+     "exploitation": 2155.65,
+     "total": 4737.73,
+     "profit_2e_semestre": 17249.2
+    },
+    "bandit": {
+     "essai": 3936.9,
+     "exploitation": 3961.98,
+     "total": 7898.88,
+     "profit_2e_semestre": 20305.17
+    },
+    "sans_engagement": {
+     "essai": 4414.16,
+     "exploitation": 4070.57,
+     "total": 8484.73,
+     "profit_2e_semestre": 20792.46
+    }
+   },
+   "secs": 6.1
+  },
+  {
+   "graine": 6255,
+   "monde": "t3e",
+   "ecartee": false,
+   "objet": "kicino3",
+   "prix_reference": 8.94,
+   "cout_vrai": 7.175,
+   "cout_au_jour_183": 7.175,
+   "decision_chaine": 1,
+   "joues": {
+    "bandit": [
+     0,
+     0.5,
+     -0.5,
+     1,
+     -1,
+     0.5,
+     0,
+     0,
+     0,
+     0.5,
+     0,
+     1,
+     0.5,
+     0.5,
+     0,
+     0.5,
+     0.5,
+     0.5,
+     1,
+     0.5,
+     1,
+     0.5,
+     0.5,
+     1,
+     0,
+     0.5
+    ],
+    "sans_engagement": [
+     -1,
+     0,
+     1,
+     -1,
+     1,
+     1,
+     -1,
+     0,
+     0,
+     1,
+     1,
+     1,
+     1,
+     1,
+     1,
+     1,
+     1,
+     1,
+     1,
+     1,
+     1,
+     1,
+     1,
+     1,
+     1,
+     1
+    ]
+   },
+   "bras": {
+    "nul": {
+     "essai": 3069.74,
+     "exploitation": 3685.73,
+     "total": 6755.47,
+     "profit_2e_semestre": 49038.56
+    },
+    "chaine": {
+     "essai": 2929.92,
+     "exploitation": 4048.67,
+     "total": 6978.59,
+     "profit_2e_semestre": 49360.51
+    },
+    "aveugle:-1": {
+     "essai": -67.16,
+     "exploitation": -63.68,
+     "total": -130.84,
+     "profit_2e_semestre": 42054.58
+    },
+    "aveugle:-0.5": {
+     "essai": 1976.61,
+     "exploitation": 1848.8,
+     "total": 3825.41,
+     "profit_2e_semestre": 46064.58
+    },
+    "aveugle:0": {
+     "essai": 3432.18,
+     "exploitation": 3287.49,
+     "total": 6719.67,
+     "profit_2e_semestre": 49032.9
+    },
+    "aveugle:0.5": {
+     "essai": 4217.16,
+     "exploitation": 4146.54,
+     "total": 8363.7,
+     "profit_2e_semestre": 50646.6
+    },
+    "aveugle:1": {
+     "essai": 4256.91,
+     "exploitation": 4182.99,
+     "total": 8439.91,
+     "profit_2e_semestre": 52356.2
+    },
+    "bandit": {
+     "essai": 3254.68,
+     "exploitation": 4079.24,
+     "total": 7333.92,
+     "profit_2e_semestre": 51265.87
+    },
+    "sans_engagement": {
+     "essai": 2916.12,
+     "exploitation": 4115.08,
+     "total": 7031.2,
+     "profit_2e_semestre": 51011.42
+    }
+   },
+   "secs": 10.1
+  },
+  {
+   "graine": 6256,
+   "monde": "t3e",
+   "ecartee": false,
+   "objet": "vilite1",
+   "prix_reference": 300.05,
+   "cout_vrai": 178.577,
+   "cout_au_jour_183": 178.577,
+   "decision_chaine": 0,
+   "joues": {
+    "bandit": [
+     0,
+     0.5,
+     -0.5,
+     1,
+     -1,
+     0,
+     0,
+     0,
+     1,
+     0.5,
+     1,
+     0,
+     1,
+     0,
+     1,
+     1,
+     1,
+     0,
+     1,
+     1,
+     0.5,
+     1,
+     1,
+     1,
+     1,
+     0.5
+    ],
+    "sans_engagement": [
+     -1,
+     0,
+     1,
+     -1,
+     1,
+     1,
+     -1,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     1,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
+    ]
+   },
+   "bras": {
+    "nul": {
+     "essai": 97628.68,
+     "exploitation": 99665.96,
+     "total": 197294.64,
+     "profit_2e_semestre": 324168.61
+    },
+    "chaine": {
+     "essai": 96402.94,
+     "exploitation": 105317.16,
+     "total": 201720.1,
+     "profit_2e_semestre": 330288.23
+    },
+    "aveugle:-1": {
+     "essai": 73208.34,
+     "exploitation": 80086.39,
+     "total": 153294.73,
+     "profit_2e_semestre": 280106.59
+    },
+    "aveugle:-0.5": {
+     "essai": 87907.43,
+     "exploitation": 95629.63,
+     "total": 183537.06,
+     "profit_2e_semestre": 310179.47
+    },
+    "aveugle:0": {
+     "essai": 98150.25,
+     "exploitation": 104102.43,
+     "total": 202252.68,
+     "profit_2e_semestre": 332095.54
+    },
+    "aveugle:0.5": {
+     "essai": 102608.07,
+     "exploitation": 110923.41,
+     "total": 213531.48,
+     "profit_2e_semestre": 342032.93
+    },
+    "aveugle:1": {
+     "essai": 106493.83,
+     "exploitation": 116121.5,
+     "total": 222615.33,
+     "profit_2e_semestre": 349628.5
+    },
+    "bandit": {
+     "essai": 100687.54,
+     "exploitation": 112022.83,
+     "total": 212710.36,
+     "profit_2e_semestre": 339821.46
+    },
+    "sans_engagement": {
+     "essai": 96402.94,
+     "exploitation": 108610.32,
+     "total": 205013.25,
+     "profit_2e_semestre": 332002.24
+    }
+   },
+   "secs": 7.6
+  },
+  {
+   "graine": 6257,
+   "monde": "t3e",
+   "ecartee": false,
+   "objet": "lahi0",
+   "prix_reference": 33.09,
+   "cout_vrai": 17.657,
+   "cout_au_jour_183": 17.657,
+   "decision_chaine": 0,
+   "joues": {
+    "bandit": [
+     0,
+     0.5,
+     -0.5,
+     1,
+     -1,
+     0,
+     0.5,
+     0,
+     0,
+     0,
+     0,
+     -0.5,
+     0,
+     -0.5,
+     0.5,
+     0,
+     -0.5,
+     0,
+     0.5,
+     -0.5,
+     0.5,
+     -0.5,
+     0.5,
+     -0.5,
+     0.5,
+     0
+    ],
+    "sans_engagement": [
+     -1,
+     0,
+     1,
+     -1,
+     1,
+     1,
+     -1,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
+    ]
+   },
+   "bras": {
+    "nul": {
+     "essai": 26654.77,
+     "exploitation": 30367.65,
+     "total": 57022.42,
+     "profit_2e_semestre": 267994.1
+    },
+    "chaine": {
+     "essai": 25337.22,
+     "exploitation": 33721.48,
+     "total": 59058.71,
+     "profit_2e_semestre": 263680.03
+    },
+    "aveugle:-1": {
+     "essai": 22147.51,
+     "exploitation": 27215.08,
+     "total": 49362.59,
+     "profit_2e_semestre": 253903.93
+    },
+    "aveugle:-0.5": {
+     "essai": 24865.69,
+     "exploitation": 32151.02,
+     "total": 57016.71,
+     "profit_2e_semestre": 267546.31
+    },
+    "aveugle:0": {
+     "essai": 26699.39,
+     "exploitation": 33844.95,
+     "total": 60544.34,
+     "profit_2e_semestre": 271054.68
+    },
+    "aveugle:0.5": {
+     "essai": 26828.98,
+     "exploitation": 33947.27,
+     "total": 60776.25,
+     "profit_2e_semestre": 265299.64
+    },
+    "aveugle:1": {
+     "essai": 26144.6,
+     "exploitation": 33777.02,
+     "total": 59921.62,
+     "profit_2e_semestre": 264408.53
+    },
+    "bandit": {
+     "essai": 26510.16,
+     "exploitation": 32321.93,
+     "total": 58832.08,
+     "profit_2e_semestre": 269693.08
+    },
+    "sans_engagement": {
+     "essai": 25337.22,
+     "exploitation": 33443.69,
+     "total": 58780.91,
+     "profit_2e_semestre": 263680.03
+    }
+   },
+   "secs": 7.6
+  },
+  {
+   "graine": 6258,
+   "monde": "t3e",
+   "ecartee": false,
+   "objet": "jecexo4",
+   "prix_reference": 9.42,
+   "cout_vrai": 7.457,
+   "cout_au_jour_183": 7.457,
+   "decision_chaine": 1,
+   "joues": {
+    "bandit": [
+     0,
+     0.5,
+     -0.5,
+     1,
+     -1,
+     0.5,
+     0,
+     0.5,
+     -0.5,
+     0,
+     -0.5,
+     0.5,
+     0,
+     -0.5,
+     0,
+     0,
+     0,
+     0.5,
+     0,
+     0.5,
+     0,
+     0,
+     0.5,
+     1,
+     0,
+     0.5
+    ],
+    "sans_engagement": [
+     -1,
+     0,
+     1,
+     -1,
+     1,
+     1,
+     -1,
+     0,
+     1,
+     0,
+     1,
+     1,
+     0,
+     0,
+     1,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     1,
+     0,
+     0,
+     0,
+     0
+    ]
+   },
+   "bras": {
+    "nul": {
+     "essai": 3799.91,
+     "exploitation": 3132.81,
+     "total": 6932.72,
+     "profit_2e_semestre": 22410.3
+    },
+    "chaine": {
+     "essai": 2864.71,
+     "exploitation": 2904.82,
+     "total": 5769.53,
+     "profit_2e_semestre": 19285.28
+    },
+    "aveugle:-1": {
+     "essai": 277.38,
+     "exploitation": 272.51,
+     "total": 549.89,
+     "profit_2e_semestre": 13779.05
+    },
+    "aveugle:-0.5": {
+     "essai": 2548.35,
+     "exploitation": 2196.25,
+     "total": 4744.6,
+     "profit_2e_semestre": 17962.2
+    },
+    "aveugle:0": {
+     "essai": 3797.73,
+     "exploitation": 3316.88,
+     "total": 7114.62,
+     "profit_2e_semestre": 20285.33
+    },
+    "aveugle:0.5": {
+     "essai": 3724.06,
+     "exploitation": 3054.22,
+     "total": 6778.27,
+     "profit_2e_semestre": 22405.27
+    },
+    "aveugle:1": {
+     "essai": 3440.83,
+     "exploitation": 2917.79,
+     "total": 6358.62,
+     "profit_2e_semestre": 19789.86
+    },
+    "bandit": {
+     "essai": 3061.96,
+     "exploitation": 2977.49,
+     "total": 6039.45,
+     "profit_2e_semestre": 19399.26
+    },
+    "sans_engagement": {
+     "essai": 2843.14,
+     "exploitation": 3099.67,
+     "total": 5942.81,
+     "profit_2e_semestre": 19220.77
+    }
+   },
+   "secs": 7.2
+  },
+  {
+   "graine": 6259,
+   "monde": "t3e",
+   "ecartee": false,
+   "objet": "buzufu6",
+   "prix_reference": 120.95,
+   "cout_vrai": 92.687,
+   "cout_au_jour_183": 92.687,
+   "decision_chaine": 0,
+   "joues": {
+    "bandit": [
+     0,
+     0.5,
+     -0.5,
+     1,
+     -1,
+     0.5,
+     0,
+     0.5,
+     0.5,
+     0.5,
+     1,
+     -0.5,
+     0,
+     0.5,
+     1,
+     0,
+     1,
+     0.5,
+     0.5,
+     1,
+     0,
+     0.5,
+     0.5,
+     1,
+     0.5,
+     1
+    ],
+    "sans_engagement": [
+     -1,
+     0,
+     1,
+     -1,
+     1,
+     1,
+     -1,
+     0,
+     1,
+     0,
+     0,
+     1,
+     0,
+     1,
+     0,
+     0,
+     0,
+     1,
+     0,
+     0,
+     0,
+     1,
+     0,
+     1,
+     0,
+     0
+    ]
+   },
+   "bras": {
+    "nul": {
+     "essai": 38115.9,
+     "exploitation": 34228.4,
+     "total": 72344.3,
+     "profit_2e_semestre": 156899.66
+    },
+    "chaine": {
+     "essai": 34960.37,
+     "exploitation": 32191.9,
+     "total": 67152.27,
+     "profit_2e_semestre": 126822.93
+    },
+    "aveugle:-1": {
+     "essai": 7991.81,
+     "exploitation": 7401.18,
+     "total": 15392.99,
+     "profit_2e_semestre": 70569.39
+    },
+    "aveugle:-0.5": {
+     "essai": 22403.31,
+     "exploitation": 21597.66,
+     "total": 44000.97,
+     "profit_2e_semestre": 103676.13
+    },
+    "aveugle:0": {
+     "essai": 35837.86,
+     "exploitation": 32078.84,
+     "total": 67916.7,
+     "profit_2e_semestre": 127468.18
+    },
+    "aveugle:0.5": {
+     "essai": 42670.93,
+     "exploitation": 38374.05,
+     "total": 81044.98,
+     "profit_2e_semestre": 165844.44
+    },
+    "aveugle:1": {
+     "essai": 46276.11,
+     "exploitation": 38787.69,
+     "total": 85063.8,
+     "profit_2e_semestre": 146496.17
+    },
+    "bandit": {
+     "essai": 34240.87,
+     "exploitation": 36985.26,
+     "total": 71226.13,
+     "profit_2e_semestre": 131608.08
+    },
+    "sans_engagement": {
+     "essai": 35859.28,
+     "exploitation": 33257.65,
+     "total": 69116.93,
+     "profit_2e_semestre": 153763.19
+    }
+   },
+   "secs": 7
+  },
+  {
+   "graine": 6260,
+   "monde": "t3e",
+   "ecartee": false,
+   "objet": "xosixo2",
+   "prix_reference": 16.58,
+   "cout_vrai": 10.693,
+   "cout_au_jour_183": 10.693,
+   "decision_chaine": 1,
+   "joues": {
+    "bandit": [
+     0,
+     0.5,
+     -0.5,
+     1,
+     -1,
+     0.5,
+     0,
+     0.5,
+     0,
+     0,
+     0.5,
+     0,
+     0.5,
+     0,
+     0,
+     0.5,
+     0,
+     0.5,
+     0.5,
+     0.5,
+     0.5,
+     0.5,
+     1,
+     -1,
+     0.5,
+     0
+    ],
+    "sans_engagement": [
+     -1,
+     0,
+     1,
+     -1,
+     1,
+     1,
+     -1,
+     0,
+     1,
+     -1,
+     1,
+     -1,
+     1,
+     1,
+     1,
+     1,
+     1,
+     1,
+     1,
+     1,
+     1,
+     1,
+     1,
+     1,
+     1,
+     1
+    ]
+   },
+   "bras": {
+    "nul": {
+     "essai": 17253.3,
+     "exploitation": 14633.44,
+     "total": 31886.75,
+     "profit_2e_semestre": 217880.34
+    },
+    "chaine": {
+     "essai": 14501.77,
+     "exploitation": 14474.06,
+     "total": 28975.83,
+     "profit_2e_semestre": 214968.43
+    },
+    "aveugle:-1": {
+     "essai": 8757.7,
+     "exploitation": 7864.22,
+     "total": 16621.92,
+     "profit_2e_semestre": 201369.27
+    },
+    "aveugle:-0.5": {
+     "essai": 12863.45,
+     "exploitation": 10736.78,
+     "total": 23600.23,
+     "profit_2e_semestre": 214946.24
+    },
+    "aveugle:0": {
+     "essai": 16208.26,
+     "exploitation": 12563.9,
+     "total": 28772.16,
+     "profit_2e_semestre": 214202.66
+    },
+    "aveugle:0.5": {
+     "essai": 16848.56,
+     "exploitation": 14125.48,
+     "total": 30974.04,
+     "profit_2e_semestre": 216824.12
+    },
+    "aveugle:1": {
+     "essai": 17796.47,
+     "exploitation": 14925.75,
+     "total": 32722.21,
+     "profit_2e_semestre": 224340.29
+    },
+    "bandit": {
+     "essai": 15722.95,
+     "exploitation": 14449.36,
+     "total": 30172.31,
+     "profit_2e_semestre": 215257.05
+    },
+    "sans_engagement": {
+     "essai": 13789.19,
+     "exploitation": 14604.55,
+     "total": 28393.74,
+     "profit_2e_semestre": 214255.86
+    }
+   },
+   "secs": 7.2
+  },
+  {
+   "graine": 6261,
+   "monde": "t3e",
+   "ecartee": false,
+   "objet": "xexili8",
+   "prix_reference": 269.3,
+   "cout_vrai": 121.665,
+   "cout_au_jour_183": 121.665,
+   "decision_chaine": 0,
+   "joues": {
+    "bandit": [
+     0,
+     0.5,
+     -0.5,
+     1,
+     -1,
+     -1,
+     0,
+     -1,
+     -1,
+     0.5,
+     -1,
+     -0.5,
+     -1,
+     -0.5,
+     -1,
+     0,
+     -0.5,
+     -1,
+     -1,
+     -1,
+     -0.5,
+     -1,
+     -1,
+     -0.5,
+     -1,
+     0
+    ],
+    "sans_engagement": [
+     -1,
+     0,
+     1,
+     -1,
+     1,
+     1,
+     -1,
+     0,
+     -1,
+     0,
+     0,
+     -1,
+     0,
+     0,
+     -1,
+     1,
+     -1,
+     -1,
+     0,
+     1,
+     -1,
+     -1,
+     0,
+     -1,
+     0,
+     0
+    ]
+   },
+   "bras": {
+    "nul": {
+     "essai": 146962.66,
+     "exploitation": 111573.07,
+     "total": 258535.73,
+     "profit_2e_semestre": 393817.6
+    },
+    "chaine": {
+     "essai": 135803.07,
+     "exploitation": 141877.13,
+     "total": 277680.21,
+     "profit_2e_semestre": 418444.41
+    },
+    "aveugle:-1": {
+     "essai": 177515.88,
+     "exploitation": 186330.72,
+     "total": 363846.6,
+     "profit_2e_semestre": 504316.53
+    },
+    "aveugle:-0.5": {
+     "essai": 166290.83,
+     "exploitation": 168317.31,
+     "total": 334608.14,
+     "profit_2e_semestre": 475525
+    },
+    "aveugle:0": {
+     "essai": 142172.4,
+     "exploitation": 144829.83,
+     "total": 287002.24,
+     "profit_2e_semestre": 424870.78
+    },
+    "aveugle:0.5": {
+     "essai": 118599.86,
+     "exploitation": 114114.23,
+     "total": 232714.09,
+     "profit_2e_semestre": 373022.66
+    },
+    "aveugle:1": {
+     "essai": 94799.52,
+     "exploitation": 99743.71,
+     "total": 194543.23,
+     "profit_2e_semestre": 330744.26
+    },
+    "bandit": {
+     "essai": 166080.1,
+     "exploitation": 166482.88,
+     "total": 332562.98,
+     "profit_2e_semestre": 467396.39
+    },
+    "sans_engagement": {
+     "essai": 143923.08,
+     "exploitation": 159799.83,
+     "total": 303722.91,
+     "profit_2e_semestre": 437563.78
+    }
+   },
+   "secs": 11.2
+  },
+  {
+   "graine": 6262,
+   "monde": "t3e",
+   "ecartee": false,
+   "objet": "lexo5",
+   "prix_reference": 4.58,
+   "cout_vrai": 2.171,
+   "cout_au_jour_183": 2.171,
+   "decision_chaine": 0,
+   "joues": {
+    "bandit": [
+     0,
+     0.5,
+     -0.5,
+     1,
+     -1,
+     -1,
+     -0.5,
+     -1,
+     -0.5,
+     -0.5,
+     -1,
+     -1,
+     -1,
+     -0.5,
+     -1,
+     0.5,
+     -0.5,
+     -1,
+     -1,
+     -1,
+     -0.5,
+     -1,
+     -1,
+     0,
+     -0.5,
+     -1
+    ],
+    "sans_engagement": [
+     -1,
+     0,
+     1,
+     -1,
+     1,
+     1,
+     -1,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     -1,
+     -1,
+     0,
+     -1,
+     0,
+     -1,
+     0,
+     -1
+    ]
+   },
+   "bras": {
+    "nul": {
+     "essai": 3357.72,
+     "exploitation": 2887,
+     "total": 6244.73,
+     "profit_2e_semestre": 295580.01
+    },
+    "chaine": {
+     "essai": 3137.34,
+     "exploitation": 3146.18,
+     "total": 6283.51,
+     "profit_2e_semestre": 295693.29
+    },
+    "aveugle:-1": {
+     "essai": 4204.98,
+     "exploitation": 3944.4,
+     "total": 8149.39,
+     "profit_2e_semestre": 298155.35
+    },
+    "aveugle:-0.5": {
+     "essai": 4039.36,
+     "exploitation": 3778.94,
+     "total": 7818.3,
+     "profit_2e_semestre": 297252.75
+    },
+    "aveugle:0": {
+     "essai": 3430.44,
+     "exploitation": 3020.91,
+     "total": 6451.35,
+     "profit_2e_semestre": 295858.72
+    },
+    "aveugle:0.5": {
+     "essai": 2775.02,
+     "exploitation": 2456.53,
+     "total": 5231.56,
+     "profit_2e_semestre": 294620.81
+    },
+    "aveugle:1": {
+     "essai": 2046.43,
+     "exploitation": 1830.12,
+     "total": 3876.55,
+     "profit_2e_semestre": 293245.2
+    },
+    "bandit": {
+     "essai": 3994.8,
+     "exploitation": 3836.01,
+     "total": 7830.81,
+     "profit_2e_semestre": 297347.74
+    },
+    "sans_engagement": {
+     "essai": 3139.74,
+     "exploitation": 3309.78,
+     "total": 6449.53,
+     "profit_2e_semestre": 295907.86
+    }
+   },
+   "secs": 10.8
+  },
+  {
+   "graine": 6263,
+   "monde": "t3e",
+   "ecartee": false,
+   "objet": "pehebo3",
+   "prix_reference": 124.17,
+   "cout_vrai": 109.501,
+   "cout_au_jour_183": 109.501,
+   "decision_chaine": 1,
+   "joues": {
+    "bandit": [
+     0,
+     0.5,
+     -0.5,
+     1,
+     -1,
+     1,
+     1,
+     1,
+     1,
+     1,
+     1,
+     1,
+     1,
+     1,
+     0,
+     1,
+     1,
+     1,
+     1,
+     1,
+     0.5,
+     1,
+     1,
+     1,
+     1,
+     1
+    ],
+    "sans_engagement": [
+     -1,
+     0,
+     1,
+     -1,
+     1,
+     1,
+     -1,
+     0,
+     1,
+     1,
+     1,
+     1,
+     1,
+     1,
+     1,
+     1,
+     1,
+     1,
+     1,
+     1,
+     1,
+     1,
+     1,
+     1,
+     1,
+     1
+    ]
+   },
+   "bras": {
+    "nul": {
+     "essai": 41225.75,
+     "exploitation": 45537.74,
+     "total": 86763.49,
+     "profit_2e_semestre": 337314.12
+    },
+    "chaine": {
+     "essai": 52689.46,
+     "exploitation": 91830.13,
+     "total": 144519.6,
+     "profit_2e_semestre": 395858.3
+    },
+    "aveugle:-1": {
+     "essai": -42034.51,
+     "exploitation": -46037.79,
+     "total": -88072.3,
+     "profit_2e_semestre": 158540.27
+    },
+    "aveugle:-0.5": {
+     "essai": 5393.88,
+     "exploitation": 5844.54,
+     "total": 11238.41,
+     "profit_2e_semestre": 308126.87
+    },
+    "aveugle:0": {
+     "essai": 41220.94,
+     "exploitation": 45548.41,
+     "total": 86769.35,
+     "profit_2e_semestre": 337334.82
+    },
+    "aveugle:0.5": {
+     "essai": 64876.58,
+     "exploitation": 73675.39,
+     "total": 138551.96,
+     "profit_2e_semestre": 389932.56
+    },
+    "aveugle:1": {
+     "essai": 86527.85,
+     "exploitation": 93749.93,
+     "total": 180277.77,
+     "profit_2e_semestre": 430930.84
+    },
+    "bandit": {
+     "essai": 61927.33,
+     "exploitation": 88295.41,
+     "total": 150222.74,
+     "profit_2e_semestre": 448404.66
+    },
+    "sans_engagement": {
+     "essai": 52689.46,
+     "exploitation": 91098.78,
+     "total": 143788.25,
+     "profit_2e_semestre": 395858.29
+    }
+   },
+   "secs": 9.5
+  },
+  {
+   "graine": 6264,
+   "monde": "t3e",
+   "ecartee": false,
+   "objet": "berohe4",
+   "prix_reference": 69.73,
+   "cout_vrai": 43.471,
+   "cout_au_jour_183": 43.471,
+   "decision_chaine": 1,
+   "joues": {
+    "bandit": [
+     0,
+     0.5,
+     -0.5,
+     1,
+     -1,
+     -0.5,
+     -1,
+     0.5,
+     0.5,
+     1,
+     -0.5,
+     1,
+     1,
+     0,
+     -0.5,
+     -0.5,
+     0,
+     1,
+     0,
+     -0.5,
+     0,
+     0,
+     0.5,
+     -0.5,
+     -0.5,
+     0
+    ],
+    "sans_engagement": [
+     -1,
+     0,
+     1,
+     -1,
+     1,
+     1,
+     -1,
+     0,
+     0,
+     1,
+     1,
+     0,
+     0,
+     1,
+     -1,
+     1,
+     0,
+     1,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     1,
+     0
+    ]
+   },
+   "bras": {
+    "nul": {
+     "essai": 39611.31,
+     "exploitation": 40785.39,
+     "total": 80396.7,
+     "profit_2e_semestre": 286240.08
+    },
+    "chaine": {
+     "essai": 35461.54,
+     "exploitation": 33291.03,
+     "total": 68752.57,
+     "profit_2e_semestre": 273450.51
+    },
+    "aveugle:-1": {
+     "essai": 36631.64,
+     "exploitation": 31646.49,
+     "total": 68278.13,
+     "profit_2e_semestre": 294703.85
+    },
+    "aveugle:-0.5": {
+     "essai": 39858.03,
+     "exploitation": 39725.74,
+     "total": 79583.77,
+     "profit_2e_semestre": 284941.95
+    },
+    "aveugle:0": {
+     "essai": 41751.84,
+     "exploitation": 40123.78,
+     "total": 81875.62,
+     "profit_2e_semestre": 287808.87
+    },
+    "aveugle:0.5": {
+     "essai": 39455.44,
+     "exploitation": 37420.59,
+     "total": 76876.02,
+     "profit_2e_semestre": 282237.44
+    },
+    "aveugle:1": {
+     "essai": 34558.23,
+     "exploitation": 33203.65,
+     "total": 67761.89,
+     "profit_2e_semestre": 272608.1
+    },
+    "bandit": {
+     "essai": 38910.82,
+     "exploitation": 37718.17,
+     "total": 76628.99,
+     "profit_2e_semestre": 282480.07
+    },
+    "sans_engagement": {
+     "essai": 36804.23,
+     "exploitation": 38449.82,
+     "total": 75254.05,
+     "profit_2e_semestre": 280241.75
+    }
+   },
+   "secs": 13.1
+  },
+  {
+   "graine": 6265,
+   "monde": "t3e",
+   "ecartee": false,
+   "objet": "cili4",
+   "prix_reference": 4.52,
+   "cout_vrai": 2.473,
+   "cout_au_jour_183": 2.473,
+   "decision_chaine": 0,
+   "joues": {
+    "bandit": [
+     0,
+     0.5,
+     -0.5,
+     1,
+     -1,
+     0,
+     0,
+     0.5,
+     0,
+     0,
+     0.5,
+     -0.5,
+     0,
+     0.5,
+     0,
+     0,
+     0,
+     0.5,
+     0.5,
+     0,
+     0,
+     0,
+     0,
+     0.5,
+     0,
+     0.5
+    ],
+    "sans_engagement": [
+     -1,
+     0,
+     1,
+     -1,
+     1,
+     1,
+     -1,
+     0,
+     -1,
+     0,
+     -1,
+     0,
+     0,
+     -1,
+     0,
+     -1,
+     -1,
+     0,
+     0,
+     -1,
+     -1,
+     0,
+     0,
+     0,
+     0,
+     0
+    ]
+   },
+   "bras": {
+    "nul": {
+     "essai": 4043.22,
+     "exploitation": 4464.21,
+     "total": 8507.43,
+     "profit_2e_semestre": 407591.87
+    },
+    "chaine": {
+     "essai": 3785.97,
+     "exploitation": 4368.34,
+     "total": 8154.31,
+     "profit_2e_semestre": 407197.67
+    },
+    "aveugle:-1": {
+     "essai": 3454.83,
+     "exploitation": 3873.49,
+     "total": 7328.32,
+     "profit_2e_semestre": 407472.22
+    },
+    "aveugle:-0.5": {
+     "essai": 3905.02,
+     "exploitation": 4371.99,
+     "total": 8277.01,
+     "profit_2e_semestre": 408309.41
+    },
+    "aveugle:0": {
+     "essai": 4003.97,
+     "exploitation": 4454.32,
+     "total": 8458.29,
+     "profit_2e_semestre": 407532.35
+    },
+    "aveugle:0.5": {
+     "essai": 4009.85,
+     "exploitation": 4424.75,
+     "total": 8434.59,
+     "profit_2e_semestre": 407561.87
+    },
+    "aveugle:1": {
+     "essai": 3885.5,
+     "exploitation": 4133.31,
+     "total": 8018.8,
+     "profit_2e_semestre": 407111.63
+    },
+    "bandit": {
+     "essai": 3914.22,
+     "exploitation": 4417.52,
+     "total": 8331.75,
+     "profit_2e_semestre": 408453.96
+    },
+    "sans_engagement": {
+     "essai": 3754.67,
+     "exploitation": 4235.85,
+     "total": 7990.52,
+     "profit_2e_semestre": 408087.2
+    }
+   },
+   "secs": 10.6
+  },
+  {
+   "graine": 6266,
+   "monde": "t3e",
+   "ecartee": false,
+   "objet": "cora4",
+   "prix_reference": 6.8,
+   "cout_vrai": 2.972,
+   "cout_au_jour_183": 2.972,
+   "decision_chaine": -1,
+   "joues": {
+    "bandit": [
+     0,
+     0.5,
+     -0.5,
+     1,
+     -1,
+     -1,
+     0.5,
+     0,
+     0,
+     0,
+     0,
+     -1,
+     -1,
+     -0.5,
+     -1,
+     -1,
+     -0.5,
+     -1,
+     -0.5,
+     -0.5,
+     -1,
+     -1,
+     -1,
+     -1,
+     -1,
+     -1
+    ],
+    "sans_engagement": [
+     -1,
+     0,
+     1,
+     -1,
+     1,
+     1,
+     -1,
+     0,
+     -1,
+     -1,
+     -1,
+     -1,
+     -1,
+     -1,
+     -1,
+     -1,
+     -1,
+     -1,
+     -1,
+     -1,
+     -1,
+     -1,
+     -1,
+     -1,
+     -1,
+     -1
+    ]
+   },
+   "bras": {
+    "nul": {
+     "essai": 3744.31,
+     "exploitation": 3363.64,
+     "total": 7107.95,
+     "profit_2e_semestre": -50940.99
+    },
+    "chaine": {
+     "essai": 4499.84,
+     "exploitation": 4944.22,
+     "total": 9444.06,
+     "profit_2e_semestre": -48602.4
+    },
+    "aveugle:-1": {
+     "essai": 4873.05,
+     "exploitation": 4820.8,
+     "total": 9693.85,
+     "profit_2e_semestre": -48323.42
+    },
+    "aveugle:-0.5": {
+     "essai": 4746.54,
+     "exploitation": 4746.54,
+     "total": 9493.08,
+     "profit_2e_semestre": -48552.78
+    },
+    "aveugle:0": {
+     "essai": 4142.34,
+     "exploitation": 4115.54,
+     "total": 8257.88,
+     "profit_2e_semestre": -49783.4
+    },
+    "aveugle:0.5": {
+     "essai": 3587.02,
+     "exploitation": 3429.65,
+     "total": 7016.67,
+     "profit_2e_semestre": -51027.65
+    },
+    "aveugle:1": {
+     "essai": 3112.49,
+     "exploitation": 2891.36,
+     "total": 6003.85,
+     "profit_2e_semestre": -52045.09
+    },
+    "bandit": {
+     "essai": 4241.58,
+     "exploitation": 5026.25,
+     "total": 9267.83,
+     "profit_2e_semestre": -48778.01
+    },
+    "sans_engagement": {
+     "essai": 4497.37,
+     "exploitation": 4944.22,
+     "total": 9441.59,
+     "profit_2e_semestre": -48602.4
+    }
+   },
+   "secs": 8.5
+  },
+  {
+   "graine": 6267,
+   "monde": "t3e",
+   "ecartee": false,
+   "objet": "mudu5",
+   "prix_reference": 15.87,
+   "cout_vrai": 7.646,
+   "cout_au_jour_183": 7.646,
+   "decision_chaine": -1,
+   "joues": {
+    "bandit": [
+     0,
+     0.5,
+     -0.5,
+     1,
+     -1,
+     0.5,
+     -0.5,
+     -1,
+     -0.5,
+     -0.5,
+     -0.5,
+     -0.5,
+     -1,
+     1,
+     -0.5,
+     -1,
+     -0.5,
+     -1,
+     -1,
+     -1,
+     -1,
+     -0.5,
+     -1,
+     -0.5,
+     -1,
+     -1
+    ],
+    "sans_engagement": [
+     -1,
+     0,
+     1,
+     -1,
+     1,
+     1,
+     -1,
+     0,
+     -1,
+     -1,
+     -1,
+     0,
+     -1,
+     -1,
+     -1,
+     -1,
+     -1,
+     -1,
+     -1,
+     -1,
+     -1,
+     -1,
+     -1,
+     0,
+     -1,
+     -1
+    ]
+   },
+   "bras": {
+    "nul": {
+     "essai": 5027.68,
+     "exploitation": 3891.45,
+     "total": 8919.13,
+     "profit_2e_semestre": -6845.12
+    },
+    "chaine": {
+     "essai": 6214.1,
+     "exploitation": 6560.08,
+     "total": 12774.19,
+     "profit_2e_semestre": -3071.02
+    },
+    "aveugle:-1": {
+     "essai": 7611.31,
+     "exploitation": 6646,
+     "total": 14257.32,
+     "profit_2e_semestre": -1748.46
+    },
+    "aveugle:-0.5": {
+     "essai": 6334.59,
+     "exploitation": 5352.99,
+     "total": 11687.57,
+     "profit_2e_semestre": -4152.82
+    },
+    "aveugle:0": {
+     "essai": 5148.22,
+     "exploitation": 4292.92,
+     "total": 9441.14,
+     "profit_2e_semestre": -6300.49
+    },
+    "aveugle:0.5": {
+     "essai": 4168.82,
+     "exploitation": 3371.39,
+     "total": 7540.21,
+     "profit_2e_semestre": -8141.59
+    },
+    "aveugle:1": {
+     "essai": 3133.86,
+     "exploitation": 2604.97,
+     "total": 5738.82,
+     "profit_2e_semestre": -9976.29
+    },
+    "bandit": {
+     "essai": 5855.6,
+     "exploitation": 5817.75,
+     "total": 11673.35,
+     "profit_2e_semestre": -4017.08
+    },
+    "sans_engagement": {
+     "essai": 6080.76,
+     "exploitation": 6404.97,
+     "total": 12485.73,
+     "profit_2e_semestre": -3337.4
+    }
+   },
+   "secs": 5.9
+  },
+  {
+   "graine": 6268,
+   "monde": "t3e",
+   "ecartee": false,
+   "objet": "teni4",
+   "prix_reference": 288.09,
+   "cout_vrai": 118.233,
+   "cout_au_jour_183": 118.233,
+   "decision_chaine": 1,
+   "joues": {
+    "bandit": [
+     0,
+     0.5,
+     -0.5,
+     1,
+     -1,
+     0,
+     -1,
+     -0.5,
+     0,
+     -0.5,
+     0.5,
+     -1,
+     0.5,
+     -0.5,
+     -1,
+     -1,
+     1,
+     -0.5,
+     0,
+     -1,
+     -0.5,
+     0,
+     0,
+     -0.5,
+     -0.5,
+     -1
+    ],
+    "sans_engagement": [
+     -1,
+     0,
+     1,
+     -1,
+     1,
+     1,
+     -1,
+     0,
+     1,
+     0,
+     1,
+     -1,
+     0,
+     1,
+     1,
+     1,
+     0,
+     0,
+     -1,
+     0,
+     1,
+     1,
+     1,
+     -1,
+     1,
+     -1
+    ]
+   },
+   "bras": {
+    "nul": {
+     "essai": 196187.4,
+     "exploitation": 174630.25,
+     "total": 370817.65,
+     "profit_2e_semestre": 628942.01
+    },
+    "chaine": {
+     "essai": 185261.74,
+     "exploitation": 168588.04,
+     "total": 353849.78,
+     "profit_2e_semestre": 615731.93
+    },
+    "aveugle:-1": {
+     "essai": 232891.09,
+     "exploitation": 194955.09,
+     "total": 427846.18,
+     "profit_2e_semestre": 699567.2
+    },
+    "aveugle:-0.5": {
+     "essai": 229529.22,
+     "exploitation": 208472.77,
+     "total": 438001.98,
+     "profit_2e_semestre": 709301.82
+    },
+    "aveugle:0": {
+     "essai": 230495.5,
+     "exploitation": 218945.24,
+     "total": 449440.74,
+     "profit_2e_semestre": 713715.97
+    },
+    "aveugle:0.5": {
+     "essai": 205283.66,
+     "exploitation": 197333.25,
+     "total": 402616.92,
+     "profit_2e_semestre": 662612.6
+    },
+    "aveugle:1": {
+     "essai": 185277.53,
+     "exploitation": 172458.06,
+     "total": 357735.59,
+     "profit_2e_semestre": 613619.52
+    },
+    "bandit": {
+     "essai": 229756.47,
+     "exploitation": 209218.53,
+     "total": 438974.99,
+     "profit_2e_semestre": 728791.1
+    },
+    "sans_engagement": {
+     "essai": 191039.12,
+     "exploitation": 192184.79,
+     "total": 383223.91,
+     "profit_2e_semestre": 644825.07
+    }
+   },
+   "secs": 8.2
+  },
+  {
+   "graine": 6269,
+   "monde": "t3e",
+   "ecartee": false,
+   "objet": "hevo7",
+   "prix_reference": 111.15,
+   "cout_vrai": 60.811,
+   "cout_au_jour_183": 60.811,
+   "decision_chaine": 1,
+   "joues": {
+    "bandit": [
+     0,
+     0.5,
+     -0.5,
+     1,
+     -1,
+     0,
+     0,
+     1,
+     0,
+     1,
+     0,
+     1,
+     0.5,
+     1,
+     1,
+     0.5,
+     1,
+     1,
+     0.5,
+     1,
+     1,
+     1,
+     0,
+     1,
+     1,
+     1
+    ],
+    "sans_engagement": [
+     -1,
+     0,
+     1,
+     -1,
+     1,
+     1,
+     -1,
+     0,
+     1,
+     1,
+     0,
+     1,
+     1,
+     1,
+     1,
+     1,
+     1,
+     1,
+     1,
+     1,
+     1,
+     1,
+     1,
+     1,
+     1,
+     1
+    ]
+   },
+   "bras": {
+    "nul": {
+     "essai": 104099.4,
+     "exploitation": 115448.27,
+     "total": 219547.66,
+     "profit_2e_semestre": 203958.5
+    },
+    "chaine": {
+     "essai": 118254.04,
+     "exploitation": 135319.39,
+     "total": 253573.43,
+     "profit_2e_semestre": 239694.96
+    },
+    "aveugle:-1": {
+     "essai": 73561.2,
+     "exploitation": 70525.43,
+     "total": 144086.63,
+     "profit_2e_semestre": 125956.92
+    },
+    "aveugle:-0.5": {
+     "essai": 88375.95,
+     "exploitation": 86754.38,
+     "total": 175130.33,
+     "profit_2e_semestre": 185043.81
+    },
+    "aveugle:0": {
+     "essai": 104101.01,
+     "exploitation": 104805.76,
+     "total": 208906.76,
+     "profit_2e_semestre": 192362.52
+    },
+    "aveugle:0.5": {
+     "essai": 122475.83,
+     "exploitation": 122407.08,
+     "total": 244882.91,
+     "profit_2e_semestre": 230021.73
+    },
+    "aveugle:1": {
+     "essai": 137116.36,
+     "exploitation": 135319.39,
+     "total": 272435.75,
+     "profit_2e_semestre": 283812.38
+    },
+    "bandit": {
+     "essai": 112891.45,
+     "exploitation": 129792.32,
+     "total": 242683.76,
+     "profit_2e_semestre": 229195.95
+    },
+    "sans_engagement": {
+     "essai": 115847.89,
+     "exploitation": 135553.78,
+     "total": 251401.67,
+     "profit_2e_semestre": 237288.81
+    }
+   },
+   "secs": 9.1
+  },
+  {
+   "graine": 6270,
+   "monde": "t3e",
+   "ecartee": false,
+   "objet": "qife9",
+   "prix_reference": 73.77,
+   "cout_vrai": 37.216,
+   "cout_au_jour_183": 37.216,
+   "decision_chaine": -1,
+   "joues": {
+    "bandit": [
+     0,
+     0.5,
+     -0.5,
+     1,
+     -1,
+     -0.5,
+     -1,
+     1,
+     -0.5,
+     1,
+     -0.5,
+     0.5,
+     -0.5,
+     0,
+     -0.5,
+     0,
+     -0.5,
+     0,
+     -0.5,
+     0,
+     -1,
+     -1,
+     0.5,
+     -1,
+     -1,
+     -0.5
+    ],
+    "sans_engagement": [
+     -1,
+     0,
+     1,
+     -1,
+     1,
+     1,
+     -1,
+     0,
+     -1,
+     -1,
+     0,
+     1,
+     0,
+     0,
+     0,
+     0,
+     -1,
+     0,
+     0,
+     -1,
+     0,
+     -1,
+     -1,
+     0,
+     0,
+     0
+    ]
+   },
+   "bras": {
+    "nul": {
+     "essai": 59100.13,
+     "exploitation": 60842.09,
+     "total": 119942.22,
+     "profit_2e_semestre": 319995.29
+    },
+    "chaine": {
+     "essai": 57695.61,
+     "exploitation": 63841.44,
+     "total": 121537.06,
+     "profit_2e_semestre": 312276.82
+    },
+    "aveugle:-1": {
+     "essai": 62555.02,
+     "exploitation": 61334.01,
+     "total": 123889.03,
+     "profit_2e_semestre": 315633.98
+    },
+    "aveugle:-0.5": {
+     "essai": 61324.36,
+     "exploitation": 60749.09,
+     "total": 122073.45,
+     "profit_2e_semestre": 322464.53
+    },
+    "aveugle:0": {
+     "essai": 56000.38,
+     "exploitation": 57316.31,
+     "total": 113316.69,
+     "profit_2e_semestre": 304582.62
+    },
+    "aveugle:0.5": {
+     "essai": 50107,
+     "exploitation": 51645.96,
+     "total": 101752.96,
+     "profit_2e_semestre": 291895.42
+    },
+    "aveugle:1": {
+     "essai": 43555.07,
+     "exploitation": 44050.01,
+     "total": 87605.08,
+     "profit_2e_semestre": 287320.44
+    },
+    "bandit": {
+     "essai": 55742.11,
+     "exploitation": 59671.12,
+     "total": 115413.24,
+     "profit_2e_semestre": 315244.32
+    },
+    "sans_engagement": {
+     "essai": 54207.65,
+     "exploitation": 58773.78,
+     "total": 112981.43,
+     "profit_2e_semestre": 304427.88
+    }
+   },
+   "secs": 7.8
+  },
+  {
+   "graine": 6271,
+   "monde": "t3e",
+   "ecartee": false,
+   "objet": "lelovi1",
+   "prix_reference": 9.91,
+   "cout_vrai": 4.4,
+   "cout_au_jour_183": 4.4,
+   "decision_chaine": -1,
+   "joues": {
+    "bandit": [
+     0,
+     0.5,
+     -0.5,
+     1,
+     -1,
+     -0.5,
+     -0.5,
+     0,
+     -0.5,
+     -1,
+     -0.5,
+     -1,
+     -1,
+     -1,
+     -0.5,
+     -0.5,
+     -1,
+     -1,
+     -1,
+     -0.5,
+     -0.5,
+     -1,
+     -1,
+     -1,
+     -1,
+     -1
+    ],
+    "sans_engagement": [
+     -1,
+     0,
+     1,
+     -1,
+     1,
+     1,
+     -1,
+     0,
+     -1,
+     -1,
+     -1,
+     -1,
+     -1,
+     -1,
+     -1,
+     -1,
+     -1,
+     -1,
+     -1,
+     -1,
+     -1,
+     -1,
+     -1,
+     -1,
+     -1,
+     -1
+    ]
+   },
+   "bras": {
+    "nul": {
+     "essai": 6595.76,
+     "exploitation": 3955.53,
+     "total": 10551.29,
+     "profit_2e_semestre": 239932.74
+    },
+    "chaine": {
+     "essai": 6620.82,
+     "exploitation": 8005.94,
+     "total": 14626.76,
+     "profit_2e_semestre": 243991.25
+    },
+    "aveugle:-1": {
+     "essai": 8475.43,
+     "exploitation": 8009.47,
+     "total": 16484.9,
+     "profit_2e_semestre": 245858.19
+    },
+    "aveugle:-0.5": {
+     "essai": 7086.87,
+     "exploitation": 6792.52,
+     "total": 13879.39,
+     "profit_2e_semestre": 243249.14
+    },
+    "aveugle:0": {
+     "essai": 5520.98,
+     "exploitation": 5047.12,
+     "total": 10568.1,
+     "profit_2e_semestre": 239937.85
+    },
+    "aveugle:0.5": {
+     "essai": 4248.45,
+     "exploitation": 3840.98,
+     "total": 8089.43,
+     "profit_2e_semestre": 237459.18
+    },
+    "aveugle:1": {
+     "essai": 3291.86,
+     "exploitation": 2828.45,
+     "total": 6120.31,
+     "profit_2e_semestre": 235490.05
+    },
+    "bandit": {
+     "essai": 6523.37,
+     "exploitation": 7307.04,
+     "total": 13830.4,
+     "profit_2e_semestre": 244255.29
+    },
+    "sans_engagement": {
+     "essai": 6620.82,
+     "exploitation": 8009.47,
+     "total": 14630.29,
+     "profit_2e_semestre": 243991.25
+    }
+   },
+   "secs": 11.2
+  },
+  {
+   "graine": 6272,
+   "monde": "t3e",
+   "ecartee": false,
+   "objet": "sifida1",
+   "prix_reference": 70.1,
+   "cout_vrai": 52.051,
+   "cout_au_jour_183": 52.051,
+   "decision_chaine": 1,
+   "joues": {
+    "bandit": [
+     0,
+     0.5,
+     -0.5,
+     1,
+     -1,
+     1,
+     0,
+     1,
+     0,
+     0,
+     1,
+     -0.5,
+     0,
+     1,
+     0,
+     0,
+     0.5,
+     0.5,
+     -0.5,
+     1,
+     0,
+     -1,
+     0,
+     1,
+     1,
+     0.5
+    ],
+    "sans_engagement": [
+     -1,
+     0,
+     1,
+     -1,
+     1,
+     1,
+     -1,
+     0,
+     1,
+     0,
+     0,
+     0,
+     1,
+     1,
+     1,
+     0,
+     1,
+     1,
+     0,
+     0,
+     1,
+     0,
+     1,
+     1,
+     0,
+     0
+    ]
+   },
+   "bras": {
+    "nul": {
+     "essai": 26763.72,
+     "exploitation": 24904.19,
+     "total": 51667.91,
+     "profit_2e_semestre": 111165.09
+    },
+    "chaine": {
+     "essai": 23871.23,
+     "exploitation": 35436.73,
+     "total": 59307.97,
+     "profit_2e_semestre": 118630.48
+    },
+    "aveugle:-1": {
+     "essai": 6885.64,
+     "exploitation": 7288.55,
+     "total": 14174.19,
+     "profit_2e_semestre": 73416.23
+    },
+    "aveugle:-0.5": {
+     "essai": 16143.96,
+     "exploitation": 15515.66,
+     "total": 31659.62,
+     "profit_2e_semestre": 103261.57
+    },
+    "aveugle:0": {
+     "essai": 25034.03,
+     "exploitation": 24402.31,
+     "total": 49436.34,
+     "profit_2e_semestre": 121415.78
+    },
+    "aveugle:0.5": {
+     "essai": 28661.44,
+     "exploitation": 29029.91,
+     "total": 57691.35,
+     "profit_2e_semestre": 130030.86
+    },
+    "aveugle:1": {
+     "essai": 32519.25,
+     "exploitation": 35080.94,
+     "total": 67600.19,
+     "profit_2e_semestre": 128266.99
+    },
+    "bandit": {
+     "essai": 23882.56,
+     "exploitation": 28287.48,
+     "total": 52170.04,
+     "profit_2e_semestre": 112878.37
+    },
+    "sans_engagement": {
+     "essai": 22149.89,
+     "exploitation": 29122.25,
+     "total": 51272.15,
+     "profit_2e_semestre": 110840.71
+    }
+   },
+   "secs": 4.9
+  },
+  {
+   "graine": 6273,
+   "monde": "t3e",
+   "ecartee": false,
+   "objet": "rolupe9",
+   "prix_reference": 24.96,
+   "cout_vrai": 18.681,
+   "cout_au_jour_183": 18.681,
+   "decision_chaine": 1,
+   "joues": {
+    "bandit": [
+     0,
+     0.5,
+     -0.5,
+     1,
+     -1,
+     1,
+     1,
+     0.5,
+     1,
+     1,
+     0.5,
+     1,
+     1,
+     1,
+     -0.5,
+     1,
+     1,
+     1,
+     1,
+     0,
+     1,
+     1,
+     1,
+     -0.5,
+     1,
+     1
+    ],
+    "sans_engagement": [
+     -1,
+     0,
+     1,
+     -1,
+     1,
+     1,
+     -1,
+     0,
+     1,
+     1,
+     1,
+     1,
+     1,
+     1,
+     1,
+     1,
+     1,
+     1,
+     1,
+     1,
+     1,
+     1,
+     1,
+     1,
+     1,
+     1
+    ]
+   },
+   "bras": {
+    "nul": {
+     "essai": 9298.4,
+     "exploitation": 6573.74,
+     "total": 15872.14,
+     "profit_2e_semestre": 511327.61
+    },
+    "chaine": {
+     "essai": 11499.71,
+     "exploitation": 12956.78,
+     "total": 24456.5,
+     "profit_2e_semestre": 519933.43
+    },
+    "aveugle:-1": {
+     "essai": 2770.56,
+     "exploitation": 2546.34,
+     "total": 5316.9,
+     "profit_2e_semestre": 500791.08
+    },
+    "aveugle:-0.5": {
+     "essai": 6884.29,
+     "exploitation": 6174.76,
+     "total": 13059.05,
+     "profit_2e_semestre": 508607.6
+    },
+    "aveugle:0": {
+     "essai": 10146.27,
+     "exploitation": 9286.1,
+     "total": 19432.37,
+     "profit_2e_semestre": 514890.61
+    },
+    "aveugle:0.5": {
+     "essai": 13021.6,
+     "exploitation": 11305.07,
+     "total": 24326.68,
+     "profit_2e_semestre": 519959.86
+    },
+    "aveugle:1": {
+     "essai": 14746.95,
+     "exploitation": 13157.08,
+     "total": 27904.03,
+     "profit_2e_semestre": 523343.41
+    },
+    "bandit": {
+     "essai": 11892.39,
+     "exploitation": 11576.44,
+     "total": 23468.82,
+     "profit_2e_semestre": 519296.29
+    },
+    "sans_engagement": {
+     "essai": 11499.71,
+     "exploitation": 12994.34,
+     "total": 24494.05,
+     "profit_2e_semestre": 519933.43
+    }
+   },
+   "secs": 11.2
+  },
+  {
+   "graine": 6274,
+   "monde": "t3e",
+   "ecartee": false,
+   "objet": "gijo6",
+   "prix_reference": 61.59,
+   "cout_vrai": 28.563,
+   "cout_au_jour_183": 28.563,
+   "decision_chaine": 0,
+   "joues": {
+    "bandit": [
+     0,
+     0.5,
+     -0.5,
+     1,
+     -1,
+     1,
+     -0.5,
+     -0.5,
+     0.5,
+     -0.5,
+     0,
+     -0.5,
+     -1,
+     0.5,
+     1,
+     1,
+     0.5,
+     0.5,
+     0,
+     -0.5,
+     0,
+     0.5,
+     0,
+     0.5,
+     0,
+     0.5
+    ],
+    "sans_engagement": [
+     -1,
+     0,
+     1,
+     -1,
+     1,
+     1,
+     -1,
+     0,
+     -1,
+     0,
+     -1,
+     -1,
+     0,
+     -1,
+     0,
+     -1,
+     0,
+     0,
+     0,
+     1,
+     0,
+     -1,
+     0,
+     0,
+     0,
+     0
+    ]
+   },
+   "bras": {
+    "nul": {
+     "essai": 27621.02,
+     "exploitation": 29927.55,
+     "total": 57548.57,
+     "profit_2e_semestre": 54135.63
+    },
+    "chaine": {
+     "essai": 26969.53,
+     "exploitation": 31342.81,
+     "total": 58312.34,
+     "profit_2e_semestre": 54973.32
+    },
+    "aveugle:-1": {
+     "essai": 26753.7,
+     "exploitation": 30770.89,
+     "total": 57524.59,
+     "profit_2e_semestre": 53505.35
+    },
+    "aveugle:-0.5": {
+     "essai": 28039.25,
+     "exploitation": 31116.4,
+     "total": 59155.64,
+     "profit_2e_semestre": 55994.06
+    },
+    "aveugle:0": {
+     "essai": 27974.03,
+     "exploitation": 31144.64,
+     "total": 59118.68,
+     "profit_2e_semestre": 55977.82
+    },
+    "aveugle:0.5": {
+     "essai": 26837.93,
+     "exploitation": 30424.38,
+     "total": 57262.31,
+     "profit_2e_semestre": 53595.09
+    },
+    "aveugle:1": {
+     "essai": 26053.83,
+     "exploitation": 28475.19,
+     "total": 54529.02,
+     "profit_2e_semestre": 51339.38
+    },
+    "bandit": {
+     "essai": 27318.27,
+     "exploitation": 30989.85,
+     "total": 58308.12,
+     "profit_2e_semestre": 54230.66
+    },
+    "sans_engagement": {
+     "essai": 26768.92,
+     "exploitation": 30943.27,
+     "total": 57712.19,
+     "profit_2e_semestre": 53811.72
+    }
+   },
+   "secs": 6.5
+  },
+  {
+   "graine": 6275,
+   "monde": "t3e",
+   "ecartee": false,
+   "objet": "juve0",
+   "prix_reference": 164.25,
+   "cout_vrai": 111.103,
+   "cout_au_jour_183": 111.103,
+   "decision_chaine": 1,
+   "joues": {
+    "bandit": [
+     0,
+     0.5,
+     -0.5,
+     1,
+     -1,
+     0,
+     -0.5,
+     1,
+     0.5,
+     0,
+     0,
+     0,
+     0.5,
+     1,
+     0.5,
+     1,
+     1,
+     1,
+     -0.5,
+     1,
+     -1,
+     1,
+     1,
+     0.5,
+     1,
+     1
+    ],
+    "sans_engagement": [
+     -1,
+     0,
+     1,
+     -1,
+     1,
+     1,
+     -1,
+     0,
+     0,
+     -1,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     1,
+     0,
+     1,
+     0,
+     1,
+     0,
+     0,
+     0
+    ]
+   },
+   "bras": {
+    "nul": {
+     "essai": 71211.99,
+     "exploitation": 70314.63,
+     "total": 141526.62,
+     "profit_2e_semestre": 858034.84
+    },
+    "chaine": {
+     "essai": 70035.45,
+     "exploitation": 95243.32,
+     "total": 165278.77,
+     "profit_2e_semestre": 854209.47
+    },
+    "aveugle:-1": {
+     "essai": 46317.84,
+     "exploitation": 48306.95,
+     "total": 94624.79,
+     "profit_2e_semestre": 779650.15
+    },
+    "aveugle:-0.5": {
+     "essai": 63987.18,
+     "exploitation": 69680.5,
+     "total": 133667.67,
+     "profit_2e_semestre": 819957.57
+    },
+    "aveugle:0": {
+     "essai": 74990.47,
+     "exploitation": 82324.76,
+     "total": 157315.23,
+     "profit_2e_semestre": 844934.69
+    },
+    "aveugle:0.5": {
+     "essai": 80298.5,
+     "exploitation": 90888.91,
+     "total": 171187.41,
+     "profit_2e_semestre": 859115.58
+    },
+    "aveugle:1": {
+     "essai": 82336.95,
+     "exploitation": 97975.32,
+     "total": 180312.27,
+     "profit_2e_semestre": 866982.01
+    },
+    "bandit": {
+     "essai": 73007.88,
+     "exploitation": 91639.95,
+     "total": 164647.83,
+     "profit_2e_semestre": 852919.09
+    },
+    "sans_engagement": {
+     "essai": 66079.21,
+     "exploitation": 83654.31,
+     "total": 149733.52,
+     "profit_2e_semestre": 836555.78
+    }
+   },
+   "secs": 15.3
+  },
+  {
+   "graine": 6276,
+   "monde": "t3e",
+   "ecartee": false,
+   "objet": "tope0",
+   "prix_reference": 119.32,
+   "cout_vrai": 68.343,
+   "cout_au_jour_183": 68.343,
+   "decision_chaine": -1,
+   "joues": {
+    "bandit": [
+     0,
+     0.5,
+     -0.5,
+     1,
+     -1,
+     0.5,
+     0,
+     -0.5,
+     -1,
+     -0.5,
+     -0.5,
+     -0.5,
+     0,
+     1,
+     -0.5,
+     0,
+     0,
+     -1,
+     0,
+     -0.5,
+     0,
+     -1,
+     1,
+     -1,
+     0.5,
+     -1
+    ],
+    "sans_engagement": [
+     -1,
+     0,
+     1,
+     -1,
+     1,
+     1,
+     -1,
+     0,
+     0,
+     -1,
+     0,
+     -1,
+     -1,
+     -1,
+     0,
+     -1,
+     -1,
+     -1,
+     -1,
+     -1,
+     -1,
+     -1,
+     -1,
+     -1,
+     -1,
+     -1
+    ]
+   },
+   "bras": {
+    "nul": {
+     "essai": 76957.74,
+     "exploitation": 63449.63,
+     "total": 140407.38,
+     "profit_2e_semestre": 625318.81
+    },
+    "chaine": {
+     "essai": 81450.81,
+     "exploitation": 79209.48,
+     "total": 160660.29,
+     "profit_2e_semestre": 666356.82
+    },
+    "aveugle:-1": {
+     "essai": 89785.21,
+     "exploitation": 84741.4,
+     "total": 174526.61,
+     "profit_2e_semestre": 675694.54
+    },
+    "aveugle:-0.5": {
+     "essai": 89495.74,
+     "exploitation": 85265.83,
+     "total": 174761.58,
+     "profit_2e_semestre": 676758.66
+    },
+    "aveugle:0": {
+     "essai": 79269.62,
+     "exploitation": 75293.4,
+     "total": 154563.02,
+     "profit_2e_semestre": 642855.88
+    },
+    "aveugle:0.5": {
+     "essai": 67464.37,
+     "exploitation": 58876.81,
+     "total": 126341.18,
+     "profit_2e_semestre": 614009.27
+    },
+    "aveugle:1": {
+     "essai": 52686.33,
+     "exploitation": 48807.58,
+     "total": 101493.9,
+     "profit_2e_semestre": 601863.29
+    },
+    "bandit": {
+     "essai": 83005.39,
+     "exploitation": 70180.77,
+     "total": 153186.17,
+     "profit_2e_semestre": 655561.35
+    },
+    "sans_engagement": {
+     "essai": 80764.59,
+     "exploitation": 85397.43,
+     "total": 166162.02,
+     "profit_2e_semestre": 669472.22
+    }
+   },
+   "secs": 9.1
+  },
+  {
+   "graine": 6277,
+   "monde": "t3e",
+   "ecartee": false,
+   "objet": "vabudu0",
+   "prix_reference": 8.62,
+   "cout_vrai": 4.223,
+   "cout_au_jour_183": 4.223,
+   "decision_chaine": -1,
+   "joues": {
+    "bandit": [
+     0,
+     0.5,
+     -0.5,
+     1,
+     -1,
+     -0.5,
+     0,
+     0,
+     -1,
+     -0.5,
+     0,
+     0.5,
+     -1,
+     -1,
+     -1,
+     1,
+     -0.5,
+     -1,
+     -1,
+     -1,
+     -1,
+     0,
+     -1,
+     -1,
+     0,
+     -0.5
+    ],
+    "sans_engagement": [
+     -1,
+     0,
+     1,
+     -1,
+     1,
+     1,
+     -1,
+     0,
+     -1,
+     -1,
+     0,
+     -1,
+     -1,
+     -1,
+     -1,
+     -1,
+     -1,
+     -1,
+     -1,
+     -1,
+     -1,
+     -1,
+     -1,
+     -1,
+     -1,
+     -1
+    ]
+   },
+   "bras": {
+    "nul": {
+     "essai": 5551.41,
+     "exploitation": 6147.77,
+     "total": 11699.18,
+     "profit_2e_semestre": 474007.68
+    },
+    "chaine": {
+     "essai": 7203.72,
+     "exploitation": 8709.11,
+     "total": 15912.82,
+     "profit_2e_semestre": 478416.74
+    },
+    "aveugle:-1": {
+     "essai": 8259.33,
+     "exploitation": 8741.23,
+     "total": 17000.56,
+     "profit_2e_semestre": 479314.44
+    },
+    "aveugle:-0.5": {
+     "essai": 8296.18,
+     "exploitation": 9031.99,
+     "total": 17328.16,
+     "profit_2e_semestre": 479811.04
+    },
+    "aveugle:0": {
+     "essai": 7580.87,
+     "exploitation": 8473.51,
+     "total": 16054.37,
+     "profit_2e_semestre": 478367.29
+    },
+    "aveugle:0.5": {
+     "essai": 5774.79,
+     "exploitation": 6132.33,
+     "total": 11907.12,
+     "profit_2e_semestre": 474318.56
+    },
+    "aveugle:1": {
+     "essai": 4137.86,
+     "exploitation": 4471.77,
+     "total": 8609.64,
+     "profit_2e_semestre": 470918.15
+    },
+    "bandit": {
+     "essai": 7482.27,
+     "exploitation": 8156.11,
+     "total": 15638.38,
+     "profit_2e_semestre": 477952.27
+    },
+    "sans_engagement": {
+     "essai": 7331.91,
+     "exploitation": 8776.04,
+     "total": 16107.94,
+     "profit_2e_semestre": 478419.12
+    }
+   },
+   "secs": 11.4
+  },
+  {
+   "graine": 6278,
+   "monde": "t3e",
+   "ecartee": false,
+   "objet": "lotizu2",
+   "prix_reference": 94.79,
+   "cout_vrai": 57.701,
+   "cout_au_jour_183": 57.701,
+   "decision_chaine": 1,
+   "joues": {
+    "bandit": [
+     0,
+     0.5,
+     -0.5,
+     1,
+     -1,
+     0,
+     1,
+     -0.5,
+     1,
+     0,
+     1,
+     0,
+     1,
+     1,
+     0,
+     1,
+     1,
+     -0.5,
+     1,
+     1,
+     1,
+     0,
+     1,
+     1,
+     1,
+     1
+    ],
+    "sans_engagement": [
+     -1,
+     0,
+     1,
+     -1,
+     1,
+     1,
+     -1,
+     0,
+     1,
+     1,
+     0,
+     1,
+     1,
+     1,
+     1,
+     1,
+     1,
+     1,
+     1,
+     1,
+     1,
+     1,
+     1,
+     1,
+     1,
+     1
+    ]
+   },
+   "bras": {
+    "nul": {
+     "essai": 90703.01,
+     "exploitation": 85374.68,
+     "total": 176077.69,
+     "profit_2e_semestre": 241208.42
+    },
+    "chaine": {
+     "essai": 90628.42,
+     "exploitation": 95438.92,
+     "total": 186067.34,
+     "profit_2e_semestre": 251809.35
+    },
+    "aveugle:-1": {
+     "essai": 55511.36,
+     "exploitation": 49003.01,
+     "total": 104514.37,
+     "profit_2e_semestre": 166783.87
+    },
+    "aveugle:-0.5": {
+     "essai": 70189.08,
+     "exploitation": 63067.27,
+     "total": 133256.35,
+     "profit_2e_semestre": 195935.73
+    },
+    "aveugle:0": {
+     "essai": 79296.54,
+     "exploitation": 76477.76,
+     "total": 155774.3,
+     "profit_2e_semestre": 219333.91
+    },
+    "aveugle:0.5": {
+     "essai": 95351.26,
+     "exploitation": 85936.83,
+     "total": 181288.09,
+     "profit_2e_semestre": 246923.36
+    },
+    "aveugle:1": {
+     "essai": 104861.23,
+     "exploitation": 95195.76,
+     "total": 200056.99,
+     "profit_2e_semestre": 266042.17
+    },
+    "bandit": {
+     "essai": 88529.94,
+     "exploitation": 90124.4,
+     "total": 178654.34,
+     "profit_2e_semestre": 242463.45
+    },
+    "sans_engagement": {
+     "essai": 89217.51,
+     "exploitation": 96837.07,
+     "total": 186054.58,
+     "profit_2e_semestre": 269096.61
+    }
+   },
+   "secs": 5.9
+  },
+  {
+   "graine": 6279,
+   "monde": "t3e",
+   "ecartee": false,
+   "objet": "jucu0",
+   "prix_reference": 10.57,
+   "cout_vrai": 5.649,
+   "cout_au_jour_183": 5.649,
+   "decision_chaine": -1,
+   "joues": {
+    "bandit": [
+     0,
+     0.5,
+     -0.5,
+     1,
+     -1,
+     0,
+     -1,
+     -1,
+     -0.5,
+     -0.5,
+     -1,
+     -0.5,
+     0,
+     -1,
+     0.5,
+     -1,
+     -1,
+     -1,
+     0.5,
+     -1,
+     -1,
+     -1,
+     0,
+     -1,
+     -1,
+     -1
+    ],
+    "sans_engagement": [
+     -1,
+     0,
+     1,
+     -1,
+     1,
+     1,
+     -1,
+     0,
+     -1,
+     -1,
+     -1,
+     -1,
+     -1,
+     -1,
+     -1,
+     -1,
+     -1,
+     -1,
+     -1,
+     -1,
+     -1,
+     -1,
+     -1,
+     -1,
+     -1,
+     -1
+    ]
+   },
+   "bras": {
+    "nul": {
+     "essai": 8114.58,
+     "exploitation": 8153.93,
+     "total": 16268.51,
+     "profit_2e_semestre": 718440.44
+    },
+    "chaine": {
+     "essai": 7314.01,
+     "exploitation": 8344.9,
+     "total": 15658.91,
+     "profit_2e_semestre": 717852.37
+    },
+    "aveugle:-1": {
+     "essai": 8167.83,
+     "exploitation": 8311.18,
+     "total": 16479.01,
+     "profit_2e_semestre": 718554.41
+    },
+    "aveugle:-0.5": {
+     "essai": 8965.8,
+     "exploitation": 8794.77,
+     "total": 17760.57,
+     "profit_2e_semestre": 719861.35
+    },
+    "aveugle:0": {
+     "essai": 8119.12,
+     "exploitation": 8217.53,
+     "total": 16336.65,
+     "profit_2e_semestre": 718439.67
+    },
+    "aveugle:0.5": {
+     "essai": 6053.44,
+     "exploitation": 6368.14,
+     "total": 12421.58,
+     "profit_2e_semestre": 714581.19
+    },
+    "aveugle:1": {
+     "essai": 4468.36,
+     "exploitation": 4759.4,
+     "total": 9227.77,
+     "profit_2e_semestre": 711336
+    },
+    "bandit": {
+     "essai": 7581.93,
+     "exploitation": 7464.99,
+     "total": 15046.92,
+     "profit_2e_semestre": 717266.24
+    },
+    "sans_engagement": {
+     "essai": 7314.01,
+     "exploitation": 8328.04,
+     "total": 15642.05,
+     "profit_2e_semestre": 717852.37
+    }
+   },
+   "secs": 8.8
+  },
+  {
+   "graine": 6280,
+   "monde": "t3e",
+   "ecartee": false,
+   "objet": "kimudu9",
+   "prix_reference": 8.96,
+   "cout_vrai": 3.912,
+   "cout_au_jour_183": 3.912,
+   "decision_chaine": -1,
+   "joues": {
+    "bandit": [
+     0,
+     0.5,
+     -0.5,
+     1,
+     -1,
+     0,
+     1,
+     -1,
+     -1,
+     0,
+     0,
+     -1,
+     0,
+     -1,
+     1,
+     -0.5,
+     1,
+     -1,
+     1,
+     1,
+     0,
+     0.5,
+     0.5,
+     0,
+     0,
+     0
+    ],
+    "sans_engagement": [
+     -1,
+     0,
+     1,
+     -1,
+     1,
+     1,
+     -1,
+     0,
+     -1,
+     -1,
+     -1,
+     -1,
+     1,
+     -1,
+     -1,
+     -1,
+     -1,
+     -1,
+     -1,
+     -1,
+     -1,
+     0,
+     -1,
+     -1,
+     0,
+     -1
+    ]
+   },
+   "bras": {
+    "nul": {
+     "essai": 4242.98,
+     "exploitation": 5354.55,
+     "total": 9597.53,
+     "profit_2e_semestre": -15326.01
+    },
+    "chaine": {
+     "essai": 4329.92,
+     "exploitation": 4753.86,
+     "total": 9083.79,
+     "profit_2e_semestre": -15729.43
+    },
+    "aveugle:-1": {
+     "essai": 4421.52,
+     "exploitation": 4734.31,
+     "total": 9155.83,
+     "profit_2e_semestre": -15643.51
+    },
+    "aveugle:-0.5": {
+     "essai": 4770.42,
+     "exploitation": 5045.01,
+     "total": 9815.43,
+     "profit_2e_semestre": -15026.74
+    },
+    "aveugle:0": {
+     "essai": 4209.15,
+     "exploitation": 5275.48,
+     "total": 9484.62,
+     "profit_2e_semestre": -16037.52
+    },
+    "aveugle:0.5": {
+     "essai": 3497.86,
+     "exploitation": 4697.28,
+     "total": 8195.15,
+     "profit_2e_semestre": -17449.28
+    },
+    "aveugle:1": {
+     "essai": 3072.82,
+     "exploitation": 4001.28,
+     "total": 7074.1,
+     "profit_2e_semestre": -18527.76
+    },
+    "bandit": {
+     "essai": 4197.85,
+     "exploitation": 4954.07,
+     "total": 9151.92,
+     "profit_2e_semestre": -16371.38
+    },
+    "sans_engagement": {
+     "essai": 4179.18,
+     "exploitation": 4818.15,
+     "total": 8997.34,
+     "profit_2e_semestre": -15924.72
+    }
+   },
+   "secs": 5.9
+  }
+ ]
+}
