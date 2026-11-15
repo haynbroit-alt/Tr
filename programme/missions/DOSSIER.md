@@ -98,6 +98,12 @@ près d'une entreprise sur deux y perd ; et là où monter le prix est toujours 
 Source : dépôt commun, `programme/t3/RESULTATS_T3.md`, `programme/t3b/RESULTATS_T3B.md`,
 `programme/t3c/RESULTATS_T3C.md`.
 
+Depuis, quatre tests de plus (T3d à T3g, 294 entreprises simulées mesurées). Sur les quatre lots où l'essai est le
+même (320 entreprises), il fait 6,5 points de mieux que « ne rien changer » en moyenne, et 42 % des entreprises y
+perdent. Quand la marge est faible, un plan qui écarte d'avance les baisses de prix non rentables (calcul sur le
+coût) fait mieux que le plan d'origine dans 52 entreprises sur 54 : il est désormais celui de l'outil. Sources :
+`programme/t3f/RESULTATS_T3F.md`, `programme/t3g/RESULTATS_T3G.md`.
+
 **F. Distinguer l'effet d'un prix de celui d'une promotion — sur des ventes réelles.**
 Sur les ventes hebdomadaires de jus d'orange de 83 magasins d'une chaîne américaine (données publiques, 106 139
 semaines de vente) : le niveau de prix que la lecture retient sur la première moitié des semaines dégage 41 % de

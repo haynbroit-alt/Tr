@@ -2,8 +2,10 @@
 // ont laissé debout (programme/t3, t3b, t3c) : un essai court conduit par le plan de CORTEX, puis une décision par la
 // table des ventes constatées, avec le coût unitaire. Aucune loi n'entre dans la décision, et sans coût elle refuse.
 // Ce que ces tests n'ont PAS établi est écrit dans chaque rapport : l'outil ne promet pas de gain.
-import * as C from './adaptateurs/cortex.js';
-import { PAS, NIVEAUX, BLOC, BLOCS_COURT, prixDe } from './problemes/essai-prix.js';
+// Depuis T3g (programme/t3g) : quand le coût est connu, le plan écarte d'avance les baisses qui ne peuvent pas être
+// rentables (il faudrait une demande plus sensible au prix que le seuil E_MAX pour qu'elles rapportent).
+import { NIVEAUX, BLOC, BLOCS_COURT, prixDe } from './problemes/essai-prix.js';
+import { planChaine, planPrudent, eRequise, E_MAX } from './problemes/essai-prix-prudent.js';
 
 export const HISTORIQUE = 182, JOURS_REF = 14, TOLERANCE = 0.0051;
 const med = (v) => { const s = [...v].sort((a, b) => a - b); return s.length ? s[s.length >> 1] : null; };
@@ -39,9 +41,10 @@ export function lireVentes(texte) {
 }
 
 const LIMITES = [
-  'Méthode éprouvée en simulation seulement (160 entreprises simulées, trois tests) ; jamais encore sur une entreprise réelle.',
+  'Méthode éprouvée en simulation seulement (454 entreprises simulées, sept tests) ; jamais encore sur une entreprise réelle.',
   'Établi en simulation : le prix choisi après l’essai fait mieux qu’une règle fixe pendant qu’on l’applique.',
-  'NON établi : que l’essai se rembourse face à « ne rien changer ». En simulation, près d’une entreprise sur deux y perd.',
+  'Aucun gain n’est promis. En simulation l’essai fait en moyenne mieux que « ne rien changer », mais environ quatre entreprises sur dix y perdent.',
+  'Les baisses écartées du plan le sont par un calcul sur votre coût : si votre produit est exceptionnellement sensible au prix, une baisse écartée aurait pu être la bonne.',
   'Une semaine à prix bas peut vendre plus que le réapprovisionnement ne soutient : la hausse des ventes est alors surestimée.',
   'Pendant l’essai, rien d’autre ne doit changer sur ce produit (promotion, publicité, rupture), sinon la lecture est faussée : sur des ventes réelles de grande distribution, l’effet lu sur le prix venait surtout des promotions.',
 ];
@@ -52,7 +55,14 @@ export function produitsEligibles(lignes, jd) {
   return [...g].map(([produit, c]) => ({ produit, lignes: c.lignes, jours_actifs: c.jours.size, eligible: c.jours.size >= HISTORIQUE / 2 })).sort((a, b) => b.lignes - a.lignes);
 }
 
-// Plan d'essai : 8 semaines, un prix par semaine, niveaux donnés par le plan de CORTEX (P3 gelé).
+// Niveaux de l'essai : plan de CORTEX (P3 gelé) ; avec un coût, les baisses non rentables en sont écartées (T3g).
+export function niveauxDuPlan(pref, cout) {
+  const base = planChaine(), niveaux = cout > 0 ? planPrudent(base, pref, cout) : base;
+  const ecartes = [...new Set(base.filter((u, i) => niveaux[i] !== u))].map((u) => { const prix = prixDe(pref, u), e = eRequise(pref, cout, prix); return { niveau: u, prix, sous_le_cout: prix <= cout, sensibilite_requise: Number.isFinite(e) ? Number(e.toFixed(1)) : null, ventes_a_multiplier_par: prix > cout ? Number(((pref - cout) / (prix - cout)).toFixed(1)) : null }; });
+  return { niveaux, ecartes };
+}
+
+// Plan d'essai : 8 semaines, un prix par semaine.
 export function plan({ lignes, produit, debut, cout = null }) {
   const jd = jourDe(debut);
   if (jd == null) return { possible: false, motif: `date de début illisible : ${debut}` };
@@ -61,21 +71,25 @@ export function plan({ lignes, produit, debut, cout = null }) {
   if (!e.eligible) return { possible: false, motif: `« ${produit} » n’est vendu que ${e.jours_actifs} jours sur ${HISTORIQUE} : il en faut au moins un sur deux pour qu’un essai de ${BLOCS_COURT} semaines se lise` };
   const ref = med(lignes.filter((r) => r.produit === produit && r.jour >= jd - JOURS_REF && r.jour < jd).map((r) => r.montant / r.quantite));
   if (!ref) return { possible: false, motif: `aucune vente de « ${produit} » dans les ${JOURS_REF} jours avant le début : pas de prix de référence` };
-  const pref = Math.round(ref * 100) / 100, niveaux = C.planActif({ text: '1 / p', f: (u) => PAS ** -u[0] }).plan.slice(0, BLOCS_COURT).map((u) => u[0]);
+  const pref = Math.round(ref * 100) / 100, { niveaux, ecartes } = niveauxDuPlan(pref, cout);
   const semaines = niveaux.map((u, b) => ({ semaine: b + 1, du: iso(jd + BLOC * b), au: iso(jd + BLOC * b + BLOC - 1), niveau: u, prix: prixDe(pref, u), variation_pct: Number((100 * (prixDe(pref, u) / pref - 1)).toFixed(1)) }));
   const alertes = [];
-  if (cout != null && semaines.some((s) => s.prix <= cout)) alertes.push(`Le prix bas (${Math.min(...semaines.map((s) => s.prix))} €) est sous le coût (${cout} €) : ces semaines se vendent à perte. À discuter avant de lancer.`);
-  if (cout == null) alertes.push('Coût unitaire non fourni : il sera indispensable pour décider. Sans coût, on maximise le chiffre d’affaires et, en simulation, on y perd.');
-  return { possible: true, produit, debut: iso(jd), decision_le: iso(jd + BLOC * BLOCS_COURT), prix_reference: pref, jours_actifs: e.jours_actifs, semaines, alertes, limites: LIMITES };
+  for (const x of ecartes) alertes.push(x.sous_le_cout ? `La baisse à ${x.prix} € a été écartée du plan : ce prix est sous le coût (${cout} €), chaque vente y serait à perte.`
+    : `La baisse à ${x.prix} € a été écartée du plan : pour qu’elle rapporte autant que le prix actuel, il faudrait vendre ${x.ventes_a_multiplier_par.toLocaleString('fr-FR')} fois plus (sensibilité au prix de ${x.sensibilite_requise.toLocaleString('fr-FR')}, au-delà du seuil de ${E_MAX} retenu).`);
+  if (cout != null && pref <= cout) alertes.push(`Le prix actuel (${pref} €) ne dépasse pas le coût (${cout} €) : vérifier le coût fourni avant tout essai.`);
+  if (cout == null) alertes.push('Coût unitaire non fourni : il sera indispensable pour décider, et sans lui le plan ne peut pas écarter les baisses non rentables. Sans coût, on maximise le chiffre d’affaires et, en simulation, on y perd.');
+  return { possible: true, produit, debut: iso(jd), decision_le: iso(jd + BLOC * BLOCS_COURT), prix_reference: pref, jours_actifs: e.jours_actifs, cout_au_plan: cout, niveaux, ecartes, semaines, alertes, limites: LIMITES };
 }
 
 // Décision après l'essai : parmi les prix essayés, celui qui maximise (prix − coût) × ventes par jour constatées.
 // Une vente est rattachée à un prix par son propre prix unitaire, et un prix ne reçoit rien avant sa première semaine.
-export function decider({ lignes, produit, debut, prix_reference, cout }) {
+// Le plan relu est celui que `plan` a rendu : avec le coût donné alors (cout_plan, par défaut le coût de la décision),
+// ou le plan complet si l'essai a été lancé sans coût (plan_standard).
+export function decider({ lignes, produit, debut, prix_reference, cout, cout_plan = null, plan_standard = false }) {
   const jd = jourDe(debut), pref = Number(prix_reference);
   if (jd == null || !(pref > 0)) return { possible: false, motif: 'date de début ou prix de référence illisible' };
   if (!(cout > 0)) return { possible: false, motif: 'coût unitaire manquant : sans lui la décision se prend sur le chiffre d’affaires, ce qui a perdu plus de la moitié du gain dans les trois tests' };
-  const niveaux = C.planActif({ text: '1 / p', f: (u) => PAS ** -u[0] }).plan.slice(0, BLOCS_COURT).map((u) => u[0]), fin = jd + BLOC * BLOCS_COURT;
+  const { niveaux } = niveauxDuPlan(pref, plan_standard ? null : cout_plan ?? cout), fin = jd + BLOC * BLOCS_COURT;
   const premier = (u) => (niveaux.indexOf(u) < 0 ? Infinity : jd + BLOC * niveaux.indexOf(u));
   const q = new Map(NIVEAUX.map((u) => [u, 0]));
   let hors = 0, total = 0, promo = 0;

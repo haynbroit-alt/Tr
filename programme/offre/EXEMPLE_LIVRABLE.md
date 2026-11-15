@@ -21,9 +21,10 @@ Semaine   du           au           prix        écart
 Décision possible à partir du 2026-08-28, avec l’export des ventes de la période et le coût unitaire.
 
 Ce que cet essai permet et ne permet pas :
-  - Méthode éprouvée en simulation seulement (160 entreprises simulées, trois tests) ; jamais encore sur une entreprise réelle.
+  - Méthode éprouvée en simulation seulement (454 entreprises simulées, sept tests) ; jamais encore sur une entreprise réelle.
   - Établi en simulation : le prix choisi après l’essai fait mieux qu’une règle fixe pendant qu’on l’applique.
-  - NON établi : que l’essai se rembourse face à « ne rien changer ». En simulation, près d’une entreprise sur deux y perd.
+  - Aucun gain n’est promis. En simulation l’essai fait en moyenne mieux que « ne rien changer », mais environ quatre entreprises sur dix y perdent.
+  - Les baisses écartées du plan le sont par un calcul sur votre coût : si votre produit est exceptionnellement sensible au prix, une baisse écartée aurait pu être la bonne.
   - Une semaine à prix bas peut vendre plus que le réapprovisionnement ne soutient : la hausse des ventes est alors surestimée.
   - Pendant l’essai, rien d’autre ne doit changer sur ce produit (promotion, publicité, rupture), sinon la lecture est faussée : sur des ventes réelles de grande distribution, l’effet lu sur le prix venait surtout des promotions.
 ```
@@ -42,9 +43,10 @@ Prix essayé    jours   ventes par jour   marge par jour
 Prix retenu : 9,63 € (au lieu de 12,04 €).
 
 Portée de cette décision :
-  - Méthode éprouvée en simulation seulement (160 entreprises simulées, trois tests) ; jamais encore sur une entreprise réelle.
+  - Méthode éprouvée en simulation seulement (454 entreprises simulées, sept tests) ; jamais encore sur une entreprise réelle.
   - Établi en simulation : le prix choisi après l’essai fait mieux qu’une règle fixe pendant qu’on l’applique.
-  - NON établi : que l’essai se rembourse face à « ne rien changer ». En simulation, près d’une entreprise sur deux y perd.
+  - Aucun gain n’est promis. En simulation l’essai fait en moyenne mieux que « ne rien changer », mais environ quatre entreprises sur dix y perdent.
+  - Les baisses écartées du plan le sont par un calcul sur votre coût : si votre produit est exceptionnellement sensible au prix, une baisse écartée aurait pu être la bonne.
   - Une semaine à prix bas peut vendre plus que le réapprovisionnement ne soutient : la hausse des ventes est alors surestimée.
   - Pendant l’essai, rien d’autre ne doit changer sur ce produit (promotion, publicité, rupture), sinon la lecture est faussée : sur des ventes réelles de grande distribution, l’effet lu sur le prix venait surtout des promotions.
 ```

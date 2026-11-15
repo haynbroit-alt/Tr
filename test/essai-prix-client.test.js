@@ -68,3 +68,18 @@ test('décision : les ventes signalées en promotion sont écartées et comptée
   const lu = lireVentes('date;produit;quantite;montant;promo\n2026-03-01;a;2;7,50;oui\n2026-03-02;a;1;3,75;0\n2026-03-03;a;1;3,75;');
   assert.deepEqual(lu.lignes.map((r) => r.promotion), [true, false, false]);
 });
+
+test('plan prudent (T3g) : avec un coût, les baisses non rentables sont écartées, et la décision relit le même plan', () => {
+  const { lignes } = lireVentes(ventes());
+  const p = plan({ lignes, produit: 'lampe', debut: iso(DEBUT), cout: 7.2 });           // marge 1,39 : −20 % et −10,6 % écartés
+  assert.deepEqual(p.semaines.map((s) => s.niveau), [0, 0, 1, 0, 1, 1, 0, 0]);
+  assert.deepEqual(p.ecartes.map((x) => x.niveau), [-1]);
+  assert.match(p.alertes.join(' '), /écartée du plan : pour qu’elle rapporte/);
+  assert.deepEqual(plan({ lignes, produit: 'lampe', debut: iso(DEBUT), cout: 6.8 }).semaines.map((s) => s.niveau), [-0.5, 0, 1, -0.5, 1, 1, -0.5, 0]);   // marge 1,47
+  assert.deepEqual(plan({ lignes, produit: 'lampe', debut: iso(DEBUT), cout: 6 }).semaines.map((s) => s.niveau), [-1, 0, 1, -1, 1, 1, -1, 0]);            // marge 1,67 : plan complet
+  // décision : par défaut le plan relu est celui du coût fourni ; --plan-standard relit le plan complet
+  const d = decider({ lignes, produit: 'lampe', debut: iso(DEBUT), prix_reference: 10, cout: 7.2 });
+  assert.equal(d.possible, true); assert.deepEqual(d.table.map((x) => x.niveau), [0, 1]);
+  assert.deepEqual(decider({ lignes, produit: 'lampe', debut: iso(DEBUT), prix_reference: 10, cout: 7.2, plan_standard: true }).table.map((x) => x.niveau), [-1, 0, 1]);
+  assert.deepEqual(decider({ lignes, produit: 'lampe', debut: iso(DEBUT), prix_reference: 10, cout: 7.2, cout_plan: 6 }).table.map((x) => x.niveau), [-1, 0, 1]);
+});
