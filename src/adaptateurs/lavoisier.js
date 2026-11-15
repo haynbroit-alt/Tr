@@ -3,6 +3,7 @@
 // registre des paris) ne sont pas écrits : ils ne sont donc ni branchés ni imités.
 import { generate } from '../../moteurs/lavoisier/src/bench/generator.js';
 import { devClass } from '../../moteurs/lavoisier/src/bench/classes.js';
+import { DEV_ARCHETYPES } from '../../moteurs/lavoisier/src/bench/archetypes.js';
 import { seal } from '../../moteurs/lavoisier/src/bench/harness.js';
 import { evaluate } from '../../moteurs/lavoisier/src/bench/evaluate.js';
 import { bilan } from '../../moteurs/lavoisier/src/bilan/index.js';
@@ -17,6 +18,14 @@ export function entreprise(graine) {
   const classe = devClass(graineDev(graine));
   const { observed, truth } = generate(graine, classe);
   const { proxy, unlock } = seal(truth);
+  return { classe, observe: observed, verite: proxy, ouvrir: unlock };
+}
+
+// Épreuve JOURNAL-ABÎMÉ (programme/abime) : 40 entreprises neuves, archétypes de développement, 1 ou 2 flux cachés.
+export function entrepriseAbimee(graine) {
+  if (!Number.isInteger(graine) || graine < 8001 || graine > 8040) throw new Error('JOURNAL-ABÎMÉ : graines 8001 à 8040 seulement');
+  const classe = { archetype: DEV_ARCHETYPES[graine % 3], nHidden: 1 + (graine % 2), level: 'realiste' };
+  const { observed, truth } = generate(graine, classe), { proxy, unlock } = seal(truth);
   return { classe, observe: observed, verite: proxy, ouvrir: unlock };
 }
 
@@ -39,7 +48,10 @@ const MONDES = { t3: { classe: T3_CLASSE, dev: [201, 220], test: [6001, 6040], c
   t3d: { classe: { ...T3_CLASSE, demande: 'sensible' }, dev: [221, 240], test: [6161, 6220], cle: 'T3D_TEST' },   // T3d : face au bandit de Thompson
   t3e: { classe: { ...T3_CLASSE, demande: 'sensible', alea: 'commun' }, dev: [241, 260], test: [6221, 6280], cle: 'T3E_TEST' },
   t3f: { classe: { ...T3_CLASSE, demande: 'sensible', alea: 'commun' }, dev: [241, 260], test: [6281, 6400], cle: 'T3F_TEST' },
-  t3g: { classe: { ...T3_CLASSE, demande: 'sensible', alea: 'commun' }, dev: [241, 260], test: [6401, 6700], cle: 'T3G_TEST' } };   // T3f : règle de marge sans essai, monde de T3e   // T3e : la même confrontation, hasard commun (L2c)   // T3c : confirmation, sans mise au point
+  t3g: { classe: { ...T3_CLASSE, demande: 'sensible', alea: 'commun' }, dev: [241, 260], test: [6401, 6700], cle: 'T3G_TEST' },
+  t3h: { classe: { ...T3_CLASSE, demande: 'sensible', alea: 'commun' }, dev: [301, 500], test: [0, -1], cle: 'T3H_TEST' },   // test de T3h non exécuté (l'atelier a refusé) : ses graines passent à l'arène
+  arene1: { classe: { ...T3_CLASSE, demande: 'sensible', alea: 'commun' }, dev: [301, 500], test: [6701, 6900], cle: 'ARENE1_TEST' },
+  syn: { classe: { ...T3_CLASSE, demande: 'sensible', alea: 'commun' }, dev: [241, 260], test: [6901, 7000], cle: 'SYNERGIE_TEST' } };   // T3h : lot de l'atelier 301 à 500   // T3f : règle de marge sans essai, monde de T3e   // T3e : la même confrontation, hasard commun (L2c)   // T3c : confirmation, sans mise au point
 export function entreprisePilotee(graine, pilotage = [], monde = 't3') {
   const M = MONDES[monde];
   if (!M) throw new Error(`monde inconnu : ${monde}`);

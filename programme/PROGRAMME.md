@@ -491,3 +491,18 @@ fractionné ; l'appariement de l'abonnement réaliste. PR `haynbroit-alt/A#14`.
   médiane +10,5 ; mieux dans 52 entreprises sur 54). Trois critères sur trois tenus. Sur l'ensemble : +3,2 points.
 - **La chaîne retenue devient** : plan prudent, huit semaines, décision par la table, coût de LAVOISIER.
 - Limite : le simulateur est indulgent avec cette règle (peu de demandes très sensibles) ; un seul monde.
+
+### Cinq chantiers demandés par le propriétaire (15 novembre 2026) : état
+
+1. **Prédire les perdantes avant l'essai** — mesuré (`programme/t3h/`, 199 entreprises) : **non**, avec les traits
+   lisibles au jour 183. Aucun groupe d'au moins 20 entreprises où ne pas essayer vaut mieux. Les perdantes perdent
+   peu (médiane 4,8 points) : c'est le prix d'un essai qui confirme le prix. Suite : réduire ce prix (arrêt anticipé).
+2. **Capacité différenciante de GALILÉE** — SOTA-LOIS-2 mesuré (`programme/sota/RESULTATS_SOTA_LOIS_2.md`) : aucune
+   différence établie avec Operon sur 31 jeux réels, formules 4 à 10 fois plus courtes, devant gplearn. Protocole G5
+   écrit dans le dépôt de GALILÉE (loi commune à plusieurs petits jeux) ; **code en attente du plafond**.
+3. **LAVOISIER sur écritures imparfaites** — mesuré (`programme/abime/`, 40 entreprises, 560 lectures) : il ne casse
+   jamais, mais ne retrouve plus les flux cachés dès 5 % de lignes perdues, doublées ou mal datées (77 % → moins
+   de 33 %), et ne le signale pas. Suite : un contrôle de qualité du journal avant lecture.
+4. **Synergie des trois moteurs** — à mesurer par un plan factoriel (protocole `programme/synergie/`).
+5. **Méthode qui invente ses méthodes** — l'atelier (`src/atelier.js`) : construit, a refusé de proposer une règle
+   sur T3h. Reste à l'étalonner sur des cas à réponse connue.
