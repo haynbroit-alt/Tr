@@ -37,3 +37,12 @@ entrer dans l'outil de livraison.
 ## 6. Domaine de validité
 
 Simulation, un monde, un objet par entreprise ; coût unitaire nécessaire.
+
+---
+
+## 7. Vérification du code (graines 241 à 246) — écrit et poussé avant le tour
+
+`src/problemes/arene-3.js` tourne sur six entreprises déjà vues. Rien n'a été changé aux prétendants, au seuil ni à
+la règle de succession.
+
+Tour : `ARENE3_TEST=exécution-unique node bin/commun.js executer arene-3`, une seule fois.
