@@ -1,0 +1,6 @@
+[
+ { "moteur": "GALILÉE", "travail": "G5", "mesure": "loi commune à plusieurs petits jeux : erreur de prédiction sur points mis de côté, 200 mondes simulés neufs (graines 9001 à 9200), sans la bibliothèque de formes",
+  "avant": "GALILÉE jeu par jeu : erreur médiane 1,45 ; réuni : 4,18", "apres": "loi commune 0,30 ; devant GALILÉE jeu par jeu dans 195 mondes sur 200, devant Operon réuni dans 189 ; forme vraie retrouvée 24 fois sur 50 à 5 % de bruit (C3 manqué) ; 196 mondes sans loi refusés sur 200",
+  "seuil": "C1, C2, C4 tenus ; C3 manqué (48 % pour 60 %)", "commit": "a31b6c3", "source": "haynbroit-alt/All RESULTATS_G5.md",
+  "portee": "mondes simulés, une variable ; Operon à budget réduit et sans variable de jeu ; jeux réels groupés et cas d'usage non mesurés" }
+]

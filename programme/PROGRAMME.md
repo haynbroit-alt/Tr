@@ -540,3 +540,7 @@ fractionné ; l'appariement de l'abonnement réaliste. PR `haynbroit-alt/A#14`.
   les prix restent des propositions jusqu'au premier devis signé par le propriétaire ; la liste de ce qu'il faut
   avant la première facture est écrite, sources à vérifier.
 - **Simulation en pause** après G5 : les rendements décroissent, un essai réel apprendra davantage.
+- **G5 testé** (`haynbroit-alt/All`, `RESULTATS_G5.md`, 200 mondes neufs) : la loi commune à plusieurs petits jeux
+  prédit mieux que GALILÉE actuel, qu'Operon (jeu par jeu et réuni) et qu'une droite par jeu ; elle ne retrouve la
+  forme vraie qu'une fois sur deux sans aide (C3 manqué). GALILÉE a enfin une place possible dans la chaîne : la loi
+  de demande commune aux produits d'une entreprise. Données réelles groupées : non mesurées.
