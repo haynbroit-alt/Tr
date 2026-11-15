@@ -56,3 +56,15 @@ test('décision : sans coût elle refuse ; les ventes hors plan sont comptées �
   assert.ok(d.hors_plan_pct > 10); assert.match(d.alertes.join(' '), /prix qui n’est pas celui du plan/);
   assert.deepEqual(d.table.map((x) => x.quantite), [168, 70, 63]);
 });
+
+test('décision : les ventes signalées en promotion sont écartées et comptées', () => {
+  const { lignes } = lireVentes(ventes());
+  // une promotion gonfle les ventes au prix haut pendant ses trois semaines : sans la colonne, elle fausse la lecture
+  const avec = [...lignes, ...Array.from({ length: 21 }, (_, i) => ({ jour: DEBUT + [14, 28, 35][Math.floor(i / 7)] + (i % 7), produit: 'lampe', quantite: 6, montant: 75, promotion: true }))];
+  const sans = avec.map((r) => ({ ...r, promotion: false }));
+  assert.equal(decider({ lignes: sans, produit: 'lampe', debut: iso(DEBUT), prix_reference: 10, cout: 6 }).niveau_retenu, 1);
+  const d = decider({ lignes: avec, produit: 'lampe', debut: iso(DEBUT), prix_reference: 10, cout: 6 });
+  assert.equal(d.niveau_retenu, 0); assert.ok(d.promotion_pct > 20); assert.match(d.alertes.join(' '), /signalées en promotion/);
+  const lu = lireVentes('date;produit;quantite;montant;promo\n2026-03-01;a;2;7,50;oui\n2026-03-02;a;1;3,75;0\n2026-03-03;a;1;3,75;');
+  assert.deepEqual(lu.lignes.map((r) => r.promotion), [true, false, false]);
+});

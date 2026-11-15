@@ -421,3 +421,15 @@ fractionné ; l'appariement de l'abonnement réaliste. PR `haynbroit-alt/A#14`.
   5 tests sur un jeu synthétique. **Jamais utilisé sur des ventes réelles.**
 - L'offre « plan d'essais de prix » du dossier de missions a désormais un outil. Elle attend toujours les trois
   gestes du propriétaire : immatriculation, profil, accord de publication. **Gains réels : 0 €.**
+
+### PRIX-RÉEL : premier contact avec des ventes réelles (15 novembre 2026)
+
+- **Fait** (`programme/missions/prix-reel/`, protocole avant tout calcul) : la lecture « quel niveau de prix dégage
+  le plus de marge », confrontée aux ventes hebdomadaires de jus d'orange de 83 magasins d'une chaîne réelle
+  (données publiques, non copiées ici). Ce n'est pas un essai : la chaîne avait choisi ses prix.
+- **Résultat** : la lecture se confirme sur les semaines non vues (+40,6 % de marge, 65 magasins sur 83), mais sans
+  les semaines de promotion affichée le gain tombe à +6,0 % et n'est plus significatif. Sur des ventes observées,
+  la lecture confond le prix et la promotion.
+- **Conséquences** : l'outil `essai-prix-client` écarte les ventes signalées en promotion ; une mission ne conclut
+  jamais sur l'historique seul et demande au client ses semaines de promotion ; exemple F au dossier.
+- **Gains réels : 0 €.** Le prochain pas reste un vrai essai avec un client.

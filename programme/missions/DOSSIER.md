@@ -53,7 +53,7 @@ autoentrepreneur.urssaf.fr/portail/accueil/creer-mon-auto-entreprise/guichet-uni
 **Tarif** : [à fixer par vous — aucun tarif de marché sourcé n'a été trouvé ; une première mission courte, à
 périmètre fermé, limite le risque des deux côtés.]
 
-## 3. Cinq exemples de travaux (quatre sur données simulées, un sur mesures réelles)
+## 3. Six exemples de travaux (quatre sur données simulées, deux sur données réelles)
 
 Aucun n'est un travail pour un client. Chacun se relit dans les dépôts.
 
@@ -98,11 +98,20 @@ près d'une entreprise sur deux y perd ; et là où monter le prix est toujours 
 Source : dépôt commun, `programme/t3/RESULTATS_T3.md`, `programme/t3b/RESULTATS_T3B.md`,
 `programme/t3c/RESULTATS_T3C.md`.
 
+**F. Distinguer l'effet d'un prix de celui d'une promotion — sur des ventes réelles.**
+Sur les ventes hebdomadaires de jus d'orange de 83 magasins d'une chaîne américaine (données publiques, 106 139
+semaines de vente) : le niveau de prix que la lecture retient sur la première moitié des semaines dégage 41 % de
+marge de plus sur la seconde moitié, dans des semaines qu'elle n'a pas vues. Mais une fois écartées les semaines de
+promotion affichée, le gain tombe à 6 % et ne se distingue plus du hasard : c'est la promotion qui vendait, pas le
+prix. Limites : observation, pas essai — la chaîne avait choisi ses prix ; un seul produit, années 1990. Ce que
+l'exemple montre : lire l'historique des ventes ne dit pas quel prix fixer, et nous savons le vérifier.
+Source : dépôt commun, `programme/missions/prix-reel/RESULTATS_PRIX_REEL.md`.
+
 Outil de livraison prêt : `node bin/commun.js essai-prix-client plan <ventes.csv> --debut AAAA-MM-JJ --produit X`
 propose l'essai (huit semaines, un prix par semaine) à partir d'un simple export de ventes (date, produit, quantité,
 montant) ; `… decider <ventes.csv> --debut … --produit X --ref P --cout C` rend le prix à retenir après l'essai. Il
 refuse un produit vendu moins d'un jour sur deux, refuse de décider sans coût unitaire, signale une décision fragile
-et les ventes faites hors plan, et écrit ses limites dans chaque rapport. Vérifié sur les 20 entreprises simulées de
+et les ventes faites hors plan, écarte les ventes signalées en promotion, et écrit ses limites dans chaque rapport. Vérifié sur les 20 entreprises simulées de
 mise au point : même plan et même décision que la chaîne testée, 20 fois sur 20. Jamais utilisé sur des ventes
 réelles. Exemple à essayer : `programme/missions/essai-prix/exemple-ventes-simulees.csv` (ventes simulées).
 
@@ -115,7 +124,8 @@ réelles. Exemple à essayer : `programme/missions/essai-prix/exemple-ventes-sim
 > laquelle il vous faut une réponse.
 >
 > Pour un essai de prix, il me faut en plus l'export de vos ventes des six derniers mois (une ligne par vente :
-> date, produit, quantité, montant) et le coût d'achat du produit concerné.
+> date, produit, quantité, montant, et si possible une colonne signalant les promotions) et le coût d'achat du
+> produit concerné.
 >
 > Je vous proposerai ensuite un périmètre fermé : la question exacte, le critère qui dira si la réponse est fiable,
 > et un prix. Si vos données ne permettent pas de conclure, je vous le dirai avant de commencer.

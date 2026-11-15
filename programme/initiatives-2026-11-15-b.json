@@ -1,0 +1,9 @@
+[
+  {
+    "cle": "missions#prix-reel",
+    "action": "Confronter la lecture de marge par niveau de prix à des ventes réelles publiques (jus d’orange, 83 magasins), avec un protocole écrit avant tout calcul",
+    "nature": { "depense_eur": 0, "tiers": false, "engagement": false, "irreversible": false },
+    "attendu": "Savoir, avant toute mission, ce que la lecture d’un historique de ventes réel peut dire et ne peut pas dire",
+    "resultat": "Sur les semaines non vues la lecture se confirme (+40,6 % de marge), mais sans les semaines de promotion le gain tombe à +6,0 %, non significatif ; l’outil de livraison écarte désormais les ventes en promotion ; aucun message envoyé, 0 € encaissé"
+  }
+]
