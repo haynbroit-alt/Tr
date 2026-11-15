@@ -382,3 +382,19 @@ fractionné ; l'appariement de l'abonnement réaliste. PR `haynbroit-alt/A#14`.
   (protocole dans le dépôt de LAVOISIER avant tout code), puis refaire l'essai là où la bonne direction varie ;
   raccourcir l'essai dès que la décision est claire.
 - **Gains réels : 0 €.** Rien de ce travail n'est un revenu.
+
+### L2b et T3b : le même essai dans un monde où la direction varie (15 novembre 2026, suite)
+
+- **L2b fait** (`haynbroit-alt/A`, `PROTOCOLE_L2B.md`) : option du simulateur où toutes les ventes suivent le prix.
+  Sans l'option, sortie identique à l'octet. La copie gelée de LAVOISIER passe au commit `ce21c06`.
+- **T3b exécuté** (`programme/t3b/`, test unique sur 40 entreprises, dossier `essai-prix#T3B`). Aucune règle
+  aveugle ne gagne (la meilleure perd 2,5 %). Collectif à essai long : +1,2 % (non significatif). **Collectif
+  court (8 semaines) : +6,3 %, soit 8,8 points de mieux que la meilleure règle aveugle (t = 2,90)** ; collectif
+  bref (5 semaines) : +5,0 %, 7,5 points de mieux (t = 2,43).
+- **Par moteur, sur les deux tests** : le coût de LAVOISIER est exact 80 fois sur 80 et pèse 9 à 11 points ; le
+  plan de CORTEX pèse 3 à 10 points, son juge ne décide rien ; la loi de GALILÉE n'aide pas et gêne un peu
+  (−0,8 puis −1,2 point).
+- **Chaîne à retenir, pas encore testée telle quelle** : coût par LAVOISIER, plan de CORTEX arrêté à 5 à 8
+  semaines, décision par la table des ventes, sans loi.
+- **Suite** : tester cette chaîne écrite d'avance ; modèle du stock ; arrêt de l'essai décidé par les données ; un
+  premier jeu de ventes réelles. **Gains réels : 0 €.**

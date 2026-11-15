@@ -89,12 +89,13 @@ touchée à tort sur 34. Limite assumée : sur les journaux les plus désordonn�
 `bench/DEV_M0_BILAN.md`, `PROTOCOLE_M0.md` § 9.
 
 **E. Conduire un essai de prix à partir des seules écritures.**
-Sur 40 entreprises simulées jamais vues pendant la mise au point : le coût unitaire de l'objet est reconstitué
-exactement dans les 40 ; un essai en trois niveaux alternés rapporte 9,8 points de marge de plus qu'un essai
-« avant / après » ; le prix retenu est le meilleur des cinq niveaux dans 32 cas sur 40. Limite, à dire au client :
-dans ces entreprises simulées, monter le prix de 25 % à l'aveugle aurait rapporté deux fois plus, parce que la
-hausse y est presque toujours la bonne réponse ; l'essai n'a donc pas montré qu'il fait mieux qu'une règle simple.
-Source : dépôt commun, `programme/t3/RESULTATS_T3.md`.
+Deux tests sur 40 entreprises simulées chacun, jamais vues pendant la mise au point. Le coût unitaire de l'objet est
+reconstitué exactement dans les 80 entreprises. Quand la bonne direction de prix varie d'une entreprise à l'autre,
+un essai de huit semaines suivi d'une décision rapporte 6,3 % de marge sur l'objet, alors que la meilleure règle
+fixe (ne rien changer) en perd 2,5 % ; l'écart est significatif. Limites, à dire au client : c'est une simulation ;
+l'avantage est une moyenne, 17 entreprises sur 40 y perdent ; un essai de treize semaines mange presque tout le
+gain ; et dans un monde où monter le prix est toujours juste, une hausse aveugle fait mieux que l'essai.
+Source : dépôt commun, `programme/t3/RESULTATS_T3.md` et `programme/t3b/RESULTATS_T3B.md`.
 
 ## 4. Première réponse à une demande (brouillon)
 
