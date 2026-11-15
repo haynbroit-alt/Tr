@@ -37,7 +37,9 @@ export const T3_CLASSE = { archetype: 'negoce', nHidden: 1, level: 'realiste' };
 const MONDES = { t3: { classe: T3_CLASSE, dev: [201, 220], test: [6001, 6040], cle: 'T3_TEST' }, t3b: { classe: { ...T3_CLASSE, demande: 'sensible' }, dev: [221, 240], test: [6041, 6080], cle: 'T3B_TEST' },
   t3c: { classe: { ...T3_CLASSE, demande: 'sensible' }, dev: [0, -1], test: [6081, 6160], cle: 'T3C_TEST' },
   t3d: { classe: { ...T3_CLASSE, demande: 'sensible' }, dev: [221, 240], test: [6161, 6220], cle: 'T3D_TEST' },   // T3d : face au bandit de Thompson
-  t3e: { classe: { ...T3_CLASSE, demande: 'sensible', alea: 'commun' }, dev: [241, 260], test: [6221, 6280], cle: 'T3E_TEST' } };   // T3e : la même confrontation, hasard commun (L2c)   // T3c : confirmation, sans mise au point
+  t3e: { classe: { ...T3_CLASSE, demande: 'sensible', alea: 'commun' }, dev: [241, 260], test: [6221, 6280], cle: 'T3E_TEST' },
+  t3f: { classe: { ...T3_CLASSE, demande: 'sensible', alea: 'commun' }, dev: [241, 260], test: [6281, 6400], cle: 'T3F_TEST' },
+  t3g: { classe: { ...T3_CLASSE, demande: 'sensible', alea: 'commun' }, dev: [241, 260], test: [6401, 6700], cle: 'T3G_TEST' } };   // T3f : règle de marge sans essai, monde de T3e   // T3e : la même confrontation, hasard commun (L2c)   // T3c : confirmation, sans mise au point
 export function entreprisePilotee(graine, pilotage = [], monde = 't3') {
   const M = MONDES[monde];
   if (!M) throw new Error(`monde inconnu : ${monde}`);

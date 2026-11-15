@@ -57,7 +57,7 @@ export function coutUnitaire(obs, corps, tok) {
   return m > 0 && q > 0 ? { cout: m / q, methode: 'sommes', paires: ratios.length } : { cout: null, methode: 'indisponible', paires: ratios.length };
 }
 
-const planVers = (tok, pref, niveaux, final = null) => [...niveaux.map((u, b) => ({ jour: J1 + BLOC * b, objet: tok, prix: prixDe(pref, u) })),
+export const planVers = (tok, pref, niveaux, final = null) => [...niveaux.map((u, b) => ({ jour: J1 + BLOC * b, objet: tok, prix: prixDe(pref, u) })),
   ...(final == null ? [] : [{ jour: J1 + BLOC * niveaux.length, objet: tok, prix: prixDe(pref, final) }])];
 
 // Ventes de l'essai. Une vente est rattachée à un niveau par son propre prix unitaire, pas par sa date de saisie :
