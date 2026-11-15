@@ -3,10 +3,10 @@
  "taches": {
   "decider_un_prix": {
    "tenant": {
-    "methode": "chaîne prudente (plan de CORTEX allégé par le coût de LAVOISIER, 8 semaines, décision par la table)",
-    "depuis": "T3g, 15 novembre 2026",
-    "tours_tenus": 1,
-    "validite": "simulation, un monde ; jamais sur une entreprise réelle ; le coût unitaire tient sur journal abîmé à 5 % (COÛT-ABÎMÉ), sauf quand il vient de la méthode « par sommes »"
+    "methode": "chaîne prudente à arrêt anticipé (essai lu à 4 semaines : décision immédiate si le meilleur prix dépasse le deuxième de 20 % en marge par jour, sinon 8 semaines)",
+    "depuis": "ARÈNE-2, 15 novembre 2026",
+    "tours_tenus": 0,
+    "validite": "simulation, un monde ; avantage mince sur la chaîne sans arrêt (+0,8 point, t = 2,17) ; pas encore branchée dans l'outil de livraison ; suppose un coût unitaire juste, obtenu par paires reliées"
    },
    "tours": [
     {
@@ -14,22 +14,23 @@
      "source": "programme/arene/RESULTATS_ARENE_1.md",
      "entreprises": 200,
      "resultat": "tenant maintenu ; direct −4,7 points (relégué) ; direct tempéré −3,6 points (relégué)"
+    },
+    {
+     "tour": "ARENE-2",
+     "source": "programme/arene/RESULTATS_ARENE_2.md",
+     "entreprises": 200,
+     "resultat": "arrêt anticipé +0,8 point (prend la place) ; plan naïf −3,3 points (relégué)"
     }
    ],
    "pretendants": [
     {
-     "methode": "LAVOISIER + plan naïf (6 semaines à +11,8 %, 2 à −10,6 %)",
-     "origine": "SYNERGIE : à 0,9 point du tenant en lecture principale, 4,7 points derrière en lecture bornée",
+     "methode": "chaîne prudente sans arrêt (8 semaines)",
+     "origine": "tenant détrôné à ARÈNE-2",
      "etat": "en lice"
     },
     {
      "methode": "bandit de Thompson",
      "origine": "extérieure ; jeu égal deux fois avec l'ancienne chaîne (T3d, T3e)",
-     "etat": "en lice"
-    },
-    {
-     "methode": "essai à arrêt anticipé",
-     "origine": "extérieure ; non écrite",
      "etat": "en lice"
     },
     {
@@ -63,6 +64,11 @@
      "methode": "règle du taux de marge sans essai",
      "tour": "T3f (avant l'arène)",
      "ecart": "jeu égal, deux critères manqués ; repose sur une propriété du simulateur"
+    },
+    {
+     "methode": "LAVOISIER + plan naïf (6 semaines à +11,8 %, 2 à −10,6 %)",
+     "tour": "ARENE-2",
+     "ecart": "−3,3 points, t = −3,83"
     }
    ]
   },
