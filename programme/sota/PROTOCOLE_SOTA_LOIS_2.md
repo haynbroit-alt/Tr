@@ -71,3 +71,14 @@ Les seuils ne seront pas retouchés. Un critère manqué est publié comme tel.
 - La longueur en nœuds n'est pas comptée exactement de la même façon par les deux outils (Operon porte un
   coefficient sur chaque nœud) : l'ordre de grandeur se compare, pas l'unité près.
 - Interpolation seulement : les mesures mises de côté sont entre les mesures vues.
+
+## 8. Précision ajoutée après le passage de GALILÉE, avant celui des concurrents
+
+La règle rend 31 jeux. Le dédoublonnage par contenu identique n'a rien retiré, mais deux paires sont manifestement
+les mêmes données sous deux noms, à l'écriture des dates près (`MASS.accdeaths` et `datasets.USAccDeaths` ;
+`MASS.drivers` et `datasets.UKDriverDeaths`) : GALILÉE y rend exactement le même résultat. Les critères sont
+calculés sur les 31 jeux, comme la règle le dicte, **et** sur 29 (le second de chaque paire retiré) ; si les deux
+lectures divergent, c'est celle sur 29 qui est la bonne, puisqu'un jeu compté deux fois fausse un test des signes.
+
+À ce stade seuls les résultats de GALILÉE sont connus : au-dessous du meilleur témoin sur 13 jeux sur 31, loi
+retenue sur 16, longueur médiane de 4 à 5 nœuds. Aucun concurrent n'a tourné.
