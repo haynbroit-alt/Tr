@@ -398,3 +398,16 @@ fractionné ; l'appariement de l'abonnement réaliste. PR `haynbroit-alt/A#14`.
   semaines, décision par la table des ventes, sans loi.
 - **Suite** : tester cette chaîne écrite d'avance ; modèle du stock ; arrêt de l'essai décidé par les données ; un
   premier jeu de ventes réelles. **Gains réels : 0 €.**
+
+### T3c : la confirmation échoue sur son critère principal (15 novembre 2026, fin)
+
+- **T3c exécuté** (`programme/t3c/`, 80 entreprises neuves, dossier `essai-prix#T3C`) : la chaîne retenue par T3b
+  gagne 4,8 % (critère C2 tenu) mais ne dépasse la meilleure règle aveugle, « ne rien changer » (3,2 %), que de
+  1,6 point, non significatif (**critère C1 manqué**).
+- **Corrections à la note précédente** : l'avantage de 8,8 points de l'essai court n'est pas reproduit ; la loi de
+  GALILÉE ne gêne pas (elle n'aide pas non plus) ; le plan de CORTEX ne pèse pas de façon établie dans le monde
+  sensible ; le bras bref ne vaut pas le court.
+- **Ce qui tient sur les trois tests (200 entreprises)** : le coût de LAVOISIER, exact partout et décisif ; une
+  décision meilleure qu'une règle fixe pendant l'exploitation ; un essai de 8 blocs meilleur qu'un essai de 13.
+- **Ce qui reste ouvert** : que l'essai se rembourse face à « ne rien changer ». Pistes : coût de l'essai,
+  comparateur moins bruité, ventes réelles. **Gains réels : 0 €.**

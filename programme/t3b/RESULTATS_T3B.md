@@ -4,6 +4,11 @@ Protocole : `PROTOCOLE_T3B.md` (écrit avant le code ; réglages et attendus du 
 `4a4442e`). Test : graines 6041 à 6080, **exécution unique** le 15 novembre 2026, 301 s de calcul, consignée au
 registre sous `essai-prix#T3B`. Données : `test.json`.
 
+> **Mise à jour du même jour.** La confirmation T3c (`programme/t3c/RESULTATS_T3C.md`, 80 entreprises neuves) **n'a pas
+> reproduit** l'avantage de l'essai court sur les règles aveugles annoncé aux § 2, 3 et 7 (1,6 point, non
+> significatif), ni l'effet négatif de la loi de GALILÉE. Les chiffres ci-dessous restent ceux du test T3b ; les
+> conclusions qui en dépassent la portée sont corrigées dans T3c.
+
 Tout ce qui suit est une **marge simulée**. Aucun euro réel n'est en jeu ; le compte des gains réels reste à 0 €.
 
 ## 1. Ce qui a été mesuré
