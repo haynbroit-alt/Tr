@@ -523,3 +523,7 @@ fractionné ; l'appariement de l'abonnement réaliste. PR `haynbroit-alt/A#14`.
 - **CONTRÔLE exécuté** (`programme/abime/RESULTATS_CONTROLE.md`, 40 entreprises neuves) : un contrôle du journal
   avant lecture prend la place devant LAVOISIER seul — 42 flux cachés retrouvés sur 55 malgré 5 % de doublons,
   contre 11. Rien contre les fautes de frappe (K3 et K4 manqués), les dates fausses, les lignes perdues.
+- **COÛT-ABÎMÉ exécuté** (`programme/abime/RESULTATS_COUT_ABIME.md`, 60 entreprises neuves) : le coût unitaire
+  reste juste dans 57 à 60 entreprises sur 60 pour chacun des six dégâts. **Je corrige** ce que j'avais écrit après
+  SYNERGIE : la fragilité de LAVOISIER touche l'audit, pas le coût ni donc l'essai de prix. Seul défaut : le coût
+  « par sommes » (une entreprise sur 60), faux et instable — à refuser.

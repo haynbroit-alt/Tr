@@ -1,0 +1,10 @@
+[
+ {
+  "moteur": "collectif",
+  "travail": "COUT-ABIME",
+  "mesure": "coût unitaire juste à 5 % près sur 60 entreprises neuves, journal coupé au jour 183 et abîmé à 5 %",
+  "avant": "59 sur journal sain",
+  "apres": "57 à 60 pour chacun des six dégâts ; 6 coûts faux en silence sur 420 lectures, tous d'une même entreprise où le coût vient de la méthode « par sommes »",
+  "source": "programme/abime/RESULTATS_COUT_ABIME.md"
+ }
+]

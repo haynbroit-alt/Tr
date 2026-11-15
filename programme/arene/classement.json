@@ -6,7 +6,7 @@
     "methode": "chaîne prudente (plan de CORTEX allégé par le coût de LAVOISIER, 8 semaines, décision par la table)",
     "depuis": "T3g, 15 novembre 2026",
     "tours_tenus": 1,
-    "validite": "simulation, un monde ; jamais sur une entreprise réelle ; suppose un coût unitaire juste"
+    "validite": "simulation, un monde ; jamais sur une entreprise réelle ; le coût unitaire tient sur journal abîmé à 5 % (COÛT-ABÎMÉ), sauf quand il vient de la méthode « par sommes »"
    },
    "tours": [
     {
@@ -35,6 +35,11 @@
     {
      "methode": "règle de l'atelier",
      "origine": "src/atelier.js ; a refusé de proposer une règle sur T3h",
+     "etat": "en lice"
+    },
+    {
+     "methode": "chaîne prudente qui refuse d'essayer quand le coût ne vient pas de paires reliées",
+     "origine": "COÛT-ABÎMÉ : le coût « par sommes » est faux de 33 % dans la seule entreprise où il sert, et instable",
      "etat": "en lice"
     }
    ],
