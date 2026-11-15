@@ -85,11 +85,13 @@ export function plan({ lignes, produit, debut, cout = null }) {
 // Une vente est rattachée à un prix par son propre prix unitaire, et un prix ne reçoit rien avant sa première semaine.
 // Le plan relu est celui que `plan` a rendu : avec le coût donné alors (cout_plan, par défaut le coût de la décision),
 // ou le plan complet si l'essai a été lancé sans coût (plan_standard).
-export function decider({ lignes, produit, debut, prix_reference, cout, cout_plan = null, plan_standard = false }) {
+export function decider({ lignes, produit, debut, prix_reference, cout, cout_plan = null, plan_standard = false, semaines = BLOCS_COURT }) {
   const jd = jourDe(debut), pref = Number(prix_reference);
   if (jd == null || !(pref > 0)) return { possible: false, motif: 'date de début ou prix de référence illisible' };
   if (!(cout > 0)) return { possible: false, motif: 'coût unitaire manquant : sans lui la décision se prend sur le chiffre d’affaires, ce qui a perdu plus de la moitié du gain dans les trois tests' };
-  const { niveaux } = niveauxDuPlan(pref, plan_standard ? null : cout_plan ?? cout), fin = jd + BLOC * BLOCS_COURT;
+  // semaines = 4 : lecture anticipée (arène, tours 2 et 3). Nette si le meilleur prix dépasse le deuxième de 20 % en marge par jour.
+  if (![4, BLOCS_COURT].includes(semaines)) return { possible: false, motif: `lecture possible à 4 ou à ${BLOCS_COURT} semaines seulement` };
+  const niveaux = niveauxDuPlan(pref, plan_standard ? null : cout_plan ?? cout).niveaux.slice(0, semaines), fin = jd + BLOC * semaines;
   const premier = (u) => (niveaux.indexOf(u) < 0 ? Infinity : jd + BLOC * niveaux.indexOf(u));
   const q = new Map(NIVEAUX.map((u) => [u, 0]));
   let hors = 0, total = 0, promo = 0;
@@ -106,12 +108,13 @@ export function decider({ lignes, produit, debut, prix_reference, cout, cout_pla
     .map((x) => ({ ...x, par_jour: Number((x.quantite / x.jours).toFixed(3)), marge_par_jour: Number(((x.prix - cout) * x.quantite / x.jours).toFixed(2)) }));
   const max = Math.max(...table.map((x) => x.marge_par_jour)), tri = [...table].sort((a, b) => b.marge_par_jour - a.marge_par_jour || Math.abs(a.niveau) - Math.abs(b.niveau));
   const choisi = table.filter((x) => x.marge_par_jour >= max - 1e-9).sort((a, b) => Math.abs(a.niveau) - Math.abs(b.niveau))[0], second = tri.find((x) => x !== choisi);
+  const anticipee = semaines < BLOCS_COURT, net = anticipee && table.length >= 2 && max > 0 && max >= 1.2 * Math.max(second?.marge_par_jour ?? 0, 0);
   const alertes = [];
   if (hors / total > 0.1) alertes.push(`${Math.round((100 * hors) / total)} % des quantités ont été vendues à un prix qui n’est pas celui du plan (remises, autre tarif) : elles ne sont pas comptées, et la lecture en est affaiblie.`);
   if (second && max > 0 && second.marge_par_jour >= 0.9 * max) alertes.push(`Décision fragile : le deuxième prix (${second.prix} €) est à moins de 10 % du premier en marge par jour.`);
   if (promo > 0) alertes.push(`${Math.round((100 * promo) / (promo + total))} % des quantités étaient signalées en promotion : elles sont écartées, parce qu’une promotion vend plus que son prix. Si elles sont nombreuses, l’essai n’a pas été conduit « toutes choses égales ».`);
   if (max <= 0) alertes.push('Aucun prix essayé ne dégage de marge avec ce coût : vérifier le coût fourni.');
-  return { possible: true, produit, periode: `${iso(jd)} au ${iso(fin - 1)}`, prix_reference: pref, cout, table, prix_retenu: choisi.prix, niveau_retenu: choisi.niveau, change: choisi.niveau !== 0, hors_plan_pct: Number(((100 * hors) / total).toFixed(1)), promotion_pct: Number(((100 * promo) / (promo + total)).toFixed(1)), alertes, limites: LIMITES };
+  return { possible: true, produit, periode: `${iso(jd)} au ${iso(fin - 1)}`, prix_reference: pref, cout, table, ...(anticipee ? { lecture_anticipee: { semaines, net } } : {}), prix_retenu: choisi.prix, niveau_retenu: choisi.niveau, change: choisi.niveau !== 0, hors_plan_pct: Number(((100 * hors) / total).toFixed(1)), promotion_pct: Number(((100 * promo) / (promo + total)).toFixed(1)), alertes, limites: LIMITES };
 }
 
 const eur = (x) => `${Number(x).toLocaleString('fr-FR', { minimumFractionDigits: 2, maximumFractionDigits: 2 })} €`;
@@ -126,6 +129,8 @@ export function rapportDecision(d) {
   if (!d.possible) return `Décision impossible : ${d.motif}.`;
   return [`Décision de prix — ${d.produit} (essai du ${d.periode})`, `Coût unitaire : ${eur(d.cout)} · prix de référence : ${eur(d.prix_reference)}`, '',
     'Prix essayé    jours   ventes par jour   marge par jour', ...d.table.map((x) => `${eur(x.prix).padStart(11)}   ${String(x.jours).padStart(5)}   ${x.par_jour.toLocaleString('fr-FR').padStart(15)}   ${eur(x.marge_par_jour).padStart(14)}${x.niveau === d.niveau_retenu ? '   ← retenu' : ''}`), '',
+    ...(d.lecture_anticipee && !d.lecture_anticipee.net ? [`Lecture à ${d.lecture_anticipee.semaines} semaines : pas encore nette (le meilleur prix ne dépasse pas le deuxième de 20 %). Poursuivre l’essai jusqu’à 8 semaines ; le prix ci-dessous n’est qu’indicatif.`] : []),
+    ...(d.lecture_anticipee?.net ? [`Lecture à ${d.lecture_anticipee.semaines} semaines : nette. On peut décider maintenant et arrêter l’essai.`] : []),
     d.change ? `Prix retenu : ${eur(d.prix_retenu)} (au lieu de ${eur(d.prix_reference)}).` : `Prix retenu : ${eur(d.prix_retenu)} — ne rien changer.`,
     ...(d.alertes.length ? ['', 'Réserves sur cette lecture :', ...d.alertes.map((a) => `  - ${a}`)] : []), '', 'Portée de cette décision :', ...d.limites.map((l) => `  - ${l}`)].join('\n');
 }

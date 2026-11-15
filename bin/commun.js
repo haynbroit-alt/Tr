@@ -46,7 +46,7 @@ if (cmd === 'executer' && !process.argv.includes('--sans-gardien')) {
   const integ = integrite();
   if (!integ.ok) { console.error('Moteurs altérés, exécution refusée :\n' + integ.erreurs.join('\n')); process.exit(1); }
   const graine = Number(opt('--graine')), fichier = opt('--fichier');
-  const cle = nom === 'essai-prix' ? 'essai-prix#T3' : nom === 'essai-prix-b' ? 'essai-prix#T3B' : nom === 'essai-prix-c' ? 'essai-prix#T3C' : nom === 'essai-prix-d' ? 'essai-prix#T3D' : nom === 'essai-prix-e' ? 'essai-prix#T3E' : nom === 'essai-prix-f' ? 'essai-prix#T3F' : nom === 'essai-prix-g' ? 'essai-prix#T3G' : nom === 'essai-prix-h' ? 'essai-prix#T3H' : nom === 'synergie' ? 'synergie#1' : nom === 'arene-1' ? 'arene#1' : nom === 'arene-2' ? 'arene#2' : nom === 'confrontation-t2' ? 'confrontation#T2' : nom === 'opportunites' ? `opportunites#${fichier.replace(/\D/g, '')}` : nom === 'confrontation-t1' ? 'confrontation#T1' : nom === 'pistes' ? 'pistes#1' : nom === 'boutique-reelle' ? `boutique-reelle#${fichier.replace(/\D/g, '')}` : `${nom}#${graine}`;
+  const cle = nom === 'essai-prix' ? 'essai-prix#T3' : nom === 'essai-prix-b' ? 'essai-prix#T3B' : nom === 'essai-prix-c' ? 'essai-prix#T3C' : nom === 'essai-prix-d' ? 'essai-prix#T3D' : nom === 'essai-prix-e' ? 'essai-prix#T3E' : nom === 'essai-prix-f' ? 'essai-prix#T3F' : nom === 'essai-prix-g' ? 'essai-prix#T3G' : nom === 'essai-prix-h' ? 'essai-prix#T3H' : nom === 'synergie' ? 'synergie#1' : nom === 'arene-1' ? 'arene#1' : nom === 'arene-2' ? 'arene#2' : nom === 'arene-3' ? 'arene#3' : nom === 'confrontation-t2' ? 'confrontation#T2' : nom === 'opportunites' ? `opportunites#${fichier.replace(/\D/g, '')}` : nom === 'confrontation-t1' ? 'confrontation#T1' : nom === 'pistes' ? 'pistes#1' : nom === 'boutique-reelle' ? `boutique-reelle#${fichier.replace(/\D/g, '')}` : `${nom}#${graine}`;
   if (reg.lignes.some((r) => r.type === 'probleme' && r.cle === cle)) { console.error(`${cle} est déjà au registre (journal en ajout seul).`); process.exit(1); }
   const avant = reg.lignes.length;
   if (nom === 'forme-manquante') (await import('../src/problemes/forme-manquante.js')).formeManquante(reg, graine);
@@ -59,6 +59,7 @@ if (cmd === 'executer' && !process.argv.includes('--sans-gardien')) {
   else if (nom === 'synergie') await (await import('../src/problemes/synergie.js')).synergieTest(reg, { sortie: join(RACINE, 'programme', 'synergie', 'test.json') });
   else if (nom === 'arene-1') await (await import('../src/problemes/arene.js')).areneTest(reg, { sortie: join(RACINE, 'programme', 'arene', 'tour-1.json') });
   else if (nom === 'arene-2') await (await import('../src/problemes/arene-2.js')).arene2Test(reg, { sortie: join(RACINE, 'programme', 'arene', 'tour-2.json') });
+  else if (nom === 'arene-3') await (await import('../src/problemes/arene-3.js')).arene3Test(reg, { sortie: join(RACINE, 'programme', 'arene', 'tour-3.json') });
   else if (nom === 'essai-prix-g') await (await import('../src/problemes/essai-prix-prudent.js')).essaiPrudentTest(reg, { sortie: join(RACINE, 'programme', 't3g', 'test.json') });
   else if (nom === 'essai-prix-f') await (await import('../src/problemes/essai-prix-marge.js')).essaiMargeTest(reg, { sortie: join(RACINE, 'programme', 't3f', 'test.json') });
   else if (nom === 'essai-prix-e') await (await import('../src/problemes/essai-prix-bandit.js')).essaiBanditTest(reg, { monde: 't3e', sortie: join(RACINE, 'programme', 't3e', 'test.json') });
@@ -99,6 +100,7 @@ if (cmd === 'executer' && !process.argv.includes('--sans-gardien')) {
   // essai-prix-client plan <ventes.csv> --debut AAAA-MM-JJ [--produit X] [--cout C]
   // essai-prix-client decider <ventes.csv> --debut AAAA-MM-JJ --produit X --ref P --cout C [--cout-plan C0 | --plan-standard]
   //   --cout-plan : coût donné au moment du plan s'il diffère ; --plan-standard : essai lancé sans coût (plan complet)
+  //   --semaines 4 : lecture anticipée au bout de quatre semaines (dit si la décision est nette ou s'il faut poursuivre)
   const { readFileSync } = await import('node:fs');
   const E = await import('../src/essai-prix-client.js');
   const { lignes, rejetees } = E.lireVentes(readFileSync(process.argv[4], 'utf8'));
@@ -106,7 +108,7 @@ if (cmd === 'executer' && !process.argv.includes('--sans-gardien')) {
   if (rejetees) console.log(`${rejetees} ligne(s) illisible(s) ignorée(s)\n`);
   if (nom === 'plan' && !produit) { const jd = E.jourDe(debut); if (jd == null) { console.error('--debut AAAA-MM-JJ attendu'); process.exit(1); } console.log(`Produits vendus dans les ${E.HISTORIQUE} jours avant le ${debut} (un essai demande au moins un jour de vente sur deux) :`); for (const x of E.produitsEligibles(lignes, jd).slice(0, 20)) console.log(`  ${x.eligible ? 'possible  ' : 'trop rare '} ${x.produit} — ${x.jours_actifs} jours de vente, ${x.lignes} lignes`); }
   else if (nom === 'plan') console.log(E.rapportPlan(E.plan({ lignes, produit, debut, cout })));
-  else if (nom === 'decider') console.log(E.rapportDecision(E.decider({ lignes, produit, debut, prix_reference: Number(String(opt('--ref')).replace(',', '.')), cout, cout_plan: opt('--cout-plan') == null ? null : Number(String(opt('--cout-plan')).replace(',', '.')), plan_standard: process.argv.includes('--plan-standard') })));
+  else if (nom === 'decider') console.log(E.rapportDecision(E.decider({ lignes, produit, debut, prix_reference: Number(String(opt('--ref')).replace(',', '.')), cout, cout_plan: opt('--cout-plan') == null ? null : Number(String(opt('--cout-plan')).replace(',', '.')), plan_standard: process.argv.includes('--plan-standard'), semaines: opt('--semaines') == null ? undefined : Number(opt('--semaines')) })));
   else { console.error('usage : commun.js essai-prix-client plan|decider <ventes.csv> --debut AAAA-MM-JJ --produit X [--ref P] [--cout C]'); process.exit(1); }
 } else if (cmd === 'audit-fec') {
   // Audit des comptes de tiers d'un fichier d'écritures comptables réel. Rien n'est écrit au journal : le fichier est privé.
