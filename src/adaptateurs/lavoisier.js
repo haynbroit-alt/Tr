@@ -49,7 +49,8 @@ const MONDES = { t3: { classe: T3_CLASSE, dev: [201, 220], test: [6001, 6040], c
   t3e: { classe: { ...T3_CLASSE, demande: 'sensible', alea: 'commun' }, dev: [241, 260], test: [6221, 6280], cle: 'T3E_TEST' },
   t3f: { classe: { ...T3_CLASSE, demande: 'sensible', alea: 'commun' }, dev: [241, 260], test: [6281, 6400], cle: 'T3F_TEST' },
   t3g: { classe: { ...T3_CLASSE, demande: 'sensible', alea: 'commun' }, dev: [241, 260], test: [6401, 6700], cle: 'T3G_TEST' },
-  t3h: { classe: { ...T3_CLASSE, demande: 'sensible', alea: 'commun' }, dev: [301, 500], test: [6701, 6900], cle: 'T3H_TEST' },
+  t3h: { classe: { ...T3_CLASSE, demande: 'sensible', alea: 'commun' }, dev: [301, 500], test: [0, -1], cle: 'T3H_TEST' },   // test de T3h non exécuté (l'atelier a refusé) : ses graines passent à l'arène
+  arene1: { classe: { ...T3_CLASSE, demande: 'sensible', alea: 'commun' }, dev: [301, 500], test: [6701, 6900], cle: 'ARENE1_TEST' },
   syn: { classe: { ...T3_CLASSE, demande: 'sensible', alea: 'commun' }, dev: [241, 260], test: [6901, 7000], cle: 'SYNERGIE_TEST' } };   // T3h : lot de l'atelier 301 à 500   // T3f : règle de marge sans essai, monde de T3e   // T3e : la même confrontation, hasard commun (L2c)   // T3c : confirmation, sans mise au point
 export function entreprisePilotee(graine, pilotage = [], monde = 't3') {
   const M = MONDES[monde];

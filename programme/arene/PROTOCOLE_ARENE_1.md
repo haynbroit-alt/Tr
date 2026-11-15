@@ -51,3 +51,14 @@ Les deux prétendants supposent que **l'historique des prix dit la vérité sur 
 prix d'avant essai bougent sans promotion. Sur des ventes réelles de grande distribution, l'effet lu sur le prix
 venait surtout des promotions (`programme/missions/prix-reel/`). Une victoire ici vaudrait **en simulation** ; elle
 n'entrerait dans aucun livrable sans un contrôle de l'historique du client.
+
+---
+
+## 7. Vérification du code — écrit et poussé avant le tour
+
+`src/problemes/arene.js` a été vérifié sur le lot de l'atelier (graines 301 à 500, déjà vues, celles-là mêmes qui
+ont donné μ et τ²), sans nouvelle simulation. J'y ai lu : `direct` −1,0 point et `direct tempéré` −0,8 point face
+au tenant, tous deux « en lice ». Ce n'est pas un résultat (les constantes viennent de ces entreprises) ; rien n'a
+été changé aux prétendants, aux constantes ni à la règle de succession.
+
+Tour : `ARENE1_TEST=exécution-unique node bin/commun.js executer arene-1`, une seule fois.
