@@ -35,7 +35,8 @@ export const evaluer = (verite, corps) => evaluate(verite, corps);
 // Les graines de test sont refusées hors de leur exécution unique.
 export const T3_CLASSE = { archetype: 'negoce', nHidden: 1, level: 'realiste' };
 const MONDES = { t3: { classe: T3_CLASSE, dev: [201, 220], test: [6001, 6040], cle: 'T3_TEST' }, t3b: { classe: { ...T3_CLASSE, demande: 'sensible' }, dev: [221, 240], test: [6041, 6080], cle: 'T3B_TEST' },
-  t3c: { classe: { ...T3_CLASSE, demande: 'sensible' }, dev: [0, -1], test: [6081, 6160], cle: 'T3C_TEST' } };   // T3c : confirmation, sans mise au point
+  t3c: { classe: { ...T3_CLASSE, demande: 'sensible' }, dev: [0, -1], test: [6081, 6160], cle: 'T3C_TEST' },
+  t3d: { classe: { ...T3_CLASSE, demande: 'sensible' }, dev: [221, 240], test: [6161, 6220], cle: 'T3D_TEST' } };   // T3d : face au bandit de Thompson   // T3c : confirmation, sans mise au point
 export function entreprisePilotee(graine, pilotage = [], monde = 't3') {
   const M = MONDES[monde];
   if (!M) throw new Error(`monde inconnu : ${monde}`);

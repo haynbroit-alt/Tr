@@ -69,3 +69,33 @@ Les seuils ne seront pas retouchés. Un critère manqué est publié comme tel.
   paramétriques, unimodaux) et ne sont pas mesurées.
 - 26 semaines : l'avantage d'un bandit croît avec la durée ; ce test ne dit rien d'un horizon plus long.
 - Simulation, un monde, un objet par entreprise.
+
+---
+
+## 8. Mise au point (graines 221 à 240) — écrit et poussé avant le test
+
+Aucun réglage n'a été changé : le bandit est celui du § 3, tel qu'écrit avant le code.
+
+| Bras | Gain total, 20 entreprises |
+|---|---:|
+| Chaîne retenue | 6,4 % |
+| Bandit de Thompson | 8,7 % |
+| Chaîne sans engagement | 7,6 % |
+| Meilleur aveugle (+11,8 %) | 1,3 % |
+
+Écarts appariés : bandit − chaîne +2,3 points (t = 0,72) ; sans engagement − chaîne +1,2 point (t = 0,73) ;
+bandit − meilleur aveugle +7,4 points (t = 1,05). Rien n'est établi sur 20 entreprises. Le coût de LAVOISIER au jour
+183 est exact 20 fois sur 20. Après ses cinq semaines d'initialisation, le bandit joue encore 3,6 niveaux
+différents en moyenne, et ne passe l'essentiel de ses huit dernières semaines au meilleur niveau après coup que
+dans 7 entreprises sur 20 : il explore encore quand l'année finit. Détail : `programme/t3d/dev.json`.
+
+Je n'ai pas cherché à régler le bandit sur ces 20 entreprises : avec quatre à cinq points d'incertitude sur chaque
+moyenne, tout réglage aurait suivi le bruit.
+
+### Attendus pour le test, écrits avant son exécution
+
+1. **D1 et D1 inverse manqués** : pas de différence établie entre le bandit et la chaîne ; écart entre 0 et +4
+   points en faveur du bandit.
+2. **D2 manqué** : le bandit dépasse le meilleur aveugle en moyenne, sans que ce soit établi.
+3. **D3 manqué** : la chaîne sans engagement fait à peu près comme la chaîne.
+4. Coût exact au jour 183 dans au moins 95 % des entreprises.
