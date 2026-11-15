@@ -137,7 +137,8 @@ function margeVraie(E, tok) {
   return { essai: arr(m.essai), exploitation: arr(m.exploitation), total: arr(m.essai + m.exploitation), profit_2e_semestre: arr(T.profitMensuel.slice(6).reduce((a, b) => a + b, 0)), cout_vrai: c };
 }
 
-// monde : 't3' (simulateur d'origine) ou 't3b' (demande sensible, L2b ; ajoute le bras « collectif court »).
+// monde : 't3' (simulateur d'origine), 't3b' ou 't3c' (demande sensible, L2b : bras court et bref, et la chaîne
+// retenue par T3b — essai de 8 blocs, décision par la table, sans loi).
 export function essaiPrix(graine, monde = 't3') {
   const t0 = Date.now(), nul = L.entreprisePilotee(graine, [], monde);
   const choix = choisirObjet(couper(nul.observe, J1));
@@ -159,9 +160,10 @@ export function essaiPrix(graine, monde = 't3') {
   const planC = C.planActif({ text: '1 / p', f: (u) => PAS ** -u[0] });
   const collectif = conduire('collectif', planC.plan.map((u) => u[0]), { avecJuge: true });
   const naif = conduire('naif', AVANT_APRES, { avecJuge: false });
-  const court = monde === 't3b' ? conduire('court', collectif.niveaux.slice(0, BLOCS_COURT), { avecJuge: false }) : null;
-  const bref = monde === 't3b' ? conduire('bref', collectif.niveaux.slice(0, BLOCS_BREF), { avecJuge: false }) : null;
-  const essais = monde === 't3b' && process.env.T3B_LONGUEURS ? Object.fromEntries(process.env.T3B_LONGUEURS.split(',').map(Number).map((k) => [k, conduire(`court${k}`, collectif.niveaux.slice(0, k), { avecJuge: false })])) : {};   // mise au point seulement
+  const sensible = monde !== 't3';
+  const court = sensible ? conduire('court', collectif.niveaux.slice(0, BLOCS_COURT), { avecJuge: false }) : null;
+  const bref = sensible ? conduire('bref', collectif.niveaux.slice(0, BLOCS_BREF), { avecJuge: false }) : null;
+  const essais = sensible && process.env.T3B_LONGUEURS ? Object.fromEntries(process.env.T3B_LONGUEURS.split(',').map(Number).map((k) => [k, conduire(`court${k}`, collectif.niveaux.slice(0, k), { avecJuge: false })])) : {};   // mise au point seulement
 
   // toutes les décisions sont prises : la vérité s'ouvre
   const marges = {};
@@ -174,7 +176,7 @@ export function essaiPrix(graine, monde = 't3') {
   bras.sans_galilee = marges[`collectif:${collectif.decisions.sans_galilee.niveau}`];
   bras.sans_lavoisier = marges[`collectif:${collectif.decisions.sans_lavoisier.niveau}`];
   bras.sans_plan_cortex = marges[`naif:${naif.decisions.complet.niveau}`];
-  if (court) { bras.collectif_court = marges[`court:${court.decisions.complet.niveau}`]; bras.collectif_bref = marges[`bref:${bref.decisions.complet.niveau}`]; }
+  if (court) { bras.collectif_court = marges[`court:${court.decisions.complet.niveau}`]; bras.collectif_bref = marges[`bref:${bref.decisions.complet.niveau}`]; bras.chaine_retenue = marges[`court:${court.decisions.sans_galilee.niveau}`]; }
   for (const [k, e] of Object.entries(essais)) bras[`court${k}`] = marges[`court${k}:${e.decisions.complet.niveau}`];
   for (const k of Object.keys(bras)) bras[k] = copie(bras[k]);
   return { graine, monde, ecartee: false, objet: tok, prix_reference: pref, cout_vrai: arr(coutVrai, 3), eligibles: choix.eligibles, objets: choix.objets,
@@ -184,13 +186,15 @@ export function essaiPrix(graine, monde = 't3') {
 
 // Exécution unique d'un test, consignée acte par acte. Le journal étant en ajout seul, la clé du dossier interdit
 // toute seconde exécution. T3 : graines 6001 à 6040 ; T3b (demande sensible) : graines 6041 à 6080.
-export async function essaiPrixTest(reg, { monde = 't3', sortie = null, graines = Array.from({ length: 40 }, (_, i) => (monde === 't3b' ? 6041 : 6001) + i) } = {}) {
-  const NOM = monde === 't3b' ? 'T3B' : 'T3', P = `essai-prix#${NOM}`, dossier = monde === 't3b' ? 'programme/t3b' : 'programme/t3';
-  const reproduire = `${NOM}_TEST=exécution-unique node bin/commun.js executer essai-prix${monde === 't3b' ? '-b' : ''} (exécution unique : ne se relance pas)`;
+export async function essaiPrixTest(reg, { monde = 't3', sortie = null, graines = null } = {}) {
+  const T = { t3: ['T3', 6001, 40, ''], t3b: ['T3B', 6041, 40, '-b'], t3c: ['T3C', 6081, 80, '-c'] }[monde], NOM = T[0], P = `essai-prix#${NOM}`, dossier = `programme/${NOM.toLowerCase()}`;
+  graines ??= Array.from({ length: T[2] }, (_, i) => T[1] + i);
+  const reproduire = `${NOM}_TEST=exécution-unique node bin/commun.js executer essai-prix${T[3]} (exécution unique : ne se relance pas)`;
   reg.ajouter({ probleme: P, type: 'probleme', cle: P, auteur: 'registre', titre: `Essai de prix commun (${NOM}) : test`,
-    question: monde === 't3b' ? 'Dans un monde où la bonne direction de prix varie d’une entreprise à l’autre, les trois moteurs font-ils mieux que la meilleure règle aveugle, apprentissage compris ? Marge simulée, mesurée contre la même entreprise laissée seule.'
+    question: monde === 't3c' ? 'La chaîne retenue par T3b (coût de LAVOISIER, plan de CORTEX arrêté à 8 blocs, décision par la table, sans loi) fait-elle mieux que la meilleure règle aveugle, apprentissage compris ? Marge simulée, sur des entreprises neuves.'
+      : monde === 't3b' ? 'Dans un monde où la bonne direction de prix varie d’une entreprise à l’autre, les trois moteurs font-ils mieux que la meilleure règle aveugle, apprentissage compris ? Marge simulée, mesurée contre la même entreprise laissée seule.'
       : 'Les trois moteurs, ensemble, produisent-ils sur le prix d’un objet un gain de marge qu’une règle aveugle ne produit pas ? Marge simulée, mesurée contre la même entreprise laissée seule.',
-    source: { generateur: `LAVOISIER src/bench/generator.js piloté (L2${monde === 't3b' ? ', demande sensible L2b' : ''}) ; protocole ${dossier}/PROTOCOLE_${NOM}.md`, graine: `${graines[0]} à ${graines.at(-1)}`, statut: `graines de test de ${NOM}, exécution unique` },
+    source: { generateur: `LAVOISIER src/bench/generator.js piloté (L2${monde === 't3' ? '' : ', demande sensible L2b'}) ; protocole ${dossier}/PROTOCOLE_${NOM}.md`, graine: `${graines[0]} à ${graines.at(-1)}`, statut: `graines de test de ${NOM}, exécution unique` },
     roles: { LAVOISIER: 'corps de l’entreprise, coût unitaire', CORTEX: 'plan d’essai, verdict du juge', GALILÉE: 'loi quantité–prix' } });
   const R = [];
   for (const g of graines) {
@@ -216,14 +220,14 @@ export async function essaiPrixTest(reg, { monde = 't3', sortie = null, graines 
     else reg.ajouter({ probleme: P, type: 'aveu', auteur: 'GALILÉE', moteur: G.IDENTITE, depend_de: [idExp], motif: `Graine ${g} : sur 91 jours d’essai je ne trouve aucune loi qui dépende du prix (${c.loi.texte ?? 'rien'}). La décision est prise par la table.` });
     reg.ajouter({ probleme: P, type: 'resultat', auteur: 'banc', experience: idExp,
       mesures: { essai_prix: true, graine: g, decision: dec.niveau, decide_par: dec.par, juge_cortex: c.juge.verdict, marge_temoin_nul: Math.round(r.bras.nul.total), gain_collectif: gain('collectif'), gain_aveugle_plus_25: gain('aveugle:1'),
-        gain_sans_galilee: gain('sans_galilee'), gain_sans_lavoisier: gain('sans_lavoisier'), gain_sans_plan_cortex: gain('sans_plan_cortex'), ...(r.bras.collectif_court ? { gain_collectif_court: gain('collectif_court'), gain_collectif_bref: gain('collectif_bref'), decision_bref: r.bref.decisions.complet.niveau } : {}), cout_vrai: r.cout_vrai, unite: '€ simulés, marge sur ventes de l’objet, jours 183 à 364' },
+        gain_sans_galilee: gain('sans_galilee'), gain_sans_lavoisier: gain('sans_lavoisier'), gain_sans_plan_cortex: gain('sans_plan_cortex'), ...(r.bras.collectif_court ? { gain_collectif_court: gain('collectif_court'), gain_collectif_bref: gain('collectif_bref'), decision_bref: r.bref.decisions.complet.niveau, gain_chaine_retenue: gain('chaine_retenue'), decision_chaine_retenue: r.court.decisions.sans_galilee.niveau } : {}), cout_vrai: r.cout_vrai, unite: '€ simulés, marge sur ventes de l’objet, jours 183 à 364' },
       cout_reel: { calcul_s: r.secs, jours: FIN - J1 } });
   }
   const { agreger, dire } = await import('../../scripts/t3.js');
   const a = agreger(R);
   if (sortie) (await import('node:fs')).writeFileSync(sortie, JSON.stringify({ protocole: `${dossier}/PROTOCOLE_${NOM}.md`, agregat: a, entreprises: R }, null, 1) + '\n');
   reg.ajouter({ probleme: P, type: 'jalon', auteur: 'registre', compte: 'collectif', travail: NOM, mesure: 'gain moyen du collectif sur la marge de l’objet piloté, jours 183 à 364, en part de la marge de l’entreprise laissée seule (simulation)',
-    avant: 'non mesuré', apres: `${(100 * a.K1.moyenne).toFixed(1)} % (meilleur bras aveugle : ${(100 * a.fenetre_entiere.aveugle).toFixed(1)} %)`, source: `${dossier}/test.json` });
+    avant: 'non mesuré', apres: monde === 't3c' ? `chaîne retenue ${(100 * a.C1.retenue).toFixed(1)} % (meilleur bras aveugle : ${(100 * a.C1.aveugle).toFixed(1)} %)` : `${(100 * a.K1.moyenne).toFixed(1)} % (meilleur bras aveugle : ${(100 * a.fenetre_entiere.aveugle).toFixed(1)} %)`, source: `${dossier}/test.json` });
   console.error(dire(a));
   return a;
 }
