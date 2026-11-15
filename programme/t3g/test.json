@@ -1,0 +1,8260 @@
+{
+ "protocole": "programme/t3g/PROTOCOLE_T3G.md",
+ "agregat": {
+  "parcourues": 300,
+  "mesurables": 300,
+  "concernees": 54,
+  "part_concernee": 0.18,
+  "moyennes": {
+   "prudente": 0.6002573614618606,
+   "chaine": 0.42400797190052864,
+   "aveugle:0": 0.07117633157161765,
+   "aveugle:1": 0.6910489919185839
+  },
+  "G1": {
+   "n": 54,
+   "moyenne": 0.17624938956133226,
+   "t": 3.670075483391778,
+   "seuil": 1.684,
+   "etabli": true
+  },
+  "G2": {
+   "n": 54,
+   "moyenne": 0.5290810298902431,
+   "t": 2.135206053423896,
+   "seuil": 1.684,
+   "etabli": true
+  },
+  "G3": {
+   "prudente": 14,
+   "chaine": 24,
+   "tenu": true
+  },
+  "chaine_contre_prix_tenu": {
+   "n": 54,
+   "moyenne": 0.3528316403289108,
+   "t": 1.7410128240611014,
+   "seuil": 1.684,
+   "etabli": true
+  },
+  "plus_25_contre_prudente": {
+   "n": 54,
+   "moyenne": 0.09079163045672278,
+   "t": 1.2079775840621083,
+   "seuil": 1.684,
+   "etabli": false
+  },
+  "effet_sur_l_ensemble": 0.03172489012103981,
+  "sans_niveau_de_baisse": 36,
+  "decisions": {
+   "chaine": {
+    "0": 12,
+    "1": 37,
+    "-1": 5,
+    "-0.5": 0,
+    "0.5": 0
+   },
+   "prudente": {
+    "0": 13,
+    "1": 34,
+    "-1": 0,
+    "-0.5": 7,
+    "0.5": 0
+   }
+  },
+  "cout_exact": 54,
+  "cout_indisponible": 0
+ },
+ "entreprises": [
+  {
+   "graine": 6401,
+   "monde": "t3g",
+   "ecartee": false,
+   "objet": "jebi4",
+   "prix_reference": 5.87,
+   "cout_au_jour_183": 2.747,
+   "taux_de_marge": 2.137,
+   "concernee": false,
+   "plan_prudent": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "secs": 0.4
+  },
+  {
+   "graine": 6402,
+   "monde": "t3g",
+   "ecartee": false,
+   "objet": "soveho8",
+   "prix_reference": 6.67,
+   "cout_au_jour_183": 2.428,
+   "taux_de_marge": 2.747,
+   "concernee": false,
+   "plan_prudent": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "secs": 0.6
+  },
+  {
+   "graine": 6403,
+   "monde": "t3g",
+   "ecartee": false,
+   "objet": "pirivo0",
+   "prix_reference": 4.09,
+   "cout_au_jour_183": 3.062,
+   "taux_de_marge": 1.336,
+   "concernee": true,
+   "plan_prudent": [
+    0,
+    0,
+    1,
+    0,
+    1,
+    1,
+    0,
+    0
+   ],
+   "cout_vrai": 3.062,
+   "decision_chaine": 1,
+   "decision_prudente": 1,
+   "bras": {
+    "nul": {
+     "essai": 2342.38,
+     "exploitation": 1802,
+     "total": 4144.37,
+     "profit_2e_semestre": 194456.2
+    },
+    "aveugle:0": {
+     "essai": 2226.48,
+     "exploitation": 1857.28,
+     "total": 4083.76,
+     "profit_2e_semestre": 194409.41
+    },
+    "aveugle:1": {
+     "essai": 3474.08,
+     "exploitation": 2755.09,
+     "total": 6229.17,
+     "profit_2e_semestre": 196616.09
+    },
+    "chaine": {
+     "essai": 2634.62,
+     "exploitation": 2802.21,
+     "total": 5436.83,
+     "profit_2e_semestre": 195768.45
+    },
+    "prudente": {
+     "essai": 3016.52,
+     "exploitation": 2777.62,
+     "total": 5794.15,
+     "profit_2e_semestre": 196156.48
+    }
+   },
+   "secs": 1.2
+  },
+  {
+   "graine": 6404,
+   "monde": "t3g",
+   "ecartee": false,
+   "objet": "meme2",
+   "prix_reference": 45.93,
+   "cout_au_jour_183": 24.771,
+   "taux_de_marge": 1.854,
+   "concernee": false,
+   "plan_prudent": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "secs": 0.1
+  },
+  {
+   "graine": 6405,
+   "monde": "t3g",
+   "ecartee": false,
+   "objet": "wetidu0",
+   "prix_reference": 430.43,
+   "cout_au_jour_183": 166.718,
+   "taux_de_marge": 2.582,
+   "concernee": false,
+   "plan_prudent": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "secs": 0.1
+  },
+  {
+   "graine": 6406,
+   "monde": "t3g",
+   "ecartee": false,
+   "objet": "cizi0",
+   "prix_reference": 199.12,
+   "cout_au_jour_183": 99.144,
+   "taux_de_marge": 2.008,
+   "concernee": false,
+   "plan_prudent": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "secs": 0.3
+  },
+  {
+   "graine": 6407,
+   "monde": "t3g",
+   "ecartee": false,
+   "objet": "quha6",
+   "prix_reference": 11.16,
+   "cout_au_jour_183": 5.513,
+   "taux_de_marge": 2.024,
+   "concernee": false,
+   "plan_prudent": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "secs": 0.2
+  },
+  {
+   "graine": 6408,
+   "monde": "t3g",
+   "ecartee": false,
+   "objet": "dili5",
+   "prix_reference": 12.12,
+   "cout_au_jour_183": 5.972,
+   "taux_de_marge": 2.029,
+   "concernee": false,
+   "plan_prudent": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "secs": 0.2
+  },
+  {
+   "graine": 6409,
+   "monde": "t3g",
+   "ecartee": false,
+   "objet": "lokaxe9",
+   "prix_reference": 167,
+   "cout_au_jour_183": 69.965,
+   "taux_de_marge": 2.387,
+   "concernee": false,
+   "plan_prudent": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "secs": 0.2
+  },
+  {
+   "graine": 6410,
+   "monde": "t3g",
+   "ecartee": false,
+   "objet": "hope0",
+   "prix_reference": 328.12,
+   "cout_au_jour_183": 128.054,
+   "taux_de_marge": 2.562,
+   "concernee": false,
+   "plan_prudent": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "secs": 0.2
+  },
+  {
+   "graine": 6411,
+   "monde": "t3g",
+   "ecartee": false,
+   "objet": "pubi9",
+   "prix_reference": 4.66,
+   "cout_au_jour_183": 4.094,
+   "taux_de_marge": 1.138,
+   "concernee": true,
+   "plan_prudent": [
+    0,
+    0,
+    1,
+    0,
+    1,
+    1,
+    0,
+    0
+   ],
+   "cout_vrai": 4.094,
+   "decision_chaine": 1,
+   "decision_prudente": 1,
+   "bras": {
+    "nul": {
+     "essai": 510.37,
+     "exploitation": 579.93,
+     "total": 1090.31,
+     "profit_2e_semestre": -90110.72
+    },
+    "aveugle:0": {
+     "essai": 527.23,
+     "exploitation": 593.99,
+     "total": 1121.22,
+     "profit_2e_semestre": -90064.76
+    },
+    "aveugle:1": {
+     "essai": 952.9,
+     "exploitation": 1140.36,
+     "total": 2093.26,
+     "profit_2e_semestre": -89114.73
+    },
+    "chaine": {
+     "essai": 539.87,
+     "exploitation": 1114.32,
+     "total": 1654.2,
+     "profit_2e_semestre": -89521.94
+    },
+    "prudente": {
+     "essai": 815.85,
+     "exploitation": 1138.62,
+     "total": 1954.47,
+     "profit_2e_semestre": -89255.87
+    }
+   },
+   "secs": 0.4
+  },
+  {
+   "graine": 6412,
+   "monde": "t3g",
+   "ecartee": false,
+   "objet": "xunone7",
+   "prix_reference": 4.43,
+   "cout_au_jour_183": 3.245,
+   "taux_de_marge": 1.365,
+   "concernee": true,
+   "plan_prudent": [
+    0,
+    0,
+    1,
+    0,
+    1,
+    1,
+    0,
+    0
+   ],
+   "cout_vrai": 3.245,
+   "decision_chaine": 0,
+   "decision_prudente": 0,
+   "bras": {
+    "nul": {
+     "essai": 1721.73,
+     "exploitation": 1306.7,
+     "total": 3028.42,
+     "profit_2e_semestre": -181365.89
+    },
+    "aveugle:0": {
+     "essai": 1776.98,
+     "exploitation": 1422.77,
+     "total": 3199.75,
+     "profit_2e_semestre": -181192.34
+    },
+    "aveugle:1": {
+     "essai": 1528.24,
+     "exploitation": 1241.41,
+     "total": 2769.65,
+     "profit_2e_semestre": -181608.38
+    },
+    "chaine": {
+     "essai": 1487.6,
+     "exploitation": 1425.14,
+     "total": 2912.74,
+     "profit_2e_semestre": -181481.71
+    },
+    "prudente": {
+     "essai": 1721.29,
+     "exploitation": 1461.86,
+     "total": 3183.15,
+     "profit_2e_semestre": -181226.71
+    }
+   },
+   "secs": 0.6
+  },
+  {
+   "graine": 6413,
+   "monde": "t3g",
+   "ecartee": false,
+   "objet": "xuje7",
+   "prix_reference": 228.44,
+   "cout_au_jour_183": 137.748,
+   "taux_de_marge": 1.658,
+   "concernee": false,
+   "plan_prudent": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "secs": 0.6
+  },
+  {
+   "graine": 6414,
+   "monde": "t3g",
+   "ecartee": false,
+   "objet": "samu8",
+   "prix_reference": 10.51,
+   "cout_au_jour_183": 5.177,
+   "taux_de_marge": 2.03,
+   "concernee": false,
+   "plan_prudent": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "secs": 0.2
+  },
+  {
+   "graine": 6415,
+   "monde": "t3g",
+   "ecartee": false,
+   "objet": "gajafi8",
+   "prix_reference": 215.77,
+   "cout_au_jour_183": 125.375,
+   "taux_de_marge": 1.721,
+   "concernee": false,
+   "plan_prudent": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "secs": 0.2
+  },
+  {
+   "graine": 6416,
+   "monde": "t3g",
+   "ecartee": false,
+   "objet": "faro1",
+   "prix_reference": 116.03,
+   "cout_au_jour_183": 73.522,
+   "taux_de_marge": 1.578,
+   "concernee": false,
+   "plan_prudent": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "secs": 0.2
+  },
+  {
+   "graine": 6417,
+   "monde": "t3g",
+   "ecartee": false,
+   "objet": "bakawa5",
+   "prix_reference": 27,
+   "cout_au_jour_183": 15.377,
+   "taux_de_marge": 1.756,
+   "concernee": false,
+   "plan_prudent": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "secs": 0.1
+  },
+  {
+   "graine": 6418,
+   "monde": "t3g",
+   "ecartee": false,
+   "objet": "wowe3",
+   "prix_reference": 128.48,
+   "cout_au_jour_183": 64.987,
+   "taux_de_marge": 1.977,
+   "concernee": false,
+   "plan_prudent": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "secs": 0.5
+  },
+  {
+   "graine": 6419,
+   "monde": "t3g",
+   "ecartee": false,
+   "objet": "jipu8",
+   "prix_reference": 12.52,
+   "cout_au_jour_183": 7.178,
+   "taux_de_marge": 1.744,
+   "concernee": false,
+   "plan_prudent": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "secs": 0.5
+  },
+  {
+   "graine": 6420,
+   "monde": "t3g",
+   "ecartee": false,
+   "objet": "cugona1",
+   "prix_reference": 6.53,
+   "cout_au_jour_183": 3.327,
+   "taux_de_marge": 1.962,
+   "concernee": false,
+   "plan_prudent": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "secs": 0.2
+  },
+  {
+   "graine": 6421,
+   "monde": "t3g",
+   "ecartee": false,
+   "objet": "pula1",
+   "prix_reference": 279.64,
+   "cout_au_jour_183": 173.252,
+   "taux_de_marge": 1.614,
+   "concernee": false,
+   "plan_prudent": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "secs": 0.3
+  },
+  {
+   "graine": 6422,
+   "monde": "t3g",
+   "ecartee": false,
+   "objet": "gemi8",
+   "prix_reference": 15.33,
+   "cout_au_jour_183": 8.573,
+   "taux_de_marge": 1.788,
+   "concernee": false,
+   "plan_prudent": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "secs": 0.2
+  },
+  {
+   "graine": 6423,
+   "monde": "t3g",
+   "ecartee": false,
+   "objet": "sohomu3",
+   "prix_reference": 252.78,
+   "cout_au_jour_183": 103.816,
+   "taux_de_marge": 2.435,
+   "concernee": false,
+   "plan_prudent": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "secs": 0.3
+  },
+  {
+   "graine": 6424,
+   "monde": "t3g",
+   "ecartee": false,
+   "objet": "hewidi4",
+   "prix_reference": 64.27,
+   "cout_au_jour_183": 43.474,
+   "taux_de_marge": 1.478,
+   "concernee": true,
+   "plan_prudent": [
+    -0.5,
+    0,
+    1,
+    -0.5,
+    1,
+    1,
+    -0.5,
+    0
+   ],
+   "cout_vrai": 43.474,
+   "decision_chaine": -1,
+   "decision_prudente": -0.5,
+   "bras": {
+    "nul": {
+     "essai": 19015.02,
+     "exploitation": 18210.6,
+     "total": 37225.61,
+     "profit_2e_semestre": 26224.7
+    },
+    "aveugle:0": {
+     "essai": 20213.34,
+     "exploitation": 21149.15,
+     "total": 41362.49,
+     "profit_2e_semestre": 30677.28
+    },
+    "aveugle:1": {
+     "essai": 12497.45,
+     "exploitation": 13345.35,
+     "total": 25842.8,
+     "profit_2e_semestre": 15076.3
+    },
+    "chaine": {
+     "essai": 16232.08,
+     "exploitation": 19148.95,
+     "total": 35381.03,
+     "profit_2e_semestre": 41916.17
+    },
+    "prudente": {
+     "essai": 19672.03,
+     "exploitation": 23949.61,
+     "total": 43621.64,
+     "profit_2e_semestre": 32721.68
+    }
+   },
+   "secs": 0.5
+  },
+  {
+   "graine": 6425,
+   "monde": "t3g",
+   "ecartee": false,
+   "objet": "xefi2",
+   "prix_reference": 42.62,
+   "cout_au_jour_183": 35.558,
+   "taux_de_marge": 1.199,
+   "concernee": true,
+   "plan_prudent": [
+    0,
+    0,
+    1,
+    0,
+    1,
+    1,
+    0,
+    0
+   ],
+   "cout_vrai": 35.558,
+   "decision_chaine": 1,
+   "decision_prudente": 1,
+   "bras": {
+    "nul": {
+     "essai": 27171.02,
+     "exploitation": 24218.82,
+     "total": 51389.84,
+     "profit_2e_semestre": 416387.35
+    },
+    "aveugle:0": {
+     "essai": 27173.9,
+     "exploitation": 23515.87,
+     "total": 50689.77,
+     "profit_2e_semestre": 426890.54
+    },
+    "aveugle:1": {
+     "essai": 29790.39,
+     "exploitation": 25058.66,
+     "total": 54849.05,
+     "profit_2e_semestre": 418566.3
+    },
+    "chaine": {
+     "essai": 23530.14,
+     "exploitation": 25289.04,
+     "total": 48819.18,
+     "profit_2e_semestre": 412624.63
+    },
+    "prudente": {
+     "essai": 30463.51,
+     "exploitation": 24881.44,
+     "total": 55344.95,
+     "profit_2e_semestre": 430741.76
+    }
+   },
+   "secs": 0.8
+  },
+  {
+   "graine": 6426,
+   "monde": "t3g",
+   "ecartee": false,
+   "objet": "bimu8",
+   "prix_reference": 164.17,
+   "cout_au_jour_183": 68.105,
+   "taux_de_marge": 2.411,
+   "concernee": false,
+   "plan_prudent": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "secs": 0.2
+  },
+  {
+   "graine": 6427,
+   "monde": "t3g",
+   "ecartee": false,
+   "objet": "qewa1",
+   "prix_reference": 78.17,
+   "cout_au_jour_183": 34.256,
+   "taux_de_marge": 2.282,
+   "concernee": false,
+   "plan_prudent": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "secs": 0.2
+  },
+  {
+   "graine": 6428,
+   "monde": "t3g",
+   "ecartee": false,
+   "objet": "ziwu4",
+   "prix_reference": 44.31,
+   "cout_au_jour_183": 28.842,
+   "taux_de_marge": 1.536,
+   "concernee": false,
+   "plan_prudent": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "secs": 0.5
+  },
+  {
+   "graine": 6429,
+   "monde": "t3g",
+   "ecartee": false,
+   "objet": "saqita7",
+   "prix_reference": 140.36,
+   "cout_au_jour_183": 91.252,
+   "taux_de_marge": 1.538,
+   "concernee": false,
+   "plan_prudent": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "secs": 1.1
+  },
+  {
+   "graine": 6430,
+   "monde": "t3g",
+   "ecartee": false,
+   "objet": "fimoxo9",
+   "prix_reference": 44.38,
+   "cout_au_jour_183": 27.85,
+   "taux_de_marge": 1.594,
+   "concernee": false,
+   "plan_prudent": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "secs": 0.3
+  },
+  {
+   "graine": 6431,
+   "monde": "t3g",
+   "ecartee": false,
+   "objet": "desewu1",
+   "prix_reference": 61.85,
+   "cout_au_jour_183": 32.015,
+   "taux_de_marge": 1.932,
+   "concernee": false,
+   "plan_prudent": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "secs": 0.1
+  },
+  {
+   "graine": 6432,
+   "monde": "t3g",
+   "ecartee": false,
+   "objet": "moxu8",
+   "prix_reference": 14.4,
+   "cout_au_jour_183": 9.356,
+   "taux_de_marge": 1.539,
+   "concernee": false,
+   "plan_prudent": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "secs": 0.4
+  },
+  {
+   "graine": 6433,
+   "monde": "t3g",
+   "ecartee": false,
+   "objet": "hubono4",
+   "prix_reference": 137.28,
+   "cout_au_jour_183": 88.924,
+   "taux_de_marge": 1.544,
+   "concernee": false,
+   "plan_prudent": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "secs": 0.7
+  },
+  {
+   "graine": 6434,
+   "monde": "t3g",
+   "ecartee": false,
+   "objet": "lufiti8",
+   "prix_reference": 5.97,
+   "cout_au_jour_183": 2.844,
+   "taux_de_marge": 2.099,
+   "concernee": false,
+   "plan_prudent": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "secs": 1
+  },
+  {
+   "graine": 6435,
+   "monde": "t3g",
+   "ecartee": false,
+   "objet": "beguzi5",
+   "prix_reference": 201.49,
+   "cout_au_jour_183": 97.466,
+   "taux_de_marge": 2.067,
+   "concernee": false,
+   "plan_prudent": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "secs": 0.4
+  },
+  {
+   "graine": 6436,
+   "monde": "t3g",
+   "ecartee": false,
+   "objet": "qezi7",
+   "prix_reference": 28.23,
+   "cout_au_jour_183": 15.825,
+   "taux_de_marge": 1.784,
+   "concernee": false,
+   "plan_prudent": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "secs": 0.2
+  },
+  {
+   "graine": 6437,
+   "monde": "t3g",
+   "ecartee": false,
+   "objet": "meke8",
+   "prix_reference": 14.58,
+   "cout_au_jour_183": 7.927,
+   "taux_de_marge": 1.839,
+   "concernee": false,
+   "plan_prudent": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "secs": 0.7
+  },
+  {
+   "graine": 6438,
+   "monde": "t3g",
+   "ecartee": false,
+   "objet": "tuzoji8",
+   "prix_reference": 166.58,
+   "cout_au_jour_183": 67.534,
+   "taux_de_marge": 2.467,
+   "concernee": false,
+   "plan_prudent": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "secs": 0.4
+  },
+  {
+   "graine": 6439,
+   "monde": "t3g",
+   "ecartee": false,
+   "objet": "mozago9",
+   "prix_reference": 6.11,
+   "cout_au_jour_183": 3.497,
+   "taux_de_marge": 1.747,
+   "concernee": false,
+   "plan_prudent": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "secs": 0.2
+  },
+  {
+   "graine": 6440,
+   "monde": "t3g",
+   "ecartee": false,
+   "objet": "dehofa9",
+   "prix_reference": 36.58,
+   "cout_au_jour_183": 21.697,
+   "taux_de_marge": 1.686,
+   "concernee": false,
+   "plan_prudent": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "secs": 0.1
+  },
+  {
+   "graine": 6441,
+   "monde": "t3g",
+   "ecartee": false,
+   "objet": "lewi2",
+   "prix_reference": 63.54,
+   "cout_au_jour_183": 37.203,
+   "taux_de_marge": 1.708,
+   "concernee": false,
+   "plan_prudent": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "secs": 0.8
+  },
+  {
+   "graine": 6442,
+   "monde": "t3g",
+   "ecartee": false,
+   "objet": "fawe9",
+   "prix_reference": 36.38,
+   "cout_au_jour_183": 14.531,
+   "taux_de_marge": 2.504,
+   "concernee": false,
+   "plan_prudent": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "secs": 0.5
+  },
+  {
+   "graine": 6443,
+   "monde": "t3g",
+   "ecartee": false,
+   "objet": "qubelo4",
+   "prix_reference": 69.84,
+   "cout_au_jour_183": 36.69,
+   "taux_de_marge": 1.904,
+   "concernee": false,
+   "plan_prudent": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "secs": 0.6
+  },
+  {
+   "graine": 6444,
+   "monde": "t3g",
+   "ecartee": false,
+   "objet": "data5",
+   "prix_reference": 46.02,
+   "cout_au_jour_183": 21.947,
+   "taux_de_marge": 2.097,
+   "concernee": false,
+   "plan_prudent": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "secs": 0.5
+  },
+  {
+   "graine": 6445,
+   "monde": "t3g",
+   "ecartee": false,
+   "objet": "cuso2",
+   "prix_reference": 91.84,
+   "cout_au_jour_183": 43.667,
+   "taux_de_marge": 2.103,
+   "concernee": false,
+   "plan_prudent": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "secs": 0.1
+  },
+  {
+   "graine": 6446,
+   "monde": "t3g",
+   "ecartee": false,
+   "objet": "cexu5",
+   "prix_reference": 283.74,
+   "cout_au_jour_183": 193.853,
+   "taux_de_marge": 1.464,
+   "concernee": true,
+   "plan_prudent": [
+    -0.5,
+    0,
+    1,
+    -0.5,
+    1,
+    1,
+    -0.5,
+    0
+   ],
+   "cout_vrai": 193.853,
+   "decision_chaine": 1,
+   "decision_prudente": 1,
+   "bras": {
+    "nul": {
+     "essai": 152301.8,
+     "exploitation": 165094.02,
+     "total": 317395.82,
+     "profit_2e_semestre": 748134.83
+    },
+    "aveugle:0": {
+     "essai": 149931.15,
+     "exploitation": 135908.81,
+     "total": 285839.96,
+     "profit_2e_semestre": 762568.69
+    },
+    "aveugle:1": {
+     "essai": 207788.2,
+     "exploitation": 183825.01,
+     "total": 391613.21,
+     "profit_2e_semestre": 820516.58
+    },
+    "chaine": {
+     "essai": 170269.3,
+     "exploitation": 180476.37,
+     "total": 350745.67,
+     "profit_2e_semestre": 782997.68
+    },
+    "prudente": {
+     "essai": 183023.63,
+     "exploitation": 180476.37,
+     "total": 363500,
+     "profit_2e_semestre": 795752
+    }
+   },
+   "secs": 2.8
+  },
+  {
+   "graine": 6447,
+   "monde": "t3g",
+   "ecartee": false,
+   "objet": "niki0",
+   "prix_reference": 86.72,
+   "cout_au_jour_183": 40.013,
+   "taux_de_marge": 2.167,
+   "concernee": false,
+   "plan_prudent": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "secs": 0.4
+  },
+  {
+   "graine": 6448,
+   "monde": "t3g",
+   "ecartee": false,
+   "objet": "jufuka8",
+   "prix_reference": 49.98,
+   "cout_au_jour_183": 28.975,
+   "taux_de_marge": 1.725,
+   "concernee": false,
+   "plan_prudent": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "secs": 0.5
+  },
+  {
+   "graine": 6449,
+   "monde": "t3g",
+   "ecartee": false,
+   "objet": "caxuga4",
+   "prix_reference": 31.71,
+   "cout_au_jour_183": 15.775,
+   "taux_de_marge": 2.01,
+   "concernee": false,
+   "plan_prudent": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "secs": 0.1
+  },
+  {
+   "graine": 6450,
+   "monde": "t3g",
+   "ecartee": false,
+   "objet": "duki8",
+   "prix_reference": 109.98,
+   "cout_au_jour_183": 96.705,
+   "taux_de_marge": 1.137,
+   "concernee": true,
+   "plan_prudent": [
+    0,
+    0,
+    1,
+    0,
+    1,
+    1,
+    0,
+    0
+   ],
+   "cout_vrai": 96.705,
+   "decision_chaine": 1,
+   "decision_prudente": 1,
+   "bras": {
+    "nul": {
+     "essai": 24633.42,
+     "exploitation": 38569.76,
+     "total": 63203.18,
+     "profit_2e_semestre": 363028.78
+    },
+    "aveugle:0": {
+     "essai": 23417.08,
+     "exploitation": 26536.7,
+     "total": 49953.78,
+     "profit_2e_semestre": 350099.34
+    },
+    "aveugle:1": {
+     "essai": 31967.59,
+     "exploitation": 36779.04,
+     "total": 68746.63,
+     "profit_2e_semestre": 369804.43
+    },
+    "chaine": {
+     "essai": 17400.18,
+     "exploitation": 36901.36,
+     "total": 54301.55,
+     "profit_2e_semestre": 355318.57
+    },
+    "prudente": {
+     "essai": 22249.88,
+     "exploitation": 36412.07,
+     "total": 58661.95,
+     "profit_2e_semestre": 368042.15
+    }
+   },
+   "secs": 1.8
+  },
+  {
+   "graine": 6451,
+   "monde": "t3g",
+   "ecartee": false,
+   "objet": "xetuvi7",
+   "prix_reference": 26.9,
+   "cout_au_jour_183": 14.873,
+   "taux_de_marge": 1.809,
+   "concernee": false,
+   "plan_prudent": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "secs": 0.1
+  },
+  {
+   "graine": 6452,
+   "monde": "t3g",
+   "ecartee": false,
+   "objet": "kuva0",
+   "prix_reference": 148.95,
+   "cout_au_jour_183": 73.706,
+   "taux_de_marge": 2.021,
+   "concernee": false,
+   "plan_prudent": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "secs": 1.3
+  },
+  {
+   "graine": 6453,
+   "monde": "t3g",
+   "ecartee": false,
+   "objet": "wuruzi0",
+   "prix_reference": 15.28,
+   "cout_au_jour_183": 7.471,
+   "taux_de_marge": 2.045,
+   "concernee": false,
+   "plan_prudent": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "secs": 0.7
+  },
+  {
+   "graine": 6454,
+   "monde": "t3g",
+   "ecartee": false,
+   "objet": "vosubi5",
+   "prix_reference": 7.94,
+   "cout_au_jour_183": 4.655,
+   "taux_de_marge": 1.706,
+   "concernee": false,
+   "plan_prudent": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "secs": 0.3
+  },
+  {
+   "graine": 6455,
+   "monde": "t3g",
+   "ecartee": false,
+   "objet": "rahaho3",
+   "prix_reference": 148.56,
+   "cout_au_jour_183": 60.287,
+   "taux_de_marge": 2.464,
+   "concernee": false,
+   "plan_prudent": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "secs": 0.3
+  },
+  {
+   "graine": 6456,
+   "monde": "t3g",
+   "ecartee": false,
+   "objet": "huwomu5",
+   "prix_reference": 209.8,
+   "cout_au_jour_183": 124.886,
+   "taux_de_marge": 1.68,
+   "concernee": false,
+   "plan_prudent": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "secs": 0.3
+  },
+  {
+   "graine": 6457,
+   "monde": "t3g",
+   "ecartee": false,
+   "objet": "xoto6",
+   "prix_reference": 5,
+   "cout_au_jour_183": 2.364,
+   "taux_de_marge": 2.115,
+   "concernee": false,
+   "plan_prudent": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "secs": 0.1
+  },
+  {
+   "graine": 6458,
+   "monde": "t3g",
+   "ecartee": false,
+   "objet": "hepa6",
+   "prix_reference": 84.4,
+   "cout_au_jour_183": 36.746,
+   "taux_de_marge": 2.297,
+   "concernee": false,
+   "plan_prudent": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "secs": 0.8
+  },
+  {
+   "graine": 6459,
+   "monde": "t3g",
+   "ecartee": false,
+   "objet": "davo3",
+   "prix_reference": 190.38,
+   "cout_au_jour_183": 104.662,
+   "taux_de_marge": 1.819,
+   "concernee": false,
+   "plan_prudent": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "secs": 0.6
+  },
+  {
+   "graine": 6460,
+   "monde": "t3g",
+   "ecartee": false,
+   "objet": "vozeja2",
+   "prix_reference": 202.89,
+   "cout_au_jour_183": 93.654,
+   "taux_de_marge": 2.166,
+   "concernee": false,
+   "plan_prudent": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "secs": 0.3
+  },
+  {
+   "graine": 6461,
+   "monde": "t3g",
+   "ecartee": false,
+   "objet": "vawowe9",
+   "prix_reference": 325.79,
+   "cout_au_jour_183": 129.531,
+   "taux_de_marge": 2.515,
+   "concernee": false,
+   "plan_prudent": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "secs": 0.6
+  },
+  {
+   "graine": 6462,
+   "monde": "t3g",
+   "ecartee": false,
+   "objet": "huxi4",
+   "prix_reference": 96.9,
+   "cout_au_jour_183": 103.747,
+   "taux_de_marge": 0.934,
+   "concernee": true,
+   "plan_prudent": [
+    0,
+    0,
+    1,
+    0,
+    1,
+    1,
+    0,
+    0
+   ],
+   "cout_vrai": 103.747,
+   "decision_chaine": 1,
+   "decision_prudente": 1,
+   "bras": {
+    "nul": {
+     "essai": -16983.1,
+     "exploitation": 24931.27,
+     "total": 7948.17,
+     "profit_2e_semestre": 290219.72
+    },
+    "aveugle:0": {
+     "essai": -21137.16,
+     "exploitation": -20219.64,
+     "total": -41356.8,
+     "profit_2e_semestre": 240901.87
+    },
+    "aveugle:1": {
+     "essai": 43491.88,
+     "exploitation": 39267.85,
+     "total": 82759.74,
+     "profit_2e_semestre": 365049.5
+    },
+    "chaine": {
+     "essai": -2723.02,
+     "exploitation": 42188.17,
+     "total": 39465.15,
+     "profit_2e_semestre": 321728.69
+    },
+    "prudente": {
+     "essai": 16044.66,
+     "exploitation": 40519.42,
+     "total": 56564.07,
+     "profit_2e_semestre": 338829.6
+    }
+   },
+   "secs": 2
+  },
+  {
+   "graine": 6463,
+   "monde": "t3g",
+   "ecartee": false,
+   "objet": "wiruhu8",
+   "prix_reference": 22.36,
+   "cout_au_jour_183": 15.022,
+   "taux_de_marge": 1.489,
+   "concernee": true,
+   "plan_prudent": [
+    -0.5,
+    0,
+    1,
+    -0.5,
+    1,
+    1,
+    -0.5,
+    0
+   ],
+   "cout_vrai": 15.022,
+   "decision_chaine": 0,
+   "decision_prudente": -0.5,
+   "bras": {
+    "nul": {
+     "essai": 9692.78,
+     "exploitation": 10035.72,
+     "total": 19728.5,
+     "profit_2e_semestre": 11065.66
+    },
+    "aveugle:0": {
+     "essai": 9738.05,
+     "exploitation": 10038.92,
+     "total": 19776.97,
+     "profit_2e_semestre": 11128.81
+    },
+    "aveugle:1": {
+     "essai": 7601.9,
+     "exploitation": 8106.1,
+     "total": 15708,
+     "profit_2e_semestre": 7083.95
+    },
+    "chaine": {
+     "essai": 8877.51,
+     "exploitation": 10097.63,
+     "total": 18975.14,
+     "profit_2e_semestre": 10332.56
+    },
+    "prudente": {
+     "essai": 8745.82,
+     "exploitation": 9010.89,
+     "total": 17756.72,
+     "profit_2e_semestre": 9111.79
+    }
+   },
+   "secs": 1.8
+  },
+  {
+   "graine": 6464,
+   "monde": "t3g",
+   "ecartee": false,
+   "objet": "mewa0",
+   "prix_reference": 112,
+   "cout_au_jour_183": 70.2,
+   "taux_de_marge": 1.595,
+   "concernee": false,
+   "plan_prudent": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "secs": 0.5
+  },
+  {
+   "graine": 6465,
+   "monde": "t3g",
+   "ecartee": false,
+   "objet": "baha5",
+   "prix_reference": 3.51,
+   "cout_au_jour_183": 2.016,
+   "taux_de_marge": 1.741,
+   "concernee": false,
+   "plan_prudent": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "secs": 0.5
+  },
+  {
+   "graine": 6466,
+   "monde": "t3g",
+   "ecartee": false,
+   "objet": "gijave9",
+   "prix_reference": 7.13,
+   "cout_au_jour_183": 4.576,
+   "taux_de_marge": 1.558,
+   "concernee": false,
+   "plan_prudent": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "secs": 0.4
+  },
+  {
+   "graine": 6467,
+   "monde": "t3g",
+   "ecartee": false,
+   "objet": "teko3",
+   "prix_reference": 6.35,
+   "cout_au_jour_183": 3.813,
+   "taux_de_marge": 1.665,
+   "concernee": false,
+   "plan_prudent": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "secs": 0.1
+  },
+  {
+   "graine": 6468,
+   "monde": "t3g",
+   "ecartee": false,
+   "objet": "fijo7",
+   "prix_reference": 37.35,
+   "cout_au_jour_183": 14.655,
+   "taux_de_marge": 2.549,
+   "concernee": false,
+   "plan_prudent": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "secs": 0.4
+  },
+  {
+   "graine": 6469,
+   "monde": "t3g",
+   "ecartee": false,
+   "objet": "mopavo7",
+   "prix_reference": 216.93,
+   "cout_au_jour_183": 103.198,
+   "taux_de_marge": 2.102,
+   "concernee": false,
+   "plan_prudent": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "secs": 0.5
+  },
+  {
+   "graine": 6470,
+   "monde": "t3g",
+   "ecartee": false,
+   "objet": "hixulo1",
+   "prix_reference": 152.09,
+   "cout_au_jour_183": 114.09,
+   "taux_de_marge": 1.333,
+   "concernee": true,
+   "plan_prudent": [
+    0,
+    0,
+    1,
+    0,
+    1,
+    1,
+    0,
+    0
+   ],
+   "cout_vrai": 114.09,
+   "decision_chaine": 0,
+   "decision_prudente": 0,
+   "bras": {
+    "nul": {
+     "essai": 75202.53,
+     "exploitation": 72255.43,
+     "total": 147457.97,
+     "profit_2e_semestre": 319494.76
+    },
+    "aveugle:0": {
+     "essai": 75202.94,
+     "exploitation": 74328.93,
+     "total": 149531.88,
+     "profit_2e_semestre": 355159.92
+    },
+    "aveugle:1": {
+     "essai": 60056.18,
+     "exploitation": 60892.4,
+     "total": 120948.58,
+     "profit_2e_semestre": 293794.8
+    },
+    "chaine": {
+     "essai": 65446.83,
+     "exploitation": 77482.97,
+     "total": 142929.81,
+     "profit_2e_semestre": 316117.84
+    },
+    "prudente": {
+     "essai": 72660.64,
+     "exploitation": 74328.93,
+     "total": 146989.57,
+     "profit_2e_semestre": 352655.62
+    }
+   },
+   "secs": 2.1
+  },
+  {
+   "graine": 6471,
+   "monde": "t3g",
+   "ecartee": false,
+   "objet": "ligave6",
+   "prix_reference": 219.23,
+   "cout_au_jour_183": 102.686,
+   "taux_de_marge": 2.135,
+   "concernee": false,
+   "plan_prudent": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "secs": 0.1
+  },
+  {
+   "graine": 6472,
+   "monde": "t3g",
+   "ecartee": false,
+   "objet": "zoriza7",
+   "prix_reference": 201.26,
+   "cout_au_jour_183": 100.79,
+   "taux_de_marge": 1.997,
+   "concernee": false,
+   "plan_prudent": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "secs": 0.4
+  },
+  {
+   "graine": 6473,
+   "monde": "t3g",
+   "ecartee": false,
+   "objet": "koganu3",
+   "prix_reference": 21.44,
+   "cout_au_jour_183": 9.847,
+   "taux_de_marge": 2.177,
+   "concernee": false,
+   "plan_prudent": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "secs": 0.2
+  },
+  {
+   "graine": 6474,
+   "monde": "t3g",
+   "ecartee": false,
+   "objet": "teke0",
+   "prix_reference": 36.29,
+   "cout_au_jour_183": 18.292,
+   "taux_de_marge": 1.984,
+   "concernee": false,
+   "plan_prudent": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "secs": 0.4
+  },
+  {
+   "graine": 6475,
+   "monde": "t3g",
+   "ecartee": false,
+   "objet": "siqele0",
+   "prix_reference": 42.95,
+   "cout_au_jour_183": 25.362,
+   "taux_de_marge": 1.693,
+   "concernee": false,
+   "plan_prudent": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "secs": 0.7
+  },
+  {
+   "graine": 6476,
+   "monde": "t3g",
+   "ecartee": false,
+   "objet": "lufise1",
+   "prix_reference": 43.91,
+   "cout_au_jour_183": 21.981,
+   "taux_de_marge": 1.998,
+   "concernee": false,
+   "plan_prudent": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "secs": 0.2
+  },
+  {
+   "graine": 6477,
+   "monde": "t3g",
+   "ecartee": false,
+   "objet": "pohu5",
+   "prix_reference": 254.46,
+   "cout_au_jour_183": 155.446,
+   "taux_de_marge": 1.637,
+   "concernee": false,
+   "plan_prudent": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "secs": 0.8
+  },
+  {
+   "graine": 6478,
+   "monde": "t3g",
+   "ecartee": false,
+   "objet": "pukoxa6",
+   "prix_reference": 37.24,
+   "cout_au_jour_183": 15.531,
+   "taux_de_marge": 2.398,
+   "concernee": false,
+   "plan_prudent": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "secs": 0.1
+  },
+  {
+   "graine": 6479,
+   "monde": "t3g",
+   "ecartee": false,
+   "objet": "kuwo4",
+   "prix_reference": 61.35,
+   "cout_au_jour_183": 26.494,
+   "taux_de_marge": 2.316,
+   "concernee": false,
+   "plan_prudent": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "secs": 0.2
+  },
+  {
+   "graine": 6480,
+   "monde": "t3g",
+   "ecartee": false,
+   "objet": "mero8",
+   "prix_reference": 62.64,
+   "cout_au_jour_183": 26.343,
+   "taux_de_marge": 2.378,
+   "concernee": false,
+   "plan_prudent": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "secs": 0.2
+  },
+  {
+   "graine": 6481,
+   "monde": "t3g",
+   "ecartee": false,
+   "objet": "vefo8",
+   "prix_reference": 97.59,
+   "cout_au_jour_183": 44.684,
+   "taux_de_marge": 2.184,
+   "concernee": false,
+   "plan_prudent": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "secs": 0.2
+  },
+  {
+   "graine": 6482,
+   "monde": "t3g",
+   "ecartee": false,
+   "objet": "deta7",
+   "prix_reference": 242.6,
+   "cout_au_jour_183": 90.88,
+   "taux_de_marge": 2.669,
+   "concernee": false,
+   "plan_prudent": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "secs": 0.3
+  },
+  {
+   "graine": 6483,
+   "monde": "t3g",
+   "ecartee": false,
+   "objet": "roraso5",
+   "prix_reference": 6.84,
+   "cout_au_jour_183": 4.471,
+   "taux_de_marge": 1.53,
+   "concernee": false,
+   "plan_prudent": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "secs": 0.6
+  },
+  {
+   "graine": 6484,
+   "monde": "t3g",
+   "ecartee": false,
+   "objet": "beduda8",
+   "prix_reference": 59.26,
+   "cout_au_jour_183": 22.067,
+   "taux_de_marge": 2.685,
+   "concernee": false,
+   "plan_prudent": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "secs": 0.7
+  },
+  {
+   "graine": 6485,
+   "monde": "t3g",
+   "ecartee": false,
+   "objet": "zirexu4",
+   "prix_reference": 11.79,
+   "cout_au_jour_183": 6.527,
+   "taux_de_marge": 1.806,
+   "concernee": false,
+   "plan_prudent": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "secs": 0.6
+  },
+  {
+   "graine": 6486,
+   "monde": "t3g",
+   "ecartee": false,
+   "objet": "hitezo3",
+   "prix_reference": 42.23,
+   "cout_au_jour_183": 24.003,
+   "taux_de_marge": 1.759,
+   "concernee": false,
+   "plan_prudent": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "secs": 0.2
+  },
+  {
+   "graine": 6487,
+   "monde": "t3g",
+   "ecartee": false,
+   "objet": "rodi1",
+   "prix_reference": 65.11,
+   "cout_au_jour_183": 42.176,
+   "taux_de_marge": 1.544,
+   "concernee": false,
+   "plan_prudent": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "secs": 0.3
+  },
+  {
+   "graine": 6488,
+   "monde": "t3g",
+   "ecartee": false,
+   "objet": "quwudi7",
+   "prix_reference": 13.63,
+   "cout_au_jour_183": 6.336,
+   "taux_de_marge": 2.151,
+   "concernee": false,
+   "plan_prudent": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "secs": 1
+  },
+  {
+   "graine": 6489,
+   "monde": "t3g",
+   "ecartee": false,
+   "objet": "fovo4",
+   "prix_reference": 218.85,
+   "cout_au_jour_183": 185.01,
+   "taux_de_marge": 1.183,
+   "concernee": true,
+   "plan_prudent": [
+    0,
+    0,
+    1,
+    0,
+    1,
+    1,
+    0,
+    0
+   ],
+   "cout_vrai": 185.01,
+   "decision_chaine": 1,
+   "decision_prudente": 1,
+   "bras": {
+    "nul": {
+     "essai": 40952.3,
+     "exploitation": -23228.32,
+     "total": 17723.98,
+     "profit_2e_semestre": 1855669.07
+    },
+    "aveugle:0": {
+     "essai": 87171.05,
+     "exploitation": 75124.12,
+     "total": 162295.17,
+     "profit_2e_semestre": 1997417.23
+    },
+    "aveugle:1": {
+     "essai": 158149.75,
+     "exploitation": 140262.71,
+     "total": 298412.47,
+     "profit_2e_semestre": 2134234.07
+    },
+    "chaine": {
+     "essai": 93588.95,
+     "exploitation": 140085.61,
+     "total": 233674.57,
+     "profit_2e_semestre": 2069604.71
+    },
+    "prudente": {
+     "essai": 125923.47,
+     "exploitation": 136809.28,
+     "total": 262732.75,
+     "profit_2e_semestre": 2099346.22
+    }
+   },
+   "secs": 2.3
+  },
+  {
+   "graine": 6490,
+   "monde": "t3g",
+   "ecartee": false,
+   "objet": "paja0",
+   "prix_reference": 9.6,
+   "cout_au_jour_183": 4.568,
+   "taux_de_marge": 2.102,
+   "concernee": false,
+   "plan_prudent": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "secs": 0.4
+  },
+  {
+   "graine": 6491,
+   "monde": "t3g",
+   "ecartee": false,
+   "objet": "puzu0",
+   "prix_reference": 41.98,
+   "cout_au_jour_183": 20.001,
+   "taux_de_marge": 2.099,
+   "concernee": false,
+   "plan_prudent": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "secs": 0.3
+  },
+  {
+   "graine": 6492,
+   "monde": "t3g",
+   "ecartee": false,
+   "objet": "wijuwu5",
+   "prix_reference": 3.58,
+   "cout_au_jour_183": 2.239,
+   "taux_de_marge": 1.599,
+   "concernee": false,
+   "plan_prudent": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "secs": 0.2
+  },
+  {
+   "graine": 6493,
+   "monde": "t3g",
+   "ecartee": false,
+   "objet": "fosu8",
+   "prix_reference": 26.06,
+   "cout_au_jour_183": 14.682,
+   "taux_de_marge": 1.775,
+   "concernee": false,
+   "plan_prudent": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "secs": 0.1
+  },
+  {
+   "graine": 6494,
+   "monde": "t3g",
+   "ecartee": false,
+   "objet": "reni8",
+   "prix_reference": 356.64,
+   "cout_au_jour_183": 197.132,
+   "taux_de_marge": 1.809,
+   "concernee": false,
+   "plan_prudent": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "secs": 0.7
+  },
+  {
+   "graine": 6495,
+   "monde": "t3g",
+   "ecartee": false,
+   "objet": "nozevi3",
+   "prix_reference": 16.61,
+   "cout_au_jour_183": 9.102,
+   "taux_de_marge": 1.825,
+   "concernee": false,
+   "plan_prudent": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "secs": 0.1
+  },
+  {
+   "graine": 6496,
+   "monde": "t3g",
+   "ecartee": false,
+   "objet": "vuxu5",
+   "prix_reference": 8.41,
+   "cout_au_jour_183": 6.491,
+   "taux_de_marge": 1.296,
+   "concernee": true,
+   "plan_prudent": [
+    0,
+    0,
+    1,
+    0,
+    1,
+    1,
+    0,
+    0
+   ],
+   "cout_vrai": 6.491,
+   "decision_chaine": 1,
+   "decision_prudente": 1,
+   "bras": {
+    "nul": {
+     "essai": 2104.32,
+     "exploitation": 1893.05,
+     "total": 3997.37,
+     "profit_2e_semestre": 317659.35
+    },
+    "aveugle:0": {
+     "essai": 2096.88,
+     "exploitation": 1892.26,
+     "total": 3989.14,
+     "profit_2e_semestre": 317657.49
+    },
+    "aveugle:1": {
+     "essai": 3524.78,
+     "exploitation": 3408.22,
+     "total": 6933,
+     "profit_2e_semestre": 319556.28
+    },
+    "chaine": {
+     "essai": 2569.9,
+     "exploitation": 3657.41,
+     "total": 6227.31,
+     "profit_2e_semestre": 318954.91
+    },
+    "prudente": {
+     "essai": 2804.88,
+     "exploitation": 3436.36,
+     "total": 6241.24,
+     "profit_2e_semestre": 318869
+    }
+   },
+   "secs": 0.6
+  },
+  {
+   "graine": 6497,
+   "monde": "t3g",
+   "ecartee": false,
+   "objet": "have8",
+   "prix_reference": 7.32,
+   "cout_au_jour_183": 3.739,
+   "taux_de_marge": 1.958,
+   "concernee": false,
+   "plan_prudent": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "secs": 1.1
+  },
+  {
+   "graine": 6498,
+   "monde": "t3g",
+   "ecartee": false,
+   "objet": "vuwo1",
+   "prix_reference": 7.19,
+   "cout_au_jour_183": 3.44,
+   "taux_de_marge": 2.09,
+   "concernee": false,
+   "plan_prudent": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "secs": 0.4
+  },
+  {
+   "graine": 6499,
+   "monde": "t3g",
+   "ecartee": false,
+   "objet": "pudi2",
+   "prix_reference": 203.18,
+   "cout_au_jour_183": 138.418,
+   "taux_de_marge": 1.468,
+   "concernee": true,
+   "plan_prudent": [
+    -0.5,
+    0,
+    1,
+    -0.5,
+    1,
+    1,
+    -0.5,
+    0
+   ],
+   "cout_vrai": 138.418,
+   "decision_chaine": 1,
+   "decision_prudente": -0.5,
+   "bras": {
+    "nul": {
+     "essai": 162016.57,
+     "exploitation": 146769.87,
+     "total": 308786.44,
+     "profit_2e_semestre": 415050.13
+    },
+    "aveugle:0": {
+     "essai": 179842.73,
+     "exploitation": 164040.92,
+     "total": 343883.64,
+     "profit_2e_semestre": 408212.3
+    },
+    "aveugle:1": {
+     "essai": 156816.98,
+     "exploitation": 131855.69,
+     "total": 288672.66,
+     "profit_2e_semestre": 400010.4
+    },
+    "chaine": {
+     "essai": 153083.46,
+     "exploitation": 135322.53,
+     "total": 288405.99,
+     "profit_2e_semestre": 352485.86
+    },
+    "prudente": {
+     "essai": 165893.28,
+     "exploitation": 148904.99,
+     "total": 314798.27,
+     "profit_2e_semestre": 425958.26
+    }
+   },
+   "secs": 1.5
+  },
+  {
+   "graine": 6500,
+   "monde": "t3g",
+   "ecartee": false,
+   "objet": "wepapa3",
+   "prix_reference": 3.95,
+   "cout_au_jour_183": 2.167,
+   "taux_de_marge": 1.823,
+   "concernee": false,
+   "plan_prudent": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "secs": 0.1
+  },
+  {
+   "graine": 6501,
+   "monde": "t3g",
+   "ecartee": false,
+   "objet": "jake8",
+   "prix_reference": 54.58,
+   "cout_au_jour_183": 21.052,
+   "taux_de_marge": 2.593,
+   "concernee": false,
+   "plan_prudent": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "secs": 0.2
+  },
+  {
+   "graine": 6502,
+   "monde": "t3g",
+   "ecartee": false,
+   "objet": "tiku2",
+   "prix_reference": 7.66,
+   "cout_au_jour_183": 4.229,
+   "taux_de_marge": 1.811,
+   "concernee": false,
+   "plan_prudent": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "secs": 1
+  },
+  {
+   "graine": 6503,
+   "monde": "t3g",
+   "ecartee": false,
+   "objet": "xopivo8",
+   "prix_reference": 75.04,
+   "cout_au_jour_183": 39.666,
+   "taux_de_marge": 1.892,
+   "concernee": false,
+   "plan_prudent": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "secs": 0.4
+  },
+  {
+   "graine": 6504,
+   "monde": "t3g",
+   "ecartee": false,
+   "objet": "nojo5",
+   "prix_reference": 8.29,
+   "cout_au_jour_183": 5.635,
+   "taux_de_marge": 1.471,
+   "concernee": true,
+   "plan_prudent": [
+    -0.5,
+    0,
+    1,
+    -0.5,
+    1,
+    1,
+    -0.5,
+    0
+   ],
+   "cout_vrai": 5.635,
+   "decision_chaine": 1,
+   "decision_prudente": 1,
+   "bras": {
+    "nul": {
+     "essai": 2787.52,
+     "exploitation": 2489.88,
+     "total": 5277.39,
+     "profit_2e_semestre": 316986.8
+    },
+    "aveugle:0": {
+     "essai": 3082.78,
+     "exploitation": 2918.15,
+     "total": 6000.93,
+     "profit_2e_semestre": 317680.19
+    },
+    "aveugle:1": {
+     "essai": 3302.97,
+     "exploitation": 3147.03,
+     "total": 6450,
+     "profit_2e_semestre": 318169.14
+    },
+    "chaine": {
+     "essai": 3013.42,
+     "exploitation": 3165.94,
+     "total": 6179.35,
+     "profit_2e_semestre": 317879.58
+    },
+    "prudente": {
+     "essai": 3148.08,
+     "exploitation": 3066.7,
+     "total": 6214.78,
+     "profit_2e_semestre": 318014.25
+    }
+   },
+   "secs": 1.7
+  },
+  {
+   "graine": 6505,
+   "monde": "t3g",
+   "ecartee": false,
+   "objet": "fexixi4",
+   "prix_reference": 181.79,
+   "cout_au_jour_183": 108.815,
+   "taux_de_marge": 1.671,
+   "concernee": false,
+   "plan_prudent": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "secs": 0.3
+  },
+  {
+   "graine": 6506,
+   "monde": "t3g",
+   "ecartee": false,
+   "objet": "xegacu9",
+   "prix_reference": 7.36,
+   "cout_au_jour_183": 3.667,
+   "taux_de_marge": 2.007,
+   "concernee": false,
+   "plan_prudent": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "secs": 0.4
+  },
+  {
+   "graine": 6507,
+   "monde": "t3g",
+   "ecartee": false,
+   "objet": "roloto1",
+   "prix_reference": 42.63,
+   "cout_au_jour_183": 28.579,
+   "taux_de_marge": 1.492,
+   "concernee": true,
+   "plan_prudent": [
+    -0.5,
+    0,
+    1,
+    -0.5,
+    1,
+    1,
+    -0.5,
+    0
+   ],
+   "cout_vrai": 28.579,
+   "decision_chaine": -1,
+   "decision_prudente": -0.5,
+   "bras": {
+    "nul": {
+     "essai": 16397.83,
+     "exploitation": 13592.86,
+     "total": 29990.69,
+     "profit_2e_semestre": 289464.17
+    },
+    "aveugle:0": {
+     "essai": 22425.2,
+     "exploitation": 23254.21,
+     "total": 45679.41,
+     "profit_2e_semestre": 304389.8
+    },
+    "aveugle:1": {
+     "essai": 13343.88,
+     "exploitation": 13590.98,
+     "total": 26934.86,
+     "profit_2e_semestre": 286478.89
+    },
+    "chaine": {
+     "essai": 20231.16,
+     "exploitation": 21547.99,
+     "total": 41779.16,
+     "profit_2e_semestre": 298934.02
+    },
+    "prudente": {
+     "essai": 21661.67,
+     "exploitation": 24211.48,
+     "total": 45873.15,
+     "profit_2e_semestre": 303919.85
+    }
+   },
+   "secs": 1.4
+  },
+  {
+   "graine": 6508,
+   "monde": "t3g",
+   "ecartee": false,
+   "objet": "rosu8",
+   "prix_reference": 195.07,
+   "cout_au_jour_183": 96.984,
+   "taux_de_marge": 2.011,
+   "concernee": false,
+   "plan_prudent": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "secs": 0.4
+  },
+  {
+   "graine": 6509,
+   "monde": "t3g",
+   "ecartee": false,
+   "objet": "poge6",
+   "prix_reference": 231,
+   "cout_au_jour_183": 119.877,
+   "taux_de_marge": 1.927,
+   "concernee": false,
+   "plan_prudent": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "secs": 1.3
+  },
+  {
+   "graine": 6510,
+   "monde": "t3g",
+   "ecartee": false,
+   "objet": "kuwu4",
+   "prix_reference": 4.18,
+   "cout_au_jour_183": 2.892,
+   "taux_de_marge": 1.445,
+   "concernee": true,
+   "plan_prudent": [
+    -0.5,
+    0,
+    1,
+    -0.5,
+    1,
+    1,
+    -0.5,
+    0
+   ],
+   "cout_vrai": 2.892,
+   "decision_chaine": 0,
+   "decision_prudente": 1,
+   "bras": {
+    "nul": {
+     "essai": 2801.76,
+     "exploitation": 2526.18,
+     "total": 5327.94,
+     "profit_2e_semestre": 503889.58
+    },
+    "aveugle:0": {
+     "essai": 2981.56,
+     "exploitation": 2571.99,
+     "total": 5553.55,
+     "profit_2e_semestre": 503065.53
+    },
+    "aveugle:1": {
+     "essai": 3167.89,
+     "exploitation": 2665.24,
+     "total": 5833.13,
+     "profit_2e_semestre": 504437.05
+    },
+    "chaine": {
+     "essai": 2681.67,
+     "exploitation": 2565.55,
+     "total": 5247.22,
+     "profit_2e_semestre": 503873.95
+    },
+    "prudente": {
+     "essai": 2844.03,
+     "exploitation": 2613.8,
+     "total": 5457.84,
+     "profit_2e_semestre": 503019.97
+    }
+   },
+   "secs": 3.2
+  },
+  {
+   "graine": 6511,
+   "monde": "t3g",
+   "ecartee": false,
+   "objet": "magero1",
+   "prix_reference": 194.08,
+   "cout_au_jour_183": 135.227,
+   "taux_de_marge": 1.435,
+   "concernee": true,
+   "plan_prudent": [
+    -0.5,
+    0,
+    1,
+    -0.5,
+    1,
+    1,
+    -0.5,
+    0
+   ],
+   "cout_vrai": 135.227,
+   "decision_chaine": 1,
+   "decision_prudente": 1,
+   "bras": {
+    "nul": {
+     "essai": 65558.63,
+     "exploitation": 63958.44,
+     "total": 129517.07,
+     "profit_2e_semestre": 829932.04
+    },
+    "aveugle:0": {
+     "essai": 65562.51,
+     "exploitation": 58970.95,
+     "total": 124533.45,
+     "profit_2e_semestre": 824680.79
+    },
+    "aveugle:1": {
+     "essai": 79993.06,
+     "exploitation": 71081.08,
+     "total": 151074.15,
+     "profit_2e_semestre": 851328.86
+    },
+    "chaine": {
+     "essai": 66676.55,
+     "exploitation": 71081.08,
+     "total": 137757.63,
+     "profit_2e_semestre": 838060.24
+    },
+    "prudente": {
+     "essai": 71144.22,
+     "exploitation": 69685.23,
+     "total": 140829.46,
+     "profit_2e_semestre": 842372.65
+    }
+   },
+   "secs": 1.6
+  },
+  {
+   "graine": 6512,
+   "monde": "t3g",
+   "ecartee": false,
+   "objet": "jaloko2",
+   "prix_reference": 14.02,
+   "cout_au_jour_183": 9.719,
+   "taux_de_marge": 1.443,
+   "concernee": true,
+   "plan_prudent": [
+    -0.5,
+    0,
+    1,
+    -0.5,
+    1,
+    1,
+    -0.5,
+    0
+   ],
+   "cout_vrai": 9.719,
+   "decision_chaine": 1,
+   "decision_prudente": 1,
+   "bras": {
+    "nul": {
+     "essai": 8333.75,
+     "exploitation": 7475.26,
+     "total": 15809,
+     "profit_2e_semestre": 191697.07
+    },
+    "aveugle:0": {
+     "essai": 7139.81,
+     "exploitation": 7058.09,
+     "total": 14197.89,
+     "profit_2e_semestre": 189883.48
+    },
+    "aveugle:1": {
+     "essai": 9598.16,
+     "exploitation": 9259.89,
+     "total": 18858.06,
+     "profit_2e_semestre": 195102.16
+    },
+    "chaine": {
+     "essai": 7970.43,
+     "exploitation": 9018.06,
+     "total": 16988.49,
+     "profit_2e_semestre": 193111.1
+    },
+    "prudente": {
+     "essai": 8783.05,
+     "exploitation": 9228.69,
+     "total": 18011.74,
+     "profit_2e_semestre": 193894.26
+    }
+   },
+   "secs": 0.7
+  },
+  {
+   "graine": 6513,
+   "monde": "t3g",
+   "ecartee": false,
+   "objet": "hoqo8",
+   "prix_reference": 4.21,
+   "cout_au_jour_183": 2.222,
+   "taux_de_marge": 1.895,
+   "concernee": false,
+   "plan_prudent": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "secs": 0.2
+  },
+  {
+   "graine": 6514,
+   "monde": "t3g",
+   "ecartee": false,
+   "objet": "razo4",
+   "prix_reference": 9.06,
+   "cout_au_jour_183": 5.335,
+   "taux_de_marge": 1.698,
+   "concernee": false,
+   "plan_prudent": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "secs": 0.1
+  },
+  {
+   "graine": 6515,
+   "monde": "t3g",
+   "ecartee": false,
+   "objet": "nivija9",
+   "prix_reference": 61.6,
+   "cout_au_jour_183": 38.643,
+   "taux_de_marge": 1.594,
+   "concernee": false,
+   "plan_prudent": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "secs": 0.5
+  },
+  {
+   "graine": 6516,
+   "monde": "t3g",
+   "ecartee": false,
+   "objet": "venufo3",
+   "prix_reference": 32.92,
+   "cout_au_jour_183": 18.576,
+   "taux_de_marge": 1.772,
+   "concernee": false,
+   "plan_prudent": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "secs": 0.8
+  },
+  {
+   "graine": 6517,
+   "monde": "t3g",
+   "ecartee": false,
+   "objet": "zahaba3",
+   "prix_reference": 136.06,
+   "cout_au_jour_183": 63.777,
+   "taux_de_marge": 2.133,
+   "concernee": false,
+   "plan_prudent": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "secs": 0.3
+  },
+  {
+   "graine": 6518,
+   "monde": "t3g",
+   "ecartee": false,
+   "objet": "nujisa1",
+   "prix_reference": 119.22,
+   "cout_au_jour_183": 63.203,
+   "taux_de_marge": 1.886,
+   "concernee": false,
+   "plan_prudent": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "secs": 0.3
+  },
+  {
+   "graine": 6519,
+   "monde": "t3g",
+   "ecartee": false,
+   "objet": "ralogi8",
+   "prix_reference": 8.53,
+   "cout_au_jour_183": 4.385,
+   "taux_de_marge": 1.945,
+   "concernee": false,
+   "plan_prudent": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "secs": 0.7
+  },
+  {
+   "graine": 6520,
+   "monde": "t3g",
+   "ecartee": false,
+   "objet": "wuxe7",
+   "prix_reference": 33.4,
+   "cout_au_jour_183": 12.788,
+   "taux_de_marge": 2.612,
+   "concernee": false,
+   "plan_prudent": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "secs": 0.3
+  },
+  {
+   "graine": 6521,
+   "monde": "t3g",
+   "ecartee": false,
+   "objet": "gaquho7",
+   "prix_reference": 11.41,
+   "cout_au_jour_183": 5.346,
+   "taux_de_marge": 2.134,
+   "concernee": false,
+   "plan_prudent": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "secs": 0.2
+  },
+  {
+   "graine": 6522,
+   "monde": "t3g",
+   "ecartee": false,
+   "objet": "fepeve2",
+   "prix_reference": 5.76,
+   "cout_au_jour_183": 3.238,
+   "taux_de_marge": 1.779,
+   "concernee": false,
+   "plan_prudent": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "secs": 0.2
+  },
+  {
+   "graine": 6523,
+   "monde": "t3g",
+   "ecartee": false,
+   "objet": "qaki0",
+   "prix_reference": 20.26,
+   "cout_au_jour_183": 10.566,
+   "taux_de_marge": 1.918,
+   "concernee": false,
+   "plan_prudent": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "secs": 0.2
+  },
+  {
+   "graine": 6524,
+   "monde": "t3g",
+   "ecartee": false,
+   "objet": "jogi6",
+   "prix_reference": 52.83,
+   "cout_au_jour_183": 33.049,
+   "taux_de_marge": 1.599,
+   "concernee": false,
+   "plan_prudent": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "secs": 1.1
+  },
+  {
+   "graine": 6525,
+   "monde": "t3g",
+   "ecartee": false,
+   "objet": "duguxe6",
+   "prix_reference": 53.89,
+   "cout_au_jour_183": 28.338,
+   "taux_de_marge": 1.902,
+   "concernee": false,
+   "plan_prudent": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "secs": 0.2
+  },
+  {
+   "graine": 6526,
+   "monde": "t3g",
+   "ecartee": false,
+   "objet": "tuka6",
+   "prix_reference": 15.07,
+   "cout_au_jour_183": 10.596,
+   "taux_de_marge": 1.422,
+   "concernee": true,
+   "plan_prudent": [
+    -0.5,
+    0,
+    1,
+    -0.5,
+    1,
+    1,
+    -0.5,
+    0
+   ],
+   "cout_vrai": 10.596,
+   "decision_chaine": 0,
+   "decision_prudente": -0.5,
+   "bras": {
+    "nul": {
+     "essai": 6265.9,
+     "exploitation": 6270.98,
+     "total": 12536.87,
+     "profit_2e_semestre": 609715.23
+    },
+    "aveugle:0": {
+     "essai": 7212.45,
+     "exploitation": 7440.64,
+     "total": 14653.09,
+     "profit_2e_semestre": 611831.45
+    },
+    "aveugle:1": {
+     "essai": 5556.61,
+     "exploitation": 5894.62,
+     "total": 11451.23,
+     "profit_2e_semestre": 608629.59
+    },
+    "chaine": {
+     "essai": 6259.96,
+     "exploitation": 7440.64,
+     "total": 13700.59,
+     "profit_2e_semestre": 614301.39
+    },
+    "prudente": {
+     "essai": 6641.74,
+     "exploitation": 6896.18,
+     "total": 13537.93,
+     "profit_2e_semestre": 610719.16
+    }
+   },
+   "secs": 1.6
+  },
+  {
+   "graine": 6527,
+   "monde": "t3g",
+   "ecartee": false,
+   "objet": "qipifo8",
+   "prix_reference": 21.08,
+   "cout_au_jour_183": 11.986,
+   "taux_de_marge": 1.759,
+   "concernee": false,
+   "plan_prudent": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "secs": 0.3
+  },
+  {
+   "graine": 6528,
+   "monde": "t3g",
+   "ecartee": false,
+   "objet": "tala3",
+   "prix_reference": 10.53,
+   "cout_au_jour_183": 6.531,
+   "taux_de_marge": 1.612,
+   "concernee": false,
+   "plan_prudent": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "secs": 0.2
+  },
+  {
+   "graine": 6529,
+   "monde": "t3g",
+   "ecartee": false,
+   "objet": "tehe7",
+   "prix_reference": 6.24,
+   "cout_au_jour_183": 3.479,
+   "taux_de_marge": 1.794,
+   "concernee": false,
+   "plan_prudent": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "secs": 0.3
+  },
+  {
+   "graine": 6530,
+   "monde": "t3g",
+   "ecartee": false,
+   "objet": "hofora7",
+   "prix_reference": 32.94,
+   "cout_au_jour_183": 12.99,
+   "taux_de_marge": 2.536,
+   "concernee": false,
+   "plan_prudent": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "secs": 0.6
+  },
+  {
+   "graine": 6531,
+   "monde": "t3g",
+   "ecartee": false,
+   "objet": "toroco6",
+   "prix_reference": 51.97,
+   "cout_au_jour_183": 33.229,
+   "taux_de_marge": 1.564,
+   "concernee": false,
+   "plan_prudent": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "secs": 0.2
+  },
+  {
+   "graine": 6532,
+   "monde": "t3g",
+   "ecartee": false,
+   "objet": "ceje1",
+   "prix_reference": 20.96,
+   "cout_au_jour_183": 12.912,
+   "taux_de_marge": 1.623,
+   "concernee": false,
+   "plan_prudent": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "secs": 1.1
+  },
+  {
+   "graine": 6533,
+   "monde": "t3g",
+   "ecartee": false,
+   "objet": "ruli8",
+   "prix_reference": 4.56,
+   "cout_au_jour_183": 3.305,
+   "taux_de_marge": 1.38,
+   "concernee": true,
+   "plan_prudent": [
+    0,
+    0,
+    1,
+    0,
+    1,
+    1,
+    0,
+    0
+   ],
+   "cout_vrai": 3.305,
+   "decision_chaine": 1,
+   "decision_prudente": 1,
+   "bras": {
+    "nul": {
+     "essai": 3423.26,
+     "exploitation": 3072.22,
+     "total": 6495.48,
+     "profit_2e_semestre": 121008.58
+    },
+    "aveugle:0": {
+     "essai": 3019.97,
+     "exploitation": 2795.29,
+     "total": 5815.25,
+     "profit_2e_semestre": 120290.17
+    },
+    "aveugle:1": {
+     "essai": 3674.21,
+     "exploitation": 3152.06,
+     "total": 6826.27,
+     "profit_2e_semestre": 121336.04
+    },
+    "chaine": {
+     "essai": 3031.78,
+     "exploitation": 3180.8,
+     "total": 6212.58,
+     "profit_2e_semestre": 120693.62
+    },
+    "prudente": {
+     "essai": 3605.74,
+     "exploitation": 3180.8,
+     "total": 6786.54,
+     "profit_2e_semestre": 121267.57
+    }
+   },
+   "secs": 3.5
+  },
+  {
+   "graine": 6534,
+   "monde": "t3g",
+   "ecartee": false,
+   "objet": "xage5",
+   "prix_reference": 20.13,
+   "cout_au_jour_183": 8.425,
+   "taux_de_marge": 2.389,
+   "concernee": false,
+   "plan_prudent": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "secs": 0.3
+  },
+  {
+   "graine": 6535,
+   "monde": "t3g",
+   "ecartee": false,
+   "objet": "lecuma5",
+   "prix_reference": 9.57,
+   "cout_au_jour_183": 7.465,
+   "taux_de_marge": 1.282,
+   "concernee": true,
+   "plan_prudent": [
+    0,
+    0,
+    1,
+    0,
+    1,
+    1,
+    0,
+    0
+   ],
+   "cout_vrai": 7.465,
+   "decision_chaine": 1,
+   "decision_prudente": 1,
+   "bras": {
+    "nul": {
+     "essai": 5440.52,
+     "exploitation": 5137.24,
+     "total": 10577.75,
+     "profit_2e_semestre": 387556.6
+    },
+    "aveugle:0": {
+     "essai": 5440.9,
+     "exploitation": 5154.65,
+     "total": 10595.55,
+     "profit_2e_semestre": 387589.81
+    },
+    "aveugle:1": {
+     "essai": 7119.76,
+     "exploitation": 6499.48,
+     "total": 13619.24,
+     "profit_2e_semestre": 390623.24
+    },
+    "chaine": {
+     "essai": 5495.35,
+     "exploitation": 6548.92,
+     "total": 12044.27,
+     "profit_2e_semestre": 389053.37
+    },
+    "prudente": {
+     "essai": 6611.9,
+     "exploitation": 6517.46,
+     "total": 13129.36,
+     "profit_2e_semestre": 390158.08
+    }
+   },
+   "secs": 3.6
+  },
+  {
+   "graine": 6536,
+   "monde": "t3g",
+   "ecartee": false,
+   "objet": "qututi0",
+   "prix_reference": 4.82,
+   "cout_au_jour_183": 2.141,
+   "taux_de_marge": 2.251,
+   "concernee": false,
+   "plan_prudent": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "secs": 1.3
+  },
+  {
+   "graine": 6537,
+   "monde": "t3g",
+   "ecartee": false,
+   "objet": "vaca0",
+   "prix_reference": 99.29,
+   "cout_au_jour_183": 43.727,
+   "taux_de_marge": 2.271,
+   "concernee": false,
+   "plan_prudent": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "secs": 0.4
+  },
+  {
+   "graine": 6538,
+   "monde": "t3g",
+   "ecartee": false,
+   "objet": "muso5",
+   "prix_reference": 12.25,
+   "cout_au_jour_183": 7.896,
+   "taux_de_marge": 1.551,
+   "concernee": false,
+   "plan_prudent": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "secs": 0.4
+  },
+  {
+   "graine": 6539,
+   "monde": "t3g",
+   "ecartee": false,
+   "objet": "lidi7",
+   "prix_reference": 91.06,
+   "cout_au_jour_183": 51.779,
+   "taux_de_marge": 1.759,
+   "concernee": false,
+   "plan_prudent": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "secs": 0.7
+  },
+  {
+   "graine": 6540,
+   "monde": "t3g",
+   "ecartee": false,
+   "objet": "zihuze8",
+   "prix_reference": 40.06,
+   "cout_au_jour_183": 29.957,
+   "taux_de_marge": 1.337,
+   "concernee": true,
+   "plan_prudent": [
+    0,
+    0,
+    1,
+    0,
+    1,
+    1,
+    0,
+    0
+   ],
+   "cout_vrai": 29.957,
+   "decision_chaine": 0,
+   "decision_prudente": 0,
+   "bras": {
+    "nul": {
+     "essai": 17728.42,
+     "exploitation": 12023.06,
+     "total": 29751.48,
+     "profit_2e_semestre": 333081.36
+    },
+    "aveugle:0": {
+     "essai": 18275.8,
+     "exploitation": 12981.98,
+     "total": 31257.78,
+     "profit_2e_semestre": 334287.59
+    },
+    "aveugle:1": {
+     "essai": 13945.04,
+     "exploitation": 8894.24,
+     "total": 22839.28,
+     "profit_2e_semestre": 325938.48
+    },
+    "chaine": {
+     "essai": 14374.22,
+     "exploitation": 12769.82,
+     "total": 27144.04,
+     "profit_2e_semestre": 330164.79
+    },
+    "prudente": {
+     "essai": 17465.61,
+     "exploitation": 12971.88,
+     "total": 30437.49,
+     "profit_2e_semestre": 333477.39
+    }
+   },
+   "secs": 1.1
+  },
+  {
+   "graine": 6541,
+   "monde": "t3g",
+   "ecartee": false,
+   "objet": "xexeha6",
+   "prix_reference": 34.92,
+   "cout_au_jour_183": 16.014,
+   "taux_de_marge": 2.181,
+   "concernee": false,
+   "plan_prudent": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "secs": 0.3
+  },
+  {
+   "graine": 6542,
+   "monde": "t3g",
+   "ecartee": false,
+   "objet": "rinaju7",
+   "prix_reference": 41.01,
+   "cout_au_jour_183": 17.697,
+   "taux_de_marge": 2.317,
+   "concernee": false,
+   "plan_prudent": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "secs": 0.4
+  },
+  {
+   "graine": 6543,
+   "monde": "t3g",
+   "ecartee": false,
+   "objet": "lejumi9",
+   "prix_reference": 128.04,
+   "cout_au_jour_183": 37.796,
+   "taux_de_marge": 3.388,
+   "concernee": false,
+   "plan_prudent": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "secs": 0.3
+  },
+  {
+   "graine": 6544,
+   "monde": "t3g",
+   "ecartee": false,
+   "objet": "naxuli3",
+   "prix_reference": 4.62,
+   "cout_au_jour_183": 2.422,
+   "taux_de_marge": 1.908,
+   "concernee": false,
+   "plan_prudent": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "secs": 0.5
+  },
+  {
+   "graine": 6545,
+   "monde": "t3g",
+   "ecartee": false,
+   "objet": "juha6",
+   "prix_reference": 9.66,
+   "cout_au_jour_183": 7.654,
+   "taux_de_marge": 1.262,
+   "concernee": true,
+   "plan_prudent": [
+    0,
+    0,
+    1,
+    0,
+    1,
+    1,
+    0,
+    0
+   ],
+   "cout_vrai": 7.654,
+   "decision_chaine": 0,
+   "decision_prudente": 0,
+   "bras": {
+    "nul": {
+     "essai": 3329.7,
+     "exploitation": 3298.14,
+     "total": 6627.85,
+     "profit_2e_semestre": 459684.07
+    },
+    "aveugle:0": {
+     "essai": 3189.86,
+     "exploitation": 3099.58,
+     "total": 6289.44,
+     "profit_2e_semestre": 459357.27
+    },
+    "aveugle:1": {
+     "essai": 3328.5,
+     "exploitation": 3377.19,
+     "total": 6705.69,
+     "profit_2e_semestre": 459772.87
+    },
+    "chaine": {
+     "essai": 2614.56,
+     "exploitation": 3019.33,
+     "total": 5633.89,
+     "profit_2e_semestre": 458699.76
+    },
+    "prudente": {
+     "essai": 3318.86,
+     "exploitation": 3334.31,
+     "total": 6653.17,
+     "profit_2e_semestre": 459718.96
+    }
+   },
+   "secs": 1.3
+  },
+  {
+   "graine": 6546,
+   "monde": "t3g",
+   "ecartee": false,
+   "objet": "kojesi5",
+   "prix_reference": 7.84,
+   "cout_au_jour_183": 2.745,
+   "taux_de_marge": 2.856,
+   "concernee": false,
+   "plan_prudent": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "secs": 0.2
+  },
+  {
+   "graine": 6547,
+   "monde": "t3g",
+   "ecartee": false,
+   "objet": "pema6",
+   "prix_reference": 20.79,
+   "cout_au_jour_183": 9.249,
+   "taux_de_marge": 2.248,
+   "concernee": false,
+   "plan_prudent": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "secs": 0.7
+  },
+  {
+   "graine": 6548,
+   "monde": "t3g",
+   "ecartee": false,
+   "objet": "kixexe8",
+   "prix_reference": 24.17,
+   "cout_au_jour_183": 12.733,
+   "taux_de_marge": 1.898,
+   "concernee": false,
+   "plan_prudent": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "secs": 0.1
+  },
+  {
+   "graine": 6549,
+   "monde": "t3g",
+   "ecartee": false,
+   "objet": "qiceri3",
+   "prix_reference": 8.32,
+   "cout_au_jour_183": 6.961,
+   "taux_de_marge": 1.195,
+   "concernee": true,
+   "plan_prudent": [
+    0,
+    0,
+    1,
+    0,
+    1,
+    1,
+    0,
+    0
+   ],
+   "cout_vrai": 6.961,
+   "decision_chaine": 1,
+   "decision_prudente": 1,
+   "bras": {
+    "nul": {
+     "essai": 2588.89,
+     "exploitation": 613.53,
+     "total": 3202.42,
+     "profit_2e_semestre": 698046.95
+    },
+    "aveugle:0": {
+     "essai": 2915.54,
+     "exploitation": 2874.76,
+     "total": 5790.3,
+     "profit_2e_semestre": 700707.53
+    },
+    "aveugle:1": {
+     "essai": 6001.45,
+     "exploitation": 6135.58,
+     "total": 12137.02,
+     "profit_2e_semestre": 708776.69
+    },
+    "chaine": {
+     "essai": 3946,
+     "exploitation": 6090.87,
+     "total": 10036.86,
+     "profit_2e_semestre": 706672.99
+    },
+    "prudente": {
+     "essai": 4789.57,
+     "exploitation": 6125.26,
+     "total": 10914.83,
+     "profit_2e_semestre": 707520
+    }
+   },
+   "secs": 5.6
+  },
+  {
+   "graine": 6550,
+   "monde": "t3g",
+   "ecartee": false,
+   "objet": "kesu1",
+   "prix_reference": 52.1,
+   "cout_au_jour_183": 28.566,
+   "taux_de_marge": 1.824,
+   "concernee": false,
+   "plan_prudent": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "secs": 0.1
+  },
+  {
+   "graine": 6551,
+   "monde": "t3g",
+   "ecartee": false,
+   "objet": "jije4",
+   "prix_reference": 2.45,
+   "cout_au_jour_183": 2.209,
+   "taux_de_marge": 1.109,
+   "concernee": true,
+   "plan_prudent": [
+    0,
+    0,
+    1,
+    0,
+    1,
+    1,
+    0,
+    0
+   ],
+   "cout_vrai": 2.209,
+   "decision_chaine": 1,
+   "decision_prudente": 1,
+   "bras": {
+    "nul": {
+     "essai": 507.16,
+     "exploitation": 562.8,
+     "total": 1069.96,
+     "profit_2e_semestre": 398683.87
+    },
+    "aveugle:0": {
+     "essai": 402.81,
+     "exploitation": 409.32,
+     "total": 812.13,
+     "profit_2e_semestre": 398430.71
+    },
+    "aveugle:1": {
+     "essai": 890.21,
+     "exploitation": 842.55,
+     "total": 1732.76,
+     "profit_2e_semestre": 399348.22
+    },
+    "chaine": {
+     "essai": 483.33,
+     "exploitation": 828.93,
+     "total": 1312.26,
+     "profit_2e_semestre": 398942.18
+    },
+    "prudente": {
+     "essai": 734.56,
+     "exploitation": 844.25,
+     "total": 1578.81,
+     "profit_2e_semestre": 399193.65
+    }
+   },
+   "secs": 1.5
+  },
+  {
+   "graine": 6552,
+   "monde": "t3g",
+   "ecartee": false,
+   "objet": "lavabi1",
+   "prix_reference": 5.9,
+   "cout_au_jour_183": 3.785,
+   "taux_de_marge": 1.559,
+   "concernee": false,
+   "plan_prudent": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "secs": 1.1
+  },
+  {
+   "graine": 6553,
+   "monde": "t3g",
+   "ecartee": false,
+   "objet": "qosi6",
+   "prix_reference": 288.01,
+   "cout_au_jour_183": 126.222,
+   "taux_de_marge": 2.282,
+   "concernee": false,
+   "plan_prudent": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "secs": 0.2
+  },
+  {
+   "graine": 6554,
+   "monde": "t3g",
+   "ecartee": false,
+   "objet": "hoze1",
+   "prix_reference": 19.06,
+   "cout_au_jour_183": 7.933,
+   "taux_de_marge": 2.402,
+   "concernee": false,
+   "plan_prudent": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "secs": 0.1
+  },
+  {
+   "graine": 6555,
+   "monde": "t3g",
+   "ecartee": false,
+   "objet": "voho6",
+   "prix_reference": 25.77,
+   "cout_au_jour_183": 14.57,
+   "taux_de_marge": 1.769,
+   "concernee": false,
+   "plan_prudent": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "secs": 0.4
+  },
+  {
+   "graine": 6556,
+   "monde": "t3g",
+   "ecartee": false,
+   "objet": "hake6",
+   "prix_reference": 59.96,
+   "cout_au_jour_183": 28.365,
+   "taux_de_marge": 2.114,
+   "concernee": false,
+   "plan_prudent": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "secs": 0.2
+  },
+  {
+   "graine": 6557,
+   "monde": "t3g",
+   "ecartee": false,
+   "objet": "dome3",
+   "prix_reference": 31.38,
+   "cout_au_jour_183": 14.606,
+   "taux_de_marge": 2.148,
+   "concernee": false,
+   "plan_prudent": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "secs": 0.1
+  },
+  {
+   "graine": 6558,
+   "monde": "t3g",
+   "ecartee": false,
+   "objet": "lobapu8",
+   "prix_reference": 388.76,
+   "cout_au_jour_183": 184.733,
+   "taux_de_marge": 2.104,
+   "concernee": false,
+   "plan_prudent": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "secs": 0.8
+  },
+  {
+   "graine": 6559,
+   "monde": "t3g",
+   "ecartee": false,
+   "objet": "kapara6",
+   "prix_reference": 5.94,
+   "cout_au_jour_183": 2.511,
+   "taux_de_marge": 2.365,
+   "concernee": false,
+   "plan_prudent": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "secs": 0.1
+  },
+  {
+   "graine": 6560,
+   "monde": "t3g",
+   "ecartee": false,
+   "objet": "dava0",
+   "prix_reference": 181.4,
+   "cout_au_jour_183": 135.029,
+   "taux_de_marge": 1.343,
+   "concernee": true,
+   "plan_prudent": [
+    0,
+    0,
+    1,
+    0,
+    1,
+    1,
+    0,
+    0
+   ],
+   "cout_vrai": 135.029,
+   "decision_chaine": 1,
+   "decision_prudente": 0,
+   "bras": {
+    "nul": {
+     "essai": 90227.23,
+     "exploitation": 61138.25,
+     "total": 151365.47,
+     "profit_2e_semestre": 276395.19
+    },
+    "aveugle:0": {
+     "essai": 107904.49,
+     "exploitation": 113608.08,
+     "total": 221512.58,
+     "profit_2e_semestre": 348224.71
+    },
+    "aveugle:1": {
+     "essai": 84291.27,
+     "exploitation": 90528.28,
+     "total": 174819.55,
+     "profit_2e_semestre": 300639.85
+    },
+    "chaine": {
+     "essai": 73885.91,
+     "exploitation": 89287.5,
+     "total": 163173.4,
+     "profit_2e_semestre": 290234.49
+    },
+    "prudente": {
+     "essai": 100392.18,
+     "exploitation": 110918.59,
+     "total": 211310.76,
+     "profit_2e_semestre": 334266.88
+    }
+   },
+   "secs": 1.3
+  },
+  {
+   "graine": 6561,
+   "monde": "t3g",
+   "ecartee": false,
+   "objet": "kalivi7",
+   "prix_reference": 30.06,
+   "cout_au_jour_183": 10.227,
+   "taux_de_marge": 2.939,
+   "concernee": false,
+   "plan_prudent": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "secs": 0.1
+  },
+  {
+   "graine": 6562,
+   "monde": "t3g",
+   "ecartee": false,
+   "objet": "buwuje7",
+   "prix_reference": 91.83,
+   "cout_au_jour_183": 68.133,
+   "taux_de_marge": 1.348,
+   "concernee": true,
+   "plan_prudent": [
+    0,
+    0,
+    1,
+    0,
+    1,
+    1,
+    0,
+    0
+   ],
+   "cout_vrai": 68.133,
+   "decision_chaine": 1,
+   "decision_prudente": 1,
+   "bras": {
+    "nul": {
+     "essai": 21017.37,
+     "exploitation": 19528.82,
+     "total": 40546.19,
+     "profit_2e_semestre": 371798.86
+    },
+    "aveugle:0": {
+     "essai": 21018.96,
+     "exploitation": 20473.94,
+     "total": 41492.9,
+     "profit_2e_semestre": 372768.75
+    },
+    "aveugle:1": {
+     "essai": 30560.13,
+     "exploitation": 30140.22,
+     "total": 60700.35,
+     "profit_2e_semestre": 391735.54
+    },
+    "chaine": {
+     "essai": 23540.19,
+     "exploitation": 29953.6,
+     "total": 53493.78,
+     "profit_2e_semestre": 384715.61
+    },
+    "prudente": {
+     "essai": 27162.42,
+     "exploitation": 29720.31,
+     "total": 56882.73,
+     "profit_2e_semestre": 388337.83
+    }
+   },
+   "secs": 1.4
+  },
+  {
+   "graine": 6563,
+   "monde": "t3g",
+   "ecartee": false,
+   "objet": "seja9",
+   "prix_reference": 86.79,
+   "cout_au_jour_183": 32.775,
+   "taux_de_marge": 2.648,
+   "concernee": false,
+   "plan_prudent": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "secs": 0.3
+  },
+  {
+   "graine": 6564,
+   "monde": "t3g",
+   "ecartee": false,
+   "objet": "kuqe9",
+   "prix_reference": 135.27,
+   "cout_au_jour_183": 63.356,
+   "taux_de_marge": 2.135,
+   "concernee": false,
+   "plan_prudent": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "secs": 0.2
+  },
+  {
+   "graine": 6565,
+   "monde": "t3g",
+   "ecartee": false,
+   "objet": "lonodo8",
+   "prix_reference": 37.8,
+   "cout_au_jour_183": 26.004,
+   "taux_de_marge": 1.454,
+   "concernee": true,
+   "plan_prudent": [
+    -0.5,
+    0,
+    1,
+    -0.5,
+    1,
+    1,
+    -0.5,
+    0
+   ],
+   "cout_vrai": 26.004,
+   "decision_chaine": 1,
+   "decision_prudente": 1,
+   "bras": {
+    "nul": {
+     "essai": 7818.2,
+     "exploitation": 7947.72,
+     "total": 15765.91,
+     "profit_2e_semestre": 63248.32
+    },
+    "aveugle:0": {
+     "essai": 7820.64,
+     "exploitation": 8150.92,
+     "total": 15971.55,
+     "profit_2e_semestre": 63609.88
+    },
+    "aveugle:1": {
+     "essai": 10601.67,
+     "exploitation": 10941.6,
+     "total": 21543.27,
+     "profit_2e_semestre": 69321.07
+    },
+    "chaine": {
+     "essai": 9010.51,
+     "exploitation": 10856.62,
+     "total": 19867.13,
+     "profit_2e_semestre": 67729.9
+    },
+    "prudente": {
+     "essai": 9335.75,
+     "exploitation": 10962.85,
+     "total": 20298.59,
+     "profit_2e_semestre": 68102.39
+    }
+   },
+   "secs": 0.9
+  },
+  {
+   "graine": 6566,
+   "monde": "t3g",
+   "ecartee": false,
+   "objet": "xupago4",
+   "prix_reference": 19.82,
+   "cout_au_jour_183": 8.911,
+   "taux_de_marge": 2.224,
+   "concernee": false,
+   "plan_prudent": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "secs": 0.6
+  },
+  {
+   "graine": 6567,
+   "monde": "t3g",
+   "ecartee": false,
+   "objet": "jireho9",
+   "prix_reference": 64.72,
+   "cout_au_jour_183": 37.568,
+   "taux_de_marge": 1.723,
+   "concernee": false,
+   "plan_prudent": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "secs": 0.6
+  },
+  {
+   "graine": 6568,
+   "monde": "t3g",
+   "ecartee": false,
+   "objet": "hore4",
+   "prix_reference": 9.41,
+   "cout_au_jour_183": 3.612,
+   "taux_de_marge": 2.605,
+   "concernee": false,
+   "plan_prudent": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "secs": 0.2
+  },
+  {
+   "graine": 6569,
+   "monde": "t3g",
+   "ecartee": false,
+   "objet": "ciha9",
+   "prix_reference": 6.62,
+   "cout_au_jour_183": 2.72,
+   "taux_de_marge": 2.434,
+   "concernee": false,
+   "plan_prudent": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "secs": 0.3
+  },
+  {
+   "graine": 6570,
+   "monde": "t3g",
+   "ecartee": false,
+   "objet": "zuvibo9",
+   "prix_reference": 8.06,
+   "cout_au_jour_183": 5.125,
+   "taux_de_marge": 1.573,
+   "concernee": false,
+   "plan_prudent": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "secs": 0.1
+  },
+  {
+   "graine": 6571,
+   "monde": "t3g",
+   "ecartee": false,
+   "objet": "fifi2",
+   "prix_reference": 94.7,
+   "cout_au_jour_183": 47.445,
+   "taux_de_marge": 1.996,
+   "concernee": false,
+   "plan_prudent": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "secs": 0.3
+  },
+  {
+   "graine": 6572,
+   "monde": "t3g",
+   "ecartee": false,
+   "objet": "zecodi5",
+   "prix_reference": 8.71,
+   "cout_au_jour_183": 4.043,
+   "taux_de_marge": 2.154,
+   "concernee": false,
+   "plan_prudent": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "secs": 0.4
+  },
+  {
+   "graine": 6573,
+   "monde": "t3g",
+   "ecartee": false,
+   "objet": "gevi6",
+   "prix_reference": 84.85,
+   "cout_au_jour_183": 39.773,
+   "taux_de_marge": 2.133,
+   "concernee": false,
+   "plan_prudent": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "secs": 0.4
+  },
+  {
+   "graine": 6574,
+   "monde": "t3g",
+   "ecartee": false,
+   "objet": "wuna5",
+   "prix_reference": 147.4,
+   "cout_au_jour_183": 86.199,
+   "taux_de_marge": 1.71,
+   "concernee": false,
+   "plan_prudent": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "secs": 0.2
+  },
+  {
+   "graine": 6575,
+   "monde": "t3g",
+   "ecartee": false,
+   "objet": "wile3",
+   "prix_reference": 28.48,
+   "cout_au_jour_183": 18.916,
+   "taux_de_marge": 1.506,
+   "concernee": true,
+   "plan_prudent": [
+    -0.5,
+    0,
+    1,
+    -0.5,
+    1,
+    1,
+    -0.5,
+    0
+   ],
+   "cout_vrai": 18.916,
+   "decision_chaine": -1,
+   "decision_prudente": -0.5,
+   "bras": {
+    "nul": {
+     "essai": 10464.69,
+     "exploitation": 9321.8,
+     "total": 19786.49,
+     "profit_2e_semestre": 210153.57
+    },
+    "aveugle:0": {
+     "essai": 10462.76,
+     "exploitation": 9257.73,
+     "total": 19720.49,
+     "profit_2e_semestre": 213732.18
+    },
+    "aveugle:1": {
+     "essai": 7707.9,
+     "exploitation": 6072.89,
+     "total": 13780.79,
+     "profit_2e_semestre": 204461.83
+    },
+    "chaine": {
+     "essai": 8727.6,
+     "exploitation": 8577.56,
+     "total": 17305.16,
+     "profit_2e_semestre": 210652.73
+    },
+    "prudente": {
+     "essai": 10573.74,
+     "exploitation": 9765.11,
+     "total": 20338.85,
+     "profit_2e_semestre": 210281.37
+    }
+   },
+   "secs": 1.2
+  },
+  {
+   "graine": 6576,
+   "monde": "t3g",
+   "ecartee": false,
+   "objet": "hifa5",
+   "prix_reference": 62.85,
+   "cout_au_jour_183": 44.252,
+   "taux_de_marge": 1.42,
+   "concernee": true,
+   "plan_prudent": [
+    -0.5,
+    0,
+    1,
+    -0.5,
+    1,
+    1,
+    -0.5,
+    0
+   ],
+   "cout_vrai": 44.252,
+   "decision_chaine": 1,
+   "decision_prudente": 1,
+   "bras": {
+    "nul": {
+     "essai": 27256.86,
+     "exploitation": 27007.65,
+     "total": 54264.52,
+     "profit_2e_semestre": 220978.76
+    },
+    "aveugle:0": {
+     "essai": 27265.21,
+     "exploitation": 27079.23,
+     "total": 54344.44,
+     "profit_2e_semestre": 221812.57
+    },
+    "aveugle:1": {
+     "essai": 33484.97,
+     "exploitation": 31666.63,
+     "total": 65151.6,
+     "profit_2e_semestre": 233090.04
+    },
+    "chaine": {
+     "essai": 28849.69,
+     "exploitation": 32181.25,
+     "total": 61030.94,
+     "profit_2e_semestre": 228284.1
+    },
+    "prudente": {
+     "essai": 30615.29,
+     "exploitation": 32284.18,
+     "total": 62899.46,
+     "profit_2e_semestre": 230104.63
+    }
+   },
+   "secs": 0.8
+  },
+  {
+   "graine": 6577,
+   "monde": "t3g",
+   "ecartee": false,
+   "objet": "fade8",
+   "prix_reference": 13.38,
+   "cout_au_jour_183": 8.266,
+   "taux_de_marge": 1.619,
+   "concernee": false,
+   "plan_prudent": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "secs": 0.2
+  },
+  {
+   "graine": 6578,
+   "monde": "t3g",
+   "ecartee": false,
+   "objet": "gimo2",
+   "prix_reference": 4.45,
+   "cout_au_jour_183": 2.774,
+   "taux_de_marge": 1.604,
+   "concernee": false,
+   "plan_prudent": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "secs": 0.1
+  },
+  {
+   "graine": 6579,
+   "monde": "t3g",
+   "ecartee": false,
+   "objet": "mavigu1",
+   "prix_reference": 54.38,
+   "cout_au_jour_183": 23.247,
+   "taux_de_marge": 2.339,
+   "concernee": false,
+   "plan_prudent": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "secs": 0.1
+  },
+  {
+   "graine": 6580,
+   "monde": "t3g",
+   "ecartee": false,
+   "objet": "duqu9",
+   "prix_reference": 105.44,
+   "cout_au_jour_183": 47.916,
+   "taux_de_marge": 2.201,
+   "concernee": false,
+   "plan_prudent": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "secs": 1.1
+  },
+  {
+   "graine": 6581,
+   "monde": "t3g",
+   "ecartee": false,
+   "objet": "xipi9",
+   "prix_reference": 25.73,
+   "cout_au_jour_183": 12.022,
+   "taux_de_marge": 2.14,
+   "concernee": false,
+   "plan_prudent": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "secs": 0.3
+  },
+  {
+   "graine": 6582,
+   "monde": "t3g",
+   "ecartee": false,
+   "objet": "tegi6",
+   "prix_reference": 37.74,
+   "cout_au_jour_183": 23.425,
+   "taux_de_marge": 1.611,
+   "concernee": false,
+   "plan_prudent": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "secs": 0.2
+  },
+  {
+   "graine": 6583,
+   "monde": "t3g",
+   "ecartee": false,
+   "objet": "kijeza1",
+   "prix_reference": 89.72,
+   "cout_au_jour_183": 55.206,
+   "taux_de_marge": 1.625,
+   "concernee": false,
+   "plan_prudent": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "secs": 0.4
+  },
+  {
+   "graine": 6584,
+   "monde": "t3g",
+   "ecartee": false,
+   "objet": "fopini4",
+   "prix_reference": 126.52,
+   "cout_au_jour_183": 57.362,
+   "taux_de_marge": 2.206,
+   "concernee": false,
+   "plan_prudent": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "secs": 0.3
+  },
+  {
+   "graine": 6585,
+   "monde": "t3g",
+   "ecartee": false,
+   "objet": "fumu6",
+   "prix_reference": 9.99,
+   "cout_au_jour_183": 7.626,
+   "taux_de_marge": 1.31,
+   "concernee": true,
+   "plan_prudent": [
+    0,
+    0,
+    1,
+    0,
+    1,
+    1,
+    0,
+    0
+   ],
+   "cout_vrai": 7.626,
+   "decision_chaine": 1,
+   "decision_prudente": 1,
+   "bras": {
+    "nul": {
+     "essai": 1824.32,
+     "exploitation": 1797.65,
+     "total": 3621.98,
+     "profit_2e_semestre": 94929.11
+    },
+    "aveugle:0": {
+     "essai": 2061.61,
+     "exploitation": 1929.21,
+     "total": 3990.82,
+     "profit_2e_semestre": 95295.82
+    },
+    "aveugle:1": {
+     "essai": 1648.97,
+     "exploitation": 1430.08,
+     "total": 3079.06,
+     "profit_2e_semestre": 94376.97
+    },
+    "chaine": {
+     "essai": 1488.04,
+     "exploitation": 1425.22,
+     "total": 2913.26,
+     "profit_2e_semestre": 94216.04
+    },
+    "prudente": {
+     "essai": 1808.59,
+     "exploitation": 1430.08,
+     "total": 3238.67,
+     "profit_2e_semestre": 94536.58
+    }
+   },
+   "secs": 0.9
+  },
+  {
+   "graine": 6586,
+   "monde": "t3g",
+   "ecartee": false,
+   "objet": "pehili9",
+   "prix_reference": 3.12,
+   "cout_au_jour_183": 2.38,
+   "taux_de_marge": 1.311,
+   "concernee": true,
+   "plan_prudent": [
+    0,
+    0,
+    1,
+    0,
+    1,
+    1,
+    0,
+    0
+   ],
+   "cout_vrai": 2.38,
+   "decision_chaine": 0,
+   "decision_prudente": 0,
+   "bras": {
+    "nul": {
+     "essai": 1237.97,
+     "exploitation": 1449.35,
+     "total": 2687.31,
+     "profit_2e_semestre": -85521.59
+    },
+    "aveugle:0": {
+     "essai": 1252.99,
+     "exploitation": 1366.96,
+     "total": 2619.95,
+     "profit_2e_semestre": -86274.89
+    },
+    "aveugle:1": {
+     "essai": 1267.76,
+     "exploitation": 1567.22,
+     "total": 2834.98,
+     "profit_2e_semestre": -86081.31
+    },
+    "chaine": {
+     "essai": 1015.52,
+     "exploitation": 1389.9,
+     "total": 2405.42,
+     "profit_2e_semestre": -86507.91
+    },
+    "prudente": {
+     "essai": 1259.89,
+     "exploitation": 1459.47,
+     "total": 2719.36,
+     "profit_2e_semestre": -85497.51
+    }
+   },
+   "secs": 0.6
+  },
+  {
+   "graine": 6587,
+   "monde": "t3g",
+   "ecartee": false,
+   "objet": "pidica7",
+   "prix_reference": 3.77,
+   "cout_au_jour_183": 2.362,
+   "taux_de_marge": 1.596,
+   "concernee": false,
+   "plan_prudent": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "secs": 0.4
+  },
+  {
+   "graine": 6588,
+   "monde": "t3g",
+   "ecartee": false,
+   "objet": "dedi1",
+   "prix_reference": 71.44,
+   "cout_au_jour_183": 34.285,
+   "taux_de_marge": 2.084,
+   "concernee": false,
+   "plan_prudent": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "secs": 0.5
+  },
+  {
+   "graine": 6589,
+   "monde": "t3g",
+   "ecartee": false,
+   "objet": "civesi4",
+   "prix_reference": 150.67,
+   "cout_au_jour_183": 98.267,
+   "taux_de_marge": 1.533,
+   "concernee": false,
+   "plan_prudent": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "secs": 0.3
+  },
+  {
+   "graine": 6590,
+   "monde": "t3g",
+   "ecartee": false,
+   "objet": "qeredo2",
+   "prix_reference": 94.15,
+   "cout_au_jour_183": 57.947,
+   "taux_de_marge": 1.625,
+   "concernee": false,
+   "plan_prudent": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "secs": 0.3
+  },
+  {
+   "graine": 6591,
+   "monde": "t3g",
+   "ecartee": false,
+   "objet": "tehe8",
+   "prix_reference": 19.39,
+   "cout_au_jour_183": 8.933,
+   "taux_de_marge": 2.171,
+   "concernee": false,
+   "plan_prudent": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "secs": 0.1
+  },
+  {
+   "graine": 6592,
+   "monde": "t3g",
+   "ecartee": false,
+   "objet": "wutujo1",
+   "prix_reference": 115.18,
+   "cout_au_jour_183": 49.639,
+   "taux_de_marge": 2.32,
+   "concernee": false,
+   "plan_prudent": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "secs": 0.3
+  },
+  {
+   "graine": 6593,
+   "monde": "t3g",
+   "ecartee": false,
+   "objet": "sovi5",
+   "prix_reference": 10.47,
+   "cout_au_jour_183": 5.848,
+   "taux_de_marge": 1.79,
+   "concernee": false,
+   "plan_prudent": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "secs": 1
+  },
+  {
+   "graine": 6594,
+   "monde": "t3g",
+   "ecartee": false,
+   "objet": "dalori5",
+   "prix_reference": 7.8,
+   "cout_au_jour_183": 3.208,
+   "taux_de_marge": 2.431,
+   "concernee": false,
+   "plan_prudent": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "secs": 0.3
+  },
+  {
+   "graine": 6595,
+   "monde": "t3g",
+   "ecartee": false,
+   "objet": "fihu9",
+   "prix_reference": 50.16,
+   "cout_au_jour_183": 35.408,
+   "taux_de_marge": 1.417,
+   "concernee": true,
+   "plan_prudent": [
+    -0.5,
+    0,
+    1,
+    -0.5,
+    1,
+    1,
+    -0.5,
+    0
+   ],
+   "cout_vrai": 35.408,
+   "decision_chaine": 1,
+   "decision_prudente": -0.5,
+   "bras": {
+    "nul": {
+     "essai": 21761.88,
+     "exploitation": 17633.19,
+     "total": 39395.07,
+     "profit_2e_semestre": -56590.79
+    },
+    "aveugle:0": {
+     "essai": 26730.26,
+     "exploitation": 24222.46,
+     "total": 50952.72,
+     "profit_2e_semestre": -60007.35
+    },
+    "aveugle:1": {
+     "essai": 21806.15,
+     "exploitation": 18714.06,
+     "total": 40520.21,
+     "profit_2e_semestre": -70287.13
+    },
+    "chaine": {
+     "essai": 21029.24,
+     "exploitation": 19240.72,
+     "total": 40269.96,
+     "profit_2e_semestre": -71064.04
+    },
+    "prudente": {
+     "essai": 24655.4,
+     "exploitation": 22173.92,
+     "total": 46829.32,
+     "profit_2e_semestre": -64086.32
+    }
+   },
+   "secs": 0.5
+  },
+  {
+   "graine": 6596,
+   "monde": "t3g",
+   "ecartee": false,
+   "objet": "pudi5",
+   "prix_reference": 8.2,
+   "cout_au_jour_183": 6.007,
+   "taux_de_marge": 1.365,
+   "concernee": true,
+   "plan_prudent": [
+    0,
+    0,
+    1,
+    0,
+    1,
+    1,
+    0,
+    0
+   ],
+   "cout_vrai": 6.007,
+   "decision_chaine": 1,
+   "decision_prudente": 1,
+   "bras": {
+    "nul": {
+     "essai": 2086.07,
+     "exploitation": 2335.08,
+     "total": 4421.15,
+     "profit_2e_semestre": 256143.36
+    },
+    "aveugle:0": {
+     "essai": 2431.64,
+     "exploitation": 2291.31,
+     "total": 4722.95,
+     "profit_2e_semestre": 256434.56
+    },
+    "aveugle:1": {
+     "essai": 2906.21,
+     "exploitation": 2696.55,
+     "total": 5602.76,
+     "profit_2e_semestre": 257330.92
+    },
+    "chaine": {
+     "essai": 2536.41,
+     "exploitation": 2711.05,
+     "total": 5247.46,
+     "profit_2e_semestre": 256961.11
+    },
+    "prudente": {
+     "essai": 2779.43,
+     "exploitation": 2664.38,
+     "total": 5443.81,
+     "profit_2e_semestre": 257204.13
+    }
+   },
+   "secs": 3.6
+  },
+  {
+   "graine": 6597,
+   "monde": "t3g",
+   "ecartee": false,
+   "objet": "naxoha5",
+   "prix_reference": 15.17,
+   "cout_au_jour_183": 7.829,
+   "taux_de_marge": 1.938,
+   "concernee": false,
+   "plan_prudent": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "secs": 0.4
+  },
+  {
+   "graine": 6598,
+   "monde": "t3g",
+   "ecartee": false,
+   "objet": "silu7",
+   "prix_reference": 30.11,
+   "cout_au_jour_183": 17.119,
+   "taux_de_marge": 1.759,
+   "concernee": false,
+   "plan_prudent": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "secs": 0.2
+  },
+  {
+   "graine": 6599,
+   "monde": "t3g",
+   "ecartee": false,
+   "objet": "roja4",
+   "prix_reference": 78.73,
+   "cout_au_jour_183": 53.41,
+   "taux_de_marge": 1.474,
+   "concernee": true,
+   "plan_prudent": [
+    -0.5,
+    0,
+    1,
+    -0.5,
+    1,
+    1,
+    -0.5,
+    0
+   ],
+   "cout_vrai": 53.41,
+   "decision_chaine": -1,
+   "decision_prudente": 0,
+   "bras": {
+    "nul": {
+     "essai": 41486.35,
+     "exploitation": 36908.62,
+     "total": 78394.97,
+     "profit_2e_semestre": 164816.82
+    },
+    "aveugle:0": {
+     "essai": 40587.6,
+     "exploitation": 36030.04,
+     "total": 76617.64,
+     "profit_2e_semestre": 151044
+    },
+    "aveugle:1": {
+     "essai": 30268.46,
+     "exploitation": 26774.87,
+     "total": 57043.32,
+     "profit_2e_semestre": 130993.01
+    },
+    "chaine": {
+     "essai": 34757.15,
+     "exploitation": 29828.99,
+     "total": 64586.13,
+     "profit_2e_semestre": 137061.66
+    },
+    "prudente": {
+     "essai": 38174.61,
+     "exploitation": 36131.32,
+     "total": 74305.93,
+     "profit_2e_semestre": 146402.86
+    }
+   },
+   "secs": 1.6
+  },
+  {
+   "graine": 6600,
+   "monde": "t3g",
+   "ecartee": false,
+   "objet": "disoza1",
+   "prix_reference": 112.84,
+   "cout_au_jour_183": 70.825,
+   "taux_de_marge": 1.593,
+   "concernee": false,
+   "plan_prudent": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "secs": 0.2
+  },
+  {
+   "graine": 6601,
+   "monde": "t3g",
+   "ecartee": false,
+   "objet": "daqose0",
+   "prix_reference": 64.04,
+   "cout_au_jour_183": 33.543,
+   "taux_de_marge": 1.909,
+   "concernee": false,
+   "plan_prudent": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "secs": 0.3
+  },
+  {
+   "graine": 6602,
+   "monde": "t3g",
+   "ecartee": false,
+   "objet": "vuxiga5",
+   "prix_reference": 76.83,
+   "cout_au_jour_183": 35.664,
+   "taux_de_marge": 2.154,
+   "concernee": false,
+   "plan_prudent": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "secs": 0.3
+  },
+  {
+   "graine": 6603,
+   "monde": "t3g",
+   "ecartee": false,
+   "objet": "qese7",
+   "prix_reference": 11.89,
+   "cout_au_jour_183": 6.15,
+   "taux_de_marge": 1.933,
+   "concernee": false,
+   "plan_prudent": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "secs": 0.6
+  },
+  {
+   "graine": 6604,
+   "monde": "t3g",
+   "ecartee": false,
+   "objet": "jazixo8",
+   "prix_reference": 157.69,
+   "cout_au_jour_183": 94.335,
+   "taux_de_marge": 1.672,
+   "concernee": false,
+   "plan_prudent": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "secs": 0.4
+  },
+  {
+   "graine": 6605,
+   "monde": "t3g",
+   "ecartee": false,
+   "objet": "pici3",
+   "prix_reference": 7.26,
+   "cout_au_jour_183": 6.031,
+   "taux_de_marge": 1.204,
+   "concernee": true,
+   "plan_prudent": [
+    0,
+    0,
+    1,
+    0,
+    1,
+    1,
+    0,
+    0
+   ],
+   "cout_vrai": 6.031,
+   "decision_chaine": 1,
+   "decision_prudente": 1,
+   "bras": {
+    "nul": {
+     "essai": 1335.02,
+     "exploitation": 450.42,
+     "total": 1785.43,
+     "profit_2e_semestre": 2864.5
+    },
+    "aveugle:0": {
+     "essai": 1429.43,
+     "exploitation": 1376.58,
+     "total": 2806.01,
+     "profit_2e_semestre": 2769.55
+    },
+    "aveugle:1": {
+     "essai": 1799.14,
+     "exploitation": 1914.63,
+     "total": 3713.77,
+     "profit_2e_semestre": 3676.07
+    },
+    "chaine": {
+     "essai": 1174.02,
+     "exploitation": 1914.63,
+     "total": 3088.64,
+     "profit_2e_semestre": 3050.94
+    },
+    "prudente": {
+     "essai": 1643.1,
+     "exploitation": 1914.63,
+     "total": 3557.72,
+     "profit_2e_semestre": 4521.15
+    }
+   },
+   "secs": 0.9
+  },
+  {
+   "graine": 6606,
+   "monde": "t3g",
+   "ecartee": false,
+   "objet": "gete3",
+   "prix_reference": 120.04,
+   "cout_au_jour_183": 75.145,
+   "taux_de_marge": 1.597,
+   "concernee": false,
+   "plan_prudent": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "secs": 0.5
+  },
+  {
+   "graine": 6607,
+   "monde": "t3g",
+   "ecartee": false,
+   "objet": "newopu1",
+   "prix_reference": 42.76,
+   "cout_au_jour_183": 20.415,
+   "taux_de_marge": 2.095,
+   "concernee": false,
+   "plan_prudent": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "secs": 0.2
+  },
+  {
+   "graine": 6608,
+   "monde": "t3g",
+   "ecartee": false,
+   "objet": "sibupo0",
+   "prix_reference": 7.94,
+   "cout_au_jour_183": 3.536,
+   "taux_de_marge": 2.246,
+   "concernee": false,
+   "plan_prudent": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "secs": 0.1
+  },
+  {
+   "graine": 6609,
+   "monde": "t3g",
+   "ecartee": false,
+   "objet": "vove2",
+   "prix_reference": 310.19,
+   "cout_au_jour_183": 174.382,
+   "taux_de_marge": 1.779,
+   "concernee": false,
+   "plan_prudent": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "secs": 0.1
+  },
+  {
+   "graine": 6610,
+   "monde": "t3g",
+   "ecartee": false,
+   "objet": "heqo9",
+   "prix_reference": 8.03,
+   "cout_au_jour_183": 2.772,
+   "taux_de_marge": 2.897,
+   "concernee": false,
+   "plan_prudent": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "secs": 0.1
+  },
+  {
+   "graine": 6611,
+   "monde": "t3g",
+   "ecartee": false,
+   "objet": "zepanu9",
+   "prix_reference": 301.25,
+   "cout_au_jour_183": 146.428,
+   "taux_de_marge": 2.057,
+   "concernee": false,
+   "plan_prudent": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "secs": 0.3
+  },
+  {
+   "graine": 6612,
+   "monde": "t3g",
+   "ecartee": false,
+   "objet": "hoto4",
+   "prix_reference": 106.94,
+   "cout_au_jour_183": 54.906,
+   "taux_de_marge": 1.948,
+   "concernee": false,
+   "plan_prudent": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "secs": 0.3
+  },
+  {
+   "graine": 6613,
+   "monde": "t3g",
+   "ecartee": false,
+   "objet": "mivexu8",
+   "prix_reference": 53.21,
+   "cout_au_jour_183": 25.176,
+   "taux_de_marge": 2.114,
+   "concernee": false,
+   "plan_prudent": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "secs": 0.2
+  },
+  {
+   "graine": 6614,
+   "monde": "t3g",
+   "ecartee": false,
+   "objet": "qasa9",
+   "prix_reference": 28.47,
+   "cout_au_jour_183": 12.126,
+   "taux_de_marge": 2.348,
+   "concernee": false,
+   "plan_prudent": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "secs": 0.2
+  },
+  {
+   "graine": 6615,
+   "monde": "t3g",
+   "ecartee": false,
+   "objet": "wocu6",
+   "prix_reference": 14.12,
+   "cout_au_jour_183": 7.997,
+   "taux_de_marge": 1.766,
+   "concernee": false,
+   "plan_prudent": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "secs": 0.3
+  },
+  {
+   "graine": 6616,
+   "monde": "t3g",
+   "ecartee": false,
+   "objet": "koxu5",
+   "prix_reference": 4.48,
+   "cout_au_jour_183": 3.337,
+   "taux_de_marge": 1.343,
+   "concernee": true,
+   "plan_prudent": [
+    0,
+    0,
+    1,
+    0,
+    1,
+    1,
+    0,
+    0
+   ],
+   "cout_vrai": 3.337,
+   "decision_chaine": 1,
+   "decision_prudente": 1,
+   "bras": {
+    "nul": {
+     "essai": 1204.65,
+     "exploitation": 942.24,
+     "total": 2146.89,
+     "profit_2e_semestre": 474145.72
+    },
+    "aveugle:0": {
+     "essai": 1144.44,
+     "exploitation": 1046.12,
+     "total": 2190.56,
+     "profit_2e_semestre": 474190.53
+    },
+    "aveugle:1": {
+     "essai": 1778.95,
+     "exploitation": 1622.78,
+     "total": 3401.74,
+     "profit_2e_semestre": 475400.56
+    },
+    "chaine": {
+     "essai": 1398.73,
+     "exploitation": 1622.78,
+     "total": 3021.52,
+     "profit_2e_semestre": 475020.35
+    },
+    "prudente": {
+     "essai": 1565.45,
+     "exploitation": 1622.78,
+     "total": 3188.23,
+     "profit_2e_semestre": 475187.07
+    }
+   },
+   "secs": 3.6
+  },
+  {
+   "graine": 6617,
+   "monde": "t3g",
+   "ecartee": false,
+   "objet": "qorice7",
+   "prix_reference": 138.69,
+   "cout_au_jour_183": 67.991,
+   "taux_de_marge": 2.04,
+   "concernee": false,
+   "plan_prudent": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "secs": 0.4
+  },
+  {
+   "graine": 6618,
+   "monde": "t3g",
+   "ecartee": false,
+   "objet": "hineja1",
+   "prix_reference": 9.42,
+   "cout_au_jour_183": 5.129,
+   "taux_de_marge": 1.837,
+   "concernee": false,
+   "plan_prudent": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "secs": 0.3
+  },
+  {
+   "graine": 6619,
+   "monde": "t3g",
+   "ecartee": false,
+   "objet": "rede9",
+   "prix_reference": 50.96,
+   "cout_au_jour_183": 16.242,
+   "taux_de_marge": 3.138,
+   "concernee": false,
+   "plan_prudent": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "secs": 0.2
+  },
+  {
+   "graine": 6620,
+   "monde": "t3g",
+   "ecartee": false,
+   "objet": "foxa7",
+   "prix_reference": 6.93,
+   "cout_au_jour_183": 3.98,
+   "taux_de_marge": 1.741,
+   "concernee": false,
+   "plan_prudent": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "secs": 0.3
+  },
+  {
+   "graine": 6621,
+   "monde": "t3g",
+   "ecartee": false,
+   "objet": "foji6",
+   "prix_reference": 159.34,
+   "cout_au_jour_183": 85.561,
+   "taux_de_marge": 1.862,
+   "concernee": false,
+   "plan_prudent": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "secs": 0.8
+  },
+  {
+   "graine": 6622,
+   "monde": "t3g",
+   "ecartee": false,
+   "objet": "tenaca1",
+   "prix_reference": 53.02,
+   "cout_au_jour_183": 18.385,
+   "taux_de_marge": 2.884,
+   "concernee": false,
+   "plan_prudent": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "secs": 0.2
+  },
+  {
+   "graine": 6623,
+   "monde": "t3g",
+   "ecartee": false,
+   "objet": "feho6",
+   "prix_reference": 333.44,
+   "cout_au_jour_183": 136.634,
+   "taux_de_marge": 2.44,
+   "concernee": false,
+   "plan_prudent": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "secs": 0.4
+  },
+  {
+   "graine": 6624,
+   "monde": "t3g",
+   "ecartee": false,
+   "objet": "geqi1",
+   "prix_reference": 4.84,
+   "cout_au_jour_183": 2.448,
+   "taux_de_marge": 1.977,
+   "concernee": false,
+   "plan_prudent": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "secs": 0.2
+  },
+  {
+   "graine": 6625,
+   "monde": "t3g",
+   "ecartee": false,
+   "objet": "qofero1",
+   "prix_reference": 25.98,
+   "cout_au_jour_183": 13.951,
+   "taux_de_marge": 1.862,
+   "concernee": false,
+   "plan_prudent": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "secs": 0.3
+  },
+  {
+   "graine": 6626,
+   "monde": "t3g",
+   "ecartee": false,
+   "objet": "lebe0",
+   "prix_reference": 125.13,
+   "cout_au_jour_183": 69.479,
+   "taux_de_marge": 1.801,
+   "concernee": false,
+   "plan_prudent": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "secs": 0.6
+  },
+  {
+   "graine": 6627,
+   "monde": "t3g",
+   "ecartee": false,
+   "objet": "qelame5",
+   "prix_reference": 115.3,
+   "cout_au_jour_183": 50.532,
+   "taux_de_marge": 2.282,
+   "concernee": false,
+   "plan_prudent": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "secs": 0.7
+  },
+  {
+   "graine": 6628,
+   "monde": "t3g",
+   "ecartee": false,
+   "objet": "qodoce2",
+   "prix_reference": 160.38,
+   "cout_au_jour_183": 63.518,
+   "taux_de_marge": 2.525,
+   "concernee": false,
+   "plan_prudent": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "secs": 0.1
+  },
+  {
+   "graine": 6629,
+   "monde": "t3g",
+   "ecartee": false,
+   "objet": "muguxi8",
+   "prix_reference": 127.88,
+   "cout_au_jour_183": 52.283,
+   "taux_de_marge": 2.446,
+   "concernee": false,
+   "plan_prudent": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "secs": 0.2
+  },
+  {
+   "graine": 6630,
+   "monde": "t3g",
+   "ecartee": false,
+   "objet": "lecahi2",
+   "prix_reference": 70.7,
+   "cout_au_jour_183": 56.875,
+   "taux_de_marge": 1.243,
+   "concernee": true,
+   "plan_prudent": [
+    0,
+    0,
+    1,
+    0,
+    1,
+    1,
+    0,
+    0
+   ],
+   "cout_vrai": 56.875,
+   "decision_chaine": 0,
+   "decision_prudente": 0,
+   "bras": {
+    "nul": {
+     "essai": 20006.75,
+     "exploitation": 19836.78,
+     "total": 39843.53,
+     "profit_2e_semestre": -41444.26
+    },
+    "aveugle:0": {
+     "essai": 18856.7,
+     "exploitation": 18041.05,
+     "total": 36897.75,
+     "profit_2e_semestre": -37302.95
+    },
+    "aveugle:1": {
+     "essai": 20887.52,
+     "exploitation": 20288.94,
+     "total": 41176.46,
+     "profit_2e_semestre": -40272.5
+    },
+    "chaine": {
+     "essai": 14861.33,
+     "exploitation": 17999.58,
+     "total": 32860.91,
+     "profit_2e_semestre": -41241.45
+    },
+    "prudente": {
+     "essai": 20192.99,
+     "exploitation": 16954.48,
+     "total": 37147.47,
+     "profit_2e_semestre": -36860.88
+    }
+   },
+   "secs": 0.6
+  },
+  {
+   "graine": 6631,
+   "monde": "t3g",
+   "ecartee": false,
+   "objet": "kuzaru0",
+   "prix_reference": 20.72,
+   "cout_au_jour_183": 11.22,
+   "taux_de_marge": 1.847,
+   "concernee": false,
+   "plan_prudent": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "secs": 0.4
+  },
+  {
+   "graine": 6632,
+   "monde": "t3g",
+   "ecartee": false,
+   "objet": "cehubu9",
+   "prix_reference": 8.15,
+   "cout_au_jour_183": 5.001,
+   "taux_de_marge": 1.63,
+   "concernee": false,
+   "plan_prudent": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "secs": 0.4
+  },
+  {
+   "graine": 6633,
+   "monde": "t3g",
+   "ecartee": false,
+   "objet": "cenelo3",
+   "prix_reference": 27.62,
+   "cout_au_jour_183": 11.353,
+   "taux_de_marge": 2.433,
+   "concernee": false,
+   "plan_prudent": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "secs": 0.1
+  },
+  {
+   "graine": 6634,
+   "monde": "t3g",
+   "ecartee": false,
+   "objet": "lojo3",
+   "prix_reference": 172.68,
+   "cout_au_jour_183": 82.511,
+   "taux_de_marge": 2.093,
+   "concernee": false,
+   "plan_prudent": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "secs": 0.2
+  },
+  {
+   "graine": 6635,
+   "monde": "t3g",
+   "ecartee": false,
+   "objet": "jiru5",
+   "prix_reference": 8.02,
+   "cout_au_jour_183": 3.803,
+   "taux_de_marge": 2.109,
+   "concernee": false,
+   "plan_prudent": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "secs": 0.2
+  },
+  {
+   "graine": 6636,
+   "monde": "t3g",
+   "ecartee": false,
+   "objet": "hibuvu9",
+   "prix_reference": 55.71,
+   "cout_au_jour_183": 29.18,
+   "taux_de_marge": 1.909,
+   "concernee": false,
+   "plan_prudent": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "secs": 0.2
+  },
+  {
+   "graine": 6637,
+   "monde": "t3g",
+   "ecartee": false,
+   "objet": "lipibe0",
+   "prix_reference": 5.59,
+   "cout_au_jour_183": 3.113,
+   "taux_de_marge": 1.796,
+   "concernee": false,
+   "plan_prudent": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "secs": 0.4
+  },
+  {
+   "graine": 6638,
+   "monde": "t3g",
+   "ecartee": false,
+   "objet": "bituqi6",
+   "prix_reference": 7.37,
+   "cout_au_jour_183": 3.118,
+   "taux_de_marge": 2.364,
+   "concernee": false,
+   "plan_prudent": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "secs": 0.2
+  },
+  {
+   "graine": 6639,
+   "monde": "t3g",
+   "ecartee": false,
+   "objet": "duto8",
+   "prix_reference": 201.49,
+   "cout_au_jour_183": 113.683,
+   "taux_de_marge": 1.772,
+   "concernee": false,
+   "plan_prudent": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "secs": 0.2
+  },
+  {
+   "graine": 6640,
+   "monde": "t3g",
+   "ecartee": false,
+   "objet": "jihi5",
+   "prix_reference": 6.63,
+   "cout_au_jour_183": 3.405,
+   "taux_de_marge": 1.947,
+   "concernee": false,
+   "plan_prudent": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "secs": 0.2
+  },
+  {
+   "graine": 6641,
+   "monde": "t3g",
+   "ecartee": false,
+   "objet": "qafo5",
+   "prix_reference": 10.43,
+   "cout_au_jour_183": 5.312,
+   "taux_de_marge": 1.963,
+   "concernee": false,
+   "plan_prudent": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "secs": 0.3
+  },
+  {
+   "graine": 6642,
+   "monde": "t3g",
+   "ecartee": false,
+   "objet": "feju4",
+   "prix_reference": 10.46,
+   "cout_au_jour_183": 5.544,
+   "taux_de_marge": 1.887,
+   "concernee": false,
+   "plan_prudent": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "secs": 0.1
+  },
+  {
+   "graine": 6643,
+   "monde": "t3g",
+   "ecartee": false,
+   "objet": "videta4",
+   "prix_reference": 134.53,
+   "cout_au_jour_183": 53.435,
+   "taux_de_marge": 2.518,
+   "concernee": false,
+   "plan_prudent": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "secs": 0.4
+  },
+  {
+   "graine": 6644,
+   "monde": "t3g",
+   "ecartee": false,
+   "objet": "hewi4",
+   "prix_reference": 13.01,
+   "cout_au_jour_183": 5.764,
+   "taux_de_marge": 2.257,
+   "concernee": false,
+   "plan_prudent": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "secs": 0.3
+  },
+  {
+   "graine": 6645,
+   "monde": "t3g",
+   "ecartee": false,
+   "objet": "semohe3",
+   "prix_reference": 5.16,
+   "cout_au_jour_183": 3.667,
+   "taux_de_marge": 1.407,
+   "concernee": true,
+   "plan_prudent": [
+    0,
+    0,
+    1,
+    0,
+    1,
+    1,
+    0,
+    0
+   ],
+   "cout_vrai": 3.667,
+   "decision_chaine": -1,
+   "decision_prudente": 0,
+   "bras": {
+    "nul": {
+     "essai": 1281.69,
+     "exploitation": 1171.06,
+     "total": 2452.75,
+     "profit_2e_semestre": 463589.01
+    },
+    "aveugle:0": {
+     "essai": 1320.18,
+     "exploitation": 1518.81,
+     "total": 2838.99,
+     "profit_2e_semestre": 464005.09
+    },
+    "aveugle:1": {
+     "essai": 949.15,
+     "exploitation": 1052.13,
+     "total": 2001.28,
+     "profit_2e_semestre": 463146.21
+    },
+    "chaine": {
+     "essai": 1092.81,
+     "exploitation": 1129.36,
+     "total": 2222.17,
+     "profit_2e_semestre": 463335.99
+    },
+    "prudente": {
+     "essai": 1264.94,
+     "exploitation": 1518.81,
+     "total": 2783.75,
+     "profit_2e_semestre": 463949.86
+    }
+   },
+   "secs": 1.2
+  },
+  {
+   "graine": 6646,
+   "monde": "t3g",
+   "ecartee": false,
+   "objet": "piqeko7",
+   "prix_reference": 27.28,
+   "cout_au_jour_183": 13.189,
+   "taux_de_marge": 2.068,
+   "concernee": false,
+   "plan_prudent": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "secs": 0.3
+  },
+  {
+   "graine": 6647,
+   "monde": "t3g",
+   "ecartee": false,
+   "objet": "foxodo0",
+   "prix_reference": 24.94,
+   "cout_au_jour_183": 15.07,
+   "taux_de_marge": 1.655,
+   "concernee": false,
+   "plan_prudent": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "secs": 0.2
+  },
+  {
+   "graine": 6648,
+   "monde": "t3g",
+   "ecartee": false,
+   "objet": "pasuwe6",
+   "prix_reference": 28.96,
+   "cout_au_jour_183": 17.819,
+   "taux_de_marge": 1.625,
+   "concernee": false,
+   "plan_prudent": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "secs": 0.1
+  },
+  {
+   "graine": 6649,
+   "monde": "t3g",
+   "ecartee": false,
+   "objet": "cecu4",
+   "prix_reference": 273.18,
+   "cout_au_jour_183": 140.425,
+   "taux_de_marge": 1.945,
+   "concernee": false,
+   "plan_prudent": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "secs": 0.2
+  },
+  {
+   "graine": 6650,
+   "monde": "t3g",
+   "ecartee": false,
+   "objet": "bigage9",
+   "prix_reference": 17.55,
+   "cout_au_jour_183": 7.859,
+   "taux_de_marge": 2.233,
+   "concernee": false,
+   "plan_prudent": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "secs": 0.3
+  },
+  {
+   "graine": 6651,
+   "monde": "t3g",
+   "ecartee": false,
+   "objet": "dohusa7",
+   "prix_reference": 49.18,
+   "cout_au_jour_183": 17.483,
+   "taux_de_marge": 2.813,
+   "concernee": false,
+   "plan_prudent": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "secs": 0.3
+  },
+  {
+   "graine": 6652,
+   "monde": "t3g",
+   "ecartee": false,
+   "objet": "mijesa5",
+   "prix_reference": 126.01,
+   "cout_au_jour_183": 52.854,
+   "taux_de_marge": 2.384,
+   "concernee": false,
+   "plan_prudent": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "secs": 0.1
+  },
+  {
+   "graine": 6653,
+   "monde": "t3g",
+   "ecartee": false,
+   "objet": "tana1",
+   "prix_reference": 85.43,
+   "cout_au_jour_183": 36.253,
+   "taux_de_marge": 2.357,
+   "concernee": false,
+   "plan_prudent": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "secs": 0.2
+  },
+  {
+   "graine": 6654,
+   "monde": "t3g",
+   "ecartee": false,
+   "objet": "woxugi7",
+   "prix_reference": 266.6,
+   "cout_au_jour_183": 127.32,
+   "taux_de_marge": 2.094,
+   "concernee": false,
+   "plan_prudent": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "secs": 0.1
+  },
+  {
+   "graine": 6655,
+   "monde": "t3g",
+   "ecartee": false,
+   "objet": "cufelo3",
+   "prix_reference": 11.94,
+   "cout_au_jour_183": 6.227,
+   "taux_de_marge": 1.917,
+   "concernee": false,
+   "plan_prudent": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "secs": 0.3
+  },
+  {
+   "graine": 6656,
+   "monde": "t3g",
+   "ecartee": false,
+   "objet": "dubato5",
+   "prix_reference": 17.18,
+   "cout_au_jour_183": 14.29,
+   "taux_de_marge": 1.202,
+   "concernee": true,
+   "plan_prudent": [
+    0,
+    0,
+    1,
+    0,
+    1,
+    1,
+    0,
+    0
+   ],
+   "cout_vrai": 14.29,
+   "decision_chaine": 1,
+   "decision_prudente": 1,
+   "bras": {
+    "nul": {
+     "essai": 2060.97,
+     "exploitation": 1630.07,
+     "total": 3691.04,
+     "profit_2e_semestre": 44505.35
+    },
+    "aveugle:0": {
+     "essai": 2828.85,
+     "exploitation": 3291.17,
+     "total": 6120.02,
+     "profit_2e_semestre": 43326.56
+    },
+    "aveugle:1": {
+     "essai": 3939.86,
+     "exploitation": 4615.68,
+     "total": 8555.54,
+     "profit_2e_semestre": 45816.27
+    },
+    "chaine": {
+     "essai": 2564.56,
+     "exploitation": 4615.68,
+     "total": 7180.23,
+     "profit_2e_semestre": 44440.96
+    },
+    "prudente": {
+     "essai": 3346.59,
+     "exploitation": 4558.16,
+     "total": 7904.75,
+     "profit_2e_semestre": 45351.61
+    }
+   },
+   "secs": 0.9
+  },
+  {
+   "graine": 6657,
+   "monde": "t3g",
+   "ecartee": false,
+   "objet": "xofiqa5",
+   "prix_reference": 42.7,
+   "cout_au_jour_183": 18.585,
+   "taux_de_marge": 2.298,
+   "concernee": false,
+   "plan_prudent": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "secs": 0.2
+  },
+  {
+   "graine": 6658,
+   "monde": "t3g",
+   "ecartee": false,
+   "objet": "qireso2",
+   "prix_reference": 40.95,
+   "cout_au_jour_183": 31.564,
+   "taux_de_marge": 1.297,
+   "concernee": true,
+   "plan_prudent": [
+    0,
+    0,
+    1,
+    0,
+    1,
+    1,
+    0,
+    0
+   ],
+   "cout_vrai": 31.564,
+   "decision_chaine": 0,
+   "decision_prudente": 0,
+   "bras": {
+    "nul": {
+     "essai": 22192.66,
+     "exploitation": 18529.94,
+     "total": 40722.6,
+     "profit_2e_semestre": -36365.93
+    },
+    "aveugle:0": {
+     "essai": 22179.41,
+     "exploitation": 21306.5,
+     "total": 43485.91,
+     "profit_2e_semestre": -34630.33
+    },
+    "aveugle:1": {
+     "essai": 15602.77,
+     "exploitation": 15229.87,
+     "total": 30832.64,
+     "profit_2e_semestre": -55098.65
+    },
+    "chaine": {
+     "essai": 16870.85,
+     "exploitation": 21315.89,
+     "total": 38186.74,
+     "profit_2e_semestre": -39948.25
+    },
+    "prudente": {
+     "essai": 19927.7,
+     "exploitation": 21372.21,
+     "total": 41299.91,
+     "profit_2e_semestre": -36816.32
+    }
+   },
+   "secs": 1.4
+  },
+  {
+   "graine": 6659,
+   "monde": "t3g",
+   "ecartee": false,
+   "objet": "xawezu6",
+   "prix_reference": 26.87,
+   "cout_au_jour_183": 13.482,
+   "taux_de_marge": 1.993,
+   "concernee": false,
+   "plan_prudent": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "secs": 0.2
+  },
+  {
+   "graine": 6660,
+   "monde": "t3g",
+   "ecartee": false,
+   "objet": "sovowo9",
+   "prix_reference": 184.26,
+   "cout_au_jour_183": 117.489,
+   "taux_de_marge": 1.568,
+   "concernee": false,
+   "plan_prudent": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "secs": 0.4
+  },
+  {
+   "graine": 6661,
+   "monde": "t3g",
+   "ecartee": false,
+   "objet": "dolowe1",
+   "prix_reference": 427.86,
+   "cout_au_jour_183": 191.638,
+   "taux_de_marge": 2.233,
+   "concernee": false,
+   "plan_prudent": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "secs": 0.3
+  },
+  {
+   "graine": 6662,
+   "monde": "t3g",
+   "ecartee": false,
+   "objet": "sobino3",
+   "prix_reference": 7.92,
+   "cout_au_jour_183": 3.533,
+   "taux_de_marge": 2.242,
+   "concernee": false,
+   "plan_prudent": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "secs": 0.5
+  },
+  {
+   "graine": 6663,
+   "monde": "t3g",
+   "ecartee": false,
+   "objet": "mitufe5",
+   "prix_reference": 7.61,
+   "cout_au_jour_183": 6.137,
+   "taux_de_marge": 1.24,
+   "concernee": true,
+   "plan_prudent": [
+    0,
+    0,
+    1,
+    0,
+    1,
+    1,
+    0,
+    0
+   ],
+   "cout_vrai": 6.137,
+   "decision_chaine": 1,
+   "decision_prudente": 1,
+   "bras": {
+    "nul": {
+     "essai": 4100.7,
+     "exploitation": 3932.65,
+     "total": 8033.35,
+     "profit_2e_semestre": 103940.45
+    },
+    "aveugle:0": {
+     "essai": 3796.25,
+     "exploitation": 3514.89,
+     "total": 7311.14,
+     "profit_2e_semestre": 103288.64
+    },
+    "aveugle:1": {
+     "essai": 6601.21,
+     "exploitation": 7046.47,
+     "total": 13647.68,
+     "profit_2e_semestre": 109757.24
+    },
+    "chaine": {
+     "essai": 4589.59,
+     "exploitation": 6381.96,
+     "total": 10971.55,
+     "profit_2e_semestre": 109415.65
+    },
+    "prudente": {
+     "essai": 5592.97,
+     "exploitation": 6496.65,
+     "total": 12089.62,
+     "profit_2e_semestre": 108236.29
+    }
+   },
+   "secs": 0.9
+  },
+  {
+   "graine": 6664,
+   "monde": "t3g",
+   "ecartee": false,
+   "objet": "qibi9",
+   "prix_reference": 5.98,
+   "cout_au_jour_183": 4.43,
+   "taux_de_marge": 1.35,
+   "concernee": true,
+   "plan_prudent": [
+    0,
+    0,
+    1,
+    0,
+    1,
+    1,
+    0,
+    0
+   ],
+   "cout_vrai": 4.43,
+   "decision_chaine": 1,
+   "decision_prudente": 1,
+   "bras": {
+    "nul": {
+     "essai": 2675.43,
+     "exploitation": 2840.74,
+     "total": 5516.17,
+     "profit_2e_semestre": -19656.44
+    },
+    "aveugle:0": {
+     "essai": 2081.34,
+     "exploitation": 2101.49,
+     "total": 4182.83,
+     "profit_2e_semestre": -20992.04
+    },
+    "aveugle:1": {
+     "essai": 3165.66,
+     "exploitation": 3095.52,
+     "total": 6261.18,
+     "profit_2e_semestre": -18913.69
+    },
+    "chaine": {
+     "essai": 2399.77,
+     "exploitation": 3095.52,
+     "total": 5495.28,
+     "profit_2e_semestre": -19679.59
+    },
+    "prudente": {
+     "essai": 2724.24,
+     "exploitation": 3095.52,
+     "total": 5819.75,
+     "profit_2e_semestre": -19355.11
+    }
+   },
+   "secs": 1.4
+  },
+  {
+   "graine": 6665,
+   "monde": "t3g",
+   "ecartee": false,
+   "objet": "geso3",
+   "prix_reference": 136.21,
+   "cout_au_jour_183": 110.775,
+   "taux_de_marge": 1.23,
+   "concernee": true,
+   "plan_prudent": [
+    0,
+    0,
+    1,
+    0,
+    1,
+    1,
+    0,
+    0
+   ],
+   "cout_vrai": 110.775,
+   "decision_chaine": 1,
+   "decision_prudente": 1,
+   "bras": {
+    "nul": {
+     "essai": 84633.31,
+     "exploitation": 82344.95,
+     "total": 166978.26,
+     "profit_2e_semestre": 551250.31
+    },
+    "aveugle:0": {
+     "essai": 60000.07,
+     "exploitation": 51047.11,
+     "total": 111047.18,
+     "profit_2e_semestre": 495254.66
+    },
+    "aveugle:1": {
+     "essai": 101837.52,
+     "exploitation": 86906.91,
+     "total": 188744.43,
+     "profit_2e_semestre": 574001.74
+    },
+    "chaine": {
+     "essai": 64243.12,
+     "exploitation": 88631.96,
+     "total": 152875.07,
+     "profit_2e_semestre": 535871.95
+    },
+    "prudente": {
+     "essai": 80019.2,
+     "exploitation": 87382.78,
+     "total": 167401.98,
+     "profit_2e_semestre": 552004.95
+    }
+   },
+   "secs": 1.6
+  },
+  {
+   "graine": 6666,
+   "monde": "t3g",
+   "ecartee": false,
+   "objet": "qoza5",
+   "prix_reference": 46,
+   "cout_au_jour_183": 25.181,
+   "taux_de_marge": 1.827,
+   "concernee": false,
+   "plan_prudent": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "secs": 0.3
+  },
+  {
+   "graine": 6667,
+   "monde": "t3g",
+   "ecartee": false,
+   "objet": "roto5",
+   "prix_reference": 76.55,
+   "cout_au_jour_183": 69.545,
+   "taux_de_marge": 1.101,
+   "concernee": true,
+   "plan_prudent": [
+    0,
+    0,
+    1,
+    0,
+    1,
+    1,
+    0,
+    0
+   ],
+   "cout_vrai": 69.545,
+   "decision_chaine": 1,
+   "decision_prudente": 1,
+   "bras": {
+    "nul": {
+     "essai": 18162.9,
+     "exploitation": 21423.36,
+     "total": 39586.26,
+     "profit_2e_semestre": 403150.74
+    },
+    "aveugle:0": {
+     "essai": 13365.66,
+     "exploitation": 14472.47,
+     "total": 27838.13,
+     "profit_2e_semestre": 391398.3
+    },
+    "aveugle:1": {
+     "essai": 28184.38,
+     "exploitation": 28393.54,
+     "total": 56577.92,
+     "profit_2e_semestre": 420220.54
+    },
+    "chaine": {
+     "essai": 16370.69,
+     "exploitation": 28445.83,
+     "total": 44816.52,
+     "profit_2e_semestre": 408825.17
+    },
+    "prudente": {
+     "essai": 23242.66,
+     "exploitation": 28864.15,
+     "total": 52106.81,
+     "profit_2e_semestre": 415697.13
+    }
+   },
+   "secs": 1.3
+  },
+  {
+   "graine": 6668,
+   "monde": "t3g",
+   "ecartee": false,
+   "objet": "hijiqa8",
+   "prix_reference": 4.49,
+   "cout_au_jour_183": 3.203,
+   "taux_de_marge": 1.402,
+   "concernee": true,
+   "plan_prudent": [
+    0,
+    0,
+    1,
+    0,
+    1,
+    1,
+    0,
+    0
+   ],
+   "cout_vrai": 3.203,
+   "decision_chaine": 1,
+   "decision_prudente": 1,
+   "bras": {
+    "nul": {
+     "essai": 724.31,
+     "exploitation": 923.51,
+     "total": 1647.82,
+     "profit_2e_semestre": 3545.12
+    },
+    "aveugle:0": {
+     "essai": 753.98,
+     "exploitation": 770.57,
+     "total": 1524.56,
+     "profit_2e_semestre": 3378.97
+    },
+    "aveugle:1": {
+     "essai": 1061.34,
+     "exploitation": 1181.67,
+     "total": 2243,
+     "profit_2e_semestre": 4149.62
+    },
+    "chaine": {
+     "essai": 711.13,
+     "exploitation": 1172.04,
+     "total": 1883.18,
+     "profit_2e_semestre": 3791.08
+    },
+    "prudente": {
+     "essai": 946.99,
+     "exploitation": 1126.32,
+     "total": 2073.3,
+     "profit_2e_semestre": 3989.55
+    }
+   },
+   "secs": 1
+  },
+  {
+   "graine": 6669,
+   "monde": "t3g",
+   "ecartee": false,
+   "objet": "lihuxo6",
+   "prix_reference": 97.54,
+   "cout_au_jour_183": 60.875,
+   "taux_de_marge": 1.602,
+   "concernee": false,
+   "plan_prudent": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "secs": 0.4
+  },
+  {
+   "graine": 6670,
+   "monde": "t3g",
+   "ecartee": false,
+   "objet": "fewo0",
+   "prix_reference": 129.81,
+   "cout_au_jour_183": 121.333,
+   "taux_de_marge": 1.07,
+   "concernee": true,
+   "plan_prudent": [
+    0,
+    0,
+    1,
+    0,
+    1,
+    1,
+    0,
+    0
+   ],
+   "cout_vrai": 121.333,
+   "decision_chaine": 1,
+   "decision_prudente": 1,
+   "bras": {
+    "nul": {
+     "essai": 50360.1,
+     "exploitation": 67987.85,
+     "total": 118347.95,
+     "profit_2e_semestre": 266848.36
+    },
+    "aveugle:0": {
+     "essai": 18302.09,
+     "exploitation": 18522.49,
+     "total": 36824.58,
+     "profit_2e_semestre": 185333.48
+    },
+    "aveugle:1": {
+     "essai": 58075.57,
+     "exploitation": 57666.3,
+     "total": 115741.88,
+     "profit_2e_semestre": 264324.13
+    },
+    "chaine": {
+     "essai": 27251.56,
+     "exploitation": 56724.98,
+     "total": 83976.54,
+     "profit_2e_semestre": 232517.86
+    },
+    "prudente": {
+     "essai": 44368.28,
+     "exploitation": 57707.23,
+     "total": 102075.51,
+     "profit_2e_semestre": 250616.84
+    }
+   },
+   "secs": 4.7
+  },
+  {
+   "graine": 6671,
+   "monde": "t3g",
+   "ecartee": false,
+   "objet": "caxasu3",
+   "prix_reference": 20.39,
+   "cout_au_jour_183": 8.371,
+   "taux_de_marge": 2.436,
+   "concernee": false,
+   "plan_prudent": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "secs": 0.4
+  },
+  {
+   "graine": 6672,
+   "monde": "t3g",
+   "ecartee": false,
+   "objet": "cuxi4",
+   "prix_reference": 87.43,
+   "cout_au_jour_183": 35.899,
+   "taux_de_marge": 2.435,
+   "concernee": false,
+   "plan_prudent": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "secs": 0.3
+  },
+  {
+   "graine": 6673,
+   "monde": "t3g",
+   "ecartee": false,
+   "objet": "judogo5",
+   "prix_reference": 178.93,
+   "cout_au_jour_183": 78.016,
+   "taux_de_marge": 2.293,
+   "concernee": false,
+   "plan_prudent": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "secs": 0.5
+  },
+  {
+   "graine": 6674,
+   "monde": "t3g",
+   "ecartee": false,
+   "objet": "bici8",
+   "prix_reference": 51.38,
+   "cout_au_jour_183": 36.714,
+   "taux_de_marge": 1.399,
+   "concernee": true,
+   "plan_prudent": [
+    0,
+    0,
+    1,
+    0,
+    1,
+    1,
+    0,
+    0
+   ],
+   "cout_vrai": 36.714,
+   "decision_chaine": 1,
+   "decision_prudente": 1,
+   "bras": {
+    "nul": {
+     "essai": 17592.88,
+     "exploitation": 15291.97,
+     "total": 32884.84,
+     "profit_2e_semestre": 414448.26
+    },
+    "aveugle:0": {
+     "essai": 20254.27,
+     "exploitation": 21515.58,
+     "total": 41769.85,
+     "profit_2e_semestre": 423328.99
+    },
+    "aveugle:1": {
+     "essai": 26113.04,
+     "exploitation": 28589.52,
+     "total": 54702.56,
+     "profit_2e_semestre": 436247.03
+    },
+    "chaine": {
+     "essai": 21602.01,
+     "exploitation": 28589.52,
+     "total": 50191.53,
+     "profit_2e_semestre": 431736.01
+    },
+    "prudente": {
+     "essai": 24231.88,
+     "exploitation": 28589.52,
+     "total": 52821.4,
+     "profit_2e_semestre": 434365.88
+    }
+   },
+   "secs": 2.9
+  },
+  {
+   "graine": 6675,
+   "monde": "t3g",
+   "ecartee": false,
+   "objet": "kogalu2",
+   "prix_reference": 25.89,
+   "cout_au_jour_183": 10.558,
+   "taux_de_marge": 2.452,
+   "concernee": false,
+   "plan_prudent": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "secs": 0.2
+  },
+  {
+   "graine": 6676,
+   "monde": "t3g",
+   "ecartee": false,
+   "objet": "caro9",
+   "prix_reference": 57.24,
+   "cout_au_jour_183": 23.202,
+   "taux_de_marge": 2.467,
+   "concernee": false,
+   "plan_prudent": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "secs": 0.1
+  },
+  {
+   "graine": 6677,
+   "monde": "t3g",
+   "ecartee": false,
+   "objet": "fatimu7",
+   "prix_reference": 138.71,
+   "cout_au_jour_183": 67.071,
+   "taux_de_marge": 2.068,
+   "concernee": false,
+   "plan_prudent": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "secs": 0.3
+  },
+  {
+   "graine": 6678,
+   "monde": "t3g",
+   "ecartee": false,
+   "objet": "bagiko3",
+   "prix_reference": 143.69,
+   "cout_au_jour_183": 71.144,
+   "taux_de_marge": 2.02,
+   "concernee": false,
+   "plan_prudent": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "secs": 0.3
+  },
+  {
+   "graine": 6679,
+   "monde": "t3g",
+   "ecartee": false,
+   "objet": "lenowe9",
+   "prix_reference": 32.64,
+   "cout_au_jour_183": 22.394,
+   "taux_de_marge": 1.458,
+   "concernee": true,
+   "plan_prudent": [
+    -0.5,
+    0,
+    1,
+    -0.5,
+    1,
+    1,
+    -0.5,
+    0
+   ],
+   "cout_vrai": 22.394,
+   "decision_chaine": 1,
+   "decision_prudente": 0,
+   "bras": {
+    "nul": {
+     "essai": 12678.05,
+     "exploitation": 11580.6,
+     "total": 24258.65,
+     "profit_2e_semestre": 537776.68
+    },
+    "aveugle:0": {
+     "essai": 12733.93,
+     "exploitation": 11629.26,
+     "total": 24363.19,
+     "profit_2e_semestre": 537813.24
+    },
+    "aveugle:1": {
+     "essai": 11632.62,
+     "exploitation": 10675.51,
+     "total": 22308.13,
+     "profit_2e_semestre": 535628.56
+    },
+    "chaine": {
+     "essai": 10869.1,
+     "exploitation": 10565.07,
+     "total": 21434.17,
+     "profit_2e_semestre": 534865.05
+    },
+    "prudente": {
+     "essai": 12212.91,
+     "exploitation": 12008.36,
+     "total": 24221.27,
+     "profit_2e_semestre": 537290.48
+    }
+   },
+   "secs": 3.9
+  },
+  {
+   "graine": 6680,
+   "monde": "t3g",
+   "ecartee": false,
+   "objet": "rulake4",
+   "prix_reference": 66.33,
+   "cout_au_jour_183": 34.37,
+   "taux_de_marge": 1.93,
+   "concernee": false,
+   "plan_prudent": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "secs": 0.1
+  },
+  {
+   "graine": 6681,
+   "monde": "t3g",
+   "ecartee": false,
+   "objet": "gisi7",
+   "prix_reference": 16.61,
+   "cout_au_jour_183": 10.966,
+   "taux_de_marge": 1.515,
+   "concernee": false,
+   "plan_prudent": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "secs": 0.1
+  },
+  {
+   "graine": 6682,
+   "monde": "t3g",
+   "ecartee": false,
+   "objet": "geco5",
+   "prix_reference": 5.09,
+   "cout_au_jour_183": 2.541,
+   "taux_de_marge": 2.003,
+   "concernee": false,
+   "plan_prudent": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "secs": 0.2
+  },
+  {
+   "graine": 6683,
+   "monde": "t3g",
+   "ecartee": false,
+   "objet": "giko3",
+   "prix_reference": 26.62,
+   "cout_au_jour_183": 11.828,
+   "taux_de_marge": 2.251,
+   "concernee": false,
+   "plan_prudent": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "secs": 0.5
+  },
+  {
+   "graine": 6684,
+   "monde": "t3g",
+   "ecartee": false,
+   "objet": "helu9",
+   "prix_reference": 62.45,
+   "cout_au_jour_183": 29.884,
+   "taux_de_marge": 2.09,
+   "concernee": false,
+   "plan_prudent": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "secs": 0.6
+  },
+  {
+   "graine": 6685,
+   "monde": "t3g",
+   "ecartee": false,
+   "objet": "falu4",
+   "prix_reference": 54.19,
+   "cout_au_jour_183": 30.614,
+   "taux_de_marge": 1.77,
+   "concernee": false,
+   "plan_prudent": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "secs": 0.2
+  },
+  {
+   "graine": 6686,
+   "monde": "t3g",
+   "ecartee": false,
+   "objet": "xape8",
+   "prix_reference": 4.41,
+   "cout_au_jour_183": 2.464,
+   "taux_de_marge": 1.79,
+   "concernee": false,
+   "plan_prudent": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "secs": 0.4
+  },
+  {
+   "graine": 6687,
+   "monde": "t3g",
+   "ecartee": false,
+   "objet": "cuce6",
+   "prix_reference": 4.02,
+   "cout_au_jour_183": 2.526,
+   "taux_de_marge": 1.592,
+   "concernee": false,
+   "plan_prudent": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "secs": 0.4
+  },
+  {
+   "graine": 6688,
+   "monde": "t3g",
+   "ecartee": false,
+   "objet": "jari4",
+   "prix_reference": 53.72,
+   "cout_au_jour_183": 24.562,
+   "taux_de_marge": 2.187,
+   "concernee": false,
+   "plan_prudent": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "secs": 0.4
+  },
+  {
+   "graine": 6689,
+   "monde": "t3g",
+   "ecartee": false,
+   "objet": "tile4",
+   "prix_reference": 17.26,
+   "cout_au_jour_183": 7.421,
+   "taux_de_marge": 2.326,
+   "concernee": false,
+   "plan_prudent": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "secs": 0.2
+  },
+  {
+   "graine": 6690,
+   "monde": "t3g",
+   "ecartee": false,
+   "objet": "nitexa1",
+   "prix_reference": 6.7,
+   "cout_au_jour_183": 3.516,
+   "taux_de_marge": 1.906,
+   "concernee": false,
+   "plan_prudent": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "secs": 0.6
+  },
+  {
+   "graine": 6691,
+   "monde": "t3g",
+   "ecartee": false,
+   "objet": "hiseja4",
+   "prix_reference": 119.31,
+   "cout_au_jour_183": 98.665,
+   "taux_de_marge": 1.209,
+   "concernee": true,
+   "plan_prudent": [
+    0,
+    0,
+    1,
+    0,
+    1,
+    1,
+    0,
+    0
+   ],
+   "cout_vrai": 98.665,
+   "decision_chaine": 1,
+   "decision_prudente": 1,
+   "bras": {
+    "nul": {
+     "essai": 74079.06,
+     "exploitation": 72665.86,
+     "total": 146744.91,
+     "profit_2e_semestre": 428843.22
+    },
+    "aveugle:0": {
+     "essai": 65817.37,
+     "exploitation": 64124.45,
+     "total": 129941.83,
+     "profit_2e_semestre": 411428.51
+    },
+    "aveugle:1": {
+     "essai": 77227.28,
+     "exploitation": 78085.37,
+     "total": 155312.65,
+     "profit_2e_semestre": 434964.33
+    },
+    "chaine": {
+     "essai": 48315.15,
+     "exploitation": 76419.68,
+     "total": 124734.83,
+     "profit_2e_semestre": 406052.19
+    },
+    "prudente": {
+     "essai": 69527.93,
+     "exploitation": 75561.6,
+     "total": 145089.52,
+     "profit_2e_semestre": 427012.59
+    }
+   },
+   "secs": 2.2
+  },
+  {
+   "graine": 6692,
+   "monde": "t3g",
+   "ecartee": false,
+   "objet": "mixa7",
+   "prix_reference": 17.04,
+   "cout_au_jour_183": 11.041,
+   "taux_de_marge": 1.543,
+   "concernee": false,
+   "plan_prudent": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "secs": 0.9
+  },
+  {
+   "graine": 6693,
+   "monde": "t3g",
+   "ecartee": false,
+   "objet": "vegome9",
+   "prix_reference": 213.03,
+   "cout_au_jour_183": 114.007,
+   "taux_de_marge": 1.869,
+   "concernee": false,
+   "plan_prudent": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "secs": 0.2
+  },
+  {
+   "graine": 6694,
+   "monde": "t3g",
+   "ecartee": false,
+   "objet": "hiliqi4",
+   "prix_reference": 190.77,
+   "cout_au_jour_183": 146.361,
+   "taux_de_marge": 1.303,
+   "concernee": true,
+   "plan_prudent": [
+    0,
+    0,
+    1,
+    0,
+    1,
+    1,
+    0,
+    0
+   ],
+   "cout_vrai": 146.361,
+   "decision_chaine": 0,
+   "decision_prudente": 0,
+   "bras": {
+    "nul": {
+     "essai": 111514.18,
+     "exploitation": 93198.26,
+     "total": 204712.45,
+     "profit_2e_semestre": 553721.59
+    },
+    "aveugle:0": {
+     "essai": 99787.25,
+     "exploitation": 98188.52,
+     "total": 197975.76,
+     "profit_2e_semestre": 546283.91
+    },
+    "aveugle:1": {
+     "essai": 98638.14,
+     "exploitation": 91362.31,
+     "total": 190000.44,
+     "profit_2e_semestre": 538837.51
+    },
+    "chaine": {
+     "essai": 78087.25,
+     "exploitation": 95910.52,
+     "total": 173997.77,
+     "profit_2e_semestre": 520110.93
+    },
+    "prudente": {
+     "essai": 107012.69,
+     "exploitation": 97477.97,
+     "total": 204490.67,
+     "profit_2e_semestre": 551045.17
+    }
+   },
+   "secs": 0.7
+  },
+  {
+   "graine": 6695,
+   "monde": "t3g",
+   "ecartee": false,
+   "objet": "gazuja4",
+   "prix_reference": 202.8,
+   "cout_au_jour_183": 95.885,
+   "taux_de_marge": 2.115,
+   "concernee": false,
+   "plan_prudent": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "secs": 0.2
+  },
+  {
+   "graine": 6696,
+   "monde": "t3g",
+   "ecartee": false,
+   "objet": "mabu8",
+   "prix_reference": 14.35,
+   "cout_au_jour_183": 6.683,
+   "taux_de_marge": 2.147,
+   "concernee": false,
+   "plan_prudent": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "secs": 0.6
+  },
+  {
+   "graine": 6697,
+   "monde": "t3g",
+   "ecartee": false,
+   "objet": "bunicu8",
+   "prix_reference": 28.07,
+   "cout_au_jour_183": 22.629,
+   "taux_de_marge": 1.24,
+   "concernee": true,
+   "plan_prudent": [
+    0,
+    0,
+    1,
+    0,
+    1,
+    1,
+    0,
+    0
+   ],
+   "cout_vrai": 22.629,
+   "decision_chaine": 0,
+   "decision_prudente": 0,
+   "bras": {
+    "nul": {
+     "essai": 17592.27,
+     "exploitation": 18416.06,
+     "total": 36008.33,
+     "profit_2e_semestre": -66203.76
+    },
+    "aveugle:0": {
+     "essai": 15001.82,
+     "exploitation": 15137.86,
+     "total": 30139.68,
+     "profit_2e_semestre": -63268.14
+    },
+    "aveugle:1": {
+     "essai": 17209.14,
+     "exploitation": 18579.89,
+     "total": 35789.02,
+     "profit_2e_semestre": -66253.63
+    },
+    "chaine": {
+     "essai": 10675.8,
+     "exploitation": 15431.69,
+     "total": 26107.49,
+     "profit_2e_semestre": -76362.65
+    },
+    "prudente": {
+     "essai": 15830.82,
+     "exploitation": 15752.73,
+     "total": 31583.55,
+     "profit_2e_semestre": -71153.22
+    }
+   },
+   "secs": 1
+  },
+  {
+   "graine": 6698,
+   "monde": "t3g",
+   "ecartee": false,
+   "objet": "vapaco5",
+   "prix_reference": 4.52,
+   "cout_au_jour_183": 3.007,
+   "taux_de_marge": 1.503,
+   "concernee": true,
+   "plan_prudent": [
+    -0.5,
+    0,
+    1,
+    -0.5,
+    1,
+    1,
+    -0.5,
+    0
+   ],
+   "cout_vrai": 3.007,
+   "decision_chaine": 1,
+   "decision_prudente": 1,
+   "bras": {
+    "nul": {
+     "essai": 2229.72,
+     "exploitation": 2058.75,
+     "total": 4288.47,
+     "profit_2e_semestre": -113128.06
+    },
+    "aveugle:0": {
+     "essai": 2129.91,
+     "exploitation": 1971.07,
+     "total": 4100.98,
+     "profit_2e_semestre": -113331.27
+    },
+    "aveugle:1": {
+     "essai": 2248.95,
+     "exploitation": 2048.11,
+     "total": 4297.06,
+     "profit_2e_semestre": -113103.9
+    },
+    "chaine": {
+     "essai": 2086.86,
+     "exploitation": 2103.6,
+     "total": 4190.47,
+     "profit_2e_semestre": -113265.99
+    },
+    "prudente": {
+     "essai": 2175.14,
+     "exploitation": 2040.18,
+     "total": 4215.31,
+     "profit_2e_semestre": -113177.71
+    }
+   },
+   "secs": 0.6
+  },
+  {
+   "graine": 6699,
+   "monde": "t3g",
+   "ecartee": false,
+   "objet": "waseme4",
+   "prix_reference": 97.91,
+   "cout_au_jour_183": 68.017,
+   "taux_de_marge": 1.44,
+   "concernee": true,
+   "plan_prudent": [
+    -0.5,
+    0,
+    1,
+    -0.5,
+    1,
+    1,
+    -0.5,
+    0
+   ],
+   "cout_vrai": 68.017,
+   "decision_chaine": 1,
+   "decision_prudente": 1,
+   "bras": {
+    "nul": {
+     "essai": 46328.66,
+     "exploitation": 33162.87,
+     "total": 79491.53,
+     "profit_2e_semestre": 548258.99
+    },
+    "aveugle:0": {
+     "essai": 46543.96,
+     "exploitation": 48845.75,
+     "total": 95389.71,
+     "profit_2e_semestre": 586691.46
+    },
+    "aveugle:1": {
+     "essai": 62474.99,
+     "exploitation": 65900.51,
+     "total": 128375.5,
+     "profit_2e_semestre": 596657.72
+    },
+    "chaine": {
+     "essai": 49863.79,
+     "exploitation": 65900.51,
+     "total": 115764.3,
+     "profit_2e_semestre": 584076.41
+    },
+    "prudente": {
+     "essai": 53104.35,
+     "exploitation": 65900.51,
+     "total": 119004.86,
+     "profit_2e_semestre": 587306.64
+    }
+   },
+   "secs": 4.2
+  },
+  {
+   "graine": 6700,
+   "monde": "t3g",
+   "ecartee": false,
+   "objet": "qofe8",
+   "prix_reference": 26.18,
+   "cout_au_jour_183": 13.297,
+   "taux_de_marge": 1.969,
+   "concernee": false,
+   "plan_prudent": [
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    0
+   ],
+   "secs": 0.2
+  }
+ ]
+}

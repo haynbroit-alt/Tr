@@ -482,3 +482,12 @@ fractionné ; l'appariement de l'abonnement réaliste. PR `haynbroit-alt/A#14`.
   presque coûtant. **Prochain pas** : un plan d'essai qui écarte d'avance les niveaux dont le seuil de rentabilité
   est hors d'atteinte (protocole à écrire, graines 6401 et suivantes).
 - **Quatre lots à chaîne identique (320 entreprises)** : +6,5 points sur prix tenu (t = 4,71) ; 42 % y perdent.
+
+### T3g : la chaîne s'améliore, pour la première fois depuis T3b (15 novembre 2026)
+
+- **T3g exécuté** (`programme/t3g/`, 300 entreprises neuves parcourues, 54 concernées, dossier `essai-prix#T3G`) :
+  un plan d'essai qui écarte d'avance les baisses de prix non rentables (calcul sur le coût de LAVOISIER, seuil tiré
+  d'une méta-analyse publiée) fait **17,6 points de mieux que la chaîne** là où il change l'essai (t = 3,67 ;
+  médiane +10,5 ; mieux dans 52 entreprises sur 54). Trois critères sur trois tenus. Sur l'ensemble : +3,2 points.
+- **La chaîne retenue devient** : plan prudent, huit semaines, décision par la table, coût de LAVOISIER.
+- Limite : le simulateur est indulgent avec cette règle (peu de demandes très sensibles) ; un seul monde.
