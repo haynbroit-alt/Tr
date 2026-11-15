@@ -63,7 +63,7 @@ prix de celui de la promotion qui l'accompagne.
 
 | Nous ne devons jamais dire | Pourquoi |
 |---|---|
-| « Un essai de prix rapporte plus que de ne rien changer », **sans dire que c'est une simulation et une moyenne** | en simulation : +6,6 points en moyenne sur 180 entreprises, mais de 2 à 12 points selon le lot, et un tiers des entreprises y perdent |
+| « Un essai de prix rapporte plus que de ne rien changer », **sans dire que c'est une simulation et une moyenne** | en simulation : +6,4 points en moyenne sur 240 entreprises, mais de 2 à 12 points selon le lot, et quatre entreprises sur dix environ font moins bien qu'en ne changeant rien |
 | « Vous gagnerez X % » | en simulation, près d'une entreprise sur deux y perd |
 | « Notre méthode bat les meilleures du marché » | voir § 6 |
 | « Déjà éprouvé chez des clients » | aucun client à ce jour |
@@ -91,7 +91,9 @@ Deux règles proposées avec ces prix :
   devenu trop rare), le client ne paie que le plan. C'est une garantie que nous pouvons tenir.
 - **Première mission** : [prix réduit de moitié, en échange du droit de citer le cas, anonymisé].
 
-Aucune garantie de gain : nous ne pouvons pas la tenir.
+Aucune garantie de gain : nous ne pouvons pas la tenir. **À dire au client avant de commencer** : en simulation,
+l'essai fait mieux que de ne rien changer en moyenne, mais environ quatre entreprises sur dix y perdent ; la
+garantie ci-dessus ne couvre pas ce risque.
 
 ## 5. Avant le démarrage commercial
 
@@ -121,6 +123,12 @@ Ce qui reste, dans l'ordre :
 
 ## 6. Où nous en sommes face aux meilleures méthodes — mesuré, pas supposé
 
-Voir `programme/sota/` pour la découverte de lois et `programme/t3d/` pour les essais de prix. Les résultats y
-sont consignés tels qu'ils sortent, favorables ou non ; ce paragraphe sera complété quand les deux mesures en
-cours seront terminées.
+Détail et sources : `programme/sota/ETAT_DE_L_ART.md`.
+
+- **Découverte de lois** : GALILÉE est moins précis que la meilleure méthode publique, Operon bien réglé (devant
+  sur 1 jeu de mesures réelles sur 15). Sur les jeux d'au moins 54 mesures il est au niveau du modèle certifié
+  partout, comme elle. Ses formules sont plus courtes ; ce n'est pas encore mesuré.
+- **Essais de prix** : notre chaîne fait jeu égal avec le bandit de Thompson, méthode de référence, sur six mois
+  simulés.
+- **Conséquence pour l'offre** : nous ne vendons pas un meilleur algorithme. Pour une loi, le client doit recevoir
+  celle du meilleur moteur disponible, passée par notre règle de livraison.

@@ -4,6 +4,10 @@ Protocole : `PROTOCOLE_T3D.md` (écrit avant le code ; attendus du test poussés
 Test : graines 6161 à 6220, **exécution unique** le 15 novembre 2026, 619 s de calcul, consignée au registre sous
 `essai-prix#T3D`. Données : `test.json`.
 
+> **Mise à jour du même jour.** Le § 3 attribue la dispersion d'un lot à l'autre au hasard non partagé du
+> simulateur. Le test T3e (`programme/t3e/RESULTATS_T3E.md`) montre que c'est faux pour l'essentiel : avec un
+> hasard commun l'incertitude ne baisse que de 19 %. La dispersion est réelle, d'une entreprise à l'autre.
+
 Marge simulée. Aucun euro réel ; le compte des gains réels reste à 0 €.
 
 ## 1. Résultat
