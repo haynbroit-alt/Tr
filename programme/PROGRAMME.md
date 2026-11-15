@@ -530,3 +530,5 @@ fractionné ; l'appariement de l'abonnement réaliste. PR `haynbroit-alt/A#14`.
 - **ARÈNE-2 exécutée** (`programme/arene/RESULTATS_ARENE_2.md`, 200 entreprises neuves) : l'arrêt anticipé prend la
   place (+0,8 point, t = 2,17 : mince) ; le plan naïf est relégué (−3,3 points), ce qui établit enfin l'apport du
   plan de CORTEX quand le coût est connu. L'outil de livraison n'est pas changé : décision du propriétaire.
+- **ARÈNE-3 exécutée** (`programme/arene/RESULTATS_ARENE_3.md`, 199 entreprises neuves) : l'arrêt anticipé à quatre
+  semaines tient sa place (+0,9 point sur la chaîne sans arrêt, reléguée ; l'arrêt à trois semaines aussi).

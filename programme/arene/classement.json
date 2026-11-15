@@ -5,8 +5,8 @@
    "tenant": {
     "methode": "chaîne prudente à arrêt anticipé (essai lu à 4 semaines : décision immédiate si le meilleur prix dépasse le deuxième de 20 % en marge par jour, sinon 8 semaines)",
     "depuis": "ARÈNE-2, 15 novembre 2026",
-    "tours_tenus": 0,
-    "validite": "simulation, un monde ; avantage mince sur la chaîne sans arrêt (+0,8 point, t = 2,17) ; pas encore branchée dans l'outil de livraison ; suppose un coût unitaire juste, obtenu par paires reliées"
+    "tours_tenus": 1,
+    "validite": "simulation, un monde ; avantage petit mais répété sur la chaîne sans arrêt (+0,8 puis +0,9 point, 400 entreprises) ; suppose un coût unitaire juste, obtenu par paires reliées"
    },
    "tours": [
     {
@@ -20,14 +20,15 @@
      "source": "programme/arene/RESULTATS_ARENE_2.md",
      "entreprises": 200,
      "resultat": "arrêt anticipé +0,8 point (prend la place) ; plan naïf −3,3 points (relégué)"
+    },
+    {
+     "tour": "ARENE-3",
+     "source": "programme/arene/RESULTATS_ARENE_3.md",
+     "entreprises": 199,
+     "resultat": "tenant maintenu ; sans arrêt −0,9 point (relégué) ; arrêt à 3 semaines −1,6 point (relégué)"
     }
    ],
    "pretendants": [
-    {
-     "methode": "chaîne prudente sans arrêt (8 semaines)",
-     "origine": "tenant détrôné à ARÈNE-2",
-     "etat": "en lice"
-    },
     {
      "methode": "bandit de Thompson",
      "origine": "extérieure ; jeu égal deux fois avec l'ancienne chaîne (T3d, T3e)",
@@ -69,6 +70,16 @@
      "methode": "LAVOISIER + plan naïf (6 semaines à +11,8 %, 2 à −10,6 %)",
      "tour": "ARENE-2",
      "ecart": "−3,3 points, t = −3,83"
+    },
+    {
+     "methode": "chaîne prudente sans arrêt (8 semaines)",
+     "tour": "ARENE-3",
+     "ecart": "−0,9 point, t = −2,25"
+    },
+    {
+     "methode": "arrêt à 3 semaines",
+     "tour": "ARENE-3",
+     "ecart": "−1,6 point, t = −2,31"
     }
    ]
   },
