@@ -92,3 +92,11 @@ test('lecture anticipée à quatre semaines : dit si la décision est nette', ()
   assert.equal(decider({ lignes, produit: 'lampe', debut: iso(DEBUT), prix_reference: 10, cout: 6 }).lecture_anticipee, undefined);
   assert.equal(decider({ lignes, produit: 'lampe', debut: iso(DEBUT), prix_reference: 10, cout: 6, semaines: 5 }).possible, false);
 });
+
+test('lecture d’un export de commandes en ligne : guillemets, prix unitaire, en-têtes anglais', () => {
+  const csv = 'Name,Created at,Lineitem quantity,Lineitem name,Lineitem price\n#1001,2026-03-01 10:22:33 +0100,2,"T-shirt, bleu",12.50\n#1002,2026-03-02 09:00:00 +0100,1,"Mug ""classique""",8\n#1003,pas une date,1,X,3';
+  const { lignes, rejetees } = lireVentes(csv);
+  assert.equal(lignes.length, 2); assert.equal(rejetees, 1);
+  assert.equal(lignes[0].produit, 'T-shirt, bleu'); assert.equal(lignes[0].quantite, 2); assert.equal(lignes[0].montant, 25);
+  assert.equal(lignes[1].produit, 'Mug "classique"'); assert.equal(lignes[1].montant, 8);
+});

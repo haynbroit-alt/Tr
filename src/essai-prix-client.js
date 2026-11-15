@@ -10,8 +10,21 @@ import { planChaine, planPrudent, eRequise, E_MAX } from './problemes/essai-prix
 export const HISTORIQUE = 182, JOURS_REF = 14, TOLERANCE = 0.0051;
 const med = (v) => { const s = [...v].sort((a, b) => a - b); return s.length ? s[s.length >> 1] : null; };
 const sansAccent = (s) => s.normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase().trim().replace(/^"|"$/g, '');
-const FACULTATIF = { promotion: ['promotion', 'promo', 'remise', 'en_promotion'] };
-const ALIAS = { date: ['date', 'jour'], produit: ['produit', 'article', 'reference', 'designation'], quantite: ['quantite', 'qte', 'quantity'], montant: ['montant', 'total', 'ca', 'montant_ht', 'montant ht'] };
+const FACULTATIF = { promotion: ['promotion', 'promo', 'remise', 'en_promotion'], prix: ['prix_unitaire', 'prix unitaire', 'prix', 'lineitem price', 'unit price', 'price'] };
+// Une ligne CSV, guillemets compris (« T-shirt, bleu » reste un seul champ ; "" vaut un guillemet). Un champ sur
+// plusieurs lignes n'est pas pris en charge : la ligne est alors rejetée et comptée.
+export function decouper(ligne, sep) {
+  const out = []; let champ = '', dans = false;
+  for (let i = 0; i < ligne.length; i++) {
+    const c = ligne[i];
+    if (dans) { if (c === '"' && ligne[i + 1] === '"') { champ += '"'; i++; } else if (c === '"') dans = false; else champ += c; }
+    else if (c === '"') dans = true; else if (c === sep) { out.push(champ); champ = ''; } else champ += c;
+  }
+  out.push(champ);
+  return out;
+}
+const ALIAS = { date: ['date', 'jour', 'created at', 'date de commande', 'order date'], produit: ['produit', 'article', 'reference', 'designation', 'lineitem name', 'nom du produit', 'product', 'item'],
+  quantite: ['quantite', 'qte', 'quantity', 'lineitem quantity', 'qty'], montant: ['montant', 'total', 'ca', 'montant_ht', 'montant ht', 'net sales', 'ventes nettes'] };
 const JOUR = 86400000, iso = (n) => new Date(n * JOUR).toISOString().slice(0, 10);
 export function jourDe(texte) {
   const t = String(texte ?? '').trim(), i = t.match(/^(\d{4})-(\d{2})-(\d{2})/), f = t.match(/^(\d{2})\/(\d{2})\/(\d{4})/);
@@ -25,15 +38,16 @@ export function jourDe(texte) {
 export function lireVentes(texte) {
   const L = texte.replace(/^﻿/, '').split(/\r?\n/).filter((l) => l.trim());
   const sep = [';', '\t', ','].find((s) => L[0].includes(s)) ?? ',';
-  const entete = L[0].split(sep).map(sansAccent), col = {};
-  for (const [k, noms] of Object.entries(ALIAS)) { col[k] = entete.findIndex((e) => noms.includes(e)); if (col[k] < 0) throw new Error(`colonne « ${k} » introuvable (en-têtes lus : ${entete.join(', ')})`); }
+  const entete = decouper(L[0], sep).map(sansAccent), col = {};
   for (const [k, noms] of Object.entries(FACULTATIF)) col[k] = entete.findIndex((e) => noms.includes(e));
+  for (const [k, noms] of Object.entries(ALIAS)) { col[k] = entete.findIndex((e) => noms.includes(e)); if (col[k] < 0 && k === 'montant' && col.prix >= 0) continue; if (col[k] < 0) throw new Error(`colonne « ${k} » introuvable (en-têtes lus : ${entete.join(', ')})`); }
   const oui = (v) => { const x = sansAccent(String(v ?? '')); return x !== '' && x !== '0' && x !== 'non' && x !== 'false' && x !== 'n'; };
   const num = (v) => { const x = String(v ?? '').trim().replace(/\s/g, ''); return Number(sep === ',' ? x : x.replace(',', '.')); };
   const lignes = [];
   let rejetees = 0;
   for (const l of L.slice(1)) {
-    const c = l.split(sep), jour = jourDe(c[col.date]), quantite = num(c[col.quantite]), montant = num(c[col.montant]), produit = (c[col.produit] ?? '').trim().replace(/^"|"$/g, '');
+    // sans colonne de montant, montant = prix unitaire × quantité (exports de commandes en ligne)
+    const c = decouper(l, sep), jour = jourDe(c[col.date]), quantite = num(c[col.quantite]), montant = col.montant >= 0 ? num(c[col.montant]) : num(c[col.prix]) * quantite, produit = (c[col.produit] ?? '').trim();
     if (jour == null || !produit || !(quantite > 0) || !(montant > 0)) { rejetees++; continue; }
     lignes.push({ jour, produit, quantite, montant, promotion: col.promotion >= 0 && oui(c[col.promotion]) });
   }
