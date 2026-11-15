@@ -52,3 +52,29 @@ Les seuils ne seront pas retouchés. Un critère manqué est publié comme tel.
 - Le désordre du journal observé diffère toujours d'une relance à l'autre : les décisions des bras restent un peu
   bruitées par la saisie.
 - Simulation, un monde, un objet par entreprise, 26 semaines.
+
+---
+
+## 7. Mise au point (graines 241 à 260) — écrit et poussé avant le test
+
+Aucun réglage : mêmes bras que T3d, tels quels. La copie gelée de LAVOISIER passe au commit `2e66aa7` (L2c).
+
+| Bras | Gain total, 20 entreprises |
+|---|---:|
+| Chaîne retenue | 4,4 % |
+| Bandit de Thompson | 5,4 % |
+| Chaîne sans engagement | 3,8 % |
+| Meilleur aveugle (prix tenu) | 2,9 % |
+
+Écart « chaîne − prix tenu » : +1,5 point, erreur type 2,64 points sur 20 entreprises. À nombre égal, la mise au
+point de T3d donnait une erreur type d'environ 6,7 points : l'incertitude est 2,5 fois plus petite. Ramenée à 60
+entreprises, 2,64 devient environ 1,5 point, soit juste le seuil de V1 (la moitié de 3,06, erreur type exacte de
+T3d ; le § 4 écrivait 3,05 par arrondi). Détail : `programme/t3e/dev.json`.
+
+### Attendus pour le test, écrits avant son exécution
+
+1. **V1 : au bord.** Erreur type entre 1,3 et 1,8 point ; je ne sais pas de quel côté du seuil de 1,53 elle
+   tombera.
+2. **E1 incertain** : dans ce monde l'écart semble plus petit (1 à 5 points) que dans T3d.
+3. E2 et E3 : pas de différence établie.
+4. Meilleur bras aveugle : prix tenu.

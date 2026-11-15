@@ -5,11 +5,11 @@ import { Engine, DAYS } from './engine.js';
 import { makeRng, derive } from './rng.js';
 import { ARCHETYPES } from './archetypes.js';
 
-function build(seed, archetype, level, plan, pilotage = [], demande) {
+function build(seed, archetype, level, plan, pilotage = [], demande, alea) {
   const make = ARCHETYPES[archetype];
   if (!make) throw new Error(`archétype inconnu ou pas encore écrit : ${archetype}`);
   const eng = new Engine(seed, level);
-  const ctx = { demande };
+  const ctx = { demande, alea, seed };
   make(eng, ctx);
   for (const { jour, objet, prix } of pilotage) {
     const o = ctx.prix.get(objet);
@@ -50,14 +50,16 @@ function validerPilotage(pilotage) {
   return pilotage.map(({ jour, objet, prix }) => ({ jour, objet, prix })).sort((a, b) => a.jour - b.jour);
 }
 
-// cfg : { archetype, nHidden, level, demande } ; demande : absente ou 'sensible' (protocole L2b)
+// cfg : { archetype, nHidden, level, demande, alea } ; demande : absente ou 'sensible' (protocole L2b) ;
+// alea : absente ou 'commun' (protocole L2c, flux propres à l'objet et au jour)
 export function generate(seed, cfg, pilotage) {
-  const { archetype, nHidden = 0, level = 'realiste', demande } = cfg;
+  const { archetype, nHidden = 0, level = 'realiste', demande, alea } = cfg;
   if (demande !== undefined && demande !== 'sensible') throw new Error(`demande inconnue : ${demande} (absente ou 'sensible' attendue)`);
+  if (alea !== undefined && alea !== 'commun') throw new Error(`alea inconnu : ${alea} (absent ou 'commun' attendu)`);
   const pil = validerPilotage(pilotage);
   const plan = [];
   if (nHidden > 0) {
-    const { eng: e1, ctx } = build(seed, archetype, level, [], [], demande);
+    const { eng: e1, ctx } = build(seed, archetype, level, [], [], demande, alea);
     const hr = makeRng(derive(seed, 4));
     const kinds = hr.shuffle([...ctx.hiddenKinds]).slice(0, nHidden);
     for (const kind of kinds) {
@@ -76,11 +78,12 @@ export function generate(seed, cfg, pilotage) {
       }
     }
   }
-  const { eng } = build(seed, archetype, level, plan, pil, demande);
+  const { eng } = build(seed, archetype, level, plan, pil, demande, alea);
   const out = eng.finalize();
   out.truth.archetype = archetype;
   out.truth.nHiddenPlanned = nHidden;
   if (pil.length) out.truth.pilotage = pil;
   if (demande) out.truth.demande = demande;
+  if (alea) out.truth.alea = alea;
   return out;
 }

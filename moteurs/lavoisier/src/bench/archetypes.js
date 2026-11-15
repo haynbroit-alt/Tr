@@ -2,6 +2,7 @@
 // Un archétype n'est qu'une combinaison de primitives génériques. Les archétypes de test (transformation,
 // acompte) seront écrits APRÈS le gel du bilan de matière, dans un fichier séparé.
 import { DAYS, lastDayOfMonth, MONTHS } from './engine.js';
+import { makeRng, derive } from './rng.js';
 
 const round2 = (x) => Math.round(x * 100) / 100;
 
@@ -115,9 +116,20 @@ function loan(eng, ctx) {
   }
 }
 
+// Poisson(λ) par inversion d'un seul uniforme u (protocole L2c) : plus petit k tel que F(k) > u ; cumul en log, exact.
+const poissonInv = (lam, u) => {
+  if (lam <= 0) return 0;
+  let k = 0, lp = -lam, cdf = Math.exp(lp);
+  while (cdf <= u) { k++; lp += Math.log(lam / k); const pk = Math.exp(lp); if (k > lam && cdf + pk === cdf) break; cdf += pk; }
+  return k;
+};
+
 // ---------- objets stockés : achats, ventes au comptant et sur facture ----------
 function products(eng, ctx, { n, phi, nClients, scale = 1 }) {
   const r = eng.rng;
+  // L2c : flux propre à (graine, appel, objet, jour) ; sel décalé par appel (l'abonnement peut appeler deux fois)
+  const appel = (ctx.nProducts = (ctx.nProducts ?? 0) + 1) - 1;
+  const flux = ctx.alea === 'commun' ? (o, d, sel = 0) => makeRng(derive(derive(ctx.seed, 100 + 1000 * appel + 500 * sel + o.k), d)) : null;
   const dow = [1, 1, 1, 1, 1.2, 1.4, 0.6].map((x) => x * (1 + 0.1 * r.normal()));
   const suppliers = Array.from({ length: r.int(1, 4) }, () => ({ cp: eng.party('fournisseur'), terms: r.int(15, 60), acc: ctx.account() }));
   const objs = Array.from({ length: n }, (_, k) => {
@@ -149,9 +161,10 @@ function products(eng, ctx, { n, phi, nClients, scale = 1 }) {
       }
       const lamEff = o.lam * dow[d % 7] * (o.p / o.p0) ** -o.e * ctx.pubEffect();
       if (phi > 0) {
-        const nt = r.poisson((phi * lamEff) / 2);
+        const ro = flux ? flux(o, d) : r;
+        const nt = flux ? poissonInv((phi * lamEff) / 2, ro.next()) : r.poisson((phi * lamEff) / 2);
         for (let i = 0; i < nt; i++) {
-          const q = sell(o, r.int(1, 3));
+          const q = sell(o, ro.int(1, 3));
           if (q <= 0) break;
           const m = round2(q * o.p);
           const rec = eng.record('vente.ticket', 'caisse', { m, q, objet: o.tok, tx: [eng.newTx()], d: [[o.id, -1, 'q'], ['CA', 1, 'm']] }, { auteur: 'auto', statut: 'mesure' });
@@ -185,7 +198,7 @@ function products(eng, ctx, { n, phi, nClients, scale = 1 }) {
       eng.at(d + o.lead, (dd) => {
         o.onOrder -= q;
         eng.record('achat.reception', 'stock', { q, objet: o.tok, cp: sup.cp, tx: [tx], ref: cmd, d: [[o.id, 1, 'q']] });
-        eng.at(dd + r.int(0, 5), (d3) => {
+        eng.at(dd + (flux ? flux(o, dd, 1) : r).int(0, 5), (d3) => {
           const m = round2(q * o.cost);
           const f = eng.record('achat.facture', 'achats', { m, objet: o.tok, cp: sup.cp, tx: [tx], ref: cmd, d: [['DE', 1, 'm']] });
           supplierPay(eng, ctx, d3 + sup.terms, f, sup.cp, m, sup.acc);

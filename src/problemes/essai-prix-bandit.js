@@ -59,6 +59,7 @@ export async function agregerBandit(R) {
   const ecart = (x, y) => tUnilateral(E.map((r) => gain(r, x) - gain(r, y)));
   const derniers = (r, b) => r.joues[b].slice(-8), apres = (r) => Number(A.reduce((a, b) => (r.bras[b].total > r.bras[a].total ? b : a)).split(':')[1]);
   return { entreprises: R.length, mesurees: E.length, moyennes, meilleur_aveugle: adv, D1: ecart('bandit', 'chaine'), D1_inverse: ecart('chaine', 'bandit'), D2: ecart('bandit', adv), D3: ecart('sans_engagement', 'chaine'),
+    chaine_contre_prix_tenu: (() => { const v = E.map((r) => gain(r, 'chaine') - gain(r, 'aveugle:0')), m = moy(v); return { moyenne: m, erreur_type: Math.sqrt(v.reduce((s, x) => s + (x - m) ** 2, 0) / (v.length - 1) / v.length) }; })(),
     chaine_contre_aveugle: ecart('chaine', adv), sans_engagement_contre_aveugle: ecart('sans_engagement', adv), gain_bandit: tUnilateral(E.map((r) => gain(r, 'bandit'))), gain_chaine: tUnilateral(E.map((r) => gain(r, 'chaine'))),
     cout_exact: E.filter((r) => Math.abs(r.cout_au_jour_183 / r.cout_vrai - 1) < 0.001).length, cout_indisponible: R.filter((r) => !r.ecartee && !r.bras.bandit).length,
     bandit_finit_au_meilleur: E.filter((r) => { const d = derniers(r, 'bandit'), m = apres(r); return d.filter((u) => u === m).length >= 5; }).length,
@@ -69,15 +70,16 @@ export function direBandit(a) {
   return [`${a.mesurees} entreprises mesurées sur ${a.entreprises}`, ...Object.entries(a.moyennes).map(([b, m]) => `  ${b.padEnd(18)} ${pct(m).padStart(8)}`),
     `D1 bandit > chaîne : ${t(a.D1)}`, `D1 inverse chaîne > bandit : ${t(a.D1_inverse)}`, `D2 bandit > meilleur aveugle (${a.meilleur_aveugle}) : ${t(a.D2)}`, `D3 sans engagement > chaîne : ${t(a.D3)}`,
     `chaîne > meilleur aveugle : ${t(a.chaine_contre_aveugle)} · sans engagement > meilleur aveugle : ${t(a.sans_engagement_contre_aveugle)}`,
+    `chaîne − prix tenu : ${pct(a.chaine_contre_prix_tenu.moyenne)}, erreur type ${(100 * a.chaine_contre_prix_tenu.erreur_type).toFixed(2)} point(s)`,
     `coût exact au jour 183 : ${a.cout_exact} sur ${a.mesurees} · le bandit finit au meilleur niveau après coup : ${a.bandit_finit_au_meilleur} · niveaux distincts joués après l'initialisation : ${a.niveaux_distincts_bandit.toFixed(1)}`].join('\n');
 }
 
 // Exécution unique du test T3d (graines 6161 à 6220), consignée au registre : la clé du dossier interdit de la refaire.
-export async function essaiBanditTest(reg, { sortie = null, graines = Array.from({ length: 60 }, (_, i) => 6161 + i), monde = 't3d' } = {}) {
-  const P = 'essai-prix#T3D';
-  reg.ajouter({ probleme: P, type: 'probleme', cle: P, auteur: 'registre', titre: 'Essai de prix commun (T3D) : la chaîne face au bandit de Thompson',
+export async function essaiBanditTest(reg, { sortie = null, monde = 't3d', graines = Array.from({ length: 60 }, (_, i) => (monde === 't3e' ? 6221 : 6161) + i) } = {}) {
+  const NOM = monde.toUpperCase(), P = `essai-prix#${NOM}`, dossier = `programme/${monde}`;
+  reg.ajouter({ probleme: P, type: 'probleme', cle: P, auteur: 'registre', titre: `Essai de prix commun (${NOM}) : la chaîne face au bandit de Thompson${monde === 't3e' ? ', hasard commun' : ''}`,
     question: 'Dans le monde où la bonne direction de prix varie, un bandit de Thompson nourri du coût de LAVOISIER fait-il mieux que la chaîne retenue (essai de 8 blocs puis décision) ? Marge simulée.',
-    source: { generateur: 'LAVOISIER src/bench/generator.js piloté (L2, demande sensible L2b) ; protocole programme/t3d/PROTOCOLE_T3D.md', graine: `${graines[0]} à ${graines.at(-1)}`, statut: 'graines de test de T3D, exécution unique' },
+    source: { generateur: `LAVOISIER src/bench/generator.js piloté (L2, demande sensible L2b${monde === 't3e' ? ', hasard commun L2c' : ''}) ; protocole ${dossier}/PROTOCOLE_${NOM}.md`, graine: `${graines[0]} à ${graines.at(-1)}`, statut: `graines de test de ${NOM}, exécution unique` },
     roles: { LAVOISIER: 'corps de l’entreprise, coût unitaire', CORTEX: 'plan d’essai de la chaîne', registre: 'bandit de Thompson, méthode de référence publiée' } });
   const R = [];
   for (const g of graines) {
@@ -93,19 +95,19 @@ export async function essaiBanditTest(reg, { sortie = null, graines = Array.from
       cout_reel: { calcul_s: r.secs, jours: SEMAINES * BLOC } });
   }
   const a = await agregerBandit(R);
-  if (sortie) (await import('node:fs')).writeFileSync(sortie, JSON.stringify({ protocole: 'programme/t3d/PROTOCOLE_T3D.md', agregat: a, entreprises: R }, null, 1) + '\n');
-  reg.ajouter({ probleme: P, type: 'jalon', auteur: 'registre', compte: 'collectif', travail: 'T3D', mesure: 'gain moyen sur la marge de l’objet piloté, jours 183 à 364 : chaîne retenue contre bandit de Thompson (simulation)',
-    avant: 'non mesuré', apres: `chaîne ${(100 * a.moyennes.chaine).toFixed(1)} %, bandit ${(100 * a.moyennes.bandit).toFixed(1)} %, sans engagement ${(100 * a.moyennes.sans_engagement).toFixed(1)} % (meilleur bras aveugle : ${(100 * a.moyennes[a.meilleur_aveugle]).toFixed(1)} %)`, source: 'programme/t3d/test.json' });
+  if (sortie) (await import('node:fs')).writeFileSync(sortie, JSON.stringify({ protocole: `${dossier}/PROTOCOLE_${NOM}.md`, agregat: a, entreprises: R }, null, 1) + '\n');
+  reg.ajouter({ probleme: P, type: 'jalon', auteur: 'registre', compte: 'collectif', travail: NOM, mesure: 'gain moyen sur la marge de l’objet piloté, jours 183 à 364 : chaîne retenue contre bandit de Thompson (simulation)',
+    avant: 'non mesuré', apres: `chaîne ${(100 * a.moyennes.chaine).toFixed(1)} %, bandit ${(100 * a.moyennes.bandit).toFixed(1)} %, sans engagement ${(100 * a.moyennes.sans_engagement).toFixed(1)} % (meilleur bras aveugle : ${(100 * a.moyennes[a.meilleur_aveugle]).toFixed(1)} %)`, source: `${dossier}/test.json` });
   console.error(direBandit(a));
   return a;
 }
 
 if (import.meta.url === `file://${process.argv[1]}`) {
   const { writeFileSync } = await import('node:fs');
-  const opt = (n, d) => { const i = process.argv.indexOf(n); return i > 0 ? process.argv[i + 1] : d; }, [a, b] = opt('--graines', '221-222').split('-').map(Number);
-  if (a < 221 || (b ?? a) > 240) { console.error('mise au point : graines 221 à 240 seulement'); process.exit(1); }
+  const opt = (n, d) => { const i = process.argv.indexOf(n); return i > 0 ? process.argv[i + 1] : d; }, monde = opt('--monde', 't3d'), [lo, hi] = monde === 't3e' ? [241, 260] : [221, 240], [a, b] = opt('--graines', `${lo}-${lo + 1}`).split('-').map(Number);
+  if (a < lo || (b ?? a) > hi) { console.error(`mise au point : graines ${lo} à ${hi} seulement`); process.exit(1); }
   const R = [];
-  for (let g = a; g <= (b ?? a); g++) { const r = essaiBandit(g); R.push(r); console.error(`graine ${g} : ${r.ecartee ? 'écartée' : `coût ${r.cout_au_jour_183} (vrai ${r.cout_vrai}) · bandit ${r.joues.bandit?.join(' ')} · ${r.secs} s`}`); }
-  if (opt('--sortie')) writeFileSync(opt('--sortie'), JSON.stringify({ protocole: 'programme/t3d/PROTOCOLE_T3D.md', entreprises: R }, null, 1) + '\n');
+  for (let g = a; g <= (b ?? a); g++) { const r = essaiBandit(g, monde); R.push(r); console.error(`graine ${g} : ${r.ecartee ? 'écartée' : `coût ${r.cout_au_jour_183} (vrai ${r.cout_vrai}) · bandit ${r.joues.bandit?.join(' ')} · ${r.secs} s`}`); }
+  if (opt('--sortie')) writeFileSync(opt('--sortie'), JSON.stringify({ protocole: `programme/${monde}/PROTOCOLE_${monde.toUpperCase()}.md`, entreprises: R }, null, 1) + '\n');
   console.log(direBandit(await agregerBandit(R)));
 }
