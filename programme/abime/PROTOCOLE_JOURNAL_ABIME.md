@@ -69,3 +69,15 @@ fuites (fausses détections multipliées) — ce qui, pour un auditeur, est la b
 - 40 entreprises, trois archétypes connus du moteur. Les flux « complexes » au sens de M0 (archétypes jamais vus)
   ne sont pas mesurés ici, pour ne pas entamer le test final de M0.
 - L'évaluateur compte comme fausse détection un écart que LAVOISIER signale à juste titre sur une ligne perdue.
+
+---
+
+## 8. Vérification du code — écrit et poussé avant l'exécution
+
+Le script (`scripts/journal-abime.js`) a tourné sur deux entreprises de développement de LAVOISIER (graines 1 et 2,
+option `--dev`), connues du moteur et sans flux caché, pour vérifier qu'il va au bout. J'y ai vu des chiffres :
+aucune exception, et une erreur de profit qui grimpe dès 5 % de doublons ou de dates décalées. Deux entreprises ne
+prouvent rien ; rien n'a été changé aux dégâts, aux mesures ni aux critères. Mes attendus du § 6 restent ceux
+écrits avant, même si cet aperçu fait douter de B2.
+
+Exécution : `node scripts/journal-abime.js --sortie programme/abime/resultats.json`, une seule fois.
