@@ -532,3 +532,11 @@ fractionné ; l'appariement de l'abonnement réaliste. PR `haynbroit-alt/A#14`.
   plan de CORTEX quand le coût est connu. L'outil de livraison n'est pas changé : décision du propriétaire.
 - **ARÈNE-3 exécutée** (`programme/arene/RESULTATS_ARENE_3.md`, 199 entreprises neuves) : l'arrêt anticipé à quatre
   semaines tient sa place (+0,9 point sur la chaîne sans arrêt, reléguée ; l'arrêt à trois semaines aussi).
+
+### Immatriculation faite ; premier pas réel choisi (15 novembre 2026)
+
+- La formalité au Guichet unique a été mise à jour par l'INSEE. Le propriétaire m'a laissé le choix de la suite.
+- **Choix** (`programme/offre/DEMARRAGE.md`) : un **pilote gratuit** chez une vraie entreprise avant toute vente ;
+  les prix restent des propositions jusqu'au premier devis signé par le propriétaire ; la liste de ce qu'il faut
+  avant la première facture est écrite, sources à vérifier.
+- **Simulation en pause** après G5 : les rendements décroissent, un essai réel apprendra davantage.
